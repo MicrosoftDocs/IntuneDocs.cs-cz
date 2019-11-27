@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6114d994a9b7944f0020719197b1ed956c3423b8
-ms.sourcegitcommit: 960ffb2214c35d75ad219fa2571a999529a0abd4
-ms.translationtype: HT
+ms.openlocfilehash: 7ad5c26770537ce6a285989f8ca3804277616419
+ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74478946"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540792"
 ---
-# <a name="whats-new-in-microsoft-intune"></a>Co je nového ve Microsoft Intune
+# <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
 Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete také najít [důležitá oznámení](#notices), [Minulá vydání](whats-new-archive.md)a informace o [tom, jak jsou aktualizace služby Intune vydané](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728).
 
@@ -82,7 +82,7 @@ Chování nastavení této zásady se mírně liší od předchozí implementace
 Můžete cílit na konkrétní skupiny uživatelů, kteří budou mít [zařízení MacOS spravovaná pomocí Jamf](../protect/conditional-access-integrate-jamf.md). Díky tomu můžete použít integraci Jamf dodržování předpisů pro podmnožinu zařízení macOS, zatímco jiná zařízení se spravují přes Intune. Pokud již používáte integraci Jamf, všichni uživatelé budou ve výchozím nastavení zaměřeni na integraci.
 
 #### <a name="new-exchange-activesync-settings-when-creating-an-email-device-configuration-profile-on-ios-devices---4892824-----"></a>Nová nastavení Exchange ActiveSync při vytváření profilu konfigurace e-mailového zařízení na zařízeních s iOS<!-- 4892824   --> 
-V zařízeních s iOS/iPadOS můžete nakonfigurovat připojení e-mailu v profilu konfigurace zařízení (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **iOS/iPadOS** **pro > pro** daný typ profilu). 
+V zařízeních se systémem iOS/iPadOS můžete nakonfigurovat připojení e-mailu v profilu konfigurace zařízení (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **iOS/iPadOS** pro **> pro** platformy. pro typ profilu). 
 
 K dispozici jsou nová nastavení Exchange ActiveSync, včetně:
 - **Data pro synchronizaci se systémem Exchange**: vyberte služby Exchange, které chcete synchronizovat (nebo blokovat synchronizaci) pro kalendář, kontakty, připomenutí, poznámky a e-mail.
@@ -175,8 +175,9 @@ K vzdálenému [otočení klíčů pro obnovení BitLockeru](../protect/encrypt-
 #### <a name="updates-to-dedicated-device-enrollment-to-support-scep-device-certificate-deployment----5198878----"></a>Aktualizace vyhrazené registrace zařízení pro podporu nasazení certifikátu zařízení SCEP <!-- 5198878  -->
 Intune teď podporuje nasazení certifikátu zařízení SCEP na vyhrazená zařízení s Androidem Enterprise pro přístup založený na certifikátech k profilům Wi-Fi. Aby mohlo nasazení fungovat, musí být aplikace Microsoft Intune na zařízení přítomná. V důsledku toho jsme aktualizovali možnosti registrace pro vyhrazená zařízení s Androidem Enterprise. Nové registrace stále začínají stejnou (s identifikátorem QR, NFC, nulovým dotykem nebo identifikátorem zařízení), ale teď mají krok, který vyžaduje, aby uživatelé nainstalovali aplikaci Intune. Stávající zařízení začnou aplikaci automaticky instalovat na určitou bázi.
 
-#### <a name="intune-support-for-azure-ad-business-to-business-collaboration--5670211----"></a>Podpora Intune pro spolupráci v rámci Azure AD pro firmy<!--5670211  -->
-Intune podporuje spolupráci B2B (Business-to-Business) Azure Active Directory (Azure AD). Spolupráce Azure AD B2B umožňuje bezpečně sdílet aplikace a služby vaší společnosti s uživateli typu host z jakékoli jiné organizace a přitom zachovat kontrolu nad vašimi podnikovými daty. Tato funkce také poskytuje možnosti auditování pro uživatele typu hosta B2B. Další informace najdete v tématu [co je přístup uživatelů typu Host v Azure Active Directory B2B?](https://docs.microsoft.com/azure/active-directory/b2b/what-is-b2b) .
+#### <a name="intune-audit-logs-for-business-to-business-collaboration--5670211---"></a>Protokoly auditu Intune pro spolupráci mezi společnostmi<!--5670211 -->
+Spolupráce B2B (Business-to-Business) umožňuje bezpečně sdílet aplikace a služby společnosti s uživateli typu host z jakékoli jiné organizace a přitom zachovat kontrolu nad vašimi podnikovými daty. Intune teď podporuje protokoly auditu pro uživatele typu Host B2B. Například když uživatelé typu Host provedou změny, Intune bude moct zachytit tato data prostřednictvím protokolů auditu. Další informace najdete v tématu [co je přístup uživatelů typu Host v Azure Active Directory B2B?](https://docs.microsoft.com/azure/active-directory/b2b/what-is-b2b) .
+
 
 <!-- ########################## -->
 ## <a name="week-of-november-11-2019"></a>Týden od 11. listopadu 2019  
@@ -241,7 +242,7 @@ Nastavení **Minimální verze portál společnosti** , pokud je nakonfigurován
 
 #### <a name="introducing-endpoint-security-node-in-microsoft-365-device-management---5630102---"></a>Představujeme uzel zabezpečení koncového bodu v Microsoft 365 správě zařízení<!-- 5630102 -->
 
-Uzel **zabezpečení koncového bodu** je teď v https://devicemanagement.microsoft.comvšeobecně dostupný v Microsoft 365 pracovní prostor pro správu zařízení, který seskupuje možnosti pro zabezpečení koncových bodů, jako jsou:
+Uzel **zabezpečení koncového bodu** je teď v https://devicemanagement.microsoft.com všeobecně dostupný v Microsoft 365 pracovní prostor pro správu zařízení, který seskupuje možnosti pro zabezpečení koncových bodů, jako jsou:
 
 - Směrné plány zabezpečení: předem nakonfigurovaná skupina nastavení, která vám pomůžou použít známou skupinu nastavení a výchozí hodnoty, které Microsoft doporučuje.
 
@@ -374,7 +375,7 @@ Platí pro:
 - Pracovní profil Android Enterprise
 
 #### <a name="create-a-global-http-proxy-on-android-enterprise-device-owner-devices---4816339-----"></a>Vytvoření globálního proxy serveru HTTP na zařízeních s vlastníkem zařízení s Androidem Enterprise<!-- 4816339   -->
-Na zařízeních s Androidem Enterprise můžete nakonfigurovat globální proxy server HTTP tak, aby odpovídal standardům procházení webu vaší organizace (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Android Enterprise** for Platform > **>** pro typ profilu > **konektivita**zařízení. Po nakonfigurování budou všechny přenosy HTTP používat tento proxy server.
+Na zařízeních s Androidem Enterprise můžete nakonfigurovat globální proxy server HTTP tak, aby splňoval standardy procházení webu vaší organizace (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Android Enterprise** pro > pro **vlastníka zařízení > omezení zařízení** pro typ profilu > **připojení**). Po nakonfigurování budou všechny přenosy HTTP používat tento proxy server.
 
 Pokud chcete tuto funkci nakonfigurovat a zobrazit všechna nakonfigurovaná nastavení, přejděte na [nastavení zařízení s Androidem Enterprise a povolte nebo omezte funkce pomocí Intune](../configuration/device-restrictions-android-for-work.md).
 
@@ -394,7 +395,7 @@ Platí pro:
 
 
 #### <a name="new-device-configuration-settings-for-supervised-ios-and-ipados-devices---5199328-----"></a>Nové nastavení konfigurace zařízení pro zařízení s iOS a iPadOS pod dohledem<!-- 5199328   -->
-Na zařízeních se systémy iOS a iPadOS můžete vytvořit profil, který omezí funkce a nastavení na zařízeních (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **iOS/iPadOS** pro **omezení** platformy > pro typ profilu). V této aktualizaci můžete řídit nová nastavení: 
+Na zařízeních s iOS a iPadOS můžete vytvořit profil, který omezí funkce a nastavení na zařízeních (**Konfigurace zařízení** > **profily** > **Vytvoření profilu** > **iOS/iPadOS** pro zařízení > platformy.  **omezení** pro typ profilu). V této aktualizaci můžete řídit nová nastavení: 
 - Přístup k síťové jednotce v aplikaci soubory  
 - Přístup k jednotce USB v aplikaci soubory 
 - Wi-Fi vždycky zapnuté 
@@ -511,7 +512,7 @@ V současné době se po stažení aplikace LOB na zařízení uživatele zobraz
 Aplikace můžou volat Graph API Intune s použitím identity čtení i zápisu pomocí identity aplikace bez přihlašovacích údajů uživatele. Další informace o přístupu k rozhraní Microsoft Graph API pro Intune najdete [v tématu práce s Intune v Microsoft Graph](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0).
 
 #### <a name="protected-data-sharing-and-encryption-for-intune-app-sdk-for-ios---3586942----"></a>Chráněné sdílení a šifrování dat pro sadu Intune App SDK pro iOS<!-- 3586942  -->
-Sady Intune App SDK pro iOS bude používat 256bitových šifrovacích klíčů, když je povoleno šifrování pomocí zásad ochrany aplikací. Aby bylo možné chráněné sdílení dat, bude nutné, aby všechny aplikace měly sadu SDK verze 8.1.1.
+Intune App SDK pro iOS bude používat 256 šifrovacích klíčů, pokud je šifrování povolené zásadami ochrany aplikací. Aby bylo možné chráněné sdílení dat, bude nutné, aby všechny aplikace měly sadu SDK verze 8.1.1.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-configuration"></a>Konfigurace zařízení
@@ -846,7 +847,7 @@ Do registrační stránky pro Android se přidala možnost registrace Správce z
 #### <a name="skip-more-screens-in-setup-assistant---4877451----"></a>Přeskočit další obrazovky v Průvodci nastavením <!--4877451  -->
 Můžete nastavit Program registrace zařízení profily pro přeskočení následujících obrazovek pomocníka s nastavením:
 - Pro iOS
-    - Vzhled
+    - Příznaky
     - Jazyk Express
     - Preferovaný jazyk
     - Migrace zařízení do zařízení
@@ -1190,16 +1191,16 @@ Aby byl název atributu **KódObjednávky** v zařízeních pro autopiloti intui
 ### <a name="app-management"></a>Správa aplikací
 
 #### <a name="intune-policies-update-authentication-method-and-company-portal-app-installation---1927359----"></a>Zásady služby Intune aktualizují metodu ověřování a instalaci aplikace Portál společnosti.<!-- 1927359  -->
-V zařízeních, která jsou už zaregistrovaná prostřednictvím pomocníka s nastavením prostřednictvím některého z metod registrace podnikových zařízení společnosti Apple, Intune už nebude podporovat Portál společnosti, když je ručně nainstalují koncoví uživatelé z App Storu. Tato změna platí pouze v Apple Pomocníka s nastavením ověřování během registrace. Tato změna ovlivní také pouze zařízení s Iosem zaregistrovaná prostřednictvím:  
-* Apple configurator
+V zařízeních, která jsou už zaregistrovaná prostřednictvím pomocníka s nastavením prostřednictvím některého z metod registrace podnikových zařízení společnosti Apple, Intune už nebude podporovat Portál společnosti, když je ručně nainstalují koncoví uživatelé z App Storu. Tato změna je relevantní jenom v případě, že při registraci ověříte pomocí Pomocníka s nastavením Apple. Tato změna také ovlivňuje jenom zařízení s iOS zaregistrovaná prostřednictvím:  
+* Apple Configuratoru
 
-* Obchodní ředitel společnosti Apple
+* Apple Business Manager
 
 * Apple School Manager
 
-* Program registrace zařízení Apple (DEP)
+* Apple Program registrace zařízení (DEP)
 
-Pokud je uživatelé nainstalovat aplikaci portál společnosti z App storu a potom se pokuste registraci těchto zařízení jeho prostřednictvím, dojde k chybě. U těchto zařízení se očekává, že bude používat jenom Portál společnosti, když ho služba Intune po registraci automaticky dokončí. Profily registrace v Intune na portálu Azure portal bude aktualizován, takže můžete určit, jak ověřovat zařízení a pokud se zobrazí v aplikaci portál společnosti. Pokud chcete, aby uživatelé zařízení DEP budou používat aplikaci portál společnosti, musíte zadat předvolby v registrační profil. 
+Pokud si uživatelé nainstalují aplikaci Portál společnosti z App Storu a pokusí se je pomocí ní zaregistrovat, dostanou chybu. U těchto zařízení se očekává, že bude používat jenom Portál společnosti, když ho služba Intune po registraci automaticky dokončí. Profily registrace v Intune ve Azure Portal budou aktualizované, abyste mohli určit, jak se zařízení ověřují a jestli obdrží Portál společnosti aplikaci. Pokud chcete, aby uživatelé zařízení DEP měli Portál společnosti, budete muset zadat předvolby v registračním profilu. 
 
 Kromě toho se odebírá obrazovka **identifikace zařízení** v iOS portál společnosti. Proto správci, kteří chtějí povolit podmíněný přístup nebo nasazovat firemní aplikace, musí aktualizovat profil zápisu DEP. Tento požadavek platí jenom v případě, že se registrace DEP ověřuje pomocí Pomocníka s nastavením. V takovém případě musíte Portál společnosti do zařízení vložit. Provedete to tak, že v **Intune** > **registraci zařízení** > zápisu **Apple** > **tokeny programu registrace** > **zvolíte profily > profilů** > vyberte profil > **vlastnosti** > nastavte **instalovat portál společnosti** na **Ano**.
 

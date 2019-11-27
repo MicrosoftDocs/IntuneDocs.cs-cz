@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b346f41f5198a4aabcb05dcdd4b35a8c56977f53
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: c420446d9293ae2a2d1905dcff218056e8e6c875
+ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059781"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540722"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Nastavení zásad ochrany aplikací pro Android v Microsoft Intune
 Tento článek popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem. Popsané nastavení zásad se dá [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v okně **Nastavení** na portálu Azure Portal.
@@ -66,7 +66,7 @@ Existují tři kategorie nastavení zásad: nastavení ochrany dat, požadavky n
 
 ## <a name="data-transfer-exemptions"></a>Výjimky přenosu dat
 
-  U některých aplikací a služeb platformy, které mají výjimku, můžou zásady ochrany aplikací Intune povolit přenos dat. Všechny aplikace na Androidu spravované přes Intune například musí mít možnost přenášet data do a z Převodu textu na řeč Google, aby se mohl nahlas číst text z obrazovky mobilního zařízení. Tento seznam se může měnit. Obsahuje služby a aplikace, které se považují za užitečné pro bezpečné a produktivní použití.
+  U některých aplikací a služeb platformy, které mají výjimku, můžou zásady ochrany aplikací Intune umožňovat přenos dat do a z. Všechny aplikace na Androidu spravované přes Intune například musí mít možnost přenášet data do a z Převodu textu na řeč Google, aby se mohl nahlas číst text z obrazovky mobilního zařízení. Tento seznam se může měnit. Obsahuje služby a aplikace, které se považují za užitečné pro bezpečné a produktivní použití.
 
 ### <a name="full-exemptions"></a>Úplné výjimky
 

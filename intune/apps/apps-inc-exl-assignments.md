@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2019
+ms.date: 11/25/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b47ecc2363244634cb355fdeaeb51074417322e4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: f073c8ad7a8e087a791ee756683011fac6947162
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507290"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74547969"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Zahrnutí a vyloučení přiřazení aplikací v Microsoft Intune
 
@@ -31,9 +31,20 @@ Přiřazením skupin uživatelů, které se mají zahrnout nebo vyloučit, můž
 
 Abyste nastavili dostupnost aplikace, zahrnete a vyloučíte její přiřazení ke skupině uživatelů nebo zařízení pomocí kombinace skupinových přiřazení pro zahrnutí a vyloučení. Tato možnost může být užitečná, když aplikaci zpřístupníte zahrnutím velké skupiny a následně upřesníte vybrané uživatele vyloučením menší skupiny. Menší skupina může být testovací skupina nebo skupinu vedoucích pracovníků. 
 
-Při vyloučení skupin z přiřazení aplikace je nutné vyloučit jenom skupiny uživatelů, nebo jenom skupiny zařízení. Není možné vyloučit kombinaci skupin uživatelů a skupin zařízení. 
+Osvědčeným postupem je vytvářet a přiřazovat aplikace konkrétně pro vaše skupiny uživatelů a samostatně pro skupiny zařízení. Další informace o skupinách najdete v tématu [Přidání skupin pro uspořádání uživatelů a zařízení](~/fundamentals/groups-add.md).  
 
-Při vyloučení skupin se v Intune nebere v úvahu přiřazení uživatelů k zařízením. Zahrnutí skupin uživatelů a současné vyloučení skupin zařízení vám pravděpodobně nepřinese potřebné výsledky. Zahrnutí má přednost před vyloučením. Pokud třeba nastavíte u aplikace pro iOS možnost **Všichni uživatelé** a vyloučíte **Všechna zařízení iPad**, ve výsledku budou moct aplikaci všichni uživatelé, kteří používají iPad, stále používat. Pokud ale nastavíte u aplikace pro iOS možnost **Všechna zařízení** a vyloučíte **Všechna zařízení iPad**, bude nasazení úspěšné.  
+Existují důležité scénáře při zahrnutí nebo vyloučení přiřazení aplikací:
+
+- Vyloučení má přednost před zahrnutím do následujících scénářů stejného typu skupiny:
+    - Zahrnutí skupin uživatelů a vyloučení skupin uživatelů při přiřazování aplikací
+    - Zahrnutí skupin zařízení a vyloučení skupiny zařízení při přiřazování aplikací
+
+    Pokud například přiřadíte skupinu zařízení skupině **uživatelů všichni firemní uživatelé** , ale vyloučíte členy ve skupině uživatelů **správce vyšších zaměstnanců** , **Všichni firemní uživatelé** s výjimkou **pracovníků hlavní správy** získají přiřazení, protože obě skupiny jsou skupiny uživatelů.
+- Intune nevyhodnocuje vztahy mezi uživateli a zařízeními. Pokud přiřadíte aplikace do smíšených skupin, výsledky nemusí být to, co chcete, nebo očekávat.
+
+    Například pokud přiřadíte skupinu zařízení skupině uživatelů **Všichni uživatelé** , ale vyloučíte skupinu zařízení **všechna osobní zařízení** . V tomto kombinovaném přiřazení aplikace skupiny získají **Všichni uživatelé** aplikaci. Vyloučení nelze použít.
+
+V důsledku toho se nedoporučuje přiřazovat aplikace do smíšených skupin.
 
 > [!NOTE]
 > Při nastavování přiřazení skupiny pro aplikaci se přestal používat typ **Neužívá se** a nahradila ho funkce vyloučení skupiny. 
@@ -41,7 +52,6 @@ Při vyloučení skupin se v Intune nebere v úvahu přiřazení uživatelů k z
 > V Intune máte v konzole k dispozici předem vytvořené skupiny **Všichni uživatelé** a **Všechna zařízení**. Skupiny mají integrované optimalizace, které vám usnadní práci. Důrazně doporučujeme, abyste pro cílení na všechny uživatele a zařízení používali tyto skupiny a nepoužívali skupiny Všichni uživatelé nebo Všechna zařízení, které byste sami vytvořili.  
 >
 > Android Enterprise podporuje zahrnutí a vyloučení skupin. K přiřazení aplikace Android Enterprise můžete použít předdefinované skupiny **Všichni uživatelé** a **Všechna zařízení**. 
-
 
 ## <a name="include-and-exclude-groups-when-assigning-apps"></a>Zahrnutí a vyloučení skupin při přiřazování aplikací 
 Přiřazení aplikace ke skupinám pomocí zahrnutí a vyloučení přiřazení:

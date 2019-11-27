@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99e89db1bbef3d08cd6709b2600c4a684ac618f7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: c1e8e37a784ea39fbf1154321933673ed02eee33
+ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498605"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540751"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Přiřazení aplikací do skupin pomocí Microsoft Intune
 
@@ -94,35 +94,23 @@ Informace v následující tabulce vám pomohou pochopit výsledný záměr při
 | Záměr skupiny 1 | Záměr skupiny 2 | Výsledný záměr |
 |-----------------------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |Uživatel: Povinné|Uživatel: K dispozici|Povinné a K dispozici|
-|Uživatel: Povinné|Uživatel: Není k dispozici|Požadováno|
 |Uživatel: Povinné|Uživatel: Odinstalace|Požadováno|
-|Uživatel: K dispozici|Uživatel: Není k dispozici|Není k dispozici|
 |Uživatel: K dispozici|Uživatel: Odinstalace|Odinstalovat|
-|Uživatel: Není k dispozici|Uživatel: Odinstalace|Odinstalovat
 |Uživatel: Povinné|Zařízení: Povinné|Existuje obojí, Intune zpracovává Povinné.
 |Uživatel: Povinné|Zařízení: Odinstalace|Existuje obojí, Intune překládá Povinné.
 |Uživatel: K dispozici|Zařízení: Povinné|Existuje obojí, Intune překládá Povinné (Povinné a K dispozici).
 |Uživatel: K dispozici|Zařízení: Odinstalace|Existuje obojí, Intune překládá K dispozici.<br><br>Aplikace se zobrazí na Portálu společnosti.<br><br>Pokud je už aplikace nainstalovaná (jako požadovaná aplikace s předchozím záměrem), aplikace se odinstaluje.<br><br>Pokud ale uživatel vybere **instalaci z Portálu společnosti**, aplikace se instaluje a záměr odinstalace se nedodrží.|
-|Uživatel: Není k dispozici|Zařízení: Povinné|Požadováno|
-|Uživatel: Není k dispozici|Zařízení: Odinstalace|Odinstalovat|
 |Uživatel: Odinstalace|Zařízení: Povinné|Existuje obojí, Intune překládá Povinné.|
 |Uživatel: Odinstalace|Zařízení: Odinstalace|Existuje obojí, Intune překládá Odinstalaci.|
 |Zařízení: Povinné|Zařízení: Odinstalace|Požadováno|
 |Uživatel: Povinné a K dispozici|Uživatel: K dispozici|Povinné a K dispozici|
 |Uživatel: Povinné a K dispozici|Uživatel: Odinstalace|Povinné a K dispozici|
-|Uživatel: Povinné a K dispozici|Uživatel: Není k dispozici|Povinné a K dispozici|
 |Uživatel: Povinné a K dispozici|Zařízení: Povinné|Existuje obojí, Povinné a K dispozici
-|Uživatel: Povinné a K dispozici|Zařízení: Není k dispozici|Povinné a K dispozici|
 |Uživatel: Povinné a K dispozici|Zařízení: Odinstalace|Existuje obojí, Intune překládá Povinné (Povinné a K dispozici).
-|Uživatel: Není k dispozici|Zařízení: Není k dispozici|Není k dispozici|
-|Uživatel: K dispozici|Zařízení: Není k dispozici|K dispozici|
-|Uživatel: Povinné|Zařízení: Není k dispozici|Požadováno|
 |Uživatel: K dispozici bez registrace|Uživatel: Povinné a K dispozici|Povinné a K dispozici
 |Uživatel: K dispozici bez registrace|Uživatel: Povinné|Požadováno
-|Uživatel: K dispozici bez registrace|Uživatel: Není k dispozici|Není k dispozici
 |Uživatel: K dispozici bez registrace|Uživatel: K dispozici|K dispozici|
 |Uživatel: K dispozici bez registrace|Zařízení: Povinné|Povinné a K dispozici bez registrace|
-|Uživatel: K dispozici bez registrace|Zařízení: Není k dispozici|K dispozici bez registrace|
 |Uživatel: K dispozici bez registrace|Zařízení: Odinstalace|Odinstalace a K dispozici bez registrace.<br><br>Pokud uživatel nenainstaloval aplikaci z Portálu společnosti, provede se odinstalace.<br><br>Pokud uživatel aplikaci nainstaluje z Portálu společnosti, bude mít instalace prioritu před odinstalací.|
 
 > [!NOTE]

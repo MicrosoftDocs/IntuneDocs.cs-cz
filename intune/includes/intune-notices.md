@@ -7,20 +7,35 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: fa2b1c5c9d267b9f860da2268d03c928ebf7693b
-ms.sourcegitcommit: 1cf063c98e1caae00a6e6fab821cc3254562bca9
-ms.translationtype: HT
+ms.openlocfilehash: 8db05399c4a880d72d24cde885976309bf9a4fa7
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74309799"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74549380"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune.
+
+### <a name="updated-support-statement-for-adobe-acrobat-reader-for-intune-mobile-app--5746776--"></a>Aktualizovaný příkaz Support pro mobilní aplikaci Adobe Acrobat Reader pro Intune<!--5746776-->
+V MC188653 jsme na konci srpna sdíleli, že mobilní aplikace Adobe Acrobat Reader pro Intune dosáhla konce životnosti 1. prosince 2019 a že Adobe plánuje v rámci své hlavní aplikace Acrobat Readeru podporovat zásady ochrany aplikací v Intune. Od té doby jsme dostali zpětnou vazbu od zákazníků, kterou jsme potřebovali k tomu, aby bylo možné pokračovat ve povolování IT správců, a koncovým uživatelům začít používat aplikaci Adobe Acrobat Reader pro Intune. Vzhledem k vysokému využití aplikace Adobe Acrobat Reader pro Intune na zařízeních koncových uživatelů a jejich důležitosti v podnikových scénářích chceme zajistit, aby všechny zkušenosti splňovaly požadavky vaší organizace na ochranu aplikací. 
+
+I když ve vašich zásadách stále doporučujeme cílit na obecnou mobilní aplikaci Acrobat Reader, protože mobilní aplikace Acrobat Reader podporuje zásady ochrany aplikací a integruje sadu Intune SDK, bude i nadále podporována aplikace Adobe Acrobat Reader pro Intune. do 31. března 2020. 
+
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+Tuto zprávu dostáváte, protože naše generování sestav indikuje, že jedna nebo více zásad ve vaší organizaci cílí na aplikaci Adobe Acrobat Reader pro Intune nebo jste dostali předchozí konce ŘÁDKUou komunikaci. 
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
+Dejte koncovým uživatelům a helpdesku o této změně. K vytvoření kanálu pro otázky související s Intune můžete použít [funkci informace o podpoře portál společnosti](../apps/company-portal-app.md#support-information) .
+
+#### <a name="additional-information"></a>Další informace
+https://helpx.adobe.com/acrobat/kb/intune-app-end-of-life.html
+
 
 ### <a name="end-support-for-windows-phone-81--3544909--"></a>Koncová podpora pro Windows Phone 8,1<!--3544909-->
 Hlavní podpora Microsoftu pro Windows Phone 8,1 skončila v červenci 2017 a rozšířená podpora skončila v červnu 2019. Aplikace Portál společnosti pro Windows Phone 8,1 byla v režimu Sustained od října 2017. Microsoft Intune bude nyní ukončena 20. února 2020 pro Windows Phone 8,1.
 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Po 20. února 2020 tato zařízení neobdrží žádné aktualizace zabezpečení a nebudete moct zaregistrovat žádná nová zařízení. Stávající zařízení Windows Phone 8,1 zůstanou zaregistrovaná (zásady, aplikace, vytváření sestav), ale Všimněte si, že po tomto datu nebude podporováno jakékoli řešení potíží s existující registrací, protože celá řada komponent, jako jsou například certifikáty třetích stran, již ukončila podporu pro platformy. Intune ukončí testování kompatibility s Intune a Windows Phone 8,1.
+Po 20. února 2020 tato zařízení neobdrží žádné aktualizace zabezpečení a nebudete moct zaregistrovat žádná nová zařízení. Stávající zařízení Windows Phone 8,1 zůstanou zaregistrovaná (zásady, aplikace, vytváření sestav), ale Všimněte si, že po tomto datu se nebude podporovat jakékoli řešení potíží s existující registrací, protože celá řada komponent, jako třeba certifikáty třetích stran, už ukončila podporu pro platformy. Intune ukončí testování kompatibility s Intune a Windows Phone 8,1.
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
 Můžete si prohlédnout sestavy Intune a zjistit, která zařízení nebo uživatelé to mohou mít vliv. Přejděte na Zařízení > Všechna zařízení a vyfiltrujte si je podle operačního systému. Můžete přidat další sloupce, které vám pomůžou určit, kdo ve vaší organizaci má zařízení s Windows Phone 8,1. Požádejte koncové uživatele, aby svá zařízení upgradovali na podporovanou verzi operačního systému.
@@ -36,7 +51,7 @@ I když se nové funkce nedodaly, následující konfigurační klíče aplikace
 - com. Microsoft. Outlook. Calendar. NotificationsEnabled. UserChangeAllowed
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
-Doporučujeme, abyste pro tuto novou funkci nakonfigurovali nastavení ochrany dat pro Intune App Protection zásady organizace s hodnotou "blokovat org data". Od 16. prosince 2019 budou v Outlooku pro iOS a Android začínat nastavení Ochrana dat pro data organizace a už nebude podporovat výše uvedené klíče. Konfigurace tohoto nového nastavení zajistí, že citlivá data nebudou převrácena, pokud výše uvedené konfigurační klíče již nejsou podporovány. Kromě toho Outlook poskytuje další členitost, pokud je nastavení ochrany dat "e-mailová oznámení" nastavená na "blokovat org data" s nastavením další konfigurace aplikace, "oznámení v kalendáři". Kombinace nastavení zásad ochrany aplikací a nastavení konfigurace této aplikace omezuje citlivé informace v oznámeních e-mailů, a přitom vystavuje citlivé informace v oznámeních o kalendáři, aby se uživatelé mohli dostat na své schůze na základě přehledu rychle v oznámení nebo centru oznámení.
+Doporučujeme, abyste pro tuto novou funkci nakonfigurovali nastavení ochrany dat pro Intune App Protection zásady organizace s hodnotou "blokovat org data". Od 16. prosince 2019 budou v Outlooku pro iOS a Android začínat nastavení Ochrana dat pro data organizace a už nebude podporovat výše uvedené klíče. Konfigurací tohoto nového nastavení zajistíte nevracení citlivých dat, když výše uvedené konfigurační klíče už nejsou podporované. Kromě toho Outlook poskytuje další členitost, pokud je nastavení ochrany dat "e-mailová oznámení" nastavená na "blokovat org data" s nastavením další konfigurace aplikace, "oznámení v kalendáři". Kombinace nastavení zásad ochrany aplikací a nastavení konfigurace této aplikace omezuje citlivé informace v oznámeních e-mailů, a přitom vystavuje citlivé informace v oznámeních o kalendáři, aby se uživatelé mohli dostat na své schůze na základě přehledu rychle v oznámení nebo centru oznámení.
 
 #### <a name="additional-information"></a>Další informace
 Další informace o nastavení aplikace a nastavení aplikace Outlook najdete tady:
@@ -49,7 +64,7 @@ Další informace o nastavení aplikace a nastavení aplikace Outlook najdete ta
 Windows 10 verze 1703 (označované také jako Windows 10, RS2) se od 8. října 2019 pro edice Enterprise a EDU přesunula mimo službu. Intune ukončí podporu pro odpovídající aplikaci Portál společnosti pro RS2/RS1 od 26. prosince 2019.
 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Dál, v konkrétní verzi Portál společnosti aplikace se nezobrazí nové funkce, i když budeme dál podporovat tuto verzi aplikace Portál společnosti až do 26. prosince 2019, včetně poskytování všech aktualizací zabezpečení pro Portál společnosti aplikaci jako vyžadována. Vzhledem k tomu, že Windows 10 verze 1703 neobdrží žádné aktualizace zabezpečení po přesunutí ze údržby, důrazně doporučujeme, abyste si aktualizovali zařízení s Windows na novější verzi Windows a zajistili, že jste na nejnovější aplikaci Portál společnosti, abyste mohli dál získat nové funkce a další funkce.
+Dál, v konkrétní verzi aplikace Portál společnosti neuvidíte nové funkce, i když budeme dál podporovat tuto verzi aplikace Portál společnosti až do 26. prosince 2019, včetně poskytování všech aktualizací zabezpečení pro Portál společnosti aplikaci jako vyžadována. Vzhledem k tomu, že Windows 10 verze 1703 po přesunu mimo obsluhu neobdrží žádné aktualizace zabezpečení, důrazně doporučujeme, abyste si aktualizovali zařízení s Windows na novější verzi Windows a zajistili, že jste na nejnovější aplikaci Portál společnosti, abyste mohli dál získat nové funkce a další funkce.
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
 Postup závisí na tom, jak je vaše prostředí nakonfigurované. Obecně byste měli určit zařízení, která mají starší verzi operačního systému, nebo Portál společnosti na svém zařízení a aktualizovat. Pokud chcete nastavit aktualizační kanály Windows 10, přihlaste se k Intune – > aktualizace softwaru – aktualizační kanály Windows 10. Nejnovější verze Portál společnosti je 10.3.5601.0 verze. Požádejte uživatele, aby si ho získali od Microsoft Store, aby se v budoucích verzích stále dosáhlo. Intune taky můžete použít k instalaci nejnovějšího prostředí do zařízení s Windows prostřednictvím [Microsoft Store pro firmy](https://docs.microsoft.com/intune/windows-store-for-business).

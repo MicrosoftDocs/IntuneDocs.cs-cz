@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8e319c68abd8965b84323bc3b7a5451dee42bc2
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: bc781ea72b54468b21fb70e60e334f1c8d8832ea
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709186"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74547947"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Kurz: Použití Autopilotu k registraci zařízení s Windows v Intune
 
@@ -60,9 +60,9 @@ Prvním krokem při nastavení Windows Autopilotu je přidání zařízení s Wi
 
 2. Soubor CSV uložte.
 
-3. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > **registrace systému Windows** > **zařízení** > **Import**.
+3. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **zařízení** (v části **Windows autopilot Deployment program** > **Import**.
 
-    ![Snímek obrazovky se zařízeními Windows Autopilot](./media/tutorial-use-autopilot-enroll-devices/autopilot-import-device.png)
+    ![Snímek obrazovky se zařízeními Windows Autopilot](./media/enrollment-autopilot/autopilot-import-device.png)
 
 4. V části **Přidat zařízení Windows Autopilot** vyhledejte uložený soubor CSV.
 
@@ -70,7 +70,7 @@ Prvním krokem při nastavení Windows Autopilotu je přidání zařízení s Wi
 
 5. Pomocí **Importovat** zahajte import informací o zařízeních. Import může trvat několik minut.
 
-4. Po dokončení importu vyberte možnost **registrace zařízení** > **registrace Windows** > **Windows autopilot** > **zařízení** > **Sync**. Zobrazí se zpráva, že synchronizace probíhá. Dokončení procesu může trvat několik minut v závislosti na tom, kolik zařízení synchronizujete.
+4. Po dokončení importu vyberte **zařízení** > **Windows** ** > systému Windows > ** **zařízení** (v části **Windows autopilot Deployment program** > **Sync**. Zobrazí se zpráva, že synchronizace probíhá. Dokončení procesu může trvat několik minut v závislosti na tom, kolik zařízení synchronizujete.
 
 5. Aktualizováním zobrazení zobrazte nová zařízení.
 
@@ -90,7 +90,7 @@ Dále vytvořte skupinu zařízení a přidejte do ní zařízení Autopilot, kt
 
 Po vytvoření skupiny zařízení musíte vytvořit profil nasazení, abyste mohli zařízení Autopilot nakonfigurovat.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > **profily nasazení** > **registrace systému Windows** > **vytvořit profil**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **Windows** > **profily nasazení profily** > **vytvořit profil**.
 2. Na stránce **základy** zadejte **název**systému do pole *autopilot Profile*. Jako **Popis skupiny** zadejte *Testovací profil pro zařízení Autopilot*.
 3. Nastavte možnost **Převést všechna cílová zařízení na Autopilot** na **Ano**. Toto nastavení zajistí, že všechna zařízení v seznamu se zaregistrují pomocí služby nasazení Autopilot. Vyřízení registrace trvá 48 hodin.
 4. Vyberte **Další**.
@@ -116,9 +116,9 @@ Pokud už nechcete používat zařízení autopilotu, můžete je odstranit.
 
 1. Pokud jsou zařízení registrována v Intune, musíte je nejdřív [odstranit z portálu služby Azure Active Directory](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 
-2. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > registrace zařízení > **zařízení**se **systémem Windows** .
+2. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **Windows** > **zařízení** (v části **program Windows autopilot Deployment**).
 
-3. V části **Zařízení Windows Autopilot** vyberte zařízení, která chcete odstranit, a pak vyberte **Odstranit**.
+3. Vyberte zařízení, která chcete odstranit, a pak zvolte **Odstranit**.
 
 4. Potvrďte odstranění pomocí **Ano**. Odstranění může trvat několik minut.
 

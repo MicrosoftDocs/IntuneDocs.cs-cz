@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 588b6d39f1e3dc86f76279ef0446d9d58dc3e1df
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 0e59a4ba7a929df448eddaf36038c2d6deaa0a7a
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506619"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74547934"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>Nastavení Windows 10 a novějších pro správu sdílených zařízení pomocí Intune
 
@@ -56,7 +56,7 @@ Další informace o této funkci v Intune najdete v tématu [řízení přístup
 - **Zásady napájení**: Pokud je nastavené na **povoleno**, uživatelé nemůžou vypnout režim hibernace, nemůžou přepsat všechny akce režimu spánku (například zavřít víko) a nemůžou měnit nastavení napájení. Když je tato možnost **zakázaná**, můžou uživatelé zařízení přepnout do režimu hibernace, může zavřít víko zařízení a změnit nastavení napájení. **Nenakonfigurováno** (výchozí) Toto nastavení nespravuje Intune a nenabídne žádné zásady pro řízení tohoto nastavení na zařízení.
 - **Časový limit režimu spánku (v sekundách)** : zadejte počet neaktivních sekund (0-100), než se zařízení přepne do režimu spánku. Pokud nenastavíte čas, zařízení přejde do režimu spánku po 60 minutách.
 - **Přihlášení při probuzení z počítače: Pokud**je nastaveno na **povoleno** , bude vyžadovat, aby se uživatelé přihlásili pomocí hesla, když zařízení nepřejde do režimu spánku. Vyberte možnost **zakázáno** , aby uživatelé nemuseli zadávat své uživatelské jméno a heslo. **Nenakonfigurováno** (výchozí) Toto nastavení nespravuje Intune a nenabídne žádné zásady pro řízení tohoto nastavení na zařízení.
-- **Čas zahájení údržby (v minutách od půlnoci)** : zadejte čas v minutách (0-1440), kdy se mají spouštět úlohy automatické údržby, například web Windows Update. Výchozí počáteční čas je půlnoc nebo nula (`0`) minut. Změňte čas spuštění zadáním počátečního času v minutách od půlnoci. Například pokud chcete, aby údržba začínala 2., zadejte `120`. Pokud chcete, aby údržba začínala 8 ODP. Zadejte `1200`.
+- **Čas zahájení údržby (v minutách od půlnoci)** : zadejte čas v minutách (0-1440), kdy se mají spouštět úlohy automatické údržby, například web Windows Update. Výchozí čas spuštění je půlnoc nebo nula (`0`) minut. Změňte čas spuštění zadáním počátečního času v minutách od půlnoci. Například pokud chcete, aby údržba začínala 2., zadejte `120`. Pokud chcete, aby údržba začínala 8 ODP. Zadejte `1200`.
 - **Zásady vzdělávání**: vyberte možnost **povoleno** pro použití doporučeného nastavení pro zařízení používaná ve školách, které jsou více omezující. Vyberte možnost **zakázáno** , takže se nepoužijí výchozí a doporučené zásady vzdělávání. **Nenakonfigurováno** (výchozí) Toto nastavení nespravuje Intune a nenabídne žádné zásady pro řízení tohoto nastavení na zařízení.
 
   Další informace o tom, co dělají zásady vzdělávání, najdete v tématu [doporučení konfigurace Windows 10 pro zákazníky ve vzdělávání](https://docs.microsoft.com/education/windows/configure-windows-for-education).

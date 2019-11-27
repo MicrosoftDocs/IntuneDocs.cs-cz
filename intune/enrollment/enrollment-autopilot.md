@@ -18,15 +18,15 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5066afdaf303a1cef20f80d3134f2382f718d86b
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
-ms.translationtype: HT
+ms.openlocfilehash: 8d24a858ec66433e72d63bea922eac0c4072a27c
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390734"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74547750"
 ---
-# <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows v Intune pomocí Windows Autopilot  
-Windows Autopilot usnadňuje registraci zařízení v Intune. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
+# <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows v Intune pomocí automatických pilotů Windows  
+Automatický pilotní modul Windows zjednodušuje registraci zařízení v Intune. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
 
 Existují čtyři typy nasazení autopilotu:
 - [Režim automatického nasazení](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) pro veřejné terminály, digitální podpisy nebo sdílené zařízení
@@ -34,7 +34,7 @@ Existují čtyři typy nasazení autopilotu:
 - [Režim řízený uživatelem](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) pro tradiční uživatele. 
 
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadované součásti
 - [Předplatné Intune](../fundamentals/licenses.md)
 - [Povolená automatická registrace pro Windows](windows-enroll.md#enable-windows-10-automatic-enrollment)
 - [Předplatné Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](http://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
@@ -49,7 +49,7 @@ Další informace najdete v tématu Principy rutiny prostředí PowerShell.
 
 Zařízení Windows Autopilot můžete přidat importováním souboru CSV s jejich informacemi.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > **registrace systému Windows** > **zařízení** > **Import**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **zařízení** (v části **Windows autopilot Deployment program** > **Import**.
 
     ![Snímek obrazovky se zařízeními Windows Autopilot](./media/enrollment-autopilot/autopilot-import-device.png)
 
@@ -65,11 +65,11 @@ Zařízení Windows Autopilot můžete přidat importováním souboru CSV s jeji
 
 3. Pomocí **Importovat** zahajte import informací o zařízeních. Import může trvat několik minut.
 
-4. Po dokončení importu vyberte **registrace zařízení** > **registrace** zařízení > Windows **autopilot** > **zařízení** > **synchronizaci**. Zobrazí se zpráva, že synchronizace probíhá. Dokončení procesu může trvat několik minut v závislosti na tom, kolik zařízení se synchronizuje.
+4. Po dokončení importu vyberte **zařízení** > **Windows** ** > systému Windows > ** **zařízení** (v části **Windows autopilot Deployment program** > **Sync**. Zobrazí se zpráva, že synchronizace probíhá. Dokončení procesu může trvat několik minut v závislosti na tom, kolik zařízení se synchronizuje.
 
 5. Aktualizováním zobrazení zobrazte nová zařízení.
 
-## <a name="create-an-autopilot-device-group"></a>Vytvoření skupiny zařízení Autopilot
+## <a name="create-an-autopilot-device-group"></a>Vytvořit skupinu zařízení Autopilot
 
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **skupiny** > **Nová skupina**.
 2. V okně **Skupina**:
@@ -86,9 +86,9 @@ Zařízení Windows Autopilot můžete přidat importováním souboru CSV s jeji
     Po přidání kódu do pole **Pokročilé pravidlo** zvolte **Uložit**.
 5. Zvolte **Vytvořit**.  
 
-## <a name="create-an-autopilot-deployment-profile"></a>Vytvoření profilu nasazení Autopilotu
+## <a name="create-an-autopilot-deployment-profile"></a>Vytvořit profil nasazení Autopilotu
 Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem. Můžete vytvořit až 350 profilů na každého tenanta.
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > **profily nasazení** > **registrace systému Windows** > **vytvořit profil**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **Windows** > **profily nasazení profily** > **vytvořit profil**.
 2. Na stránce **základy** zadejte **název** a volitelný **Popis**.
 
     ![Snímek stránky základy](./media/enrollment-autopilot/create-profile-basics.png)
@@ -102,7 +102,7 @@ Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem. 
     ![Snímek obrazovky se stránkou OOBE](./media/enrollment-autopilot/create-profile-outofbox.png)
 
 6. V poli **Připojit k Azure AD jako** zvolte **Připojeno k Azure AD**.
-7. Nakonfigurujte tyhle možnosti:
+7. Nakonfigurujte následující možnosti:
     - **Licenční smlouva s koncovým uživatelem (EULA)** : (Windows 10 verze 1709 nebo novější) Vyberte, jestli se má uživatelům zobrazit EULA.
     - **Nastavení ochrany osobních údajů**: Vyberte, jestli se mají uživatelům zobrazit nastavení ochrany osobních údajů.
     >[!IMPORTANT]
@@ -129,15 +129,14 @@ Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem. 
     ![Snímek obrazovky se stránkou Revize](./media/enrollment-autopilot/create-profile-review.png)
 
 > [!NOTE]
-> Intune bude pravidelně kontrolovat nová zařízení v přiřazených skupinách a pak začít proces přiřazování profilů těmto zařízením. Dokončení tohoto procesu může trvat několik minut. Před nasazením zařízení se ujistěte, že tento proces byl dokončen.  V části **registrace zařízení** > registrace zařízení se **systémem Windows** můžete zaškrtnout > **zařízení** , kde byste měli vidět změnu stavu profilu z "Nepřiřazeno" na "přiřazení" a nakonec na "přiřazeno".
+> Intune bude pravidelně kontrolovat nová zařízení v přiřazených skupinách a pak začít proces přiřazování profilů těmto zařízením. Dokončení tohoto procesu může trvat několik minut. Před nasazením zařízení se ujistěte, že tento proces byl dokončen.  V části **zařízení** ** >  > Windows se** můžete **zaregistrovat > ** **zařízení** (v části **program Windows autopilot Deployment** , kde byste měli vidět změnu stavu profilu z "Nepřiřazeno" na "přiřazení" a nakonec na "přiřazeno".
 
 ## <a name="edit-an-autopilot-deployment-profile"></a>Úprava profilu nasazení Autopilotu
 Po vytvoření profilu nasazení Autopilotu můžete některé části profilu nasazení upravit.   
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení**.
-2. V části **Registrace zařízení s Windows** v části **Windows Autopilot** zvolte **Profily nasazení**.
-3. Vyberte profil, který chcete upravit.
-4. Pokud chcete změnit název nebo popis nasazení profilu, klikněte vlevo na **Vlastnosti**. Po provedení změn klikněte na **Uložit**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **Windows** > **profily nasazení**.
+2. Vyberte profil, který chcete upravit.
+3. Vyberte **vlastnosti** vlevo a změňte název nebo popis profilu nasazení. Po provedení změn klikněte na **Uložit**.
 5. Pokud chcete provést změny nastavení softwaru spuštěného při prvním zapnutí zařízení, klikněte na **Nastavení**. Po provedení změn klikněte na **Uložit**.
 
 > [!NOTE]
@@ -146,11 +145,10 @@ Po vytvoření profilu nasazení Autopilotu můžete některé části profilu n
 ## <a name="edit-autopilot-device-attributes"></a>Upravit atributy zařízení autopilotu
 Po nahrání zařízení s autopilotem můžete upravit určité atributy zařízení.
 
-1. V Intune v Azure Portal vyberte **registrace zařízení**.
-2. V části **registrace systému Windows**v části **Windows autopilot** vyberte možnost **zařízení**.
-3. Vyberte zařízení, které chcete upravit.
-4. V podokně na pravé straně obrazovky můžete upravit název zařízení, značku skupiny nebo popisný název uživatele (Pokud jste přiřadili uživatele).
-5. Vyberte **Uložit**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **Windows** > **zařízení** (v části **program Windows autopilot Deployment**.
+2. Vyberte zařízení, které chcete upravit.
+3. V podokně na pravé straně obrazovky můžete upravit název zařízení, značku skupiny nebo popisný název uživatele (Pokud jste přiřadili uživatele).
+4. Vyberte **Uložit**.
 
 > [!NOTE]
 > Názvy zařízení je možné nakonfigurovat pro všechna zařízení, ale v hybridních nasazeních připojených k Azure AD se ignorují. Název zařízení se pořád nachází z profilu připojení k doméně pro hybridní zařízení Azure AD.
@@ -159,7 +157,7 @@ Po nahrání zařízení s autopilotem můžete upravit určité atributy zaří
 
 Upozornění zobrazí, kolik zařízení programu Autopilot nemá profily nasazení Autopilotu. Na základě informací v upozornění můžete vytvořit profily a přiřadit je potřebným zařízením. Když na upozornění kliknete, zobrazí se úplný seznam zařízení Windows Autopilotu a podrobné informace o zařízeních.
 
-Pokud chcete zobrazit upozornění na nepřiřazená zařízení, v [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Registrace zařízení** > **Přehled** > **Nepřiřazená zařízení**.  
+Pokud chcete zobrazit výstrahy pro Nepřiřazená zařízení, v [Intune v Azure Portal](https://aka.ms/intuneportal)vyberte **zařízení** > **Přehled** > **výstrahy registrace** > **Nepřiřazená zařízení**.  
 
 ## <a name="assign-a-user-to-a-specific-autopilot-device"></a>Přiřazení uživatele ke konkrétnímu zařízení Autopilot
 
@@ -167,7 +165,7 @@ K zařízení Autopilot můžete přiřadit uživatele. Díky přiřazení se b�
 
 Požadavky: Azure Active Directory Portál společnosti byl nakonfigurován a Windows 10 verze 1809 nebo novější.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > **registrace systému Windows** > **zařízení** > vyberte zařízení > **přiřadit uživatele**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **Windows** > **zařízení** (v části **program Windows autopilot Deployment** > vyberte zařízení > **přiřadit uživatele**.
 
     ![Snímek obrazovky s možností Přiřadit uživatele](./media/enrollment-autopilot/assign-user.png)
 
@@ -183,7 +181,7 @@ Požadavky: Azure Active Directory Portál společnosti byl nakonfigurován a Wi
 
 ## <a name="autopilot-deployments-report"></a>Sestava nasazení autopilotu
 Můžete si Zobrazit podrobnosti o každém zařízení nasazeném pomocí Windows autopilotu.
-Pokud chcete zobrazit sestavu, přejděte na **Intune** a v části **monitorování**vyberte **nasazení autopilotu**.
+Sestavu zobrazíte tak, že přejdete do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), zvolíte **zařízení** > **monitorovat** > **nasazení autopilotu**.
 Data jsou k dispozici po dobu 30 dnů od nasazení.
 
 
@@ -191,7 +189,7 @@ Data jsou k dispozici po dobu 30 dnů od nasazení.
 
 Můžete odstranit zařízení Windows autopilot, která nejsou zaregistrovaná v Intune:
 
-- Odstraňte zařízení z Windows autopilotu při **zápisu zařízení** > **zařízení** > **registraci v systému Windows** . Vyberte zařízení, která chcete odstranit, a pak zvolte **Odstranit**. Dokončení odstraňování zařízení Windows autopilotu může trvat několik minut.
+- Odstraňte zařízení z Windows autopilotu na **zařízeních** > **windows** > **Windows** > **Devices** (v části **program pro nasazení Windows autopilotu**. Vyberte zařízení, která chcete odstranit, a pak zvolte **Odstranit**. Dokončení odstraňování zařízení Windows autopilotu může trvat několik minut.
 
 Úplné odebrání zařízení z vašeho tenanta vyžaduje, abyste odstranili zařízení Intune, zařízení Azure Active Directory a záznamy zařízení Windows autopilot. To se dá udělat z Intune:
 
@@ -199,7 +197,7 @@ Můžete odstranit zařízení Windows autopilot, která nejsou zaregistrovaná 
 
 2. Odstraňte zařízení v zařízeních **Azure Active Directory v zařízeních > ** **zařízeních Azure AD**.
 
-3. Odstraňte zařízení z Windows autopilotu při **zápisu zařízení** > **zařízení** > **registraci v systému Windows** . Vyberte zařízení, která chcete odstranit, a pak zvolte **Odstranit**. Dokončení odstraňování zařízení Windows autopilotu může trvat několik minut.
+3. Odstraňte zařízení z Windows autopilotu na **zařízeních** > **windows** > **Windows** > **Devices** (v části **program Windows autopilot Deployment** >. Vyberte zařízení, která chcete odstranit, a pak zvolte **Odstranit**. Dokončení odstraňování zařízení Windows autopilotu může trvat několik minut.
 
 ## <a name="using-autopilot-in-other-portals"></a>Použití Autopilotu na jiných portálech
 Pokud nemáte zájem o správu mobilních zařízení, můžete Autopilot používat na jiných portálech. I když je používání na jiných portálech možné, doporučujeme ke správě nasazení Autopilotu používat jenom Intune. Pokud používáte Intune a jiný portál, nemůže Intune:  

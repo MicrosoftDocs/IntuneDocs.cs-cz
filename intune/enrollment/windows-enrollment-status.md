@@ -1,12 +1,12 @@
 ---
 title: Nastavení stránky stavu registrace
 titleSuffix: Microsoft Intune
-description: Nastavte na stránce s pozdravem uživatelé, kteří registrují zařízení s Windows 10.
+description: Nastavte stránku pozdravu pro uživatele, kteří registrují zařízení s Windows 10.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f9c09105ab7286eb315c6bf0f04f1801706bfa8
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: e81b8dc4938ea080018efae97093bb5e70dbcde8
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059709"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74548017"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Nastavení stránky stavu registrace
  
@@ -64,14 +64,14 @@ Můžete také nastavit pořadí priority pro každý profil na účet pro konfl
 
 Pokud chcete zapnout stránku Stav registrace, postupujte podle následujících kroků.
  
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > **registrace systému Windows** > **Stránka stav registrace**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** >  > Windows **registrace systému Windows** > **Stránka stavu registrace**.
 2. V okně **Stránka stavu registrace** zvolte **Výchozí** > **Nastavení**.
 3. U možnosti **Zobrazit průběh instalace aplikací a profilů** zvolte **Ano**.
 4. Zvolte další nastavení, která chcete zapnout, a potom zvolte **Uložit**.
 
 ## <a name="create-enrollment-status-page-profile-and-assign-to-a-group"></a>Vytvoří profil stránky stavu registrace a přiřadí se ke skupině.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > **registrace systému Windows** > na **stránce Stav registrace** > **vytvořit profil**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **registrace Windows** > **stavová stránka** > **vytvořit profil**.
 2. Zadejte **Název** a **Popis**.
 3. Zvolte **Vytvořit**.
 4. Nový profil vyberte v seznamu **Stránka stavu registrace**.
@@ -82,20 +82,20 @@ Pokud chcete zapnout stránku Stav registrace, postupujte podle následujících
 
 Uživatel může být v mnoha skupinách a mít velký počet profilů stránek stavu registrace. Chcete-li tyto konflikty zpracovat, můžete nastavit priority pro jednotlivé profily. Pokud má někdo více než jeden profil stránky stavu registrace, použije se k registraci zařízení jenom profil s nejvyšší prioritou.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > **registrace systému Windows** > **Stránka stav registrace**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** >  > Windows **registrace systému Windows** > **Stránka stavu registrace**.
 2. Najeďte myší na profil v seznamu.
 3. Pomocí tří svislých teček přetáhněte profil na požadované místo v seznamu.
 
-## <a name="block-access-to-a-device-until-a-specific-application-is-installed"></a>Blokovat přístup k zařízení, do konkrétní aplikace je nainstalována.
+## <a name="block-access-to-a-device-until-a-specific-application-is-installed"></a>Zablokovat přístup k zařízení, dokud není nainstalovaná konkrétní aplikace
 
-Můžete určit aplikace, které je potřeba nainstalovat předtím, než uživatel může přístup k ploše.
+Můžete určit, které aplikace se musí nainstalovat, než uživatel bude moci získat přístup k ploše.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > **registrace systému Windows** > **Stránka stav registrace**.
-2. Zvolte profil > **nastavení**.
-3. Zvolte **Ano** pro **zobrazit průběh instalace aplikaci a profilu**.
-4. Zvolte **Ano** pro **zablokovat používání zařízení, dokud nebudou nainstalovány všechny aplikace a profily**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** >  > Windows **registrace systému Windows** > **Stránka stavu registrace**.
+2. Vyberte profil > **Nastavení**.
+3. Pokud chcete **Zobrazit průběh instalace aplikací a profilů**, klikněte na **Ano** .
+4. Vyberte možnost **Ano** pro **blokování použití zařízení, dokud nebudou nainstalovány všechny aplikace a profily**.
 5. Vyberte možnost **Vybraná** pro **blokování použití zařízení, dokud se tyto požadované aplikace neinstalují, pokud jsou přiřazené uživateli nebo zařízení**.
-6. Zvolte **vyberte aplikace** > vyberte aplikace > **vyberte** > **Uložit**.
+6. Zvolte **vybrat aplikace** > zvolte aplikace > **Vyberte** > **Uložit**.
 
 ## <a name="enrollment-status-page-tracking-information"></a>Informace o sledování stránky stavu registrace
 
@@ -115,7 +115,7 @@ Na stránce Stav registrace se sledují následující položky instalace zaří
 - Zásady zabezpečení
   - Jeden poskytovatel konfiguračních služeb pro všechny registrace.
   - Skuteční poskytovatelé konfiguračních služeb nakonfigurovaných službou Intune se zde nesledují.
-- Aplikace
+- Aplikací
   - Počet obchodních aplikací Instalační služby MSI na jeden počítač.
   - Obchodní aplikace pro Store s kontextem instalace = zařízení.
   - Offline aplikace pro Store a obchodní aplikace pro Store s kontextem instalace = zařízení.
@@ -129,12 +129,12 @@ U nastavení účtu se na stránce Stav registrace sleduje následující polož
 - Zásady zabezpečení
   - Jeden poskytovatel konfiguračních služeb pro všechny registrace.
   - Skuteční poskytovatelé konfiguračních služeb nakonfigurovaných službou Intune se zde nesledují.
-- Aplikace
+- Aplikací
   - Počet obchodních aplikací Instalační služby MSI na jednoho uživatele, které jsou přiřazeny ke všem zařízením, všem uživatelům nebo skupině uživatelů, jejímž členem uživatel provádějící registraci zařízení je.
   - Počet obchodních aplikací Instalační služby MSI na jeden počítač, které jsou přiřazeny ke všem uživatelům nebo skupině uživatelů, jejímž členem uživatel provádějící registraci zařízení je.
   - Aplikace obchodu pro obchod, aplikace pro Online Store a aplikace pro offline Store, které jsou přiřazené k některým z následujících objektů:
     - Všechna zařízení
-    - Všichni uživatelé
+    - All Users
     - Skupina uživatelů, ve které je uživatel, který zařízení registruje, členem s kontextem instalace nastaveným na hodnotu uživatel.
   - Aplikace Win32 (jenom Windows 10 verze 1903 a novější) 
 - Profily připojení

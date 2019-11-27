@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 796439581ca0ae91e788a91ab0bc2ef8f6019626
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
-ms.translationtype: HT
+ms.openlocfilehash: 04b284a62076122cec70b6b455151a0377470521
+ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199341"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540736"
 ---
 # <a name="in-development-for-microsoft-intune---december-2019"></a>Ve vývoji pro Microsoft Intune – prosince 2019
 
@@ -138,7 +138,7 @@ Platí pro:
 Budete moct zadat seznam schválených klávesnic pro použití ve spravovaných aplikacích pro Android. Ve spravované aplikaci se uživateli zobrazí výzva k přepnutí na jednu ze schválených klávesnic, které už jsou na svém zařízení nainstalované, nebo v případě potřeby budou přesměrovány na Obchod Google Play ke stažení a nastavení jedné ze schválených klávesnic. Uživatel bude moci upravovat textová pole ve spravované aplikaci, pokud je jejich aktivní klávesnicí jednou ze schválených klávesnic.
 
 ### <a name="use-pkcs-certificates-with-wi-fi-profiles-on-windows-10-and-later-devices---3246388----"></a>Použití certifikátů PKCS s profily sítě Wi-Fi na zařízeních s Windows 10 a novějším<!-- 3246388  -->
-V současné době můžete ověřit profily Wi-Fi pro Windows pomocí certifikátů SCEP (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Windows 10 a novější** pro platform > **Wi-Fi** pro typ profilu > **typ protokolu EAP** **Enterprise** > . Certifikáty PKCS budete moct používat se profily Wi-Fi pro Windows. Tato funkce umožňuje uživatelům ověřovat profily sítě Wi-Fi pomocí nových nebo existujících profilů certifikátů PKCS ve vašem tenantovi. 
+V současné době můžete ověřit profily Wi-Fi pro Windows pomocí certifikátů SCEP (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Windows 10 a novější** pro platformu > **Wi-Fi** pro Typ profilu > **Enterprise** > **typ protokolu EAP**). Certifikáty PKCS budete moct používat se profily Wi-Fi pro Windows. Tato funkce umožňuje uživatelům ověřovat profily sítě Wi-Fi pomocí nových nebo existujících profilů certifikátů PKCS ve vašem tenantovi. 
 
 Další informace o profilech sítě Wi-Fi najdete v tématu [Přidání nastavení Wi-Fi pro zařízení s Windows 10 a novějším v Intune](../configuration/wi-fi-settings-windows.md).
 
@@ -146,7 +146,7 @@ Platí pro:
 - Windows 10 a novější
 
 ### <a name="new-exchangeactivesync-settings-when-creating-an-email-device-configuration-profile-on-ios-devices---4892824----"></a>Nové nastavení ExchangeActiveSync při vytváření profilu konfigurace e-mailového zařízení na zařízeních s iOS<!-- 4892824  --> 
-V zařízeních s iOS/iPadOS můžete nakonfigurovat připojení e-mailu v profilu konfigurace zařízení (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **iOS/iPadOS** **pro > pro** daný typ profilu). 
+V zařízeních se systémem iOS/iPadOS můžete nakonfigurovat připojení e-mailu v profilu konfigurace zařízení (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **iOS/iPadOS** pro **> pro** platformy. pro typ profilu). 
 
 K dispozici jsou nová nastavení ExchangeActiveSync, včetně:
 - Vyberte služby, které se mají synchronizovat (nebo blokovat synchronizaci), jako je e-mail, kalendář a kontakty.
@@ -159,7 +159,7 @@ Platí pro:
 - iPadOS 13,0 a novější
 
 ### <a name="prevent-users-from-adding-personal-google-accounts-to-android-enterprise-device-owner-and-dedicated-devices---5353228----"></a>Zabránit uživatelům v přidávání osobních účtů Google na vlastníka zařízení s Androidem Enterprise a vyhrazená zařízení<!-- 5353228  -->
-Budete moct uživatelům zabránit v vytváření osobních účtů Google na základě vlastníka zařízení s Androidem Enterprise a vyhrazených zařízení (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Android Enterprise** pro > Platform **jenom pro vlastníka zařízení > omezení** pro typ profilu > **Nastavení uživatelů a účtů**).
+Uživatelům budete moct zabránit v vytváření osobních účtů Google na základě vlastníka zařízení s Androidem Enterprise a vyhrazených zařízení (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Android Enterprise.** pro > **jenom pro vlastníka zařízení > omezení zařízení** pro typ profilu > **nastavení uživatelé a účty**).
 
 Pokud chcete zobrazit aktuální nastavení, která můžete nakonfigurovat, přejděte na [nastavení zařízení s Androidem Enterprise a povolte nebo omezte funkce pomocí Intune](../configuration/device-restrictions-android-for-work.md).
 
@@ -168,7 +168,7 @@ Platí pro:
 - Zařízení se systémem Android Enterprise vyhrazená
 
 ### <a name="server-side-logging-for-siri-commands-setting-is-removed-in-ios-device-restrictions-profile---5468501----"></a>Nastavení příkazů protokolování na straně serveru pro příkazy Siri se v profilu omezení zařízení s iOS odeberou.<!-- 5468501  -->
-Na zařízeních s iOS můžete vytvořit profily omezení zařízení, které nakonfigurují protokolování na straně serveru pro příkazy Siri (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **iOS/iPadOS** pro > **omezení zařízení** pro typ profilu > **integrované aplikace**). Bude odebráno nastavení **protokolování na straně serveru pro příkazy Siri** .
+Na zařízeních s iOS můžete vytvořit profily omezení zařízení, které nakonfigurují protokolování na straně serveru pro příkazy Siri (**Konfigurace zařízení** > **profily** > **Vytvoření profilu** > **iOS/iPadOS** pro platformu. > **Omezení zařízení** pro typ profilu > **integrovaných aplikací**). Bude odebráno nastavení **protokolování na straně serveru pro příkazy Siri** .
 
 Toto nastavení se odebere z konzoly pro správu Intune. Toto nastavení nemá na zařízení žádný vliv, i když existující zásady s nakonfigurovaným nastavením budou pokračovat v zobrazování tohoto nastavení. Pokud chcete odebrat nastavení z existujících zásad, přečtěte si zásady, udělejte dílčí úpravu, uložte ji a zásady se aktualizují.
 
@@ -181,34 +181,12 @@ Platí pro:
 <!--## Device enrollment-->
 
 <!-- ***********************************************-->
-## <a name="device-management"></a>Správa zařízení
+<!--## Device management-->
 
-
-
-### <a name="edit-device-name-value-for-autopilot-devices---2640074----"></a>Upravit hodnotu názvu zařízení pro zařízení s autopilotem<!-- 2640074  -->
-Budete moct upravit hodnotu název zařízení pro zařízení autopilotu připojená k Azure AD. Provedete to tak, že přejdete na **Intune** > **registrace zařízení** > **registraci systému windows** > **Windows autopilot** > **zařízení** > vyberte zařízení > změňte hodnotu **název zařízení** v pravém podokně > **Uložit**.
-
-### <a name="edit-the-group-tag-value-for-autopilot-devices---4816775---"></a>Úprava hodnoty značky skupiny pro zařízení autopilotu<!-- 4816775 -->
-Budete moct upravit hodnotu **značky skupiny** pro zařízení autopilotu:
-
-1. V **Intune** > **registrace zařízení** > **registrace zařízení se systémem Windows** >  > **zařízení** **Windows autopilot** .
-1. Vyberte zařízení.
-1. V pravém podokně změňte hodnotu **značky skupiny** .
-1. Vyberte **Uložit**.
-
-### <a name="target-macos-user-groups-to-require-jamf-management---4061739---"></a>Cílové skupiny uživatelů macOS, které vyžadují správu Jamf<!-- 4061739 -->
-Budete moct cílit na konkrétní skupiny uživatelů, aby se zařízení macOS mohla spravovat pomocí Jamf. Tento cíl vám umožní použít integraci Jamf dodržování předpisů pro podmnožinu zařízení macOS, zatímco ostatní zařízení se budou dál spravovat přes Intune. Cílení taky vám umožní postupně migrovat zařízení uživatelů z jednoho systému správy mobilních zařízení (MDM) do druhého.
 
 <!-- ***********************************************-->
-## <a name="intune-apps"></a>Aplikace Intune
-
-### <a name="improved-macos-enrollment-experience-in-company-portal---5074349----"></a>Vylepšené možnosti registrace macOS v Portál společnosti<!-- 5074349  -->
-Portál společnosti pro registraci v macOS bude mít jednodušší proces registrace, který bude lépe zarovnávat Portál společnosti možnosti registrace zařízení s iOS. Uživatelům zařízení se zobrazí:  
-
-* Elegantní uživatelské rozhraní.  
-* Vylepšený kontrolní seznam pro registraci.  
-* Informace o tom, jak zaregistrovat svá zařízení.  
-* Vylepšené možnosti řešení potíží.  
+<!--## Intune apps-->
+ 
 
 <!-- ***********************************************-->
 ## <a name="monitoring-and-troubleshooting"></a>Monitorování a řešení potíží
@@ -217,10 +195,8 @@ Portál společnosti pro registraci v macOS bude mít jednodušší proces regis
 Nové centralizované prostředí protokolu auditu bude shromažďovat protokoly auditu pro všechny kategorie na jednu stránku. You'l budou moct filtrovat protokoly a získat tak data, která hledáte. Protokoly auditu zobrazíte tak, že přejdete do části **Správa tenanta** > **protokoly auditu**. Další informace najdete v tématu [nadcházející změna v protokolech auditu v Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Upcoming-change-to-Audit-logs-in-Intune/ba-p/1015858).
 
 <!-- ***********************************************-->
-## <a name="role-based-access-control"></a>Řízení přístupu na základě role
+<!--## Role-based access control-->
 
-### <a name="duplicate-custom-or-built-in-roles---1081938---"></a>Duplicitní vlastní nebo předdefinované role<!-- 1081938 -->
-Budete moct zkopírovat předdefinované a vlastní role. Provedete to tak, že přejdete na > **role** **Intune** > **všechny role** > zvolit roli v seznamu > **Duplikovat**. Ujistěte se, že jste zadali nový název, který je jedinečný.
 
 <!-- ***********************************************-->
 
@@ -234,7 +210,7 @@ K vystavování certifikátů pro zařízení budete moct použít profil certif
 
 [!INCLUDE [Intune notices](../includes/intune-notices.md)]
 
-## <a name="see-also"></a>Viz taky
+## <a name="see-also"></a>Související témata
 Podrobnosti o posledním vývoji najdete v tématu [co je nového v Microsoft Intune](whats-new.md).
 
 

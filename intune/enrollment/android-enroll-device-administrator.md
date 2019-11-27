@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a72d3a16c5180b51fcc019d726a498e0d15ad1d3
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 08193aa329a1bee4e66638de5c0d7518d15db2a4
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503402"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74547914"
 ---
 # <a name="android-device-administrator-enrollment"></a>Registrace správce zařízení s Androidem
 
@@ -47,8 +47,6 @@ Další informace o funkcích pro Android Enterprise v Google najdete v těchto 
 
 
 ## <a name="set-up-device-administrator-enrollment"></a>Nastavení registrace Správce zařízení
-
-Intune ve výchozím nastavení umožňuje registraci zařízení s Androidem pomocí možností Správce zařízení.
 
 1. Při přípravě na správu mobilních zařízení musíte nastavit autoritu pro správu mobilních zařízení (MDM) na **Microsoft Intune**. Pokyny k tomu najdete v článku [Nastavení autority MDM](../fundamentals/mdm-authority-set.md). Tato možnost se nastavuje jenom jednou při prvním nastavování Intune pro správu mobilních zařízení.
 2. V **Intune** > **registrace zařízení** > registrace zařízení s **Androidem** > **osobních zařízeních a zařízení vlastněných společností pomocí oprávnění pro správu zařízení** > **ke správě zařízení použijte Správce zařízení**.

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61771ce2b6179b2e74a4d13f72794ece97907034
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 9454353ec4f8291d4d8c0001cc977838ecec787b
+ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502566"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540799"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Přidání partnerské certifikační autority pomocí protokolu SCEP do Intune
 
@@ -57,7 +57,8 @@ Následující kroky poskytují přehled použití protokolu SCEP pro certifiká
 
 Následující diagram znázorňuje podrobný tok integrace externího serveru SCEP s Intune:
 
-![Způsob integrace externí certifikační autority SCEP s Microsoft Intune](./media/certificate-authority-add-scep-overview/scep-certificate-vendor-integration.png)
+> [!div class="mx-imgBorder"]
+> ![, jak se protokol SCEP certifikační autority od jiných výrobců integruje s Microsoft Intune](./media/certificate-authority-add-scep-overview/scep-certificate-vendor-integration.png)
 
 ## <a name="set-up-third-party-ca-integration"></a>Nastavení integrace externí certifikační autority
 
@@ -73,7 +74,7 @@ Ujistěte se, že máte k registraci aplikace Azure AD potřebná oprávnění. 
 
 #### <a name="create-an-application-in-azure-active-directory"></a>Vytvoření aplikace v Azure Active Directory  
 
-1. V [Azure Portal](https://portal.azure.com)klikněte na**registrace aplikací** **Azure Active Directory** >  a pak vyberte **Nová registrace**.  
+1. V [Azure Portal](https://portal.azure.com)přejít na **Azure Active Directory** > **Registrace aplikací**a vyberte **Nová registrace**.  
 
 2. Na stránce **zaregistrovat aplikaci** zadejte následující podrobnosti:  
    - V části **název** zadejte smysluplný název aplikace.  
@@ -88,7 +89,7 @@ Ujistěte se, že máte k registraci aplikace Azure AD potřebná oprávnění. 
    > [!IMPORTANT]  
    > Než tuto stránku opustíte, zkopírujte hodnotu pro tajný klíč klienta a zaznamenejte ho pro pozdější použití s implementací CA třetí strany. Tato hodnota se znovu nezobrazí. Nezapomeňte si projít doprovodné materiály k vaší certifikační autoritě od třetí strany, jak si přeje nakonfigurovat ID aplikace, ověřovací klíč a ID tenanta.  
 
-6. Poznamenejte si **ID tenanta**. ID tenanta je text domény po přihlášení @ účtu. Pokud je váš účet například *admin@name.onmicrosoft.com* , bude vaše ID tenanta **Name.onmicrosoft.com**.  
+6. Poznamenejte si **ID tenanta**. ID tenanta je text domény po přihlášení @ účtu. Pokud je váš účet například *admin@name.onmicrosoft.com* , je vaše ID tenanta **Name.onmicrosoft.com**.  
 
 7. V navigačním podokně aplikace otevřete v nabídce **Spravovat** **oprávnění rozhraní API** a pak vyberte **Přidat oprávnění**.  
 

@@ -18,21 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a31a4777537db6f656dbf9eaf0b30a6e95412a8
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 6ddb9ec795b9cc8842cbc6c9d33897b5e0f45e88
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72499760"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74547997"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Přidání zásad konfigurace aplikací pro spravované aplikace bez registrace zařízení
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Zásady konfigurace aplikací můžete používat se spravovanými aplikacemi, které podporují sadu Intune App SDK, i na nezaregistrovaných zařízeních. 
-
-> [!NOTE]
-> Aby bylo možné přijímat zásady konfigurace aplikací, musí být aplikace cílem zásad Intune App Protection. Další informace o vytváření zásad Intune App Protection najdete v článku [Co jsou zásady ochrany aplikací](app-protection-policy.md).
 
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Zvolte úlohu **Klientské aplikace**.

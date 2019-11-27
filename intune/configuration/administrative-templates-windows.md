@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9cec7395fc766f6a937e6c43ef3a32fb21610be
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: ca087ec67542102a0cd3111d27a860500b23d3c4
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059993"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74547975"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Pomocí šablon Windows 10 můžete nakonfigurovat nastavení zásad skupiny v Microsoft Intune
 
@@ -96,8 +96,10 @@ V těchto šablonách jsou k dispozici stovky nastavení. Aby bylo snazší naj�
 
   ![Vyhledat kopii pro zobrazení všech nastavení systému Windows a sady Office v šablonách pro správu v Intune](./media/administrative-templates-windows/search-copy-settings.png) 
 
-  V jiném příkladu vyhledejte `microsoft word`. Zobrazí se všechna nastavení, která můžete nastavit pro program Microsoft Word. Pokud chcete zobrazit všechna nastavení aplikace Internet Explorer, která můžete přidat do šablony, vyhledejte `explorer`.
+  V jiném příkladu vyhledejte `microsoft word`. Zobrazí se všechna nastavení, která můžete nastavit pro program Microsoft Word. Vyhledejte `explorer` pro zobrazení všech nastavení aplikace Internet Explorer, která můžete přidat do šablony.
 
 ## <a name="next-steps"></a>Další kroky
 
 Šablona se vytvoří, ale ještě nic nedělá. Dále [přiřaďte šablonu, která se označuje také jako profil](device-profile-assign.md) a [sledujte její stav](device-profile-monitor.md).
+
+[Aktualizujte Office 365 pomocí šablon pro správu](administrative-templates-update-office.md).
