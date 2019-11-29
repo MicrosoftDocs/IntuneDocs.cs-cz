@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/24/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af24b5fe33bc1e794529ef5a5ab6975eed4fb9cc
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: b4839340ba1f3bad6f28a1120d882d0f600b1d44
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709910"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563560"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Přidejte Microsoft Edge pro Windows 10 a Microsoft Intune
 
 Než budete moct nasadit, nakonfigurovat, monitorovat nebo chránit aplikace, musíte je přidat do Intune. Jedním z dostupných [typů aplikací](~/apps/apps-add.md#app-types-in-microsoft-intune) je Microsoft Edge *verze 77 a novější*. Když vyberete tento typ aplikace v Intune, můžete přiřadit a nainstalovat Microsoft Edge *verze 77 a novější* na zařízení, která spravujete, na kterých běží Windows 10.
 
 > [!IMPORTANT]
-> Tento typ aplikace je ve **verzi Public Preview** a nabízí vývojové a beta kanály pro Windows 10. Nasazení je pouze anglické (EN), ale koncoví uživatelé mohou změnit jazyk zobrazení v prohlížeči v části **nastavení**  > **jazyky**. Microsoft Edge je aplikace Win32 nainstalovaná v kontextu systému a jako architektury (aplikace x86 v operačním systému x86 a x64 v operačním systému x64). Intune zjistí všechny existující instalace Microsoft Edge. Pokud je nainstalován v uživatelském kontextu, bude instalace systému přepsána. Pokud je nainstalovaný v kontextu systému, nahlásí se úspěch instalace. Automatické aktualizace Microsoft Edge jsou navíc ve výchozím nastavení **zapnuté** a Microsoft Edge nejde odinstalovat.
+> Tento typ aplikace je ve **verzi Public Preview** a nabízí vývojové a beta kanály pro Windows 10. Nasazení je pouze anglické (EN), ale koncoví uživatelé mohou změnit jazyk zobrazení v prohlížeči v části **nastavení** > **jazyky**. Microsoft Edge je aplikace Win32 nainstalovaná v kontextu systému a jako architektury (aplikace x86 v operačním systému x86 a x64 v operačním systému x64). Intune zjistí všechny existující instalace Microsoft Edge. Pokud je nainstalován v uživatelském kontextu, bude instalace systému přepsána. Pokud je nainstalovaný v kontextu systému, nahlásí se úspěch instalace. Automatické aktualizace Microsoft Edge jsou navíc ve výchozím nastavení **zapnuté** a Microsoft Edge nejde odinstalovat.
 
 > [!NOTE]
 > Pro macOS je k dispozici také Microsoft Edge *verze 77 a novější* .
 > 
-> Nemůžete použít integrované nasazení aplikace Microsoft Edge pro počítače připojení k síti na pracovišti. Integrované nasazení aplikací vyžaduje rozšíření pro správu Intune, které existuje jenom pro zařízení připojená k AAD. Verzi Microsoft Edge *77 a novější* můžete nasadit pomocí souboru *. msi* nahraného do **klientských aplikací**, viz téma [Přidání obchodní aplikace pro Windows do Microsoft Intune](~/apps/lob-apps-windows.md).
+> Nemůžete použít integrované nasazení aplikace Microsoft Edge pro počítače připojení k síti na pracovišti. Integrované nasazení aplikací vyžaduje rozšíření pro správu Intune, které existuje jenom pro zařízení připojená k AAD. Verzi Microsoft Edge *77 a novější* můžete nasadit pomocí souboru *. msi* nahraného do **aplikací**. Přečtěte si téma [Přidání obchodní aplikace pro Windows do Microsoft Intune](~/apps/lob-apps-windows.md).
 
 ## <a name="prerequisites"></a>Požadované součásti
 - Vyžaduje se Windows 10 RS2 a vyšší.
@@ -43,15 +43,15 @@ Než budete moct nasadit, nakonfigurovat, monitorovat nebo chránit aplikace, mu
 ## <a name="configure-the-app-in-intune"></a>Konfigurace aplikace v Intune
 Microsoft Edge verze 77 a novější můžete do Intune přidat pomocí následujících kroků:
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. V podokně **Intune** vyberte **Klientské aplikace** > **Aplikace** > **Přidat**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
 3. V seznamu **Typ aplikace** pod **Microsoft Edge verze 77 a novější**vyberte **Windows 10**.
 
 ## <a name="configure-app-information"></a>Konfigurace informací o aplikaci
 V tomto kroku zadáte informace o tomto nasazení aplikace. Tyto informace vám pomůžou identifikovat aplikaci v Intune a pomáhají uživatelům najít aplikaci na portálu společnosti.
 
-1. Kliknutím na **informace o aplikaci** zobrazíte okno **informace o aplikaci** .
-2. V okně **informace o aplikaci** zadejte informace o tomto nasazení aplikace. Tyto informace vám pomůžou identifikovat aplikaci v Intune a pomáhají uživatelům najít aplikaci na portálu společnosti.
+1. Kliknutím na **informace o aplikaci** zobrazíte podokno **informace o aplikaci** .
+2. V podokně **informace o aplikaci** zadejte informace o tomto nasazení aplikace. Tyto informace vám pomůžou identifikovat aplikaci v Intune a pomáhají uživatelům najít aplikaci na portálu společnosti.
     - **Název**: zadejte název aplikace, který se zobrazí na portálu společnosti. Ujistěte se, že jsou všechny názvy jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti uživatelům jenom jedna z aplikací.
     - **Popis**: Zadejte popis aplikace. Můžete například zobrazit seznam cílových uživatelů v popisu.
     - **Vydavatel**: Jako vydavatel se zobrazí Microsoft.
@@ -67,8 +67,8 @@ V tomto kroku zadáte informace o tomto nasazení aplikace. Tyto informace vám 
 ## <a name="configure-app-settings"></a>Konfigurace nastavení aplikace
 V tomto kroku nakonfigurujte možnosti instalace aplikace.
 
-1. V okně **Přidat aplikaci** vyberte **nastavení aplikace**.
-2. V okně **nastavení aplikace** vyberte **beta verze** ze seznamu **kanálů** , abyste určili **, ze které** hraničního kanálu budete aplikaci nasazovat.
+1. V podokně **Přidat aplikaci** vyberte **nastavení aplikace**.
+2. V podokně **nastavení aplikace** vyberte **beta verze** ze seznamu **kanálů** , abyste určili **, ze které** hraničního kanálu budete aplikaci nasazovat.
     - **Beta verze** Kanál je nejstabilním prostředím Microsoft Edge Preview a nejlepší volbou pro úplný pilotní nasazení v rámci vaší organizace. V případě hlavních aktualizací každých šest týdnů zahrnuje každá verze tyto učení a vylepšení z vývojového kanálu.
     - **Vývoj** Kanál je připravený na podnikovou zpětnou vazbu ve Windows, Windows serveru a macOS. Aktualizuje se každý týden a obsahuje nejnovější vylepšení a opravy.
 
@@ -82,10 +82,10 @@ Pomocí značek Scope můžete určit, kdo může v Intune zobrazit informace o 
 1.  Vyberte **obor (značky)**  > **Přidat**.
 2.  Pro vyhledání značek oboru použijte pole **Vybrat** .
 3.  Zaškrtněte políčko vedle značek oboru, které chcete této aplikaci přiřadit.
-4.  Klikněte na **vybrat**  > **OK**.
+4.  Klikněte na **vybrat** > **OK**.
 
 ## <a name="add-the-app"></a>Přidání aplikace
-Po dokončení konfigurace aplikace vyberte v okně **aplikace App App** možnost **Přidat** . 
+Po dokončení konfigurace aplikace vyberte v podokně **aplikace aplikace** možnost **Přidat** . 
 
 Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřazovat vybraným skupinám. 
 

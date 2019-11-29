@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 000b1d04dd3f520b55b1d33545a8803e23bf8965
-ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
+ms.openlocfilehash: 26972bb034ea4cb65f1bf64c61c20395cf94dc36
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889590"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564173"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Jak monitorovat zásady ochrany aplikací
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -42,9 +42,8 @@ Doba uchování dat ochrany aplikací je 90 dní. Všechny instance aplikace, kt
 
 ## <a name="summary-view"></a>Souhrnné zobrazení
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. V podokně **Intune** zvolte **Klientské aplikace**.
-4. Zobrazení souhrnu zobrazíte tak, že v části **monitorování**v úloze **klientské aplikace** zvolíte **stav ochrany aplikace**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Vyberte **aplikace** > **monitorovat** > **stav ochrany aplikací**.
 
    ![Snímek obrazovky s dlaždicí souhrnu v podokně Správa mobilních aplikací Intune](./media/app-protection-policies-monitor/app-protection-user-status-summary.png)
 
@@ -78,7 +77,7 @@ Můžete vyhledat konkrétního uživatele a zkontrolovat u něj stav dodržová
 >[!NOTE]
 > Sloupec **Poslední synchronizace** představuje stejnou hodnotu jak v sestavě pro stav uživatele v konzole, tak v [sestavě pro vyexportované. csv](https://docs.microsoft.com/intune/app-protection-policies-monitor#export-app-protection-activities)zásady ochrany aplikací. Rozdíl je krátké zpoždění synchronizace mezi hodnotou ve dvou sestavách. 
 >
-> Čas, na který se odkazuje v poslední synchronizaci, je čas, kdy se naposledy viděla instance aplikace Intune. Když uživatel spustí aplikaci, může u této doby spuštění informovat službu Intune App Protection, v závislosti na tom, kdy se naposledy vrátila. Podívejte [se na časy intervalu opakování při vrácení se změnami zásad ochrany aplikací](https://docs.microsoft.com/en-us/intune/app-protection-policy-delivery). Pokud uživatel nepoužil tuto konkrétní aplikaci v intervalu Poslední vrácení se změnami (což je obvykle 30 minut z aktivního použití) a spustí aplikaci, pak:
+> Čas, na který se odkazuje v poslední synchronizaci, je čas, kdy se naposledy viděla instance aplikace Intune. Když uživatel spustí aplikaci, může u této doby spuštění informovat službu Intune App Protection, v závislosti na tom, kdy se naposledy vrátila. Podívejte [se na časy intervalu opakování při vrácení se změnami zásad ochrany aplikací](~/apps/app-protection-policy-delivery.md). Pokud uživatel nepoužil tuto konkrétní aplikaci v intervalu Poslední vrácení se změnami (což je obvykle 30 minut z aktivního použití) a spustí aplikaci, pak:
 >
 > - Zpráva o zásadách ochrany aplikací, kterou lze exportovat. csv, má nejnovější čas do 1 minuty (minimálně) až 30 minut (maximum).
 > - Zpráva o stavu uživatele má okamžitý čas.
@@ -104,7 +103,7 @@ Pokud chcete zobrazit vytváření sestav pro uživatele, postupujte takto:
 > Pokud uživatel, kterého jste hledali, nemá nasazené zásady MAM, zobrazí se zpráva, že na uživatele není zacílená žádná zásada MAM.
 
 ### <a name="flagged-users"></a>Uživatelé označení příznakem
-V podrobném přehledu se zobrazí chybová zpráva, otevíraná aplikace v okamžiku chyby, dotčená platforma operačního systému zařízení a časové razítko. Tato chyba je typicky pro zařízení s jailbreakem (iOS) nebo rootem (Android). Uživatelé se zařízeními, která jsou označena příznakem "podmíněné spuštění ověření zařízení SafetyNet", jsou také hlášeny v důsledku ohlášení Google. Aby bylo možné uživatele odebrat ze sestavy, je třeba změnit stav samotného zařízení, které se stane po kontrole další kořenové složky (nebo jailbreaků kontrolu/SafetyNet kontrolu), která musí hlásit pozitivní výsledek. Pokud je zařízení skutečně napravované, zobrazí se při opětovném načtení okna aktualizace na sestavě uživatelů označených příznakem.
+V podrobném přehledu se zobrazí chybová zpráva, otevíraná aplikace v okamžiku chyby, dotčená platforma operačního systému zařízení a časové razítko. Tato chyba je typicky pro zařízení s jailbreakem (iOS) nebo rootem (Android). Uživatelé se zařízeními, která jsou označena příznakem "podmíněné spuštění ověření zařízení SafetyNet", jsou také hlášeny v důsledku ohlášení Google. Aby bylo možné uživatele odebrat ze sestavy, je třeba změnit stav samotného zařízení, které se stane po kontrole další kořenové složky (nebo jailbreaků kontrolu/SafetyNet kontrolu), která musí hlásit pozitivní výsledek. Pokud je zařízení skutečně opraveno, bude při opětovném načtení podokna provedena aktualizace na sestavě uživatelů označených příznakem.
 
 ### <a name="users-with-potentially-harmful-apps"></a>Uživatelé s potenciálně škodlivými aplikacemi
 Podrobné zobrazení ukazuje:
@@ -121,14 +120,14 @@ Uživatelé se zařízeními, která jsou označená pomocí kontroly podmíněn
 
 ## <a name="reporting-view"></a>Zobrazení vytváření sestav
 
-Stejné sestavy můžete najít v horní části okna **stavu ochrany aplikace** .
+Stejné sestavy můžete najít v horní části podokna **stav ochrany aplikací** .
 
 > [!NOTE]
-> Intune poskytuje další pole pro vytváření sestav zařízení, včetně ID registrace aplikace, výrobce Androidu, modelu a verze opravy zabezpečení i modelu iOS. V Intune získáte přístup k těmto polím tak, že vyberete **klientské aplikace** > **stav ochrany aplikace** > **Sestava ochrany aplikací: iOS, Android**. Kromě toho tyto parametry pomůžou nakonfigurovat seznam **povolených** pro výrobce zařízení (Android), seznam **povolených** nastavení pro model zařízení (Android a iOS) a minimální verzi opravy zabezpečení Androidu. 
+> Intune poskytuje další pole pro vytváření sestav zařízení, včetně ID registrace aplikace, výrobce Androidu, modelu a verze opravy zabezpečení i modelu iOS. V Intune získáte přístup k těmto polím výběrem možnosti **aplikace** > **stav ochrany aplikace** > **Sestava ochrany aplikací: iOS, Android**. Kromě toho tyto parametry pomůžou nakonfigurovat seznam **povolených** pro výrobce zařízení (Android), seznam **povolených** nastavení pro model zařízení (Android a iOS) a minimální verzi opravy zabezpečení Androidu. 
 
-K dispozici jsou další sestavy, které vám pomůžou se stavem dodržování zásad MAM. Chcete-li zobrazit tyto sestavy, vyberte **klientské aplikace** > **zpráva**o**stavu ochrany aplikace** > . 
+K dispozici jsou další sestavy, které vám pomůžou se stavem dodržování zásad MAM. Pokud chcete zobrazit tyto sestavy, vyberte **aplikace** > **stav ochrany aplikace** > **sestavy**. 
 
-Okno **sestavy** obsahuje několik sestav založených na uživateli a aplikaci, včetně následujících:
+Podokno **sestavy** obsahuje několik sestav založených na uživateli a aplikaci, včetně následujících:
 
 - **Sestava uživatele**: Tato sestava obsahuje stejné informace, které najdete v sestavě **stav uživatele** v části [podrobné zobrazení](app-protection-policies-monitor.md#detailed-view) výše.
 
@@ -139,7 +138,7 @@ Okno **sestavy** obsahuje několik sestav založených na uživateli a aplikaci,
     - Tyto aplikace používá uživatel nebo aplikace, na které aktuálně necílí zásady MAM.
     - Všechny aplikace jsou zaregistrované, ale nejsou u nich použité žádné zásady MAM.
 
-    ![Snímek obrazovky okna vytváření sestav aplikace uživatele s podrobnostmi pro tři aplikace](./media/app-protection-policies-monitor/MAM-reporting-4.png)
+    ![Snímek obrazovky s podoknem vytváření sestav aplikace uživatele s podrobnostmi pro tři aplikace](./media/app-protection-policies-monitor/MAM-reporting-4.png)
 
 - **Sestava konfigurace uživatele**: na základě vybraného uživatele Tato sestava obsahuje podrobnosti o všech konfiguracích aplikace, které uživatel přijal.
 - **Sestava konfigurace aplikací**: základem pro vybranou platformu a aplikaci, Tato sestava obsahuje podrobnosti o tom, kteří uživatelé přijali konfigurace pro vybranou aplikaci.

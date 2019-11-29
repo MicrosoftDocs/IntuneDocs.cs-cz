@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8519ad00024be43371cd118e3f37ae2fbc57898b
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.openlocfilehash: eff4ccdc8b40da4d72394001b88446653ff71bd0
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72813368"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564249"
 ---
 # <a name="intune-discovered-apps"></a>Zjištěné aplikace Intune
 
@@ -33,18 +33,18 @@ ms.locfileid: "72813368"
 
 Intune poskytuje agregovaný seznam zjištěných aplikací na zařízeních zaregistrovaných v Intune ve vašem tenantovi.
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. V podokně **Intune** vyberte **klientské aplikace** > **zjištěné aplikace**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace** > **monitorovat** > **zjištěné aplikace**.
 
 >[!NOTE]
->Seznam zjištěných aplikací můžete exportovat do souboru. csv výběrem možnosti **exportovat** v okně **zjištěné aplikace** .
+>Seznam zjištěných aplikací můžete exportovat do souboru. csv výběrem možnosti **exportovat** v podokně **zjištěné aplikace** .
 >
 >Pro zjištěné aplikace Win32 není aktuálně k dispozici žádný agregovaný počet. Tento typ dat se dá zobrazit jenom na jednotlivých zařízeních.
 
 Intune také nabízí seznam zjištěných aplikací pro jednotlivá zařízení ve vašem tenantovi.
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. V podokně Intune vyberte **zařízení** > **všechna zařízení**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **zařízení** > **všechna zařízení**.
 3. Vyberte zařízení.
 4. Pokud chcete zobrazit zjištěné aplikace pro toto zařízení, vyberte v části **monitorování** **zjištěné aplikace** .
 
@@ -69,7 +69,7 @@ Následující seznam poskytuje typ aplikační platformy, aplikace, které jsou
 
 Počet zjištěných aplikací nemusí odpovídat stavovému počtu instalací aplikací. K příčinám nekonzistencí můžou patřit tyto:
 
-- Změna cílení nainstalované spravované aplikace může způsobit, že se počet instalací ve stavovém okně sníží, bude ale dál hlášený mezi zjištěnými aplikacemi.
+- Změna cíle nainstalované spravované aplikace může způsobit snížení počtu instalací v podokně stav na hodnotu snížit, ale zůstane nahlášená v zjištěných aplikacích.
 - Cílení více instancí téže aplikace v tenantovi povede k různým počtům kvůli možnému překrývání uživatelů nebo zařízení. Každá instance aplikace započítá překrývající se uživatele, ale zjištěné aplikace budou mít duplicitní počty.
 - Zjištěné aplikace a stavy aplikací se shromažďují v různých časových intervalech, což může způsobit nesoulad v počtech aplikací.
 

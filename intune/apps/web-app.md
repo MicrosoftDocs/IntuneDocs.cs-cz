@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 997cf043f8ea61133d6e61f4584ad9349aedbf73
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: 514977be976c83f5cd8dcb8d56ab5c232ff0d193
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74060046"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74562483"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Přidání webových aplikací do Microsoft Intune
 
@@ -41,13 +41,11 @@ Intune vytvoří zástupce webové aplikace na zařízení uživatele. V přípa
 ## <a name="add-a-web-app-to-intune"></a>Přidání webové aplikace do Intune
 Pokud chcete přidat aplikaci do Intune v podobě zástupce aplikace na webu, postupujte takto:
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. V podokně **Intune** zvolte **Klientské aplikace**.
-4. V podokně úloh **Klientské aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
-5. V podokně **Aplikace** vyberte **Přidat**.
-6. V podokně **Přidat aplikaci** vyberte v rozevíracím seznamu **Typ aplikace** typ **Webový odkaz**.
-7. Vyberte **Konfigurovat**.
-8. V podokně **Informace o aplikaci** přidejte tyto údaje:
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
+3. V podokně **Přidat aplikaci** vyberte v rozevíracím seznamu **Typ aplikace** typ **Webový odkaz**.
+4. Vyberte **Konfigurovat**.
+5. V podokně **Informace o aplikaci** přidejte tyto údaje:
     - **Název**: Zadejte název aplikace, který se zobrazí na Portálu společnosti. 
 
         > [!NOTE]
@@ -60,8 +58,8 @@ Pokud chcete přidat aplikaci do Intune v podobě zástupce aplikace na webu, po
     - **Zobrazit na Portálu společnosti jako vybranou aplikaci:** Vybráním této možnosti se sada aplikací zobrazí uživatelům, kteří hledají aplikace, na výrazném místě na hlavní stránce Portálu společnosti.
     - **K otevření tohoto odkazu vyžadovat spravovaný prohlížeč**: Tuto možnost vyberte, pokud chcete uživatelům webu nebo webové aplikace přiřadit odkaz, který mohou otevřít v prohlížeči spravovaném v Intune. Tento prohlížeč musí být nainstalovaný na jejich zařízení.
     - **Logo**: Nahrajte ikonu, která se přidruží k aplikaci. Tato ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
-9. Vyberte **OK**.
-10. V podokně **Přidat aplikaci** zvolte **Přidat**.
+6. Vyberte **OK**.
+7. V podokně **Přidat aplikaci** zvolte **Přidat**.
 
 > [!Note]
 > Uživatelé si musí na domovskou obrazovku přidat widget Intune k zobrazení webových aplikací, které jsou k zařízení s Androidem přiřazené.

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 12218ec20f8cc00ebcf2294387f711ea39d79256
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 3168d517ebbb59dc9d6fe5a9c262ad8e1c909619
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507081"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563810"
 ---
 # <a name="add-windows-phone-81-store-apps-to-microsoft-intune"></a>Přidání aplikací pro Windows Phone 8.1 ze Storu do Microsoft Intune
 
@@ -34,12 +34,10 @@ Před přiřazením aplikace k zařízení nebo skupině uživatelů je nejprve 
 ## <a name="add-an-app-to-intune"></a>Přidání aplikace do Intune
 Aplikaci pro Windows Phone 8.1. ze Storu můžete přidat do Intune z portálu Azure Portal následujícím postupem:
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. V podokně **Intune** zvolte **Klientské aplikace**.
-4. V podokně úloh **Klientské aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
-5. V podokně **Aplikace** vyberte **Přidat**.
-6. V podokně **Přidat aplikaci** vyberte jako **Typ aplikace** možnost **Windows Phone 8.1** a zvolte **Informace o aplikaci**.
-7. V podokně **Informace o aplikaci** přidejte informace o aplikaci. V závislosti na zvolené aplikaci můžou být některé hodnoty v tomto podokně vyplněné automaticky:
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
+3. V podokně **Přidat aplikaci** vyberte jako **Typ aplikace** možnost **Windows Phone 8.1** a zvolte **Informace o aplikaci**.
+4. V podokně **Informace o aplikaci** přidejte informace o aplikaci. V závislosti na zvolené aplikaci můžou být některé hodnoty v tomto podokně vyplněné automaticky:
     - **Název**: Zadejte název aplikace, který se zobrazí na Portálu společnosti. Ujistěte se, že používaný název aplikace je jedinečný. Pokud je název aplikace duplicitní, zobrazí se uživatelům na Portálu společnosti pouze jeden název.
     - **Popis**: Zadejte popis aplikace. Tento popis se uživatelům zobrazí na Portálu společnosti.
     - **Vydavatel**: Zadejte název vydavatele aplikace.
@@ -52,8 +50,8 @@ Aplikaci pro Windows Phone 8.1. ze Storu můžete přidat do Intune z portálu A
     - **Vlastník**: Volitelně zadejte vlastníka aplikace, například *Personální oddělení*.
     - **Poznámky**: Volitelně zadejte jakékoli poznámky, které chcete k aplikaci přidružit.
     - **Logo**: Volitelně nahrajte ikonu, která se přidruží k aplikaci. Tato ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
-8. Vyberte **OK**.
-9. Vyberte **Přidat**.
+5. Vyberte **OK**.
+6. Vyberte **Přidat**.
 
 Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřazovat vybraným skupinám.
 

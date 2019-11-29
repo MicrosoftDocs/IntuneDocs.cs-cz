@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/16/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98976403d58c33f22f7ceeabec1d38f076f9bbe7
-ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
+ms.openlocfilehash: 8657b6fa8110b4ea4bbf8ec0841d69197624dd9f
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592076"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563724"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Vytvoření a přiřazení zásad ochrany aplikací
 
@@ -44,9 +44,9 @@ Informace o přidání obchodních aplikací organizace do Microsoft Intune kvů
 Když vytvoříte zásady ochrany aplikací pro iOS/iPadOS a aplikace pro Android, budete postupovat podle moderního toku procesu Intune, který má za následek novou zásadu ochrany aplikací.
 
 ### <a name="create-an-iosipados-or-android-app-protection-policy"></a>Vytvoření zásad ochrany aplikací pro iOS/iPadOS nebo Android
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. V portálu Intune vyberte **klientské aplikace**  > **Zásady ochrany aplikací**. Po výběru této možnosti se zobrazí detaily **Zásady ochrany aplikací**, kde můžete vytvářet nové zásady a upravovat stávající.
-3. Vyberte **vytvořit zásadu** a vyberte možnost **iOS/iPadOS** nebo **Android**. Zobrazí se okno **vytvořit zásadu** .
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. V portálu Intune vyberte **aplikace** > **Zásady ochrany aplikací**. Po výběru této možnosti se zobrazí detaily **Zásady ochrany aplikací**, kde můžete vytvářet nové zásady a upravovat stávající.
+3. Vyberte **vytvořit zásadu** a vyberte možnost **iOS/iPadOS** nebo **Android**. Zobrazí se podokno **vytvořit zásadu** .
 4. Na stránce **základy** přidejte následující hodnoty:
 
     | Hodnota | Description |
@@ -57,7 +57,7 @@ Když vytvoříte zásady ochrany aplikací pro iOS/iPadOS a aplikace pro Androi
 
     Hodnota **platformy** je nastavená na základě výše zvolené možnosti.
 
-    ![Snímek obrazovky se stránkou základy v okně vytvořit zásadu](~/apps/media/app-protection-policies/app-protection-add-policies-01.png)
+    ![Snímek stránky základy v podokně vytvořit zásadu](~/apps/media/app-protection-policies/app-protection-add-policies-01.png)
 
 5. Kliknutím na **Další** zobrazte stránku **aplikace** .<br>
     Stránka **aplikace** umožňuje zvolit, jak chcete tyto zásady použít pro aplikace na různých zařízeních. Musíte přidat alespoň jednu aplikaci.<p>
@@ -171,7 +171,7 @@ Mnoho organizací běžně umožňuje koncovým uživatelům používat jak zař
 
 Protože zásady ochrany aplikací Intune cílí na identitu uživatele, mohou nastavení ochrany pro uživatele platit jak pro zaregistrovaná zařízení (ve správě MDM), tak pro nezaregistrovaná zařízení (bez správy MDM). Zásady ochrany aplikací Intune proto můžete zacílit na zařízení s iOSem nebo Androidem zaregistrovaná i nezaregistrovaná v Intune. Můžete mít jednu zásadu ochrany pro nespravovaná zařízení, ve kterých jsou zavedené ovládací prvky ochrany před únikem informací (DLP), a samostatné zásady ochrany pro zařízení spravovaná pomocí MDM, kde můžou být ovládací prvky ochrany před únikem informací trochu uvolněné. Další informace o tom, jak funguje na osobních zařízeních s Androidem Enterprise, najdete v tématu [Zásady ochrany aplikací a pracovní profily](android-deployment-scenarios-app-protection-work-profiles.md).
 
-Pokud chcete vytvořit tyto zásady, přejděte do **klientských aplikací** > **Zásady ochrany aplikací** v konzole Intune a pak vyberte **vytvořit zásadu**. Můžete také upravit existující zásadu ochranu aplikací. Pokud chcete, aby se zásady ochrany aplikací nastavily u spravovaných i nespravovaných zařízení, přejděte na stránku **aplikace** a ověřte, že **cíl pro aplikace na všech typech zařízení** je nastavená na **Ano**, což je výchozí hodnota. Pokud chcete členit přiřazení na základě stavu správy, nastavte **cíl pro aplikace na všech typech zařízení** na **ne**. 
+Pokud chcete vytvořit tyto zásady, přejděte do části **aplikace** > **Zásady ochrany aplikací** v konzole Intune a pak vyberte **vytvořit zásadu**. Můžete také upravit existující zásadu ochranu aplikací. Pokud chcete, aby se zásady ochrany aplikací nastavily u spravovaných i nespravovaných zařízení, přejděte na stránku **aplikace** a ověřte, že **cíl pro aplikace na všech typech zařízení** je nastavená na **Ano**, což je výchozí hodnota. Pokud chcete členit přiřazení na základě stavu správy, nastavte **cíl pro aplikace na všech typech zařízení** na **ne**. 
 
 ### <a name="device-types"></a>Typy zařízení
 

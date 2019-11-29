@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ecde59d81ebeba7de64f2693eecb576faac6e722
-ms.sourcegitcommit: 15e099a9a1e18296580bb345610aee7cc4acd126
+ms.openlocfilehash: def975bc646a96a77646ac9103079b1f008f9c28
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74164709"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564053"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune 
 
@@ -72,7 +72,7 @@ Následující tabulka obsahuje konkrétní typy aplikací a popis, jak je můž
 
 <sup>1</sup> Další informace o pracovních profilech Androidu a Enterprise a Android najdete v části [Principy licencovaných aplikací](apps-add.md#understanding-licensed-apps) níže.
 
-Aplikaci můžete v Microsoft Intune přidat výběrem možností **Klientské aplikace** > **Aplikace** > **Přidat**. Zobrazí se podokno **Přidat aplikaci**, které vám umožní vybrat **Typ aplikace**. 
+Aplikaci můžete do Microsoft Intune přidat tak, že vyberete **aplikace** > **všechny aplikace** > **Přidat**. Zobrazí se podokno **Přidat aplikaci**, které vám umožní vybrat **Typ aplikace**. 
 
 >[!TIP]
 > Obchodní aplikace je aplikace, kterou přidáte z instalačního souboru aplikace. Když například chcete nainstalovat obchodní aplikaci pro iOS, přidáte aplikaci tak, že jako **Typ aplikace** v podokně **Přidat aplikaci** vyberete **Obchodní aplikace**. Potom vyberete soubor balíčku aplikace (má příponu .ipa). Tyto typy aplikací obvykle vznikají interně.
@@ -159,9 +159,8 @@ Když aplikace seřadíte do kategorií, uživatelé je jednodušeji najdou na p
 
 Když přidáte aplikaci do Intune, budete mít možnost vybrat požadovanou kategorii. Informace k přidání aplikací a přiřazení kategorií získáte v tématech pro jednotlivé platformy. Pokud chcete vytvořit a upravit vlastní kategorie, postupujte podle následujících pokynů:
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. V podokně **Intune** zvolte **Klientské aplikace**.
-4. V podokně úloh **Klientské aplikace** vyberte v části **Nastavení** možnost **Kategorie aplikací**.  
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Vyberte **aplikace** > **kategorie aplikací**.  
     V podokně **Kategorie aplikací** se zobrazí seznam aktuálních kategorií. 
 5. Proveďte jednu z těchto věcí:
     - Pokud chcete přidat kategorii, v podokně **Vytvořit kategorii** vyberte **Přidat** a zadejte název kategorie.  

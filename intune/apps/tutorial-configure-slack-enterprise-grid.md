@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 11/26/2019
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86e9d100847641064f472f0c3da0c9ec694f72dd
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: a3b01c1444b44e3f5c66fc129f78f321c9c9f5aa
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72496716"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563403"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Kurz: Konfigurace časové rezervy pro používání služby Intune pro modul EMM a konfiguraci aplikací
 
@@ -55,7 +55,7 @@ Přidejte do tenanta Intune časovou rezervu aplikace pro systém iOS pro modul 
 
 ### <a name="add-slack-for-emm-to-intune"></a>Přidání časové rezervy pro modul EMM do Intune
 Přidejte časovou rezervu pro modul EMM jako spravovanou aplikaci pro iOS v Intune a přiřaďte uživatele časové rezervy. Aplikace jsou specifické pro platformu, takže potřebujete přidat samostatnou aplikaci Intune pro uživatele časové rezervy na zařízeních s Androidem.
-1. V Intune vyberte **klientské aplikace** > **aplikace** > **Přidat**.
+1. V Intune vyberte **aplikace** > **všechny aplikace** > **Přidat**.
 2. V části Typ aplikace vyberte **Store app-iOS**.
 3. Vyberte **Hledat v App Storu**. Zadejte hledaný termín "časová rezerva pro modul EMM" a vyberte aplikaci.
 4. Vyberte **informace o aplikaci** a podle potřeby nakonfigurujte libovolné změny.
@@ -71,7 +71,7 @@ Přidejte časovou rezervu pro modul EMM jako spravovanou aplikaci pro iOS v Int
 
 ### <a name="add-an-app-configuration-policy-for-slack-for-emm"></a>Přidání zásad konfigurace aplikace pro časovou rezervu pro modul EMM
 Přidejte zásady konfigurace aplikace pro časovou rezervu pro modul EMM iOS. Zásady konfigurace aplikací pro spravovaná zařízení jsou specifické pro konkrétní platformu, takže musíte přidat samostatnou zásadu pro uživatele časové rezervy na zařízeních s Androidem.
-1. V Intune vyberte **klientské aplikace** > **zásady konfigurace aplikace** > **Přidat**.
+1. V Intune vyberte **aplikace** > **zásady konfigurace aplikací** > **Přidat**.
 2. Do název zadejte Test zásad konfigurace aplikace pro časovou rezervu.
 3. V části typ registrace zařízení vyberte **spravovaná zařízení**.
 4. V části platforma vyberte **iOS**.
@@ -107,7 +107,7 @@ Přidejte do svého tenanta Intune spravovanou aplikaci Google Playovou časovou
 
 ### <a name="add-slack-to-intune"></a>Přidání časové rezervy do Intune
 Přidejte časovou rezervu jako spravovanou aplikaci Google Play do Intune a přiřaďte uživatele časové rezervy. Aplikace jsou specifické pro platformu, takže potřebujete přidat samostatnou aplikaci Intune pro uživatele časové rezervy na zařízeních s iOS.
-1. V Intune vyberte **klientské aplikace** > **aplikace** > **Přidat**.
+1. V Intune vyberte **aplikace** > **všechny aplikace** > **Přidat**.
 2. V části Typ aplikace vyberte **Store app – spravovaná Google Play**.
 3. Vyberte **spravované Google Play-schvalovat**. Zadejte hledaný termín "časová rezerva pro modul EMM" a vyberte aplikaci.
 4. Vyberte **schválit**.
@@ -122,7 +122,7 @@ Přidejte časovou rezervu jako spravovanou aplikaci Google Play do Intune a př
 
 ### <a name="add-an-app-configuration-policy-for-slack"></a>Přidání zásad konfigurace aplikace pro časovou rezervu
 Přidejte zásady konfigurace aplikace pro časovou rezervu. Zásady konfigurace aplikací pro spravovaná zařízení jsou specifické pro konkrétní platformu, takže musíte přidat samostatnou zásadu pro uživatele časové rezervy na zařízeních s iOS.
-1. V Intune vyberte **klientské aplikace** > **zásady konfigurace aplikace** > **Přidat**.
+1. V Intune vyberte **aplikace** > **zásady konfigurace aplikací** > **Přidat**.
 2. Do název zadejte Test zásad konfigurace aplikace pro časovou rezervu.
 3. V části typ registrace zařízení vyberte **spravovaná zařízení**.
 4. V části platforma vyberte **Android**.

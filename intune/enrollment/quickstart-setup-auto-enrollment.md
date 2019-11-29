@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78620818bfd13f0292e159c6a3670b5e3af53dab
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: e9649a84650a555e964cd9200ed2295fee5efb9a
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709506"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74562315"
 ---
 # <a name="quickstart-set-up-automatic-enrollment-for-windows-10-devices"></a>Rychlý start: Nastavení automatické registrace zařízení s Windows 10
 
@@ -41,7 +41,7 @@ Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.micr
 
 V tomto příkladu použijete registraci MDM, aby byla možná automatická registrace firemních zařízení i vlastních zařízení uživatelů. Zaregistrujete si bezplatné předplatné Azure Active Directory verze Premium.
 
-1. V Azure zvolte **Azure Active Directory** > **Mobilita (MDM a MAM)** .
+1. V [Azure Portal](https://portal.azure.com)vyberte **Azure Active Directory** > **mobilita (MDM a mam)** .
 2. Vyberte možnost **Abyste mohli použít tuto funkci, získejte bezplatnou zkušební verzi Premium**. Její výběr vám umožní automatickou registraci pomocí bezplatné zkušební verze Premium služby Azure Active Directory. 
 
     ![Výběr bezplatné zkušební verze Premium služby Azure Active Directory](./media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-01.png)

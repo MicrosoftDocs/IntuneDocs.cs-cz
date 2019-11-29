@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2ab21321b171c8fe8f5f9dab3032507c0e740cf
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: 7e17972a3a87bd9c42db54753d4da3bb81703377
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059753"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563621"
 ---
 # <a name="enable-win32-apps-on-s-mode-devices"></a>Povolit aplikace Win32 na zařízeních S režimem S
 
@@ -58,7 +58,7 @@ Postup pro povolení spouštění aplikací Win32 v zařízení S Windows 10 v r
 Chcete-li vytvořit doplňkové zásady režimu Windows 10 S, použijte následující postup:
 
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. V podokně **Intune** vyberte **klientské aplikace** > **S režimy doplňkové zásady** > **vytvořit zásadu**.
+2. Vyberte **aplikace** > v **režimu S doplňkovými zásadami** > **vytvořit zásadu**.
 3. Před přidáním **souboru zásad**je nutné ho vytvořit a podepsat. Více informací najdete v následujících tématech:
     - [Vytvoření zásady WDAC pomocí nástrojů PowerShellu a její převedení do binárního formátu](https://go.microsoft.com/fwlink/?linkid=2095387)
     - [Podepsat pomocí služby podepisování zařízení Guard](https://go.microsoft.com/fwlink/?linkid=2095629) **(doporučeno)**

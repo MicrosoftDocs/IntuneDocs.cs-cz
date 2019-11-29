@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e827075b56d1751e837c25d85c304201bcafa01
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: 9c0ca82b434b83937c7962b2676ce3c2a12c1424
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390440"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564006"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Jak z aplikací spravovaných pomocí Intune vymazat jenom firemní data
 
@@ -44,8 +44,8 @@ Zásady Windows Information Protection (NV) se dají nasadit, aniž by uživatel
 
 ## <a name="create-a-wipe-request"></a>Vytvoření žádosti o vymazání
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. V podokně Intune vyberte **klientské aplikace** > **selektivní vymazání aplikace** > **vytvořit žádost o vymazání**.<br>
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace** > **selektivní vymazání aplikace** > **vytvořit žádost o vymazání**.<br>
    Zobrazí se podokno **vytvořit žádost o vymazání** .
 3. Klikněte na **Vybrat uživatele**, vyberte uživatele, jehož data aplikací chcete vymazat, a klikněte na **Vybrat** v dolní části podokna **Vybrat uživatele** .
 
@@ -65,7 +65,7 @@ Služba vytvoří a sleduje samostatnou žádost o vymazání pro každou chrán
 
 Můžete získat souhrnnou sestavu, která zobrazuje celkový stav žádostí o vymazání a také počet nevyřízených a neúspěšných žádostí. Další podrobnosti získáte tímto postupem:
 
-1. V podokně **klientské aplikace** > **selektivní vymazání aplikace** můžete zobrazit seznam žádostí seskupených podle uživatelů. Protože systém vytvoří žádost o vymazání pro každou chráněnou aplikaci spuštěnou na zařízení, může být u uživatele více žádostí. Stav označuje, jestli je žádost o vymazání **nevyřízená**, **selhala** nebo byla **úspěšná**.
+1. V podokně **aplikace** > **selektivní vymazání aplikace** můžete zobrazit seznam žádostí seskupených podle uživatelů. Protože systém vytvoří žádost o vymazání pro každou chráněnou aplikaci spuštěnou na zařízení, může být u uživatele více žádostí. Stav označuje, jestli je žádost o vymazání **nevyřízená**, **selhala** nebo byla **úspěšná**.
 
     ![Snímek obrazovky se stavem žádosti o vymazání v podokně Selektivní vymazání aplikace](./media/apps-selective-wipe/wipe-request-status-1.png)
 
@@ -86,7 +86,7 @@ Vymazání v čekajícím stavu se zobrazují, dokud je ručně neodstraníte. R
 
 3. Zobrazí se výzva k potvrzení odstranění. Zvolte **Ano** nebo **Ne** a klikněte na **OK**.
 
-## <a name="see-also"></a>Viz taky
+## <a name="see-also"></a>Související témata
 [Zásady ochrany aplikací](app-protection-policy.md)
 
 [Co je správa aplikací?](app-management.md)

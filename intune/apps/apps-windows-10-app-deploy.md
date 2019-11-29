@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8ce24081eae1808d3db0c5078026b306fd209d5
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: c9d792bd07ae8d7d712748874d64314dd258c5e8
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507250"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563947"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Nasazení aplikací pro Windows 10 pomocí Microsoft Intune 
 
@@ -51,9 +51,10 @@ Microsoft Store pro obchodní aplikace jsou moderní aplikace zakoupené na port
 ### <a name="categorize-microsoft-store-for-business-apps"></a>Kategorizace Microsoft Store pro obchodní aplikace 
 Kategorizace Microsoft Store pro obchodní aplikace: 
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Vyberte **klientské aplikace** > **aplikace**. Vyberte Microsoft Store pro obchodní aplikaci. Pak vyberte **informace o aplikaci** > **kategorie**. 
-3. Vyberte kategorii.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace** > **všech aplikacích**. 
+3. Vyberte Microsoft Store pro obchodní aplikaci. Pak vyberte **vlastnosti** > **informace o aplikaci** > **kategorii**. 
+4. Vyberte kategorii.
 
 ## <a name="install-apps-on-windows-10-devices"></a>Instalace aplikací na zařízení s Windows 10
 V závislosti na typu aplikace můžete aplikaci nainstalovat na zařízení s Windows 10 jedním ze dvou způsobů:

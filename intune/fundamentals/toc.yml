@@ -16,7 +16,9 @@
           href: whats-new-app-ui.md
         - name: Funkce ve vývoji
           href: in-development.md
-- name: Rychlý start
+        - name: Důležitá oznámení
+          href: 'whats-new.md#notices'
+- name: Rychlé starty
   items:
     - name: Vyzkoušejte si Intune zdarma
       href: free-trial-sign-up.md
@@ -84,7 +86,7 @@
               href: planning-guide-onboarding.md
             - name: Testování a ověřování
               href: planning-guide-test-validation.md
-            - name: Další materiály a zdroje informací
+            - name: Další zdroje informací
               href: planning-guide-resources.md
         - name: Průvodce migrací
           href: migration-guide.md
@@ -167,7 +169,7 @@
           href: mdm-authority-set.md
         - name: Správa rolí
           items:
-            - name: Řízení přístupu na základě role
+            - name: Řízení přístupu podle rolí
               href: role-based-access-control.md
             - name: Přiřazení role uživateli
               href: assign-role.md
@@ -205,11 +207,11 @@
           href: use-docs.md
         - name: Získání podpory
           href: get-support.md
-    - name: sestavy
+    - name: Sestavy
       items:
         - name: Sestavy Intune
           href: reports.md
-- name: Reference
+- name: Referenční informace
   items:
     - name: "Kódy a\_popisy chyb"
       items:

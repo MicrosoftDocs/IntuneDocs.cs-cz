@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81a2575c0d4e6cdcfdffe09e37880f56647bc835
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 8d1a8ee3f6d5eb190fb2ee252dfb5f6c23a1cf16
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72496433"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563776"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune
 
@@ -71,53 +71,51 @@ Pokud už máte v organizaci nastavenou službu Intune, můžete vytvořit zása
 > Související informace o vytváření zásad WIP pro Intune, včetně dostupných nastavení a postupů jejich konfigurace, najdete v tématu o [vytvoření zásad WIP (Windows Information Protection) s MAM pomocí webu Azure Portal pro Microsoft Intune](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) v knihovně dokumentace k zabezpečení systému Windows. 
 
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**.
-3. V okně **Microsoft Intune** vyberte **Klientské aplikace**.
-4. V okně **Klientské aplikace** vyberte **Zásady ochrany aplikací**.
-5. Vyberte **Přidat zásadu**, aby se zobrazilo okno **Přidat zásadu**.
-6. Přidejte následující hodnoty:
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace** > **zásady ochrany aplikací** > **vytvořit zásadu**.
+3. Přidejte následující hodnoty:
     - **Název:** Zadejte název nové zásady (povinné).
     - **Popis:** Volitelně zadejte popis.
     - **Platforma:** Jako podporovanou platformu pro vaši zásadu ochrany aplikací zvolte **Windows 10**.
     - **Stav registrace:** Jako stav registrace pro vaši zásadu zvolte **Bez registrace**.
-7. Zvolte **Vytvořit**. Zásada se vytvoří a objeví se v tabulce v okně **Zásady ochrany aplikací**.
+4. Zvolte **Vytvořit**. Zásada se vytvoří a zobrazí se v tabulce v podokně **Zásady ochrany aplikací** .
 
 ## <a name="to-add-recommended-apps-to-your-protected-apps-list"></a>Přidání doporučených aplikací do seznamu chráněných aplikací
 
-1. V okně **Microsoft Intune** vyberte **Klientské aplikace**.
-2. V okně **Klientské aplikace** vyberte **Zásady ochrany aplikací**.
-3. V okně **Zásady ochrany aplikací** zvolte zásadu, kterou chcete upravit. Zobrazí se okno **Intune App Protection**.
-4. V okně **Intune App Protection** zvolte **Chráněné aplikace**. Otevře se okno **Chráněné aplikace** a zobrazí se v něm všechny aplikace, které už jsou obsažené v seznamu pro tuto zásadu ochrany aplikací.
-5. Vyberte **Přidat aplikace**. Informace v části **Přidat aplikace** zobrazí filtrovaný seznam aplikací. Seznam v horní části okna umožňuje změnit filtr seznamu.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace** > **Zásady ochrany aplikací**.
+3. V podokně **Zásady ochrany aplikací** vyberte zásadu, kterou chcete upravit. Zobrazí se podokno **Intune App Protection** .
+4. V podokně **Intune App Protection** vyberte **chráněné aplikace** . Otevře se podokno **chráněné aplikace** , ve kterém se zobrazí všechny aplikace, které už jsou v seznamu pro tuto zásadu ochrany aplikací uvedené.
+5. Vyberte **Přidat aplikace**. Informace v části **Přidat aplikace** zobrazí filtrovaný seznam aplikací. Seznam v horní části podokna vám umožní změnit filtr seznamu.
 6. Otevřete každou aplikaci, které chcete povolit přístup k podnikovým datům.
-7. Klikněte na **OK**. Okno **Chráněné aplikace** se aktualizuje a zobrazí se v něm všechny vaše vybrané aplikace.
+7. Klikněte na **OK**. V podokně **chráněné aplikace** se aktualizuje zobrazení všech vybraných aplikací.
 8. Klikněte na **Uložit**.
 
 ## <a name="add-a-store-app-to-your-protected-apps-list"></a>Přidání aplikace ze Storu do seznamu chráněných aplikací
 
 **Přidání aplikace ze Storu**
-1. V okně **Microsoft Intune** vyberte **Klientské aplikace**.
-2. V okně **Klientské aplikace** vyberte **Zásady ochrany aplikací**.
-3. V okně **Zásady ochrany aplikací** zvolte zásadu, kterou chcete upravit. Zobrazí se okno **Intune App Protection**.
-4. V okně **Intune App Protection** zvolte **Chráněné aplikace**. Otevře se okno **Chráněné aplikace** a zobrazí se v něm všechny aplikace, které už jsou obsažené v seznamu pro tuto zásadu ochrany aplikací.
-5. Vyberte **Přidat aplikace**. Informace v části **Přidat aplikace** zobrazí filtrovaný seznam aplikací. Seznam v horní části okna umožňuje změnit filtr seznamu.
+
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace** > **Zásady ochrany aplikací**.
+3. V podokně **Zásady ochrany aplikací** vyberte zásadu, kterou chcete upravit. Zobrazí se podokno **Intune App Protection** .
+4. V podokně **Intune App Protection** vyberte **chráněné aplikace** . Otevře se podokno **chráněné aplikace** , ve kterém se zobrazí všechny aplikace, které už jsou v seznamu pro tuto zásadu ochrany aplikací uvedené.
+5. Vyberte **Přidat aplikace**. Informace v části **Přidat aplikace** zobrazí filtrovaný seznam aplikací. Seznam v horní části podokna vám umožní změnit filtr seznamu.
 6. Ze seznamu vyberte **Aplikace pro Store**.
 7. Zadejte hodnoty pro **Název**, **Vydavatel**, **Název produktu** a **Akce**. Nezapomeňte nastavit hodnotu **Akce** na **Povolit**, aby měla aplikace přístup k podnikovým datům.
-9. Klikněte na **OK**. Okno **Chráněné aplikace** se aktualizuje a zobrazí se v něm všechny vaše vybrané aplikace.
+9. Klikněte na **OK**. V podokně **chráněné aplikace** se aktualizuje zobrazení všech vybraných aplikací.
 10. Klikněte na **Uložit**.
 
 ## <a name="add-a-desktop-app-to-your-protected-apps-list"></a>Přidání desktopové aplikace do seznamu chráněných aplikací
 
 **Přidání desktopové aplikace**
-1. V okně **Microsoft Intune** vyberte **Klientské aplikace**.
-2. V okně **Klientské aplikace** vyberte **Zásady ochrany aplikací**.
-3. V okně **Zásady ochrany aplikací** zvolte zásadu, kterou chcete upravit. Zobrazí se okno **Intune App Protection**.
-4. V okně **Intune App Protection** zvolte **Chráněné aplikace**. Otevře se okno **Chráněné aplikace** a zobrazí se v něm všechny aplikace, které už jsou obsažené v seznamu pro tuto zásadu ochrany aplikací.
-5. Vyberte **Přidat aplikace**. Informace v části **Přidat aplikace** zobrazí filtrovaný seznam aplikací. Seznam v horní části okna umožňuje změnit filtr seznamu.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace** > **Zásady ochrany aplikací**.
+3. V podokně **Zásady ochrany aplikací** vyberte zásadu, kterou chcete upravit. Zobrazí se podokno **Intune App Protection** .
+4. V podokně **Intune App Protection** vyberte **chráněné aplikace** . Otevře se podokno **chráněné aplikace** , ve kterém se zobrazí všechny aplikace, které už jsou v seznamu pro tuto zásadu ochrany aplikací uvedené.
+5. Vyberte **Přidat aplikace**. Informace v části **Přidat aplikace** zobrazí filtrovaný seznam aplikací. Seznam v horní části podokna vám umožní změnit filtr seznamu.
 6. Ze seznamu vyberte **Desktopové aplikace**.
 7. Zadejte hodnoty pro **Název**, **Vydavatel**, **Název produktu**, **Soubor**, **Minimální verze**, **Maximální verze** a **Akce**. Nezapomeňte nastavit hodnotu **Akce** na **Povolit**, aby měla aplikace přístup k podnikovým datům.
-9. Klikněte na **OK**. Okno **Chráněné aplikace** se aktualizuje a zobrazí se v něm všechny vaše vybrané aplikace.
+9. Klikněte na **OK**. V podokně **chráněné aplikace** se aktualizuje zobrazení všech vybraných aplikací.
 10. Klikněte na **Uložit**.
 
 ## <a name="wip-learning"></a>Kurzy k WIP
@@ -150,7 +148,7 @@ Když WIP vypnete, proběhne pokus o dešifrování všech souborů označených
 
 ### <a name="add-a-protection-mode"></a>Přidání režimu ochrany
 
-1. V okně **Zásada aplikace** zvolte název zásady a potom zvolte **Požadovaná nastavení**.
+1. V podokně **zásada aplikace** zvolte název zásady a pak zvolte **požadovaná nastavení**.
 
     ![Snímek obrazovky s podoknem výukového režimu](./media/windows-information-protection-policy-create/learning-mode-sc1.png)
 
@@ -160,7 +158,7 @@ Když WIP vypnete, proběhne pokus o dešifrování všech souborů označených
 
 1. Otevřete portál [Azure Portal](https://portal.azure.com). Zvolte **Všechny služby**. Do filtru textového pole zadejte **Intune**.
 
-3. Zvolte **Intune** > **Klientské aplikace**.
+3. Vyberte **Intune** > **aplikace**.
 
 4. Zvolte **Stav ochrany aplikace** > **Sestavy** > **Kurz k Windows Information Protection**.  
 
@@ -188,9 +186,9 @@ Kromě nastavení možnosti **Povolit Windows Search Indexeru prohledávat šifr
 
 Když jste vytvořili zásadu ochrany aplikací WIP, potřebujete ji nasadit ve vaší organizaci s použitím MAM.
 
-1. V okně **Zásada aplikace** vyberte svoji nově vytvořenou zásadu pro ochranu aplikací a zvolte **Skupiny uživatelů** > **Přidat skupinu uživatelů**.
+1. V podokně **zásady aplikace** vyberte nově vytvořenou zásadu ochrany aplikací, vyberte **skupiny uživatelů** > **Přidat skupinu uživatelů**.
 
-    V okně **Přidat skupinu uživatelů** se otevře seznam skupin uživatelů, který obsahuje všechny skupiny zabezpečení v Azure Active Directory.
+    Seznam skupin uživatelů, ze kterých se ve vašem Azure Active Directory skládá všechny skupiny zabezpečení, se otevře v podokně **Přidat skupinu uživatelů** .
 
 2. Zvolte skupinu, u které chcete zásadu použít, a kliknutím na **Vybrat** zásadu nasaďte.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b750c09207b1950aa27a5f2cae1267503537b6e7
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: 7a4d6db4f61dea1b073ccce7c4c3f727a91402c1
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199201"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563643"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Konfigurace aplikace Portál společnosti služby Microsoft Intune
 
@@ -37,7 +37,7 @@ Portál společnosti v Microsoft Intune je místo, odkud mají uživatelé pří
 > [!Tip]
 > Když si portál společnosti přizpůsobíte, bude se vaše konfigurace vztahovat na web portálu společnosti i na aplikace Portál společnosti. Všimněte si, že uživatelé musí mít přiřazenou licenci Intune pro přístup k webu Portál společnosti.
 
-Přizpůsobením Portál společnosti umožníte vašim koncovým uživatelům známé a užitečné možnosti. Provedete to tak, že na portálu Intune vyberete **klientské aplikace** > **branding a přizpůsobení**a pak nakonfigurujete požadovaná nastavení.
+Přizpůsobením Portál společnosti umožníte vašim koncovým uživatelům známé a užitečné možnosti. Provedete to tak, že na portálu Intune vyberete **aplikace** > **branding a přizpůsobení**a pak nakonfigurujete požadovaná nastavení.
 
 Když uživatel instaluje aplikaci pro iOS z Portál společnosti, zobrazí se výzva. K tomu dochází, když je aplikace pro iOS propojená s obchodem s aplikacemi, která je propojená s programem Volume purchase program (VPP), nebo propojená s obchodní aplikací (LOB). Tato výzva umožní uživatelům přijmout akci nebo povolit správu aplikace. Výzva zobrazí název vaší společnosti, nebo pokud název vaší společnosti není k dispozici, zobrazí se **portál společnosti** . 
 
@@ -92,7 +92,7 @@ Zvolte logo, které bude nejlépe vypadat na bílých nebo světlých pozadích.
 
 ### <a name="brand-image-for-company-portal"></a>Firemní logo pro Portál společnosti
 
-Zobrazte si firemní logo, které odráží značku vaší společnosti. Po uložení změn můžete v horní části okna zvolit možnost **Podívejte se na náhled nastavení** na webovém portálu Intune, abyste viděli, jak budou konfigurace vypadat. Všimněte si, že náhled firemního loga uvidíte jenom na zařízení s iOSem, ale ne na webovém portálu Intune. 
+Zobrazte si firemní logo, které odráží značku vaší společnosti. Po uložení změn můžete zvolit možnost **Zobrazit náhled nastavení** na webovém portálu Intune v horní části podokna a zjistit, jak budou vaše konfigurace vypadat. Všimněte si, že náhled firemního loga uvidíte jenom na zařízení s iOSem, ale ne na webovém portálu Intune. 
 
 |Název pole|Další informace|
 |---|---|
@@ -147,15 +147,15 @@ Koncoví uživatelé mohou aktivovat akce navigace, aplikace a zařízení ve Wi
 
 V aplikaci Portál společnosti pro Windows jsou k dispozici následující klávesové zkratky.
 
-| Oblast | Popis | Klávesová zkratka |
+| Oblast | Description | Klávesová zkratka |
 |:------------------:|:--------------:|:-----------------:|
-| Navigační nabídka | Navigace | Alt+M |
-|  | Domů | Alt+H |
+| Navigační nabídka | Cházení | ALT + M |
+|  | Domů | ALT + H |
 |  | Všechny aplikace | ALT + A |
 |  | Nainstalované aplikace | Alt+I |
-|  | Váš názor | Alt+F |
-|  | Můj profil | Alt+U |
-|  | Nastavení | Alt+T |
+|  | Váš názor | ALT + F |
+|  | Můj profil | ALT + U |
+|  | Nastavení | Alt + T |
 | Úvodní stránka – dlaždice Zařízení | Přejmenovat | F2 |
 |  | Odebrat | Ctrl+D nebo Delete |
 |  | Zkontrolovat přístup | Ctrl+M nebo F9 |
@@ -163,7 +163,7 @@ V aplikaci Portál společnosti pro Windows jsou k dispozici následující klá
 |  | Odebrat | Ctrl+D nebo Delete |
 |  | Zkontrolovat přístup | Ctrl+M nebo F9 |
 | Podrobnosti aplikace | Install | Ctrl+I |
-| Zařízení | K dispozici | Ctrl+D |
+| Zařízení | K dispozici | CTRL + D |
 
 Koncoví uživatelé budou také moci zobrazit dostupné zkratky v aplikaci pro Windows Portál společnosti.
 
@@ -186,13 +186,13 @@ Některé platformy a konfigurace neumožňují akce zařízení samoobslužné 
 
 |  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
-| Vyřadit | K dispozici<sup>(1)</sup> | K dispozici | K dispozici | K dispozici<sup>(7)</sup> |
-| Vymazání | K dispozici | K dispozici<sup>(5)</sup> | Není k dispozici | K dispozici<sup>(7)</sup> |
+| Vyřazení | K dispozici<sup>(1)</sup> | K dispozici | K dispozici | K dispozici<sup>(7)</sup> |
+| Vymazání | K dispozici | K dispozici<sup>(5)</sup> | NÁ | K dispozici<sup>(7)</sup> |
 | Přejmenovat<sup>(4)</sup> | K dispozici | K dispozici | K dispozici | K dispozici |
 | Brání | K dispozici | K dispozici | K dispozici | K dispozici |
 | Vzdálené uzamčení | Pouze Windows Phone | K dispozici | K dispozici | K dispozici |
-| Resetovat heslo | Pouze Windows Phone | K dispozici<sup>(8)</sup> | Není k dispozici | K dispozici<sup>(6)</sup> |
-| Key Recovery | Není k dispozici | Není k dispozici | K dispozici<sup>(2)</sup> | Není k dispozici |
+| Resetovat heslo | Pouze Windows Phone | K dispozici<sup>(8)</sup> | NÁ | K dispozici<sup>(6)</sup> |
+| Obnovení klíče | NÁ | NÁ | K dispozici<sup>(2)</sup> | NÁ |
 
 <sup>(1)</sup> **vyřazení** je vždycky blokované na zařízeních s Windows připojená k Azure AD.<br>
 <sup>(2)</sup> **obnovení klíče** pro MacOS je dostupné jenom přes webový portál.<br>

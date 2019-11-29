@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/03/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 796b1709260c7f507e78aa8404129fa996b59088
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 01ca17c9f8e3fd86e12f225621e6dc0e07bb4acb
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498808"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564077"
 ---
 # <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Přiřazení Office 365 zařízením s macOS v Microsoft Intune
 
@@ -41,14 +41,12 @@ Než začnete přidávat Office 365 do zařízení s macOS, seznamte se s těmit
 ## <a name="create-and-configure-the-app-suite"></a>Vytvoření a konfigurace sady aplikací
 
 Z podokna **Aplikace** přidejte Office 365.
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. V podokně **Intune** zvolte **Klientské aplikace**.
-4. V podokně úloh **Klientské aplikace** vyberte v části **Spravovat** možnost **Aplikace**. 
-5. Vyberte **Přidat**.
-6. V seznamu **Typ aplikace** vyberte ve skupině **Sada Office 365** **macOS**.
-7. Informace o sadě aplikací získáte vybráním možnosti **Informace o sadě aplikací**.  
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
+3. V seznamu **Typ aplikace** vyberte ve skupině **Sada Office 365** **macOS**.
+4. Informace o sadě aplikací získáte vybráním možnosti **Informace o sadě aplikací**.  
     Tyto informace vám pomůžou sadu aplikací identifikovat v Intune a uživatelům ji pomůžou najít na portálu společnosti.
-8. Zadejte následující informace:
+5. Zadejte následující informace:
     - **Název sady**: Zadejte název sady aplikací, který se zobrazí na portálu společnosti. Názvy všech používaných sad musí být jedinečné. Pokud stejný název sady aplikací existuje dvakrát, zobrazí se na portálu společnosti uživatelům jenom jedna z aplikací.
     - **Popis sady**: Zadejte popis sady aplikací.
     - **Vydavatel**: Jako vydavatel se zobrazí Microsoft.
@@ -60,8 +58,8 @@ Z podokna **Aplikace** přidejte Office 365.
     - **Vlastník**: Jako vlastník se zobrazí Microsoft.
     - **Poznámky**: Volitelně zadejte jakékoli poznámky, které chcete k aplikaci přidružit.
     - **Logo**: Logo Office 365 se zobrazí u aplikace, když uživatelé procházejí Portál společnosti.
-9. Vyberte **OK**.
-10. V podokně **Přidat aplikaci** vyberte **Přidat**.  
+6. Vyberte **OK**.
+7. V podokně **Přidat aplikaci** vyberte **Přidat**.  
     Sada se zobrazí v seznamu aplikací jako jedna položka.
 
 ## <a name="configure-app-assignments"></a>Konfigurace přiřazení aplikací

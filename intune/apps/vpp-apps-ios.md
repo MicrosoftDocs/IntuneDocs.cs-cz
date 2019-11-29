@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ff9a37a1dd815b6ec9d7522604796310e7f0b5ce
-ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
+ms.openlocfilehash: eed0b8a74e69bc1552ae3e2badf485364ba37e94
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73984111"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563829"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Jak spravovat aplikace pro iOS a macOS zakoupené prostřednictvím Apple Volume Purchase Program s využitím Microsoft Intune
 
@@ -82,8 +82,8 @@ Než začnete, potřebujete od společnosti Apple získat token VPP a nahrát ho
 
 ## <a name="to-get-and-upload-an-apple-vpp-token"></a>Získání a odeslání tokenu Apple VPP
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. V podokně **Intune** v části **Nastavení**vyberte **klientské aplikace** > **tokeny Apple VPP** .
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Vyberte možnost **Správa tenanta** > **konektory a tokeny** > **tokeny programu Apple VPP**.
 4. V podokně s tokeny VPP vyberte **Vytvořit**.
 5. V podokně **Vytvořit token VPP** zadejte následující informace:
     - **Soubor tokenu VPP** – pokud jste to ještě neudělali, zaregistrujte se do programu Volume Purchase Program for Business nebo Volume Purchase Program for Education. Po zaregistrování si stáhněte token Apple VPP pro svůj účet a vyberte ho tady.
@@ -110,7 +110,7 @@ Data ukládaná společností Apple můžete kdykoli synchronizovat s Intune vý
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Přiřazení aplikace zakoupené v rámci multilicenčního programu
 
-1. V podokně **Intune** v části **Spravovat** zvolte **Klientské aplikace** > **Aplikace**.
+1. Vyberte **aplikace** > **všech aplikacích**.
 2. V podokně se seznamem aplikací zvolte aplikaci, kterou chcete přiřadit, a pak zvolte **Přiřazení**.
 3. V podokně ***Název aplikace*** - **Přiřazení** zvolte **Přidat skupinu** a pak v podokně **Přidat skupinu** zvolte **Typ přiřazení** a skupiny uživatelů nebo zařízení Azure AD, ke kterým chcete aplikaci přiřadit.
 5. Pro každou zvolenou skupinu vyberte následující nastavení:
@@ -176,8 +176,8 @@ V současné době nelze aplikace VPP pro iOS z Microsoft Intune odstraňovat.
 
 Přístup k tokenům Apple VPP a aplikacím VPP se dá řídit nezávisle pomocí oprávnění přiřazených k vlastním rolím Správce v Intune.
 
-* Pokud chcete, aby mohla vlastní role Intune spravovat tokeny Apple VPP v **klientských aplikacích** > **tokeny Apple VPP**, přiřaďte oprávnění pro **spravované aplikace**.
-* Pokud chcete, aby vlastní role Intune spravovala aplikace zakoupené pomocí tokenů VPP iOS v **klientských aplikacích**  > **aplikacích**, přiřaďte oprávnění pro **mobilní aplikace**. 
+* Pokud chcete, aby vlastní role Intune spravovala tokeny programu Apple VPP v **aplikacích** > **tokeny programu Apple VPP**, přiřaďte oprávnění pro **spravované aplikace**.
+* Pokud chcete, aby mohla vlastní role Intune spravovat aplikace zakoupené pomocí tokenů VPP iOS v části **aplikace** > **všech aplikacích**, přiřaďte oprávnění pro **mobilní aplikace**. 
 
 ## <a name="additional-information"></a>Další informace
 
@@ -196,7 +196,7 @@ Licence by se měly aktualizovat do několika hodin od instalace nebo odinstalac
 Ano. Správce Intune může aplikaci přidělit nadměrnému počtu uživatelů nebo zařízení. A to například tehdy, když zakoupí sto licencí k aplikaci XYZ a potom ji zacílí na skupinu s pěti sty členy. Prvnímu stu členů (uživatelům nebo zařízením) se licence přiřadí a u zbylých členů se přiřazení licence nezdaří.
 
 ### <a name="how-frequently-does-intune-sync-vpp-tokens-with-apple"></a>Jak často Intune synchronizuje tokeny VPP s Apple?
-Intune synchronizuje tokeny a licence VPP dvakrát denně s Apple. Správce Intune může iniciovat ruční synchronizaci v rámci **klientských aplikací** > **tokeny Apple VPP**.
+Intune synchronizuje tokeny a licence VPP dvakrát denně s Apple. Správce Intune může iniciovat ruční synchronizaci v **aplikacích** > **tokeny programu Apple VPP**.
 
 ## <a name="next-steps"></a>Další kroky
 

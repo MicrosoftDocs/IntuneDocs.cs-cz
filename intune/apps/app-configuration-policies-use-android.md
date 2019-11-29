@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/08/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9561c50e21a9667ccec3f9de3627e7a933cf0736
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 80d6068a17e1d278f9226e26c9efab24d597e52e
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72584998"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564265"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem Enterprise
 
@@ -34,7 +34,7 @@ Zásady konfigurace aplikací v Microsoft Intune poskytují nastavení spravovan
 > [!NOTE]  
 > Některé aplikace konfiguraci aplikací nepodporují. Obraťte se na vývojáře aplikace a zjistěte, jestli jejich aplikace podporuje zásady konfigurace aplikací.
 
-1. V [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)vyberte **klientské aplikace** > **zásady konfigurace aplikací** >  **Přidat**.
+1. V [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)vyberte **aplikace** > **zásady konfigurace aplikací** >  **Přidat**.
 2. Zadejte následující vlastnosti:
 
     - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem zásad je například **zásada pro aplikace pro Android Enterprise devět Worker pro celou firmu**.
@@ -72,7 +72,7 @@ Pokud jako typ hodnoty zvolíte proměnnou, můžete vybírat z následujících
 | ID zařízení AAD | dc0dc142-11d8-4b12-bfea-cae2a8514c82 |
 | ID účtu | fc0dc142-71d8-4B12-bbea-bae2a8514c81 |
 | ID zařízení Intune | b9841cd9-9843-405F-be28-b2265c59ef97 |
-| Doména | Contoso.com |
+| Doména | contoso.com |
 | Mail | john@contoso.com |
 | Částečný hlavní název uživatele | Jan |
 | ID uživatele | 3ec2c00f-b125-4519-acf0-302ac3761822 |
@@ -110,7 +110,7 @@ Pro přístup k funkcím zařízení s Androidem můžete také předem nakonfig
 
 Aplikace například používá mikrofon zařízení. Uživatel je vyzván, aby aplikaci udělil oprávnění používat mikrofon.
 
-1. V [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)vyberte **klientské aplikace** > **zásady konfigurace aplikací** >  **Přidat**.
+1. V [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)vyberte **aplikace** > **zásady konfigurace aplikací** >  **Přidat**.
 2. Zadejte následující vlastnosti:
 
     - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem zásad je třeba, aby se **pro celou firmu zobrazila zásada aplikace s oprávněním pro Android Enterprise**.
@@ -124,7 +124,7 @@ Aplikace například používá mikrofon zařízení. Uživatel je vyzván, aby 
     - **Zeptat se**: Vyzval uživatele ke schválení nebo zamítnutí
     - **Automaticky udělit**: Automaticky schválí bez upozornění uživatele.
     - **Automaticky odepřít**: Automaticky zamítne bez upozornění uživatele.
-6. Zásady konfigurace aplikací přiřadíte tak, že vyberete > **přiřazení** zásady konfigurace aplikace  > **Vybrat skupiny**. Vyberte skupiny uživatelů, které chcete přiřadit > **Vybrat**.
+6. Zásady konfigurace aplikací přiřadíte tak, že vyberete > **přiřazení** zásady konfigurace aplikace > **Vybrat skupiny**. Vyberte skupiny uživatelů, které chcete přiřadit > **Vybrat**.
 7. Kliknutím na **Uložit** zásadu přiřaďte.
 
 ## <a name="additional-information"></a>Další informace

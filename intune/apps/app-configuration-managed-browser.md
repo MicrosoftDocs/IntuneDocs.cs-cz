@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/27/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3fab0b14f8ed68d13021a0e141d5997532df2ec
-ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
+ms.openlocfilehash: 52f907b8762322684ec9e21910745a197c3dbe4e
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592082"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564322"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Správa webového přístupu pomocí Microsoft Intune prohlížeče chráněného zásadami
 
@@ -91,29 +91,28 @@ Pokud chcete webovým aplikacím připojeným ke službě Azure AD omezit možno
 > [!TIP]  
 > Podmíněný přístup je technologie Azure Active Directory (Azure AD). Uzel podmíněného přístupu, ke kterému se přistupuje z *Intune*, je stejný uzel, ke kterému se přistupuje z *Azure AD*.  
 
-
-1. Na portálu Intune vyberte **podmíněný přístup** > **Nová zásada**. 
-2. Potom v okně v části **Ovládací prvky přístupu** vyberte **Udělení**. 
-3. Klikněte na **Vyžaduje se klientem schválená aplikace**. 
-4. V okně **Udělení** klikněte na **Vybrat**. Tuto zásadu musíte přiřadit ke cloudovým aplikacím, které mají být dostupné jenom pro aplikaci Intune Managed Browser.
-
-    ![Azure AD – Managed Browser zásady podmíněného přístupu](./media/app-configuration-managed-browser/managed-browser-conditional-access-01.png)
-
-5. V části **Přiřazení** vyberte **Podmínky** > **Klientské aplikace**. Zobrazí se okno **Klientské aplikace**.
-6. V části **Konfigurovat** klikněte na **Ano**, aby se zásada použila u konkrétních klientských aplikací.
-7. Zkontrolujte, že je jako klientská aplikace vybraná možnost **Prohlížeč**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **zařízení** > **podmíněný přístup** > **nové zásady**.
+3. Přidejte **název**zásady. 
+4. V části **Přiřazení** vyberte **Podmínky** > **Klientské aplikace**. Zobrazí se podokno **klientské aplikace** .
+5. V části **Konfigurovat** klikněte na **Ano**, aby se zásada použila u konkrétních klientských aplikací.
+6. Zkontrolujte, že je jako klientská aplikace vybraná možnost **Prohlížeč**.
 
     ![Azure AD – Managed Browser – Výběr klientských aplikací](./media/app-configuration-managed-browser/managed-browser-conditional-access-02.png)
 
     > [!NOTE]
     > Pokud chcete omezit to, které nativní (neprohlížečové) aplikace mají přístup k těmto cloudovým aplikacím, můžete také vybrat **Mobilní aplikace a desktopoví klienti**.
 
-8. V části **Přiřazení** vyberte **Uživatelé a skupiny** a potom zvolte uživatele nebo skupiny, ke kterým chcete tuto zásadu přiřadit. 
+7. Klikněte na **hotovo** > **Hotovo**.
+8. V části **přiřazení** vyberte **Uživatelé a skupiny** a zvolte uživatele nebo skupiny, kterým chcete přiřadit tuto zásadu. Kliknutím na **Hotovo** zavřete podokno.
+9. V části **přiřazení** vyberte **cloudové aplikace nebo akce** a vyberte aplikace, které chcete chránit pomocí těchto zásad. Kliknutím na **Hotovo** zavřete podokno.
+10. V části **řízení přístupu** v podokně vyberte **udělit** . 
+11. Klikněte na **udělit přístup** a pak klikněte na **vyžadovat schválenou klientskou aplikaci**. 
+12. V podokně **udělení** klikněte na **Vybrat** . Tuto zásadu musíte přiřadit ke cloudovým aplikacím, které mají být dostupné jenom pro aplikaci Intune Managed Browser.
 
-    > [!NOTE]
-    > Aby uživatelé mohli přijímat zásady konfigurace aplikací, musí na ně cílit také zásady ochrany aplikací Intune. Další informace o vytváření zásad Intune App Protection najdete v článku [Co jsou zásady ochrany aplikací](app-protection-policy.md).
+    ![Azure AD – Managed Browser zásady podmíněného přístupu](./media/app-configuration-managed-browser/managed-browser-conditional-access-01.png)
 
-9. V části **Přiřazení** vyberte **Cloudové aplikace** a zvolte, které aplikace chcete chránit pomocí této zásady.
+
 
 Jakmile nakonfigurujete výše uvedenou zásadu, budou uživatelé pro přístup k webovým aplikacím připojeným ke službě Azure AD, které chráníte pomocí této zásady, nuceni používat Intune Managed Browser. Pokud se uživatel pokusí v tomto scénáři použít nespravovaný prohlížeč, zobrazí se mu zpráva, že musí použít Intune Managed Browser.
 
@@ -133,27 +132,28 @@ Jednotné přihlašování vyžaduje, aby bylo vaše zařízení zaregistrováno
 >[!IMPORTANT]
 >Aby se konfigurace aplikace použily, musí už na zařízení být chráněný prohlížeč nebo jiná aplikace uživatele spravovaná [zásadami ochrany aplikací Intune]( ../app-protection-policy.md).
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. V okně **Klientské aplikace** v seznamu Spravovat zvolte **Zásady konfigurace aplikací**.
-4. V okně **Zásady konfigurace aplikací** vyberte možnost **Přidat**.
-5. V okně **Přidat zásady konfigurace** zadejte **Název** a volitelný **Popis** nastavení konfigurace aplikace.
-6. Jako typ **Registrace zařízení** zvolte **Spravované aplikace**.
-7. Zvolte **Vybrat požadovanou aplikaci** a potom v okně **Cílové aplikace** zvolte **Managed Browser** nebo **Edge** pro iOS, Android nebo oba systémy.
-8. Zvolte **OK** a vraťte se tak do okna **Přidat zásady konfigurace**.
-9. Zvolte **Nastavení konfigurace**. V okně **Konfigurace** definujte dvojice klíč-hodnota, které budou určovat nastavení aplikace Managed Browser. Informace o různých párech klíč a hodnota, které můžete definovat, najdete v dalších částech tohoto článku.
-10. Když jste hotovi, klikněte na **OK**.
-11. V okně **Přidat zásady konfigurace** zvolte **Přidat**.
-12. Vytvoří se nová konfigurace, která se zobrazí v okně **Konfigurace aplikací**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace** > **zásady konfigurace aplikací** > **Přidat** > **spravované aplikace**.
+3. Na stránce **základy** v podokně **vytvořit zásadu konfigurace aplikace** zadejte **název** a volitelný **Popis** nastavení konfigurace aplikace.
+4. Zvolte **vybrat veřejnou aplikaci** a zvolte **Managed Browser** a/nebo **Edge** pro iOS, Android nebo pro obojí.
+5. Kliknutím na **Vybrat** se vraťte do podokna **vytvořit zásadu konfigurace aplikace** .
+6. Kliknutím na **Další** zobrazte stránku **Nastavení** .
+7. Na stránce **Nastavení** definujte páry klíč-hodnota pro zadání konfigurací pro aplikaci. Informace o různých párech klíč a hodnota, které můžete definovat, najdete v dalších částech tohoto článku.
+8. Kliknutím na **Další** zobrazte stránku **přiřazení** a potom klikněte na **Vybrat skupiny** , které chcete zahrnout, nebo **Vyberte skupiny, které chcete vyloučit**.
+9. Kliknutím na **Další** zobrazte stránku **Revize + vytvořit** .
+10. Po kontrole zásad konfigurace aplikací klikněte na **vytvořit** .
+
+Vytvoří se nová konfigurace, která se zobrazí v podokně **zásady konfigurace aplikace** .
 
 
 ## <a name="assign-the-configuration-settings-you-created"></a>Přiřazení vytvořeného nastavení aplikace
 
 Nastavení přiřazujete skupinám uživatelů ve službě Azure AD. Pokud má daný uživatel cílovou aplikaci chráněného prohlížeče nainstalovanou, spravuje se podle vámi zadaného nastavení.
 
-1. V okně **Klientské aplikace** řídicího panelu správy mobilních aplikací Intune zvolte **Zásady konfigurace aplikací**.
+1. V podokně **aplikace** na řídicím panelu Správa mobilních aplikací Intune vyberte **zásady konfigurace aplikací**.
 2. V seznamu konfigurací aplikací vyberte tu, kterou chcete přiřadit.
-3. V dalším okně zvolte **Přiřazení**.
-4. V okně **Přiřazení** vyberte skupinu uživatelů ve službě Azure AD, kterým chcete přiřadit konfiguraci aplikace, a potom zvolte **OK**.
+3. V dalším podokně klikněte na možnost **přiřazení**.
+4. V podokně **přiřazení** vyberte skupinu Azure AD, ke které chcete přiřadit konfiguraci aplikace, a pak zvolte **OK**.
 
 ## <a name="how-to-set-microsoft-edge-as-the-protected-browser-for-your-organization"></a>Jak nastavit Microsoft Edge jako chráněný prohlížeč pro vaši organizaci
 
@@ -170,7 +170,7 @@ Pokud je toto nastavení nastaveno na hodnotu "NEPRAVDA":
 - Pokud vaši uživatelé stáhli Managed Browser **nebo** Microsoft Edge, **spustí se aplikace v prohlížeči** . 
 - Pokud vaši uživatelé nestáhli žádnou aplikaci v prohlížeči, zobrazí se výzva ke stažení Managed Browser.
 
-Pomocí výše uvedeného postupu vytvoříte konfiguraci aplikace Microsoft Edge. Při výběru **nastavení konfigurace** v okně **Konfigurace** zadejte následující pár klíč-hodnota (krok 9):
+Pomocí výše uvedeného postupu vytvoříte konfiguraci aplikace Microsoft Edge. Při výběru **nastavení konfigurace** v podokně **Konfigurace** zadejte následující pár klíč-hodnota (krok 9):
 
 | Klíč                              |  Hodnota   |
 |----------------------------------|----------|

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcc5dea1a3f9e6a1f2bec877688962d7be70cc7c
-ms.sourcegitcommit: d2d18eef64bcf16eec1a48fcb67f1362537c0245
+ms.openlocfilehash: ffabcace189efd60e9d532172ecd1f2a048eec2c
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445310"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74562413"
 ---
 # <a name="intune-actions-and-options-supported-with-apple-user-enrollment"></a>Akce a možnosti Intune podporované při registraci uživatele Apple
 
@@ -57,13 +57,18 @@ Na zařízeních pro zápis uživatelů můžou koncoví uživatelé provádět 
 - Vzdálené uzamčení
 - Stav kontroly
 
+## <a name="app-deployment-options"></a>Možnosti nasazení aplikace
+Na zařízeních pro zápis uživatelů se dají nasadit následující typy aplikací:
+- Uživatelem licencované aplikace plánu pro plánování multilicencí (VPP) včetně vlastních aplikací
+- Obchodní aplikace (LOB)
+- Webové aplikace
+
 ## <a name="other-supported-options"></a>Další podporované možnosti
 
 V Intune se podporují následující možnosti pro zařízení zaregistrovaná pomocí registrace uživatele Apple:
 - SÍŤ VPN pro jednotlivé aplikace Tato podpora vyloučí domény Safari, protože zápis uživatele nepodporuje konfiguraci nastavení Safari.
 - WiFi 
 - Odebrání podnikové aplikace při zrušení registrace
-- Nasazení aplikací prostřednictvím plánu nákupu multilicencí pro uživatele (VPP)
 - Detekce jailbreaků
 
 Podporovaná jsou tato omezení:
@@ -94,9 +99,10 @@ V zařízeních zaregistrovaných pomocí zápisu uživatelů nejsou podporován
 - Shromážděte UDID a další identifikátory trvalého zařízení.
 - Registrace uživatele pro každé zaregistrované zařízení podporuje jedinečné ID registrace, ale toto ID po zrušení registrace nezachovají.
 - Následující funkce Intune se kvůli tomuto omezení nepodporují:
-- Profily uživatelů SCEP s formátem názvu subjektu sériového Numbe. r
+- Profily uživatelů SCEP s formátem názvu subjektu sériového čísla.
 - SÍŤ VPN na úrovni zařízení.
 - Nasazení aplikace VPP licencované pro zařízení
+- Nainstalujte aplikace z App Storu jako spravované aplikace.
 - Řízení MDM pro aplikace mimo spravovaný svazek APFS
 - Zásady ochrany aplikací se pro tyto aplikace stále použijí. Nebudete ale moct převzít správu ani nasadit spravované verze těchto aplikací, pokud je uživatel ze zařízení neodstraní.
 - Akce, konfigurace, nastavení a příkazy vyžadující dohled. 

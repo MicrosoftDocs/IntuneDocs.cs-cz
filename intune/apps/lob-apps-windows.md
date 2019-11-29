@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/04/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6df77d168bb8be3775c566f63833b46130515b36
-ms.sourcegitcommit: 5807f4db4a45a093ce2fd6cb0c480bec384ec1ff
+ms.openlocfilehash: 6f4c7b5e3cca06a3ec10ea1b3dfc5e45546c841f
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72601582"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563911"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Přidání obchodní aplikace pro Windows do Microsoft Intune
 
@@ -36,11 +36,9 @@ Obchodní aplikace (LOB) je aplikace, kterou přidáte z instalačního souboru 
 
 ## <a name="step-1-specify-the-software-setup-file"></a>Krok 1: Určení instalačního souboru softwaru
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. V podokně **Intune** zvolte **Klientské aplikace**.
-4. V úloze **Klientské aplikace** vyberte **Spravovat** > **Aplikace**.
-5. Nad seznamem aplikací vyberte **Přidat**.
-6. V podokně **Přidat aplikaci** vyberte **Obchodní aplikace**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
+3. V podokně **Přidat aplikaci** vyberte jako **Typ aplikace** **obchodní aplikaci** .
 
 ## <a name="step-2-configure-the-app-package-file"></a>Krok 2: Konfigurace souboru balíčku aplikace
 
@@ -82,7 +80,7 @@ Obchodní aplikace (LOB) je aplikace, kterou přidáte z instalačního souboru 
 [!INCLUDE [shared-proc-lob-updateapp](../includes/shared-proc-lob-updateapp.md)]
 
    > [!NOTE]
-   > Aby služba Intune úspěšně nasadila nový soubor APPX do zařízení, musíte zvýšit hodnotu řetězce `Version` v souboru AppxManifest. XML v balíčku APPX.
+   > Aby služba Intune úspěšně nasadila nový soubor APPX do zařízení, je nutné zvýšit řetězec `Version` v souboru AppxManifest. XML v balíčku APPX.
 
 ## <a name="configure-a-self-updating-mobile-msi-app-to-ignore-the-version-check-process"></a>Konfigurace automaticky aktualizované mobilní aplikace MSI na ignorování procesu kontroly verzí
 

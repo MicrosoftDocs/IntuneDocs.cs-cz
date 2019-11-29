@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 918468bf8948ce54082f3fccc0325db07e116966
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 5a3081ece10bb25c6381f4a8f891152433bc9661
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713206"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564385"
 ---
 # <a name="see-device-details-in-intune"></a>Zobrazení podrobností o zařízení v Intune
 
@@ -57,7 +57,7 @@ V závislosti na tom, jaký dopravce zařízení používá, se nemusí shromaž
 > [!Note]  
 > Inventář hardwaru a softwaru se ve službě Intune aktualizuje každých 7 dní.
 
-|Detaily|Description|Platforma| 
+|detaily|Description|Platforma| 
 |--------------|----------------------|----|  
 |Název|Název zařízení|Windows, iOS|
 |Název správy|Název zařízení používaný jenom v konzole. Změnou tohoto názvu nedojde ke změně názvu v zařízení.|Windows, iOS|
@@ -84,7 +84,7 @@ V závislosti na tom, jaký dopravce zařízení používá, se nemusí shromaž
 |ICCID|Identifikátor karty s integrovaným obvodem, což je jedinečné identifikační číslo SIM karty|Windows, iOS, Android|
 |Datum zápisu|Datum a čas, kdy se zařízení zaregistrovalo v Intune|Windows, iOS, Android|
 |Poslední kontakt|Datum a čas posledního připojení zařízení k Intune|Windows, iOS, Android|
-|Kód pro obejití zámku aktivace|Kód, který se dá použít k obejití zámku aktivace|Windows, iOS, Android|
+|Kód pro obejití zámku aktivace|Kód, který se dá použít k obejití zámku aktivace|iOS|
 |Registrováno v Azure AD|Pokud **Ano**, zařízení je registrované v Azure Active Directory|Windows, iOS, Android|
 |Intune je zaregistrované.|Pokud **Ano**, zařízení je zaregistrované v Intune.|Windows, iOS, Android|
 |Dodržování předpisů|Stav dodržování předpisů zařízení|Windows, iOS, Android|

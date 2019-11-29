@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cb247ec25b134fa9810a426be88b7fc90999394
-ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
+ms.openlocfilehash: 73848ee8301362f14fe2866a57329425d5e5cfbe
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73635418"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563662"
 ---
 # <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Přidání aplikací Office 365 do zařízení s Windows 10 pomocí Microsoft Intune
 
@@ -49,11 +49,9 @@ Než budete moct přiřadit, monitorovat, konfigurovat nebo chránit aplikace, m
 
 ## <a name="get-started"></a>Začínáme
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. V podokně **Intune** zvolte **Klientské aplikace**.
-4. V podokně úloh **Klientské aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
-5. Vyberte **Přidat**.
-6. V podokně **Přidat aplikace** v seznamu **Typ aplikace** vyberte v oblasti **Sada Office 365** možnost **Windows 10**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
+3. V podokně **Přidat aplikace** v seznamu **Typ aplikace** vyberte v oblasti **Sada Office 365** možnost **Windows 10**.
 
 ## <a name="select-settings-format"></a>Výběr formátu nastavení
 
@@ -61,13 +59,13 @@ Můžete zvolit způsob konfigurace nastavení aplikace výběrem **formátu nas
 - Návrhář konfigurace
 - Zadání XML dat
 
-Když zvolíte **Configuration Designer** , okno **Přidat aplikaci** se změní na další dvě možnosti nastavení:
+Když zvolíte **Configuration Designer** , podokno **Přidat aplikaci** se změní na další dvě možnosti nastavení:
 - Konfigurace sady aplikací
 - Nastavení sady App Suite
 
 <img alt="Add Office 365 - Configuration designer" src="./media/apps-add-office365/apps-add-office365-02.png" width="700">
 
-Když zvolíte **zadat data XML** , zobrazí se okno **Přidat aplikaci** s možností zobrazit **data XML** . Tuto možnost vyberte, pokud chcete zobrazit okno **konfigurační soubor** . 
+Když zvolíte **zadat data XML** , zobrazí se v podokně **Přidat aplikaci** možnost zobrazit **data XML** . Tuto možnost vyberte, pokud chcete zobrazit podokno **konfiguračního souboru** . 
 
 ![Přidat návrháře konfigurace sady Office 365](./media/apps-add-office365/apps-add-office365-01.png)
     
@@ -94,7 +92,7 @@ V tomto kroku zadáte informace o sadě aplikací. Tyto informace vám pomůžou
 
 ## <a name="configure-app-suite"></a>Konfigurace sady aplikací
 
-Pokud jste v rozevíracím seznamu **formát nastavení** vybrali možnost **Návrhář konfigurace** , zobrazí se v okně **Přidat aplikaci** možnost **Konfigurovat sadu aplikací** . Vyberte aplikace Office, které chcete přiřadit k zařízením.
+Pokud jste v rozevíracím seznamu **formát nastavení** vybrali možnost **Návrhář konfigurace** , zobrazí se v podokně **Přidat aplikaci** možnost **Konfigurovat sadu aplikací** . Vyberte aplikace Office, které chcete přiřadit k zařízením.
 
 1. V podokně **Přidat aplikaci** zvolte **Nakonfigurovat sadu aplikací**.
 2. V podokně **Nakonfigurovat sadu aplikací** vyberte standardní aplikace Office, které chcete přiřadit k zařízením.  
@@ -103,7 +101,7 @@ Pokud jste v rozevíracím seznamu **formát nastavení** vybrali možnost **Ná
 
 ## <a name="configure-app-suite-settings"></a>Konfigurovat nastavení sady App Suite
 
-Pokud jste v rozevíracím seznamu **formát nastavení** vybrali možnost **Návrhář konfigurace** , zobrazí se v okně **Přidat aplikaci** možnost **nastavení sady App Suite** . V tomto kroku nakonfigurujte možnosti instalace pro sadu aplikací. Nastavení budou platit pro všechny aplikace přidané k sadě.
+Pokud jste v rozevíracím seznamu **formát nastavení** vybrali možnost **Návrhář konfigurace** , zobrazí se v podokně **Přidat aplikaci** možnost **nastavení sady App Suite** . V tomto kroku nakonfigurujte možnosti instalace pro sadu aplikací. Nastavení budou platit pro všechny aplikace přidané k sadě.
 
 1. V podokně **Přidat aplikaci** vyberte **Nastavení sady aplikací**.
 2. V podokně **Nastavení sady aplikací** postupujte takto:
@@ -126,7 +124,7 @@ Pokud jste v rozevíracím seznamu **formát nastavení** vybrali možnost **Ná
     - **Automaticky přijmout licenční smlouvu s koncovým uživatelem aplikace**: Tuto možnost vyberte, pokud nevyžadujete přijetí licenční smlouvy koncovými uživateli. Intune pak smlouvu přijme automaticky.
     - **Použít aktivaci pro sdílené počítače**: Tuto možnost vyberte, když počítač sdílí více uživatelů. Další informace najdete v článku s [přehledem aktivace pro sdílené počítače pro Office 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Jazyky**: Office se automaticky nainstaluje ve všech podporovaných jazycích nainstalovaných s Windows na zařízení koncových uživatelů. Tuto možnost zvolte, pokud chcete nainstalovat se sadou aplikací další jazyky. <p></p>
-    Můžete nasadit další jazyky pro aplikace Office 365 Pro Plus spravované prostřednictvím Intune. Seznam dostupných jazyků zahrnuje **Typ** jazykové sady (Základní, Částečná a Kontrola pravopisu). Na portálu Azure Portal vyberte **Microsoft Intune** > **Klientské aplikace** > **Aplikace** > **Přidat**. V okně **Přidat aplikaci** v seznamu **Typ aplikace** vyberte v části **Sada Office 365** možnost **Windows 10**. V okně **Nastavení sady aplikací** vyberte **Jazyky**. Další informace najdete v tématu s [přehledem jazyků nasazení v Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
+    Můžete nasadit další jazyky pro aplikace Office 365 Pro Plus spravované prostřednictvím Intune. Seznam dostupných jazyků zahrnuje **Typ** jazykové sady (Základní, Částečná a Kontrola pravopisu). V Azure Portal vyberte **Microsoft Intune** > **aplikace** > **všechny aplikace** > **Přidat**. V seznamu **Typ aplikace** v podokně **Přidat aplikaci** vyberte v části sada **Office 365**možnost **Windows 10** . V podokně **nastavení sady App Suite** vyberte **jazyky** . Další informace najdete v tématu s [přehledem jazyků nasazení v Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
 
 ## <a name="select-scope-tags-optional"></a>Vybrat značky oboru (volitelné)
 Pomocí značek Scope můžete určit, kdo může v Intune zobrazit informace o klientské aplikaci. Úplné podrobnosti o značkách oboru najdete v tématu [použití značek řízení přístupu na základě role a rozsahu pro distribuci IT](../fundamentals/scope-tags.md).
@@ -138,7 +136,7 @@ Pomocí značek Scope můžete určit, kdo může v Intune zobrazit informace o 
 
 ## <a name="enter-xml-format"></a>Zadejte formát XML
 
-Pokud jste v rozevíracím seznamu **formát nastavení** vybrali možnost **zadat data XML** , zobrazí se v okně **Přidat aplikaci** možnost **zadat formát XML** . Další informace najdete v tématu [Možnosti konfigurace pro nástroj pro nasazení Office](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
+Pokud jste v rozevíracím seznamu **formát nastavení** vybrali možnost **zadat data XML** , zobrazí se v podokně **Přidat aplikaci** možnost **zadat formát XML** . Další informace najdete v tématu [Možnosti konfigurace pro nástroj pro nasazení Office](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
 
 ## <a name="finish-up"></a>Dokončení
 
@@ -161,7 +159,7 @@ V adresáři *systém Microsoft Office 15* jsou uloženy instalační soubory n�
 Instalace bude v tichém režimu, pokud je přiřazení sady O365 nakonfigurované podle požadavků. Po úspěšném dokončení instalace budou stažené instalační soubory odstraněny. Pokud je přiřazení nakonfigurované jako **dostupné**, aplikace Office se zobrazí v aplikaci Portál společnosti, takže koncoví uživatelé můžou instalaci aktivovat ručně.
 
 ## <a name="troubleshooting"></a>Odstraňování potíží
-Intune používá [Nástroj pro nasazení Office](https://docs.microsoft.com/DeployOffice/overview-of-the-office-2016-deployment-tool) ke stažení a nasazení Office 365 ProPlus do klientských počítačů pomocí [sady Office 365 CDN](https://docs.microsoft.com/office365/enterprise/content-delivery-networks). Na základě osvědčených postupů uvedených v článku [Správa koncových bodů Office 365](https://docs.microsoft.com/office365/enterprise/managing-office-365-endpoints) se ujistěte, že konfigurace sítě umožňuje klientům přístup k CDN přímo místo směrování provozu přes centrální proxy, aby nedocházelo k zbytečnému zavedení. latence.
+Intune používá [Nástroj pro nasazení Office](https://docs.microsoft.com/DeployOffice/overview-of-the-office-2016-deployment-tool) ke stažení a nasazení Office 365 ProPlus do klientských počítačů pomocí [sady Office 365 CDN](https://docs.microsoft.com/office365/enterprise/content-delivery-networks). Na základě doporučených postupů uvedených v článku [Správa koncových bodů Office 365](https://docs.microsoft.com/office365/enterprise/managing-office-365-endpoints) můžete zajistit, aby vaše síťová konfigurace mohla klientům přistupovat přímo k CDN místo směrování provozu prostřednictvím centrálních proxy serverů, aby nedocházelo k zbytečnému zavlečení latence.
 
 Pokud narazíte na problémy s instalací nebo v době běhu, spusťte [průvodce podpora Microsoftu a obnovení pro Office 365](https://diagnostics.office.com) na cílovém zařízení.
 

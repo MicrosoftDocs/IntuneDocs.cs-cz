@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6726f731fba5bc41893f999ac627bff9a8aca1e
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: c31dd652022ae0d394ab2229a0c25b362ad8574d
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754837"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563585"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>Přidání Microsoft Edge do zařízení macOS pomocí Microsoft Intune
 
 Než budete moct nasadit, nakonfigurovat, monitorovat nebo chránit aplikace, musíte je přidat do Intune. Jedním z dostupných [typů aplikací](~/apps/apps-add.md#app-types-in-microsoft-intune) je Microsoft Edge *verze 77 a novější*. Když vyberete tento typ aplikace v Intune, můžete přiřadit a nainstalovat Microsoft Edge *verze 77 a novější* na zařízení, která spravujete pomocí MacOS. Tento typ aplikace usnadňuje přiřazení Microsoft Edge k macOS zařízením bez nutnosti používat nástroj pro zabalení aplikace macOS. K zajištění bezpečnější a aktuálnosti aplikací je aplikace součástí Microsoft AutoUpdate (MAU).
 
 > [!IMPORTANT]
-> Tento typ aplikace je ve **verzi Public Preview** a nabízí vývojové a beta kanály pro MacOS. Nasazení je pouze anglické (EN), ale koncoví uživatelé mohou změnit jazyk zobrazení v prohlížeči v části **nastavení**  > **jazyky**. 
+> Tento typ aplikace je ve **verzi Public Preview** a nabízí vývojové a beta kanály pro MacOS. Nasazení je pouze anglické (EN), ale koncoví uživatelé mohou změnit jazyk zobrazení v prohlížeči v části **nastavení** > **jazyky**. 
 
 > [!NOTE]
 > Pro Windows 10 je k dispozici také Microsoft Edge *verze 77 a novější* .
@@ -40,15 +40,15 @@ Než budete moct nasadit, nakonfigurovat, monitorovat nebo chránit aplikace, mu
 ## <a name="add-microsoft-edge-to-intune"></a>Přidání Microsoft Edge do Intune
 Microsoft Edge verze 77 a novější můžete do Intune přidat pomocí následujících kroků:
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. V podokně **Intune** vyberte **Klientské aplikace** > **Aplikace** > **Přidat**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
 3. V seznamu **Typ aplikace** pod **Microsoft Edge verze 77 a novější**zvolte **MacOS**.
 
 ## <a name="configure-app-information"></a>Konfigurace informací o aplikaci
 V tomto kroku zadáte informace o tomto nasazení aplikace. Tyto informace vám pomůžou identifikovat aplikaci v Intune a pomáhají uživatelům najít aplikaci na portálu společnosti.
 
-1. Kliknutím na **informace o aplikaci** zobrazíte okno **informace o aplikaci** .
-2. V okně **informace o aplikaci** zadejte informace o tomto nasazení aplikace. Tyto informace vám pomůžou identifikovat aplikaci v Intune a pomáhají uživatelům najít aplikaci na portálu společnosti.
+1. Kliknutím na **informace o aplikaci** zobrazíte podokno **informace o aplikaci** .
+2. V podokně **informace o aplikaci** zadejte informace o tomto nasazení aplikace. Tyto informace vám pomůžou identifikovat aplikaci v Intune a pomáhají uživatelům najít aplikaci na portálu společnosti.
     - **Název**: zadejte název aplikace, který se zobrazí na portálu společnosti. Ujistěte se, že jsou všechny názvy jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti uživatelům jenom jedna z aplikací.
     - **Popis**: Zadejte popis aplikace. Můžete například zobrazit seznam cílových uživatelů v popisu.
     - **Vydavatel**: Jako vydavatel se zobrazí Microsoft.
@@ -64,8 +64,8 @@ V tomto kroku zadáte informace o tomto nasazení aplikace. Tyto informace vám 
 ## <a name="configure-microsoft-edge-settings"></a>Konfigurace nastavení Microsoft Edge
 V tomto kroku nakonfigurujte možnosti instalace aplikace.
 
-1. V okně **Přidat aplikaci** vyberte **nastavení aplikace**.
-2. V okně **nastavení aplikace** se automaticky vybere kanál **beta** a nedá se změnit.
+1. V podokně **Přidat aplikaci** vyberte **nastavení aplikace**.
+2. V podokně **nastavení aplikace** se automaticky vybere kanál **beta** a nedá se změnit.
     - **Beta** kanál je nejstabilním prostředím Microsoft Edge Preview a nejlepší volbou pro úplný pilotní nasazení v rámci vaší organizace. S hlavními aktualizacemi každých šest týdnů.
 
     > [!NOTE]
@@ -77,10 +77,10 @@ Pomocí značek Scope můžete určit, kdo může v Intune zobrazit informace o 
 1.  Vyberte **obor (značky)**  > **Přidat**.
 2.  Pro vyhledání značek oboru použijte pole **Vybrat** .
 3.  Zaškrtněte políčko vedle značek oboru, které chcete této aplikaci přiřadit.
-4.  Klikněte na **vybrat**  > **OK**.
+4.  Klikněte na **vybrat** > **OK**.
 
 ## <a name="add-the-app"></a>Přidání aplikace
-Po dokončení konfigurace vyberte v okně **aplikace App App** možnost **Přidat** . 
+Po dokončení konfigurace vyberte v podokně **aplikace aplikace** možnost **Přidat** . 
 
 Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřazovat vybraným skupinám. 
 

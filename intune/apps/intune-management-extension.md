@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/16/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d73d28f34258bce99199731579969604c0a3d97
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: cef30238a4470395ccf58cf4d0619db78dd85b5a
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059726"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563468"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Použití skriptů PowerShellu na zařízeních s Windows 10 v Intune
 
@@ -62,7 +62,7 @@ Rozšíření pro správu Intune má následující požadavky. Po splnění po�
     
     - Uživatel se přihlásí k zařízení pomocí svého účtu služby Azure AD a potom se zaregistruje v Intune.
 
-  - Spoluspravovaná zařízení, která používají Configuration Manager a Intune. Ujistěte se, že úlohy **klientských aplikací** jsou nastavené na **pilotní nasazení Intune** nebo **Intune**. Pokyny najdete v následujících článcích: 
+  - Spoluspravovaná zařízení, která používají Configuration Manager a Intune. Ujistěte se, že úlohy **aplikace** jsou nastavené na **pilotní nasazení Intune** nebo **Intune**. Pokyny najdete v následujících článcích: 
   
     - [Co je společná správa](https://docs.microsoft.com/sccm/comanage/overview) 
     - [Zatížení klientských aplikací](https://docs.microsoft.com/sccm/comanage/workloads#client-apps)
@@ -73,8 +73,8 @@ Rozšíření pro správu Intune má následující požadavky. Po splnění po�
 
 ## <a name="create-a-script-policy-and-assign-it"></a>Vytvoření zásady skriptu a její přiřazení
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Vyberte **Konfigurace zařízení** > **Powershellové skripty** > **Přidat**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **zařízení** > **skripty PowerShellu** > **Přidat**.
 
     ![Přidávání a používání skriptů PowerShellu v Microsoft Intune](./media/intune-management-extension/mgmt-extension-add-script.png)
 
@@ -102,7 +102,7 @@ Rozšíření pro správu Intune má následující požadavky. Po splnění po�
 
     2. Po dokončení vyberte **Další**.
 
-6. Vyberte **přiřazení** > **Vyberte skupiny, které chcete zahrnout**. Zobrazí se existující seznam skupin Azure AD.
+6. Vyberte **přiřazení** > **Vybrat skupiny, které chcete zahrnout**. Zobrazí se existující seznam skupin Azure AD.
 
     1. Vyberte jednu nebo více skupin, které zahrnují uživatele, jejichž zařízení obdrží skript. Zvolte **Vybrat**. Skupiny, které jste zvolili, se zobrazí v seznamu a budou dostávat vaše zásady.
 
@@ -158,7 +158,7 @@ Pokud chcete zjistit, jestli je zařízení automaticky zaregistrované, můžet
   1. Přejděte na **nastavení** > **účty** > **přístup do práce nebo do školy**.
   2. Vyberte připojený účet > **informace**.
   3. V části **Pokročilá diagnostická sestava**vyberte **vytvořit sestavu**.
-  4. Ve webovém prohlížeči otevřete `MDMDiagReport`.
+  4. Otevřete `MDMDiagReport` ve webovém prohlížeči.
   5. Vyhledejte vlastnost **MDMDeviceWithAAD** . Pokud vlastnost existuje, zařízení se automaticky zaregistruje. Pokud tato vlastnost neexistuje, zařízení se automaticky nezaregistruje.
 
 [Povolení automatické registrace Windows 10](../enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment) zahrnuje postup konfigurace automatického zápisu v Intune.
@@ -185,7 +185,7 @@ Pokud chcete zjistit, jestli je zařízení automaticky zaregistrované, můžet
 - Chcete-li izolovat problémy skriptování, můžete:
 
   - Zkontrolujte konfiguraci spouštění PowerShellu na vašich zařízeních. Pokyny najdete v tématu [zásady spouštění prostředí PowerShell](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6) .
-  - Spusťte ukázkový skript pomocí rozšíření pro správu Intune. Vytvořte například adresář `C:\Scripts` a poskytněte všem úplnému řízení. Spusťte následující skript:
+  - Spusťte ukázkový skript pomocí rozšíření pro správu Intune. Vytvořte například `C:\Scripts` adresář a poskytněte všem úplnému řízení. Spusťte následující skript:
 
     ```powershell
     write-output "Script worked" | out-file c:\Scripts\output.txt
@@ -207,7 +207,7 @@ Pokud chcete zjistit, jestli je zařízení automaticky zaregistrované, můžet
 
     Pokud skript ohlásí úspěch, podívejte se na `AgentExecutor.log` a potvrďte tak výstup chyby. Pokud se skript spustí, musí být délka > 2.
 
-  - Chcete-li zachytit soubory. Error a. Output, následující fragment kódu spustí skript přes AgentExecutor do PSx86 (`C:\Windows\SysWOW64\WindowsPowerShell\v1.0`). Udržuje protokoly pro vaši kontrolu. Mějte na paměti, že rozšíření pro správu Intune po spuštění skriptu vyčistí protokoly:
+  - Chcete-li zachytit soubory. Error a. Output, následující fragment kódu spustí skript prostřednictvím AgentExecutor do PSx86 (`C:\Windows\SysWOW64\WindowsPowerShell\v1.0`). Udržuje protokoly pro vaši kontrolu. Mějte na paměti, že rozšíření pro správu Intune po spuštění skriptu vyčistí protokoly:
   
     ```powershell
     $scriptPath = read-host "Enter the path to the script file to execute"

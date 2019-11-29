@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 56814550cae814bd89d55a6f72df98dd24df4caf
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 09b4cfad0490f35a85e4c72b937b2ba5c0472030
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507459"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564373"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
 
@@ -76,14 +76,14 @@ Intune nabízí celou řadu funkcí, které vám pomůžou dostat požadované a
 
 ## <a name="get-started"></a>Začínáme
 
-Většinu toho, co souvisí s aplikacemi, najdete v úloze **Klientské aplikace**, ke které se dostanete takto:
+Většinu informací týkajících se aplikací najdete v úloze **aplikace** , ke kterým máte přístup pomocí následujících kroků:
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. V podokně **Microsoft Intune** vyberte **Klientské aplikace**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Vyberte **aplikace**.
 
-    ![Podokno úloh Klientské aplikace](./media/app-management/apps-workload.png)
+    ![Podokno úloh aplikace](./media/app-management/apps-workload.png)
 
-Další čtyři části popisují možnosti dostupné v podokně **Klientské aplikace**.
+Následující čtyři části popisují možnosti, které jsou k dispozici v podokně **aplikace** .
 
 ### <a name="manage"></a>Správa služby Endpoint Protection
 - **Aplikace**: Tuto možnost vyberte pro přidávání, zobrazení, přiřazování a monitorování aplikací používaných vašimi pracovníky. Více informací najdete v následujících tématech:

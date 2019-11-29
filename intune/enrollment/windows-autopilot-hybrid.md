@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3724072144a78e1f4f5a17914eff941469e27242
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: dc618f2502647ba33a16cff4305b9f4671e05996
+ms.sourcegitcommit: fc4b38660129d615068f34ad4b96b900d73f7b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709602"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74558189"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Nasazení hybridních zařízení připojených k Azure AD pomocí Intune a automatického pilotního projektu Windows
 Pomocí Intune a Windows autopilotu můžete nastavit zařízení připojená k hybridnímu Azure Active Directory (Azure AD). Pokud to chcete provést, postupujte podle kroků v tomto článku.
@@ -42,7 +42,7 @@ Zařízení, která chcete zaregistrovat, musí:
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Nastavení automatické registrace pro Windows 10
 
-1. Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a v levém podokně vyberte **Azure Active Directory**.
+1. Přihlaste se k Azure a v levém podokně vyberte **Azure Active Directory**.
 
    ![Azure Portal](./media/windows-autopilot-hybrid/auto-enroll-azure-main.png)
 
@@ -76,7 +76,7 @@ Organizační jednotka, která má udělena práva k vytváření počítačů, 
 
     ![Příkaz ovládacího prvku Delegate](./media/windows-autopilot-hybrid/delegate-control.png)
 
-1. V průvodci **delegováním řízení** vyberte **Další** > **Přidat** **typy objektů** > .
+1. V průvodci **delegováním řízení** vyberte **další** > **Přidat** > **typy objektů**.
 
 1. V podokně **typy objektů** zaškrtněte políčko **počítače** a pak vyberte **OK**.
 
@@ -88,7 +88,7 @@ Organizační jednotka, která má udělena práva k vytváření počítačů, 
 
 1. Vyberte **Zkontrolovat jména** a ověřte zadání, vyberte **OK**a pak vyberte **Další**.
 
-1. Vyberte **vytvořit vlastní úlohu pro delegování** > **Next**.
+1. Vyberte **vytvořit vlastní úlohu pro delegování** > **Další**.
 
 1. Zaškrtněte políčko **pouze následující objekty ve složce** a potom vyberte **objekty počítače**, **vytvořte vybrané objekty v této složce**a zrušte zaškrtnutí políček **Odstranit vybrané objekty v této** složce.
 
@@ -107,14 +107,14 @@ Organizační jednotka, která má udělena práva k vytváření počítačů, 
 
 Konektor Intune pro službu Active Directory musí být nainstalovaný na počítači se systémem Windows Server 2016 nebo novějším. Počítač musí mít také přístup k Internetu a ke službě Active Directory. Pokud chcete zvýšit škálování a dostupnost nebo chcete podporovat více domén Active Directory, můžete do vašeho prostředí nainstalovat více konektorů. Doporučujeme nainstalovat konektor na server, na kterém neběží žádné jiné konektory Intune.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > **registrace zařízení se systémem Windows** > **Intune Connector pro Active Directory** > **Přidat**. 
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **Windows** > **konektor Intune pro Active Directory** > **Přidat**. 
 2. Podle pokynů stáhněte konektor.
 3. Otevřete stažený instalační soubor konektoru *ODJConnectorBootstrapper. exe*a nainstalujte konektor.
 4. Na konci instalace vyberte **Konfigurovat**.
 5. Vyberte **Přihlásit se**.
 6. Zadejte globální správce uživatele nebo přihlašovací údaje role správce Intune.  
    Uživatelský účet musí mít přiřazenou licenci Intune.
-7. V části **registrace zařízení** > **registrace Windows** > **Intune Connector pro Active Directory**a potvrďte, že je stav připojení **aktivní**.
+7. V části **zařízení** > **Windows** > **registrace Windows** > **konektor Intune pro Active Directory**a potvrďte, že je stav připojení **aktivní**.
 
 > [!NOTE]
 > Po přihlášení ke konektoru může trvat několik minut, než se objeví v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431). Zobrazuje se jenom v případě, že může úspěšně komunikovat se službou Intune.
@@ -183,7 +183,7 @@ Po registraci zařízení autopilotu se jejich názvy stanou názvem hostitele z
 ## <a name="create-and-assign-an-autopilot-deployment-profile"></a>Vytvoření a přiřazení profilu nasazení Autopilotu
 Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > **profily nasazení** > **registrace systému Windows** > **vytvořit profil**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **Windows** > **profily nasazení profily** > **vytvořit profil**.
 2. Na stránce **základy** zadejte **název** a volitelný **Popis**.
 3. Pokud chcete, aby se všechna zařízení v přiřazených skupinách automaticky převedla na Autopilot, nastavte možnost **Převést všechna cílová zařízení na Autopilot** na **Ano**. Všechna vlastněná podniková zařízení, která nejsou v přiřazených skupinách, se budou registrovat v rámci služby nasazení autopilotu. Zařízení v osobním vlastnictví nebudou převedena na autopilot. Vyřízení registrace trvá 48 hodin. Jakmile bude registrace zařízení zrušena a zařízení bude resetováno, Autopilot ho zaregistruje. Jakmile se zařízení tímto způsobem zaregistruje, nedojde zakázáním této možnosti ani odebráním přiřazení profilu k odebrání zařízení ze služby nasazení Autopilot. [Zařízení musíte odebrat přímo](enrollment-autopilot.md#delete-autopilot-devices).
 4. Vyberte **Další**.
@@ -200,7 +200,7 @@ Změna stavu profilu zařízení z *nepřiřazeného* *přiřazení* a nakonec t
 
 ## <a name="optional-turn-on-the-enrollment-status-page"></a>Volitelné Zapnout stránku stavu registrace
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > **registrace systému Windows** > **Stránka stav registrace**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **Windows** > na **stránce Stav registrace**.
 1. V podokně **Stránka stavu registrace** vyberte **výchozí** **Nastavení** > .
 1. V poli **Zobrazit průběh instalace aplikace a profilu** vyberte **Ano**.
 1. Nakonfiguruje další možnosti podle potřeby.
@@ -208,7 +208,7 @@ Změna stavu profilu zařízení z *nepřiřazeného* *přiřazení* a nakonec t
 
 ## <a name="create-and-assign-a-domain-join-profile"></a>Vytvoření a přiřazení profilu připojení k doméně
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **Konfigurace zařízení** > **profily** > **vytvořit profil**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **konfigurační profily** > **vytvořit profil**.
 1. Zadejte následující vlastnosti:
    - **Název**: Zadejte popisný název nového profilu.
    - **Popis**: Zadejte popis profilu.

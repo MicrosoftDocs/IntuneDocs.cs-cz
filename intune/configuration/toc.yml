@@ -5,7 +5,7 @@
   items:
     - name: Přehled konfigurace zařízení
       href: device-profiles.md
-- name: Rychlý start
+- name: Rychlé starty
   items:
     - name: Vytvoření e-mailového profilu zařízení
       href: quickstart-email-profile.md
@@ -14,7 +14,11 @@
     - name: Vytvoření profilu
       href: device-profile-create.md
     - name: Šablony pro správu ve Windows
-      href: administrative-templates-windows.md
+      items:
+        - name: Šablony pro správu ve Windows
+          href: administrative-templates-windows.md
+        - name: Aktualizace Office pomocí šablon pro správu
+          href: administrative-templates-update-office.md
     - name: Funkce zařízení v systémech iOS a macOS
       href: device-features-configure.md
     - name: Omezení nastavení a funkcí zařízení
@@ -23,18 +27,18 @@
     - name: Nastavení systému BIOS ve Windows
       href: device-firmware-configuration-interface-windows.md
       displayName: 'DFCI, firmware'
-    - name: Updates
+    - name: Aktualizace
       href: delivery-optimization-windows.md
       displayName: delivery optimization; updates
     - name: Upgradování edicí a režim S
       href: edition-upgrade-configure-windows-10.md
-    - name: E-mailu
+    - name: E-mail
       href: email-settings-configure.md
     - name: Veřejné terminály a vyhrazená zařízení
       href: kiosk-settings.md
     - name: Sdílená zařízení s více uživateli
       href: shared-user-device-settings.md
-    - name: Síť VPN
+    - name: VPN
       href: vpn-settings-configure.md
       items:
         - name: VPN pro aplikaci pro Android
@@ -47,6 +51,8 @@
       items:
         - name: Wi-Fi s předsdíleným klíčem
           href: wi-fi-profile-shared-key.md
+        - name: Odstraňování potíží s Wi-Fi
+          href: troubleshoot-wi-fi-profiles.md
     - name: Rozšíření v macOS
       href: kernel-extensions-overview-macos.md
     - name: Aplikace Zkuste si test ve vzdělávacím profilu
@@ -66,7 +72,7 @@
       href: device-profile-assign.md
     - name: Monitorování profilů
       href: device-profile-monitor.md
-    - name: Řešení problémů
+    - name: Odstraňování potíží
       items:
         - name: Řešení potíží se zásadami a profily
           href: troubleshoot-policies-in-microsoft-intune.md
@@ -76,7 +82,7 @@
           href: android-zebra-mx-logs-troubleshoot.md
         - name: Běžné otázky a odpovědi
           href: device-profile-troubleshoot.md
-- name: Reference
+- name: Referenční informace
   items:
     - name: Nastavení konfiguračního profilu
       items:
@@ -84,9 +90,9 @@
           items:
             - name: Omezení zařízení
               href: device-restrictions-android.md
-            - name: E-mailu
+            - name: E-mail
               href: email-settings-android.md
-            - name: Síť VPN
+            - name: VPN
               href: vpn-settings-android.md
             - name: Wi-Fi
               href: wi-fi-settings-android.md
@@ -99,9 +105,9 @@
           items:
             - name: Omezení zařízení
               href: device-restrictions-android-for-work.md
-            - name: E-mailu
+            - name: E-mail
               href: email-settings-android-enterprise.md
-            - name: Síť VPN
+            - name: VPN
               href: vpn-settings-android-enterprise.md
             - name: Wi-Fi
               href: wi-fi-settings-android-enterprise.md
@@ -113,9 +119,9 @@
               href: ios-device-features-settings.md
             - name: Omezení zařízení
               href: device-restrictions-ios.md
-            - name: E-mailu
+            - name: E-mail
               href: email-settings-ios.md
-            - name: Síť VPN
+            - name: VPN
               href: vpn-settings-ios.md
             - name: Wi-Fi
               href: wi-fi-settings-ios.md
@@ -135,7 +141,7 @@
               href: kernel-extensions-settings-macos.md
             - name: Soubor předvoleb
               href: preference-file-settings-macos.md
-            - name: Síť VPN
+            - name: VPN
               href: vpn-settings-macos.md
             - name: Wi-Fi
               href: wi-fi-settings-macos.md
@@ -151,7 +157,7 @@
               href: device-restrictions-windows-10-teams.md
             - name: Upgrade edice a přepínač režimů
               href: edition-upgrade-windows-settings.md
-            - name: E-mailu
+            - name: E-mail
               href: email-settings-windows-10.md
             - name: Ochrana koncového bodu
               href: ../protect/endpoint-protection-windows-10.md?toc=/intune/configuration/toc.json&bc=/intune/configuration/breadcrumb/toc.json
@@ -159,7 +165,7 @@
               href: ../protect/identity-protection-windows-settings.md?toc=/intune/configuration/toc.json&bc=/intune/configuration/breadcrumb/toc.json
             - name: Kiosk
               href: kiosk-settings-windows.md
-            - name: Síť VPN
+            - name: VPN
               href: vpn-settings-windows-10.md
             - name: Wi-Fi
               href: wi-fi-settings-windows.md
@@ -185,7 +191,7 @@
           items:
             - name: Omezení zařízení
               href: device-restrictions-windows-8-1.md
-            - name: Síť VPN
+            - name: VPN
               href: vpn-settings-windows-8-1.md
             - name: Import Wi-Fi
               href: wi-fi-settings-import-windows-8-1.md
@@ -193,9 +199,9 @@
           items:
             - name: Omezení zařízení
               href: device-restrictions-windows-phone-8-1.md
-            - name: E-mailu
+            - name: E-mail
               href: email-settings-windows-phone-8-1.md
-            - name: Síť VPN
+            - name: VPN
               href: vpn-settings-windows-phone-8-1.md
             - name: Vlastní
               href: custom-settings-windows-phone-8-1.md

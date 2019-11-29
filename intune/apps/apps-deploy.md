@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/21/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1e8e37a784ea39fbf1154321933673ed02eee33
-ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
+ms.openlocfilehash: e990cd94c0f8622d07e59b4130566a1dc2953a1c
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74540751"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564000"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Přiřazení aplikací do skupin pomocí Microsoft Intune
 
@@ -55,13 +55,12 @@ Následující tabulka obsahuje různé možnosti pro přiřazení aplikací už
 
 ## <a name="assign-an-app"></a>Přiřazení aplikace
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. V podokně **Intune** zvolte **Klientské aplikace**.
-4. V části nabídky **Spravovat** vyberte **Aplikace**.
-5. V podokně **Aplikace** vyberte aplikaci, kterou chcete přiřadit.
-6. V části nabídky **Spravovat** vyberte **Přiřazení**.
-7. Vyberte **Přidat skupinu**. Tím se otevře podokno **Přidat skupinu** týkající se aplikace.
-8. Pro konkrétní aplikaci vyberte **typ přiřazení**:
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace** > **všech aplikacích**.
+3. V podokně **Aplikace** vyberte aplikaci, kterou chcete přiřadit.
+4. V části nabídky **Spravovat** vyberte **Přiřazení**.
+5. Vyberte **Přidat skupinu**. Tím se otevře podokno **Přidat skupinu** týkající se aplikace.
+6. Pro konkrétní aplikaci vyberte **typ přiřazení**:
    - **K dispozici pro zaregistrovaná zařízení**: přiřaďte aplikaci skupinám uživatelů, kteří můžou aplikaci instalovat z aplikace Portál společnosti nebo webu.
    - **K dispozici s registrací i bez ní**: Přiřadí tuto aplikaci do skupin uživatelů, jejichž zařízení nejsou zaregistrovaná v Intune. Uživatelům musí být přiřazena licence Intune, viz [licence Intune](../fundamentals/licenses.md).
    - **Povinné**: Aplikace se nainstaluje na zařízení ve vybraných skupinách. Některé platformy mohou mít další výzvy, aby koncový uživatel mohl potvrdit před zahájením instalace aplikace.
@@ -76,19 +75,19 @@ Následující tabulka obsahuje různé možnosti pro přiřazení aplikací už
      >
      > K **dispozici pro zaregistrovaná zařízení**: aplikace se zobrazuje jenom jako dostupná, pokud je uživatel přihlášený k Portál společnosti primární uživatel, který zařízení zaregistroval, a aplikace se vztahuje na zařízení.
 
-9. Pokud chcete vybrat skupiny uživatelů, které toto přiřazení aplikace ovlivní, vyberte **Zahrnuté skupiny**.
-10. Po vybrání jedné nebo více skupin, které se mají zahrnout, zvolte **Vybrat**.
-11. V podokně **Přiřadit** vyberte **OK**. Tím výběr zahrnutých skupin dokončíte.
-12. Pokud se rozhodnete některé skupiny uživatelů vyloučit, aby nebyly přiřazením aplikace ovlivněné, klikněte na **Vyloučit skupiny**.
-13. Pokud jste se rozhodli některé skupiny vyloučit, ve **Vybrat skupiny** zvolte **Vybrat**.
-14. V podokně **Přidat skupinu** vyberte **OK**.
-15. V podokně **Přiřazení** aplikace vyberte **Uložit**.
+7. Pokud chcete vybrat skupiny uživatelů, které toto přiřazení aplikace ovlivní, vyberte **Zahrnuté skupiny**.
+8. Po vybrání jedné nebo více skupin, které se mají zahrnout, zvolte **Vybrat**.
+9. V podokně **Přiřadit** vyberte **OK**. Tím výběr zahrnutých skupin dokončíte.
+10. Pokud se rozhodnete některé skupiny uživatelů vyloučit, aby nebyly přiřazením aplikace ovlivněné, klikněte na **Vyloučit skupiny**.
+11. Pokud jste se rozhodli některé skupiny vyloučit, ve **Vybrat skupiny** zvolte **Vybrat**.
+12. V podokně **Přidat skupinu** vyberte **OK**.
+13. V podokně **Přiřazení** aplikace vyberte **Uložit**.
 
 Aplikace je teď přiřazená do skupin, které jste vybrali. Další informace o zahrnutí a vyloučení přiřazení aplikací najdete v článku [Zahrnutí a vyloučení přiřazení aplikací](apps-inc-exl-assignments.md).
 
 ## <a name="how-conflicts-between-app-intents-are-resolved"></a>Řešení konfliktů mezi záměry aplikace
 
-Jednu skupinu je zabráněno zacílené pro přiřazení více aplikací. Pokud je ale uživatel nebo zařízení členem více skupin, které jsou přiřazené k různým záměrům, bude výsledkem konflikt. Vytváření konfliktů přiřazení pro aplikace se nedoporučuje.
+Jednu skupinu je zabráněno cílit na více účelů přiřazení aplikace. Pokud je ale uživatel nebo zařízení členem více skupin, které jsou přiřazené k různým záměrům, bude výsledkem konflikt. Vytváření konfliktů přiřazení pro aplikace se nedoporučuje.
 Informace v následující tabulce vám pomohou pochopit výsledný záměr při výskytu konfliktu:
 
 | Záměr skupiny 1 | Záměr skupiny 2 | Výsledný záměr |
@@ -142,7 +141,7 @@ Výchozí hodnoty pro nastavení jsou předem vyplněné pro nová přiřazení 
 | Obchodní aplikace | Ano |
 | Aplikace pro Store | Ne |
 | Aplikace VPP | Ne |
-| Buit – v aplikaci | Ne |
+| Integrovaná aplikace | Ne |
 
 >[!NOTE]
 >**Typy přiřazení "dostupné":** Pokud aktualizujete toto nastavení pro skupiny "k dispozici pro zaregistrovaná zařízení" nebo "k dispozici v rámci nebo bez registrace", uživatelé, kteří už mají spravovanou aplikaci, nebudou mít aktualizované nastavení, dokud zařízení nesynchronizují s Intune a znovu nenainstaluje aplikaci. 

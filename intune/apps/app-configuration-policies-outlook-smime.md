@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b2f483415d050486ae9979899d9308154a9b131
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.openlocfilehash: 348d1fe2fd236a2af11f7e58dc11530a5ce397bc
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74412015"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564191"
 ---
 # <a name="configure-smime-with-outlook-for-ios"></a>Konfigurace S/MIME pomocí Outlooku pro iOS
 
@@ -38,7 +38,7 @@ Uživatelé můžou poslat šifrovanou zprávu lidem v jejich organizaci a lidem
 ## <a name="about-digital-signatures"></a>O digitálních podpisech
 Digitálně podepsaná zpráva přeručí příjemce, že zpráva nebyla zfalšována a totožnost odesílatele je platná. Příjemci můžou digitální podpis ověřit jenom v případě, že používají e-mailového klienta, který podporuje S/MIME.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadované součásti
 - Outlook pro iOS podporuje jenom S/MIME na účtech Office 365.
 - Pro Office 365 musí být nakonfigurovaná přípona S/MIME. Další informace najdete v tématu [Postup konfigurace S/MIME v sadě Office 365](https://techcommunity.microsoft.com/t5/Exchange-Team-Blog/How-to-Configure-S-MIME-in-Office-365/ba-p/584516).
 - Musíte mít certifikační autoritu, která může vystavovat certifikáty, které se dají použít k podepisování a šifrování.
@@ -62,14 +62,14 @@ Outlook pro iOS podporuje dva způsoby doručování certifikátů do zařízen�
 Pokud chcete konfigurovat Outlook pro iOS S/MIME ve Správci koncových bodů, včetně automatického doručování certifikátů S/MIME, které může používat Outlook pro iOS, použijte následující postup:
 
 ### <a name="add-the-microsoft-outlook-app"></a>Přidat aplikaci Microsoft Outlook
-1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Přidejte aplikaci Microsoft Outlook pro iOS z App Storu do správce koncových bodů nebo synchronizujte Outlook pro iOS z Apple Volume Purchase Program. Další informace najdete v tématu [Přidání aplikací pro iOS Store do Microsoft Intune](~/apps/store-apps-ios.md) nebo [Správa aplikací pro iOS a MacOS zakoupených prostřednictvím Apple Volume purchase program pomocí Microsoft Intune](~/apps/vpp-apps-ios.md).
 
 ### <a name="create-the-outlook-for-ios-smime-configuration-policy"></a>Vytvoření zásady konfigurace Outlook pro iOS S/MIME
 
 Následující postup vám umožní vytvořit a nakonfigurovat zásadu Outlook pro iOS S/MIME ve Správci koncových bodů. Tato nastavení poskytují automatizované doručování podpisových a šifrovacích certifikátů.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace** > **aplikace zásady konfigurace** > **Přidat**.<br>
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a vyberte **aplikace** > **aplikace zásady konfigurace** > **Přidat**.<br>
 Zobrazí se podokno **Přidat zásady konfigurace** .
 2. Zadejte **název** a **Popis** zásady konfigurace.
 3. Jako **typ registrace zařízení**vyberte **spravovaná zařízení** .

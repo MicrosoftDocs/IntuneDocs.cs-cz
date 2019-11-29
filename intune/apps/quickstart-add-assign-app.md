@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 11/26/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3afd51fe27feb0c058ba703ed11e4a15a5ea2f0d
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.openlocfilehash: d09857c4e5b63947a6e3b3140f673f0887f7f920
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72813428"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563418"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Rychlý start: Přidání a přiřazení klientské aplikace
 
@@ -44,7 +44,7 @@ Přihlaste se k [Intune](https://aka.ms/intuneportal) jako [globální správce 
 Při zahrnutí aplikace může Intune spravovat aspekty této aplikace. 
 
 Aplikaci přidáte do Intune následujícím postupem:
-1. V [Intune](https://aka.ms/intuneportal) vyberte **Klientské aplikace** > **Aplikace** > **Přidat**. 
+1. V [Intune](https://aka.ms/intuneportal)vyberte **aplikace** > **všechny aplikace** > **Přidat**. 
 2. V oddílu **Sada Office 365** rozevíracího seznamu **Typ aplikace** vyberte **Windows 10**.
 3. Vyberte **Nakonfigurovat sadu aplikací** a vyberte aplikace Office, které se mají přiřadit uživateli Intune.
 4. Kliknutím na **OK** přijměte výchozí vybrané aplikace.
@@ -68,9 +68,9 @@ Po přidání aplikace do Microsoft Intune ji můžete přiřadit ke skupinám u
 > Tento rychlý Start staví na předchozích rychlých startech v této sérii. Podrobnosti najdete v části [Požadavky](quickstart-add-assign-app.md#prerequisites) tohoto rychlého startu.
 
 Aplikaci přiřadíte ke skupině následujícím postupem:
-1. V [Intune](https://aka.ms/intuneportal) vyberte **Klientské aplikace** > **Aplikace**. 
+1. V [Intune](https://aka.ms/intuneportal)vyberte **aplikace** > **všechny aplikace**. 
 2. Vyberte aplikaci, kterou chcete přiřadit ke skupině.
-3. Kliknutím na **Přiřazení** > **Přidat skupinu** zobrazte okno **Přidat skupinu**.
+3. Klikněte na **přiřazení** > **Přidat skupinu** , aby se zobrazilo podokno **Přidat skupinu** .
 4. V rozevíracím seznamu **Typ přiřazení** vyberte **K dispozici registrovaným zařízením**. 
 5. Klikněte na **Zahrnuté skupiny** > **Vybrat skupiny, které se zahrnou** > **Testeři Contoso**.
 6. Kliknutím na **Vybrat** > **OK** > **OK** > **Uložit** tuto skupinu přiřaďte.

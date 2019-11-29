@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/25/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f073c8ad7a8e087a791ee756683011fac6947162
-ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.openlocfilehash: 40cbb62a620d6e174ab8acb76798ba53080b78cf
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74547969"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563982"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Zahrnutí a vyloučení přiřazení aplikací v Microsoft Intune
 
@@ -55,34 +55,34 @@ V důsledku toho se nedoporučuje přiřazovat aplikace do smíšených skupin.
 
 ## <a name="include-and-exclude-groups-when-assigning-apps"></a>Zahrnutí a vyloučení skupin při přiřazování aplikací 
 Přiřazení aplikace ke skupinám pomocí zahrnutí a vyloučení přiřazení:
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. V podokně **Intune** zvolte **Klientské aplikace**.
-4. V podokně **Klientské aplikace** vyberte **Aplikace**. Zobrazí se seznam přidaných aplikací.
-5. Vyberte aplikaci, kterou chcete přiřadit. V řídicím panelu se zobrazí informace o aplikaci. 
-6. V části nabídky **Spravovat** vyberte **Přiřazení**. 
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace** > **všech aplikacích**. Zobrazí se seznam přidaných aplikací.
+3. Vyberte aplikaci, kterou chcete přiřadit. V řídicím panelu se zobrazí informace o aplikaci. 
+4. V části nabídky **Spravovat** vyberte **Přiřazení**. 
 
     ![Zahrnout přiřazení aplikací při přiřazování aplikací](./media/apps-inc-exl-assignments/apps-inc-exl-01.png)
-7. Pokud chcete přidat skupiny uživatelů, kteří jsou přiřazení k aplikaci, vyberte **Přidat skupinu**. 
-8. V podokně **Přidat skupinu** vyberte **Typ přiřazení** z dostupných typů přiřazení.
-9. Jako typ přiřazení vyberte **K dispozici s registrací i bez ní**.
+
+5. Pokud chcete přidat skupiny uživatelů, kteří jsou přiřazení k aplikaci, vyberte **Přidat skupinu**. 
+6. V podokně **Přidat skupinu** vyberte **Typ přiřazení** z dostupných typů přiřazení.
+7. Jako typ přiřazení vyberte **K dispozici s registrací i bez ní**.
 
     ![Přiřazení aplikací Intune – přidání skupiny](./media/apps-inc-exl-assignments/apps-inc-exl-02.png)
-10. Pokud chcete vybrat skupinu uživatelů, které chcete zpřístupnit tuto aplikaci, vyberte **Zahrnuté skupiny**.
+8. Pokud chcete vybrat skupinu uživatelů, které chcete zpřístupnit tuto aplikaci, vyberte **Zahrnuté skupiny**.
 
     > [!NOTE]
     > Pokud přidáváte skupinu a pro konkrétní typ přiřazení už byla zahrnuta jakákoliv jiná skupina, je pro ostatní typy zahrnutí přiřazení předem vybraná a není ji možné změnit. Použitou skupinu není možné použít jako zahrnutou skupinu.
 
-11. Pokud chcete tuto aplikaci zpřístupnit všem uživatelům, vyberte **Ano**.
+9. Pokud chcete tuto aplikaci zpřístupnit všem uživatelům, vyberte **Ano**.
 
     ![Přiřazení aplikací Intune – zahrnutí skupin](./media/apps-inc-exl-assignments/apps-inc-exl-03.png)
-12. Pokud chcete nastavit skupinu k zahrnutí, vyberte **OK**.
-13. Pokud chcete vybrat skupiny uživatelů, které nemají mít přístup k této aplikaci, vyberte **Vyloučené skupiny**. 
-14. Vyberte skupiny, které chcete vyloučit. Tím se aplikace stane pro tyto skupiny nedostupnou.
+10. Pokud chcete nastavit skupinu k zahrnutí, vyberte **OK**.
+11. Pokud chcete vybrat skupiny uživatelů, které nemají mít přístup k této aplikaci, vyberte **Vyloučené skupiny**. 
+12. Vyberte skupiny, které chcete vyloučit. Tím se aplikace stane pro tyto skupiny nedostupnou.
 
     ![Přiřazení aplikací Intune – vyloučení skupin](./media/apps-inc-exl-assignments/apps-inc-exl-04.png)
-15. Pomocí **Vybrat** dokončete výběr skupin.
-16. V podokně **Přidat skupinu** vyberte **OK**. Zobrazí se seznam **Přiřazení** aplikací.
-17. Klikněte na **Uložit** a aktivujte tak přiřazení skupin pro tuto aplikaci.
+13. Pomocí **Vybrat** dokončete výběr skupin.
+14. V podokně **Přidat skupinu** vyberte **OK**. Zobrazí se seznam **Přiřazení** aplikací.
+15. Klikněte na **Uložit** a aktivujte tak přiřazení skupin pro tuto aplikaci.
 
 Když provedete přiřazení skupin, pak už přiřazené skupiny nejsou k dispozici pro změny. Pokud chcete vybrat skupinu, která aktuálně není dostupná, nejdřív ji odeberte ze seznamu přiřazení k aplikaci. 
 

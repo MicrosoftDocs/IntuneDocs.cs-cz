@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2019
+ms.date: 11/26/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bcda312274e78d327a3a515eb6c95454e38c96f1
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 1800fa91ed5650fd57a31d24fdb3767a60dc5816
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507121"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563782"
 ---
 # <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Rychlý start: Vytvoření a přiřazení zásady ochrany aplikací
 
@@ -43,7 +43,7 @@ Přihlaste se k [Intune](https://aka.ms/intuneportal) jako [globální správce 
 
 Zásady ochrany aplikací vytvoříte pomocí následujících kroků:
 
-1. V [Intune](https://aka.ms/intuneportal) vyberte **Klientské aplikace** > **Zásady ochrany aplikací** > **Vytvořit zásadu**. 
+1. V [Intune](https://aka.ms/intuneportal)vyberte **aplikace** > **Zásady ochrany aplikací** > **vytvořit zásadu**. 
 2. Zadejte následující podrobnosti: 
 
     - **Název:** *Ochrana obsahu pro Windows 10*
@@ -67,7 +67,7 @@ Po vytvoření zásady ochrany aplikací v Intune ji můžete přiřadit ke skup
 
 K přiřazení zásady ochrany aplikací použijte následující postup:
 
-1. V [Intune](https://aka.ms/intuneportal) vyberte **Intune** > **Klientské aplikace** > **Zásady ochrany aplikací**. 
+1. V [Intune](https://aka.ms/intuneportal)vyberte **Intune** > **aplikace** > **Zásady ochrany aplikací**. 
 2. Vyberte dříve vytvořenou zásadu ochrany aplikací. V tomto rychlém startu je to zásada **Ochrana obsahu pro Windows 10**.
 3. Zvolte **Přiřazení**.
 4. Na kartě **Zahrnout** klikněte na **Vybrat skupiny, které se zahrnou**.

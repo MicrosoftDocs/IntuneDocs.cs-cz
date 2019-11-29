@@ -1,7 +1,7 @@
 ---
-title: チュートリアル - Apple Business Manager または Device Enrollment Program を使用して、iOS デバイスを Intune に登録する
+title: Kurz – použití Apple Business Manageru nebo Program registrace zařízení k registraci zařízení s iOS v Intune
 titleSuffix: Microsoft Intune
-description: このチュートリアルでは、Apple の ABM の会社のデバイスを登録する機能を設定して、iOS デバイスを Intune に登録します。
+description: V tomto kurzu nastavíte funkce registrace podnikových zařízení od společnosti Apple z ABM k registraci zařízení se systémem iOS v Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -15,129 +15,129 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc950f9e60f5549a7a74c2963f33c36369d3ebd3
-ms.sourcegitcommit: 5c52879f3653e22bfeba4eef65e2c86025534dab
+ms.openlocfilehash: 56b8ab9507acda8fc1145bd65c4438da838dd806
+ms.sourcegitcommit: fc4b38660129d615068f34ad4b96b900d73f7b53
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74126163"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74558174"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-ios-devices-in-intune"></a>Kurz: použití funkcí registrace podnikových zařízení společnosti Apple v Apple Business Manageru (ABM) k registraci zařízení s iOS v Intune
-Apple Business Manager の Device Enrollment 機能では、デバイスを簡単に登録できます。 Intune では Apple の以前の Device Enrollment Program (DEP) ポータルもサポートしていますが、Apple Business Manager でやり直すことをお勧めします。 デバイスは、Microsoft Intune と Apple Corporate Device Enrollment で、ユーザーが最初にデバイスをオンにしたときに、安全に自動的に登録されます。 そのため、各デバイスを個別に設定することなく、デバイスを多くのユーザーに配送できます。 
+Funkce registrace zařízení v Apple Business Manageru zjednodušují registraci zařízení. Intune podporuje také portál starší verze Program registrace zařízení (DEP) společnosti Apple, ale doporučujeme, abyste začali začít s Apple Business Managerem. Pomocí Microsoft Intune a registrace podnikových zařízení Apple se zařízení automaticky zaregistrují při prvním zapnutí zařízení uživatelem. Zařízení je proto možné dodávat mnoha uživatelům, aniž byste museli každé zařízení nastavovat samostatně. 
 
-このチュートリアルでは、次の方法について説明します。
+V tomto kurzu se naučíte:
 > [!div class="checklist"]
-> * Apple Device Enrollment トークンを取得する
-> * マネージド デバイスを Intune と同期する
-> * 登録プロファイルを作成する
-> * デバイスに登録プロファイルを割り当てる
+> * Získání tokenu pro registraci zařízení Apple
+> * Synchronizovat spravovaná zařízení s Intune
+> * Vytvoření registračního profilu
+> * Přiřazení registračního profilu k zařízením
 
-Intune サブスクリプションがない場合は、[無料試用版アカウントにサインアップ](../fundamentals/free-trial-sign-up.md)します。
+Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební účet](../fundamentals/free-trial-sign-up.md).
 
-## <a name="prerequisites"></a>必要条件
-- [Apple Business Manager](https://business.apple.com) または [Apple の Device Enrollment Program](http://deploy.apple.com) で購入したデバイス
-- [[モバイル デバイス管理機関]](../fundamentals/mdm-authority-set.md) を設定する
-- [[Apple MDM プッシュ通知証明書]](apple-mdm-push-certificate-get.md) を取得する
+## <a name="prerequisites"></a>Požadované součásti
+- Zařízení zakoupená v [Apple Business Manageru](https://business.apple.com) nebo [od společnosti Apple program registrace zařízení](http://deploy.apple.com)
+- Nastavení [autority pro správu mobilních zařízení](../fundamentals/mdm-authority-set.md)
+- Získání [certifikátu Apple MDM push Certificate](apple-mdm-push-certificate-get.md)
 
-## <a name="get-an-apple-device-enrollment-token"></a>Apple Device Enrollment トークンを取得する
-iOS デバイスを Apple の会社登録機能を使用して登録する前に、Apple Device Enrollment トークン (.pem) ファイルが必要です。 このトークンにより、ご自分の会社で所有している Apple デバイスの情報を Intune が同期できるようになります。 また、Intune は Apple に登録プロファイルをアップロードして、デバイスをそれらのプロファイルに割り当てられるようになります。
+## <a name="get-an-apple-device-enrollment-token"></a>Získání tokenu pro registraci zařízení Apple
+Před registrací zařízení se systémem iOS pomocí funkcí registrace společnosti Apple budete potřebovat soubor tokenu registrace zařízení Apple (. pem). Tento token umožňuje Intune synchronizovat informace o zařízeních Apple, která vaše společnost vlastní. Umožňuje také Intune odeslat společnosti Apple registrační profily a přiřazovat k těmto profilům zařízení.
 
-Device Enrollment トークンの作成には、ABM または DEP ポータルを使用します。 このポータルは、管理するデバイスを Intune に割り当てるためにも使用します。
+Pomocí portálu ABM nebo DEP vytvoříte token pro zápis zařízení. Portály slouží také k přiřazování zařízení do Intune za účelem správy.
 
-1. [Microsoft Endpoint Manage 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイスの登録]** 、 **[Apple の登録]** 、 **[Enrollment Program トークン]** 、 **[追加]** の順に選択します。
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **registrace** zařízení s iOS > **tokeny programu registrace** > **Přidat**.
 
-2. **[同意する]** を選択して、Microsoft がユーザーとデバイスの情報を Apple に送信できるようにします。
+2. Výběrem možnosti **Souhlasím** udělte Microsoftu oprávnění k odesílání informací o uživatelích a zařízeních do společnosti Apple.
 
-   ![公開キーをダウンロードするための [Apple 証明書] ワークスペースの [Enrollment Program トークン] のスクリーンショット。](./media/tutorial-use-device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
+   ![Snímek obrazovky s podoknem Token Programu registrace v pracovním prostoru Certifikáty Apple pro stažení veřejného klíče](./media/tutorial-use-device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
-3. **[公開キーをダウンロードします]** を選択し、暗号化キー (.pem) ファイルをダウンロードしてローカルに保存します。 .pem ファイルは、ABM または DEP ポータルから信頼関係証明書を要求するために使用されます。
+3. Vyberte **Stáhnout veřejný klíč** a stáhněte si a místně uložte soubor šifrovacího klíče (.pem). Soubor. pem slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu ABM nebo DEP.
 
-4. **[Create a token for Apple's Device Enrollment Program]\(Apple Device Enrollment Program 用のトークンを作成します\)** を選択して Apple の Deployment Program ポータルを開き、会社の Apple ID でサインインします。 この Apple ID を使って、DEP トークンを更新できます。
+4. Pokud chcete otevřít portál Programu registrace zařízení Apple (DEP), zvolte **Vytvořit token pro Program registrace zařízení Apple** a přihlaste se pomocí firemního Apple ID. Toto Apple ID můžete použít k obnovení tokenu DEP.
 
-5. Apple の [Deployment Programs ポータル](https://deploy.apple.com) で、 **[Device Enrollment Program]** の **[開始]** を選択します。 ユーザーが実行する [Apple Business Manager](https://business.apple.com) での以下の手順は、若干異なる場合があります。
+5. Na [portálu společnosti Apple pro nasazení programů](https://deploy.apple.com) vyberte **Začínáme**. Otevře se **Program registrace zařízení**. Váš proces může být mírně odlišný od následujících kroků v [Apple Business Manageru](https://business.apple.com).
 
-4. **[Manage Servers\(サーバーの管理\)]** ページで、 **[Add MDM Server\(MDM サーバーの追加\)]** を選びます。
+4. Na stránce pro **správu serverů** zvolte, že chcete **přidat server MDM**.
 
-5. **[MDM Server Name]\(MDM サーバー名\)** に、「*TestMDMServer*」と入力して **[次へ]** を選びます。 サーバー名は、自分がモバイル デバイス管理 (MDM) サーバーを識別できるようにするための名前です。 Microsoft Intune サーバーの名前または URL ではありません。
+5. Jako **název serveru MDM**zadejte *TestMDMServer* a pak klikněte na **Další**. Název serveru slouží pro vaši informaci, abyste mohli identifikovat server pro správu mobilních zařízení (MDM). Nejedná se o název nebo adresu URL serveru Microsoft Intune.
 
-6. **[Add &lt;ServerName&gt;\(<サーバー名> の追加\)]** ダイアログ ボックスが開き、 **[Upload Your Public Key\(公開キーをアップロードする\)]** と表示されます。 **[ファイルの選択…]** を選択して .pem ファイルをアップロードし、 **[Next]** (次へ) を選択します。
+6. Otevře se dialogové okno pro **přidání&lt;názvu serveru&gt;** , ve kterém se zobrazí výzva, abyste **nahráli svůj veřejný klíč**. Vyberte **zvolit soubor...** abyste mohli nahrát soubor .pem, a pak zvolte **Další**.
 
-6. **[Deployment Programs]**  >  **[Device Enrollment Program]**  >  **[デバイスの管理]** に移動します。
-7. **[Choose Devices By]\(デバイスの選択基準\)** で、 **[シリアル番号]** を選びます。 <!--ask Tiffany about this-->
+6. Přejít na **programy pro nasazení** > **program registrace zařízení** > **spravovat zařízení**.
+7. V části **zvolit zařízení podle**vyberte **sériové číslo**. <!--ask Tiffany about this-->
 
-8. **[アクションの選択]** で **[Assign to Server]\(サーバーに割り当てる\)** を選択し、Microsoft Intune に指定した **ServerName** を選択して、&lt;[OK]&gt; を選択します。 指定したデバイスが管理用に Intune サーバーに割り当てられて、 **[Assignment Complete\(割り当て完了\)]** と表示されます。
+8. V možnosti **Vybrat akci** vyberte **Přiřadit k serveru**, vyberte &lt;název_serveru&gt; zadaný pro Microsoft Intune a pak zvolte **OK**. Portál Apple přiřadí daná zařízení k serveru Intune, aby bylo možné je spravovat, a pak zobrazí zprávu o **dokončení přiřazení**.
 
-   Apple ポータルで、 **[Deployment Programs\(配備プログラム\)]** &gt; **[Device Enrollment Program\(Device Enrollment Program\)]** &gt; **[View Assignment History\(割り当て履歴の表示\)]** の順に移動して、デバイスとその MDM サーバーの割り当てのリストを表示します。
+   Na portálu Apple přejděte na **Programy nasazení** &gt; **Program registrace zařízení** &gt; **Zobrazit historii přiřazení**. Zobrazí se seznam zařízení s přiřazeným serverem MDM.
 
-9. 後で参照するために、Azure portal の Intune で、このトークンを作成するために使用した Apple ID を指定します。
+9. Pro budoucí referenční informace v Intune v Azure Portal zadejte Apple ID použité k vytvoření tohoto tokenu.
 
-    ![Enrollment Program トークンの作成に使った Apple ID の指定と、Enrollment Program トークンの参照のスクリーンショット。](./media/tutorial-use-device-enrollment-program-enroll-ios/image03.png)
+    ![Snímek obrazovky s Apple ID použitým k vytvoření tokenu programu registrace a přechodem na token programu registrace](./media/tutorial-use-device-enrollment-program-enroll-ios/image03.png)
 
-10. **[Apple トークン]** ボックスで、証明書 (.pem) ファイルを参照し、 **[開く]** を選択して、 **[作成]** を選択します。 
+10. V poli **Token Apple** přejděte k souboru certifikátu (.pem), zvolte **Otevřít** a pak zvolte **Vytvořit**. 
 
-11. スコープのタグを適用してこのトークンにアクセスできる管理者を制限するには、スコープを選択します。
+11. Pokud chcete použít značky oboru k omezení, kteří správci mají k tomuto tokenu přístup, vyberte obory.
 
-## <a name="create-an-apple-enrollment-profile"></a>Apple 登録プロファイルの作成
-これでトークンがインストールされたので、会社で所有している iOS デバイスの登録プロファイルを作成できます。 デバイス登録プロファイルで、デバイス グループに対して登録時に適用する設定を定義します。
+## <a name="create-an-apple-enrollment-profile"></a>Vytvoření registračního profilu Apple
+Teď, když máte nainstalovaný token, můžete vytvořit registrační profil pro zařízení s iOS vlastněná společností. Registrační profil zařízení definuje nastavení, která se během registrace použijí pro skupinu zařízení.
 
-1. [Microsoft Endpoint Manage 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイスの登録]** 、 **[Apple の登録]** 、 **[Enrollment Program トークン]** の順に選択します。
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **Registrace iOS** > **tokeny programu registrace**.
 
-2. インストールしたトークンを選択し、 **[プロファイル]**  >  **[プロファイルの作成]** を選びます。
+2. Vyberte token, který jste právě nainstalovali, a zvolte **profily** > **vytvořit profil**.
 
-3. **[プロファイルの作成]** で、 **[名前]** に「*TestDEPProfile*」、 **[説明]** に「*iOS デバイス用の DEP のテスト*」と入力します。 ユーザーにはこれらの詳細は表示されません。
+3. V části **vytvořit profil**zadejte *TestDEPProfile* pro **název** a *testování funkcí DEP pro zařízení s iOS* pro **Popis**. Uživatelům se tyto údaje nezobrazí.
 
-4. **[プラットフォーム]** の下から **[iOS]** を選択します。
+4. V části **platforma**vyberte **iOS** .
 
-5. デバイスの登録を、**ユーザー アフィニティ**を使用して、または使用しないで行うかを決めます。 ユーザー アフィニティは、特定のユーザー向けのデバイス用に設計されています。 ユーザーが、アプリのインストールなどのサービスにポータル サイトを使用する場合、 **[ユーザー アフィニティとともに登録する]** を選択します。 ユーザーがポータル サイトを必要としない場合、または多数のユーザーに対してデバイスをプロビジョニングする場合は、 **[ユーザー アフィニティを使用しないで登録する]** を選択します。
+5. Určete, jestli chcete, aby se vaše zařízení zaregistrovala s **přidružením uživatele**nebo bez. Přidružení uživatele je určené pro zařízení, která budou používat konkrétní uživatelé. Pokud budou uživatelé chtít použít Portál společnosti pro služby, jako je instalace aplikací, vyberte možnost **registrovat s přidružením uživatele**. Pokud vaši uživatelé nepotřebují Portál společnosti nebo chcete zařízení zřídit pro mnoho uživatelů, vyberte možnost **zaregistrovat bez přidružení uživatele**.
 
-6. 登録をユーザー アフィニティを使用して行う場合、ポータル サイトまたは Apple 設定アップ アシスタントのどちらで認証を行うかを決めます。 Multi-Factor Authentication を使用する場合、最初のサインイン時にユーザーにパスワードを変更することを許可するか、登録時にユーザーに有効期限が切れたパスワードをリセットすることを求めます。これには、 **[Apple セットアップ アシスタントの代わりにポータル サイトで認証します]** で **[はい]** を選択します。 Apple が提供している Apple 設定アシスタントの基本の HTTP 認証で十分な場合は、 **[いいえ]** を選択します。 Pokud zvolíte **Ano** a chcete, aby se aplikace Portál společnosti automaticky aktualizovala na zařízeních koncových uživatelů, nasaďte portál společnosti jako požadovanou aplikaci pro tyto uživatele prostřednictvím programu Volume purchase program (VPP) společnosti Apple.
+6. Pokud se rozhodnete zaregistrovat s přidružením uživatele, určete, jestli se má ověřit pomocí Portál společnosti nebo pomocníka s nastavením Apple. Pokud chcete použít Multi-Factor Authentication, umožníte uživatelům měnit hesla při prvním přihlášení, nebo vyzvat uživatele k resetování hesel po jejich vypršení platnosti během registrace, v části **ověřování pomocí portál společnosti namísto pomocníka s nastavením Apple**vyberte **Ano** . Pokud jste obeznámeni s používáním základního ověřování protokolu HTTP od společnosti Apple prostřednictvím pomocníka s nastavením společnosti Apple, vyberte možnost **ne**. Pokud zvolíte **Ano** a chcete, aby se aplikace Portál společnosti automaticky aktualizovala na zařízeních koncových uživatelů, nasaďte portál společnosti jako požadovanou aplikaci pro tyto uživatele prostřednictvím programu Volume purchase program (VPP) společnosti Apple.
 
-7. ユーザー アフィニティで登録を行い、ポータル サイトで認証を行う場合、Apple の Volume Purchase Program (VPP) でポータル サイトをインストールするかどうかを決定します。 VPP トークンを使用してポータル サイトをインストールする場合、ユーザーは登録時に、App Store からポータル サイトをダウンロードするときに、Apple ID とパスワードを入力する必要がありません。 **[VPP によるポータル サイトのインストール]** の下の **[使用するトークン]** を選択し、使用可能なポータル サイトの無料ライセンスがある VPP トークンを選択します。 ポータル サイトの展開に VPP を使用しない場合、 **[VPP によるポータル サイトのインストール]** の下の **[Don't use VPP]** \(VPP を使用しない\) を選択します。 
+7. Pokud se rozhodnete zaregistrovat s přidružením uživatele a ověřit pomocí Portál společnosti, určete, jestli chcete Portál společnosti nainstalovat pomocí programu Volume purchase program (VPP) společnosti Apple. Pokud nainstalujete Portál společnosti s tokenem VPP, uživatel nebude muset při registraci stáhnout Portál společnosti z App Storu a heslo. Zvolte **použít token:** v části **instalovat portál společnosti s VPP** vyberte token VPP, který má dostupné bezplatné licence portál společnosti. Pokud nechcete použít nástroj VPP k nasazení Portál společnosti, vyberte **Nepoužívat VPP** v části **instalovat portál společnosti pomocí programu VPP**. 
 
-8. ユーザー アフィニティを使用して登録を行い、ポータル サイトで認証を行い、VPP を使用してポータル サイトをインストールすることを選択した場合、認証までポータル サイトを単一アプリケーション モードで実行するかかどうかを決定します。 この設定では、ユーザーが会社の登録を完了するまで、その他のアプリにアクセスできないことが保証されます。 登録が完了するまで、ユーザーにこのフローを限定したい場合、 **[Run Company Portal in Single App Mode until authentication]** \(認証までポータル サイトを単一アプリ モードで実行する\) の下で **[はい]** を選択します。 
+8. Pokud se rozhodnete zaregistrovat s přidružením uživatele, ověřit pomocí Portál společnosti a nainstalovat Portál společnosti pomocí programu VPP, rozhodněte se, jestli chcete spustit Portál společnosti v režimu jedné aplikace, dokud neproběhne ověřování. Toto nastavení umožňuje zajistit, že uživatel nebude mít přístup k jiným aplikacím, dokud nedokončí registraci v podnikové síti. Pokud chcete uživatele do tohoto toku omezit až do dokončení registrace, **v režimu spuštění portál společnosti v režimu jedné aplikace klikněte na** **tlačítko Ano** , dokud neproběhne ověřování. 
 
-9. **[デバイス管理の設定]** を選択し、 **[監視下]** で **[はい]** を選択します。 監視下のデバイスが、会社の iOS デバイスには最も多くの管理オプションがあります。
+9. Vyberte **Nastavení správy zařízení** a v části **pod dohledem**vyberte **Ano** . Zařízení pod dohledem poskytují možnosti správy pro vaše podniková zařízení s iOS.
 
-10. **[ロックされた登録]** の下で **[はい]** を選択し、ユーザーがデバイスを会社の管理から削除できないようにします。 
+10. V části **zamčená registrace** vyberte **Ano** , aby uživatelé nemohli odebrat správu podnikového zařízení. 
 
-11. **[コンピューターと同期する]** でオプションを選択し、iOS デバイスをコンピューターと同期するかを決定します。
+11. Vyberte možnost v části **synchronizovat s počítači** a určete, jestli se zařízení s iOS budou moct synchronizovat s počítači.
 
-12. Apple でデバイスは、既定で (iPad などの) デバイスの種類が使用され命名されます。 別の名前テンプレートを使用する場合は、 **[デバイス名のテンプレートを適用する]** で **[はい]** を選択します。 デバイスに付ける名前を入力します。ここで、 *{{シリアル}}* と *{{デバイスの種類}}* の文字列は、各デバイスのシリアル番号とデバイスの種類に置き換えます。 または、 **[デバイス名のテンプレートを適用する]** の下で **[いいえ]** を選択します。
+12. Ve výchozím nastavení Apple pojmenuje zařízení s typem zařízení (např. iPad). Pokud chcete zadat jinou šablonu názvu, v části **použít šablonu názvu zařízení**vyberte **Ano** . Zadejte název, který chcete použít pro zařízení, kde řetězce *{{Serial}}* a *{{DeviceType}}* nahradí sériové číslo každého zařízení a typ zařízení. V opačném případě vyberte v části **použít šablonu názvu zařízení**možnost **ne** .
 
-13. **[OK]** を選びます。
+13. Vyberte **OK**.
 
-14. **[セットアップ アシスタントのカスタマイズ]** を選んで、 **[部署名]** に「*チュートリアル部門*」と入力します。 この文字列は、デバイスのアクティブ化中にユーザーが **[About configuration]\(構成について\)** をタップすると表示される内容です。
+14. Vyberte možnost **přizpůsobení pomocníka s nastavením** a jako **název oddělení**zadejte *oddělení kurzu* . Tento řetězec se uživatelům zobrazí při klepnutí na **konfiguraci** během aktivace zařízení.
 
-15. **[部署の電話番号]** に電話番号を入力します。 この番号は、アクティブ化中にユーザーが **[ヘルプが必要ですか]** ボタンをタップすると表示されます。
+15. V části **telefon do oddělení**zadejte telefonní číslo. Toto číslo se zobrazí, když uživatel při aktivaci klepne na tlačítko **Potřebuji Help** .
 
-16. デバイスのアクティブ化中にさまざまな画面を**表示**したり、**非表示**にしたりすることができます。 登録を最もスムーズに行うには、すべての画面を **[非表示]** に設定します。
+16. Během aktivace zařízení můžete **Zobrazit** nebo **Skrýt** nejrůznější obrazovky. Pro bezproblémové možnosti registrace nastavte všechny obrazovky, které chcete **Skrýt**.
 
-17. **[OK]**  >  **[作成]** の順に選択します。
+17. Zvolte **OK** > **Vytvořit**.
 
-## <a name="sync-managed-devices-to-intune"></a>マネージド デバイスを Intune と同期する
+## <a name="sync-managed-devices-to-intune"></a>Synchronizovat spravovaná zařízení s Intune
 
 Až nastavíte token programu registrace s portálem ABM, ASM nebo DEP a přiřadíte zařízení do serveru MDM, můžete počkat, až se tato zařízení synchronizují se službou Intune, nebo ručně nasdílet synchronizaci. Bez ruční synchronizace může trvat až 24 hodin, než se v Azure Portal zobrazí.
 
-1. [Microsoft Endpoint Manage 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイスの登録]** 、 **[Apple の登録]** 、 **[Enrollment Program トークン]** の順に選択し、一覧からトークンを選択し、 **[デバイス]** 、 **[同期]** の順に選択します。
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **ios** > **registrace v iOS** > **tokeny programu registrace** > v seznamu > **zařízení** > **synchronizaci**vyberte token.
 
-## <a name="assign-an-enrollment-profile-to-ios-devices"></a>登録プロファイルを iOS デバイスに割り当てる
+## <a name="assign-an-enrollment-profile-to-ios-devices"></a>Přiřazení profilu registrace k zařízením s iOS
 
-登録する前に、Enrollment Program プロファイルをデバイスに割り当てる必要があります。 これらのデバイスは、Apple から Intune に同期されて、ABM、ASM、または DEP ポータルの適切な MDM サーバー トークンに割り当てられる必要があります。
+Než se můžou zařízení zaregistrovat, musíte přiřadit profil programu registrace. Tato zařízení se synchronizují s Intune od společnosti Apple a musí být přiřazená ke správnému tokenu MDM serveru na portálu ABM, ASM nebo DEP.
 
-1. [Microsoft Endpoint Manage 管理センター](https://go.microsoft.com/fwlink/?linkid=2109431)で、 **[デバイスの登録]** 、 **[Apple の登録]** 、 **[Enrollment Program トークン]** の順に選択し、一覧からトークンを選択します。
-2. **[デバイス]** を選択し、リスト内でデバイスを選択し、 **[プロファイルの割り当て]** を選択します。
-3. **[プロファイルの割り当て]** の下でデバイス用のプロファイルを選択し、 **[割り当て]** を選択します。
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **registrace** zařízení s iOS > **tokeny programu registrace** > v seznamu vyberte token.
+2. Zvolte **Zařízení** > zvolte zařízení v seznamu > **Přiřadit profil**.
+3. V části **Přiřadit profil** zvolte profil pro zařízení > **Přiřadit**.
 
-## <a name="distribute-devices-to-users"></a>デバイスをユーザーに配布する
+## <a name="distribute-devices-to-users"></a>Distribuce zařízení uživatelům
 
-Apple と Intune の間の同期と管理を設定し、DEP デバイスを登録できるようにプロファイルを割り当てました。 ユーザーにデバイスを配布できるようになりました。 ユーザー アフィニティがあるデバイスでは、各ユーザーに Intune ライセンスを割り当てる必要があります。
+Nastavili jste správu a synchronizaci mezi společností Apple a Intune a přiřadili jste profil, který umožní registraci zařízení DEP. Teď můžete zařízení rozdělit mezi uživatele. U zařízení s přidruženými uživateli je potřeba, aby měl každý uživatel přiřazenu licenci Intune.
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>Další kroky
 
-iOS デバイスの登録に使用できる他のオプションについての詳細を確認できます。
+Můžete najít další informace o dalších možnostech, které jsou k dispozici pro registraci zařízení se systémem iOS.
 
 > [!div class="nextstepaction"]
-> [iOS DEP の登録に関する詳細な記事](device-enrollment-program-enroll-ios.md)
+> [Podrobnější článek o registraci DEP pro iOS](device-enrollment-program-enroll-ios.md)
 
 <!--commenting out because inaccurate>
 ## Clean up resources

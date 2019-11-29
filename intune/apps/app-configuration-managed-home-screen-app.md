@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/23/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e97e88ad78e1b914543b7fa283f47863dce185fc
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.openlocfilehash: e86aeb3191c1cfdf2fc9dfab3a4474327b3fbb06
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72813473"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564210"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Konfigurace aplikace pro domovskou obrazovku spravované Microsoftem pro Android Enterprise
 
@@ -31,12 +31,12 @@ Spravovaná Domovská obrazovka je aplikace používaná pro podniková vyhrazen
 
 ## <a name="when-to-configure-the-microsoft-managed-home-screen-app"></a>Kdy se má nakonfigurovat aplikace pro domovskou obrazovku spravovanou Microsoftem
 
-Pokud máte k dispozici nastavení prostřednictvím konfigurace zařízení, nakonfigurujte nastavení tady. Tím ušetříte čas, minimalizujete chyby a získáte lepší možnosti podpory pro Intune. Některá nastavení spravované domovské obrazovky jsou ale v tuto chvíli dostupná jenom přes okno **zásady konfigurace aplikací** v konzole Intune. Pomocí tohoto dokumentu se dozvíte, jak nakonfigurovat různá nastavení pomocí návrháře konfigurace nebo skriptu JSON. 
+Pokud máte k dispozici nastavení prostřednictvím konfigurace zařízení, nakonfigurujte nastavení tady. Tím ušetříte čas, minimalizujete chyby a získáte lepší možnosti podpory pro Intune. Některá nastavení spravované domovské obrazovky jsou ale v tuto chvíli dostupná jenom přes podokno **zásady konfigurace aplikace** v konzole Intune. Pomocí tohoto dokumentu se dozvíte, jak nakonfigurovat různá nastavení pomocí návrháře konfigurace nebo skriptu JSON. 
 
 > [!NOTE]
-> V současné době je možné nastavit povolené aplikace a připnuté webové odkazy prostřednictvím **klientských aplikací** a **Konfigurace zařízení**a doporučit je. Úplný seznam nastavení dostupných v **konfiguraci zařízení** , který se týká spravované domovské obrazovky, najdete v tématu [vyhrazené nastavení zařízení](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).  
+> V současné době je možné nastavit povolené aplikace a připnuté webové odkazy prostřednictvím **aplikací** a **Konfigurace zařízení**. Úplný seznam nastavení dostupných v **konfiguraci zařízení** , který se týká spravované domovské obrazovky, najdete v tématu [vyhrazené nastavení zařízení](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).  
 
-Nejprve přejděte do konzoly Intune v Azure Portal a přejděte do části **klientské aplikace** > **zásady konfigurace aplikace**. Přidejte zásady konfigurace pro **spravovaná zařízení** s **Androidem** a jako přidruženou aplikaci vyberte **spravovaná Domovská obrazovka** . Kliknutím na **nastavení konfigurace** můžete nakonfigurovat různá dostupná nastavení spravovaných domácích obrazovek. 
+Nejdřív přejděte do centra pro [správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a vyberte **aplikace** **zásady konfigurace aplikací** > . Přidejte zásady konfigurace pro **spravovaná zařízení** s **Androidem** a jako přidruženou aplikaci vyberte **spravovaná Domovská obrazovka** . Kliknutím na **nastavení konfigurace** můžete nakonfigurovat různá dostupná nastavení spravovaných domácích obrazovek. 
 
 ## <a name="choosing-a-configuration-settings-format"></a>Výběr formátu nastavení konfigurace
 
@@ -59,9 +59,9 @@ Následující tabulka uvádí seznam dostupných konfiguračních klíčů, hod
 
 | Konfigurační klíč | Typ hodnoty | Výchozí hodnota | Description |
 |---------------------------------------------------------------------------------------------------------------------------|-------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Nastavit velikost mřížky | řetězec | Automaticky | Umožňuje nastavit velikost mřížky pro aplikace, které mají být umístěny na spravované domovské obrazovce. Počet řádků a sloupců aplikace můžete nastavit tak, aby se definovala velikost mřížky v následujícím formátu `columns;rows`. Pokud definujete velikost mřížky, maximální počet aplikací, které se zobrazí na řádku na domovské obrazovce, bude počet řádků, které jste nastavili, a maximální počet aplikací, které se zobrazí ve sloupci na domovské obrazovce, bude počet sloupců, které jste nastavili. |
+| Nastavit velikost mřížky | řetězec | automaticky | Umožňuje nastavit velikost mřížky pro aplikace, které mají být umístěny na spravované domovské obrazovce. Počet řádků a sloupců aplikace můžete nastavit tak, aby se definovala velikost mřížky v následujícím formátu `columns;rows`. Pokud definujete velikost mřížky, maximální počet aplikací, které se zobrazí na řádku na domovské obrazovce, bude počet řádků, které jste nastavili, a maximální počet aplikací, které se zobrazí ve sloupci na domovské obrazovce, bude počet sloupců, které jste nastavili. |
 | Povolit oznámení | Logick | CHYBNÉ | Povolí oznamovací označení pro ikony aplikací, které zobrazují počet nových oznámení v aplikaci. Pokud povolíte toto nastavení, koncovým uživatelům se zobrazí oznámení o oznámeních v aplikacích, které mají nepřečtená oznámení. Pokud tento konfigurační klíč zachováte, koncovému uživateli se nezobrazí žádná oznámení, která by mohla obsahovat nepřečtená oznámení. |
-| Uzamknout domovskou obrazovku | Logick | PODMÍNKA | Odebere koncovému uživateli možnost pohybovat se přes ikony aplikace na domovské obrazovce. Pokud povolíte tento konfigurační klíč, ikony aplikace na domovské obrazovce budou uzamčené a koncový uživatel nebude moct přetahovat do různých pozic mřížky na domovské obrazovce. Pokud je `false`, koncoví uživatelé budou moci přejít na ikonu aplikace a Weblink na spravované domovské obrazovce.  |
+| Uzamknout domovskou obrazovku | Logick | PODMÍNKA | Odebere koncovému uživateli možnost pohybovat se přes ikony aplikace na domovské obrazovce. Pokud povolíte tento konfigurační klíč, ikony aplikace na domovské obrazovce budou uzamčené a koncový uživatel nebude moct přetahovat do různých pozic mřížky na domovské obrazovce. Pokud je `false`, koncoví uživatelé se budou moci pohybovat na stránce spravovaná Domovská obrazovka na ikonu aplikace a Weblink.  |
 | Nastavit papír na zeď zařízení | řetězec | Výchozí | Umožňuje nastavit tapetu podle vlastního výběru zadáním adresy URL obrázku, který chcete nastavit jako tapetu. |
 | Nastavit velikost ikony aplikace | celé číslo | 2 | Umožňuje nastavit velikost ikon pro aplikace zobrazené na domovské obrazovce. V této konfiguraci můžete zvolit následující hodnoty pro různé velikosti – 0 (nejmenší), 1 (malé), 2 (Regular), 3 (Velká) a 4 (největší). |
 | Ikona nastavení složky aplikace | celé číslo | 0 | Umožňuje definovat vzhled složek aplikace na domovské obrazovce. Můžete zvolit vzhled z následujících hodnot: tmavě čtvercová (0);   Tmavý kroužek (1); Světlá čtvercová (2); Světlý kroužek (3). |
@@ -74,15 +74,15 @@ Následující tabulka uvádí seznam dostupných konfiguračních klíčů, hod
 | Spořič obrazovky – zobrazit čas | celé číslo | 0 | Poskytuje možnost nastavit dobu v sekundách, po kterou zařízení zobrazí spořič obrazovky v režimu spořiče obrazovky. Pokud je nastavené na 0, spořič obrazovky se zobrazí v režimu spořiče obrazovky, dokud se zařízení neaktivuje.  |
 | Neaktivní čas pro povolení spořiče obrazovky | celé číslo | 30 | Doba v sekundách, po kterou je zařízení neaktivní, než se aktivuje šetřič obrazovky. Pokud je nastavené na 0, zařízení nebude nikdy přejít do režimu spořiče obrazovky. |
 | Detekce multimédií před zobrazením spořiče obrazovky | Logick | PODMÍNKA | Vyberte, jestli má obrazovka zařízení zobrazovat spořič obrazovky, pokud se na zařízení přehrává zvuk/video. Pokud je nastaveno na true, zařízení nebude přehrávat zvuk/video bez ohledu na hodnotu v **inactive_time_to_show_scree_saver**. Pokud je nastaveno na false, obrazovka zařízení zobrazí spořič obrazovky podle hodnoty nastavené v **inactive_time_to_show_screen_saver**.   |
-| Tlačítko Povolit virtuální domů | Logick | CHYBNÉ | Zapnutím tohoto nastavení `True` umožníte koncovému uživateli přístup k domovskému tlačítku spravované domovské obrazovky, které vrátí uživatele do spravované domovské obrazovky z aktuální úlohy, ve které se nachází.  |
-| Typ virtuálního tlačítka Domů | řetězec | swipe_up | Použijte **swipe_up** pro přístup k tlačítku Domů pomocí gesta pro potažení nahoru. Pomocí **typu float** získáte přístup k rychlému a trvalému domovskému tlačítku, které lze přesunout kolem obrazovky koncovým uživatelem. |
-| Indikátor síly baterie a signálu | Logick | True (Pravda)  | Zapnutím tohoto nastavení `True` se zobrazí indikátor indikátoru síly baterie a signálu. |
+| Tlačítko Povolit virtuální domů | Logick | CHYBNÉ | Toto nastavení povolte `True`, pokud chcete, aby měl koncový uživatel přístup k domovskému tlačítku spravované domovské obrazovky, který vrátí uživatele do spravované domovské obrazovky z aktuální úlohy, ve které se nachází.  |
+| Typ virtuálního tlačítka Domů | řetězec | swipe_up | Pro přístup k tlačítku Domů pomocí gesta potáhnutí nahoru použijte **swipe_up** . Pomocí **typu float** získáte přístup k rychlému a trvalému domovskému tlačítku, které lze přesunout kolem obrazovky koncovým uživatelem. |
+| Indikátor síly baterie a signálu | Logick | True (Pravda)  | Když toto nastavení zapnete, `True` se zobrazí indikátor indikátoru síly baterie a signálu. |
 | Ukončit uzamčení hesla režimu úlohy | řetězec |   | Zadejte kód 4-6, který se má použít k dočasnému vyřazení režimu uzamčení úlohy pro řešení potíží. |
 | Zobrazit nastavení Wi-Fi | Logick | CHYBNÉ | Zapnutím tohoto nastavení `True` umožníte koncovému uživateli zapnout nebo vypnout Wi-Fi nebo se připojit k jiným sítím Wi-Fi.  |
-| Zobrazit nastavení Bluetooth | Logick | CHYBNÉ | Zapnutím tohoto nastavení `True` umožní koncovým uživatelům zapnout nebo vypnout Bluetooth a připojit se k různým zařízením podporujícím technologii Bluetooth.   |
-| Aplikace ve složce jsou seřazené podle názvu | Logick | PODMÍNKA | Zapnutím tohoto nastavení `False` umožníte zobrazení položek ve složce v pořadí, ve kterém jsou určeny. V opačném případě se zobrazí ve složce abecedně.   |
-| Pořadí aplikací povoleno | Logick | CHYBNÉ | Zapnutím tohoto nastavení `True` povolíte možnost nastavit pořadí aplikací, weblinks a složek na spravované domovské obrazovce. Po povolení nastavte řazení pomocí **app_order**. koncovému uživateli zapněte nebo vypněte Bluetooth a připojte se k různým zařízením podporujícím Bluetooth.   |
-| Pořadí aplikací | bundleArray | CHYBNÉ | Umožňuje zadat pořadí aplikací, weblinks a složek na spravované domovské obrazovce. Chcete-li použít toto nastavení, musí být povoleno **uzamknutí domovské obrazovky** , musí být definována **Velikost mřížky** a **povolený pořadí aplikace** musí být nastaven na hodnotu `True`.   |
+| Zobrazit nastavení Bluetooth | Logick | CHYBNÉ | Zapnutím tohoto nastavení `True` umožníte koncovému uživateli zapnout nebo vypnout Bluetooth a připojit se k různým zařízením podporujícím Bluetooth.   |
+| Aplikace ve složce jsou seřazené podle názvu | Logick | PODMÍNKA | Zapnutím tohoto nastavení `False` umožníte, aby se položky ve složce zobrazovaly v pořadí, ve kterém jsou určené. V opačném případě se zobrazí ve složce abecedně.   |
+| Pořadí aplikací povoleno | Logick | CHYBNÉ | Zapnutím tohoto nastavení `True` povolíte možnost nastavit pořadí aplikací, weblinks a složek na spravované domovské obrazovce. Po povolení nastavte řazení pomocí **app_order**. koncový uživatel zapíná nebo vypíná Bluetooth a připojovat se k různým zařízením podporujícím technologii Bluetooth.   |
+| Pořadí aplikací | bundleArray | CHYBNÉ | Umožňuje zadat pořadí aplikací, weblinks a složek na spravované domovské obrazovce. Chcete-li použít toto nastavení, musí být povoleno **uzamknutí domovské obrazovky** , musí být definována **Velikost mřížky** a **povolený pořadí aplikace** musí být nastaveno na hodnotu `True`.   |
 
 ## <a name="enter-json-data"></a>Zadat data JSON
 

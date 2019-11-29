@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 11/26/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1067c8ef23add50c921217b9e4b115346be2951
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 4783d24e3fc25583a61f88c2e7375d4eed673186
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72497042"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563488"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Řešení problémů s instalací aplikací
 
@@ -32,8 +32,8 @@ U zařízení spravovaných pomocí Microsoft Intune MDM může občas dojít k 
 
 Intune poskytuje podrobnosti o řešení potíží s aplikacemi nainstalovanými na konkrétním zařízení uživatele.
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. V podokně **Intune** zvolte **Řešení potíží**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Vyberte **řešení potíží + podpora**.
 4. Klikněte na **Vybrat uživatele** a vyberte uživatele, pro kterého chcete řešit potíže. Zobrazí se podokno **Vybrat uživatele**.
 5. Vyberte uživatele zadáním jména nebo e-mailové adresy. V dolní části podokna klikněte na **Vybrat**. V podokně **Řešení potíží** se zobrazí informace o řešení potíží pro daného uživatele. 
 6. V seznamu **Zařízení** vyberte zařízení, u kterého chcete řešit potíže.
@@ -57,12 +57,12 @@ Pokud máte problémy s instalací aplikací, je třeba vzít v úvahu následuj
 - Pokud se aplikace v Portál společnosti nezobrazí, ujistěte se, že je aplikace nasazená s **dostupným** záměrem a že uživatel přistupuje k Portál společnosti s typem zařízení, který aplikace podporuje.
 - Pro zařízení s Windows BYOD musí uživatel do zařízení přidat pracovní účet.
 - Ověřte, jestli uživatel překračuje limit zařízení AAD:
-  1. Přejděte na [Azure Active Directory nastavení zařízení](https://portal.azure.com/#blade/Microsoft_AAD_IAM/DevicesMenuBlade/DeviceSettings/menuId).
+  1. Přejděte na [Azure Active Directory nastavení zařízení](https://portal.azure.com/#pane/Microsoft_AAD_IAM/DevicesMenupane/DeviceSettings/menuId).
   2. Poznamenejte si hodnotu nastavenou pro **maximální počet zařízení na uživatele**.
-  3. Přejděte na [Azure Active Directory uživatelé](https://portal.azure.com/#blade/Microsoft_AAD_IAM/UsersManagementMenuBlade/AllUsers).
+  3. Přejděte na [Azure Active Directory uživatelé](https://portal.azure.com/#pane/Microsoft_AAD_IAM/UsersManagementMenupane/AllUsers).
   4. Vyberte ovlivněného uživatele a klikněte na **zařízení**.
   5. Pokud uživatel překročí nastavený limit, pak odstraňte všechny zastaralé záznamy, které už nepotřebujete.
-- V případě zařízení se systémem iOS DEP se ujistěte, že je uživatel v okně Přehled zařízení Intune uveden jako **zaregistrovaný uživatelem** . Pokud se zobrazuje NA, pak Nasaďte zásadu konfigurace pro Portál společnosti Intune. Další informace najdete v tématu [Konfigurace aplikace Portál společnosti](app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-dep-devices).
+- V případě zařízení se systémem iOS DEP se ujistěte, že je uživatel v podokně Přehled zařízení Intune uveden jako **zapsaný uživatelem** . Pokud se zobrazuje NA, pak Nasaďte zásadu konfigurace pro Portál společnosti Intune. Další informace najdete v tématu [Konfigurace aplikace Portál společnosti](app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-dep-devices).
 
 ## <a name="win32-app-installation-troubleshooting"></a>Řešení potíží s instalací aplikace Win32
 
@@ -75,7 +75,7 @@ Vyberte aplikaci Win32 nasazenou pomocí rozšíření pro správu Intune. Při 
 
 Pokud chcete shromáždit protokoly instalace aplikace Win32, postupujte podle kroků uvedených v části [Podrobnosti o odstraňování potíží s aplikací](troubleshoot-app-install.md#app-troubleshooting-details). Pak pokračujte následujícími kroky:
 
-1. Klikněte na možnost **shromáždit protokoly** v okně **Podrobnosti o instalaci** .
+1. Klikněte na možnost **shromáždit protokoly** v podokně **Podrobnosti o instalaci** .
 
     <image alt="Win32 app installation details - Collect log option" src="./media/troubleshoot-app-install/troubleshoot-app-install-04.png" width="500" />
 
@@ -168,7 +168,7 @@ V této části se zmiňují Správce zařízení (DA) i registrace Samsung KNOX
 
 |  Chybová zpráva/kód  |  Description  |
 |-----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  0x80073CFF, 0x80CF201C (Chyba klienta)  |  Pro instalaci této aplikace musíte mít systém s podporou instalace aplikací bokem. Ujistěte se, že je balíček aplikace podepsaný důvěryhodným podpisem a nainstalovaný na zařízení připojeném k doméně, které má povolenou zásadu **AllowAllTrustedApps** , nebo zařízení, které má licenci pro zkušební načtení systému Windows se zásadami **AllowAllTrustedApps** . umožněn. Další informace najdete v tématu [řešení potíží s balíčkem, nasazením a dotazy aplikací pro Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).   |
+|  0x80073CFF, 0x80CF201C (Chyba klienta)  |  Pro instalaci této aplikace musíte mít systém s podporou instalace aplikací bokem. Ujistěte se, že je balíček aplikace podepsaný důvěryhodným podpisem a nainstalovaný na zařízení připojeném k doméně, které má povolenou zásadu **AllowAllTrustedApps** , nebo zařízení, které má licenci pro zkušební načtení systému Windows s povolenou zásadou **AllowAllTrustedApps** . Další informace najdete v tématu [řešení potíží s balíčkem, nasazením a dotazy aplikací pro Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).   |
 |  0x80073CF0  |  Balíček se nepodařilo otevřít. Možné příčiny:<ul><li> Balíček je nepodepsaný.</li><li> Název vydavatele neodpovídá subjektu podpisového certifikátu.</li></ul> Informace najdete v protokolu událostí **AppxPackagingOM** . Další informace najdete v tématu [řešení potíží s balíčkem, nasazením a dotazy aplikací pro Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).  |
 |  0x80073CF3  |  Ověření aktualizace, závislostí nebo konfliktů balíčku se nezdařilo. Možné příčiny:<ul><li> Příchozí balíček je v konfliktu s nainstalovaným balíčkem.</li><li> Zadaná závislost balíčku nebyla nalezena.</li><li> Balíček nepodporuje správnou architekturu procesoru.</li></ul> Informace najdete v protokolu událostí **AppXDeployment-Server** . Další informace najdete v tématu [řešení potíží s balíčkem, nasazením a dotazy aplikací pro Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).  |
 |  0x80073CFB  |  Zadaný balíček je už nainstalovaný a přeinstalace balíčku je zablokovaná. Tato chyba se může zobrazit při instalaci balíčku, který není totožný s balíčkem, který už je nainstalovaný. Potvrďte, že součástí balíčku je i digitální podpis. Pokud se balíček znovu vytvoří nebo znovu podepíše, nebude už tento balíček při bitovém porovnání totožný s dříve nainstalovaným balíčkem. Tuto chybu můžete odstranit jedním ze dvou způsobů:<ul><li> Zvyšte číslo verze aplikace a pak znovu sestavte a znovu podepište balíček.</li><li> Před instalací nového balíčku Odeberte starý balíček pro každého uživatele v systému.</li></ul> Další informace najdete v tématu [řešení potíží s balíčkem, nasazením a dotazy aplikací pro Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).  |

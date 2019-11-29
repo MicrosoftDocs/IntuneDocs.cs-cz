@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/28/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf860056c3918f7ae90e6b9b850a98a37dcfd56e
-ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
+ms.openlocfilehash: e8b3ee799374f4b3777f771d4bd6e186ddaeb55c
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73143213"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564027"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatná verze Intune – Správa aplikací Win32
 
@@ -101,17 +101,17 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
 
 ### <a name="step-1-specify-the-software-setup-file"></a>Krok 1: Určení instalačního souboru softwaru
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. V podokně **Intune** vyberte **Klientské aplikace** > **Aplikace** > **Přidat**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
 4. V podokně **Přidat** aplikaci vyberte v zobrazeném rozevíracím seznamu možnost **aplikace pro Windows (Win32)** .
 
-    ![Snímek obrazovky okna Přidat aplikaci – přidat typ rozevíracího seznamu](./media/apps-win32-app-management/apps-win32-app-01.png)
+    ![Snímek obrazovky podokna přidat aplikaci – rozevírací pole přidat typ](./media/apps-win32-app-management/apps-win32-app-01.png)
 
 ### <a name="step-2-upload-the-app-package-file"></a>Krok 2: Nahrání souboru balíčku aplikace
 
 1. V podokně **Přidat aplikaci** zvolte **Soubor balíčku aplikace** a vyberte soubor. Zobrazí se podokno Soubor balíčku aplikace.
 
-    ![Snímek obrazovky okna souboru balíčku aplikace](./media/apps-win32-app-management/apps-win32-app-02.png)
+    ![Snímek obrazovky s podoknem souboru balíčku aplikace](./media/apps-win32-app-management/apps-win32-app-02.png)
 
 2. V podokně **Soubor balíčku aplikace** vyberte tlačítko Procházet. Potom vyberte instalační soubor Windows s příponou *.intunewin*.
 
@@ -145,12 +145,12 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
     `msiexec /p “MyApp123.msp”`<p>
     A pokud je aplikace `ApplicationName.exe`, příkaz by představoval název aplikace následovaný argumenty příkazu (přepínači) podporovanými balíčkem. <br>Například:<br>
     `ApplicationName.exe /quiet`<br>
-    V příkazu výše podporuje balíček `ApplicationName.exe` argument příkazu `/quiet`.<p> 
+    Ve výše uvedeném příkazu balíček `ApplicationName.exe` podporuje argument příkazu `/quiet`.<p> 
     Pro konkrétní argumenty podporované balíčkem aplikace se obraťte na dodavatele aplikace.
 
 3. Chcete-li provést konfiguraci **příkazu Uninstall**, přidejte k odinstalaci aplikace na základě identifikátoru GUID aplikace úplný příkazový řádek pro odinstalaci. 
 
-    Například: `msiexec /x “{12345A67-89B0-1234-5678-000001000000}”`
+    Příklad: `msiexec /x “{12345A67-89B0-1234-5678-000001000000}”`
 
 4. Nastavte **chování pro instalaci** buď na **systém** , nebo na **uživatele**.
 
@@ -180,7 +180,7 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
     - **Minimální požadovaný počet logických procesorů**: Volitelně přidejte minimální počet logických procesorů požadovaných k instalaci aplikace.
     - **Minimální požadovaná rychlost CPU (MHz)** : Volitelně přidejte minimální rychlost procesoru, která se požaduje pro instalaci aplikace.
 
-3. Kliknutím na **Přidat** zobrazíte okno **Přidat pravidlo požadavku** a nakonfigurujete další pravidla požadavků. Vyberte **typ požadavku** a zvolte typ pravidla, který budete používat k určení způsobu ověření požadavku. Pravidla požadavků můžou být založená na informacích o systému souborů, hodnotách registru nebo skriptech PowerShellu. 
+3. Kliknutím na tlačítko **Přidat** zobrazíte podokno **Přidat pravidlo požadavku** a nakonfigurujete další pravidla požadavků. Vyberte **typ požadavku** a zvolte typ pravidla, který budete používat k určení způsobu ověření požadavku. Pravidla požadavků můžou být založená na informacích o systému souborů, hodnotách registru nebo skriptech PowerShellu. 
     - **Soubor**: když jako **typ požadavku**zvolíte **soubor** , pravidlo požadavku musí detekovat soubor nebo složku, datum, verzi nebo velikost. 
         - **Cesta**: Úplná cesta ke složce obsahující soubor nebo složku, které se mají zjistit.
         - **Soubor nebo složka**: Soubor nebo složka, které se mají zjistit.
@@ -297,7 +297,7 @@ V tuto chvíli jste dokončili kroky pro přidání aplikace Win32 do Intune. In
 
 ## <a name="app-dependencies"></a>Závislosti aplikací
 
-Závislosti aplikací jsou aplikace, které je třeba nainstalovat, než bude možné nainstalovat aplikaci Win32. Můžete vyžadovat, aby byly další aplikace nainstalovány jako závislosti. Konkrétně musí zařízení před instalací aplikace Win32 nainstalovat závislé aplikace. Existuje maximálně 100 závislostí, které zahrnují závislosti všech zahrnutých závislostí a také samotnou aplikaci. Závislosti aplikace Win32 můžete přidat až po přidání a nahrání aplikace Win32 do Intune. Po přidání aplikace Win32 se v okně pro aplikaci Win32 zobrazí možnost **závislosti** . 
+Závislosti aplikací jsou aplikace, které je třeba nainstalovat, než bude možné nainstalovat aplikaci Win32. Můžete vyžadovat, aby byly další aplikace nainstalovány jako závislosti. Konkrétně musí zařízení před instalací aplikace Win32 nainstalovat závislé aplikace. Existuje maximálně 100 závislostí, které zahrnují závislosti všech zahrnutých závislostí a také samotnou aplikaci. Závislosti aplikace Win32 můžete přidat až po přidání a nahrání aplikace Win32 do Intune. Po přidání aplikace Win32 se zobrazí možnost **závislosti** v podokně aplikace Win32. 
 
 Jakákoli závislost aplikace Win32 musí být také aplikací Win32. Nepodporuje se v závislosti na jiných typech aplikací, například na samostatných aplikacích MSI LOB nebo v aplikacích pro Store.
 
@@ -307,7 +307,7 @@ Můžete zvolit, jestli se mají automaticky instalovat jednotlivé závislé ap
 
 Chcete-li přidat závislost aplikace do aplikace Win32, použijte následující postup:
 
-1. V Intune vyberte **klientské aplikace** > **aplikace** . zobrazí se seznam přidaných klientských aplikací. 
+1. V Intune vyberte **aplikace** > **všech aplikacích** , abyste zobrazili seznam přidaných klientských aplikací. 
 2. Vyberte přidanou aplikaci pro **Windows (Win32)** . 
 3. Vyberte **závislosti** a přidejte tam závislé aplikace, které musí být nainstalované, než bude možné nainstalovat aplikaci Win32. 
 4. Kliknutím na **Přidat** přidejte závislost aplikace.
@@ -320,7 +320,7 @@ Koncovému uživateli se zobrazí informační zpráva systému Windows s oznám
 - 1 nebo více požadavků závislých aplikací nebylo splněno.
 - jedna nebo více závislých aplikací čeká na restartování zařízení.
 
-Pokud se rozhodnete, že nechcete **automatickou instalaci** závislosti, nebude proveden pokus o instalaci aplikace Win32. Kromě toho se v hlášení aplikace zobrazí, že závislost byla označena jako `failed` a také může mít důvod selhání. Selhání instalace závislosti můžete zobrazit kliknutím na chybu (nebo upozornění), která je k dispozici v [podrobnostech o instalaci](troubleshoot-app-install.md#win32-app-installation-troubleshooting)aplikace Win 32. 
+Pokud se rozhodnete, že nechcete **automatickou instalaci** závislosti, nebude proveden pokus o instalaci aplikace Win32. Kromě toho se v hlášení aplikace zobrazí, že tato závislost byla označena jako `failed` a také poskytuje důvod selhání. Selhání instalace závislosti můžete zobrazit kliknutím na chybu (nebo upozornění), která je k dispozici v [podrobnostech o instalaci](troubleshoot-app-install.md#win32-app-installation-troubleshooting)aplikace Win 32. 
 
 Každá závislost bude odpovídat logice opakování aplikace Intune Win32 (zkuste nainstalovat třikrát po uplynutí 5 minut) a globální plán opakovaného vyhodnocení. Závislosti se taky použijí jenom v době instalace aplikace Win32 do zařízení. Závislosti nejsou k dispozici pro odinstalaci aplikace Win32. Pokud chcete závislost odstranit, musíte kliknout na elipsy (tři tečky) nalevo od závislé aplikace umístěné na konci řádku seznamu závislostí. 
 
@@ -343,12 +343,12 @@ Můžete nakonfigurovat čas zahájení a konečný termín pro aplikaci Win32. 
 
 Nastavte dostupnost aplikace na základě data a času požadované aplikace pomocí následujících kroků:
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. V okně **Intune** vyberte **klientské aplikace** > **aplikace**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace** > **všech aplikacích**.
 3. Vyberte ze seznamu existující **aplikaci pro Windows (Win32)** . 
-4. V okně aplikace vyberte **přiřazení** > **Přidat skupinu**. 
+4. V podokně aplikace vyberte **přiřazení** > **Přidat skupinu**. 
 5. **Typ přiřazení** nastavte na **Povinné**. Všimněte si, že dostupnost aplikace se dá nastavit na základě typu přiřazení. **Typ přiřazení** může být **povinný**, **dostupný pro zaregistrovaná zařízení**nebo **odinstalovat**.
-6. Vyberte **zahrnuté skupiny** a určete, ke které skupině uživatelů se aplikace přiřadí. Zobrazí se okno **přiřadit** .
+6. Vyberte **zahrnuté skupiny** a určete, ke které skupině uživatelů se aplikace přiřadí. Zobrazí se podokno **přiřazení** .
 7. Nastavte nastavit **tuto aplikaci jako povinnou pro všechny uživatele** na **Ano**.
 
     > [!NOTE]
@@ -358,18 +358,18 @@ Nastavte dostupnost aplikace na základě data a času požadované aplikace pom
     > - **Odinstalace**: můžete si vybrat možnost ***odinstalovat tuto aplikaci pro všechny uživatele** nebo **odinstalovat tuto aplikaci pro všechna zařízení**.
 
 8. Chcete-li upravit možnosti **prostředí koncového uživatele** , vyberte možnost **Upravit**.
-9. V okně **Upravit přiřazení** nastavte **oznámení pro uživatele Ender** , aby se **zobrazila všechna informační oznámení**. Všimněte si, že můžete nastavit **oznámení koncových uživatelů** a **Zobrazit všechna informační oznámení**, **Zobrazit informační zprávy pro restartování počítače**nebo **Skrýt všechna informační oznámení**.
+9. V podokně **Upravit přiřazení** nastavte **oznámení pro uživatele Ender** , aby se **zobrazila všechna informační oznámení**. Všimněte si, že můžete nastavit **oznámení koncových uživatelů** a **Zobrazit všechna informační oznámení**, **Zobrazit informační zprávy pro restartování počítače**nebo **Skrýt všechna informační oznámení**.
 10. Nastavte **Dostupnost aplikace** na **konkrétní datum a čas** a vyberte datum a čas. Toto datum a čas určuje, kdy se aplikace stáhne do zařízení koncových uživatelů. 
 11. Nastavte **konečný termín instalace aplikace** na **konkrétní datum a čas** a vyberte datum a čas. Toto datum a čas určuje, kdy se aplikace nainstaluje na koncové uživatele. Pokud se pro stejného uživatele nebo zařízení provede více než jedno přiřazení, bude čas konečného termínu instalace aplikace vyzvednut na základě nejdřívějšího možného času.
 12. Klikněte na **povoleno** vedle **období odkladu pro restartování**. Doba odkladu restartování se spustí hned po dokončení instalace aplikace na zařízení. Když je tato možnost zakázaná, může se zařízení bez upozornění restartovat. <br>Můžete přizpůsobit následující možnosti:
-    - **Doba odkladu pro restartování zařízení (minuty)** : hodnota deault je 1440 minut (24 hodin). Tato hodnota může být maximálně 2 týdny.
+    - **Doba odkladu pro restartování zařízení (minuty)** : výchozí hodnota je 1440 minut (24 hodin). Tato hodnota může být maximálně 2 týdny.
     - **Vyberte, kdy se má zobrazit dialogové okno odpočítávání před restartováním (minuty)** : výchozí hodnota je 15 minut.
     - **Dovolit uživateli odložit oznámení o restartování**: můžete vybrat **Ano** nebo **ne**.
         - **Vyberte dobu opakovaného přiložení (minuty)** : výchozí hodnota je 240 minut (4 hodiny). Hodnota pro odložení nemůže být delší než doba odkladu pro restartování.
 13. Kliknutím na OK ** > ok** > **OK** > **Save (Uložit** ) přidejte přiřazení.
 
 ## <a name="toast-notifications-for-win32-apps"></a>Oznámení informačních zpráv pro aplikace Win32 
-V případě potřeby můžete potlačit zobrazování oznámení informační zprávy koncového uživatele na přiřazení aplikace. V Intune vyberte **klientské aplikace**  > **aplikace** > vyberte **přiřazení** > aplikací  > **Zahrnout skupiny**. 
+V případě potřeby můžete potlačit zobrazování oznámení informační zprávy koncového uživatele na přiřazení aplikace. V Intune vyberte **aplikace** > **všechny aplikace** > vyberte **přiřazení** > aplikací > **Zahrnout skupiny**. 
 
 > [!NOTE]
 > Rozšíření pro správu Intune nainstalované aplikace Win32 se odinstalují na nezaregistrovaných zařízeních. Správci můžou využít vyloučení přiřazení, aby nenabízeli aplikacím Win32 možnost BYOD zařízení.
@@ -425,7 +425,7 @@ Pokud potřebujete získat informace o verzi vaší aplikace Win32, můžete pou
 
 ```
 
-Ve výše uvedeném příkazu prostředí PowerShell nahraďte `<path to binary file>` cestou k souboru.
+Ve výše uvedeném příkazu PowerShellu nahraďte `<path to binary file>` cestou k souboru.
 
 ### <a name="additional-troubleshooting-areas-to-consider"></a>Další oblasti řešení potíží, které je potřeba zvážit
 - Zkontroluje cílení, abyste měli jistotu, že je agent nainstalovaný na zařízení – aplikace Win32 zacílená na skupinu nebo powershellový skript zacílený na skupinu vytvoří zásady instalace agenta pro skupinu zabezpečení.

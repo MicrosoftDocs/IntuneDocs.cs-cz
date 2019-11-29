@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ee3ecd64254c0e212ffc86155d677bf18ba647a
-ms.sourcegitcommit: f6b82c62af81a2643a1aaec774afa42d02eef352
+ms.openlocfilehash: a104b4d41a364c552a8ebac73ff3341af71d6d21
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73566185"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564166"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOSem
 
@@ -51,8 +51,7 @@ Když máte vybrané zahrnuté skupiny pro zásady konfigurace aplikace, můžet
 ## <a name="create-an-app-configuration-policy"></a>Vytvoření zásad konfigurace aplikací
 
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Zvolte úlohu **Klientské aplikace**.
-4. Ve skupině **Spravovat** zvolte **Zásady konfigurace aplikací** a pak **Přidat**.
+3. Vyberte **aplikace** > **zásady konfigurace aplikací** > **Přidat**.
 5. Zadejte tyto podrobnosti:
     - **Název**: Název profilu, který se zobrazí na portálu Azure Portal
     - **Popis**: Popis profilu, který se zobrazí na portálu Azure Portal
@@ -74,7 +73,7 @@ Když máte vybrané zahrnuté skupiny pro zásady konfigurace aplikace, můžet
 13. Vyberte kartu **Vyloučit**. 
 14. Klikněte na možnost **Vybrat skupiny, které se vyloučí** a zobrazte tak související podokno.
 
-    ![Snímek obrazovky s přiřazením zásad – okno Vybrat skupiny, které se vyloučí](./media/app-configuration-policies-use-ios/app-config-policy03.png)
+    ![Snímek obrazovky s přiřazením zásad – vyberte skupiny, které chcete vyloučit.](./media/app-configuration-policies-use-ios/app-config-policy03.png)
 15. Vyberte skupiny, které chcete vyloučit, a potom klikněte na **Vybrat**.
 
     >[!NOTE]
@@ -181,10 +180,9 @@ Intune dál v seznamu vlastností podporuje následující typy tokenů:
 
 Registrace programu DEP (Apple Program registrace zařízení) nejsou kompatibilní s verzí Portál společnosti aplikace App Storu. Aplikaci Portál společnosti můžete ale nakonfigurovat tak, aby podporovala zařízení DEP pro iOS pomocí následujících kroků.
 
-1. V Intune na Azure Portal:
-    - V případě potřeby přidejte Portál společnosti Intune tak, že v **Intune** > **klientské aplikace** > **aplikace** > **Přidat**.
-    - Pokud chcete vytvořit zásady konfigurace aplikace pro Portál společnosti aplikaci, přečtěte si **klientské aplikace** > **zásady konfigurace aplikací**.
-2. V níže uvedeném XML vytvořte zásadu konfigurace aplikace. Další informace o tom, jak vytvořit zásadu konfigurace aplikace a zadat data XML, najdete v tématu [Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOS](app-configuration-policies-use-ios.md) nebo pro hybridní MDM. [nastavení aplikací pro iOS pomocí zásad konfigurace aplikací v nástroji System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies).
+1. V Intune v případě potřeby přidejte aplikaci Portál společnosti Intune, a to tak, že na > **aplikace** **Intune** > **všechny aplikace** > **Přidat**.
+2. Pokud chcete vytvořit zásady konfigurace aplikace pro Portál společnosti aplikaci, můžete přejít na **aplikace** > **zásady konfigurace aplikací**.
+3. V níže uvedeném XML vytvořte zásadu konfigurace aplikace. Další informace o tom, jak vytvořit zásadu konfigurace aplikace a zadat data XML, najdete v tématu [Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOS](app-configuration-policies-use-ios.md) nebo pro hybridní MDM. [použijte nastavení pro aplikace pro iOS se zásadami konfigurace aplikací v System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies).
 
     ``` xml
     <dict>
@@ -202,7 +200,7 @@ Registrace programu DEP (Apple Program registrace zařízení) nejsou kompatibil
 4. Sdělte koncovým uživatelům, aby se k aplikaci Portál společnosti přihlásili při automatické instalaci.
 
 ## <a name="monitor-ios--app-configuration-status-per-device"></a>Monitorování stavu konfigurace aplikací pro iOS podle zařízení 
-Po přiřazení zásad konfigurace můžete monitorovat stav konfigurace aplikací pro iOS pro každé spravované zařízení. V části **Microsoft Intune** na portálu Azure Portal vyberte **Zařízení** > **Všechna zařízení**. V seznamu spravovaných zařízení vyberte konkrétní zařízení a zobrazte tak okno pro toto zařízení. V okně zařízení vyberte **Konfigurace aplikace**.  
+Po přiřazení zásad konfigurace můžete monitorovat stav konfigurace aplikací pro iOS pro každé spravované zařízení. V části **Microsoft Intune** na portálu Azure Portal vyberte **Zařízení** > **Všechna zařízení**. V seznamu spravovaných zařízení vyberte konkrétní zařízení, ve kterém se má zobrazit podokno pro zařízení. V podokně zařízení vyberte **Konfigurace aplikace**.  
 
 ## <a name="additional-information"></a>Další informace
 

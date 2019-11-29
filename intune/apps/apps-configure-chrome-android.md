@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/07/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14e9aa6e82d7b3e24350de8770f02b0a08695e1a
-ms.sourcegitcommit: b5e719fb507b1bc4774674e76c856c435e69f68c
+ms.openlocfilehash: c344a518890a2309a7805d61a5675e2646029bbb
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73801667"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564049"
 ---
 # <a name="configure-google-chrome-for-android-devices-using-intune"></a>Konfigurace Google Chrome pro zařízení s Androidem pomocí Intune 
 
@@ -36,8 +36,8 @@ Pomocí zásad konfigurace aplikací Intune můžete nakonfigurovat Google Chrom
 
 ## <a name="add-the-google-chrome-app-to-intune"></a>Přidání aplikace Google Chrome do Intune
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. V podokně **Intune** vyberte **klientské aplikace** > **aplikace** > **Přidat** a pak přidejte **spravovanou Google Play** aplikaci.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace** > **všechny aplikace** > **přidejte** a přidejte **spravovanou Google Play** aplikaci.
 3. Přejít na Managed Google Play, hledejte pomocí **Google Chrome** a schvalte.
 
     ![Hledání a schvalování Google Chrome](~/apps/media/apps-configure-chrome-android/search.png)

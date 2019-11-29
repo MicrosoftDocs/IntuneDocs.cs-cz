@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/24/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5983742043dca9d07242315d4aaa97de2ead8d6
-ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
+ms.openlocfilehash: a0440e2d6f5890b20ccf020c40bb1037bcfcae38
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73984023"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564121"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Selektivní vymazání dat pomocí zásad ochrany aplikací s podmíněnými spouštěcími akcemi v Intune
 
@@ -33,16 +33,16 @@ S využitím těchto nastavení můžete explicitně vymazat podniková data ze 
 
 ## <a name="create-an-app-protection-policy-using-conditional-launch-actions"></a>Vytvoření zásady ochrany aplikací pomocí podmíněných spouštěcích akcí
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. V podokně **Intune** vyberte **Klientské aplikace** > **Zásady ochrany aplikací**.
-4. Klikněte na **Přidat zásadu** (můžete také upravit některou existující zásadu). 
-5. Kliknutím na **Konfigurovat požadovaná nastavení** zobrazíte seznam dostupných nastavení, která se mají pro tuto zásadu konfigurovat. 
-6. Posunutím dolů v podokně nastavení se zobrazí část s názvem **podmíněné spuštění** s upravitelnou tabulkou.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace** > **Zásady ochrany aplikací**.
+3. Klikněte na **vytvořit zásadu** a vyberte platformu zařízení pro vaše zásady. 
+4. Kliknutím na **Konfigurovat požadovaná nastavení** zobrazíte seznam dostupných nastavení, která se mají pro tuto zásadu konfigurovat. 
+5. Posunutím dolů v podokně nastavení se zobrazí část s názvem **podmíněné spuštění** s upravitelnou tabulkou.
 
     ![Snímek obrazovky akcí přístupu ochrany aplikací v Intune](./media/app-protection-policies-access-actions/apps-selective-wipe-access-actions01.png)
 
-7. Vyberte **Nastavení** a do sloupce **Hodnota** zadejte hodnotu, kterou uživatelé musí splnit, aby se přihlásili k firemní aplikaci. 
-8. Ve sloupci **Akce** vyberte akci, která se má provést, pokud uživatelé nesplňují požadavky. V některých případech lze pro jedno nastavení nakonfigurovat více akcí. Další informace najdete v tématu [Vytvoření a přiřazení zásad ochrany aplikací](app-protection-policies.md).
+6. Vyberte **Nastavení** a do sloupce **Hodnota** zadejte hodnotu, kterou uživatelé musí splnit, aby se přihlásili k firemní aplikaci. 
+7. Ve sloupci **Akce** vyberte akci, která se má provést, pokud uživatelé nesplňují požadavky. V některých případech lze pro jedno nastavení nakonfigurovat více akcí. Další informace najdete v tématu [Vytvoření a přiřazení zásad ochrany aplikací](app-protection-policies.md).
 
 ## <a name="policy-settings"></a>Nastavení zásad 
 

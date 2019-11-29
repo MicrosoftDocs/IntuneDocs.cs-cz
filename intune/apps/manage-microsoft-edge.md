@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/19/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 890709ccf176f2b0cc6c4a3af986d1bce642572d
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: e4761e2565402b4c3cdc993ff89cbedea8273609
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754421"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563896"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune
 
@@ -58,15 +58,15 @@ Pokud Microsoft Edge necílí na zásady Intune, uživatelé ji nemůžou použ�
 Podmíněný přístup Azure AD můžete použít k přesměrování uživatelů na přístup k firemnímu obsahu jenom přes Microsoft Edge. Tím se omezí přístup k webovým aplikacím připojeným k Azure AD na Microsoft Edge s ochranou zásad v mobilním prohlížeči. Tato aplikace blokuje přístup ze všech ostatních nechráněných prohlížečů, jako je Safari nebo Chrome. Můžete použít podmíněný přístup k prostředkům Azure, jako jsou Exchange Online a SharePoint Online, centrum pro správu Microsoft 365 a dokonce i místní weby, které jste provedli na externích uživatelích přes [Azure proxy aplikací služby AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started).
 
 Omezení webové aplikace připojené k Azure AD na používání Microsoft Edge v iOS a Androidu:
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. V uzlu Intune vyberte **podmíněný přístup** > **Nová zásada**.
-3. V okně vyberte **udělit** v části **řízení přístupu** .
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. V uzlu Intune vyberte **podmíněný přístup** > **nové zásady**.
+3. V části **řízení přístupu** v podokně vyberte **udělit** .
 4. Vyberte **Vyžaduje se klientem schválená aplikace**.
-5. V okně **grant** zvolte **Vybrat** . Tuto zásadu musíte přiřadit ke cloudovým aplikacím, které mají být dostupné jenom pro aplikaci Intune Managed Browser.
+5. V podokně **grant** zvolte **Vybrat** . Tuto zásadu musíte přiřadit ke cloudovým aplikacím, které mají být dostupné jenom pro aplikaci Intune Managed Browser.
 
     ![Snímek obrazovky se zásadami podmíněného přístupu – grant](./media/manage-microsoft-edge/manage-microsoft-edge-01.png)
 
-6. V části přiřazení vyberte **podmínky**  > **klientských aplikacích**. Zobrazí se okno **klientské aplikace** .
+6. V části přiřazení vyberte **podmínky** > **aplikace**. Zobrazí se podokno **aplikace** .
 7. V části **Konfigurovat**vyberte **Ano** , pokud chcete zásady použít pro konkrétní klientské aplikace.
 8. Zkontrolujte, že je jako klientská aplikace vybraná možnost **Prohlížeč**.
 
@@ -97,29 +97,29 @@ Jednotné přihlašování vyžaduje, aby zařízení bylo zaregistrované v apl
 
 Vytvoření konfigurace aplikace pro Microsoft Edge:
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Vyberte **klientské aplikace** > **zásady konfigurace aplikací** > **Přidat**.
-3. V okně **Přidat zásady konfigurace** zadejte **Název** a volitelný **Popis** nastavení konfigurace aplikace.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace** > **zásady konfigurace aplikací** > **Přidat**.
+3. V podokně **Přidat zásady konfigurace** zadejte **název** a volitelný **Popis** nastavení konfigurace aplikace.
 4. Jako typ **Registrace zařízení** zvolte **Spravované aplikace**.
-5. Zvolte **vybrat požadovanou aplikaci**. Pak v okně **cílové aplikace** zvolte **Managed Browser** nebo **Edge** pro iOS, Android nebo pro obojí.
-6. Kliknutím na **OK** se vraťte do okna **Přidat zásady konfigurace** .
-7. Klikněte na **Nastavení konfigurace**. V okně **Konfigurace** definujte páry klíč-hodnota pro zadání konfigurací pro Microsoft Edge. Informace o různých párech klíč a hodnota, které můžete definovat, najdete v dalších částech tohoto článku.
+5. Zvolte **vybrat požadovanou aplikaci**. Pak v podokně **cílové aplikace** zvolte **Managed Browser** nebo **Edge** pro iOS, Android nebo pro obojí.
+6. Kliknutím na **OK** se vraťte do podokna **Přidat zásady konfigurace** .
+7. Klikněte na **Nastavení konfigurace**. V podokně **Konfigurace** definujte páry klíč-hodnota pro zadání konfigurací pro Microsoft Edge. Informace o různých párech klíč a hodnota, které můžete definovat, najdete v dalších částech tohoto článku.
 
     > [!NOTE]
     > Microsoft Edge používá stejné dvojice klíč-hodnota jako Managed Browser. V Androidu musí být Microsoft Edge cílem zásad ochrany aplikací, aby se projevily zásady konfigurace aplikací.
 
 8. Po dokončení vyberte **OK**.
-9. V okně **Přidat zásady konfigurace** zvolte **Přidat**.<br>
-    Nová konfigurace se vytvoří a zobrazí v okně **Konfigurace aplikace** .
+9. V podokně **Přidat zásady konfigurace** klikněte na možnost **Přidat**.<br>
+    Nová konfigurace se vytvoří a zobrazí v podokně **Konfigurace aplikace** .
 
 ## <a name="assign-the-configuration-settings-you-created"></a>Přiřazení vytvořeného nastavení aplikace 
 
 Nastavení přiřadíte skupinám uživatelů ve službě Azure AD. Pokud má daný uživatel cílovou aplikaci chráněného prohlížeče nainstalovanou, spravuje se podle vámi zadaného nastavení.
 
-1. V okně **klientské aplikace** na řídicím panelu Správa mobilních aplikací Intune vyberte **zásady konfigurace aplikací**.
+1. V podokně **aplikace** na řídicím panelu Správa mobilních aplikací Intune vyberte **zásady konfigurace aplikací**.
 2. V seznamu konfigurací aplikací vyberte tu, kterou chcete přiřadit.
-3. V dalším okně vyberte **přiřazení**.
-4. V okně **přiřazení** vyberte skupinu Azure AD, ke které chcete přiřadit konfiguraci aplikace, a pak vyberte **OK**.
+3. V dalším podokně vyberte **přiřazení**.
+4. V podokně **přiřazení** vyberte skupinu Azure AD, ke které chcete přiřadit konfiguraci aplikace, a pak vyberte **OK**.
 
 ## <a name="direct-users-to-microsoft-edge-instead-of-the-intune-managed-browser"></a>Přímé nasměrování uživatelů na Microsoft Edge místo Intune Managed Browser 
 
@@ -127,7 +127,7 @@ Intune Managed Browser i Microsoft Edge se dají používat jako prohlížeče c
 
 |    Klíč    |    Hodnota    |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.useEdge`    |    Hodnota `true` bude směrovat uživatele na stažení a používání Microsoft Edge.<br>Hodnota `false` umožní uživatelům používat Intune Managed Browser.    |
+|    `com.microsoft.intune.useEdge`    |    Hodnota `true` bude nasměrovat uživatele na stažení a používání Microsoft Edge.<br>Hodnota `false` umožní uživatelům používat Intune Managed Browser.    |
 
 Pokud tato hodnota konfigurace aplikace není **nastavená** , v následující logice se určí, který prohlížeč se použije k otevření firemních odkazů.
 
@@ -181,7 +181,7 @@ Použijte následující dvojici klíč/hodnota ke konfiguraci zástupce domovsk
 
 |    Klíč    |    Hodnota    |
 |-------------------------------------------------------------------|-------------|
-|    com. Microsoft. Intune. mam. managedbrowser. webdomove   |    Zadejte platnou adresu URL. Nesprávné adresy URL se z bezpečnostních důvodů blokují.<br>**Příklad:**  < `https://www.bing.com` >
+|    com. Microsoft. Intune. mam. managedbrowser. webdomove   |    Zadejte platnou adresu URL. Nesprávné adresy URL se z bezpečnostních důvodů blokují.<br>**Příklad:**  <`https://www.bing.com`>
 
 ## <a name="configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge"></a>Nakonfigurovat logo vaší organizace a barvu značky pro nové stránky karet v Microsoft Edge
 
@@ -214,7 +214,7 @@ Ke konfiguraci spravovaných záložek použijte následující pár klíč/hodn
 
 |    Klíč    |    Hodnota    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com. Microsoft. Intune. mam. managedbrowser. záložek    |    Hodnota této konfigurace je seznam záložek. Každá záložka se skládá z názvu záložky a adresy URL záložky. Název a adresu URL oddělte znakem `|`.      Příklad:<br>`Microsoft Bing|https://www.bing.com`<br>Chcete-li nakonfigurovat více záložek, oddělte každou dvojici znakem s dvojitou čárkou `||`.<p>Příklad:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
+|    com. Microsoft. Intune. mam. managedbrowser. záložek    |    Hodnota této konfigurace je seznam záložek. Každá záložka se skládá z názvu záložky a adresy URL záložky. Název a adresu URL oddělte znakem `|`.      Příklad:<br>`Microsoft Bing|https://www.bing.com`<br>Chcete-li nakonfigurovat více záložek, oddělte každou dvojici znakem s dvojitým znakem `||`.<p>Příklad:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
 
 ## <a name="display-myapps-within-microsoft-edge-bookmarks"></a>Zobrazit MyApp v záložkách Microsoft Edge
 
@@ -248,8 +248,8 @@ K vytvoření seznamu povolených a blokovaných webů můžete použít různé
     |    `http://www.contoso.com`    |    Odpovídá jediné stránce    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Odpovídá jediné stránce    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
     |    `http://www.contoso.com/*;`   |    Odpovídá všem adresám URL začínajícím na `www.contoso.com`    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
-    |    `http://*.contoso.com/*`    |    Odpovídá všem subdoménám v `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`
-    |    `http://*contoso.com/*`    |    Vyhledá všechny subdomény končící na `contoso.com/`.    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
+    |    `http://*.contoso.com/*`    |    Odpovídá všem subdoménám v rámci `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`
+    |    `http://*contoso.com/*`    |    Vyhledá všechny subdomény končící na `contoso.com/`    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
     `http://www.contoso.com/images`    |    Odpovídá jediné složce    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |
     |    `http://www.contoso.com:80`    |    Odpovídá jedné stránce s použitím čísla portu    |    `http://www.contoso.com:80`    |         |
     |    `https://www.contoso.com`    |    Odpovídá jediné zabezpečené stránce    |    `https://www.contoso.com`    |    `http://www.contoso.com`    |
