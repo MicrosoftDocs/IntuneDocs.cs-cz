@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6a9c6b824f8d6369f7bf2d06b44fa8a20417d1c
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: f80312c2bd82063ed0b61c36bef9b8bf4ae3e1aa
+ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713147"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74691809"
 ---
 # <a name="set-up-ios-device-enrollment-with-apple-configurator"></a>Nastavení registrace zařízení s iOSem pomocí nástroje Apple Configurator
 
@@ -48,7 +48,7 @@ Metoda registrace pomocí Apple Configuratoru se nedá použít se [Správcem re
 
 Profil registrace zařízení definuje nastavení, která se během registrace použijí. Tato nastavení se použijí jenom jednou. Tímto postupem vytvoříte profil k registraci zařízení s iOSem pomocí Apple Configuratoru.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > registraci **Apple** > **Apple Configuratoru** > **profily** > **vytvořit**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **registrace iOS** > **Apple Configuratoru** > **profily** > **vytvořit**.
 
     ![Vytvoření profilu pro Apple Configurator](./media/apple-configurator-enroll-ios/apple-config-create-profile.png)
 
@@ -88,7 +88,7 @@ Profil registrace zařízení definuje nastavení, která se během registrace p
     DLXQPCWVGHMJ,podrobnosti o zařízení
 
    Přečtete si, [jak zjistit sériové číslo zařízení s iOSem](https://support.apple.com/HT204073).
-2. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > registrace **Apple** > **Apple Configuratoru** > **zařízení** > **Přidat**.
+2. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **registrace iOS** > **Apple Configuratoru** > **zařízení** > **Přidat**.
 
 5. Vyberte **profil registrace**, jehož prostřednictvím použijete importovaná sériová čísla. Pokud chcete, aby podrobnosti nového sériového čísla přepsaly všechny existující podrobnosti, zvolte **Přepište podrobnosti u existujících identifikátorů**.
 6. V části **Importovat zařízení** přejděte k souboru CSV se sériovými čísly a vyberte **Přidat**.
@@ -100,18 +100,18 @@ Registrační profil můžete přiřadit při importu sériových čísel zaří
 - **Profily AC**
 
 #### <a name="assign-from-apple-configurator-devices"></a>Přiřazení v části Zařízení Apple Configuratoru
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > registrace **Apple** > **Apple Configuratoru** > **zařízení** > vyberte sériová čísla > **přiřadit profil.** .
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **registrace iOS** > **Apple Configuratoru** > **zařízení** > vyberte sériová čísla > **přiřadit profil**.
 2. V části **Přiřadit profil** zvolte **nový profil**, který chcete přiřadit, a pak zvolte **Přiřadit**.
 
 #### <a name="assign-from-profiles"></a>Přiřazení z profilů
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > registrace **Apple** > **Apple Configuratoru** > **profily** > vyberte profil.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **registrace iOS** > **Apple Configuratoru** > **profily** > zvolit profil.
 2. V profilu zvolte **Přiřazená zařízení** a pak **Přiřadit**.
 3. Pomocí filtru vyhledejte sériová čísla zařízení, která chcete k profilu přiřadit, vyberte zařízení a zvolte **Přiřadit**.
 
 ### <a name="export-the-profile"></a>Export profilu
 Po vytvoření profilu a přiřazení sériových čísel je potřeba profil exportovat z Intune jako adresu URL. Tu pak importujete do Apple Configuratoru na počítači Mac, odkud můžete profil nasadit do zařízení.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > registrace **Apple** > **Apple Configuratoru** > **profily** > vyberte profil, který chcete exportovat.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **registrace iOS** > **Apple Configuratoru** > **profily** > vyberte profil, který chcete exportovat.
 2. V profilu vyberte **Exportovat profil**.
 3. Zkopírujte **adresu URL profilu**. Můžete ji potom přidat do Apple Configuratoru a definovat tak profil Intune používaný zařízeními s iOSem.
 
@@ -147,7 +147,7 @@ Aplikace, které vyžadují přidruženého uživatele (včetně aplikace Portá
 
 ### <a name="export-the-profile-as-mobileconfig-to-ios-devices"></a>Export profilu jako souboru .mobileconfig do zařízení s iOSem
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > registrace **Apple** > **Apple Configuratoru** > **profily** > vyberte profil, který chcete exportovat > **exportovat profil.** .
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **registrace iOS** > **Apple Configuratoru** > **profily** > vyberte profil, který chcete exportovat > **exportovat profil**.
 2. V části **Přímá registrace** zvolte **Stáhnout profil** a soubor uložte. Soubor registračního profilu je platný jenom po dobu dvou týdnů, po které ho bude nutné znovu vytvořit.
 3. Soubor přeneste do počítače Mac se spuštěným [Apple Configuratorem](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12). Může se tak odeslat přímo jako profil správy do zařízení s iOSem.
 4. Připravte zařízení pomocí Apple Configuratoru podle následujících kroků:

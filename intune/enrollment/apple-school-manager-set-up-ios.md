@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a62a048ebb15bac620ad9aad57ed3903e9568cf
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 1c574714b4bd4f748c2dbe898555de35b0e03190
+ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713001"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74691828"
 ---
 # <a name="set-up-ios-device-enrollment-with-apple-school-manager"></a>Nastavení registrace zařízení s iOSem pomocí Apple School Manageru
 
@@ -48,9 +48,9 @@ Než budete moct registrovat zařízení s iOSem vlastněná společností pomoc
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-an-apple-token"></a>Krok 1: Stáhněte si certifikát veřejného klíče Intune, který je potřebný k vytvoření tokenu Apple.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > registrace **Apple** > **tokeny programu registrace** > **Přidat**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **registrace** zařízení s iOS > **tokeny programu registrace** > **Přidat**.
 
-   ![Stažení tokenu programu registrace zařízení](./media/apple-school-manager-set-up-ios/image01.png)
+   ![Stažení tokenu programu registrace zařízení](./media/device-enrollment-program-enroll-ios/image01.png)
 
 2. V okně **Token Programu registrace** zvolte **Stáhnout veřejný klíč** a stáhněte a místně uložte soubor šifrovacího klíče (.pem). Soubor .pem slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple School Manager.
      ![Podokno Token Programu registrace zařízení](./media/apple-school-manager-set-up-ios/image02.png)
@@ -81,7 +81,7 @@ V poli **Token Apple** přejděte k souboru certifikátu (.pem), zvolte **Otevř
 ## <a name="create-an-apple-enrollment-profile"></a>Vytvoření registračního profilu Apple
 Po nainstalování tokenu můžete vytvořit registrační profil pro zařízení Apple School. Registrační profil zařízení definuje nastavení, která se během registrace použijí pro skupinu zařízení.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > registrace **Apple** > **tokeny programu registrace**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **Registrace iOS** > **tokeny programu registrace**.
 2. Vyberte token, zvolte **Profily** a potom zvolte **Vytvořit profil**.
 
 3. V části **Vytvořit profil** zadejte **Název** a **Popis** profilu pro účely správy. Uživatelé tyto podrobnosti nevidí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [dynamických skupinách Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
@@ -155,7 +155,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
 ## <a name="connect-school-data-sync"></a>Připojení služby School Data Sync
 (Volitelné) Apple School Manager podporuje synchronizaci třídních seznamů do Azure Active Directory (AD) pomocí služby Microsoft School Data Sync (SDS). Pomocí SDS můžete synchronizovat jenom jeden token. Pokud pomocí School Data Sync nastavíte další token, odebere se SDS z tokenu, který měl SDS předtím. Nové připojení nahradí aktuální token. Pokud chcete použít službu SDS k synchronizaci školních dat, proveďte následující kroky.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > registrace **Apple** > **tokeny programu registrace**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **Registrace iOS** > **tokeny programu registrace**.
 2. Vyberte token Apple School Manageru a potom zvolte **Synchronizace školních dat**.
 3. V části **Synchronizace školních dat** zvolte **Povolit**. Toto nastavení umožňuje službě Intune propojení se službou SDS v Office 365.
 4. Pokud chcete povolit připojení mezi Apple School Managerem a Azure AD, vyberte **nastavit Microsoft School data Sync**. Přečtěte si další informace o [tom, jak nastavit synchronizaci školních dat](https://support.office.com/article/Install-the-School-Data-Sync-Toolkit-8e27426c-8c46-416e-b0df-c29b5f3f62e1).
@@ -165,7 +165,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
 
 Až ke službě Intune přiřadíte oprávnění ke správě zařízení Apple School Manageru, synchronizujte Intune se službou Apple, aby se spravovaná zařízení zobrazila v Intune.
 
-V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > registrace **Apple** > **tokeny programu registrace** > v seznamu > **zařízení** > **synchronizaci**vyberte token. ![snímek obrazovky uzlu zařízení programu registrace a odkaz na synchronizaci.](./media/apple-school-manager-set-up-ios/image06.png)
+V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **ios** > **registrace v iOS** > **tokeny programu registrace** > v seznamu > **zařízení** > **synchronizaci**vyberte token. ![snímek obrazovky uzlu zařízení programu registrace a odkaz na synchronizaci.](./media/apple-school-manager-set-up-ios/image06.png)
 
 Pokud chcete dodržovat podmínky společnosti Apple pro přijatelný provoz programu registrace, Intune ukládá tato omezení:
 - Úplná synchronizace se nesmí pouštět častěji než jednou za sedm dní. Během úplné synchronizace Intune aktualizuje všechna sériová čísla Apple přiřazená Intune. Pokud se během sedmi dnů od předchozí úplné synchronizace pokusí se Úplná synchronizace, aktualizuje Intune jenom sériová čísla, která ještě nejsou uvedená v Intune.
@@ -178,7 +178,7 @@ Pokud chcete dodržovat podmínky společnosti Apple pro přijatelný provoz pro
 ## <a name="assign-a-profile-to-devices"></a>Přiřazení profilu k zařízením
 Zařízení Apple School Manageru spravovaná přes Intune musí mít před registrací přiřazený registrační profil.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > registrace **Apple** > **tokeny programu registrace** > vyberte v seznamu token.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **ios** > **registrace v iOS** > **tokeny programu registrace** > v seznamu vyberte token.
 2. Zvolte **Zařízení** > zvolte zařízení v seznamu > **Přiřadit profil**.
 3. V části **Přiřadit profil** zvolte profil pro zařízení a potom zvolte **Přiřadit**.
 
