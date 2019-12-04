@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5e1e1de0c8ec80a390f76f5e8de3965d4f800a9
-ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
+ms.openlocfilehash: 6fb025e6b698eba3deeabbda788fcd990a19105f
+ms.sourcegitcommit: b752acefec077c719e169e665c955adb944e85c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74188161"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74781171"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Windows 10 (a novějším) pro povolení nebo omezení funkcí pomocí Intune
 
@@ -101,7 +101,7 @@ Tato nastavení používají [zásady připojení](https://docs.microsoft.com/wi
 - **Ruční konfigurace Wi-Fi**: **blok** zabraňuje zařízením v připojení k Wi-Fi mimo sítě instalované na MDM serveru. **Nenakonfigurováno** (výchozí) umožňuje koncovým uživatelům přidat a nakonfigurovat vlastní sítě SSID sítě Wi-Fi Connections.
 - **Interval kontroly sítě Wi-Fi**: zadejte, jak často zařízení hledají sítě Wi-Fi. Zadejte hodnotu od 1 (nejčastější) do 500 (nejméně časté). Výchozí hodnota je `0` (nula).
 
-### <a name="bluetooth"></a>Bluetooth
+### <a name="bluetooth"></a>Protokolu
 
 Tato nastavení používají [poskytovatele zásad Bluetooth](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth). Zobrazuje se taky podporované edice Windows.
 
@@ -186,6 +186,9 @@ Tato nastavení používají [poskytovatele cloudových zásad](https://docs.mic
 
 - **Ruční instalace kořenového certifikátu** (jenom mobilní zařízení): **blok** brání koncovým uživatelům v ruční instalaci kořenových certifikátů a zprostředkujících certifikátů Cap. **Nenakonfigurováno** (výchozí) povolí tuto funkci.
 - **Kamera**: **Block** znemožní koncovým uživatelům používat fotoaparát na zařízení. **Nenakonfigurováno** (výchozí) povolí tuto funkci.
+
+  [CSP pro kameru](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-camera)
+
 - **Synchronizace souborů na OneDrivu**: **blok** brání koncovým uživatelům v synchronizaci souborů s OneDrivem ze zařízení. **Nenakonfigurováno** (výchozí) povolí tuto funkci.
 - **Vyměnitelné úložiště**: **blok** zabraňuje koncovým uživatelům v používání externích úložných zařízení, jako jsou karty SD, se zařízením. **Nenakonfigurováno** (výchozí) povolí tuto funkci.
 - **Zeměpisná poloha**: **blok** brání koncovým uživatelům v zapnutí služby zjišťování polohy na zařízení. **Nenakonfigurováno** (výchozí) povolí tuto funkci.
@@ -364,7 +367,7 @@ Když je vybraná možnost blokovat a povolit uživatele, může přepsat označ
 - **Povolit shromažďování dat živé dlaždice**: **Ano** (výchozí) umožňuje Microsoft Edge shromažďovat informace z živých dlaždic připnuté do nabídky Start. **Žádné** nebrání shromažďování těchto informací, což může uživatelům poskytnout omezené prostředí.
 - **Uživatel může přepsat chyby certifikátu**: **Ano** (výchozí) umožňuje uživatelům přístup k webům s chybami protokolu SSL/TLS (SSL (Secure Sockets Layer)/Transport Layer Security). **Ne** (doporučeno pro zvýšené zabezpečení) znemožní uživatelům přístup k webům s chybami SSL nebo TLS.
 
-### <a name="additional"></a>Další
+### <a name="additional"></a>Přídavn
 
 - **Povolit prohlížeč Microsoft Edge** (jenom mobilní zařízení): **Ano** (výchozí) umožňuje používat na mobilním zařízení webový prohlížeč Microsoft Edge. Na zařízení **nebrání použití** Microsoft Edge. Pokud zvolíte **ne**, ostatní individuální nastavení platí pouze pro plochu.
 - Možnost **Povolit panel Adresa**: **Ano** (výchozí) umožňuje, aby Microsoft Edge zobrazoval rozevírací seznam s panelem Adresa se seznamem návrhů. V takovém případě se v rozevíracím seznamu při psaní **nezastaví zobrazení** seznamu návrhů v Microsoft Edge. Pokud je nastavena na **ne**, můžete:

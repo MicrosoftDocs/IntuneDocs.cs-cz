@@ -6,7 +6,7 @@ keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 12/03/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d00ae284ff4ea911cecb571cfe765eafe32fac02
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 18815fb671e853bc0463fed750d40b80ccb285fb
+ms.sourcegitcommit: 78faf608510fbaca09bc410d63df1aa5254dee45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72490470"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74784268"
 ---
 # <a name="create-an-intune-report-from-the-odata-feed-with-power-bi"></a>Vytvoření sestavy Intune z datového kanálu OData pomocí Power BI
 
@@ -69,7 +69,7 @@ Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktop 
 
     ![Přihlašovací údaje pro účet organizace](./media/reports-proc-create-with-odata/reports-create-02-org-account.png)
 
-10. Vyberte **Connect** (Připojit). Otevře se Navigátor se seznamem tabulek v datovém skladu Intune.
+10. Vyberte **připojit**. Otevře se Navigátor se seznamem tabulek v datovém skladu Intune.
 
     ![Snímek obrazovky navigátoru – seznam tabulek datového skladu](./media/reports-proc-create-with-odata/reports-create-02-loadentities.png)
 

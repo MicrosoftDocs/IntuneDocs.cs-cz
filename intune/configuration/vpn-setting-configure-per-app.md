@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36039334f7e93b66735e10d0ac2c5d80602e2b83
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: f0cd3dd71a5999b69e3f5c34ef4cc73fb3d6a938
+ms.sourcegitcommit: b752acefec077c719e169e665c955adb944e85c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059856"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74781154"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-ios-devices-in-intune"></a>Nastavení virtuální privátní sítě (VPN) pro aplikaci pro zařízení s iOS v Intune
 
@@ -37,6 +37,9 @@ Zkontrolujte si dokumentaci poskytovatele sítě VPN a zjistěte, jestli vaše s
 V tomto článku se dozvíte, jak vytvořit profil sítě VPN pro jednotlivé aplikace a přiřadit tento profil k vašim aplikacím. Pomocí těchto kroků můžete pro koncové uživatele vytvořit bezproblémové prostředí sítě VPN pro jednotlivé aplikace. U většiny sítí VPN, které podporují síť VPN pro jednotlivé aplikace, uživatel otevře aplikaci a automaticky se připojí k síti VPN.
 
 Některé sítě VPN umožňují ověřování uživatelského jména a hesla u sítě VPN pro jednotlivé aplikace. To znamená, že uživatelé musí zadat uživatelské jméno a heslo pro připojení k síti VPN.
+
+> [!IMPORTANT]
+> SÍŤ VPN pro jednotlivé aplikace není pro profily IKEv2 VPN pro iOS podporovaná.
 
 ## <a name="per-app-vpn-with-zscaler"></a>SÍŤ VPN pro jednotlivé aplikace s Zscaler
 
@@ -112,7 +115,7 @@ Profil VPN obsahuje certifikát SCEP nebo PKCS s přihlašovacími údaji klient
 
     Informace o dalších nastaveních najdete v tématu [nastavení sítě VPN pro iOS](vpn-settings-ios.md).
 
-5. Vybrat **Automatické**připojení VPN  > **typ automatické sítě VPN** >  pro**síť VPN pro aplikaci**
+5. Vybrat **Automatický typ sítě vpn** > **Automatické** > VPN **pro aplikaci**
 
     ![V Intune nastavte pro zařízení s iOS automatickou síť VPN na síť VPN pro jednotlivé aplikace.](./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png)
 
@@ -125,7 +128,7 @@ Po přidání profilu sítě VPN přidružte aplikaci a skupinu služby Azure AD
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace** > **všechny aplikace**.
 2. Vyberte aplikaci ze seznamu > **přiřazení** > **Přidat skupinu**.
 3. V **typu přiřazení**vyberte možnost **požadováno** nebo **k dispozici pro zaregistrovaná zařízení**.
-4. Vyberte **zahrnuté skupiny** > **Vyberte skupiny, které chcete zahrnout** > vyberte skupinu [, kterou jste vytvořili](#create-a-group-for-your-vpn-users) (v tomto článku) > **Vybrat**.
+4. Vyberte **zahrnuté skupiny** > **Vybrat skupiny, které chcete zahrnout** > vyberte skupinu [, kterou jste vytvořili](#create-a-group-for-your-vpn-users) (v tomto článku) > **Vybrat**.
 5. V části **sítě VPN**vyberte profil sítě VPN pro jednotlivé aplikace [, který jste vytvořili](#create-a-per-app-vpn-profile) (v tomto článku).
 
     ![Přiřaďte aplikaci k profilu sítě VPN pro jednotlivé aplikace v Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-app-to-vpn.png)

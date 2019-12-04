@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b32893c231ae15591aa331bcf7699d9e624efd88
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: ba3b145c3a48992b1e8a01ad2cee4be60646df6f
+ms.sourcegitcommit: b752acefec077c719e169e665c955adb944e85c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563679"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74781239"
 ---
 # <a name="ios-app-protection-policy-settings"></a>Nastavení zásad ochrany aplikací pro iOS
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -88,7 +88,7 @@ U některých aplikací a služeb platformy, které mají výjimku, můžou zás
 | <ul><ui> **Vybrat minimální délku PIN kódu** | Určuje minimální počet číslic v posloupnosti kódu PIN.  | **4**  |
 | <ul><ui> **Touch ID místo PIN pro přístup (iOS 8 +)** | Vyberte možnost **umožňuje** uživateli pro přístup k aplikaci použít [dotykový identifikátor](https://support.apple.com/HT201371) místo PIN kódu.    | **Povoleno**  |
 |<ul><ui><ul>**po vypršení časového limitu <ui>přepsat Touch ID pomocí kódu PIN**|  Chcete-li použít toto nastavení, vyberte možnost **vyžadovat** a pak nakonfigurujte časový limit nečinnosti.  |**Žádá**  |
-| <ul><ui><ul><ui><ul><ui> **časový limit (v minutách neaktivity)** |  Zadejte dobu v minutách, po které bude PIN kód nebo číselný kód (jak je nakonfigurováno) přepsat používání otisku prstu. Hodnota časového limitu by měla být větší než hodnota zadaná v možnosti znovu ověřit požadavky na přístup po (minuty neaktivity).  |**30**  |
+| <ul><ui><ul><ui><ul><ui> **časový limit (v minutách neaktivity)** |  Zadejte čas v minutách, po kterém heslo nebo číselné (jak nakonfigurované) PIN kód přepíše použití otisku prstu nebo obličeje jako metody přístupu. Hodnota časového limitu by měla být větší než hodnota zadaná v možnosti znovu ověřit požadavky na přístup po (minuty neaktivity).  |**30**  |
 | <ul><ui><ul>**místo kódu PIN pro přístup (iOS 11 +) <ui>e ID obličeje** | Vyberte možnost **umožňuje** uživateli používat technologii rozpoznávání obličeje k ověřování uživatelů na zařízeních s iOS. Pokud je povoleno, musí se pro přístup k aplikaci na zařízení s ID obličeje použít ID obličeje.    | **Povoleno**  |
 | <ul><ui>**Resetování PIN kódu po počtu dní** | Vyberte **Ano** , pokud chcete, aby uživatelé po nastaveném časovém intervalu (ve dnech) změnili PIN kód aplikace.  <br><br>Když nastavíte *Ano*, nakonfigurujete počet dní, než se bude vyžadovat Resetování PIN kódu. |**Ne**  |  
 | <ul><ui><ul><ui> **počet dnů** | Nakonfigurujte počet dní, než se vyžaduje Resetování PIN kódu.  |**90**  |

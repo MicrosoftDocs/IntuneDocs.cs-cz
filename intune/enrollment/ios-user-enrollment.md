@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e538204306ce80d6a13739fc981edf2748a622de
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: d77a275e3a48845f56b22ecc21b75f664ea619c5
+ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713464"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74691758"
 ---
 # <a name="set-up-ios-and-ipados-user-enrollment-preview"></a>Nastavení registrace uživatele pro iOS a iPadOS (Preview)
 
@@ -43,7 +43,7 @@ Další informace o možnostech, které jsou k dispozici pro zápis uživatele, 
 
 Registrační profil definuje nastavení použité pro skupinu zařízení během registrace. 
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > registrace **Apple** > **typy registrace (Preview)**  > **vytvořit profil** > **iOS**. V tomto profilu určíte, jaké možnosti registrace budou mít koncoví uživatelé iOS a iPadOS na zařízeních, která nejsou zaregistrovaná prostřednictvím podnikové metody Apple. Pokud byste chtěli provést změny, můžete tento profil po jeho vytvoření upravit.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **registrace ios** > **typy registrace (Preview)**  > **vytvořit profil** > **iOS/iPadOS**. V tomto profilu určíte, jaké možnosti registrace budou mít koncoví uživatelé iOS a iPadOS na zařízeních, která nejsou zaregistrovaná prostřednictvím podnikové metody Apple. Pokud byste chtěli provést změny, můžete tento profil po jeho vytvoření upravit.
 
     ![Vytvořit registrační profil Apple](./media/ios-user-enrollment/create-profile.png)
 
@@ -88,7 +88,7 @@ Registrační profil definuje nastavení použité pro skupinu zařízení běhe
 
 Po vytvoření více než jednoho profilu typu registrace můžete změnit pořadí priorit, ve kterém se používají.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > registrace **Apple** > **typy registrace (Preview)** .
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **Registrace iOS** > **typy registrace (Preview)** .
 2. Profily v seznamu můžete přetáhnout v pořadí, v jakém se mají použít.
 
 V případě konfliktů mezi profily pro každého uživatele se pro uživatele použije profil s vyšší prioritou.

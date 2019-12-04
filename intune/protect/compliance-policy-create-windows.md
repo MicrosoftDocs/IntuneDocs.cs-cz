@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 12/02/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f3c6c029a5c5864eda46a68832b2f9f655553846
-ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
+ms.openlocfilehash: 11cad62f0fd997610feba51a2d28dcfed5658806
+ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889542"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74691707"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení Windows 10 a novějších označení zařízení jako kompatibilních nebo nekompatibilních s Intune
 
@@ -161,6 +161,7 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
 ### <a name="encryption"></a>Encryption
 
 - **Šifrování datového úložiště na zařízení**:  
+  Toto nastavení se vztahuje na všechny jednotky na zařízení.
   - **Nenakonfigurováno** (*výchozí*)
   - **Vyžadovat** *– použít k* šifrování úložiště dat na vašich zařízeních.
 

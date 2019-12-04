@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 514977be976c83f5cd8dcb8d56ab5c232ff0d193
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 68e2e768067a88b8ae58adeb38c17d90ac995a30
+ms.sourcegitcommit: b752acefec077c719e169e665c955adb944e85c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74562483"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74781222"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Přidání webových aplikací do Microsoft Intune
 
@@ -33,10 +33,13 @@ Intune podporuje různé typy aplikací, včetně webových. Webová aplikace p�
 
 Abyste mohli aplikaci spravovat a přiřazovat ji uživatelům, přidejte ji do Intune. 
 
-Intune vytvoří zástupce webové aplikace na zařízení uživatele. V případě zařízení se systémem iOS se na domovskou obrazovku přidá zástupce webové aplikace. V případě zařízení se systémem Android se zástupce webové aplikace přidá do widgetu portálu společnosti Intune a pomůcka musí být připnuté ručně uživatelem. V případě zařízení s Windows je zástupce webové aplikace umístěný v nabídce Start.
+Intune vytvoří zástupce webové aplikace na zařízení uživatele. V případě zařízení se systémem iOS se na domovskou obrazovku přidá zástupce webové aplikace. Pro zařízení s Androidem pro správu zařízení je zástupce webové aplikace přidaný do widgetu portálu společnosti Intune a pomůcka musí být připnuté ručně uživatelem. V případě zařízení s Windows je zástupce webové aplikace umístěný v nabídce Start.
 
 > [!Note]
 > Aby bylo možné spouštět webové aplikace, musí být na zařízení uživatele nainstalován prohlížeč. 
+
+> [!Note]
+> Pro zařízení s Androidem Enterprise najdete informace v tématu [spravované Google Play webové odkazy](apps-add-android-for-work.md#managed-google-play-web-links) .
 
 ## <a name="add-a-web-app-to-intune"></a>Přidání webové aplikace do Intune
 Pokud chcete přidat aplikaci do Intune v podobě zástupce aplikace na webu, postupujte takto:
@@ -62,8 +65,6 @@ Pokud chcete přidat aplikaci do Intune v podobě zástupce aplikace na webu, po
 7. V podokně **Přidat aplikaci** zvolte **Přidat**.
 
 > [!Note]
-> Uživatelé si musí na domovskou obrazovku přidat widget Intune k zobrazení webových aplikací, které jsou k zařízení s Androidem přiřazené.
->
 > V současnosti jsou webové aplikace nasazené do zařízení s iOS v Intune přidružené k profilu pro správu, takže nejdou odebrat ručně. Na portálu Intune můžete typ nasazení změnit na **Odinstalovat**. V tom případě můžete webovou aplikaci odebrat automaticky. Pokud byste, ještě než změníte přiřazení aplikace na **Odinstalovat**, odebrali nasazení, zůstane webová aplikace trvale v zařízení, dokud v Intune nezrušíte jeho registraci.
 
 Koncoví uživatelé mohou spouštět webové aplikace přímo z aplikace Portál společnosti Windows výběrem webové aplikace a výběrem možnosti **otevřít v prohlížeči**. Publikovaná webová adresa URL se otevře přímo ve webovém prohlížeči. 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e81b8dc4938ea080018efae97093bb5e70dbcde8
-ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.openlocfilehash: a3a470c9a92f7792af2b371acf873807ad344afb
+ms.sourcegitcommit: b752acefec077c719e169e665c955adb944e85c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74548017"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74781103"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Nastavení stránky stavu registrace
  
@@ -200,7 +200,7 @@ Níže jsou uvedené známé problémy.
 - Konfigurace řízení aplikací v programu Microsoft Defender způsobí při autopilotu dotaz na restartování. Konfigurace aplikace v programu Microsoft Defender (AppLocker CSP) vyžaduje restart. Pokud je tato zásada nakonfigurovaná, může při autopilotu dojít k restartování zařízení. V současné době neexistuje způsob, jak potlačit nebo odložit restartování.
 - Pokud je zásada DeviceLock (https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) povolená jako součást profilu ESP, automatické přihlášení k POČÁTEČNÍmu počítači nebo ploše uživatele by mohlo selhat unexpectantly ze dvou důvodů.
   - Pokud se zařízení před ukončením fáze nastavení zařízení ESP nerestartuje, může se uživateli zobrazit výzva k zadání přihlašovacích údajů Azure AD. Tato výzva se zobrazí místo úspěšného automatického přihlášení, kde se uživateli zobrazí animace prvního přihlašování Windows.
-  - Autologn selže, pokud se zařízení restartuje poté, co uživatel zadal svoje přihlašovací údaje Azure AD, ale před ukončením fáze nastavení zařízení ESP. K této chybě dochází, protože fáze nastavení zařízení ESP nebyla nikdy dokončena. Alternativním řešením je resetování zařízení.
+  - Automatické přihlašování se nepovede, pokud se zařízení restartuje po zadání přihlašovacích údajů Azure AD, ale ještě před tím, než se ukončí fáze nastavení zařízení ESP. K této chybě dochází, protože fáze nastavení zařízení ESP nebyla nikdy dokončena. Alternativním řešením je resetování zařízení.
 
 ## <a name="next-steps"></a>Další kroky
 Po nastavení stránek registrace zařízení s Windows se naučte spravovat zařízení s Windows. Další informace najdete v článku [Co je správa zařízení v Microsoft Intune](../remote-actions/device-management.md).

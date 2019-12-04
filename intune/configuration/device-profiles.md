@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f0dd9eddd986e6717e6bf706b02a7b06f712a032
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: b74cdf29999bccdefaa94c84673b9ea89c335537
+ms.sourcegitcommit: 7001dc5a9cffeb2e161748f9e6dba126bf1cb06f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059899"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74694943"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Použití funkcí a nastavení v zařízeních pomocí profilů zařízení v Microsoft Intune
 
@@ -49,7 +49,7 @@ Tyto šablony poskytují správcům zjednodušené zobrazení nastavení, které
 
 Tato funkce podporuje:
 
-- Windows 10 1809 a novější v podporovaném firmwaru.
+- Windows 10 a novější
 
 ## <a name="certificates"></a>Certifikáty
 
@@ -79,7 +79,7 @@ Tato funkce podporuje:
 
 ## <a name="delivery-optimization"></a>Optimalizace doručení
 
-[Optimalizace doručování](delivery-optimization-windows.md) nabízí lepší možnosti doručování aktualizací softwaru. Tato nastavení nahrazují **aktualizace softwaru**  >  nastavení**Windows 10 Update Ring** .
+[Optimalizace doručování](delivery-optimization-windows.md) nabízí lepší možnosti doručování aktualizací softwaru. Tato nastavení nahrazují **aktualizace softwaru** > nastavení **Windows 10 Update Ring** .
 
 Pomocí těchto nastavení můžete řídit, jak se aktualizace softwaru stahují do zařízení ve vaší organizaci. Můžete například umožnit uživatelům získávat vlastní aktualizace nebo získávat aktualizace pomocí cloudových služeb Optimalizace doručení v profilu zařízení.
 
@@ -102,7 +102,7 @@ Tato funkce podporuje:
 
 Tato funkce podporuje:
 
-- Windows 10 a novější
+- Windows 10 1809 a novější v podporovaném firmwaru
 
 ## <a name="device-restrictions"></a>Omezení zařízení
 

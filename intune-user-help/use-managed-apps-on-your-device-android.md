@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 12/03/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24d4193b3e43b7c406a1fb6c9c8d987caa6cbeea
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 28ba1d2d50f366e5e34fae06ae188293dd0fb8b5
+ms.sourcegitcommit: b752acefec077c719e169e665c955adb944e85c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72501895"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74781205"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Použití spravovaných aplikací na zařízení s Androidem
 Spravované aplikace jsou nakonfigurované tak, aby splňovaly požadavky organizace týkající se zabezpečení a chránily pracovní a školní data. Tyto aplikace máte k dispozici, abyste si je mohli nainstalovat na své zařízení nebo je automaticky používat. 
@@ -39,9 +39,7 @@ Pokud chce organizace co nejvíce chránit data, může nakonfigurovat spoluprá
 Organizace může vyžadovat, abyste k provedení něčeho, třeba k otevření pracovního souboru nebo webového odkazu, používali spravovanou aplikaci. Pokud tuto aplikaci nemáte, nemůžete pokračovat v plnění úkolu. Některé spravované aplikace si můžete nainstalovat, i když nejsou povinné.
 
 ## <a name="how-do-i-know-im-using-a-managed-app"></a>Jak poznám, že používám spravovanou aplikaci?
-Při prvním přístupu k pracovním nebo školním datům ve spravované aplikaci se zobrazí zpráva, která se podobá následujícímu příkladu na snímku obrazovky. Zpráva vás vyzve, abyste pokračovali restartováním aplikace.
-
-![Snímek obrazovky se zprávou, která se zobrazí, když uživatel na zařízení otevře spravovanou aplikaci. Text zprávy: „Organizace teď chrání svoje data v této aplikaci. Abyste mohli pokračovat, musíte aplikaci restartovat.“ Za zprávou je tlačítko OK.](./media/managed-apps-message.png)
+Když se pokusíte o přístup k pracovním nebo školním datům ve spravované aplikaci, obdržíte zprávu na obrazovce, že aplikace je chráněná vaší organizací. 
 
 ## <a name="commonly-managed-apps"></a>Často spravované aplikace  
 Příklady často spravovaných aplikací, které jsou povinné nebo dostupné ve školách a na pracovištích:

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52fb1ea5077b424a1d3cf10812d8d9b5f79e4752
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: e45d51feb91e0e188971133185ac0f0f13e5b1f4
+ms.sourcegitcommit: b752acefec077c719e169e665c955adb944e85c6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059805"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74781137"
 ---
 # <a name="add-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Přidat nastavení sítě VPN na zařízení s iOS v Microsoft Intune
 
@@ -136,8 +136,8 @@ Tato nastavení se použijí, když zvolíte **Typ připojení** > **IKEv2**.
   - **Střední** (výchozí): odešle zprávu kontroly stavu kontroly každých 10 minut.
   - **Vysoká**: pošle zprávu o prohození každých 60 sekund.
 
-- **Minimální rozsah verze TLS**: zadejte minimální verzi TLS, kterou chcete použít. Zadejte `1.0`, `1.1` nebo `1.2`. Pokud necháte pole prázdné, použije se výchozí hodnota `1.0`.
-- **Maximální hodnota rozsahu verze TLS**: zadejte maximální verzi TLS, která se má použít. Zadejte `1.0`, `1.1` nebo `1.2`. Pokud necháte pole prázdné, použije se výchozí hodnota `1.2`.
+- **Minimální rozsah verze TLS**: zadejte minimální verzi TLS, kterou chcete použít. Zadejte `1.0`, `1.1`nebo `1.2`. Pokud necháte pole prázdné, použije se výchozí hodnota `1.0`.
+- **Maximální hodnota rozsahu verze TLS**: zadejte maximální verzi TLS, která se má použít. Zadejte `1.0`, `1.1`nebo `1.2`. Pokud necháte pole prázdné, použije se výchozí hodnota `1.2`.
 - **Perfect Forward Secrecy**: výběrem **Povolit** zapněte metodu PFS (Perfect Forward Secrecy). PFS je funkce zabezpečení protokolu IP, která snižuje dopad v případě ohrožení zabezpečení klíče relace. **Disable** (default) nepoužívá metodu PFS.
 - **Ověření odvolání certifikátu**: výběrem možnosti **Povolit** zajistěte, aby se certifikáty odvolaly, než povolíte úspěšné připojení k síti VPN. Tato kontroler je nejlepší úsilí. Pokud vyprší časový limit serveru VPN před zjištěním, jestli je certifikát odvolaný, udělí se přístup. **Disable** (výchozí) nekontroluje odvolané certifikáty.
 
@@ -179,7 +179,7 @@ Tato nastavení se použijí, když zvolíte **Typ připojení** > **IKEv2**.
 
 ## <a name="automatic-vpn-settings"></a>Automatické nastavení sítě VPN
 
-- **VPN pro jednotlivé aplikace:** Umožňuje používat síť VPN pro jednotlivé aplikace. Při otevření určitých aplikací automaticky aktivuje připojení VPN. Aplikace také můžete přidružit k danému profilu sítě VPN. Podrobnější informace najdete v [pokynech pro nastavení sítě VPN pro aplikaci pro iOS](vpn-setting-configure-per-app.md).
+- **VPN pro jednotlivé aplikace:** Umožňuje používat síť VPN pro jednotlivé aplikace. Při otevření určitých aplikací automaticky aktivuje připojení VPN. Aplikace také můžete přidružit k danému profilu sítě VPN. SÍŤ VPN pro jednotlivé aplikace není v IKEv2 podporována. Podrobnější informace najdete v [pokynech pro nastavení sítě VPN pro aplikaci pro iOS](vpn-setting-configure-per-app.md). 
   - **Typ zprostředkovatele:** Je k dispozici jen pro Pulse Secure a Vlastní VPN.
   - Pokud používáte profily **VPN pro jednotlivé aplikace** pro iOS s typem Pulse Secure nebo Vlastní VPN, zvolte tunelování v aplikační vrstvě (proxy aplikace) nebo na úrovni paketů (tunel pro pakety). U tunelování v aplikační vrstvě nastavte hodnotu **ProviderType** na **app-proxy**, u tunelování na úrovni paketů na **packet-tunnel**. Pokud si nejste jistí, jakou hodnotu použít, podívejte se do dokumentace poskytovatele připojení VPN.
   - **Adresy URL Safari, které aktivují tuto síť VPN:** Můžete přidat jednu nebo více adres URL webu. Při návštěvě těchto adres URL pomocí prohlížeče Safari na zařízení se automaticky naváže připojení k VPN.

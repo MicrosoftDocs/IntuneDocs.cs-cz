@@ -1,7 +1,7 @@
 ---
-title: iOS Classroom アプリの Intune 設定
+title: Nastavení Intune pro aplikaci Classroom pro iOS
 titleSuffix: Microsoft Intune
-description: iOS デバイスの Classroom アプリの設定を制御するために使用できる Intune 設定について説明します。
+description: Přečtěte si o nastaveních Intune, pomocí kterých můžete ovládat nastavení aplikace Classroom na zařízeních s iOSem.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -18,145 +18,145 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0dd9a97fdafff784bab2eae1d466855082fd397a
-ms.sourcegitcommit: 737ad6c675deedfc6009f792023ff95981b06582
+ms.openlocfilehash: 6814b4d98b8512ce95119b05cc299964e486ac64
+ms.sourcegitcommit: 78faf608510fbaca09bc410d63df1aa5254dee45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74117837"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74784217"
 ---
-# <a name="how-to-configure-intune-settings-for-the-ios-classroom-app"></a>iOS Classroom アプリの Intune 設定を構成する方法
+# <a name="how-to-configure-intune-settings-for-the-ios-classroom-app"></a>Jak nakonfigurovat nastavení Intune pro aplikaci Classroom pro iOS
 
 > [!NOTE]
 > Intune v současné době nepodporuje konfiguraci aplikace učebny. Tento článek platí jenom pro uživatele, kteří mají existující vzdělávací profily pro iOS v Intune.  
 
-## <a name="introduction"></a>概要
-[Classroom](https://itunes.apple.com/app/id1085319084) は、教師が教室で学習を指導し、生徒のデバイスを操作するのを支援するアプリです。 たとえば、教師はこのアプリを使用して次のことができます。
+## <a name="introduction"></a>Úvod
+[Classroom](https://itunes.apple.com/app/id1085319084) je aplikace, která učitelům umožňuje vést výuku a ovládat zařízení studentů v učebně. Učitelé například můžou:
 
-- 生徒のデバイスでアプリを起動する
-- iPad 画面をロックし、ロックを解除する
-- 生徒の iPad の画面を表示する
-- 生徒の iPad を操作し、本の中のブックマークや章に移動する
-- 生徒の iPad を画面を Apple TV に映す
+- Otevírat aplikace na zařízeních studentů
+- Zamykat a odemykat obrazovku iPadu
+- Prohlížet obrazovku iPadu studenta
+- Přejít v iPadech studentů na záložku nebo kapitolu v knize
+- Ukázat obrazovku iPadu studenta na Apple TV
 
-デバイスで Classroom を設定するには、Intune iOS 教育デバイス プロファイルを作成して設定する必要があります。
+Pokud chcete na svém zařízení nastavit aplikaci Classroom, je potřeba vytvořit a nakonfigurovat vzdělávací profil zařízení s iOSem v Intune.
 
-## <a name="before-you-start"></a>アップグレードを開始する前に
+## <a name="before-you-start"></a>Než začnete
 
-以上の設定を構成する前に、次の事項について検討してください。
+Než tato nastavení začnete konfigurovat, zvažte následující skutečnosti:
 
-- 教師と生徒の両方の iPad を Intune に登録する必要があります。
-- 教師のデバイスに [Apple Classroom](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8) アプリがインストールされていることを確認してください。 アプリは手動でインストールすることも、[Intune アプリ管理](../apps/app-management.md)を利用してインストールすることもできます。
-- 教師のデバイスと生徒のデバイスの間の接続を認証するために証明書を構成する必要があります (手順 2「Intune で iOS Education プロファイルを作成し、割り当てる」を参照してください)。
-- 教師と生徒の iPad を同じ Wi-Fi ネットワークに置き、Bluetooth を有効にする必要があります。
-- iOS 9.3 以降が内蔵され、監視付きの iPad で Classroom アプリを実行します。
-- 今回のリリースでは、Intune は 1:1 シナリオを管理できます。各生徒に専用の iPad が与えられます。
-
-
-## <a name="step-1---import-your-school-data-into-azure-active-directory"></a>手順 1 - 学校のデータを Azure Active Directory にインポートする
-
-Microsoft の School Data Sync (SDS) を利用し、既存の Student Information System (SIS) から Azure Active Directory (Azure AD) に学校の記録をインポートします。
-SDS は SIS の情報を同期し、それを Azure AD に保管します。 Azure AD は、ユーザーやデバイスの整理に役立つ Microsoft の管理システムです。 その後、このデータを生徒やクラスの管理に利用できます。 SDS の展開方法については[ここ](https://support.office.com/article/Overview-of-School-Data-Sync-and-Classroom-f3d1147b-4ade-4905-8518-508e729f2e91)をご覧ください。
-
-### <a name="how-to-import-data-using-sds"></a>SDS を利用してデータをインポートする方法
-
-次のいずれかの方法で SDS に情報をインポートできます。
-
-- [CSV ファイル](https://support.office.com/article/Follow-these-steps-71d5fe4a-aa51-4f35-9b53-348898a390a1) - コンマ区切り値 (.csv) ファイルを手動でエクスポートし、コンパイルします
-- [PowerSchool API](https://support.office.com/article/Follow-these-steps-851b5edc-558f-43a9-9122-b2d63458cb8f) - Azure AD との同期を簡単にする SIS プロバイダー
-- [OneRoster](https://support.office.com/article/Follow-these-steps-f43cbb2a-b502-497d-a8b1-783dc05a57ab) - Azure AD と同期するためにエクスポートし、変換できる CSV 形式
-
-### <a name="find-out-more"></a>詳細は以下のページをご覧ください
-
-- [オンプレミスの学校データを Azure AD に同期する方法](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
-- [Microsoft School Data Sync の詳細](https://sds.microsoft.com/)
-- [Azure Active Directory のライセンス詳細](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-whatis-azure-portal)
-
-## <a name="step-2---create-and-assign-an-ios-education-profile-in-intune"></a>手順 2 - Intune で iOS Education プロファイルを作成し、割り当てる
-
-### <a name="configure-general-settings"></a>全般的な設定を構成する
-
-1. [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) にサインインします。
-3. **[Intune]** ウィンドウで、 **[デバイス構成]** を選択します。
-2. **[デバイス構成]** ウィンドウの **[管理]** セクションで、 **[プロファイル]** を選択します。
-5. [プロファイル] ウィンドウで **[プロファイルの作成]** を選択します。
-6. **[プロファイルの作成]** ウィンドウで、iOS Education プロファイルの **[名前]** と **[説明]** を入力します。
-7. **[プラットフォーム]** ドロップダウン リストで、 **[iOS]** を選択します。
-8. **[プロファイルの種類]** ドロップダウン リストで、 **[教育]** を選択します。
-9. **[設定]**  >  **[構成]** の順に選択します。
+- Učitelé i studenti musí být zaregistrovaní v Intune.
+- Zajistěte, aby na zařízení učitele byla nainstalovaná aplikace [Apple Classroom](https://itunes.apple.com/us/app/classroom/id1085319084?mt=8). Můžete aplikaci nainstalovat buď ručně, nebo přes [správu aplikací Intune](../apps/app-management.md).
+- Musíte nakonfigurovat certifikáty pro ověření připojení mezi zařízeními učitelů a studentů (viz krok 2, Vytvoření a přiřazení vzdělávacího profilu iOS v Intune).
+- iPady učitelů a studentů musí být ve stejné síti Wi-Fi a musí mít povolené Bluetooth.
+- Aplikace Classroom běží na iPadech s iOSem 9.3 nebo novější verzí, které jsou pod dohledem.
+- V této verzi podporuje Intune správu scénáře 1:1, kdy má každý student svůj vlastní vyhrazený iPad.
 
 
-次のセクションでは、教師の iPad と生徒の iPad の間の信頼関係を確立するための証明書を作成します。 証明書は、ユーザー名とパスワードを入力することなく、デバイス間の接続を速やかに認証するために利用されます。
+## <a name="step-1---import-your-school-data-into-azure-active-directory"></a>Krok 1 – Import školních dat do služby Azure Active Directory
+
+Pomocí služby Microsoft SDS (School Data Sync) naimportujte školní záznamy z existujícího studentského informačního systému (SIS) do služby Azure Active Directory (Azure AD).
+Služba SDS synchronizuje informace z vašeho systému SIS a uloží je do služby Azure AD. Azure AD je systém správy od Microsoftu, který pomáhá s organizací uživatelů a zařízení. Tato data vám pak pomohou se správou vašich studentů a zařízení. [Přečtěte si další informace o nasazení SDS](https://support.office.com/article/Overview-of-School-Data-Sync-and-Classroom-f3d1147b-4ade-4905-8518-508e729f2e91).
+
+### <a name="how-to-import-data-using-sds"></a>Jak naimportovat data pomocí SDS
+
+Informace můžete do SDS naimportovat jednou z následujících metod:
+
+- [Soubory CSV](https://support.office.com/article/Follow-these-steps-71d5fe4a-aa51-4f35-9b53-348898a390a1) – ruční export a sestavení textových souborů s oddělovačem (.csv)
+- [PowerSchool API](https://support.office.com/article/Follow-these-steps-851b5edc-558f-43a9-9122-b2d63458cb8f) – poskytovatel SIS, který zjednodušuje synchronizaci se službou Azure AD
+- [OneRoster](https://support.office.com/article/Follow-these-steps-f43cbb2a-b502-497d-a8b1-783dc05a57ab) – formát CSV, který můžete exportovat a konvertovat pro synchronizaci se službou Azure AD
+
+### <a name="find-out-more"></a>Další informace
+
+- [Další informace o úplné synchronizaci místních školních dat se službou Azure AD](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
+- [Další informace o službě Microsoft SDS (School Data Sync](https://sds.microsoft.com/)
+- [Další informace o licencování ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-whatis-azure-portal)
+
+## <a name="step-2---create-and-assign-an-ios-education-profile-in-intune"></a>Krok 2 – Vytvoření a přiřazení vzdělávacího profilu iOS v Intune
+
+### <a name="configure-general-settings"></a>Konfigurace obecných nastavení
+
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+3. V podokně **Intune** zvolte **Konfigurace zařízení**.
+2. V podokně **Konfigurace zařízení** v části **Spravovat** zvolte **Profily**.
+5. V podokně profilů zvolte **Vytvořit profil**.
+6. V podokně **Vytvořit profil** zadejte **Název** a **Popis** vzdělávacího profilu iOS.
+7. Z rozevíracího seznamu **Platforma** zvolte **iOS**.
+8. Z rozevíracího seznamu **Typ profilu** zvolte **Vzdělávání**.
+9. Zvolte **Nastavení** > **Konfigurovat**.
+
+
+Teď si vytvoříte certifikáty k navázání vztahu důvěryhodnosti mezi iPady učitelů a studentů. Certifikáty se používají k bezproblémovému a bezobslužnému ověřování připojení mezi zařízeními bez nutnosti zadávání uživatelských jmen a hesel.
 
 >[!IMPORTANT]
->教師の証明書と生徒の証明書は、異なる証明書機関 (CA) が発行する必要があります。 既存の証明書インフラストラクチャに接続する下位 CA を新しく 2 つ作成する必要があります。1 つは教師用で、もう 1 つは生徒用です。
+>Použité certifikáty učitelů a studentů musí být vystavené odlišnými certifikačními autoritami (CA). Musíte vytvořit dvě nové podřízené certifikační autority propojené s vaší existující certifikační infrastrukturou; jednu pro učitele a druhou pro studenty.
 
-iOS 教育プロファイルは、PFX 証明書のみをサポートします。 SCEP 証明書はサポートされていません。
+Vzdělávací profily iOS podporují pouze certifikáty PFX. Certifikáty SCEP podporovány nejsou.
 
-作成する証明書は、サーバー認証とユーザー認証をサポートする必要があります。
+Vytvořené certifikáty musí podporovat ověřování serverů i ověřování uživatelů.
 
-### <a name="configure-teacher-certificates"></a>教師の証明書を構成する
+### <a name="configure-teacher-certificates"></a>Konfigurace certifikátů učitelů
 
-**[教育]** ウィンドウで **[教師の証明書]** を選択します。
+V podokně **Vzdělávání** zvolte **Certifikáty učitelů**.
 
-#### <a name="configure-teacher-root-certificate"></a>教師のルート証明書を構成する
+#### <a name="configure-teacher-root-certificate"></a>Konfigurace kořenového certifikátu učitele
 
-**[教師のルート証明書]** で参照ボタンを選択します。 以下のいずれかのルート証明書を選択します。
-- 拡張子 .cer (DER、または Base64 エンコード) 
-- 拡張子 .P7B (完全なチェーンあり、またはなし)
+V části **Kořenový certifikát učitele** vyberte tlačítko Procházet. Vyberte kořenový certifikát s jednou z těchto přípon:
+- .cer (DER nebo s kódováním Base64) 
+- .P7B (s úplným řetězem nebo bez něj)
 
-#### <a name="configure-teacher-pkcs12-certificate"></a>教師の PKCS#12 証明書を構成する
+#### <a name="configure-teacher-pkcs12-certificate"></a>Konfigurace certifikátu PKCS#12 učitele
 
-**[教師の PKCS #12 証明書]** で、次の値を構成します。
+V části **Certifikát PKCS#12 učitele** nakonfigurujte následující hodnoty:
 
-- **サブジェクト名の形式** - Intune では、教師の証明書の場合、共通名の先頭に自動的に "**leader**" と付けられます。 学生の証明書の場合、共通名の先頭に "**member**" と付けられます。
-- **証明機関**Windows Server 2008 R2 以降の Enterprise エディションで実行するエンタープライズ証明機関 (CA) が必要です。 スタンドアロン CA はサポートされません。 
-- **証明機関名** - 証明機関の名前を入力します。
-- **証明書テンプレート名** - 発行元 CA に追加されている証明書テンプレートの名前を入力します。 
-- **[更新しきい値 (%)]** - 証明書の有効期間の残りがどの程度 (%) になったら、デバイスが更新を要求するかを指定します。
-- **証明書の有効期間** - 証明書が失効するまでの残り時間を指定します。
-指定した証明書テンプレートの有効期限よりも小さい値を指定できますが、大きい値は指定できません。 たとえば、証明書テンプレートで証明書の有効期限が 2 年になっている場合は、この値を 1 年することはできますが、5 年にすることはできません。 また、発行元の CA の証明書の残りの有効期限よりも小さい値を指定する必要があります。
+- **Formát názvu subjektu** – Intune automaticky přidá k běžnému názvu certifikátu učitele předponu **leader**. K certifikátu studenta přidává předponu **member**.
+- **Certifikační autorita** – Certifikační autorita organizace (CA), která běží na verzi Enterprise systému Windows Server 2008 R2 nebo novější. Samostatná certifikační autorita není podporovaná. 
+- **Název certifikační autority** – Zadejte název certifikační autority.
+- **Název šablony certifikátu** – Zadejte název šablony certifikátu, která byla přidána k vystavující certifikační autoritě. 
+- **Prahová hodnota obnovení (%)** – Zadejte procento doby životnosti certifikátu zbývající v okamžiku, kdy zařízení požádá o obnovení certifikátu.
+- **Období platnosti certifikátu** – Zadejte zbývající dobu do vypršení platnosti certifikátu.
+Zadat můžete hodnotu nižší, než je období platnosti zadané v šabloně certifikátu, ne však vyšší. Pokud je třeba období platnosti certifikátu v šabloně certifikátu dva roky, můžete zadat hodnotu jeden rok, ale ne pět let. Tato hodnota musí být zároveň nižší než zbývající doba platnosti certifikátu vystavující certifikační autority.
 
-証明書の構成が完了したら、 **[OK]** を選択します。
+Jakmile dokončíte konfiguraci certifikátů, zvolte **OK**.
 
-### <a name="configure-student-certificates"></a>生徒の証明書を構成する
+### <a name="configure-student-certificates"></a>Konfigurace certifikátů studentů
 
-1. **[教育]** ウィンドウで **[学生の証明書]** を選択します。
-2. **[学生の証明書]** ウィンドウで、 **[学生用デバイス証明書の種類]** の一覧から **[1:1]** を選択します。
+1. V podokně **Vzdělávání** zvolte **Certifikáty studentů**.
+2. V podokně **Certifikáty studentů** zvolte v seznamu **Typ certifikátů studentských zařízení** možnost **1:1**.
 
-#### <a name="configure-student-root-certificate"></a>生徒のルート証明書を構成する
+#### <a name="configure-student-root-certificate"></a>Konfigurace kořenového certifikátu studenta
 
-**[学生のルート証明書]** で参照ボタンを選択します。 以下のいずれかのルート証明書を選択します。
-- 拡張子 .cer (DER、または Base64 エンコード) 
-- 拡張子 .P7B (完全なチェーンあり、またはなし)
+V části **Kořenový certifikát studenta** vyberte tlačítko Procházet. Vyberte kořenový certifikát s jednou z těchto přípon:
+- .cer (DER nebo s kódováním Base64) 
+- .P7B (s úplným řetězem nebo bez něj)
 
-#### <a name="configure-student-pkcs12-certificate"></a>生徒の PKCS #12 証明書を構成する
+#### <a name="configure-student-pkcs12-certificate"></a>Konfigurace certifikátu PKCS#12 studenta
 
-**[学生の PKCS #12 証明書]** で、次の値を構成します。
+V části **Certifikát PKCS#12 studenta** nakonfigurujte následující hodnoty:
 
-- **サブジェクト名の形式** - Intune では、教師の証明書の場合、共通名の先頭に自動的に "**leader**" と付けられます。 学生の証明書の場合、共通名の先頭に "**member**" と付けられます。
-- **証明機関**Windows Server 2008 R2 以降の Enterprise エディションで実行するエンタープライズ証明機関 (CA) が必要です。 スタンドアロン CA はサポートされません。 
-- **証明機関名** - 証明機関の名前を入力します。
-- **証明書テンプレート名** - 発行元 CA に追加されている証明書テンプレートの名前を入力します。 
-- **[更新しきい値 (%)]** - 証明書の有効期間の残りがどの程度 (%) になったら、デバイスが更新を要求するかを指定します。
-- **証明書の有効期間** - 証明書が失効するまでの残り時間を指定します。
-指定した証明書テンプレートの有効期限よりも小さい値を指定できますが、大きい値は指定できません。 たとえば、証明書テンプレートで証明書の有効期限が 2 年になっている場合は、この値を 1 年することはできますが、5 年にすることはできません。 また、発行元の CA の証明書の残りの有効期限よりも小さい値を指定する必要があります。
+- **Formát názvu subjektu** – Intune automaticky přidá k běžnému názvu certifikátu učitele předponu **leader**. K certifikátu studenta přidává předponu **member**.
+- **Certifikační autorita** – Certifikační autorita organizace (CA), která běží na verzi Enterprise systému Windows Server 2008 R2 nebo novější. Samostatná certifikační autorita není podporovaná. 
+- **Název certifikační autority** – Zadejte název certifikační autority.
+- **Název šablony certifikátu** – Zadejte název šablony certifikátu, která byla přidána k vystavující certifikační autoritě. 
+- **Prahová hodnota obnovení (%)** – Zadejte procento doby životnosti certifikátu zbývající v okamžiku, kdy zařízení požádá o obnovení certifikátu.
+- **Období platnosti certifikátu** – Zadejte zbývající dobu do vypršení platnosti certifikátu.
+Zadat můžete hodnotu nižší, než je období platnosti zadané v šabloně certifikátu, ne však vyšší. Pokud je třeba období platnosti certifikátu v šabloně certifikátu dva roky, můžete zadat hodnotu jeden rok, ale ne pět let. Tato hodnota musí být zároveň nižší než zbývající doba platnosti certifikátu vystavující certifikační autority.
 
-証明書の構成が完了したら、 **[OK]** を選択します。
+Jakmile dokončíte konfiguraci certifikátů, zvolte **OK**.
 
-## <a name="finish-up"></a>完了
+## <a name="finish-up"></a>Dokončení
 
-1. **[教育]** ウィンドウで [OK] を選択します。
-2. **[プロファイルの作成]** ウィンドウで、 **[作成]** を選択します。
+1. V podokně **Vzdělávání** zvolte OK.
+2. V podokně **Vytvořit profil** zvolte **Vytvořit**.
 
-プロファイルが作成され、プロファイルの一覧ウィンドウに表示されます。
+Profil se vytvoří a zobrazí se v podokně se seznamem profilů.
 
-学校データと Azure AD を同期したときに作成された教室グループの生徒用デバイスにプロファイルを割り当てます (「[デバイス プロファイルを割り当てる方法](../configuration/device-profile-assign.md)」参照)。
+Přiřaďte profil ke studentským zařízením ve skupinách učebny, které se vytvořily při synchronizaci školních dat se službou Azure AD (viz [Přiřazení profilů zařízení](../configuration/device-profile-assign.md)).
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>Další kroky
 
-これで、教師が Classroom アプリを使用するとき、生徒のデバイスを完全に操作できます。
+Když teď učitel použije aplikaci Classroom, bude mít plnou kontrolu nad zařízeními studentů.
 
-Classroom アプリの詳細については、Apple Web サイトの [Classroom ヘルプ](https://help.apple.com/classroom/ipad/2.0/)をご覧ください。
+Další informace o aplikaci Classroom najdete v [nápovědě pro Classroom](https://help.apple.com/classroom/ipad/2.0/) na webu Applu.
 
-受講者に対して共有 iPad デバイスを構成する場合は、[共有 iPad デバイスの Intune 教育設定の構成方法](education-settings-configure-ios-shared.md) に関するページを参照してください。
+Pokud chcete konfigurovat sdílená zařízení iPad pro studenty, podívejte se na článek o [konfiguraci nastavení vzdělávání Intune pro sdílená zařízení s iOSem](education-settings-configure-ios-shared.md).

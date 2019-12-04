@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 01866bba0ef47ac807b24a66f773e212c76ff7df
-ms.sourcegitcommit: 1cf063c98e1caae00a6e6fab821cc3254562bca9
+ms.openlocfilehash: a7c3398f28d7c396c873dd29f3e3fdd719c1a7c6
+ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74291091"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74691772"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Správa aktualizací softwaru Windows 10 v Intune
 
@@ -40,7 +40,7 @@ Pro skupiny zařízení přiřadíte zásady pro aktualizační kanály Windows 
 
 Další informace najdete v tématu o [správě aktualizací pomocí Windows Update pro firmy](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadované součásti
 
 Aby se pro zařízení s Windows 10 v Intune používaly aktualizace Windows, musí se splnit následující požadavky.
 
@@ -122,7 +122,7 @@ Při odstranění prstence z Intune se nezmění nastavení na zařízeních, kt
 1. Při prohlížení stránky přehled pro aktualizační kanál vyberte možnost **Odstranit**.
 2. Vyberte **OK**.
 
-#### <a name="pause"></a>Pozastavení
+#### <a name="pause"></a>Chvíli
 
 Vyberte **pozastavit** , pokud chcete, aby zařízení nepřijímala aktualizace funkcí nebo aktualizace kvality až 35 dní od času, kdy jste okruh zastavili. Po uplynutí maximálního počtu dní funkce pozastavení automaticky vyprší a zařízení zkontroluje dostupné aktualizace ve Windows Update. Po této kontrole můžete aktualizace znovu pozastavit.
 Pokud obnovíte pozastavený aktualizační kanál a pak tento prstenec znovu zastavíte, doba pozastavení se resetuje na 35 dní.
@@ -138,7 +138,7 @@ Když je typ aktualizace pozastaven, zobrazuje podokno přehled pro tento prsten
 > [!IMPORTANT]
 > Po vystavení příkazu pozastavit zařízení dostanou tento příkaz při příští kontrole služby. Je možné, že před přihlášením ke službě nainstalují plánovanou aktualizaci. Kromě toho platí, že pokud je cílové zařízení při vydání příkazu k pozastavení vypnuté, může po zapnutí stáhnout a nainstalovat plánované aktualizace před tím, než se přihlásí k Intune.
 
-#### <a name="resume"></a>Obnovit
+#### <a name="resume"></a>Opakované
 
 Když je aktualizační kanál pozastaven, můžete vybrat možnost **pokračovat** a obnovit aktualizace funkcí a kvality pro daný okruh na aktivní operaci. Po pokračování aktualizačního kanálu můžete tento prstenec pozastavit znovu.
 
@@ -148,7 +148,7 @@ Když je aktualizační kanál pozastaven, můžete vybrat možnost **pokračova
 2. Vyberte z dostupných možností, aby se obnovily buď aktualizace **funkcí** , nebo **kvality** , a pak vyberte **OK**.
 3. Po obnovení jednoho typu aktualizace můžete znovu vybrat pokračovat a obnovit jiný typ aktualizace.
 
-#### <a name="extend"></a>Rozšíření  
+#### <a name="extend"></a>Zvětšení  
 
 Když je aktualizační kanál pozastaven, můžete vybrat možnost **Rozšířené** a resetovat dobu pozastavení pro aktualizace funkcí a kvality pro daný aktualizační kanál na 35 dní.
 
@@ -214,9 +214,7 @@ Když zařízení obdrží zásadu aktualizace funkcí Windows 10:
   - **Doba odložení aktualizace funkcí (ve dnech)** musí být nastavená na **0**.
   - Musí *běžet*aktualizace funkcí pro aktualizační kanál. Nesmí být pozastavené.
 
-- Zásady *aktualizací funkcí Windows 10* se u autopilotu nepodporují. Intune tyto zásady neimplementuje:
-  - Zařízení, která jsou zřízena autopilotem.
-  - Zařízení, která byla dříve zřízena s autopilotem.
+- Zásady aktualizace funkcí Windows 10 se nedají použít během předběžného prostředí (OOBE) a budou se používat jenom při první web Windows Update kontrole po dokončení zřizování zařízení (což je obvykle den). Zařízení, která byla zřízena pomocí nástroje autopilot, navíc nebudou dostávat zásady.
 
   Toto omezení se zkoumá, aby bylo možné zjistit, jestli ho v budoucnu podporuje.
 
