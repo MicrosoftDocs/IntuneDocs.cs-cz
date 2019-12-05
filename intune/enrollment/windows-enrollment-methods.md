@@ -1,5 +1,5 @@
 ---
-title: Metody registrace v Intune pro zařízení s Windows
+title: Metody registrace zařízení s Windows v Intune
 titleSuffix: Microsoft Intune
 description: Seznamte se s různými způsoby, jak můžete zaregistrovat zařízení s Windows v Intune.
 keywords: ''
@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: ''
-ms.openlocfilehash: 59ba9ab5fb0ddeb527ed852de042568920cf38e1
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: b6144767ee69de8c1ff14e5c189c078994a9dcf4
+ms.sourcegitcommit: d8bcf1a427035138f7dfe1e4f8b3c971c773dcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509176"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74819709"
 ---
-# <a name="intune-enrollment-methods-for-windows-devices"></a>Metody registrace v Intune pro zařízení s Windows
+# <a name="intune-enrollment-methods-for-windows-devices"></a>Metody registrace zařízení s Windows v Intune
 
 Aby bylo možné spravovat zařízení v Intune, musí být zařízení nejprve zaregistrovaná ve službě Intune. Pro správu Intune je možné zaregistrovat jak osobní vlastnictví, tak i zařízení vlastněná firmou. 
 
@@ -42,7 +42,7 @@ Uživatelé můžou svoje zařízení s Windows sami zaregistrovat pomocí kter�
 Pokud správce nakonfiguroval automatický zápis (dostupný s předplatnými Azure AD Premium), musí jenom zadat svoje přihlašovací údaje jenom jednou. V opačném případě se bude muset registrovat samostatně jenom přes registraci MDM a znovu zadat přihlašovací údaje.  
 - **Registrace jenom pro MDM** umožňuje uživatelům zaregistrovat stávající pracovní skupinu, službu Active Directory nebo počítač připojený ke službě Azure Active Directory do Intune. Uživatelé se registrují z nastavení v existujícím počítači s Windows. Tato metoda se nedoporučuje, protože neregistruje zařízení do Azure Active Directory. Také zabraňuje použití funkcí, jako je například podmíněný přístup.
 - [Připojení Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) – připojí zařízení k Azure Active Directory a umožní uživatelům přihlašovat se k Windows pomocí svých přihlašovacích údajů Azure AD. Pokud je povolený automatický zápis, zařízení se automaticky zaregistruje v Intune. Výhodou automatického zápisu je proces jednoho kroku pro uživatele. V opačném případě se bude muset registrovat samostatně jenom přes registraci MDM a znovu zadat přihlašovací údaje. Uživatelé tento způsob zapisují buď při počátečním nastavení systému Windows, nebo v nastavení. Zařízení je v Intune označené jako zařízení vlastněné společností.
-- Automatický [pilot](enrollment-autopilot.md) – automatizuje připojení k Azure AD a zapisuje do Intune nová zařízení vlastněná společností. Tato metoda zjednodušuje integrované prostředí a odstraňuje nutnost použít na zařízení vlastní image operačního systému. Když správci používají Intune ke správě zařízení autopilotu, můžou po registraci spravovat zásady, profily, aplikace a další.  Existují čtyři typy nasazení autopilotu: [režim samoobslužného nasazování](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) (pro veřejné terminály, digitální podpis nebo sdílené zařízení), [režim řízený uživatelem](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) (pro tradiční uživatele), [White šetrnější] (https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) umožňuje partnerům nebo pracovníkům IT, aby předem zřídit počítač s Windows 10. Takže je plně nakonfigurovaný a připravený pro firmy a [autopilot pro stávající zařízení] (https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) vám umožňuje snadno nasadit nejnovější verzi Windows 10 na stávající zařízení.
+- Automatický [pilot](enrollment-autopilot.md) – automatizuje připojení k Azure AD a zapisuje do Intune nová zařízení vlastněná společností. Tato metoda zjednodušuje integrované prostředí a odstraňuje nutnost použít na zařízení vlastní image operačního systému. Když správci používají Intune ke správě zařízení autopilotu, můžou po registraci spravovat zásady, profily, aplikace a další.  Existují čtyři typy nasazení autopilotu: [režim samoobslužného nasazování](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) (pro veřejné terminály, digitální podpis nebo sdílené zařízení), [režim řízený uživatelem](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) (pro tradiční uživatele), [White šetrnější](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) umožňuje partnerům nebo pracovníkům IT, aby předem zřídit počítač s Windows 10, aby byl plně nakonfigurovaný a připravený pro přípravu a [autopilot pro stávající zařízení](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) vám umožní snadno nasadit nejnovější verzi Windows 10 na stávající zařízení.
 
 ## <a name="administrator-based-enrollment-in-intune"></a>Registrace na základě správce v Intune
 

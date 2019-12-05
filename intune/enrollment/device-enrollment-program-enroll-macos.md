@@ -1,5 +1,5 @@
 ---
-title: Registrace zařízení macOS – Program registrace zařízení nebo Apple School Manager
+title: Registrace zařízení s macOS – Device Enrollment Program nebo Apple School Manageru
 titleSuffix: ''
 description: Přečtěte si, jak k registraci zařízení s macOS, které je v majetku firmy, použít Program registrace zařízení (DEP).
 keywords: ''
@@ -18,22 +18,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f41caddc7ab9cc09c8d5403f67b6112d58c3ffd
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 697e950c881a0c4233358d8363aa6cc7ec0006b2
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713552"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74832675"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-device-enrollment-program-or-apple-school-manager"></a>Automatická registrace zařízení s macOSem pomocí Programu registrace zařízení nebo Apple School Manageru
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Můžete nastavit registraci v Intune pro zařízení macOS zakoupená prostřednictvím programu Apple [program registrace zařízení (DEP)](https://deploy.apple.com) nebo [Apple School Manageru](https://school.apple.com/). U velkého počtu zařízení můžete použít kteroukoli z těchto registrací, aniž byste je museli dotýkat. Tato zařízení s macOS můžete dát rovnou uživatelům. Když uživatel zařízení zapne, Průvodce nastavením spustí předem nakonfigurovaná nastavení a zařízení se zaregistruje do správy v Intune.
+Můžete nastavit registraci v Intune pro zařízení s macOS zakoupili prostřednictvím Apple [programu registrace zařízení (DEP)](https://deploy.apple.com) nebo [Apple School Manageru](https://school.apple.com/). Některé z těchto registrací můžete použít pro velká množství zařízení bezkontaktně nikdy. Tato zařízení s macOS můžete dát rovnou uživatelům. Když uživatel zařízení zapne, Průvodce nastavením spustí předem nakonfigurovaná nastavení a zařízení se zaregistruje do správy v Intune.
 
-Pokud chcete nastavit registraci, použijte portál Intune i Apple DEP. Vytvoříte profily zápisu obsahující nastavení, která se v zařízeních nastavila během registrace.
+Nastavení registrace, používáte portál Intune i portál Apple DEP portály. Vytvoříte registrační profily obsahující nastavení aplikovaná na zařízení během registrace.
 
-Registrační program DEP ani Apple School Manager nefungují se [správcem registrace zařízení](device-enrollment-manager-enroll.md).
+Ani registrace DEP nebo Apple School Manageru pracovat [správce registrace zařízení](device-enrollment-manager-enroll.md).
 
 <!--
 **Steps to enable enrollment programs from Apple**
@@ -45,23 +45,23 @@ Registrační program DEP ani Apple School Manager nefungují se [správcem regi
 -->
 ## <a name="prerequisites"></a>Požadované součásti
 
-- Zařízení zakoupená v [Apple School Manageru](https://school.apple.com/) nebo [od společnosti Apple program registrace zařízení](http://deploy.apple.com)
+- Zařízení zakoupená v [Apple School Manageru](https://school.apple.com/) nebo [společnosti Apple Device Enrollment Program](http://deploy.apple.com)
 - Seznam sériových čísel nebo čísel nákupních objednávek
 - [Autorita pro správu mobilních zařízení (MDM)](../fundamentals/mdm-authority-set.md)
 - [Certifikát Apple MDM Push Certificate](../enrollment/apple-mdm-push-certificate-get.md)
 
 ## <a name="get-an-apple-dep-token"></a>Získání tokenu DEP Apple
 
-Než budete moct zaregistrovat zařízení macOS pomocí programu DEP nebo Apple School Manageru, budete potřebovat soubor tokenu DEP (. p7m) od společnosti Apple. Tento token umožňuje Intune synchronizovat informace o zařízeních, která vaše organizace vlastní. Umožňuje také Intune nahrát profily registrace do Applu a přiřadit tyto profily zařízením.
+Než budete moct registrovat zařízení s macOS pomocí programu DEP nebo Apple School Manageru, budete potřebovat soubor DEP tokenu (.p7m) od společnosti Apple. Tento token umožňuje Intune synchronizovat informace o zařízení, které vaše organizace vlastní. Umožňuje také Intune nahrát profily registrace do Applu a přiřadit tyto profily zařízením.
 
-K vytvoření tokenu použijete portál Apple. K přiřazení zařízení do Intune pro správu se používá také portál Apple.
+Na portálu Apple použijete k vytvoření tokenu. Použijete také na portálu společnosti Apple k přiřazení zařízení do Intune pro správu.
 
 > [!NOTE]
-> Pokud token odstraníte z klasického portálu Intune před migrací do Azure, může Intune obnovit odstraněný token Apple. Token můžete znovu odstranit z Azure Portal.
+> Když token odstraníte z klasického portálu Intune před migrací do Azure, může Intune obnovit odstraněný token Apple. Můžete znovu odstranit token z portálu Azure portal.
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Krok 1: Stáhněte si certifikát veřejného klíče Intune, který je potřebný k vytvoření tokenu.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > registrace **Apple** > **tokeny programu registrace** > **Přidat**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **macOS** > **registrace macOS registrace** > **registrační program tokeny** > **Přidat**.
 
     ![Stažení tokenu programu registrace zařízení](./media/device-enrollment-program-enroll-macos/image01.png)
 
@@ -69,13 +69,13 @@ K vytvoření tokenu použijete portál Apple. K přiřazení zařízení do Int
 
    ![Snímek obrazovky s podoknem Token Programu registrace v pracovním prostoru Certifikáty Apple pro stažení veřejného klíče](./media/device-enrollment-program-enroll-macos/add-enrollment-program-token-pane.png)
 
-3. Vyberte **Stáhnout veřejný klíč** a stáhněte si a místně uložte soubor šifrovacího klíče (.pem). Soubor. pem slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple.
+3. Vyberte **Stáhnout veřejný klíč** a stáhněte si a místně uložte soubor šifrovacího klíče (.pem). Soubor .pem slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple.
 
 ### <a name="step-2-use-your-key-to-download-a-token-from-apple"></a>Krok 2: Použijte svůj klíč ke stažení tokenu od společnosti Apple.
 
-1. Vyberte možnost **vytvořit token pro program registrace zařízení od společnosti Apple** nebo **pomocí Apple School Manageru** otevřete příslušný portál Apple a přihlaste se pomocí Apple ID vaší společnosti. Toto Apple ID můžete použít k obnovení tokenu.
-2. V případě programu DEP na portálu Apple vyberte **Začínáme** pro **program registrace zařízení** > **Spravovat servery** > **Přidat MDM Server**.
-3. Pro Apple School Manage na portálu Apple vyberte **servery mdm** > **Přidat MDM Server**.
+1. Zvolte **vytvořit token pro Apple Device Enrollment Program** nebo **vytvořit token prostřednictvím Apple School Manageru** otevřete příslušný portál Apple a přihlaste se pomocí firemního Apple ID. Toto Apple ID můžete použít k obnovení tokenu.
+2. Pro zabránění spuštění dat, vyberte na portálu Apple **Začínáme** pro **Device Enrollment Program** > **spravovat servery** > **přidat MDM Server**.
+3. Pro Apple School spravovat, vyberte na portálu Apple **servery MDM** > **přidat Server MDM**.
 4. Zadejte **název serveru MDM** a zvolte **Další**. Název serveru slouží pro vaši informaci, abyste mohli identifikovat server pro správu mobilních zařízení (MDM). Není to název serveru Microsoft Intune ani jeho URL.
 
 5. Otevře se dialogové okno pro **přidání&lt;názvu serveru&gt;** , ve kterém se zobrazí výzva, abyste **nahráli svůj veřejný klíč**. Vyberte **Zvolit soubor**, abyste mohli nahrát soubor .pem, a pak zvolte **Další**.
@@ -101,9 +101,9 @@ V poli **Token Apple** přejděte k souboru certifikátu (.pem), zvolte **Otevř
 
 ## <a name="create-an-apple-enrollment-profile"></a>Vytvoření registračního profilu Apple
 
-Teď, když máte nainstalovaný token, můžete pro zařízení vytvořit profil zápisu. Registrační profil zařízení definuje nastavení, která se během registrace použijí pro skupinu zařízení.
+Teď, když jste nainstalovali svůj token, můžete vytvořit registrační profil pro zařízení. Registrační profil zařízení definuje nastavení, která se během registrace použijí pro skupinu zařízení.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > registrace **Apple** > **tokeny programu registrace**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **macOS** > **registraci MacOS registrace** > **programových tokenů**.
 2. Vyberte token, zvolte **Profily** a potom zvolte **Vytvořit profil**.
 
     ![Snímek obrazovky pro vytvoření profilu](./media/device-enrollment-program-enroll-macos/image04.png)
@@ -152,7 +152,7 @@ Teď, když máte nainstalovaný token, můžete pro zařízení vytvořit profi
     | <strong>Diagnostika iCloudu</strong> | Umožní uživateli poslat společnosti Apple diagnostická data iCloudu. |
     | <strong>Úložiště iCloud</strong> | Poskytněte uživateli možnost použít úložiště iCloud. |    
     | <strong>Zobrazit tónový displej</strong> | Poskytněte uživateli možnost zapnout tónový displej. |
-    | <strong>Příznaky</strong> | Zobrazit obrazovku vzhled pro uživatele |
+    | <strong>Vzhled</strong> | Zobrazit obrazovku vzhled pro uživatele |
     | <strong>Registrace</strong>| Vyžaduje, aby uživatel zařízení zaregistroval. |
     | <strong>Důvěrnost</strong>| Zobrazit obrazovku ochrany osobních údajů uživateli. |
     | <strong>Čas obrazovky</strong>| Zobrazit obrazovku čas obrazovky uživateli |
@@ -165,7 +165,7 @@ Teď, když máte nainstalovaný token, můžete pro zařízení vytvořit profi
 
 Teď, když má Intune oprávnění spravovat vaše zařízení, můžete synchronizovat Intune s Apple, aby se spravovaná zařízení zobrazila v Intune na portálu Azure Portal.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > registrace **Apple** > **tokeny programu registrace** > v seznamu > **zařízení** > **synchronizaci**vyberte token. ![snímek obrazovky s vybraným uzlem zařízení programu registrace a vybraným odkazem pro synchronizaci.](./media/device-enrollment-program-enroll-macos/image06.png)
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **MacOS** > **registrace MacOS** > **tokeny programu registrace** > v seznamu > **zařízení** > **synchronizaci**vyberte token. ![snímek obrazovky s vybraným uzlem zařízení programu registrace a vybraným odkazem pro synchronizaci.](./media/device-enrollment-program-enroll-macos/image06.png)
 
    Kvůli dodržení podmínek společnosti Apple, které se týkají přijatelných přenosů při registraci v programu, platí v Intune následující omezení:
    - Úplná synchronizace se nesmí pouštět častěji než jednou za sedm dní. Během úplné synchronizace načte Intune úplný aktualizovaný seznam sériových čísel přiřazených k serveru Apple MDM připojenému k Intune. Pokud se zařízení v rámci programu registrace odstraní z portálu Intune, aniž by se zrušilo jeho přiřazení ze serveru MDM Apple na portálu DEP, nebude možné ho do Intune znovu naimportovat, dokud neproběhne úplná synchronizace.   
@@ -175,7 +175,7 @@ Teď, když má Intune oprávnění spravovat vaše zařízení, můžete synchr
 
 Než se můžou zařízení zaregistrovat, musíte přiřadit profil programu registrace.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > registrace **Apple** > **tokeny programu registrace** > vyberte v seznamu token.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **MacOS** > **registrace MacOS** > **tokeny programu registrace** > v seznamu vyberte token.
 2. Zvolte **Zařízení** > zvolte zařízení v seznamu > **Přiřadit profil**.
 3. V části **Přiřadit profil** zvolte profil pro zařízení > **Přiřadit**.
 
@@ -183,12 +183,12 @@ Než se můžou zařízení zaregistrovat, musíte přiřadit profil programu re
 
 Můžete vybrat výchozí profil macOS a iOS, který se použije u všech zařízení, pokud při registraci použijí určitý token. 
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > registrace **Apple** > **tokeny programu registrace** > vyberte v seznamu token.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **MacOS** > **registrace MacOS** > **tokeny programu registrace** > v seznamu vyberte token.
 2. Zvolte **Nastavit výchozí profil**, v rozevíracím seznamu zvolte profil a potom zvolte **Uložit**. Tento profil se použije pro všechna zařízení, která se registrují s tímto tokenem.
 
 ## <a name="distribute-devices"></a>Distribuujte zařízení.
 
-Povolili jste správu a synchronizaci mezi společností Apple a Intune a přiřadili jste profil, který umožní registraci zařízení. Teď můžete zařízení rozdělit mezi uživatele. U zařízení s přidruženými uživateli je potřeba, aby měl každý uživatel přiřazenu licenci Intune. Zařízení bez přidružení uživatele vyžadují licenci zařízení. Aktivované zařízení nemůže použít profil registrace, dokud se zařízení nevymaže.
+Povolili jste správu a synchronizaci mezi společností Apple a Intune a přiřadili jste profil, aby vaše zařízení zaregistrovat. Teď můžete zařízení rozdělit mezi uživatele. U zařízení s přidruženými uživateli je potřeba, aby měl každý uživatel přiřazenu licenci Intune. Zařízení bez přidružení uživatele vyžadují licenci zařízení. Aktivované zařízení nemůže použít profil registrace, dokud se zařízení nevymaže.
 
 ## <a name="renew-a-dep-token"></a>Obnovení tokenu DEP
 

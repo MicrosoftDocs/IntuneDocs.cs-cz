@@ -17,28 +17,28 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e71ae2d2bcee22040c256ea711edd22b1d1fc80a
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: 46b46cd4a407df686e094198c588371ed4a01bb6
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199273"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74832580"
 ---
 # <a name="troubleshoot-ios-device-enrollment-problems-in-microsoft-intune"></a>Řešení potíží s registrací zařízení s iOS v Microsoft Intune
 
 Tento článek pomáhá správcům Intune pochopit a řešit problémy při registraci zařízení se systémem iOS v Intune.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadované součásti
 
 Než začnete řešit potíže, je důležité shromáždit některé základní informace. Tyto informace vám pomůžou lépe porozumět problému a zkrátit dobu, po kterou je možné najít řešení.
 
 Shromážděte následující informace o problému:
 
-- Jaká je přesná chybová zpráva?
+- Jaké je přesné znění chybové zprávy?
 - Kde se zobrazí chybová zpráva?
-- Kdy problém začal? Byl zápis někdy zpracován?
+- Kdy tento problém začal? Byl zápis někdy zpracován?
 - Jakou platformu (Android, iOS, Windows) má problém?
-- Kolik uživatelů je ovlivněno? Ovlivnili všichni uživatelé nebo jen některé?
+- Kolika uživatelů se to týká? Ovlivnili všichni uživatelé nebo jen některé?
 - Kolik zařízení je ovlivněno? Jsou všechna zařízení ovlivněná nebo jenom některá?
 - Co je Autorita MDM? Pokud je System Center Configuration Manager, jakou verzi Configuration Manager používáte?
 - Jak se provádí registrace? Přináší vaše vlastní zařízení (BYOD) nebo Apple Program registrace zařízení (DEP) pomocí profilů zápisu?
@@ -131,15 +131,15 @@ Pokud vaše společnost používá více domén pro přihlašovací údaje uživ
  > [!NOTE]
     > K této chybě může dojít také v případě, že se uživatel pokouší zaregistrovat více zařízení, než je registrace zařízení nakonfigurovaná tak, aby povolovala. Pokud tyto kroky problém nevyřeší, postupujte podle kroků v části řešení pro limit **zařízení** .
 
-### <a name="device-cap-reached"></a>Bylo dosaženo limitu zařízení
+### <a name="device-cap-reached"></a>Dosáhlo se maximálního počtu zařízení
 
 **Příčina:** Uživatel se pokusí zaregistrovat více zařízení, než je limit pro registraci zařízení.
 
 #### <a name="resolution"></a>Řešení
-1. Otevřete [portál pro správu Intune](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) > **zařízení** > **všechna zařízení**a ověřte počet zařízení, která uživatel zaregistroval.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **všechna zařízení**a ověřte počet zařízení, která uživatel zaregistroval.
     > [!NOTE]
     > Měli byste také mít vliv na přihlášení ovlivněného uživatele na [uživatelský portál Intune](https://portal.manage.microsoft.com/) a ověřit zařízení, která jsou zaregistrovaná. Můžou existovat zařízení, která se zobrazují na [uživatelském portálu Intune](https://portal.manage.microsoft.com/) , ale ne na [portálu pro správu Intune](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview). Tato zařízení se také počítají do limitu registrace zařízení.
-2. Přejít na **správce** > **správa mobilních zařízení** > **pravidla registrace** > Ověřte limit registrace zařízení. Ve výchozím nastavení je limit nastavený na 15. 
+2. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **omezení registrace** > Ověřte limit registrace zařízení. Ve výchozím nastavení je limit nastavený na 15. 
 3. Pokud počet zaregistrovaných zařízení dosáhl limitu, odeberte nepotřebná zařízení nebo zvyšte limit pro registraci zařízení. Vzhledem k tomu, že všechna zaregistrovaná zařízení využívají licenci Intune, doporučujeme, abyste nejdřív odebrali nepotřebná zařízení.
 4. Zařízení znovu zaregistrujte.
 
@@ -230,7 +230,7 @@ Když zapnete zařízení spravované pomocí programu DEP, které má přiřaze
 #### <a name="resolution"></a>Řešení
 
 1. Upravte registrační profil. V profilu můžete provádět změny. Účelem je aktualizovat čas změny profilu.
-2. Synchronizace zařízení spravovaných programem DEP: Otevřete portál Intune > **správce** > **správu mobilních zařízení** > **iOS** > **program registrace zařízení** > **synchronizaci hned teď**. Žádost o synchronizaci se pošle společnosti Apple.
+2. Synchronizace zařízení spravovaných programem DEP: v [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **Registrace iOS** > **tokeny programu** > vyberte token, který se teď má > **synchronizovat**. Žádost o synchronizaci se pošle společnosti Apple.
 
 ### <a name="dep-enrollment-stuck-at-user-login"></a>Registrace DEP zablokování při přihlášení uživatele
 Když zapnete zařízení spravované pomocí programu DEP, kterému je přiřazený profil registrace, počáteční nastavení po zadání přihlašovacích údajů.

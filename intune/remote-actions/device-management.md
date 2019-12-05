@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9937fc25ffa3dc32c1addbf0acc2516000b055b
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: b957857702de10e10c581364f2c34c869026810d
+ms.sourcegitcommit: d8bcf1a427035138f7dfe1e4f8b3c971c773dcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390887"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74819746"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Co je správa zařízení v Microsoft Intune?
 
@@ -66,9 +66,10 @@ Dostupné akce se liší podle platformy zařízení a jeho konfigurace.
   - [Režim ztráty](device-lost-mode.md) (jenom iOS)
   - [Najít zařízení](device-locate.md) (jenom iOS)
   - [Restartovat](device-restart.md) (jenom Windows)
-  - [Resetovat PIN kód ve Windows 10](device-windows-pin-reset.md)
+  - [Resetování PIN kódu ve Windows 10](device-windows-pin-reset.md)
   - [Vzdálené řízení pro Android](teamviewer-support.md)
   - [Synchronizace zařízení](device-sync.md)
+  - [Přejmenování zařízení](device-rename.md)
   - [Poslat vlastní oznámení](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS)
   - [Střídání klíčů BitLockeru](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (jenom Windows)
 

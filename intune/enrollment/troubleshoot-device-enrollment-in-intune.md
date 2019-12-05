@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 190322392909a14681a4b68a79d9a3537360206b
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 79e1ba2441baa6773632c27f204bef01b015b990
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713492"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74832725"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Řešení potíží při registraci zařízení v Microsoft Intune
 
@@ -64,7 +64,7 @@ K těmto problémům může docházet na všech platformách zařízení.
 
 Podle následujícího postupu zkontrolujte, jestli nemá uživatel přiřazeno více zařízení, než je maximální povolený počet:
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > **omezení registrace** > **omezení limitu počtu zařízení**. Poznamenejte si hodnotu uvedenou ve sloupci **Limit počtu zařízení**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **omezení registrace** > **omezení limitu počtu zařízení**. Poznamenejte si hodnotu uvedenou ve sloupci **Limit počtu zařízení**.
 
 2. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)zvolte **Uživatelé** > **všichni uživatelé** > vyberte **zařízení**> uživatelů. Poznamenejte si počet zařízení.
 
@@ -374,7 +374,7 @@ Tento problém může nastat, když:
 4. Předání pokynu uživateli, aby proces registrace znovu zahájil
 
 #### <a name="determine-if-theres-something-wrong-with-the-vpp-token"></a>Určení, jestli je s tokenem VPP něco v nepořádku
-1. Přejděte na **Intune** > **Registrace zařízení** > **Registrace Apple** > **Tokeny programu registrace** > název tokenu > **Profily** > název profilu > **Spravovat** > **Vlastnosti**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **registrace iOS** > **tokeny programu registrace** > název tokenu > **profily** > název profilu > **Spravovat** > **vlastnosti**.
 2. Zkontrolujte vlastnosti, abyste zjistili, jestli se zobrazují nějaké chyby, které se podobají těmto:
     - Platnost tohoto tokenu vypršela.
     - Na tento token se nevztahují licence pro Portál společnosti.
@@ -384,13 +384,13 @@ Tento problém může nastat, když:
 3. Odstraňte problémy s tokenem.
 
 #### <a name="identify-which-devices-are-blocked-by-the-vpp-token"></a>Identifikace zařízení, která token VPP blokuje
-1. Přejděte na **Intune** > **Registrace zařízení** > **Registrace Apple** > **Tokeny programu registrace** > název tokenu > **Zařízení**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS**k > **registraci v iOS** > **tokeny programu registrace** > název tokenu > **zařízení**.
 2. Vyfiltrujte sloupec **Stav profilu** podle hodnoty **Blokováno**.
 3. Poznamenejte si sériová čísla všech zařízení s hodnotou **Blokováno**.
 
 #### <a name="remotely-wipe-the-blocked-devices"></a>Vzdálené vymazání blokovaných zařízení
 Po odstranění problémů s tokenem VPP je nutné vymazat zařízení, která jsou blokovaná.
-1. Přejděte na **Intune** > **Zařízení** > **Všechna zařízení** > **Sloupce** > **Sériové číslo** > **Použít**. 
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **všechna zařízení** > **sloupce** > **sériové číslo** > **použít**. 
 2. Každé blokované zařízení vyberte v seznamu **Všechna zařízení** a zvolte **Vymazání** > **Ano**.
 
 #### <a name="tell-the-users-to-restart-the-enrollment-process"></a>Předání pokynu uživatelům, aby proces registrace znovu zahájili
@@ -414,8 +414,8 @@ Po vymazání blokovaných zařízení můžete uživatelům předat pokyn, aby 
 - Pokud má vaše organizace zapnuté omezení registrace, které blokuje osobní zařízení s macOS, musíte do Intune ručně [přidat sériové číslo osobního zařízení](corporate-identifiers-add.md#manually-enter-corporate-identifiers).  
 - Pokud je zařízení v Intune pořád přiřazené k jinému uživateli, nepoužil jeho předchozí vlastník aplikaci Portál společnosti, aby ho odebral nebo obnovil tovární nastavení. Záznam zastaralého zařízení vyčistíte v Intune takto:  
 
-    1. Přejděte na [Intune na webu Azure Portal](https://portal.manage.microsoft.com) a přihlaste se pomocí přihlašovacích údajů správce.
-    2. Přejděte na Intune > **Zařízení** > **Všechna zařízení**.  
+    1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)se přihlaste pomocí přihlašovacích údajů pro správu.
+    2. Vyberte **zařízení** > **všechna zařízení**.  
     3. Najděte zařízení s problematickou registrací. Výsledky můžete upřesnit hledáním podle názvu zařízení nebo adresy MAC/hardwaru.
     4. Vyberte toto zařízení > **Odstranit**. Odstraňte všechny ostatní záznamy spojené s tímto zařízením.  
 

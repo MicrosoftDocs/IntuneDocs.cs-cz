@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 12/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c4c995322234a4a2486d8e6c5e9efd88f78dd63
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: b1d6b88b2ff6404f6c60a1c27c167c0721fa82bf
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390868"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74832594"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Vytvořte profil zařízení v Microsoft Intune
 
@@ -39,7 +39,7 @@ V tomto článku najdete:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **zařízení** > **konfigurační profily**. Máte následující možnosti:
+2. Vyberte **zařízení** > **konfigurační profily**. Máte tyto možnosti:
 
     - **Přehled**: zobrazuje stav profilů a poskytuje další podrobnosti o profilech, které jste přiřadili uživatelům a zařízením.
     - **Správa**: vytváření profilů zařízení, nahrávání vlastních [skriptů PowerShellu](../apps/intune-management-extension.md) , které se mají spustit v rámci profilu, a Přidání datových plánů do zařízení pomocí [eSIM karty](esim-device-configuration.md).
@@ -52,7 +52,7 @@ V tomto článku najdete:
    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
    - **Platforma**: vyberte platformu zařízení. Možnosti:  
 
-       - **Android**
+       - **Androidemem**
        - **Android Enterprise**
        - **iOS/iPadOS**
        - **macOS**
@@ -69,11 +69,11 @@ V tomto článku najdete:
        - [Funkce zařízení](../device-features-configure.md)
        - [Omezení zařízení](device-restrictions-configure.md)
        - [Upgrade edice a přepínač režimu](edition-upgrade-configure-windows-10.md)
-       - [Školení](education-settings-configure.md)
-       - [Elektron](email-settings-configure.md)
+       - [Vzdělávání](education-settings-configure.md)
+       - [E-mail](email-settings-configure.md)
        - [Endpoint Protection](../protect/endpoint-protection-configure.md)
        - [Ochrana identit](../protect/identity-protection-configure.md)  
-       - [Kiosk](kiosk-settings.md)
+       - [Veřejný terminál](kiosk-settings.md)
        - [Certifikát PKCS](../protect/certficates-pfx-configure.md)
        - [Importovaný certifikát PKCS](../protect/certificates-imported-pfx-configure.md)
        - [Soubor předvoleb](preference-file-settings-macos.md)
@@ -105,7 +105,7 @@ Další informace o značkách oboru a o tom, co můžete dělat, najdete v tém
 
 ## <a name="applicability-rules"></a>Pravidla použitelnosti
 
-Platí pro:
+Týká se
 
 - Windows 10 a novější
 
@@ -180,11 +180,13 @@ Při vytváření profilů Vezměte v úvahu následující doporučení:
 
 - Samostatné zásady uživatele ze zásad zařízení.
 
-  Například [šablony pro správu v Intune](administrative-templates-windows.md) mají stovky nastavení ADMX. Tato šablona ukazuje, jestli se nastavení vztahují na uživatele nebo zařízení. Při vytváření šablon pro správu přiřaďte nastavení uživatelů ke skupině uživatelů a přiřaďte nastavení zařízení ke skupině zařízení.
+  Například [šablony pro správu v Intune](administrative-templates-windows.md) mají stovky nastavení ADMX. Tyto šablony ukazují, jestli se nastavení vztahují na uživatele nebo zařízení. Při vytváření šablon pro správu přiřaďte nastavení uživatelů ke skupině uživatelů a přiřaďte nastavení zařízení ke skupině zařízení.
 
   Následující obrázek ukazuje příklad nastavení, které se může vztahovat na uživatele nebo použít na zařízení:
 
   ![Šablona správce Intune, která se vztahuje na uživatele a zařízení](./media/device-profile-create/setting-applies-to-user-and-device.png)
+
+- Pokaždé, když vytvoříte omezující zásadu, sdělte tuto změnu vašim uživatelům. Pokud například měníte požadavek na přístupový kód ze 4 znaků na 6 znaků, dejte uživatelům informace o tom, než zásadu přiřadíte.
 
 ## <a name="next-steps"></a>Další kroky
 

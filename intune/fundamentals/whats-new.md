@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ad5c26770537ce6a285989f8ca3804277616419
-ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
+ms.openlocfilehash: 72aa710e5997593cca6a18f7c3cd421f792985bd
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74540792"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74832709"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -54,6 +54,16 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-decmeber-2-2019"></a>Týden z Decmeber 2, 2019
+
+#### <a name="new-system-center-configuration-manager-co-management-licensing--5027281--"></a>Nové System Center Configuration Manager licencování spolusprávy<!--5027281-->
+K dispozici je nová licence, která umožňuje System Center Configuration Manager zákazníkům s Software Assurance získat práva pro správu počítačů Intune bez nutnosti koupit další licenci Intune pro spolusprávu. Zákazníci už nebudou muset k koncovým uživatelům přiřazovat jednotlivé licence Intune/EMS.
+- Zařízení spravovaná pomocí System Center Configuration Manager a zaregistrovaná do spolusprávy mají skoro stejná práva jako samostatné spravované počítače Intune. Po obnovení se ale nedá znovu zřídit pomocí automatického pIlotního nasazení.
+- Zařízení s Windows 10 zaregistrovaná v Intune jiným způsobem vyžadují úplné licence Intune.
+- Zařízení na jiných platformách stále vyžadují úplné licence Intune.
+
+
+<!-- ########################## -->
 ## <a name="week-of-november-18-2019-1911-service-release"></a>Týden od 18. listopadu 2019 (1911 Service Release)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -82,7 +92,7 @@ Chování nastavení této zásady se mírně liší od předchozí implementace
 Můžete cílit na konkrétní skupiny uživatelů, kteří budou mít [zařízení MacOS spravovaná pomocí Jamf](../protect/conditional-access-integrate-jamf.md). Díky tomu můžete použít integraci Jamf dodržování předpisů pro podmnožinu zařízení macOS, zatímco jiná zařízení se spravují přes Intune. Pokud již používáte integraci Jamf, všichni uživatelé budou ve výchozím nastavení zaměřeni na integraci.
 
 #### <a name="new-exchange-activesync-settings-when-creating-an-email-device-configuration-profile-on-ios-devices---4892824-----"></a>Nová nastavení Exchange ActiveSync při vytváření profilu konfigurace e-mailového zařízení na zařízeních s iOS<!-- 4892824   --> 
-V zařízeních se systémem iOS/iPadOS můžete nakonfigurovat připojení e-mailu v profilu konfigurace zařízení (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **iOS/iPadOS** pro **> pro** platformy. pro typ profilu). 
+V zařízeních s iOS/iPadOS můžete nakonfigurovat připojení e-mailu v profilu konfigurace zařízení (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **iOS/iPadOS** **pro > pro** daný typ profilu). 
 
 K dispozici jsou nová nastavení Exchange ActiveSync, včetně:
 - **Data pro synchronizaci se systémem Exchange**: vyberte služby Exchange, které chcete synchronizovat (nebo blokovat synchronizaci) pro kalendář, kontakty, připomenutí, poznámky a e-mail.
@@ -90,7 +100,7 @@ K dispozici jsou nová nastavení Exchange ActiveSync, včetně:
 
 Další informace o těchto nastaveních najdete [v nastavení e-mailového profilu pro zařízení s iOS v Intune](../configuration/email-settings-ios.md). 
 
-Platí pro:
+Týká se
 - iOS 13,0 a novější
 - iPadOS 13,0 a novější
 
@@ -99,7 +109,7 @@ U plně spravovaných a vyhrazených zařízení s Androidem Enterprise je k dis
 
 Pokud chcete zobrazit nastavení, která můžete nakonfigurovat, přejděte na [nastavení zařízení s Androidem Enterprise a povolte nebo omezte funkce pomocí Intune](../configuration/device-restrictions-android-for-work.md).
 
-Platí pro:
+Týká se
 - Zařízení se systémem Android Enterprise s plnou správou
 - Zařízení se systémem Android Enterprise vyhrazená
 
@@ -110,7 +120,7 @@ Toto nastavení nemá na zařízeních žádný vliv. Chcete-li odebrat nastaven
 
 Pokud chcete zobrazit všechna nastavení, která můžete konfigurovat, přečtěte si téma [nastavení zařízení s iOS a iPadOS, abyste mohli povolit nebo zakázat funkce využívající Intune](../configuration/device-restrictions-ios.md).
 
-Platí pro:
+Týká se
 - iOS/iPadOS
 
 #### <a name="windows-10-feature-updates-public-preview---2384877---"></a>Aktualizace funkcí Windows 10 (verze Public Preview)<!-- 2384877 -->
@@ -127,7 +137,7 @@ Pouze některé aplikace podporují spravované předvolby a tyto aplikace vám 
 
 Další informace o této funkci najdete v tématu [Přidání souboru se seznamem vlastností do zařízení MacOS pomocí Microsoft Intune](../configuration/preference-file-settings-macos.md).
 
-Platí pro:
+Týká se
 - zařízení macOS se systémem 10,7 a novějším
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -298,7 +308,7 @@ V systému Windows 10 a novějších můžete vytvořit profil konfigurace zař�
 
 Další informace o této funkci najdete v tématu [použití profilů DFCI na zařízeních s Windows v Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md).
 
-Platí pro:
+Týká se
 - Windows 10 RS5 (1809) a novější v podporovaném firmwaru
 
 ### <a name="device-enrollment"></a>Registrace zařízení
@@ -371,7 +381,7 @@ Na zařízeních s pracovním profilem Android Enterprise uživatelé nemůžou 
 
 Pokud chcete zobrazit nastavení, které můžete nakonfigurovat, přejděte na [nastavení zařízení s Androidem Enterprise a povolte nebo omezte funkce pomocí Intune](../configuration/device-restrictions-android-for-work.md).
 
-Platí pro:
+Týká se
 - Pracovní profil Android Enterprise
 
 #### <a name="create-a-global-http-proxy-on-android-enterprise-device-owner-devices---4816339-----"></a>Vytvoření globálního proxy serveru HTTP na zařízeních s vlastníkem zařízení s Androidem Enterprise<!-- 4816339   -->
@@ -379,7 +389,7 @@ Na zařízeních s Androidem Enterprise můžete nakonfigurovat globální proxy
 
 Pokud chcete tuto funkci nakonfigurovat a zobrazit všechna nakonfigurovaná nastavení, přejděte na [nastavení zařízení s Androidem Enterprise a povolte nebo omezte funkce pomocí Intune](../configuration/device-restrictions-android-for-work.md).
 
-Platí pro:
+Týká se
 - Vlastník zařízení se systémem Android Enterprise
 
 #### <a name="connect-automatically-setting-is-removed-in-wi-fi-profiles-on-android-device-administrator-and-android-enterprise---5021055-----"></a>Nastavení připojit automaticky se odebere v profilech sítě Wi-Fi na správce zařízení s Androidem a na Androidu Enterprise.<!-- 5021055   -->
@@ -389,7 +399,7 @@ Pokud použijete toto nastavení v profilu Wi-Fi, možná jste si všimli, že s
 
 Pokud chcete zobrazit aktuální nastavení, přejděte na nastavení [Androidu Wi-Fi](../configuration/wi-fi-settings-android.md) nebo [Nastavení Android Enterprise Wi-Fi](../configuration/wi-fi-settings-android-enterprise.md).
 
-Platí pro:
+Týká se
 - Správce zařízení s Androidem 
 - Android Enterprise
 
@@ -402,7 +412,7 @@ Na zařízeních s iOS a iPadOS můžete vytvořit profil, který omezí funkce 
 
 Tato nastavení zobrazíte tak, že přejdete na [nastavení zařízení s iOS a povolíte nebo zakážete funkce využívající Intune](../configuration/device-restrictions-ios.md).
 
-Platí pro:
+Týká se
 - iOS 13,0 a novější
 - iPadOS 13,0 a novější
 
@@ -468,7 +478,7 @@ Verze iOS 13,1 od společnosti Apple zahrnuje registraci uživatelů, novou form
 - Poskytněte koncovým uživatelům možnost výběru mezi jednodušším zápisem uživatele nebo silnějším zápisem zařízení při registraci svých zařízení.
 
 Od verze 9/24/2019 s vydáním iOS 13,1 jsme v procesu zavedli tyto aktualizace všem zákazníkům a očekáváme, že budou dokončeny na konci příštího týdne.
-Platí pro:
+Týká se
 
 iOS 13,1 a novější
 
@@ -512,7 +522,7 @@ V současné době se po stažení aplikace LOB na zařízení uživatele zobraz
 Aplikace můžou volat Graph API Intune s použitím identity čtení i zápisu pomocí identity aplikace bez přihlašovacích údajů uživatele. Další informace o přístupu k rozhraní Microsoft Graph API pro Intune najdete [v tématu práce s Intune v Microsoft Graph](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0).
 
 #### <a name="protected-data-sharing-and-encryption-for-intune-app-sdk-for-ios---3586942----"></a>Chráněné sdílení a šifrování dat pro sadu Intune App SDK pro iOS<!-- 3586942  -->
-Intune App SDK pro iOS bude používat 256 šifrovacích klíčů, pokud je šifrování povolené zásadami ochrany aplikací. Aby bylo možné chráněné sdílení dat, bude nutné, aby všechny aplikace měly sadu SDK verze 8.1.1.
+Sady Intune App SDK pro iOS bude používat 256bitových šifrovacích klíčů, když je povoleno šifrování pomocí zásad ochrany aplikací. Aby bylo možné chráněné sdílení dat, bude nutné, aby všechny aplikace měly sadu SDK verze 8.1.1.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-configuration"></a>Konfigurace zařízení
@@ -524,7 +534,7 @@ Tyto profily sítě VPN konfigurují nativního klienta VPN, takže nebudou nain
 
 Aktuální nastavení sítě VPN, která můžete nakonfigurovat, najdete v tématu [Konfigurace nastavení sítě VPN na zařízeních s iOS](../configuration/vpn-settings-ios.md).
 
-Platí pro:
+Týká se
 - iOS
 
 #### <a name="device-features-device-restrictions-and-extension-profiles-for-ios-and-macos-settings-are-shown-by-enrollment-type---4886161-----"></a>Funkce zařízení, omezení zařízení a profily rozšíření pro nastavení iOS a macOS se zobrazují podle typu registrace.<!-- 4886161   -->
@@ -534,7 +544,7 @@ V Intune vytvoříte profily pro zařízení s iOS a macOS (**Konfigurace zaří
 V této aktualizaci jsou dostupná nastavení na portálu Intune zařazená do kategorie podle typu registrace, na který se vztahují:
 
 - iOS
-  - Zápis uživatele
+  - Registrace uživatele
   - Registrace zařízení
   - Automatický zápis zařízení (pod dohledem)
   - Všechny typy registrace
@@ -545,7 +555,7 @@ V této aktualizaci jsou dostupná nastavení na portálu Intune zařazená do k
   - Automatický zápis zařízení
   - Všechny typy registrace
 
-Platí pro:
+Týká se
 - iOS
 
 #### <a name="new-voice-control-settings-for-supervised-ios-devices-running-in-kiosk-mode---4892835-----"></a>Nové nastavení ovládání hlasu pro zařízení s iOS běžící v celoobrazovkovém režimu<!-- 4892835   -->
@@ -557,7 +567,7 @@ V této aktualizaci můžete řídit nová nastavení:
 
 Aktuální nastavení zobrazíte tak, že přejdete na [Nastavení veřejného terminálu iOS](../configuration/device-restrictions-ios.md#kiosk).
 
-Platí pro:
+Týká se
 - iOS 13,0 a novější
 
 #### <a name="use-single-sign-on-for-apps-and-websites-on-your-ios-and-macos-devices---4893175-----"></a>Použití jednotného přihlašování pro aplikace a weby na zařízeních s iOS a macOS<!-- 4893175   -->
@@ -567,7 +577,7 @@ Pomocí těchto nastavení můžete nakonfigurovat jednotné přihlašování, z
 
 Pokud chcete zobrazit aktuální funkce zařízení, které můžete konfigurovat, přejděte na [funkce zařízení s iOS](../configuration/ios-device-features-settings.md) a [MacOS funkce zařízení](../configuration/macos-device-features-settings.md).
 
-Platí pro:
+Týká se
 - iOS 13,0 a novější
 - macOS 10,15 a novější
 
@@ -576,7 +586,7 @@ Na zařízeních macOS můžete konfigurovat různé funkce a nasdílet je do za
 
 Pokud chcete zobrazit aktuální funkce, které můžete nakonfigurovat, přejděte na [Nastavení funkcí zařízení MacOS v Intune](../configuration/macos-device-features-settings.md).
 
-Platí pro:
+Týká se
 - macOS 10,15 a novější
 
 #### <a name="use-itunes-and-apps-in-the-itunes-app-store-url-when-showing-or-hiding-apps-on-ios-supervised-devices---4928474-----"></a>Při zobrazování nebo skrývání aplikací na zařízeních s iOS pod dohledem použijte v adrese URL obchodu iTunes aplikace iTunes a aplikace.<!-- 4928474   --> 
@@ -588,7 +598,7 @@ Můžete zadat adresu URL obchodu s aplikacemi iTunes, například `https://itun
 
 Další informace o těchto nastaveních najdete v tématu [zobrazení nebo skrytí aplikací](../configuration/device-restrictions-ios.md#show-or-hide-apps).
 
-Platí pro:
+Týká se
 - iOS
 
 #### <a name="windows-10-compliance-policy-password-type-values-are-clearer-and-match-csp---5138985---"></a>Hodnoty typu hesla zásad dodržování předpisů ve Windows 10 jsou jasné a neshodné s poskytovatelem CSP.<!-- 5138985 -->
@@ -598,7 +608,7 @@ V zařízeních s Windows 10 můžete vytvořit zásady dodržování předpisů
 
 Další informace o nastavení dodržování předpisů ve Windows 10 najdete v tématu [nastavení Windows 10 a novějších k označení zařízení jako odpovídajících nebo nevyhovujících](../protect/compliance-policy-create-windows.md)předpisům. 
 
-Platí pro:
+Týká se
 - Windows 10 a novější
 
  #### <a name="updated-ui-for-configuring-microsoft-exchange-on-premises-access---4092920---"></a>Aktualizované uživatelské rozhraní pro konfiguraci přístupu k místnímu systému Microsoft Exchange<!-- 4092920 -->  
@@ -609,7 +619,7 @@ Na zařízeních s Androidem Enterprise můžete nakonfigurovat funkce v pracovn
 
 Pokud chcete zobrazit nastavení, která můžete nakonfigurovat, přejděte na [nastavení zařízení s Androidem Enterprise a povolte nebo omezte funkce pomocí Intune](../configuration/device-restrictions-android-for-work.md).
 
-Platí pro:
+Týká se
 - Pracovní profil Android Enterprise
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -643,7 +653,7 @@ Přidali jsme následující podporu pro plně spravovaná zařízení s Android
 
 V této aktualizaci jsme spokojeni s oznámením, že podpora Intune pro plně spravovanou platformu Android Enterprise je teď všeobecně dostupná.
 
-Platí pro:
+Týká se
 
 - Zařízení se systémem Android Enterprise s plnou správou
 
@@ -709,7 +719,7 @@ V zařízeních s Windows 10 a novějších můžete vytvořit šablony pro spr�
 
 Další informace o šablonách pro správu najdete v tématu [použití šablon Windows 10 ke konfiguraci nastavení zásad skupiny v Intune](../configuration/administrative-templates-windows.md).
 
-Platí pro:
+Týká se
 
 - Windows 10 a novější (Windows RS4 +)
 
@@ -741,7 +751,7 @@ V této aktualizaci se přidávají následující funkce:
 
 Pokud chcete zobrazit aktuální nastavení, přejděte na [nastavení zařízení s Androidem Enterprise a povolte nebo omezte funkce pomocí Intune](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).
 
-Platí pro:
+Týká se
 
 - Zařízení se systémem Android Enterprise vyhrazená
 
@@ -755,7 +765,7 @@ Pomocí profilů můžete nakonfigurovat nastavení, která použijí nastavení
 > [!IMPORTANT]
 > S touto funkcí se uživatelé ověřují pomocí svého uživatelského jména a hesla pro profily sítě VPN, Wi-Fi a e-mailu. V současné době není ověřování založené na certifikátech k dispozici.
 
-Platí pro:  
+Týká se  
 - Vlastník zařízení se systémem Android Enterprise (plně spravovaný)
 
 #### <a name="control-the-apps-files-documents-and-folders-that-open-when-users-sign-in-to-macos-devices--3914202-----"></a>Řízení aplikací, souborů, dokumentů a složek, které se otevřou, když se uživatelé přihlásí k zařízením macOS<!--3914202   -->
@@ -765,7 +775,7 @@ V této aktualizaci se nachází nové nastavení přihlašovacích položek, kt
 
 Pokud chcete zobrazit aktuální nastavení, přejděte na [Nastavení funkcí zařízení MacOS v Intune](../configuration/macos-device-features-settings.md).
 
-Platí pro:  
+Týká se  
 - macOS
 
 #### <a name="deadlines-replace-engaged-restart-settings-for-windows-update-rings---4464404----------"></a>Konečné termíny nahrazují nastavení opětovného spuštění pro web Windows Update okruhy<!-- 4464404        -->
@@ -797,25 +807,25 @@ Můžete vytvořit profily k omezení nastavení na zařízeních s iOS a macOS 
 
   Pokud chcete zobrazit aktuální nastavení, přejděte na [nastavení zařízení s iOS, abyste mohli povolit nebo zakázat funkce využívající Intune](../configuration/device-restrictions-ios.md).
 
-Platí pro:  
+Týká se  
 - macOS 10,15 a novější
 - iOS 13 a novější
 
 #### <a name="some-unsupervised-ios-device-restrictions-will-become-supervised-only-with-the-ios-130-release---4867809-----"></a>Některá z nesledovaných omezení zařízení s iOS se budou pod dohledem – jenom s vydáním iOS 13,0.<!-- 4867809   -->
 V této aktualizaci se některá nastavení vztahují na zařízení, která jsou jenom pod dohledem, pomocí verze iOS 13,0. Pokud jsou tato nastavení nakonfigurovaná a přiřazená k zařízením, která nejsou pod dohledem před vydáním iOS 13,0, nastavení se pořád aplikují na tato zařízení, která nejsou pod dohledem. I nadále platí i po upgradu zařízení na iOS 13,0. Tato omezení se odeberou na nekontrolovaných zařízeních, která se zálohují a obnovují.
 
-Mezi tato nastavení patří:
+Jedná se o tato nastavení:
 
 - App Store, zobrazování dokumentů, hraní her
   - App Store
   - Explicitní obsah iTunes, hudba, podcast nebo zprávy
   - Přidání přátel Game Center
-  - Hry pro více hráčů
+  - Hry pro víc hráčů
 - Integrované aplikace
   - Fotoaparát
     - FaceTime
   - Safari
-    - Automatické vyplňování
+    - Automatické vyplnění
 - Cloud a úložiště
   - Zálohování do iCloud
   - Zablokovat synchronizaci dokumentů iCloud
@@ -823,7 +833,7 @@ Mezi tato nastavení patří:
 
 Pokud chcete zobrazit aktuální nastavení, přejděte na [nastavení zařízení s iOS, abyste mohli povolit nebo zakázat funkce využívající Intune](../configuration/device-restrictions-ios.md).
 
-Platí pro:  
+Týká se  
 - iOS 13,0 a novější
 
 #### <a name="improved-device-status-for-macos-filevault-encryption---4944983-----------"></a>Vylepšený stav zařízení pro šifrování trezoru macOS<!-- 4944983         -->
@@ -847,7 +857,7 @@ Do registrační stránky pro Android se přidala možnost registrace Správce z
 #### <a name="skip-more-screens-in-setup-assistant---4877451----"></a>Přeskočit další obrazovky v Průvodci nastavením <!--4877451  -->
 Můžete nastavit Program registrace zařízení profily pro přeskočení následujících obrazovek pomocníka s nastavením:
 - Pro iOS
-    - Příznaky
+    - Vzhled
     - Jazyk Express
     - Preferovaný jazyk
     - Migrace zařízení do zařízení
@@ -880,7 +890,7 @@ V Intune můžete vytvořit profily konfigurace zařízení a použít nastaven�
 
 V této aktualizaci je Zebra technologie podporovaným výrobcem OEM (Original Equipment Manufacturer) pro OEMConfig. Další informace o OEMConfig najdete v tématu [použití a Správa zařízení s Androidem Enterprise pomocí OEMConfig](../configuration/android-oem-configuration-overview.md).
 
-Platí pro:  
+Týká se  
 - Android Enterprise
 
 <!-- ########################## -->
@@ -913,7 +923,7 @@ Pomocí vlastních profilů na zařízeních s iOS a macOS můžete nakonfigurov
 
 Pokud chcete vytvořit vlastní profil, přečtěte si téma [vlastní nastavení pro iOS](../configuration/custom-settings-ios.md) nebo [MacOS vlastní nastavení](../configuration/custom-settings-macos.md).
 
-Platí pro:
+Týká se
 - iOS
 - macOS
 
@@ -958,7 +968,7 @@ Změnili jsme ikony profilů registrace pro Android Enterprise. Pokud chcete zob
 
 
 #### <a name="windows-diagnostic-data-collection-change---4113859---"></a>Změna shromažďování diagnostických dat Windows<!-- 4113859 -->
-Výchozí hodnota pro shromažďování diagnostických dat se změnila pro zařízení s Windows 10 verze 1903 a novější. Počínaje systémem Windows 10 1903 je shromažďování diagnostických dat ve výchozím nastavení povoleno. Diagnostická data Windows jsou důležitá technická data ze zařízení s Windows, která se týkají zařízení a způsobu provádění Windows a souvisejícího softwaru. Další informace najdete v tématu [Konfigurace diagnostických dat Windows ve vaší organizaci](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization). V případě, že se v profilu autopilotu pomocí [System/AllowTelemetry](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-allowtelemetry)nenastavuje jinak, zařízení autopilotu se také přihlásí do "plné" telemetrie.
+Výchozí hodnota pro shromažďování diagnostických dat se změnila pro zařízení s Windows 10 verze 1903 a novější. Počínaje systémem Windows 10 1903 je shromažďování diagnostických dat ve výchozím nastavení povoleno. Diagnostická data systému Windows jsou důležitá technická data ze zařízení s Windows poskytující informace o příslušném zařízení a o tom, jak funguje systém Windows a související software. Další informace najdete v tématu [Konfigurace diagnostických dat Windows ve vaší organizaci](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization). V případě, že se v profilu autopilotu pomocí [System/AllowTelemetry](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-allowtelemetry)nenastavuje jinak, zařízení autopilotu se také přihlásí do "plné" telemetrie.
 
 ### <a name="device-management"></a>Správa zařízení
 
@@ -1191,16 +1201,16 @@ Aby byl název atributu **KódObjednávky** v zařízeních pro autopiloti intui
 ### <a name="app-management"></a>Správa aplikací
 
 #### <a name="intune-policies-update-authentication-method-and-company-portal-app-installation---1927359----"></a>Zásady služby Intune aktualizují metodu ověřování a instalaci aplikace Portál společnosti.<!-- 1927359  -->
-V zařízeních, která jsou už zaregistrovaná prostřednictvím pomocníka s nastavením prostřednictvím některého z metod registrace podnikových zařízení společnosti Apple, Intune už nebude podporovat Portál společnosti, když je ručně nainstalují koncoví uživatelé z App Storu. Tato změna je relevantní jenom v případě, že při registraci ověříte pomocí Pomocníka s nastavením Apple. Tato změna také ovlivňuje jenom zařízení s iOS zaregistrovaná prostřednictvím:  
-* Apple Configuratoru
+V zařízeních, která jsou už zaregistrovaná prostřednictvím pomocníka s nastavením prostřednictvím některého z metod registrace podnikových zařízení společnosti Apple, Intune už nebude podporovat Portál společnosti, když je ručně nainstalují koncoví uživatelé z App Storu. Tato změna platí pouze v Apple Pomocníka s nastavením ověřování během registrace. Tato změna ovlivní také pouze zařízení s Iosem zaregistrovaná prostřednictvím:  
+* Apple configurator
 
-* Apple Business Manager
+* Obchodní ředitel společnosti Apple
 
 * Apple School Manager
 
-* Apple Program registrace zařízení (DEP)
+* Program registrace zařízení Apple (DEP)
 
-Pokud si uživatelé nainstalují aplikaci Portál společnosti z App Storu a pokusí se je pomocí ní zaregistrovat, dostanou chybu. U těchto zařízení se očekává, že bude používat jenom Portál společnosti, když ho služba Intune po registraci automaticky dokončí. Profily registrace v Intune ve Azure Portal budou aktualizované, abyste mohli určit, jak se zařízení ověřují a jestli obdrží Portál společnosti aplikaci. Pokud chcete, aby uživatelé zařízení DEP měli Portál společnosti, budete muset zadat předvolby v registračním profilu. 
+Pokud je uživatelé nainstalovat aplikaci portál společnosti z App storu a potom se pokuste registraci těchto zařízení jeho prostřednictvím, dojde k chybě. U těchto zařízení se očekává, že bude používat jenom Portál společnosti, když ho služba Intune po registraci automaticky dokončí. Profily registrace v Intune na portálu Azure portal bude aktualizován, takže můžete určit, jak ověřovat zařízení a pokud se zobrazí v aplikaci portál společnosti. Pokud chcete, aby uživatelé zařízení DEP budou používat aplikaci portál společnosti, musíte zadat předvolby v registrační profil. 
 
 Kromě toho se odebírá obrazovka **identifikace zařízení** v iOS portál společnosti. Proto správci, kteří chtějí povolit podmíněný přístup nebo nasazovat firemní aplikace, musí aktualizovat profil zápisu DEP. Tento požadavek platí jenom v případě, že se registrace DEP ověřuje pomocí Pomocníka s nastavením. V takovém případě musíte Portál společnosti do zařízení vložit. Provedete to tak, že v **Intune** > **registraci zařízení** > zápisu **Apple** > **tokeny programu registrace** > **zvolíte profily > profilů** > vyberte profil > **vlastnosti** > nastavte **instalovat portál společnosti** na **Ano**.
 

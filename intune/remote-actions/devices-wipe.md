@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ded91d72321257adc30d0321b5d01e74fa1d51a6
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 5a7e58fc0ceafe428646b631c55c42a6d2b119e4
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73712204"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74832660"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Odebrání zařízení vymazáním, vyřazením nebo ručním zrušením registrace
 
@@ -46,6 +46,8 @@ Akce **Vymazání** obnoví výchozí tovární nastavení zařízení. Data už
 > Akce vymazání není dostupná pro zařízení s iOS zaregistrovaná v registraci uživatele.
 
 Pro Windows 10 verze 1709 nebo novější máte také možnost **Zachovat stav registrace a uživatelský účet**.
+
+Možnost **provést chráněný vymazání** zajistí, že se akce vymazání nedá obejít vypnutím zařízení. Chráněné vymazání bude pokračovat v pokusu o resetování zařízení, dokud nebylo úspěšné. V některých konfiguracích může tato akce opustit thedevice, takže se nepovedlo restartovat.
 
 Zásady MDM se znovu použijí při příštím připojení zařízení k Intune.
 
@@ -195,7 +197,7 @@ Pokud chcete zařízení Apple DEP zcela odebrat ze systému správy Intune, pos
 
     ![Snímek obrazovky opětovného přiřazení Apple](./media/devices-wipe/apple-reassign.png)
 
-## <a name="fresh-start"></a>Nový Start
+## <a name="fresh-start"></a>Začít od začátku
 
 Platí pro zařízení s Windows 10. Přečtěte si další informace o [čerstvém startu](device-fresh-start.md).
 

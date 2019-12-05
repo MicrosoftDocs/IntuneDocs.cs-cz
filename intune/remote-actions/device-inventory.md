@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a3081ece10bb25c6381f4a8f891152433bc9661
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 94c38aaf28440511720280a3c5a1ebda5b9f2ab1
+ms.sourcegitcommit: d8bcf1a427035138f7dfe1e4f8b3c971c773dcd8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564385"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74819790"
 ---
 # <a name="see-device-details-in-intune"></a>Zobrazení podrobností o zařízení v Intune
 
@@ -57,7 +57,7 @@ V závislosti na tom, jaký dopravce zařízení používá, se nemusí shromaž
 > [!Note]  
 > Inventář hardwaru a softwaru se ve službě Intune aktualizuje každých 7 dní.
 
-|detaily|Description|Platforma| 
+|Podrobnosti|Description|Platforma| 
 |--------------|----------------------|----|  
 |Název|Název zařízení|Windows, iOS|
 |Název správy|Název zařízení používaný jenom v konzole. Změnou tohoto názvu nedojde ke změně názvu v zařízení.|Windows, iOS|
@@ -77,7 +77,7 @@ V závislosti na tom, jaký dopravce zařízení používá, se nemusí shromaž
 |MEID|Identifikátor mobilního zařízení|Windows, iOS, Android|
 |Výrobce|Výrobce zařízení|Windows, iOS, Android|
 |Model|Model zařízení|Windows, iOS, Android|
-|Telefonní číslo|Telefonní číslo přidružené k zařízení|Windows, iOS, Android|
+|Telefonní číslo|Telefonní číslo přidružené k zařízení|Windows, iOS, Android *|
 |Poskytovatel služeb pro odběratele|Bezdrátový operátor zařízení|Windows, iOS, Android|
 |Mobilní technologie|Rádiový systém používaný zařízením|Windows, iOS, Android|
 |Wi-Fi MAC|Adresa MAC zařízení|Windows, iOS, Android|
@@ -93,7 +93,7 @@ V závislosti na tom, jaký dopravce zařízení používá, se nemusí shromaž
 |Pod dohledem|Pokud **Ano**, mají správci nad zařízením lepší kontrolu|Windows, iOS, Android|
 |Šifrované|Pokud **Ano**, jsou data uložená v zařízení šifrovaná|Windows, iOS, Android|
 
-
+\* není k dispozici v Androidu se správcem zásad Google, jako jsou plně spravovaná a vyhrazená zařízení.
 
 ## <a name="next-steps"></a>Další kroky
 Podívejte se, jaké další akce [správy zařízení](device-management.md) můžete provádět pomocí Intune.

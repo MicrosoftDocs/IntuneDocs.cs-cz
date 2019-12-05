@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/15/2019
+ms.date: 12/04/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a1177a37ddbfa7f760339c4ad0cd7773d670540
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: d445b86359b2c5cde7b56a52a0cc6ee72a34c0ea
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199193"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74832606"
 ---
 # <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Běžné otázky, problémy a řešení se zásadami a profily zařízení v Microsoft Intune
 
@@ -50,7 +50,9 @@ Další doporučení:
 
 Intune oznamuje zařízení, aby se mohla zaregistrovat ve službě Intune. Doba oznámení se liší, včetně okamžitého až několika hodin. Tato doba oznámení se také liší mezi platformami.
 
-Pokud se zařízení po prvním oznámení nevrátí se změnami, zobrazí se v Intune tři další pokusy. Zařízení, které je offline, například vypnuté nebo není připojené k síti, nemusí dostávat oznámení. V takovém případě zařízení získá zásadu nebo profil při dalším plánovaném ohlášení se změnami ve službě Intune, která se **odhadne** na:
+Pokud se zařízení po prvním oznámení nevrátí se změnami, zobrazí se v Intune tři další pokusy. Zařízení, které je offline, například vypnuté nebo není připojené k síti, nemusí dostávat oznámení. V takovém případě zařízení získá zásadu nebo profil při dalším plánovaném ohlášení se změnami ve službě Intune. Totéž platí pro kontroly nedodržení předpisů, včetně zařízení, která se pohybují z kompatibilního do nekompatibilního stavu.
+
+**Odhadované** frekvence:
 
 | Platforma | Aktualizovat cyklus|
 | --- | --- |
@@ -59,9 +61,9 @@ Pokud se zařízení po prvním oznámení nevrátí se změnami, zobrazí se v 
 | Android | Přibližně každých 8 hodin |
 | Počítače s Windows 10 zaregistrované jako zařízení | Přibližně každých 8 hodin |
 | Windows Phone | Přibližně každých 8 hodin |
-| Windows 8.1 | Přibližně každých 8 hodin |
+| Windows 8.1 | Přibližně každých 8 hodin |
 
-Pokud se zařízení nedávno zaregistrovalo, spouští se ověření kompatibility a konfigurace častěji, **Odhadované** na:
+Pokud se zařízení nedávno zaregistrovalo, spouští se ověření dodržování předpisů, nedodržování předpisů a konfigurace častěji, což je **Odhadované** na:
 
 | Platforma | Četnost |
 | --- | --- |
@@ -70,7 +72,7 @@ Pokud se zařízení nedávno zaregistrovalo, spouští se ověření kompatibil
 | Android | Každé 3 minuty každé 3 minuty, potom každých 15 minut, 2 hodiny a pak každých 8 hodin. | 
 | Počítače s Windows 10 zaregistrované jako zařízení | Každé 3 minuty každé 3 minuty, potom každých 15 minut, 2 hodiny a pak každých 8 hodin. | 
 | Windows Phone | Každých 15 minut každých 5 minut, potom každých 15 minut a pak přibližně každých 8 hodin | 
-| Windows 8.1 | Každých 15 minut každých 5 minut, potom každých 15 minut a pak přibližně každých 8 hodin | 
+| Windows 8.1 | Každých 15 minut každých 5 minut, potom každých 15 minut a pak přibližně každých 8 hodin | 
 
 Uživatel může kdykoli otevřít aplikaci Portál společnosti, **nastavení** > **synchronizaci** , aby okamžitě kontrolovala aktualizace zásad nebo profilů.
 
@@ -120,7 +122,7 @@ Když odstraníte profil nebo odeberete zařízení ze skupiny, která má profi
     - Povolit jednoduchá hesla
     - Minimální délka hesla
     - Vyžadovaný typ hesla
-    - Omezená platnost hesla (ve dnech)
+    - Vypršení platnosti hesla (dny)
     - Pamatovat si historii hesel
     - Počet povolených opakovaných neúspěšných přihlášení, než bude zařízení vymazáno
     - Počet minut nečinnosti před vyžadováním hesla
