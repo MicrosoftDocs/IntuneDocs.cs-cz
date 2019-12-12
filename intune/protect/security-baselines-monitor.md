@@ -17,10 +17,10 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7b7f14e939e7241cd34c01d73e9af822dea7acdc
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74410126"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Sledování standardních hodnot zabezpečení a profilů v Microsoft Intune
@@ -57,7 +57,7 @@ V podokně Přehled se zobrazí souhrn založený na grafu o tom, kolik zaříze
 
 Pokud má zařízení různý stav z různých kategorií na základě směrného plánu, zařízení je reprezentované jediným stavem. Stav, který představuje zařízení, pochází z následujícího pořadí: nesprávně **nakonfigurované**, **neshoduje se se směrným plánem**, **není k dispozici**, **odpovídá směrnému plánu**.
 
-Pokud má například zařízení nastavení klasifikované jako nesprávně *nakonfigurované* a jedno nebo více nastavení klasifikovaných jako neodpovídá *směrnému plánu*, je zařízení klasifikované jako nesprávně *nakonfigurované*.
+Například, pokud zařízení obsahuje nastavení jsou klasifikovány jako *nesprávně nakonfigurované* a jedno nebo více nastavení, které jsou klasifikovány jako *neodpovídá směrného plánu*, zařízení je klasifikován tak *správněnakonfigurovaný*.
 
 Kliknutím na graf můžete procházet a zobrazit seznam zařízení s různými stavy. Pak můžete vybrat jednotlivá zařízení z tohoto seznamu a zobrazit podrobnosti o jednotlivých zařízeních. Například:
 

@@ -16,10 +16,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a7c3398f28d7c396c873dd29f3e3fdd719c1a7c6
-ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74691772"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Správa aktualizací softwaru Windows 10 v Intune
@@ -93,7 +93,7 @@ Aktualizační kanály Windows 10 podporují [značky oboru](../fundamentals/sco
 
    Až budete připraveni, vyberte **Další** a pokračujte v *přiřazení*.
 
-6. V části **přiřazení**zvolte **+ Vybrat skupiny, které chcete zahrnout** , a potom přiřaďte aktualizační kanál k jedné nebo více skupinám. Pomocí **+ Vyberte skupiny, které se vyloučí** , abyste mohli přiřazení vyladit. Pokračujte výběrem **Další** .
+6. V části **přiřazení**zvolte **+ Vybrat skupiny, které chcete zahrnout** , a potom přiřaďte aktualizační kanál k jedné nebo více skupinám. Pomocí **+ Vyberte skupiny, které se vyloučí** , abyste mohli přiřazení vyladit. Pokračujte výběrem tlačítka **Next** (Další).
 
 7. V části**zkontrolovat + vytvořit**zkontrolujte nastavení a pak vyberte **vytvořit** , jakmile budete připraveni Uložit aktualizační kanál Windows 10. Nový aktualizační kanál se zobrazí v seznamu aktualizačních kanálů.
 
@@ -104,10 +104,10 @@ Na portálu přejděte na **zařízení** > **Windows** > **aktualizačních kan
 Na této stránce můžete zobrazit stav přiřazení vyzvánění a v horní části podokna přehled vybrat následující akce ke správě aktualizačního kanálu:
 
 - [Odstranit](#delete)
-- [Chvíli](#pause)
-- [Opakované](#resume)
+- [Pozastavit](#pause)
+- [Resume](#resume)
 - [Zvětšení](#extend)
-- [Uninstall](#uninstall)
+- [Odinstalace](#uninstall)
 
 ![Dostupné akce](./media/windows-update-for-business-configure/overview-actions.png)
 
@@ -122,7 +122,7 @@ Při odstranění prstence z Intune se nezmění nastavení na zařízeních, kt
 1. Při prohlížení stránky přehled pro aktualizační kanál vyberte možnost **Odstranit**.
 2. Vyberte **OK**.
 
-#### <a name="pause"></a>Chvíli
+#### <a name="pause"></a>Pozastavení
 
 Vyberte **pozastavit** , pokud chcete, aby zařízení nepřijímala aktualizace funkcí nebo aktualizace kvality až 35 dní od času, kdy jste okruh zastavili. Po uplynutí maximálního počtu dní funkce pozastavení automaticky vyprší a zařízení zkontroluje dostupné aktualizace ve Windows Update. Po této kontrole můžete aktualizace znovu pozastavit.
 Pokud obnovíte pozastavený aktualizační kanál a pak tento prstenec znovu zastavíte, doba pozastavení se resetuje na 35 dní.
@@ -138,7 +138,7 @@ Když je typ aktualizace pozastaven, zobrazuje podokno přehled pro tento prsten
 > [!IMPORTANT]
 > Po vystavení příkazu pozastavit zařízení dostanou tento příkaz při příští kontrole služby. Je možné, že před přihlášením ke službě nainstalují plánovanou aktualizaci. Kromě toho platí, že pokud je cílové zařízení při vydání příkazu k pozastavení vypnuté, může po zapnutí stáhnout a nainstalovat plánované aktualizace před tím, než se přihlásí k Intune.
 
-#### <a name="resume"></a>Opakované
+#### <a name="resume"></a>Obnovit
 
 Když je aktualizační kanál pozastaven, můžete vybrat možnost **pokračovat** a obnovit aktualizace funkcí a kvality pro daný okruh na aktivní operaci. Po pokračování aktualizačního kanálu můžete tento prstenec pozastavit znovu.
 
@@ -148,7 +148,7 @@ Když je aktualizační kanál pozastaven, můžete vybrat možnost **pokračova
 2. Vyberte z dostupných možností, aby se obnovily buď aktualizace **funkcí** , nebo **kvality** , a pak vyberte **OK**.
 3. Po obnovení jednoho typu aktualizace můžete znovu vybrat pokračovat a obnovit jiný typ aktualizace.
 
-#### <a name="extend"></a>Zvětšení  
+#### <a name="extend"></a>Rozšíření  
 
 Když je aktualizační kanál pozastaven, můžete vybrat možnost **Rozšířené** a resetovat dobu pozastavení pro aktualizace funkcí a kvality pro daný aktualizační kanál na 35 dní.
 
@@ -227,7 +227,7 @@ Když zařízení obdrží zásadu aktualizace funkcí Windows 10:
 
 3. V části **základy**zadejte název, popis (volitelný) a **aktualizaci funkcí k nasazení**, vyberte verzi Windows se sadou funkcí, kterou chcete použít, a pak vyberte **Další**.
 
-4. V části **přiřazení**zvolte **+ Vybrat skupiny, které chcete zahrnout** , a potom přiřaďte aktualizační kanál k jedné nebo více skupinám. Pokračujte výběrem **Další** .
+4. V části **přiřazení**zvolte **+ Vybrat skupiny, které chcete zahrnout** , a potom přiřaďte aktualizační kanál k jedné nebo více skupinám. Pokračujte výběrem tlačítka **Next** (Další).
 
 5. V části **zkontrolovat + vytvořit**zkontrolujte nastavení a vyberte **vytvořit** , až budete připraveni Uložit zásady aktualizací funkcí Windows 10.  
 

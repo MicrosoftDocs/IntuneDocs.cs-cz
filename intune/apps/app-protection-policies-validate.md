@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e9c3e775773ab08721cb3a65858f3d8c8402104f
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74563738"
 ---
 # <a name="how-to-validate-your-app-protection-policy-setup-in-microsoft-intune"></a>Ověření nastavení zásad ochrany aplikací v Microsoft Intune
@@ -61,6 +61,6 @@ Postupujte podle stavu uživatele:
 - [Co jsou zásady ochrany aplikací Intune?](app-protection-policies.md)
 - [Licence, které zahrnují Intune](../fundamentals/licenses.md)
 - [Přiřazení licencí uživatelům, aby mohli zaregistrovat zařízení v Intune](../fundamentals/licenses-assign.md)
-- [Ověření nastavení zásad ochrany aplikací](app-protection-policies-validate.md)
+- [Jak ověřit nastavení zásad ochrany aplikací](app-protection-policies-validate.md)
 - [Jak monitorovat zásady ochrany aplikací](app-protection-policies-monitor.md)
 

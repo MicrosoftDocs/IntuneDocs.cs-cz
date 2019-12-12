@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 44733eb369e520d2d5f0ff548d4f1921abcb8758
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72503576"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>Řešení potíží s integrací Jamf pro s Microsoft Intune
@@ -31,7 +31,7 @@ Tento článek pomáhá správcům Intune pochopit a řešit problémy s integra
 > [!TIP]  
 > Většina informací v tomto článku se původně objevila při [řešení potíží při integraci Jamf s Microsoft Intune](https://support.microsoft.com/help/4519171/troubleshoot-problems-when-integrating-jamf-with-microsoft-intune) v support.Microsoft.com.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadované součásti
 
 Než začnete s odstraňováním potíží, shromážděte některé základní informace pro objasnění problému a zkrácení doby hledání řešení. Například pokud narazíte na problém související s integrací Jamf-Intune, vždy ověřte, že byly splněny všechny požadavky. Než začnete řešit potíže, přečtěte si následující skutečnosti:
 
@@ -42,10 +42,10 @@ Než začnete s odstraňováním potíží, shromážděte některé základní 
 
 
 Při zkoumání integrace Jamf pro s Intune Vezměte v úvahu následující informace: 
-- Jaká je přesná chybová zpráva?
+- Jaké je přesné znění chybové zprávy?
 - Kde je chybová zpráva?
-- Kdy problém začal?  Pracovala integrace s Jamf pro s Intune neustále?
-- Kolik uživatelů je ovlivněno? Ovlivnili všichni uživatelé nebo jen některé?
+- Kdy tento problém začal?  Pracovala integrace s Jamf pro s Intune neustále?
+- Kolika uživatelů se to týká? Ovlivnili všichni uživatelé nebo jen některé?
 - Kolik zařízení je ovlivněno? Jsou všechna zařízení ovlivněná nebo jenom některá?
  
 

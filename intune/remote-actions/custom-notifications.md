@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8393bbc012861199bd99d97a62ab3e659c15d15
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 443e1e2fff2a0c4641d3446bf72e455cc92ce784
+ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713242"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74907283"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Odesílání vlastních oznámení v Intune  
 
@@ -45,8 +45,8 @@ Vlastní zprávy s oznámením obsahují krátký nadpis a tělo zprávy o 500 n
 - Zařízení musí být zaregistrované v MDM.
 
 **Oprávnění**:
-- Aby bylo možné odesílat oznámení do skupin, musí mít váš účet v Intune následující oprávnění RBAC: *organizace* > **aktualizace**.
-- Aby bylo možné odesílat oznámení do zařízení, váš účet musí mít v Intune následující oprávnění RBAC: *vzdálené úlohy* > **odesílat vlastní oznámení**.
+- Aby bylo možné odesílat oznámení do skupin, váš účet musí mít v Intune následující oprávnění RBAC: > *organizace* **aktualizace**.
+- Aby bylo možné odesílat oznámení do zařízení, musí mít váš účet v Intune následující oprávnění RBAC: *vzdálené úlohy* > **odesílají vlastní oznámení**.
 
 **Vytváření oznámení**:  
 - Pokud chcete vytvořit zprávu, použijte účet, ke kterému je přiřazená role Intune, která zahrnuje oprávnění **aktualizace** pro **organizaci**. Postup přiřazení oprávnění uživateli najdete v tématu [přiřazení rolí](../fundamentals/role-based-access-control.md#role-assignments) .  
@@ -69,7 +69,7 @@ Vlastní zprávy s oznámením obsahují krátký nadpis a tělo zprávy o 500 n
 
 ## <a name="send-a-custom-notification-to-groups"></a>Odeslání vlastního oznámení do skupin  
 
-1. Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) pomocí účtu, který má oprávnění k vytváření a odesílání oznámení, a na **zařízeních** > **odesílat vlastní oznámení**.  
+1. Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) pomocí účtu, který má oprávnění k vytváření a odesílání oznámení, a přejít na **správu tenanta** > **vlastní oznámení**.  
 
 2. Na kartě základy zadejte následující příkaz a pokračujte výběrem **Další** .  
    - **Title** – zadejte název tohoto oznámení. Názvy jsou omezeny na 50 znaků.  
@@ -93,7 +93,7 @@ Intune nesleduje vlastní oznámení, která odesíláte, a zařízení neprotok
 
 2. Vyberte zařízení, pro které chcete odeslat oznámení.  
 
-3. Na stránce **Přehled** zařízení vyberte **... Další** možnost v levé horní části stránky.  
+3. Na stránce **Přehled** zařízení v pravém horním rohu stránky vyberte možnost **...** (tři tečky).  
 
 4. Vyberte akci **Odeslat vlastní oznámení** a otevřete podokno *Odeslat vlastní oznámení* , kde zadáte následující podrobnosti zprávy:  
 

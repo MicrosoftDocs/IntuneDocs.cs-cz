@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 66acf4d8b88097c3262f44493ab72b3900781eed
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72504960"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Odeslání dat protokolu do úložiště, centra událostí nebo Log Analytics v Intune (Preview)
@@ -45,7 +45,7 @@ V tomto článku se dozvíte, jak pomocí **nastavení diagnostiky** odesílat d
 
 ## <a name="prerequisites"></a>Požadované součásti
 
-Chcete-li použít tuto funkci, budete potřebovat:
+Pokud chcete používat tuto funkci, potřebujete tyto položky:
 
 * Předplatné Azure: Pokud ještě nemáte předplatné Azure, můžete si [zaregistrovat bezplatnou zkušební verzi](https://azure.microsoft.com/free/).
 * Prostředí Microsoft Intune (tenant) v Azure
@@ -53,7 +53,7 @@ Chcete-li použít tuto funkci, budete potřebovat:
 
 V závislosti na tom, kde chcete směrovat data protokolu auditu, potřebujete jednu z následujících služeb:
 
-* [Účet služby Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-account-overview) s oprávněními *klíče listkey* . Doporučujeme použít obecný účet úložiště, nikoli účet Blob Storage. Informace o cenách služby Storage najdete v [cenové kalkulačkě Azure Storage](https://azure.microsoft.com/pricing/calculator/?service=storage). 
+* [Účet služby Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-account-overview) s oprávněními *klíče listkey* . Doporučujeme použít obecný účet úložiště, nikoli účet Blob Storage. Informace o cenách úložiště najdete v [cenové kalkulačce služby Azure Storage](https://azure.microsoft.com/pricing/calculator/?service=storage). 
 * [Obor názvů centra událostí Azure](https://docs.microsoft.com/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) , který se má integrovat s řešeními třetích stran.
 * [Pracovní prostor Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/learn/quick-create-workspace) pro odesílání protokolů do Log Analytics.
 
@@ -86,18 +86,18 @@ V závislosti na tom, kde chcete směrovat data protokolu auditu, potřebujete j
 
     - **LOG** > **AuditLogs**: tuto možnost vyberte, pokud chcete odesílat [protokoly auditu Intune](../monitor-audit-logs.md) do svého účtu úložiště, centra událostí nebo Log Analytics. Protokoly auditu zobrazují historii každého úkolu, který v Intune generuje změnu, včetně toho, kdo ho a kdy.
 
-      Pokud se rozhodnete použít účet úložiště, zadejte také počet dní, po které chcete zachovat data (uchování). Chcete-li zachovat data navždy, nastavte dobu **uchovávání (dny)** na `0` (nula).
+      Pokud se rozhodnete použít účet úložiště, zadejte také počet dní, po které chcete zachovat data (uchování). Pokud chcete zachovat data navždy, nastavte dobu **uchování (dny)** na `0` (nula).
 
-    - **LOG** > **OperationalLogs**: provozní protokoly (Preview) znázorňují úspěch nebo neúspěch uživatelů a zařízení, která se registrují do Intune, a také podrobnosti o nevyhovujících zařízeních. Tuto možnost vyberte, pokud chcete odesílat protokoly zápisu do svého účtu úložiště, centra událostí nebo Log Analytics.
+    - **LOG** > **OperationalLogs**: provozní protokoly (Preview) zobrazují počet úspěšných nebo neúspěšných uživatelů a zařízení, která se registrují v Intune, a také podrobnosti o nevyhovujících zařízeních. Tuto možnost vyberte, pokud chcete odesílat protokoly zápisu do svého účtu úložiště, centra událostí nebo Log Analytics.
 
-      Pokud se rozhodnete použít účet úložiště, zadejte také počet dní, po které chcete zachovat data (uchování). Chcete-li zachovat data navždy, nastavte dobu **uchovávání (dny)** na `0` (nula).
+      Pokud se rozhodnete použít účet úložiště, zadejte také počet dní, po které chcete zachovat data (uchování). Pokud chcete zachovat data navždy, nastavte dobu **uchování (dny)** na `0` (nula).
 
       > [!NOTE]
       > Provozní protokoly jsou ve verzi Preview. Pokud chcete poskytnout zpětnou vazbu, včetně informací v provozních protokolech, navštivte web [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback).
 
     - **LOG** > **DeviceComplianceOrg**: protokoly organizace pro dodržování předpisů zařízením (Preview) zobrazit sestavu organizace pro dodržování předpisů zařízením v Intune a podrobnosti o nevyhovujících zařízeních. Tuto možnost vyberte, pokud chcete odesílat protokoly dodržování předpisů do svého účtu úložiště, centra událostí nebo Log Analytics.
 
-      Pokud se rozhodnete použít účet úložiště, zadejte také počet dní, po které chcete zachovat data (uchování). Chcete-li zachovat data navždy, nastavte dobu **uchovávání (dny)** na `0` (nula).
+      Pokud se rozhodnete použít účet úložiště, zadejte také počet dní, po které chcete zachovat data (uchování). Pokud chcete zachovat data navždy, nastavte dobu **uchování (dny)** na `0` (nula).
  
       > [!NOTE]
       > Protokoly organizace pro dodržování předpisů zařízením jsou ve verzi Preview. Pokud chcete poskytnout zpětnou vazbu, včetně informací v sestavě, navštivte web [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback).
@@ -115,19 +115,19 @@ Protokoly auditu můžete exportovat i v jiných částech Intune, včetně regi
 Pokud například chcete exportovat protokoly auditu při používání dodržování předpisů zařízením:
 
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Vyberte **dodržování předpisů zařízením** > **monitor** > **protokoly auditu**:
+2. Vyberte **dodržování předpisů zařízením** > **monitorování** > **protokoly auditu**:
 
     ![Výběr protokolů auditu pro směrování dat Intune do Azure Monitor úložiště, centra událostí nebo analýzy](./media/review-logs-using-azure-monitor/audit-logs-under-monitor-in-compliance.png)
 
 3. Vyberte **Exportovat nastavení dat**. Pokud není povolená, můžete zapnout **nastavení diagnostiky**. Můžete také zvolit, kam chcete protokoly odeslat, jak je popsáno v tématu [odeslání protokolů do služby Azure monitor](#send-logs-to-azure-monitor) (v tomto článku).
 
-## <a name="cost-considerations"></a>Požadavky na náklady
+## <a name="cost-considerations"></a>Důležité informace o nákladech
 
 Pokud už máte licenci Microsoft Intune, budete k nastavení účtu úložiště a centra událostí potřebovat předplatné Azure. Předplatné Azure je obvykle bezplatné. Ale platíte za využívání prostředků Azure, včetně účtu úložiště pro archivaci a centra událostí pro streamování. Množství dat a náklady se liší v závislosti na velikosti tenanta.
 
 ### <a name="storage-size-for-activity-logs"></a>Velikost úložiště pro protokoly aktivit
 
-Každá událost protokolu auditu používá přibližně 2 KB úložiště dat. Pro tenanta s 100 000 uživateli můžete mít přibližně 1 500 000 událostí za den. Možná budete potřebovat přibližně 3 GB úložiště dat za den. Vzhledem k tomu, že zápisy obvykle probíhá v rámci pěti minut, můžete očekávat přibližně 9 000 operací zápisu za měsíc.
+Každá událost protokolu auditu zabere v úložišti dat asi 2 kB. Pro tenanta s 100 000 uživateli můžete mít přibližně 1 500 000 událostí za den. Možná budete potřebovat přibližně 3 GB úložiště dat za den. Vzhledem k tomu, že zápisy obvykle probíhá v rámci pěti minut, můžete očekávat přibližně 9 000 operací zápisu za měsíc.
 
 V následujících tabulkách je uveden odhad nákladů v závislosti na velikosti tenanta. Zahrnuje taky účet úložiště pro obecné účely V2 v Západní USA aspoň na jeden rok uchovávání dat. Pokud chcete získat odhad objemu dat, který pro vaše protokoly očekáváte, použijte [cenovou kalkulačku služby Azure Storage](https://azure.microsoft.com/pricing/details/storage/blobs/).
 
@@ -135,19 +135,19 @@ V následujících tabulkách je uveden odhad nákladů v závislosti na velikos
 
 | | |
 |---|---|
-|Události za den| 1 500 000|
+|Počet událostí za den| 1,5 milionu|
 |Odhadovaný objem dat za měsíc| 90 GB|
-|Odhadované náklady za měsíc (USD)| $1,93|
-|Odhadované náklady za rok (USD)| $23,12|
+|Odhadované náklady za měsíc (USD)| 1,93 USD|
+|Odhadované náklady za rok (USD)| 23,12 USD|
 
 **Protokol auditu s 1 000 uživateli**
 
 | | |
 |---|---|
-|Události za den| 15 000|
+|Počet událostí za den| 15,000|
 |Odhadovaný objem dat za měsíc| 900 MB|
-|Odhadované náklady za měsíc (USD)| $0,02|
-|Odhadované náklady za rok (USD)| $0,24|
+|Odhadované náklady za měsíc (USD)| 0,02 USD|
+|Odhadované náklady za rok (USD)| 0,24 USD|
 
 ### <a name="event-hub-messages-for-activity-logs"></a>Zprávy centra událostí pro protokoly aktivit
 
@@ -155,29 +155,29 @@ Události se obvykle účtují v intervalech po pěti minutách a odesílají se
 
 Například přibližně 18 událostí za sekundu se obvykle používá pro velký tenant více než 100 000 uživatelů. To je rovno 5 400 událostem každých pět minut (300 sekund × 18 událostí). Protokoly auditu mají přibližně 2 KB na jednu událost. To je rovno 10,8 MB dat. Proto se zprávy 43 odesílají do centra událostí v intervalu 5 minut.
 
-Následující tabulka obsahuje odhadované náklady na měsíc pro základní centrum událostí v Západní USA v závislosti na objemu dat události. Pokud chcete získat odhad objemu dat, který jste očekávali v protokolech, použijte [cenovou kalkulačku Event Hubs](https://azure.microsoft.com/pricing/details/event-hubs/).
+Následující tabulka obsahuje odhad měsíčních nákladů na základní centrum událostí v oblasti Západní USA v závislosti na objemu dat událostí. Pokud chcete získat odhad objemu dat, který jste očekávali v protokolech, použijte [cenovou kalkulačku Event Hubs](https://azure.microsoft.com/pricing/details/event-hubs/).
 
 **Protokol auditu s 100 000 uživateli**
 
 | | |
 |---|---|
-|Události za sekundu| let|
-|Události za pět minut| 5 400|
-|Svazek na interval| 10,8 MB|
+|Počet událostí za sekundu| 18|
+|Počet událostí za pětiminutový interval| 5 400|
+|Objem za interval| 10,8 MB|
 |Počet zpráv za interval| 43|
-|Zprávy za měsíc| 371 520|
-|Odhadované náklady za měsíc (USD)| $10,83|
+|Počet zpráv za měsíc| 371 520|
+|Odhadované náklady za měsíc (USD)| 10,83 USD|
 
 **Protokol auditu s 1 000 uživateli**
 
 | | |
 |---|---|
-|Události za sekundu|0,1 |
-|Události za pět minut| 52|
-|Svazek na interval|104 KB |
+|Počet událostí za sekundu|0.1 |
+|Počet událostí za pětiminutový interval| 52|
+|Objem za interval|104 kB |
 |Počet zpráv za interval|1 |
-|Zprávy za měsíc|8 640 |
-|Odhadované náklady za měsíc (USD)|$10,80 |
+|Počet zpráv za měsíc|8 640 |
+|Odhadované náklady za měsíc (USD)|10,80 USD |
 
 ### <a name="log-analytics-cost-considerations"></a>Log Analytics – požadavky na náklady
 
@@ -213,15 +213,15 @@ Náklady na streamování závisí na počtu přijatých zpráv za minutu. Podro
 
 ### <a name="how-do-i-integrate-intune-audit-logs-with-my-siem-system"></a>Návody integrovat protokoly auditu Intune se svým systémem SIEM?
 
-Použijte Azure Monitor s Event Hubs ke streamování protokolů do systému SIEM. Nejdřív [Streamujte protokoly do centra událostí](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub). Pak [nastavte nástroj Siem](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub) pomocí nakonfigurovaného centra událostí. 
+Pomocí služeb Azure Monitor a Event Hubs můžete protokoly streamovat do systému SIEM. Nejdřív [Streamujte protokoly do centra událostí](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub). Pak [nastavte nástroj Siem](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub) pomocí nakonfigurovaného centra událostí. 
 
 ### <a name="what-siem-tools-are-currently-supported"></a>Jaké nástroje SIEM se v tuto chvíli podporují?
 
-V současné době je Azure Monitor podporován [logikou](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory) [Splunk](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk), QRadar a sumo (otevře nový web). Další informace o tom, jak fungují konektory, najdete v tématu [streamování dat monitorování Azure do centra událostí pro využití externím nástrojem](https://docs.microsoft.com/azure/azure-monitor/platform/stream-monitoring-data-event-hubs).
+V současné době je Azure Monitor podporován [logikou](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory) [Splunk](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk), QRadar a sumo (otevře nový web). Další informace o fungování konektorů najdete v tématu [Streamování dat monitorování Azure do centra událostí, aby je mohl používat externí nástroj](https://docs.microsoft.com/azure/azure-monitor/platform/stream-monitoring-data-event-hubs).
 
 ### <a name="can-i-access-the-data-from-an-event-hub-without-using-an-external-siem-tool"></a>Můžu získat přístup k datům z centra událostí bez použití externího nástroje SIEM?
 
-Ano. Pro přístup k protokolům z vlastní aplikace můžete použít [rozhraní Event Hubs API](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph).
+Ano. Pro přístup k protokolům z vlastní aplikace můžete použít [rozhraní API služby Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph).
 
 ### <a name="what-data-is-stored"></a>Jaká data jsou uložená?
 

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: f31e500b7a3383c5c0c53f1df72cb4a42660328f
-ms.sourcegitcommit: 1a22b8b31424847d3c86590f00f56c5bc3de2eb5
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74284090"
 ---
 
@@ -39,7 +39,7 @@ ms.locfileid: "74284090"
 > [!NOTE]
 > Ne všechny edice Windows podporují konfiguraci všech dostupných funkcí operačního systému prostřednictvím MDM. Viz [Referenční dokumentace poskytovatele služby Windows Configuration Service](https://docs.microsoft.com/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers). Každý CSP zvýrazňuje, které edice Windows jsou podporované.
 
-Zákazníci s Enterprise Management + Security (EMS) můžou [k registraci zařízení s Windows 10 používat taky Azure Active Directory (Azure AD)](/intune/windows-enroll).
+Zákazníci s Enterprise mobility + Security (EMS) můžete také použít [Azure Active Directory (Azure AD) pro registraci zařízení s Windows 10](/intune/windows-enroll).
 
 Pokyny k používání virtuálních počítačů s Windows 10 s Intune najdete v tématu [používání virtuálních počítačů s Windows 10](../fundamentals/windows-10-virtual-machines.md).
 

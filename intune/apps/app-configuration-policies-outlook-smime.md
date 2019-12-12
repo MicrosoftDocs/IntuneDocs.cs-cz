@@ -16,16 +16,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 348d1fe2fd236a2af11f7e58dc11530a5ce397bc
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: c9572f4accb1be232d4667d99b98beff90d81379
+ms.sourcegitcommit: edd06a494a241d198ca9b0d3030c92195976e0d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564191"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75000410"
 ---
 # <a name="configure-smime-with-outlook-for-ios"></a>Konfigurace S/MIME pomocí Outlooku pro iOS
 
 Standard S/MIME (Secure/Multipurpose Internet Mail Extensions) poskytuje úroveň zabezpečení pro odesílání e-mailů z účtu Exchange ActiveSync (EAS) a z něj. [Aplikace Microsoft Outlook](https://aka.ms/omsmime) může využívat S/MIME k šifrování odchozích zpráv i příloh, aby bylo zajištěno, že při použití účtů Office 365 může číst a přistupovat k obsahu zpráv pouze zamýšlený příjemce. Uživatelé můžou také digitálně podepsat zprávu, která příjemcům umožňuje ověřit identitu odesilatele a potvrdit, že zpráva nebyla úmyslně poškozena. Tato funkce je možná díky využití certifikátů. Další informace najdete v tématu [porozumění S/MIME](https://docs.microsoft.com/previous-versions/tn-archive/aa995740(v=exchg.65)?redirectedfrom=MSDN).
+
+> [!NOTE]
+> Tato funkce byla zpožděna, ale brzy bude vydána.
 
 > [!NOTE]
 > Toto téma popisuje způsob nasazení důvěryhodných kořenových certifikátů přes [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Microsoft Endpoint Manager je jediná integrovaná platforma pro správu koncových bodů pro správu všech vašich koncových bodů. Toto centrum pro správu Microsoft Endpoint Manageru integruje nástroj ConfigMgr a Microsoft Intune.
@@ -78,9 +81,6 @@ Zobrazí se podokno **Přidat zásady konfigurace** .
 6. Kliknutím na **nastavení konfigurace** přidejte nastavení konfigurace. 
     - Vyberte **použít návrháře konfigurace** vedle **Možnosti formát nastavení konfigurace** a přijměte výchozí nastavení. Další informace najdete v tématu [nastavení konfigurace aplikace Microsoft Outlook](~/apps/app-configuration-policies-outlook.md).
 7. Kliknutím na možnost **S/MIME** zobrazte **nastavení aplikace Outlook S/MIME**.
-
-    ![Snímek obrazovky s nastavením aplikace Outlook pro iOS S/MIME](./media/app-configuration-policies-outlook-smime/app-configuration-policies-outlook-smime-01.png)
-
 8. Nastavte **Povolit s/MIME** na **Ano**.
 9. Nastavte si **nasazení certifikátů S/MIME z Intune** na **Ano**.
 10. V části **podpisové certifikáty** vedle položky **typ profilu certifikátu**vyberte jednu z následujících možností:

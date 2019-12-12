@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7d89f512c06dcfbf6f6ddaba5e17ac9ca6f0becf
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72506808"
 ---
 # <a name="configure-the-take-a-test-app-on-windows-10-devices-using-intune"></a>Konfigurace aplikace pořizovat test na zařízeních s Windows 10 pomocí Intune
@@ -34,7 +34,7 @@ Pokud chcete získat další informace o této funkci, [Vyzkoušejte si testovac
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte profil konfigurace zařízení](education-settings-configure.md#create-a-device-profile).
+[Vytvořit profil konfigurace zařízení](education-settings-configure.md#create-a-device-profile).
 
 ## <a name="take-a-test-settings"></a>Provést nastavení testu
 Po vytvoření profilu konfigurace zařízení, přejít na **typ profilu** a vyberte **zabezpečené hodnocení (vzdělávání)** . Najdete v něm následující nastavení aplikace, které si můžete vyzkoušet. 
@@ -42,7 +42,7 @@ Po vytvoření profilu konfigurace zařízení, přejít na **typ profilu** a vy
 
 - **Typ účtu**: Vyberte způsob, jakým se uživatelé přihlásí k testu. Možnosti:
   - Účet Azure AD
-  - Doménový účet
+  - Účet domény
   - Místní účet
   - Účet místního hosta: dostupný jenom na zařízeních s Windows 10 verze 1903 a novějším.    
 - **Uživatelské jméno účtu**: zadejte uživatelské jméno účtu, který se používá v aplikaci pořizovat test. Účty můžete zadat v následujícím formátu:

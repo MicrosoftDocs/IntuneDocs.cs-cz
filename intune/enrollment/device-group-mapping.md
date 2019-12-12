@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ab720ffee3f468d3700558dfbde460ee8f712ea
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 8ee8bc3cdee9f61a901854e08000e9e2cbbb2864
+ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72505502"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955367"
 ---
 # <a name="categorize-devices-into-groups"></a>Kategorizace zařízení do skupin
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Abyste usnadnili správu zařízení, můžete použít kategorie zařízení Microsoft Intune k automatickému přidávání zařízení do skupin na základě kategorií, které definujete.
+Abychom usnadnili správu zařízení, můžete použít kategorií zařízení Microsoft Intune k automatickému přidávání zařízení do skupin podle kategorií, které definujete.
 
 Pro kategorie zařízení se používá následující pracovní postup:
 1. Vytvořte kategorie, z kterých si uživatelé při registraci svého zařízení můžou vybrat.
@@ -45,11 +45,10 @@ Kategorie zařízení můžete vytvořit zcela podle svých potřeb. Například
 ## <a name="how-to-configure-device-categories"></a>Jak konfigurovat kategorie zařízení
 
 ### <a name="step-1-create-device-categories-on-the-intune-blade-of-the-azure-portal"></a>Krok 1: Vytvoření kategorií zařízení v okně Intune na portálu Azure Portal
-1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Registrace zařízení**.
-2. V okně **Registrace zařízení** zvolte **Kategorie zařízení**.
-3. Na stránce **Kategorie zařízení** zvolte **Vytvořit**, abyste mohli přidat novou kategorii.
-4. V okně **Vytvořit kategorii zařízení** zadejte **název** nové kategorie a případně i její **popis**.
-5. Až to budete mít, vyberte **Vytvořit**. Novou kategorii uvidíte v seznamu kategorií.
+1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberte **zařízení** > **kategorie zařízení**.
+2. Na stránce **Kategorie zařízení** zvolte **Vytvořit**, abyste mohli přidat novou kategorii.
+3. V okně **Vytvořit kategorii zařízení** zadejte **název** nové kategorie a případně i její **popis**.
+4. Až to budete mít, vyberte **Vytvořit**. Novou kategorii uvidíte v seznamu kategorií.
 
 Název kategorie zařízení použijete při vytváření skupin zabezpečení Azure Active Directory (Azure AD) v kroku 2.
 
@@ -64,20 +63,16 @@ Až nakonfigurujete skupiny zařízení, bude se uživatelům při registrován�
 
 ### <a name="view-the-categories-of-devices-that-you-manage"></a>Zobrazení kategorií zařízení, která spravujete
 
-1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Zařízení**.
+1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberte **zařízení** > **všechna zařízení**.
 
-2. V části **Spravovat** vyberte **Všechna zařízení**.
+2. V seznamu zařízení zkontrolujte sloupec **Kategorie zařízení**.
 
-3. V seznamu zařízení zkontrolujte sloupec **Kategorie zařízení**.
-
-Pokud se sloupec **Kategorie zařízení** nezobrazuje, vyberte **Sloupce**. V seznamu zvolte **Kategorie zařízení** a vyberte **Použít**.
+Pokud sloupec **kategorie zařízení** není zobrazený, vyberte **sloupce** > **kategorii** **použít** > .
 
 ### <a name="change-the-category-of-a-device"></a>Změna kategorie zařízení
 
-1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Zařízení**.
-2. V okně **Zařízení** v části **Spravovat** zvolte **Všechna zařízení**.
-3. V seznamu vyberte požadované zařízení. Pak v okně s vlastnostmi zařízení v části **Spravovat** zvolte **Vlastnosti**.
-4. V dalším okně můžete pro vybrané zařízení změnit nastavení **Kategorie zařízení** na kterýkoliv z názvů kategorií, které jste dříve nakonfigurovali.
+1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), vyberte **zařízení** > **všechna zařízení** > vyberte zařízení, které chcete > **vlastnosti**.
+2. V dalším okně můžete pro vybrané zařízení změnit nastavení **Kategorie zařízení** na kterýkoliv z názvů kategorií, které jste dříve nakonfigurovali.
 
 ## <a name="after-you-configure-device-groups"></a>Po konfiguraci skupin zařízení
 

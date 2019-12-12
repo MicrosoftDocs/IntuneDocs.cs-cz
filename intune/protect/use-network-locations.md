@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 847ab759b697d402acb07d9c8d83d3a3ef9aaef2
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74058151"
 ---
 # <a name="use-locations-network-fence-in-intune"></a>Použití funkce Umístění (ohraničení sítě) v Intune
@@ -30,7 +30,7 @@ Můžete chtít blokovat přístup k firemní síti v případě, že zařízen�
 
 Můžete vytvořit zásady dodržování předpisů založené na síťovém umístění, které se také označují jako ohraničení sítě. Tyto zásady zajišťují, že pokud mají zařízení vyhovovat, musí být připojená k pracovní síti. Tato zásada se dá použít se zásadami podmíněného přístupu, takže zařízení mají přístup k pracovním prostředkům *jenom* v případě, že je zařízení připojené k pracovní síti. Když není zařízení připojené k pracovní síti, stane se nevyhovujícím a ztratí přístup k pracovním prostředkům.
 
-Vezměte v úvahu následující scénář:
+Uvažte následující příklady:
 
 Někteří zaměstnanci ve vašem výrobním závodě používají zařízení s Androidem. Zaměstnanci si odnášejí zařízení s Androidem mimo závod nebo továrnu. Abyste zabránili neoprávněnému přístupu, můžete:
 
@@ -54,7 +54,7 @@ Vytvoření zásad dodržování předpisů založených na síťovém umístěn
 
 2. Zadejte následující vlastnosti:  
 
-   - Požadovanou. Zadejte **Název** umístění, například **Výrobní podlaží** nebo **Budova 44 – zabezpečená**.
+   - Povinný parametr. Zadejte **Název** umístění, například **Výrobní podlaží** nebo **Budova 44 – zabezpečená**.
    - Volitelný parametr. Zadejte **rozsah IPv4** s notací CIDR (Classless Interdomain Routing), například `aaa.bbb.ccc.ddd/n`.
    - Volitelný parametr. Zadejte adresu **brány IPv4**, například `aaa.bbb.ccc.ddd`.
    - Volitelný parametr. Zadejte adresu **serveru DHCP IPv4**, například `aaa.bbb.ccc.ddd`.

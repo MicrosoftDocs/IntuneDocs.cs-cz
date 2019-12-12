@@ -1,11 +1,11 @@
 ---
-title: Licence dostupné pro Microsoft Intune
+title: Licence k dispozici pro Microsoft Intune
 description: Služba Intune je dostupná s těmito licencemi.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/05/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 346960d8d1d79afc4494064570d1a03e83b8a302
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 8d7b8d96ae1582b5cb434c80d44ef55a31c4781b
+ms.sourcegitcommit: 0a85af9d584709ecc29062f91645a4c47a61ebb9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72510147"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74882301"
 ---
 # <a name="microsoft-intune-licensing"></a>Microsoft Intune licencování
 Microsoft Intune je k dispozici pro různé potřeby zákazníků a velikosti organizace, od jednoduchého prostředí pro správu škol a malých firem až po pokročilejší funkce, které vyžadují Podnikoví zákazníci. Většina licencí, které zahrnují Microsoft Intune, také uděluje práva k použití System Center Configuration Manager, pokud předplatné zůstane aktivní. 
@@ -35,8 +35,8 @@ Intune je součástí těchto licencí:
 - Enterprise Mobility + Security E3
 - Microsoft 365 Business
 - Microsoft 365 F1
-
-
+- Microsoft 365 vládní instituce G5
+- Microsoft 365 vláda G3
 
 ## <a name="microsoft-intune-for-education"></a>Microsoft Intune for Education
 Intune for Education je zahrnutý v následujících licencích:
@@ -46,7 +46,7 @@ Intune for Education je zahrnutý v následujících licencích:
 
 ## <a name="additional-information"></a>Další informace
 - Microsoft Intune předplatné uživatele a zařízení je k dispozici jako samostatné, kromě výše uvedených prostředků.
-- K dispozici je Microsoft Intune předplatné jenom pro zařízení, ve kterém se nepoužívají žádné funkce spřažení uživatele.
+- K dispozici je Microsoft Intune předplatné jenom pro zařízení, která slouží ke správě veřejných terminálů, vyhrazených zařízení, zařízení s telefonní místností, IoT a dalších zařízení s jedním použitím, která nevyžadují zabezpečení a funkce správy založené na uživateli.
 - Je-li uživatel nebo zařízení přímo nebo nepřímo ze služby Microsoft Intune, včetně přístupu ke službě Microsoft Intune přes [rozhraní Microsoft API](https://docs.microsoft.com/legal/microsoft-apis/terms-of-use), je nutné použít příslušnou licenci Microsoft Intune.
 - Intune není zahrnutý v licencích, které nejsou v předchozích tabulkách.
 

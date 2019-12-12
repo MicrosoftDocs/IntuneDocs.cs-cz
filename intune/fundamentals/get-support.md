@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5aca7dbae7a74af399bcbf21aec1dd9dd2d1e851
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74390749"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak získat podporu pro Microsoft Intune
@@ -54,7 +54,7 @@ Při použití nově vytvořeného tenanta pro Intune je možné, že se nepoved
 
 Podrobnosti o chybě zahrnují *ID relace*, podrobnosti *rozšíření* a další. 
  
-K tomuto problému dochází, když jste svůj nový účet tenanta ještě neověřili prostřednictvím **centra pro správu M365** na https://admin.microsoft.comnebo na **portálu Office 365** na https://portal.office.com. Pokud chcete tento problém vyřešit, vyberte odkaz pro *Centrum pro správu M365* ve zprávě nebo navštivte https://portal.office.coma přihlaste se. Po ověření v obou lokalitách bude k dispozici *pomoc a podpora* služby Intune.
+K tomuto problému dochází, když jste svůj nový účet tenanta ještě neověřili prostřednictvím **centra pro správu M365** na https://admin.microsoft.com nebo na **portálu Office 365** na https://portal.office.com. Pokud chcete tento problém vyřešit, vyberte odkaz pro *Centrum pro správu M365* ve zprávě nebo navštivte https://portal.office.com a přihlaste se. Po ověření v obou lokalitách bude k dispozici *pomoc a podpora* služby Intune.
 
 
 **Přístup k nápovědě a podpoře**:
@@ -90,7 +90,7 @@ K tomuto problému dochází, když jste svůj nový účet tenanta ještě neov
 
   *Potřebujete tuto podporu?* Otevře se podokno *najít řešení* . Pokud ale máte aktivní případ podpory, otevře se okno v podokně *žádosti o služby* , kde můžete zobrazit podrobnosti o aktivních a uzavřených případech podpory.
 
-#### <a name="find-solutions"></a>Najít řešení
+#### <a name="find-solutions"></a>Najděte řešení
 
 ![Vyberte podokno najít řešení.](./media/get-support/find-solutions.png)
 
@@ -149,7 +149,7 @@ Když použijete levé navigační podokno, získáte **pomoc a podporu**, nebo 
 
 Na této stránce vyberte **+ Nová žádost o podporu** a otevřete tak kartu *základy* na stránce *pomoc a podpora a nová žádost o podporu* .
 
-![Pomoc a podpora](./media/get-support/help-plus-support.png)
+![Nápověda a podpora](./media/get-support/help-plus-support.png)
 
 Na této stránce:
 

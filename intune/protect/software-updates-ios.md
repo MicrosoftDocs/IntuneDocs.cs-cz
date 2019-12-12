@@ -14,10 +14,10 @@ ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 0f9750603d19d9b19697c7d2660351c4586432f6
-ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73984186"
 ---
 # <a name="add-ios-software-update-policies-in-intune"></a>Přidání zásad aktualizace softwaru pro iOS do Intune
@@ -82,7 +82,7 @@ Můžete upravit existující zásadu, včetně změny časových omezení:
 2. Při prohlížení **vlastností**zásad vyberte **Upravit** pro stránku zásady, kterou chcete upravit.  
    ![upravit policejní](./media/software-updates-ios/edit-policy.png)   
 
-3. Po zavedení změny vyberte **zkontrolovat + uložit**  > **Uložit** , aby se změny uložily, a vraťte se do *vlastností*zásad.  
+3. Po zavedení změny vyberte **zkontrolovat + uložit** > **Uložit** , aby se změny uložily, a vraťte se do *vlastností*zásad.  
  
 > [!NOTE]
 > Pokud je **čas spuštění** i **čas ukončení** nastavený na 12 DOP, Intune nekontroluje při instalaci aktualizací omezení. To znamená, že všechny konfigurace, které máte k dispozici pro **dobu výběru** , se budou ignorovat a aktualizace se můžou nainstalovat kdykoli.  

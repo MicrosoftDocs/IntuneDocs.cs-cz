@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 321595a2ce8849b3d150b68f9dcc38dfda6ad940
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74390292"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Vytvoření a přiřazení profilů certifikátů SCEP v Intune
@@ -194,8 +194,8 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
      Vyberte možnosti použití klíče pro certifikát:
 
-     - **Digitální podpis**: umožňuje výměnu klíče jenom v případě, že digitální podpis pomáhá chránit klíč.
-     - **Šifrování klíče**: umožňuje výměnu klíče jenom v případě, že je klíč zašifrovaný.
+     - **Digitální podpis**: Umožňuje výměnu klíče jenom v případě, že se k ochraně klíče využívá digitální podpis.
+     - **Šifrování klíče**: Umožňuje výměnu klíče jenom v případě, že je klíč zašifrovaný.
 
    - **Velikost klíče (bity)** :
 
@@ -223,7 +223,7 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
      Zadejte jednu nebo více adres URL pro servery NDES, které vystavují certifikáty prostřednictvím SCEP. Zadejte například něco jako *https://ndes.contoso.com/certsrv/mscep/mscep.dll* . V případě potřeby můžete přidat další adresy URL SCEP pro vyrovnávání zatížení, protože adresy URL se v profilu náhodně přidávají do zařízení. Pokud jeden ze serverů SCEP není dostupný, požadavek SCEP selže a je možné, že u pozdějších vrácení se změnami zařízení může být žádost o certifikát vytvořená na stejném serveru, který je mimo provoz.
 
-8. Vyberte **OK**a pak vyberte **vytvořit**. Profil se vytvoří a zobrazí se v seznamu *Konfigurace zařízení – profily* .
+8. Vyberte **OK** a potom vyberte **Vytvořit**. Profil se vytvoří a zobrazí se v seznamu *Konfigurace zařízení – profily* .
 
 ### <a name="avoid-certificate-signing-requests-with-escaped-special-characters"></a>Vyhnout se žádostem o podepsání certifikátu pomocí řídicích speciálních znaků
 

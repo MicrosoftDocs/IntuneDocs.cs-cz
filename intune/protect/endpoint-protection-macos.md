@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 358a396e762f1f20051abadfc2f3df80f37ca8c8
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72502293"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Nastavení ochrany koncových bodů MacOS v Intune  
@@ -46,15 +46,15 @@ Tento článek ukazuje nastavení ochrany koncových bodů, která můžete nako
 
   **Výchozí**: Nenakonfigurováno  
 
-## <a name="firewall"></a>Servery  
+## <a name="firewall"></a>Firewall  
 
 Firewall slouží ke kontrole připojení aplikace, nikoli připojení k portu. Když použijete nastavení pro danou aplikaci, získáte snadno výhody ochrany branou firewall. Nežádoucím aplikacím také znemožníte převzetí kontroly nad síťovými porty otevřenými pro oprávněné aplikace.  
 
-**Všeobecně**
-- **Servery**  
+**Obecné**
+- **Brána firewall**  
   Povolte bránu firewall ke konfiguraci způsobu zpracování příchozích připojení ve vašem prostředí.  
   - **Není nakonfigurováno**  
-  - **Aby**  
+  - **Enable**  
 
   **Výchozí**: Nenakonfigurováno  
 
@@ -76,7 +76,7 @@ Firewall slouží ke kontrole připojení aplikace, nikoli připojení k portu. 
   - **Neviditelný režim**  
     Chcete-li zabránit počítači v reakci na požadavky na zjišťování, Povolte režim utajení. Oprávněným aplikacím bude zařízení dále odpovídat na příchozí žádosti. Neočekávané požadavky, jako je ICMP (ping), se ignorují.  
     - **Není nakonfigurováno**  
-    - **Aby**  
+    - **Enable**  
 
     **Výchozí**: Nenakonfigurováno  
 
@@ -89,7 +89,7 @@ Další informace o nastaveních úložišť Apple najdete v tématu [FDEFileVau
 - **FileVault**  
   Pomocí XTS-AES 128 s trezorem pro zařízení, na kterých běží macOS 10,13 nebo novější, můžete *Povolit* úplné šifrování disku.  
   - **Není nakonfigurováno**  
-  - **Aby**  
+  - **Enable**  
 
   **Výchozí**: Nenakonfigurováno  
 

@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e4f8768129ab035b4a935a900f62ab6f3379edd
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 46012b11cdb458243658e858b53c2dfb1a69dc88
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74832648"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991797"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Řešení potíží s registrací zařízení s Windows v Microsoft Intune
 
@@ -205,7 +205,7 @@ Chyba: došlo k problému. Vaše organizace nepodporuje tuto verzi Windows.  (0x
 #### <a name="resolution"></a>Řešení
 Pokud chcete tento problém vyřešit v samostatném prostředí Intune, postupujte takto: 
  
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **omezení registrace** > vyberte typ zařízení omezení.    
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **omezení registrace** > vyberte omezení typu zařízení.    
 2. Vyberte **vlastnosti** > **Upravit** (vedle **Nastavení platformy**) > **Povolení** pro **Windows (MDM)** .    
 3. Klikněte na tlačítko **zkontrolovat a uložit**.    
  

@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3d8aadbd876ea03da0f16acea82b71ebd85cf9be
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73712250"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Vyhledání primárního uživatele zařízení v Intune
@@ -65,8 +65,8 @@ Intune automaticky přidá primárního uživatele do zařízení během nebo po
 | Windows | Spoluspráva | První uživatel, který se přihlásí k Windows | Když se první uživatel přihlásí k Windows | 
 | Windows | Připojení k Azure AD (token hromadného zápisu) | Žádné | Není k dispozici | 
 | Windows | Připojení k Azure AD (režim automatického nasazení autopilotu) | Žádné | Není k dispozici | 
-| Pro různé platformy | Registrace řízená uživatelem v aplikaci Portál společnosti | Registrace uživatele | Během registrace |
-| Pro různé platformy | Správce registrace zařízení (DEM) | Registrace uživatele DEM | Během registrace |
+| Napříč platformami | Registrace řízená uživatelem v aplikaci Portál společnosti | Registrace uživatele | Během registrace |
+| Napříč platformami | Správce registrace zařízení (DEM) | Registrace uživatele DEM | Během registrace |
 | iOS, macOS | Apple automatizované registrace zařízení (DEP s přidružením uživatele) | Registrace uživatele | Během registrace |
 | iOS, macOS | Apple automatizované registrace zařízení (DEP bez přidružení uživatele) | Žádné | Není k dispozici |
 | Android | Zařízení se systémem Android, která jsou ve vlastnictví společnosti, vyhrazena | Žádné | Není k dispozici |

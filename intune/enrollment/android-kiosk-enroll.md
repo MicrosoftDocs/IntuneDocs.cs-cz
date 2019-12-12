@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 83f0d980bc4fa1bfd0b48f87839fd6efa130aa70
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74563882"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Nastavení registrace Intune pro vyhrazená podniková zařízení s Androidem
@@ -52,7 +52,7 @@ Chcete-li nastavit správu vyhrazené správy zařízení s Androidem Enterprise
 4. [Vytvořte skupinu zařízení](#create-a-device-group).
 5. [Zaregistrujte vyhrazená zařízení](#enroll-the-dedicated-devices).
 
-### <a name="create-an-enrollment-profile"></a>Vytvoření registračního profilu
+### <a name="create-an-enrollment-profile"></a>Vytvoření profilu registrace
 
 > [!NOTE]
 > Pokud platnost tokenu vypršela, neobjeví se v **zápisu zařízení** > registrace zařízení s **Androidem** > **vyhrazená zařízení ve vlastnictví firmy**. Pokud chcete zobrazit všechny profily přidružené k aktivním i neaktivním tokenům, klikněte na **Filtr** a zaškrtněte políčka u možnosti aktivní i neaktivní stavy zásad. 

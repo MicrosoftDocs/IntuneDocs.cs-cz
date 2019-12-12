@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a4a8fa34673340e4adca7b64707d8c79d4808460
-ms.sourcegitcommit: 1cf063c98e1caae00a6e6fab821cc3254562bca9
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74290944"
 ---
 # <a name="reference-for-application-entities"></a>Referenční informace o entitách aplikací
@@ -39,11 +39,11 @@ Kategorie **aplikace** obsahuje entity pro zařízení, která sledují informac
 
 Entita **appRevision** obsahuje seznam všech verzí aplikací.
 
-| Vlastnost  | Popis | Příklad |
+| Vlastnost  | Description | Příklad |
 |---------|------------|--------|
 | appKey |Jedinečný identifikátor aplikace |123 |
 | applicationId |Jedinečný identifikátor aplikace – podobá se AppKey, ale tento klíč je přirozený. |b66bc706-ffff-7437-0340-032819502773 |
-| Revize |Verze, kterou uvedl správce během nahrávání binárního souboru |2 |
+| revision |Verze, kterou uvedl správce během nahrávání binárního souboru |2 |
 | title |Název aplikace |Excel |
 | publisher |Vydavatel aplikace |Microsoft |
 | uploadState |Stav nahrávání aplikace |1 |
@@ -61,7 +61,7 @@ Entita **appRevision** obsahuje seznam všech verzí aplikací.
 
 Entita **appType** obsahuje seznam zdrojů instalace aplikace.
 
-| Vlastnost  | Popis |
+| Vlastnost  | Description |
 |---------|------------|
 | appTypeID |ID pro daný typ |
 | appTypeKey |Náhradní klíč pro daný klíč |
@@ -69,7 +69,7 @@ Entita **appType** obsahuje seznam zdrojů instalace aplikace.
 
 ### <a name="example"></a>Příklad
 
-| AppTypeID  | Název | Popis |
+| AppTypeID  | Název | Description |
 |---------|------------|--------|
 | 0 |Aplikace z obchodu pro Android | Aplikace z obchodu pro Android |
 | 1 |Obchodní aplikace pro Android | Obchodní aplikace pro Android |
@@ -90,7 +90,7 @@ Entita **appType** obsahuje seznam zdrojů instalace aplikace.
 
 Entita **vppProgramType** obsahuje seznam možných typů programu VPP pro aplikaci.
 
-| Vlastnost  | Popis |
+| Vlastnost  | Description |
 |---------|------------|
 | vppProgramTypeID | ID pro daný typ |
 | vppProgramTypeKey | Náhradní klíč pro daný klíč |
@@ -98,7 +98,7 @@ Entita **vppProgramType** obsahuje seznam možných typů programu VPP pro aplik
 
 ### <a name="example"></a>Příklad
 
-| VppProgramID  | Název | Popis |
+| VppProgramID  | Název | Description |
 |---------|------------|--------|
 | 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft | Program VPP společnosti Microsoft |
 | 00000000-0000-0000-0000-000000000000 | Ještě není k dispozici | Výchozí hodnota, žádný program VPP |
@@ -110,7 +110,7 @@ Entita **vppProgramType** obsahuje seznam možných typů programu VPP pro aplik
 
 Entita **entita applicationinventory zobrazuje** obsahuje seznam aplikací, které se v zařízení našly v okamžiku shromažďování inventáře.
 
-| Vlastnost  | Popis |
+| Vlastnost  | Description |
 |---------|------------|
 | deviceKey | Jedná se o odkaz na tabulku zařízení obsahující ID zařízení v Intune. |
 | dateKey | Odkaz na tabulku kalendářních dat udávající den inventáře |
@@ -122,7 +122,7 @@ Entita **entita applicationinventory zobrazuje** obsahuje seznam aplikací, kter
 
 Entita **entita mobileappinstallstate** představuje stav instalace mobilní aplikace poté, co byla přiřazena ke skupině obsahující zařízení, uživatele nebo obojímu.
 
-| Vlastnost | Popis |
+| Vlastnost | Description |
 |---|---|
 | appInstallStateKey | Jedinečné ID stavu instalace aplikace pro váš účet |
 | appInstallState | Hodnota výčtu stavu instalace aplikace |

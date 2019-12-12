@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4a03366037f9b0eced70f0375b3f4b39401e3141
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72509805"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Řízení přístupu na základě role (RBAC) s Microsoft Intune
@@ -43,7 +43,7 @@ Pokud chcete zobrazit roli, vyberte **role > ** **Intune** > **všechny role** >
 - **Oprávnění**: vypíše dlouhou sadu přepínačů definujících, jaká oprávnění role má.
 - **Přiřazení**: seznam [přiřazení rolí]( assign-role.md) definujících, kteří uživatelé mají přístup k jakým uživatelům nebo zařízením. Role může mít více přiřazení a uživatel může být v několika přiřazeních.
 
-### <a name="built-in-roles"></a>Vestavěné role
+### <a name="built-in-roles"></a>Předdefinované role
 Předdefinované role můžete přiřadit skupinám bez další konfigurace. Nemůžete odstranit ani upravit název, popis, typ ani oprávnění předdefinované role.
 
 - **Operátor helpdesku**: Provádí vzdálené úlohy u uživatelů a zařízení a může uživatelům a zařízením přiřazovat aplikace nebo zásady.
@@ -59,12 +59,12 @@ Můžete vytvořit vlastní role s vlastními oprávněními. Další informace 
 ### <a name="azure-active-directory-roles-with-intune-access"></a>Azure Active Directory role s přístupem k Intune
 | Role Azure Active Directory | Všechna data Intune | Data auditu Intune |
 | --- | :---: | :---: |
-| Globální správce | Čtení a zápis | Čtení a zápis |
-| Správce služby Intune | Čtení a zápis | Čtení a zápis |
+| Globální správce | Čtení/zápis | Čtení/zápis |
+| Správce služby Intune | Čtení/zápis | Čtení/zápis |
 | Správce podmíněného přístupu | Žádné | Žádné |
 | Správce zabezpečení | Jen pro čtení | Jen pro čtení |
 | Operátor zabezpečení | Jen pro čtení | Jen pro čtení |
-| Čtecí modul zabezpečení | Jen pro čtení | Jen pro čtení |
+| Čtenář zabezpečení | Jen pro čtení | Jen pro čtení |
 | Správce dodržování předpisů | Žádné | Jen pro čtení |
 | Správce dat dodržování předpisů | Žádné | Jen pro čtení |
 | Globální čtenář | Jen pro čtení | Jen pro čtení |

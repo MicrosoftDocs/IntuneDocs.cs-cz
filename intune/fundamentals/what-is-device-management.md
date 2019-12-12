@@ -17,10 +17,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7ab41026cd9b2ceeaaa478fc27c984d0d89db4c5
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74058530"
 ---
 # <a name="device-management-overview"></a>Přehled správy zařízení
@@ -95,7 +95,7 @@ V centru pro správu správy zařízení můžete:
 - [E-knihy pro iOS](../apps/vpp-ebooks-ios.md)  
 - [Instalace konektoru On-Premises Connector](../protect/exchange-connector-install.md)  
 - [Správa rolí](role-based-access-control.md)  
-- Spravovat aktualizace softwaru
+- Správa aktualizací softwaru
   - [Správa aktualizací Windows 10](../protect/windows-update-for-business-configure.md)  
   - [Správa aktualizací iOSu](../protect/software-updates-ios.md)  
 - [Azure Active Directory](https://docs.microsoft.com/azure/active-directory)  

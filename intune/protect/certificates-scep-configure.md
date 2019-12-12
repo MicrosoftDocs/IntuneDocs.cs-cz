@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 86640c831e8836a72ad5a0a7d5023ff7d836a43a
-ms.sourcegitcommit: b5e719fb507b1bc4774674e76c856c435e69f68c
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73801558"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Konfigurace infrastruktury pro podporu SCEP s Intune
@@ -152,7 +152,7 @@ Následující části vyžadují znalost systému Windows Server 2012 R2 nebo n
 
      ![Šablona, karta Rozšíření](./media/certificates-scep-configure/scep-ndes-extensions.jpg)  
 
-   - **Zabezpečení**:
+   - **Zabezpečení:**
 
      - Přidejte **účet služby NDES**. Tento účet vyžaduje pro tuto šablonu oprávnění **ke čtení** a **zápisu** .
 
@@ -179,7 +179,7 @@ Následující části vyžadují znalost systému Windows Server 2012 R2 nebo n
 Intune Certificate Connector vyžaduje certifikát s rozšířeným použitím klíče *ověřování klienta* a názvem subjektu, který se rovná plně kvalifikovanému názvu domény počítače, ve kterém je konektor nainstalovaný. Vyžaduje se šablona s následujícími vlastnostmi:
 
 - **Rozšíření** > **Zásady použití** musí obsahovat **ověřování klientů** .
-- **Název předmětu** > **Zadejte v žádosti**.
+- **Název předmětu** > **dodán v žádosti**.
 
 Pokud již máte šablonu, která obsahuje tyto vlastnosti, můžete ji znovu použít, jinak vytvořit novou šablonu buď duplikováním existující šablony, nebo vytvořením vlastní šablony.
 
@@ -188,7 +188,7 @@ Pokud již máte šablonu, která obsahuje tyto vlastnosti, můžete ji znovu po
 Komunikace mezi spravovanými zařízeními a službou IIS na serveru NDES používá protokol HTTPS, který vyžaduje použití certifikátu. K vystavení tohoto certifikátu můžete použít šablonu certifikátu **webového serveru** . Pokud ale dáváte přednost vyhrazené šabloně, vyžadují se následující vlastnosti:
 
 - **Rozšíření** > **Zásady použití** musí obsahovat **ověření serveru** .
-- **Název předmětu** > **Zadejte v žádosti**.
+- **Název předmětu** > **dodán v žádosti**.
 
 > [!NOTE]
 > Pokud máte certifikát, který splňuje obě požadavky ze šablon certifikátu klienta i serveru, můžete použít jeden certifikát pro službu IIS i pro Certificate Connector Intune.
@@ -227,7 +227,7 @@ Ve výchozím nastavení Intune používá hodnotu nakonfigurovanou v šabloně.
    -**net stop certsvc**
    -**net start certsvc**
 
-2. Ve vydávající certifikační autoritě použijte modul snap-in Certifikační autorita k publikování šablony certifikátu. Vyberte uzel **šablony certifikátů** , vyberte **akci** > **Nová**šablona certifikátu  > ,**která se má vydat**, a pak vyberte šablonu certifikátu, kterou jste vytvořili v předchozí části.
+2. Ve vydávající certifikační autoritě použijte modul snap-in Certifikační autorita k publikování šablony certifikátu. Vyberte uzel **šablony certifikátů** , vyberte **akce** > **nové** > **Vystavovaná šablona certifikátu**a pak vyberte šablonu certifikátu, kterou jste vytvořili v předchozí části.
 
 3. Ověřte, zda byla šablona publikována, zobrazením ve složce **šablony certifikátů** .
 
@@ -298,7 +298,7 @@ Následující postupy vám pomůžou nakonfigurovat službu zápisu síťových
 
 3. Nakonfigurujte filtrování požadavků služby IIS a přidejte podporu služby IIS pro dlouhé adresy URL (dotazy), které služba NDES obdrží.
 
-   1. Ve Správci služby IIS vyberte **výchozí webový server** > **filtrování žádostí** > **Upravit nastavení funkce** a otevřete stránku **Upravit nastavení filtrování požadavků** .
+   1. Ve Správci služby IIS vyberte **výchozí web** > **filtrování požadavků** > **Upravit nastavení funkce** a otevřete stránku **Upravit nastavení filtrování požadavků** .
 
    2. Proveďte konfiguraci následujících nastavení:
 
@@ -376,7 +376,7 @@ Microsoft Intune Certificate Connector se nainstaluje na server, na kterém bě�
       - Při instalaci NDES pro samostatnou službu Intune se s konektorem Certificate Connector automaticky nainstaluje služba CRP.
       - Pokud používáte Intune s Configuration Manager, nainstalujete bod registrace certifikátu jako Configuration Manager role systému lokality.
 
-5. Až se zobrazí výzva k zadání klientského certifikátu pro Certificate Connector, zvolte **Vybrat**a vyberte certifikát pro **ověřování klientů** , který jste nainstalovali na Server NDES během kroku #3 postupu [instalace a vázání certifikátů na Server, který je hostitelem NDES](#install-and-bind-certificates-on-the-server-that-hosts-ndes) z dříve v tomto článku.
+5. Až se zobrazí výzva k zadání klientského certifikátu pro Certificate Connector, zvolte **Vybrat**a vyberte certifikát pro **ověřování klientů** , který jste nainstalovali na server NDES během kroku #3 postupu [instalace a vázání certifikátů na serveru, který hostuje NDES](#install-and-bind-certificates-on-the-server-that-hosts-ndes) z výše v tomto článku.
 
    Po vybrání certifikátu pro ověřování klientů se vrátíte do **klientského certifikátu pro Microsoft Intune Certificate Connector** Surface. I když vybraný certifikát není zobrazený, kliknutím na **Další** zobrazte vlastnosti certifikátu. Vyberte **Další** a potom **Nainstalovat**.
 

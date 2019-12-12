@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/22/2019
+ms.date: 12/09/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72aa710e5997593cca6a18f7c3cd421f792985bd
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 77cf4745262346ec2f8bfb5d4d7e67e1ee5c5e07
+ms.sourcegitcommit: edd06a494a241d198ca9b0d3030c92195976e0d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74832709"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75000376"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -54,13 +54,29 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 -->  
 
 <!-- ########################## -->
-## <a name="week-of-decmeber-2-2019"></a>Týden z Decmeber 2, 2019
+## <a name="week-of-december-9-2019"></a>Týden z 9. prosince 2019
 
-#### <a name="new-system-center-configuration-manager-co-management-licensing--5027281--"></a>Nové System Center Configuration Manager licencování spolusprávy<!--5027281-->
-K dispozici je nová licence, která umožňuje System Center Configuration Manager zákazníkům s Software Assurance získat práva pro správu počítačů Intune bez nutnosti koupit další licenci Intune pro spolusprávu. Zákazníci už nebudou muset k koncovým uživatelům přiřazovat jednotlivé licence Intune/EMS.
-- Zařízení spravovaná pomocí System Center Configuration Manager a zaregistrovaná do spolusprávy mají skoro stejná práva jako samostatné spravované počítače Intune. Po obnovení se ale nedá znovu zřídit pomocí automatického pIlotního nasazení.
+#### <a name="migrating-to-microsoft-edge-for-managed-browsing-scenarios---5173762---"></a>Migrace na Microsoft Edge pro spravované scénáře procházení<!-- 5173762 -->
+
+Až se přiblížíme k odchodu Intune Managed Browser, provedli jsme změny v zásadách ochrany aplikací, abychom zjednodušili kroky potřebné k přesunu uživatelů do hraničních zařízení. Aktualizovali jsme možnosti nastavení zásad ochrany aplikací **omezit přenos webového obsahu s jinými aplikacemi** na jednu z těchto možností:
+
+- Libovolná aplikace
+- Intune Managed Browser
+- Microsoft Edge
+- Nespravovaný prohlížeč 
+
+Když vyberete **Microsoft Edge**, koncovým uživatelům se zobrazí zpráva podmíněného přístupu s upozorněním, že pro spravované scénáře procházení se vyžaduje Microsoft Edge. Budou se vám zobrazovat výzvy ke stažení a přihlášení k Microsoft Edge pomocí svých účtů AAD, pokud se ještě neudělaly.  To bude odpovídat na cílení aplikací s povoleným MAM s nastavením konfigurace aplikace `com.microsoft.intune.useEdge` nastavenou na **hodnotu true**. Existující zásady ochrany aplikací, které používaly nastavení **prohlížeče spravované pomocí zásad** , budou teď **Intune Managed Browser** vybrané a v chování se zobrazí žádná změna. To znamená, že uživatelé uvidí zprávy o používání Microsoft Edge, pokud jste nastavili nastavení konfigurace aplikace **useEdge** na **hodnotu true**. Pro všechny zákazníky, kteří využívají spravované scénáře procházení, doporučujeme aktualizovat zásady ochrany aplikací tak, aby **omezili přenos webového obsahu s jinými aplikacemi** , aby uživatelům viděli správné pokyny k přechodu na Microsoft Edge bez ohledu na to, ze které aplikace spouští odkazy. 
+
+<!-- ########################## -->
+## <a name="week-of-december-2-2019"></a>Týden od 2. prosince 2019
+
+#### <a name="new-microsoft-endpoint-configuration-manager-co-management-licensing--5027281--"></a>Nové licencování pro spolupráci s Microsoft Endpoint Configuration Manager<!--5027281-->
+K dispozici je nová licence, která umožňuje Configuration Manager zákazníkům se Software Assurance získat spolusprávu Intune pro počítače s Windows 10 bez nutnosti koupit další licenci Intune pro spolusprávu. Zákazníci už nepotřebují, abyste koncovým uživatelům přidělili jednotlivé licence Intune/EMS pro spolusprávu Windows 10.
+- Zařízení spravovaná pomocí Configuration Manager a zaregistrovaná do spolusprávy mají skoro stejná práva jako samostatné počítače spravované MDM v Intune. Po obnovení se ale nedá znovu zřídit pomocí automatického pilotního nasazení.
 - Zařízení s Windows 10 zaregistrovaná v Intune jiným způsobem vyžadují úplné licence Intune.
 - Zařízení na jiných platformách stále vyžadují úplné licence Intune.
+
+Další informace najdete v tématu [licenční podmínky](https://www.microsoft.com/en-us/Licensing/product-licensing/products).
 
 
 <!-- ########################## -->
@@ -70,6 +86,10 @@ K dispozici je nová licence, která umožňuje System Center Configuration Mana
 ### <a name="app-management"></a>Správa aplikací
 
 #### <a name="smime-support-with-microsoft-outlook-for-ios---2669398-idready---"></a>Podpora s/MIME v aplikaci Microsoft Outlook pro iOS<!-- 2669398 idready -->
+
+   > [!NOTE]
+   > Tato funkce byla zpožděna, ale brzy bude vydána.
+
 Intune podporuje doručování podpisových a šifrovacích certifikátů S/MIME, které se dají používat s Outlookem pro iOS na zařízeních s iOS. Další informace najdete v tématu [Konfigurace S/MIME pro Outlook pro iOS](~/apps/app-configuration-policies-outlook-smime.md).
 
 #### <a name="ui-update-when-selectively-wiping-app-data---4102028---"></a>Aktualizace uživatelského rozhraní při selektivním vymazání dat aplikace<!-- 4102028 -->
@@ -385,7 +405,7 @@ Týká se
 - Pracovní profil Android Enterprise
 
 #### <a name="create-a-global-http-proxy-on-android-enterprise-device-owner-devices---4816339-----"></a>Vytvoření globálního proxy serveru HTTP na zařízeních s vlastníkem zařízení s Androidem Enterprise<!-- 4816339   -->
-Na zařízeních s Androidem Enterprise můžete nakonfigurovat globální proxy server HTTP tak, aby splňoval standardy procházení webu vaší organizace (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Android Enterprise** pro > pro **vlastníka zařízení > omezení zařízení** pro typ profilu > **připojení**). Po nakonfigurování budou všechny přenosy HTTP používat tento proxy server.
+Na zařízeních s Androidem Enterprise můžete nakonfigurovat globální proxy server HTTP tak, aby odpovídal standardům procházení webu vaší organizace (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Android Enterprise** for Platform > **>** pro typ profilu > **konektivita**zařízení. Po nakonfigurování budou všechny přenosy HTTP používat tento proxy server.
 
 Pokud chcete tuto funkci nakonfigurovat a zobrazit všechna nakonfigurovaná nastavení, přejděte na [nastavení zařízení s Androidem Enterprise a povolte nebo omezte funkce pomocí Intune](../configuration/device-restrictions-android-for-work.md).
 
@@ -405,7 +425,7 @@ Týká se
 
 
 #### <a name="new-device-configuration-settings-for-supervised-ios-and-ipados-devices---5199328-----"></a>Nové nastavení konfigurace zařízení pro zařízení s iOS a iPadOS pod dohledem<!-- 5199328   -->
-Na zařízeních s iOS a iPadOS můžete vytvořit profil, který omezí funkce a nastavení na zařízeních (**Konfigurace zařízení** > **profily** > **Vytvoření profilu** > **iOS/iPadOS** pro zařízení > platformy.  **omezení** pro typ profilu). V této aktualizaci můžete řídit nová nastavení: 
+Na zařízeních se systémy iOS a iPadOS můžete vytvořit profil, který omezí funkce a nastavení na zařízeních (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **iOS/iPadOS** pro **omezení** platformy > pro typ profilu). V této aktualizaci můžete řídit nová nastavení: 
 - Přístup k síťové jednotce v aplikaci soubory  
 - Přístup k jednotce USB v aplikaci soubory 
 - Wi-Fi vždycky zapnuté 

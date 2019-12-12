@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 829d8f6b2691f91c14029e4f29e2ef11b070e596
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74059624"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Používání a Správa zařízení Zebra s rozšířeními mobility Zebra v Microsoft Intune
@@ -106,7 +106,7 @@ Po dokončení prvního dvou kroků se Portál společnosti aplikace nainstaluje
 
 Pomocí StageNow vytvořte profil, který konfiguruje nastavení, která chcete na zařízení spravovat. Konkrétní podrobnosti najdete v dokumentaci k zebra. [Profily](http://techdocs.zebra.com/stagenow/3-2/stagingprofiles/) (otevře se webová stránka Zebra) může být dobrým prostředkem.
 
-Když vytvoříte profil v StageNow, vyberte v posledním kroku možnost **exportovat do MDM**. Tento krok generuje soubor XML. Uložte tento soubor. Budete ho potřebovat v pozdějším kroku.
+Když vytvoříte profil v StageNow, vyberte v posledním kroku možnost **exportovat do MDM**. Tento krok generuje soubor XML. Soubor uložte. Budete ho potřebovat později.
 
 - Doporučuje se profil otestovat předtím, než ho nasadíte do zařízení ve vaší organizaci. K otestování v posledním kroku při vytváření profilů s StageNow v počítači použijte možnosti **testu** . Pak na zařízení využívejte soubor generovaný StageNow a aplikaci StageNow.
 

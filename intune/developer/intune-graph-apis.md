@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 1a5381d139247424d976b6b510d62681f623203a
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72490505"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Používání Azure AD pro přístup k rozhraním Intune API v Microsoft Graphu
@@ -148,13 +148,13 @@ __Provádění vzdálených akcí s dopadem na uživatele na zařízeních v Mic
 __Čtení a zápis do zařízení v Microsoft Intune__ | [DeviceManagementManagedDevices.ReadWrite.All](#mgd-rw)
 __Čtení zařízení v Microsoft Intune__ | [DeviceManagementManagedDevices.Read.All](#mgd-ro)
 __Čtení a zápis nastavení RBAC v Microsoft Intune__ | [DeviceManagementRBAC.ReadWrite.All](#rac-rw)
-__Čtení nastavení RBAC v Microsoft Intune__ | DeviceManagementRBAC. Read. All
+__Čtení nastavení RBAC v Microsoft Intune__ | DeviceManagementRBAC.Read.All
 __Čtení a zápis aplikací v Microsoft Intune__ | [DeviceManagementApps.ReadWrite.All](#app-rw)
 __Čtení aplikací v Microsoft Intune__ | [DeviceManagementApps.Read.All](#app-ro)
 __Čtení a zápis konfigurace a zásad zařízení v Microsoft Intune__ | DeviceManagementConfiguration. All
 __Čtení konfigurace a zásad zařízení v Microsoft Intune__ | [DeviceManagementConfiguration.Read.All](#cfg-ro)
 __Čtení a zápis konfigurace v Microsoft Intune__ | [DeviceManagementServiceConfig.ReadWrite.All](#svc-rw)
-__Čtení konfigurace v Microsoft Intune__ | DeviceManagementServiceConfig. Read. All
+__Čtení konfigurace v Microsoft Intune__ | DeviceManagementServiceConfig.Read.All
 
 Tabulka uvádí seznam nastavení v pořadí, ve kterém se zobrazují na portálu Azure Portal. Následující oddíly popisují obory v abecedním pořadí.
 

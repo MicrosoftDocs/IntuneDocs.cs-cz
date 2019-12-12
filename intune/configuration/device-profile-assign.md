@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/20/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 275b3961e87f0d0eda8299337fe3fb7ac89ef03b
-ms.sourcegitcommit: 1a22b8b31424847d3c86590f00f56c5bc3de2eb5
+ms.openlocfilehash: 651b02dc276ca2aa2003955e6aa7b0dfa6724a40
+ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74261690"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74860311"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Přiřazení profilů uživatelů a zařízení v Microsoft Intune
 
@@ -61,7 +61,7 @@ Pokud je tlačítko **vyhodnotit** zobrazené šedě, ujistěte se, že je profi
 
 Když vytváříte nebo aktualizujete profil, můžete do profilu přidat také značky oboru a pravidla použitelnosti.
 
-**Značky oboru** jsou skvělým způsobem, jak přiřadit a filtrovat profily pro konkrétní skupiny, jako jsou lidské zdroje nebo všichni zaměstnanci s námi-NC. [Pro distribuci použijte značky RBAC a Scope](../fundamentals/scope-tags.md) s více informacemi.
+**Značky oboru** jsou skvělým způsobem, jak filtrovat profily na konkrétní skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. [Pro distribuci použijte značky RBAC a Scope](../fundamentals/scope-tags.md) s více informacemi.
 
 Na zařízeních s Windows 10 můžete přidat **pravidla použitelnosti** , aby se profil mohl vztahovat jenom na konkrétní verzi operačního systému nebo na konkrétní edici Windows. [Pravidla použitelnosti](device-profile-create.md#applicability-rules) obsahují další informace.
 
@@ -69,7 +69,7 @@ Na zařízeních s Windows 10 můžete přidat **pravidla použitelnosti** , aby
 
 Mnoho uživatelů požaduje používání skupin uživatelů a kdy používat skupiny zařízení. Odpověď závisí na vašem cíli. Tady jsou některé doprovodné materiály, které vám pomohou začít.
 
-### <a name="device-groups"></a>Device groups
+### <a name="device-groups"></a>Skupiny zařízení
 
 Pokud chcete použít nastavení na zařízení bez ohledu na to, kdo je přihlášený, přiřaďte své profily ke skupině zařízení. Nastavení použitá pro skupiny zařízení vždy přecházejí na zařízení, nikoli na uživatele.
 

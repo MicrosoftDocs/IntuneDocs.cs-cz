@@ -19,17 +19,17 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a3b01c1444b44e3f5c66fc129f78f321c9c9f5aa
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74563403"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Kurz: Konfigurace časové rezervy pro používání služby Intune pro modul EMM a konfiguraci aplikací
 
 Časová rezerva je aplikace pro spolupráci, kterou můžete použít s Microsoft Intune.   
 
-V tomto kurzu provedete tyto kroky:
+V tomto kurzu provedete následující:
 > [!div class="checklist"]
 > - Nastavte Intune jako poskytovatele podnikové mobility (EMM) v podnikové mřížce s časovou rezervou. V zařízeních spravovaných přes Intune budete moct omezit přístup k pracovním prostorům plánu vaší mřížky.
 > - Vytvořte zásady konfigurace aplikací pro správu časové rezervy pro aplikaci EMM v iOS a aplikaci časové rezervy pro zařízení s pracovním profilem Androidu.

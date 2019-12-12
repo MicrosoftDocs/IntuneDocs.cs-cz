@@ -5,7 +5,7 @@ description: Nastavení standardních hodnot zabezpečení, které Intune podpor
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 12/05/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b7363682960cff6688e9727d2b6869b6bf357084
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: 85d0b28de6c133ece5116dd78b1646f497ff2f6b
+ms.sourcegitcommit: 0a85af9d584709ecc29062f91645a4c47a61ebb9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74060051"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74882321"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Základní nastavení pro Intune v programu Microsoft Defender Advanced Threat Protection
 
@@ -91,7 +91,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
   **Výchozí**: blok 
 
 - **Zabránit krádeži pověření typu**  
-  Nastavením této možnost *povolíte* [ochranu odvozených přihlašovacích údajů domény s ochranou přihlašovacích údajů](https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard). Ochrana přihlašovacích údajů v programu Microsoft Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným kódům může vést k útokům využívajícím krádež přihlašovacích údajů, jako je například Pass-the-Hash nebo Pass-The-Ticket. Ochrana přihlašovacích údajů v programu Microsoft Defender brání těmto útokům ochranou hodnot hash hesla NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
+  Nastavením této možnost *povolíte* [ochranu odvozených přihlašovacích údajů domény s ochranou přihlašovacích údajů](https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard). Ochrana přihlašovacích údajů v programu Microsoft Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto důvěrným informacím může vést k útokům zahrnujícím krádeže přihlašovacích údajů, jako je například Pass-the-Hash nebo Pass-The-Ticket. Ochrana přihlašovacích údajů v programu Microsoft Defender brání těmto útokům ochranou hodnot hash hesla NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
 
   **Výchozí**: Povolit
 
@@ -441,7 +441,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zprostředkovatel C
   Určete, jak se má pro daný software na straně příjmu Povolit šifrované přijímání a prostý text před scénářem brány IPsec pro tunelové připojení. Tím se zajistí zachování pořadí paketů.  
   **Výchozí**: výchozí nastavení zařízení
 
-- **Profil brány firewall**  - FirewallRules/FirewallRuleName/profily  
+- **Profil brány firewall** *FirewallRules/FirewallRuleName/profily*  -   
   Určuje profily, do kterých pravidlo patří: doména, soukromá, veřejná. Tato hodnota představuje profil pro sítě, které jsou připojené k doménám.  
 
   Dostupná nastavení:  
@@ -593,8 +593,18 @@ Další informace najdete v tématu [PASSPORTFORWORK CSP](https://docs.microsoft
 - **Konfigurace Windows Hello pro firmy** - *TenantId/policies/UsePassportForWork*    
   Windows Hello pro firmy je alternativní metoda pro přihlašování do systému Windows tím, že nahrazujete hesla, čipové karty a virtuální čipové karty.  
 
-  - Když nastavíte *Ano*, povolíte tuto zásadu a zřídí zařízení Windows Hello pro firmy.  
-  - Pokud je nastavené na *Nenakonfigurováno*, standardní hodnoty nebudou mít vliv na nastavení zásad daného zařízení. To znamená, že pokud je Windows Hello pro firmy v zařízení zakázané, zůstane zakázané. Pokud je povolená, zůstane povolený. 
+
+  > [!IMPORTANT]
+  > Možnosti pro toto nastavení se obrátí z předpokládaných významů. V opačném případě hodnota *Ano* nepovoluje Windows Hello a místo toho je považována za *nenakonfigurovanou*. Pokud je toto nastavení nastavené na *Nenakonfigurováno*, je Windows Hello zapnuto na zařízeních, která tyto standardní hodnoty obdrží.
+  >
+  > Následující popisy byly revidovány, aby odrážely toto chování. V budoucí aktualizaci tohoto směrného plánu zabezpečení bude záměna nastavení opravena.
+
+  - Pokud je nastavené na *není nakonfigurované*, Windows Hello je povolené a zařízení se zřídí ve Windows Hello pro firmy.
+  - Pokud je nastaveno na *Ano*, standardní hodnoty nebudou mít vliv na nastavení zásad daného zařízení. To znamená, že pokud je Windows Hello pro firmy v zařízení zakázané, zůstane zakázané. Pokud je povolená, zůstane povolený.
+  <!-- expected behavior 
+  - When set to *Yes*, you  enable this policy and the device provisions Windows Hello for Business.  
+  - When set to *Not configured*, the baseline does not affect the policy setting of the device. This means that if Windows Hello for Business is disabled on a device, it remains disabled. If its enabled, it remains enabled. 
+  -->
 
   Nemůžete zakázat Windows Hello pro firmy prostřednictvím tohoto směrného plánu. Windows Hello pro firmy můžete zakázat při konfiguraci [registrace systému Windows](windows-hello.md)nebo jako součást profilu konfigurace zařízení pro [ochranu identity](identity-protection-configure.md).  
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e4761e2565402b4c3cdc993ff89cbedea8273609
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74563896"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune
@@ -108,7 +108,7 @@ Vytvoření konfigurace aplikace pro Microsoft Edge:
     > [!NOTE]
     > Microsoft Edge používá stejné dvojice klíč-hodnota jako Managed Browser. V Androidu musí být Microsoft Edge cílem zásad ochrany aplikací, aby se projevily zásady konfigurace aplikací.
 
-8. Po dokončení vyberte **OK**.
+8. Jakmile budete hotovi, vyberte **OK**.
 9. V podokně **Přidat zásady konfigurace** klikněte na možnost **Přidat**.<br>
     Nová konfigurace se vytvoří a zobrazí v podokně **Konfigurace aplikace** .
 
@@ -169,7 +169,7 @@ Aby bylo možné povolit proxy aplikace pro Microsoft Edge, cílovému serveru M
 
 |    Klíč    |    Hodnota    |
 |-------------------------------------------------------------------|-------------|
-|    com. Microsoft. Intune. mam. managedbrowser. AppProxyRedirection    |    true    |
+|    com.microsoft.intune.mam.managedbrowser.AppProxyRedirection    |    true    |
 
 Další informace o tom, jak používat Microsoft Edge a Azure Proxy aplikací služby AD společně pro bezproblémový (a chráněný) přístup k místním webovým aplikacím, najdete v tématu [lepší spolupráce: Intune a Azure Active Directory tým pro zlepšení přístupu uživatelů](https://cloudblogs.microsoft.com/enterprisemobility/2017/07/06/better-together-intune-and-azure-active-directory-team-up-to-improve-user-access). Tento Blogový příspěvek odkazuje na Intune Managed Browser, ale obsah platí i pro Microsoft Edge.
 
@@ -181,7 +181,7 @@ Použijte následující dvojici klíč/hodnota ke konfiguraci zástupce domovsk
 
 |    Klíč    |    Hodnota    |
 |-------------------------------------------------------------------|-------------|
-|    com. Microsoft. Intune. mam. managedbrowser. webdomove   |    Zadejte platnou adresu URL. Nesprávné adresy URL se z bezpečnostních důvodů blokují.<br>**Příklad:**  <`https://www.bing.com`>
+|    com.microsoft.intune.mam.managedbrowser.homepage   |    Zadejte platnou adresu URL. Nesprávné adresy URL se z bezpečnostních důvodů blokují.<br>**Příklad:**  <`https://www.bing.com`>
 
 ## <a name="configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge"></a>Nakonfigurovat logo vaší organizace a barvu značky pro nové stránky karet v Microsoft Edge
 
@@ -214,7 +214,7 @@ Ke konfiguraci spravovaných záložek použijte následující pár klíč/hodn
 
 |    Klíč    |    Hodnota    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com. Microsoft. Intune. mam. managedbrowser. záložek    |    Hodnota této konfigurace je seznam záložek. Každá záložka se skládá z názvu záložky a adresy URL záložky. Název a adresu URL oddělte znakem `|`.      Příklad:<br>`Microsoft Bing|https://www.bing.com`<br>Chcete-li nakonfigurovat více záložek, oddělte každou dvojici znakem s dvojitým znakem `||`.<p>Příklad:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
+|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    Hodnota této konfigurace je seznam záložek. Každá záložka se skládá z názvu záložky a adresy URL záložky. Název a adresu URL oddělte znakem `|`.      Příklad:<br>`Microsoft Bing|https://www.bing.com`<br>Chcete-li nakonfigurovat více záložek, oddělte každou dvojici znakem s dvojitým znakem `||`.<p>Příklad:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
 
 ## <a name="display-myapps-within-microsoft-edge-bookmarks"></a>Zobrazit MyApp v záložkách Microsoft Edge
 
@@ -222,7 +222,7 @@ Ve výchozím nastavení se uživatelům zobrazí weby aplikace Mojeapl, které 
 
 |    Klíč    |    Hodnota    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-|    com. Microsoft. Intune. mam. managedbrowser. MyApps    |    **Hodnota true** zobrazí MyApp v rámci záložek Microsoft Edge.<p>**Hodnota false** skryje aplikaci MyApp v rámci Microsoft Edge.    |
+|    com.microsoft.intune.mam.managedbrowser.MyApps    |    **Hodnota true** zobrazí MyApp v rámci záložek Microsoft Edge.<p>**Hodnota false** skryje aplikaci MyApp v rámci Microsoft Edge.    |
 
 ## <a name="specify-allowed-or-blocked-sites-list-for-microsoft-edge"></a>Zadejte seznam povolených nebo blokovaných webů pro Microsoft Edge.
 Pomocí konfigurace aplikace můžete definovat, ke kterým lokalitám mají uživatelé přístup při používání jejich pracovního profilu. Pokud použijete seznam povolených uživatelů, budou mít uživatelé přístup jenom k webům, které jste výslovně zadali. Pokud použijete seznam blokovaných uživatelů, budou mít uživatelé přístup ke všem webům kromě těch, které jste výslovně zablokovali. Měli byste jenom nastavit buď povolený, nebo blokovaný seznam, ne obojí. Pokud napíšete obojí, bude se jednat o povolený seznam.  
@@ -231,7 +231,7 @@ Pomocí následujících párů klíč/hodnota můžete nakonfigurovat seznam po
 
 |    Klíč    |    Hodnota    |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    Vybírejte z těchto možností:<p>1. Zadejte povolené adresy URL (jenom tyto adresy URL jsou povoleny, k žádným jiným webům nelze přicházet):<br>`com.microsoft.intune.mam.managedbrowser.AllowListURLs`<p>2. Zadejte blokované adresy URL (všechny ostatní weby jsou k dispozici):<br>`com.microsoft.intune.mam.managedbrowser.BlockListURLs`    |    Odpovídající hodnotou klíče je seznam adres URL. Zadejte všechny adresy URL, které chcete pro povolení nebo blokování použít jako jednu hodnotu oddělenou kanálem `|` znakem.<br>**4.6**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`  |
+|    Vybírejte z těchto možností:<p>1. Zadejte povolené adresy URL (jenom tyto adresy URL jsou povoleny, k žádným jiným webům nelze přicházet):<br>`com.microsoft.intune.mam.managedbrowser.AllowListURLs`<p>2. Zadejte blokované adresy URL (všechny ostatní weby jsou k dispozici):<br>`com.microsoft.intune.mam.managedbrowser.BlockListURLs`    |    Odpovídající hodnotou klíče je seznam adres URL. Zadejte všechny adresy URL, které chcete pro povolení nebo blokování použít jako jednu hodnotu oddělenou kanálem `|` znakem.<br>**Příklady:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`  |
 
 ### <a name="url-formats-for-allowed-and-blocked-site-list"></a>Formáty adres URL pro seznam povolených a blokovaných webů 
 K vytvoření seznamu povolených a blokovaných webů můžete použít různé formáty adresy URL. Tyto povolené vzory jsou podrobně popsány v následující tabulce. Některé poznámky než začnete: 

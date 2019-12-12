@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 09b4cfad0490f35a85e4c72b937b2ba5c0472030
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74564373"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
@@ -114,9 +114,9 @@ Další informace o této části najdete v tématu [Správa aplikací](app-mana
 
 Další informace o této části najdete v tématu [Monitorování aplikací](apps-monitor.md).
 
-### <a name="set-up"></a>Nastavit
+### <a name="set-up"></a>Nastavení
 - **Tokeny VPP pro iOS**: Tady můžete použít a zobrazit licence programu VPP (Volume Purchase Program) pro iOS. Více informací najdete v následujících tématech:
-  - [hromadně zakoupené aplikace pro iOS](vpp-apps-ios.md)
+  - [Multilicenční aplikace pro iOS](vpp-apps-ios.md)
 - **Certifikát Windows Enterprise**: Tady můžete použít nebo zobrazit stav certifikátu pro podepisování kódu, který se používá k distribuci obchodních aplikací do spravovaných zařízení s Windows.
 - **Certifikát Windows Symantec**: Tady můžete použít nebo zobrazit stav certifikátu Symantec pro podepisování kódu, který je nutný k distribuci souborů appx pro XAP a WP8.x na zařízení s Windows 10 Mobile.
 - **Microsoft Store pro firmy**: Tady můžete nastavit integraci do Microsoft Storu pro firmy. Potom můžete zakoupené aplikace synchronizovat s Intune, přiřazovat je a sledovat využití licencí. Více informací najdete v následujících tématech:

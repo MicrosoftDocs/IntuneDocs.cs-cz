@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/01/2019
+ms.date: 12/05/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e59a4ba7a929df448eddaf36038c2d6deaa0a7a
-ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.openlocfilehash: 96a89301bda738f57920b8d4e233663678e3fc91
+ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74547934"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74860274"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>Nastavení Windows 10 a novějších pro správu sdílených zařízení pomocí Intune
 
@@ -40,6 +40,8 @@ Další informace o této funkci v Intune najdete v tématu [řízení přístup
 
 ## <a name="shared-multi-user-device-settings"></a>Sdílená nastavení zařízení s více uživateli
 
+Tato nastavení používají [zprostředkovatele CSP pro SharedPC](https://docs.microsoft.com/windows/client-management/mdm/sharedpc-csp).
+
 - **Režim SDÍLENÉHO počítače**: Pokud chcete zapnout režim sdíleného počítače, vyberte **Povolit** . V tomto režimu se k zařízení v jednom okamžiku přihlašuje jenom jeden uživatel. Jiný uživatel se nemůže přihlásit, dokud se první uživatel odhlásí. **Nenakonfigurováno** (výchozí) Toto nastavení nespravuje Intune a nenabídne žádné zásady pro řízení tohoto nastavení na zařízení.
 - **Účet Guest**: vyberte možnost vytvořit hosta na přihlašovací obrazovce. Účty hostů nevyžadují žádné přihlašovací údaje ani ověřování uživatele. Toto nastavení vytvoří nový místní účet pokaždé, když se použije. Možnosti:
   - **Host**: vytvoří na zařízení místně účet hosta.
@@ -54,12 +56,16 @@ Další informace o této funkci v Intune najdete v tématu [řízení přístup
 
 - **Místní úložiště**: Pokud chcete zabránit uživatelům v ukládání a zobrazování souborů na pevném disku zařízení, vyberte možnost **povoleno** . Zvolením možnosti **zakázáno** umožníte uživatelům zobrazovat a ukládat soubory místně pomocí Průzkumníka souborů. **Nenakonfigurováno** (výchozí) Toto nastavení nespravuje Intune a nenabídne žádné zásady pro řízení tohoto nastavení na zařízení.
 - **Zásady napájení**: Pokud je nastavené na **povoleno**, uživatelé nemůžou vypnout režim hibernace, nemůžou přepsat všechny akce režimu spánku (například zavřít víko) a nemůžou měnit nastavení napájení. Když je tato možnost **zakázaná**, můžou uživatelé zařízení přepnout do režimu hibernace, může zavřít víko zařízení a změnit nastavení napájení. **Nenakonfigurováno** (výchozí) Toto nastavení nespravuje Intune a nenabídne žádné zásady pro řízení tohoto nastavení na zařízení.
-- **Časový limit režimu spánku (v sekundách)** : zadejte počet neaktivních sekund (0-100), než se zařízení přepne do režimu spánku. Pokud nenastavíte čas, zařízení přejde do režimu spánku po 60 minutách.
+- **Časový limit režimu spánku (v sekundách)** : zadejte počet neaktivních sekund (0-18000), než se zařízení přepne do režimu spánku. `0` znamená, že zařízení nikdy nepřejde do režimu spánku. Pokud nenastavíte čas, zařízení přejde do režimu spánku po 3600 sekundách (60 minut).
 - **Přihlášení při probuzení z počítače: Pokud**je nastaveno na **povoleno** , bude vyžadovat, aby se uživatelé přihlásili pomocí hesla, když zařízení nepřejde do režimu spánku. Vyberte možnost **zakázáno** , aby uživatelé nemuseli zadávat své uživatelské jméno a heslo. **Nenakonfigurováno** (výchozí) Toto nastavení nespravuje Intune a nenabídne žádné zásady pro řízení tohoto nastavení na zařízení.
 - **Čas zahájení údržby (v minutách od půlnoci)** : zadejte čas v minutách (0-1440), kdy se mají spouštět úlohy automatické údržby, například web Windows Update. Výchozí čas spuštění je půlnoc nebo nula (`0`) minut. Změňte čas spuštění zadáním počátečního času v minutách od půlnoci. Například pokud chcete, aby údržba začínala 2., zadejte `120`. Pokud chcete, aby údržba začínala 8 ODP. Zadejte `1200`.
 - **Zásady vzdělávání**: vyberte možnost **povoleno** pro použití doporučeného nastavení pro zařízení používaná ve školách, které jsou více omezující. Vyberte možnost **zakázáno** , takže se nepoužijí výchozí a doporučené zásady vzdělávání. **Nenakonfigurováno** (výchozí) Toto nastavení nespravuje Intune a nenabídne žádné zásady pro řízení tohoto nastavení na zařízení.
 
   Další informace o tom, co dělají zásady vzdělávání, najdete v tématu [doporučení konfigurace Windows 10 pro zákazníky ve vzdělávání](https://docs.microsoft.com/education/windows/configure-windows-for-education).
+
+- **Rychlé první přihlášení**: vyberte možnost **povoleno** , aby uživatelé měli rychle první přihlašovací prostředí. Pokud je tato možnost **povolená**, zařízení automaticky připojí nové účty Azure AD, které nejsou správci, k předem nakonfigurovaným místním účtům kandidátů. Výběrem možnosti **zakázáno** zabráníte rychlému prvnímu přihlášení. **Nenakonfigurováno** (výchozí) Toto nastavení nespravuje Intune a nenabídne žádné zásady pro řízení tohoto nastavení na zařízení.
+
+  [Ověřování/EnableFastFirstSignIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-enablefastfirstsignin)
 
 > [!TIP]
 > [Nastavení sdíleného nebo hostovaného počítače](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc) (otevře si jiný web docs) je skvělým prostředkem této funkce Windows 10, včetně konceptů a zásad skupiny, které je možné nastavit ve sdíleném režimu.

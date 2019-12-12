@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ca76ffe0c8fa42f1c2cf24fcdefd287140231220
-ms.sourcegitcommit: b5e719fb507b1bc4774674e76c856c435e69f68c
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73801623"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>Nastavení Intune Certificate Connectoru pro platformu PKI DigiCert
@@ -105,7 +105,7 @@ Pokud budete konektor používat jenom s certifikační autoritou DigiCert, mů�
 
    b. Vyberte **soubor** > **Přidat nebo odebrat moduly Snap-in** > **certifikát** > **Přidat**.
 
-   c. Vyberte **účet počítače** > **Další**.
+   c.  > **Další**vyberte **účet počítače** .
 
    d. Vyberte **místní počítač** > **Dokončit**.
 
@@ -115,7 +115,7 @@ Pokud budete konektor používat jenom s certifikační autoritou DigiCert, mů�
 
    g. Vyberte umístění certifikátu RA, který jste stáhli z certifikační autority DigiCert, a pak vyberte **Další**.
 
-   y. Vyberte **osobní úložiště certifikátů** > **Další**.
+   h.  > **Další**vyberte **osobní úložiště certifikátů** .
 
    i. Výběrem **Dokončit** IMPORTUJTE certifikát RA a jeho soukromý klíč do **osobního úložiště místního počítače** .
 
@@ -157,7 +157,7 @@ Pokud budete konektor používat jenom s certifikační autoritou DigiCert, mů�
 
 4. Instalace .NET Framework 3.5:
 
-   a. Otevřete **Ovládací panely** **programy a funkce** >   > **zapnout nebo vypnout funkce systému Windows**.
+   a. Otevřete **Ovládací panely** > **programy a funkce** > **zapnout nebo vypnout funkce systému Windows**.
 
    b. Vyberte možnost **.NET Framework 3.5** a rozhraní nainstalujte.
 
@@ -193,12 +193,12 @@ Ve výchozím nastavení se Intune Certificate Connector nainstaluje do **%Progr
 
 1. Ve složce **NDESConnectorSvc** otevřete soubor **NDESConnector. exe. config** v programu Poznámkový blok.
 
-   a. Aktualizujte hodnotu klíče `RACertThumbprint` s hodnotou kryptografického otisku certifikátu, kterou jste zkopírovali v předchozí části. Například:
+   a. Aktualizujte hodnotu klíče `RACertThumbprint` hodnotou kryptografického otisku certifikátu, kterou jste zkopírovali v předchozí části. Například:
 
         <add key="RACertThumbprint"
         value="EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"/>
 
-   b. Soubor uložte a zavřete.
+   b. Soubor uložte a zavřete.
 
 2. Otevřete **Services. msc**:
 
@@ -312,7 +312,7 @@ Po dokončení předchozích kroků vystaví Intune Certificate Connector certif
 
 |Atribut | Formáty podporované Intune | Formáty podporované DigiCert cloudové CA | result |
 | --- | --- | --- | --- |
-| Název subjektu |Intune podporuje název subjektu pouze ve třech následujících formátech: <br><br> 1. běžný název <br> 2. běžný název, který obsahuje e-mail <br> 3. běžný název jako e-mail <br><br> Například: <br><br> `CN = IWUser0 <br><br> E = IWUser0@samplendes.onmicrosoft.com` | Certifikační autorita DigiCert podporuje více atributů.  Pokud chcete vybrat další atributy, musí být definované s pevnými hodnotami v šabloně profilu certifikátu DigiCert.| V žádosti o certifikát PKCS používáme běžný název nebo e-mail. <br><br> Neshoda v výběru atributů mezi profilem certifikátu Intune a šablonou profilu certifikátu DigiCert nevede k vystavování certifikátů od certifikační autority DigiCert.|
+| Název předmětu |Intune podporuje název subjektu pouze ve třech následujících formátech: <br><br> 1. běžný název <br> 2. běžný název, který obsahuje e-mail <br> 3. běžný název jako e-mail <br><br> Například: <br><br> `CN = IWUser0 <br><br> E = IWUser0@samplendes.onmicrosoft.com` | Certifikační autorita DigiCert podporuje více atributů.  Pokud chcete vybrat další atributy, musí být definované s pevnými hodnotami v šabloně profilu certifikátu DigiCert.| V žádosti o certifikát PKCS používáme běžný název nebo e-mail. <br><br> Neshoda v výběru atributů mezi profilem certifikátu Intune a šablonou profilu certifikátu DigiCert nevede k vystavování certifikátů od certifikační autority DigiCert.|
 | Alternativní název subjektu | Intune podporuje pouze následující hodnoty polí alternativního názvu subjektu: <br><br> **AltNameTypeEmail** <br> **AltNameTypeUpn** <br> **AltNameTypeOtherName** (zakódovaná hodnota) | DigiCert cloudová certifikační autorita podporuje také tyto parametry. Pokud chcete vybrat další atributy, musí být definované s pevnými hodnotami v šabloně profilu certifikátu DigiCert. <br><br> **AltNameTypeEmail**: Pokud tento typ není v síti SAN nalezen, používá nástroj Intune Certificate Connector hodnotu z **AltNameTypeUpn**.  Pokud se v síti SAN taky nenajde **AltNameTypeUpn** , použije Intune Certificate Connector hodnotu z názvu subjektu, pokud je ve formátu e-mailu.  Pokud se tento typ pořád nenajde, Intune Certificate Connector se nepodaří vystavit certifikáty. <br><br> Příklad: `RFC822 Name=IWUser0@ndesvenkatb.onmicrosoft.com`  <br><br> **AltNameTypeUpn**: Pokud tento typ není v síti SAN nalezen, používá nástroj Intune Certificate Connector hodnotu z **AltNameTypeEmail**. Pokud se v síti SAN taky nenajde **AltNameTypeEmail** , použije Intune Certificate Connector hodnotu z názvu předmětu, pokud je ve formátu e-mailu. Pokud se tento typ pořád nenajde, Intune Certificate Connector se nepodaří vystavit certifikáty.  <br><br> Příklad: `Other Name: Principal Name=IWUser0@ndesvenkatb.onmicrosoft.com` <br><br> **AltNameTypeOtherName**: Pokud se tento typ v síti SAN nenajde, nemůže Intune Certificate Connector vydat certifikáty. <br><br> Příklad: `Other Name: DS Object Guid=04 12 b8 ba 65 41 f2 d4 07 41 a9 f7 47 08 f3 e4 28 5c ef 2c` <br><br>  Hodnota tohoto pole je podporována certifikační autoritou DigiCert pouze v kódovaném formátu (šestnáctková hodnota). Pro libovolnou hodnotu v tomto poli Intune Certificate Connector před odesláním žádosti o certifikát převede na kódování Base64. *Intune Certificate Connector neověřuje, jestli už je hodnota zakódovaná.* | Žádné |
 
 ## <a name="troubleshooting"></a>Odstraňování potíží
@@ -321,7 +321,7 @@ Protokoly služby Intune Certificate Connector jsou k dispozici ve složce **%Pr
 
 | Problém/chybová zpráva | Postup řešení |
 | --- | --- |
-| Nepovedlo se přihlásit pomocí účtu správce tenanta Intune v uživatelském rozhraní konektoru NDES. | K tomu může dojít v případě, že místní Certificate Connector není povolený v centru pro správu Microsoft Endpoint Manageru. Řešení těchto potíží: <br><br> 1. Přihlaste se do [centra pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). <br> 2. Vyberte možnost **Správa tenanta** > **konektory a tokeny** > **konektory certifikátů**. <br> 3. Vyhledejte Certificate Connector a ujistěte se, že je povolený. <br><br> Po dokončení předchozích kroků se zkuste přihlásit pomocí stejného účtu správce tenanta Intune v uživatelském rozhraní konektoru NDES. |
+| Nepovedlo se přihlásit pomocí účtu správce tenanta Intune v uživatelském rozhraní konektoru NDES. | K tomu může dojít v případě, že místní Certificate Connector není povolený v centru pro správu Microsoft Endpoint Manageru. K vyřešení tohoto problému: <br><br> 1. Přihlaste se do [centra pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). <br> 2. Vyberte možnost **Správa tenanta** > **konektory a tokeny** > **konektory certifikátů**. <br> 3. Vyhledejte Certificate Connector a ujistěte se, že je povolený. <br><br> Po dokončení předchozích kroků se zkuste přihlásit pomocí stejného účtu správce tenanta Intune v uživatelském rozhraní konektoru NDES. |
 | Certifikát konektoru NDES Connector se nepodařilo nalézt. <br><br> System. ArgumentNullException: value nemůže mít hodnotu null. | Intune Certificate Connector zobrazuje tuto chybu, pokud se účet správce tenanta Intune nikdy nepřihlásil k uživatelskému rozhraní NDES Connector. <br><br> Pokud tato chyba přetrvává, restartujte konektor služby Intune. <br><br> 1. Otevřete **Services. msc**. <br> 2. Vyberte **službu Intune Connector Service**. <br> 3. Klikněte pravým tlačítkem a vyberte **restartovat**.|
 | NDES Connector – IssuePfx – obecná výjimka: <br> System.NullReferenceException: Odkaz na objekt není nastavený na instanci objektu. | Tato chyba je přechodná. Restartujte konektor služby Intune. <br><br> 1. Otevřete **Services. msc**. <br> 2. Vyberte **službu Intune Connector Service**. <br> 3. Klikněte pravým tlačítkem a vyberte **restartovat**. |
 | Poskytovatel DigiCert – nepovedlo se získat zásady DigiCert. <br><br>Vypršel časový limit operace. | Intune Certificate Connector přijal při komunikaci s certifikační autoritou DigiCert chybu časového limitu operace. Pokud k této chybě dochází i nadále, zvyšte hodnotu časového limitu připojení a zkuste to znovu. <br><br> Chcete-li zvýšit časový limit připojení: <br> 1. Projděte si počítač konektoru NDES. <br>2. v programu Poznámkový blok otevřete soubor **%ProgramFiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config** . <br> 3. Zvyšte hodnotu časového limitu pro následující parametr: <br><br> `CloudCAConnTimeoutInMilliseconds` <br><br> 4. Restartujte službu Intune Certificate Connector. <br><br> Pokud se problém nevyřeší, obraťte se na zákaznickou podporu DigiCert. |

@@ -15,10 +15,10 @@ ms.technology: ''
 ms.assetid:
 - GET ONE FROM guidgenerator.com
 ms.openlocfilehash: 0a5e90c6bc6b352f4d7a0fc0ae22c65110563461
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68354402"
 ---
 # <a name="metadata-and-markdown-template"></a>Šablona metadat a Markdownu
@@ -34,11 +34,11 @@ Kompletní blok metadat je uveden výše. Je rozdělený na povinná a voliteln�
 
 - **Musíte** mít mezeru mezi dvojtečkou (:) a hodnotou elementu metadat.
 - Pokud volitelný element metadat nemá hodnotu, odkomentujte ho křížkem (#) (nenechávejte ho prázdný ani nepoužívejte hodnotu „na“ [není k dispozici]). Pokud přidáváte hodnotu do elementu, který je odkomentovaný, nezapomeňte znak křížku (#) odebrat.
-- Použití dvojteček v hodnotě (např. pro hodnotu title) vedou k chybě analyzátoru metadat. Místo toho použijte kódování HTML &#58; (například "title": Základy služby&#58; Azure Rights Management | Azure RMS ").
-- **název**: Tento název se zobrazí ve výsledcích vyhledávacího stroje. Musí končit svislicí (|), za kterou následuje název služby (např. viz výše). Nemusí být (a pravděpodobně by ani neměl být) stejný jako název v nadpisu H1. Musí mít zhruba 65 znaků (včetně | NÁZEV SLUŽBY)
-- **Autor**, **manažer**, **kontrolor**: Pole Author by mělo obsahovat **uživatelské jméno GitHubu** autora, nikoli jeho alias.  Pole manager a reviewer musí naopak obsahovat aliasy. ms.reviewer určuje jméno projektového manažera přidruženého k článku nebo službě.
-- **ms.assetid**: Toto je identifikátor GUID článku ze Verzálky. Při vytváření nového souboru Markdownu získat identifikátor GUID z [https://www.guidgenerator.com](https://www.guidgenerator.com). 
-- **ms.prod**, **ms.service**, **ms.technology**, **ms.devlang**, **ms.topic**, **ms.tgt_pltfrm**: Možné hodnoty pro tyto prvky lze nalézt [zde](https://microsoft.sharepoint.com/teams/STBCSI/Insights/_layouts/15/WopiFrame.aspx?sourcedoc=%7b7A321BF1-0611-4184-84DA-A0E964C435FA%7d&file=WEDCS_MasterList_CSIValues.xlsx&action=default).
+- Použití dvojteček v hodnotě (např. pro hodnotu title) vedou k chybě analyzátoru metadat. Místo nich použijte kódování HTML &#58; (například "title: Azure Rights Management&#58; – základní informace | Azure RMS").
+- **title**: Tento název (title) se zobrazí ve výsledcích vyhledávání vyhledávacího webu. Musí končit svislicí (|), za kterou následuje název služby (např. viz výše). Nemusí být (a pravděpodobně by ani neměl být) stejný jako název v nadpisu H1. Musí mít zhruba 65 znaků (včetně | NÁZEV SLUŽBY)
+- **author** (autor), **manager** (vedoucí), **reviewer** (revidující): Pole author musí obsahovat **uživatelské jméno Githubu** autora, ne jeho alias.  Pole manager a reviewer musí naopak obsahovat aliasy. ms.reviewer určuje jméno projektového manažera přidruženého k článku nebo službě.
+- **ms.assetid**: GUID článku velkými písmeny. Při vytváření nového souboru Markdownu získat identifikátor GUID z [https://www.guidgenerator.com](https://www.guidgenerator.com). 
+- **ms.prod**, **ms.service**, **ms.technology**, **ms.devlang**, **ms.topic**, **ms.tgt_pltfrm**: Možné hodnoty pro tyto elementy najdete [tady](https://microsoft.sharepoint.com/teams/STBCSI/Insights/_layouts/15/WopiFrame.aspx?sourcedoc=%7b7A321BF1-0611-4184-84DA-A0E964C435FA%7d&file=WEDCS_MasterList_CSIValues.xlsx&action=default).
 
 ## <a name="basic-markdown-and-gfm"></a>Základní Markdown a GFM
 
@@ -47,7 +47,7 @@ Je podporovaný jak základní markdown, tak i markdown specifický pro Github. 
 - [Syntaxe základního markdownu](https://daringfireball.net/projects/markdown/syntax)
 - [Dokumentace k markdownu specifickému pro Github (GFM – Github-Flavored Markdown)](https://guides.github.com/features/mastering-markdown)
 
-## <a name="headings"></a>Záhlaví
+## <a name="headings"></a>Nadpisy
 
 Příklady nadpisů první a druhé úrovně najdete výše. 
 
@@ -70,23 +70,23 @@ Nadpisy druhé úrovně se používají ke generování obsahu na stránce, kter
 
 
 
-## <a name="links"></a>Odkazy
+## <a name="links"></a>Links
 
 Pokud budete chtít vytvořit odkaz na soubor markdownu ve stejném úložišti, použijte k tomu [relativní odkazy](https://www.w3.org/TR/WD-html40-970917/htmlweb.html#h-5.1.2). 
 
-- Příklad: [Co je Azure Rights Management](./understand-explore/what-is-azure-rights-management.md)
+- Příklad: [Co je Azure Rights Management?](./understand-explore/what-is-azure-rights-management.md)
 
 Pokud budete chtít markdown propojit s hlavičkou ve stejném souboru s markdownem, zobrazte si zdroj publikovaného článku, vyhledejte ID hlavičky (například `id="blockquote"`) a vytvořte odkaz zadáním # + ID (například `#blockquote`).
 
-- Příklad: [Blockquotes](#blockquote)
+- Příklad: [Bloková citace](#blockquote)
 
 Pokud budete chtít vytvořit odkaz na hlavičku v souboru markdownu ve stejném úložišti, použijte relativní odkaz + hashtag odkaz.
 
-- Příklad: [Technický přehled procesu registrace](./understand-explore/rms-for-individuals-user-signup.md#technical-overview-of-the-sign-up-process)
+- Příklad: [technický přehled procesu registrace](./understand-explore/rms-for-individuals-user-signup.md#technical-overview-of-the-sign-up-process)
 
 Pokud budete chtít vytvořit odkaz na externí soubor, použijte jako odkaz úplnou adresu URL.
 
-- Příklad: [GitHub](http://www.github.com)
+- Příklad: [Github](http://www.github.com)
 
 Pokud bude v souboru markdownu adresa URL, transformuje se na prokliknutelný odkaz.
 
@@ -112,7 +112,7 @@ Pokud bude v souboru markdownu adresa URL, transformuje se na prokliknutelný od
     1. Miss Scarlett
     1. Professor Plum
 1. seřazeného
-1. seznamu
+1. s odrážkami
 
 
 ### <a name="unordered-lists"></a>Neuspořádané seznamy
@@ -120,8 +120,8 @@ Pokud bude v souboru markdownu adresa URL, transformuje se na prokliknutelný od
 - Tento
 - je
 - seznam
+- seznam
 - s odrážkami
-- .
 
 
 #### <a name="unordered-list-with-an-embedded-lists"></a>Neseřazený seznam s vloženými seznamy
@@ -183,7 +183,7 @@ Toto je příklad pro: `in-line code`.
 
 ![animovaný gif](./media/hololens.gif)
 
-## <a name="alerts"></a>Upozornění
+## <a name="alerts"></a>Alerts
 
 ### <a name="note"></a>Poznámka
 
@@ -223,7 +223,7 @@ Toto je příklad pro: `in-line code`.
 > [!div class="button"]
 [odkazy v podobě tlačítek](/rights-management)
 
-### <a name="selector"></a>Selektor
+### <a name="selector"></a>Volič
 
 > [!div class="op_single_selector"]
 - [zástupný](/rights-management/template.md)

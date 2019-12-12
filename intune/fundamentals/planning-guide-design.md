@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 24f15cb179dfc2b12b642f5f196d04dce58d4377
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72505212"
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
@@ -316,7 +316,7 @@ Profily Wi-Fi se používají k automatickému připojení mobilního zařízen�
 
 Tady je příklad návrhu profilu Wi-Fi:
 
-| **typ** **profilu** |   | **platforma zařízení** | **případy použití** | | Wi-Fi | Profil Wi-Fi Asie | Android | Corporate, oblast BYOD Asie | | Wi-Fi | Severní Amerika profil sítě Wi-Fi | Android, iOS, Windows 10 Mobile | Corporate, BYOD Severní Amerika Region |
+**typ** |  | **název profilu** | **platforma zařízení** | **případy použití** | | Wi-Fi | Profil Wi-Fi Asie | Android | Corporate, oblast BYOD Asie | | Wi-Fi | Severní Amerika profil sítě Wi-Fi | Android, iOS, Windows 10 Mobile | Corporate, BYOD Severní Amerika Region |
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní profily Wi-Fi.
 

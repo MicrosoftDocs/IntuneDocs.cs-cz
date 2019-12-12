@@ -19,10 +19,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 02293b29f8634161582af2348b1cb30039ca3c52
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73415572"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-intercede"></a>Nastavení zařízení se systémem iOS nebo iPadOS s využitím Portál společnosti a Intercede
@@ -36,7 +36,7 @@ Je možné, že budete muset nastavit odvozené přihlašovací údaje, pokud po
 * Přihlaste se do školních nebo pracovních aplikací, Wi-Fi a virtuálních privátních sítí (VPN).
 * Podepisování a šifrování pracovních e-mailů pomocí certifikátů S/MIME  
 
-V tomto článku budete:  
+V tomto článku provedete následující:  
 
 * Zaregistrujte mobilní zařízení se systémem iOS nebo iPadOS pomocí Portál společnosti Intune.  
 * Získejte odvozené přihlašovací údaje od poskytovatele odvozeného pověření vaší organizace, [Intercede](https://www.intercede.com/).   

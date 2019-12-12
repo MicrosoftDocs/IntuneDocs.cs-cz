@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 19d02694ab5e53dc43e0861c6a427a044bf50648
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72502630"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Nastavení autority pro správu mobilních zařízení
@@ -77,7 +77,7 @@ Po přechodu na novou autoritu MDM pravděpodobně nastane přechodná doba (až
 
 ## <a name="change-mdm-authority-to-office-365"></a>Změna autority MDM na Office 365
 
-Pokud chcete aktivovat Office 365 MDM (nebo pokud chcete vedle stávající služby Intune povolit koexistenci MDM), přejít na [https://protection.office.com](https://protection.office.com), zvolit **ochranu před únikem informací** > **zásady zabezpečení zařízení** > **Zobrazit seznam spravovaných zařízení**@no_ _T – 7.**Pojďme**začít.
+Pokud chcete aktivovat Office 365 MDM (nebo pokud chcete společně s vaší stávající službou Intune povolit koexistenci MDM), použijte [https://protection.office.com](https://protection.office.com), vyberte možnost **prevence ztráty dat** > **zásady zabezpečení zařízení** > **Zobrazit seznam spravovaných zařízení** > **Pojďme začít**.
 
 Další informace najdete v článku o [nastavení správy mobilních zařízení (MDM) v Office 365](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd).
 

@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e468042ab81d563c9fa4b272661508a340d61aa9
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72506250"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Nastavení přístupu zařízení s iOSem k prostředkům společnosti  
@@ -95,7 +95,7 @@ Pozastavení aplikace po dobu delší než několik minut může způsobit ukon�
 
 8. Otevřete aplikaci nastavení a klepněte na **Stáhnout profil**.  
 
-    Pokud se **profil stáhl** jako možnost, přejdete na **Obecné** **profily** > . Pokud profil stále nevidíte, možná ho budete muset stáhnout znovu.  
+    Pokud se **profil stáhl** jako možnost, přejdete na **Obecné** > **profily**. Pokud profil stále nevidíte, možná ho budete muset stáhnout znovu.  
 
     ![Ukázkový snímek obrazovky aplikace nastavení, nastavení staženého profilu](./media/ios-1904-settings-badge.PNG)  
 

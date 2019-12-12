@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 914ce3aa15099b7692d524dbfa368f99f0d092e8
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72504486"
 ---
 # <a name="data-google-sends-to-intune"></a>Data odesílaná Googlem do Intune
@@ -34,7 +34,7 @@ Pokud se na zařízení povolí správa zařízení s Androidem Enterprise, Micr
 Následující tabulka uvádí data, která Google odesílá do Intune, když je na daném zařízení povolená správa zařízení:
 
 
-| Data odesílaná Googlem do Intune | Details | Používá se pro | Příklad |
+| Data odesílaná Googlem do Intune | Details | Používáno pro | Příklad |
 |:---:|:---:|:---:|:---:|
 | Podniková data | Identifikátory společnosti zákazníka v Googlu | Propojí informace o zákazníkovi mezi Intune a Googlem. | Příklad **enterpriseId**: LC04eik8a6<br>**Název:** Jméno správce zadané při konfiguraci Androidu Enterprise Příklad: Jan Novák<br>**E-mail správce** YourAdmin@gmail.com, který se použil při konfiguraci Androidu Enterprise |
 | Data aplikací | Data pro spravované aplikace Obchodu Play | Cílení aplikace na dostupné nebo vyžadované uživatele nebo zařízení | Příklad **názvu aplikace**: Contoso Warehouse Inventory Application<br>Příklad **jedinečného identifikátoru reprezentujícího aplikaci**: app:com.Contoso.Warehouse.InventoryTracking |

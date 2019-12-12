@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e45d51feb91e0e188971133185ac0f0f13e5b1f4
-ms.sourcegitcommit: b752acefec077c719e169e665c955adb944e85c6
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74781137"
 ---
 # <a name="add-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Přidat nastavení sítě VPN na zařízení s iOS v Microsoft Intune
@@ -28,7 +28,7 @@ Microsoft Intune obsahuje řadu nastavení sítě VPN, které můžete nasadit d
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte profil konfigurace zařízení](vpn-settings-configure.md).
+[Vytvořit profil konfigurace zařízení](vpn-settings-configure.md).
 
 > [!NOTE]
 > Tato nastavení jsou k dispozici pro všechny typy registrace. Další informace o typech registrace najdete v tématu Registrace zařízení se [systémem iOS](../enrollment/ios-enroll.md).
@@ -143,12 +143,12 @@ Tato nastavení se použijí, když zvolíte **Typ připojení** > **IKEv2**.
 
 - **Konfigurovat parametry přidružení zabezpečení**: **Nenakonfigurováno** (výchozí) používá výchozí systém iOS. Pokud chcete zadat parametry používané při vytváření přidružení zabezpečení se serverem VPN, vyberte **Povolit** .
   - **Šifrovací algoritmus**: vyberte algoritmus, který chcete:
-    - ALGORITMUS
-    - ŠIFROVÁNÍ
+    - DES
+    - 3DES
     - AES-128
     - AES-256 (výchozí)
     - AES-128 – GCM
-    - AES-256 – GCM
+    - AES-256-GCM
   - **Algoritmus integrity**: vyberte algoritmus, který chcete:
     - SHA1-96
     - SHA1 – 160
@@ -156,18 +156,18 @@ Tato nastavení se použijí, když zvolíte **Typ připojení** > **IKEv2**.
     - SHA2 – 384
     - SHA2 – 512
   - **Skupina Diffie-Hellman**: vyberte skupinu, kterou chcete. Výchozí hodnota je skupina `2`.
-  - **Doba života** (minuty): vyberte, jak dlouho zůstane přidružení zabezpečení aktivní, dokud se klíče neotáčí. Zadejte celou hodnotu mezi `10` a `1440` (1440 minut je 24 hodin). Výchozí hodnota je `1440`.
+  - **Doba života** (minuty): vyberte, jak dlouho zůstane přidružení zabezpečení aktivní, dokud se klíče neotáčí. Zadejte celou hodnotu mezi `10` a `1440` (1440 minut je 24 hodin). Výchozí je `1440`.
 
 - **Konfigurace samostatné sady parametrů pro podřízená přidružení zabezpečení**: iOS umožňuje konfigurovat samostatné parametry pro připojení IKE a všechna podřízená připojení. 
 
   **Nenakonfigurováno** (výchozí) používá hodnoty, které zadáte v nastavení dříve **Konfigurovat parametry přidružení zabezpečení** . Pokud chcete zadat parametry používané při vytváření *podřízených* přidružení zabezpečení se serverem VPN, vyberte **Povolit** .
   - **Šifrovací algoritmus**: vyberte algoritmus, který chcete:
-    - ALGORITMUS
-    - ŠIFROVÁNÍ
+    - DES
+    - 3DES
     - AES-128
     - AES-256 (výchozí)
     - AES-128 – GCM
-    - AES-256 – GCM
+    - AES-256-GCM
   - **Algoritmus integrity**: vyberte algoritmus, který chcete:
     - SHA1-96
     - SHA1 – 160
@@ -175,7 +175,7 @@ Tato nastavení se použijí, když zvolíte **Typ připojení** > **IKEv2**.
     - SHA2 – 384
     - SHA2 – 512
   - **Skupina Diffie-Hellman**: vyberte skupinu, kterou chcete. Výchozí hodnota je skupina `2`.
-  - **Doba života** (minuty): vyberte, jak dlouho zůstane přidružení zabezpečení aktivní, dokud se klíče neotáčí. Zadejte celou hodnotu mezi `10` a `1440` (1440 minut je 24 hodin). Výchozí hodnota je `1440`.
+  - **Doba života** (minuty): vyberte, jak dlouho zůstane přidružení zabezpečení aktivní, dokud se klíče neotáčí. Zadejte celou hodnotu mezi `10` a `1440` (1440 minut je 24 hodin). Výchozí je `1440`.
 
 ## <a name="automatic-vpn-settings"></a>Automatické nastavení sítě VPN
 
@@ -197,8 +197,8 @@ Tato nastavení se použijí, když zvolíte **Typ připojení** > **IKEv2**.
   - **Akce**: Zvolte jednu z následujících možností:
     - Připojit
     - Vyhodnotit připojení
-    - Ohled
-    - Dobu
+    - Ignorovat
+    - Odpojit
 
 ## <a name="proxy-settings"></a>Nastavení proxy serveru
 

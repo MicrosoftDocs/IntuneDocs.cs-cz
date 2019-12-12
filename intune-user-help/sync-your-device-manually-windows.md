@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 289d99603314be7c1097d54d59d4a0e90cae0bed
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72508330"
 ---
 # <a name="sync-your-windows-device-manually"></a>Ruční synchronizace zařízení s Windows
@@ -136,7 +136,7 @@ Tyto pokyny platí pro zařízení HoloLens se systémem Windows 10 Anniversary 
 
 3. Vyberte připojený účet > **synchronizaci**.  aplikace nastavení ![obrazovky snímků obrazovky, zvýrazněné tlačítko synchronizace](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
 
-### <a name="windows-phone-81"></a>Windows Phone 8.1
+### <a name="windows-phone-81"></a>Wvdows Phone 8.1
 
 1. Přejděte na **Všechny aplikace** > **Nastavení** > **Pracoviště**.
 

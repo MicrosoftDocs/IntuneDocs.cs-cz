@@ -16,10 +16,10 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f42acb38d84394a6b61fa16072de6320b84a67b5
-ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72681296"
 ---
 # <a name="integrate-wandera-mobile-threat-protection-with-intune"></a>Integrace ochrany před mobilními hrozbami Wandera pomocí Intune  
@@ -56,13 +56,13 @@ Proces autorizace aplikace ochrany před mobilními hrozbami Wandera:
 Nastavení modulu *EMM Connect* for Wandera vyžaduje jednorázový proces konfigurace, který dokončíte v konzolách Intune a Wandera. Proces konfigurace trvá přibližně 15 minut. Konfiguraci můžete dokončit bez koordinace s technickým účtem Wandera nebo zástupcem podpory.  
 
 ### <a name="enable-support-for-wandera-in-intune"></a>Povolení podpory pro Wandera v Intune
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a pokračujte na **dodržování předpisů zařízením**  > **ochrany před mobilními hrozbami** > a vyberte **Přidat**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a pokračujte na **dodržování předpisů zařízením** > **ochrany před mobilními hrozbami** > a vyberte **Přidat**.
 
 2. Na stránce **Přidat konektor** použijte rozevírací seznam a vyberte **Wandera**. A pak vyberte **vytvořit**.  
 
 3. V podokně obrana proti mobilním hrozbám vyberte konektor **Wandera** MTD ze seznamu konektorů a otevřete tak podokno *Upravit konektor* . Vyberte **otevřít konzolu pro správu Wandera** , otevřete [paprskový](https://radar.wandera.com/login), konzolu pro správu Wandera a přihlaste se. 
 
-4. V konzole Wandera přejděte na **nastavení** > **integrace**modulu EMM a vyberte kartu **EMM Connect** . použijte rozevírací seznam dodavatel modulu *EMM* a vyberte možnost *Microsoft Intune*.
+4. V konzole Wandera přejděte na **nastavení** > integrace modulu **EMM**a vyberte kartu **EMM Connect** . použijte rozevírací seznam dodavatel modulu *EMM* a vyberte možnost *Microsoft Intune*.
 
    ![Výběr Intune](./media/wandera-mtd-connector-integration/set-up-intune-in-radar.png)
 
@@ -89,7 +89,7 @@ K nasazení Wandera přidáte mobilní aplikace Wandera pro platformy, které po
 
 Tento postup vás provede následujícími oddíly a postupy.
 
-Další informace o tomto procesu z Wandera se přihlaste k Wandera [paprsku](https://radar.wandera.com/login). Přejít na **nastavení** > **Integrace modulu EMM**, vyberte kartu **Push aplikace** a pak vyberte **Microsoft Intune**. Karta nabízených oznámení aplikací se aktualizuje pomocí pokynů, které jsou specifické pro Intune.  
+Další informace o tomto procesu z Wandera se přihlaste k Wandera [paprsku](https://radar.wandera.com/login). V části **nastavení** > **Integrace modulu EMM**vyberte kartu **nabízení aplikace** a pak vyberte **Microsoft Intune**. Karta nabízených oznámení aplikací se aktualizuje pomocí pokynů, které jsou specifické pro Intune.  
 
 ### <a name="add-the-wandera-apps"></a>Přidání aplikací Wandera  
 Vytvořte klientské aplikace v Intune, abyste mohli nasadit aplikaci Wandera na zařízení s Androidem a iOS. Další informace najdete v tématu [Přidání aplikací MTD](mtd-apps-ios-app-configuration-policy-add-assign.md) pro postupy a vlastní podrobnosti specifické pro aplikace Wandera.  
@@ -116,13 +116,13 @@ Další informace najdete v tématu [nasazení aplikací](../apps/apps-deploy.md
 ### <a name="assign-the-wandera-apps-to-the-synchronization-group"></a>Přiřaďte aplikace Wandera ke skupině synchronizace.  
 Pro aplikaci Wandera, kterou jste vytvořili pro iOS a Android, opakujte následující postup.
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a přečtěte si **klientské aplikace** > **aplikace** a vyberte aplikaci Wandera.  
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a v části **klientské aplikace** > **aplikace** a vyberte aplikaci Wandera.  
 
 2. Vyberte **přiřazení** a pak **Přidat skupinu**.  
 
 3. V podokně *Přidat skupinu* pro *Typ přiřazení* vyberte **požadované**.
 
-4. Vyberte **zahrnuté skupiny**a pak **Vyberte skupiny, které chcete zahrnout**. Určete skupinu, kterou jste vytvořili pro Wandera synchronizaci, a potom klikněte na **vybrat** > **OK** > **OK**. Kliknutím na **Uložit** dokončete přiřazení skupiny.  
+4. Vyberte **zahrnuté skupiny**a pak **Vyberte skupiny, které chcete zahrnout**. Určete skupinu, kterou jste vytvořili pro Wandera synchronizaci, a pak klikněte na **vybrat** > **OK** > **OK**. Kliknutím na **Uložit** dokončete přiřazení skupiny.  
  
 
 ## <a name="next-steps"></a>Další kroky  

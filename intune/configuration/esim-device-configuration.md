@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: fbe2377bfd353dc00ddfdf53a6d091c486644194
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74059380"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurace mobilních profilů eSIM v Intune – verze Public Preview
@@ -91,7 +91,7 @@ Při práci se souborem CSV, který obsahuje aktivační kódy, se ujistěte, ž
 2. Druhý řádek a všechny následující řádky jsou jedinečnými jednorázovými aktivačními kódy, které obsahují dvě hodnoty:
 
     1. První sloupec je jedinečný ICCID (identifikátor čipu SIM).
-    2. Druhý sloupec je ID pro porovnávání, které je oddělené čárkou (na konci už čárka není). Podívejte se na následující příklad:
+    2. Druhý sloupec je ID pro porovnávání, které je oddělené čárkou (na konci už čárka není). Prohlédněte si následující příklad:
 
         ![Příklad souboru CSV s aktivačními kódy mobilního operátora](./media/esim-device-configuration/url-activation-code-examples.png)
 

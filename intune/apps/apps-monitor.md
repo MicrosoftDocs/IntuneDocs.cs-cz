@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 72e1f95e2bd81d974d900acbcb0f785bb7966eaa
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74563705"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Monitorování informací a přiřazení aplikace pomocí Microsoft Intune
@@ -44,7 +44,7 @@ Intune poskytuje několik způsobů, jak monitorovat vlastnosti spravovaných ap
 
 V podokně aplikace si můžete zkontrolovat podrobnosti o stavu aplikace ve vašem prostředí.
 
-### <a name="essentials"></a>Základy
+### <a name="essentials"></a>Základní údaje
 Část **Základy** obsahuje následující informace o aplikaci:
 
  | **Podrobnosti aplikace**            | **Popis**                                                      |
@@ -59,9 +59,9 @@ Grafy zobrazují počet aplikací pro následující stav:
 
 | **Stav zařízení**       | **Popis**                                       |
 |-----------------------|-------------------------------------------------------|
-| **Instalovat**         | Počet nainstalovaných aplikací                         |
+| **Nainstalovat**         | Počet nainstalovaných aplikací                         |
 | **Nenainstalováno**     | Počet nenainstalovaných aplikací                     |
-| **Nepovedlo se**            | Počet neúspěšných instalací                   |
+| **Se nezdařilo**            | Počet neúspěšných instalací                   |
 | **Instalace čeká**   | Počet aplikací, které se právě instalují |
 | **Není k dispozici**           | Počet aplikací, u nichž není stav k dispozici            |
 

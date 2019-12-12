@@ -1,6 +1,6 @@
 ---
 title: Nastavení e-mailu Androidu v Microsoft Intune – Azure | Microsoft Docs
-description: Vytvořte e-mailové profily konfigurace zařízení, které používají Exchange servery, a načtěte atributy z Azure Active Directory. Povolte SSL nebo SMIME, ověřte uživatele pomocí certifikátů nebo uživatelského jména a hesla a synchronizujte e-maily a plány na zařízeních se systémem Android Samsung KNOX pomocí Microsoft Intune.
+description: Vytvoření zařízení konfigurace e-mailové profily, které používají servery Exchange a načtení atributů z Azure Active Directory. Povolte SSL nebo SMIME, ověřte uživatele pomocí certifikátů nebo uživatelského jména a hesla a synchronizujte e-maily a plány na zařízeních se systémem Android Samsung KNOX pomocí Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -16,15 +16,15 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 43a2b00ae824656621c8a586e41ba6425c69ed40
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72506768"
 ---
 # <a name="android-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Nastavení zařízení s Androidem pro konfiguraci e-mailu, ověřování a synchronizace v Intune
 
-Tento článek obsahuje seznam a popis různých nastavení e-mailů, které můžete řídit v zařízeních se systémem Android Samsung KNOX v Intune. V rámci řešení pro správu mobilních zařízení (MDM) použijte Tato nastavení ke konfiguraci e-mailového serveru, k šifrování e-mailů použijte protokol SSL a další informace.
+Tento článek obsahuje seznam a popis různých nastavení e-mailů, které můžete řídit v zařízeních se systémem Android Samsung KNOX v Intune. Jako součást řešení správy mobilních zařízení pomocí těchto nastavení můžete nakonfigurovat e-mailový server, použijte protokol SSL k šifrování e-mailů a další.
 
 Jako správce Intune můžete vytvořit a přiřadit nastavení e-mailu pro zařízení se systémem Android Samsung KNOX Standard.
 
@@ -32,7 +32,7 @@ Další informace o e-mailových profilech v Intune najdete v tématu [Konfigura
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte profil konfigurace zařízení](email-settings-configure.md#create-a-device-profile).
+[Vytvořit profil konfigurace zařízení](email-settings-configure.md#create-a-device-profile).
 
 ## <a name="android-samsung-knox"></a>Android (Samsung Knox)
 
@@ -54,7 +54,7 @@ Další informace o e-mailových profilech v Intune najdete v tématu [Konfigura
 
 - **Atribut e-mailové adresy z AAD**: Tento název je atribut e-mailu, který Intune získá z Azure AD. Intune dynamicky generuje e-mailovou adresu, kterou používá tento profil. Možnosti:
   - **Hlavní název uživatele**: jako e-mailová adresa používá úplný hlavní název, jako je například `user1@contoso.com` nebo `user1`.
-  - **Primární adresa SMTP**: k přihlášení k Exchangi používá primární adresu SMTP, například `user1@contoso.com`.
+  - **Primární adresa SMTP**: pomocí primární adresy SMTP, jako je `user1@contoso.com`, se přihlaste k Exchangi.
 
 - **Metoda ověřování**: Jako metodu ověřování používanou e-mailovým profilem vyberte buď **Uživatelské jméno a heslo**, nebo **Certifikáty**.
   - Pokud vyberete **Certifikát**, vyberte profil certifikátu SCEP nebo PKCS klienta, který jste dříve vytvořili za účelem ověřování připojení Exchange.

@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: bc29a7a5026691371370b167a4445bfd70cc76bd
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72489802"
 ---
 # <a name="microsoft-intune-windows-phone-81-device-restriction-settings"></a>Nastavení omezení pro zařízení Windows Phone 8.1 v Microsoft Intune
@@ -80,7 +80,7 @@ Příklad: Vyhledání aplikace Skype ve Storu. Použijete tuto adresu URL: `htt
 
 ### <a name="additional-options"></a>Další možnosti
 
-Můžete taky kliknout na **importovat** a naplnit seznam ze souboru CSV ve formátu <*adresa URL aplikace*>, <*název aplikace*> < >*vydavatele aplikace*nebo klikněte na **exportovat** a vytvořte soubor CSV obsahující obsah s omezením. seznam aplikací ve stejném formátu
+Můžete taky kliknout na **importovat** a naplnit seznam ze souboru CSV ve formátu <*URL aplikace*>, <*název aplikace*>, <*vydavatele aplikace*>, nebo kliknout na **exportovat** a vytvořit soubor CSV obsahující obsah seznamu aplikací s omezeným přístupem ve stejném formátu.
 
 
 ## <a name="browser"></a>Prohlížeč

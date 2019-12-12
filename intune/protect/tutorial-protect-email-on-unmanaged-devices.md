@@ -18,10 +18,10 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 810a898a3b2d1981babc231f32ed386bde37a856
-ms.sourcegitcommit: ce518a5dfe62c546a77f32ef372f36efbaad473f
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74465787"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Kurz: Ochrana e-mailů Exchange Online na nespravovaných zařízeních
@@ -32,7 +32,7 @@ Přečtěte si, jak používat zásady ochrany aplikací s podmíněným příst
 > * Vytvořte zásady ochrany aplikací Intune pro aplikaci Outlook. Můžete omezit, co může uživatel s daty aplikace dělat, a zabránit tak akcím Uložit jako a omezit operace vyjmutí, zkopírování a vložení.
 > * Vytvoření zásad podmíněného přístupu Azure Active Directory (Azure AD), které umožní přístup k firemnímu e-mailu v Exchange Online jenom aplikaci Outlook. Pro moderní ověřování klientů budete také vyžadovat vícefaktorové ověřování (MFA), jako je Outlook pro iOS a Android.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadované součásti
 
 Pro účely tohoto kurzu budete potřebovat testovacího tenanta s následujícími předplatnými:
 
@@ -79,7 +79,7 @@ V tomto kurzu nastavíme zásady ochrany aplikací Intune pro iOS, aby aplikace 
 
    ![Výběr nastavení přemístění dat v zásadách ochrany aplikací Outlook](./media/tutorial-protect-email-on-unmanaged-devices/data-protection-settings.png)
 
-   Pokračujte výběrem **Další** .
+   Pokračujte výběrem tlačítka **Next** (Další).
 
 6. Stránka **požadavky na přístup** poskytuje nastavení, které vám umožní nakonfigurovat požadavky na PIN a přihlašovací údaje, které uživatelé musí splnit, aby měli přístup k aplikacím v pracovním kontextu. Nakonfigurujte následující nastavení a nechte všechna ostatní nastavení na jejich výchozích hodnotách:
 
@@ -88,7 +88,7 @@ V tomto kurzu nastavíme zásady ochrany aplikací Intune pro iOS, aby aplikace 
 
    ![Vybrat akce přístupu k zásadám ochrany aplikací Outlook](./media/tutorial-protect-email-on-unmanaged-devices/access-requirements-settings.png)
 
-   Pokračujte výběrem **Další** .
+   Pokračujte výběrem tlačítka **Next** (Další).
 
 7. **Podmíněná spouštěcí** stránka poskytuje nastavení pro nastavení požadavků zabezpečení přihlášení pro zásady ochrany aplikací. Pro tento kurz nemusíte konfigurovat tato nastavení.
 
@@ -157,7 +157,7 @@ Nyní vytvoříme dvě zásady podmíněného přístupu, které pokrývají vš
 
 9. V části **Povolit zásadu**vyberte **zapnuto**a pak vyberte **vytvořit**.
 
-   ![Vytvořit zásadu](./media/tutorial-protect-email-on-unmanaged-devices/enable-policy.png)  
+   ![Vytvořit zásady](./media/tutorial-protect-email-on-unmanaged-devices/enable-policy.png)  
 
 Vytvoří se zásada podmíněného přístupu pro klienty moderního ověřování. Nyní můžete vytvořit zásadu pro klienty Exchange Active Sync.
 
@@ -237,7 +237,7 @@ Pokud už testovací zásady nepotřebujete, můžete je odebrat.
 
 4. Vyberte možnost **zabezpečení koncového bodu** > **podmíněný přístup**.
 
-5. V seznamu **název zásady** vyberte kontextovou nabídku ( **...** ) pro každou ze svých zásad testování a pak vyberte **Odstranit**. Kliknutím na **tlačítko Ano** potvrďte akci.
+5. V seznamu **název zásady** vyberte kontextovou nabídku ( **...** ) pro každou ze svých zásad testování a pak vyberte **Odstranit**. Odstranění potvrďte výběrem **Ano**.
 
 ## <a name="next-steps"></a>Další kroky
 V tomto kurzu jste vytvořili zásady ochrany aplikací, abyste omezili to, co může uživatel dělat s aplikací Outlook, a vytvořili jste zásady podmíněného přístupu, které vyžadují aplikaci Outlook a vyžadují MFA pro klienty moderních ověřování. Další informace o používání Intune s podmíněným přístupem k ochraně dalších aplikací a služeb najdete v tématu [nastavení podmíněného přístupu](conditional-access.md).

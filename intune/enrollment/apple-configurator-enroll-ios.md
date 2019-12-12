@@ -1,5 +1,5 @@
 ---
-title: registrace zařízení s iOS – Apple Configuratoru – Pomocník s nastavením
+title: registrace zařízení s Iosem – Apple Configurator – Pomocník pro instalaci
 titleSuffix: Microsoft Intune
 description: Přečtěte si, jak jde pomocí Apple Configuratoru registrovat zařízení s iOSem vlastněná společností s využitím Pomocníka s nastavením.
 keywords: ''
@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f80312c2bd82063ed0b61c36bef9b8bf4ae3e1aa
-ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74691809"
 ---
 # <a name="set-up-ios-device-enrollment-with-apple-configurator"></a>Nastavení registrace zařízení s iOSem pomocí nástroje Apple Configurator

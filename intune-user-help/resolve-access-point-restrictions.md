@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f8aa54c5ed2a5121246f917a5b5306fab5d89edc
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72508420"
 ---
 # <a name="resolve-access-point-restrictions"></a>Řešení omezení přístupového bodu
@@ -38,19 +38,19 @@ Pokud se pokusíte připojit k nerozpoznané nebo neschválené síti, můžete 
  Tabulky níže obsahují jednotlivé zprávy, co znamenají a jak můžete zase získat přístup k pracovním prostředkům.
 
 ## <a name="access-point-restrictions-not-set-up"></a>Omezení přístupového bodu nejsou nastavená  
-| Zpráva Portálu společnosti | Co tato zpráva znamená | Co byste měli dělat                                                               
+| Zpráva Portálu společnosti | Co tato zpráva znamená | Krok                                                               
 |------------------------|--------------------------|--------------------------|
 | **Omezení přístupového bodu nejsou nastavená. – Omezení přístupového bodu jsou aktivní a musí se nastavit.** | Vaše společnost nastavila pro vaše zařízení omezení přístupového bodu. Toto nastavení vyžaduje, aby aplikace Portál společnosti ověřila na vašem zařízení několik nastavení sítě. | Klepněte na **Vyřešit**. Aplikace Portál společnosti zkontroluje, jestli jste připojení k síti schválené společností. |
 
 ## <a name="not-connected-to-an-approved-network"></a>Nejste připojení ke schválené síti  
 
-| Zpráva Portálu společnosti | Co tato zpráva znamená | Co byste měli dělat                                                                   
+| Zpráva Portálu společnosti | Co tato zpráva znamená | Krok                                                                   
 |------------------------|-----------------------------------|--------------------------|
 | **Zařízení není připojené ke schválené síti. Připojte se ke schválené bezdrátové síti.** | Jste připojení k síti, která není schválená pro přístup k pracovním prostředkům. Pokud jste připojení k této síti, nemáte přístup k pracovním e-mailům, aplikacím a dalším chráněným firemním prostředkům. | Připojte se k síti schválené společností. Pak klepněte na **Vyřešit** a zkuste to znovu. |
 
 ## <a name="restrictions-couldnt-be-enforced"></a>Omezení nešla vynutit  
 
-| Zpráva Portálu společnosti | Co tato zpráva znamená | Co byste měli dělat                                                                      
+| Zpráva Portálu společnosti | Co tato zpráva znamená | Krok                                                                      
 |------------------------|-----------------------------------|--------------------------|
 | **Omezení přístupového bodu nešla vynutit. Na Portálu společnosti došlo k chybě.** | Intune nemůže zjistit, jestli jste připojení ke schválené síti. Tato chyba může být důsledkem špatné kvality síťového připojení, nízkého stavu baterie, režimu spořiče baterie nebo chyby Portálu společnosti. | Ověřte, jestli máte silný síťový příjem. Vypněte režim spořiče baterie a ujistěte se, že zbývající výdrž baterie je alespoň 30 %. Pak klepněte na **Vyřešit** a zkuste to znovu. 
 

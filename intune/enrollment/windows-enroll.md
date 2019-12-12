@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f12feca6d43a4194e7c60639a93747c7f389f93
-ms.sourcegitcommit: fc4b38660129d615068f34ad4b96b900d73f7b53
+ms.openlocfilehash: 0b84cd52dfe2eb6332ddbc89bc00a17ec3361b79
+ms.sourcegitcommit: edd06a494a241d198ca9b0d3030c92195976e0d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74558195"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75000427"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Nastavení registrace pro zařízení s Windows
 
@@ -44,8 +44,8 @@ Způsob zjednodušení registrace zařízení s Windows určují dva faktory:
 
 ||**Azure AD Premium**|**Jiné AD**|
 |----------|---------------|---------------|  
-|**Windows 10**|[Automatická registrace](#enable-windows-10-automatic-enrollment) |Zápis uživatele|
-|**Starší verze Windows**|Zápis uživatele|Zápis uživatele|
+|**Windows 10**|[Automatická registrace](#enable-windows-10-automatic-enrollment) |Registrace uživatele|
+|**Starší verze Windows**|Registrace uživatele|Registrace uživatele|
 
 Organizace, které mohou používat automatickou registraci, také mohou nakonfigurovat [hromadnou registraci zařízení](../windows-bulk-enroll.md) v aplikaci Windows Configuration Designer.
 
@@ -123,9 +123,18 @@ Azure Active Directory má jiný záznam CNAME, který používá k registraci z
 
 | Typ | Název hostitele | Odkazuje na | Hodnota TTL |
 | --- | --- | --- | --- |
-| Jméno | EnterpriseRegistration. company_domain. com | EnterpriseRegistration.windows.net | 1 hodina|
+| JMÉNO | EnterpriseRegistration. company_domain. com | EnterpriseRegistration.windows.net | 1 hodina|
 
 Další informace o registraci zařízení najdete v tématu [Správa identit zařízení pomocí Azure Portal](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal) .
+
+## <a name="windows-10-auto-enrollment-and-device-registration"></a>Automatický zápis a registrace zařízení s Windows 10
+Vytváření položek CNAME DNS není povinné, ale záznamy CNAME usnadňují uživatelům registraci. Pokud nebude nalezen žádný záznam CNAME pro registraci, zobrazí se uživatelům výzva k zadání názvu serveru MDM, enrollment.manage.microsoft.us.
+
+| Typ | Název hostitele | Odkazuje na | Hodnota TTL |
+| --- | --- | --- | --- |
+| CNAME | EnterpriseEnrollment.doména_společnosti.com | EnterpriseEnrollment-s.manage.microsoft.us | 1 hodina|
+|CNAME | EnterpriseRegistration.doména_společnosti.com | EnterpriseRegistration.windows.net | 1 hodina |
+
 
 ## <a name="next-steps"></a>Další kroky
 

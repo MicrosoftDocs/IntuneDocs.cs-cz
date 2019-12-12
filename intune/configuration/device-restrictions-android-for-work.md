@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 12/09/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d9c385ff8c08f9f1df00a081bca1f61a2a5015a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 904c3d2267decdfa3929bf29376c05a995c77eb8
+ms.sourcegitcommit: f5108039f0ade52e95ea3ac1da1aa16d02224af3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74832550"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74946646"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s androidem Enterprise k povolení nebo zakázání funkcí pomocí Intune
 
@@ -231,7 +231,7 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
   Výběrem možnosti **Nenakonfigurováno** zakažte neustále aktivní připojení VPN pro všechny klienty VPN.
 
   > [!IMPORTANT]
-  > Ujistěte se, že na jedno zařízení nasadíte pouze jednu zásadu neustále aktivního připojení VPN. Nasazení více zásad neustále aktivního připojení VPN na jedno zařízení se nepodporuje.
+  > Nezapomeňte nasadit jenom jednu zásadu trvalého připojení k síti VPN na jedno zařízení. Nasazení několika zásad trvalého připojení k síti VPN na jedno zařízení se nepodporuje.
 
 - **Klient VPN**: vyberte klienta VPN, který podporuje neustále aktivní připojení VPN. Možnosti:
   - Cisco AnyConnect
@@ -244,6 +244,7 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
   > [!IMPORTANT]
   > - Klient VPN, kterého zvolíte, musí být nainstalovaný na zařízení a musí podporovat VPN pro jednotlivé aplikace v pracovních profilech. V opačném případě dojde k chybě. 
   > - Aplikaci klienta VPN je potřeba schválit ve **spravovaném obchodu Google Play**, synchronizovat ji do Intune a nasadit ji do zařízení. Až to vše uděláte, bude aplikace nainstalovaná v pracovním profilu uživatele.
+  > - Pořád musíte nakonfigurovat klienta VPN s [profilem sítě VPN](vpn-settings-android-enterprise.md)nebo prostřednictvím [konfiguračního profilu aplikace](../apps/app-configuration-policies-use-android.md).
   > - Může zde být známé problémy při pomocí F5 přístup pro Android 3.0.4 VPN pro jednotlivé aplikace. Zobrazit [F5 zpráva k vydání verze pro F5 přístup pro Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) Další informace.
 
 - **Režim uzamčení**: vyberte **Povolit** , pokud chcete vynutit, aby všechny síťové přenosy používaly tunel VPN. Pokud připojení k VPN není vytvořené, potom nebude mít zařízení přístup k síti.

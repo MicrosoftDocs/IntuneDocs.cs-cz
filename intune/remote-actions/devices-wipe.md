@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a7e58fc0ceafe428646b631c55c42a6d2b119e4
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 2d9fbbbb80cf25861b2e0afbf3d01cfca3ece5fd
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74832660"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991767"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Odebrání zařízení vymazáním, vyřazením nebo ručním zrušením registrace
 
@@ -47,7 +47,7 @@ Akce **Vymazání** obnoví výchozí tovární nastavení zařízení. Data už
 
 Pro Windows 10 verze 1709 nebo novější máte také možnost **Zachovat stav registrace a uživatelský účet**.
 
-Možnost **provést chráněný vymazání** zajistí, že se akce vymazání nedá obejít vypnutím zařízení. Chráněné vymazání bude pokračovat v pokusu o resetování zařízení, dokud nebylo úspěšné. V některých konfiguracích může tato akce opustit thedevice, takže se nepovedlo restartovat.
+Možnost **provést chráněný vymazání** zajistí, že se akce vymazání nedá obejít vypnutím zařízení. Chráněné vymazání bude pokračovat v pokusu o resetování zařízení, dokud nebylo úspěšné. V některých konfiguracích může tato akce opustit zařízení, protože se nemůže restartovat.
 
 Zásady MDM se znovu použijí při příštím připojení zařízení k Intune.
 
@@ -59,7 +59,7 @@ Vymazání je vhodné, když chcete zařízení resetovat, abyste ho mohli dát 
 3. Vyberte **Zařízení** > **Všechna zařízení**.
 4. Zvolte název zařízení, které chcete vymazat.
 5. V podokně s názvem zařízení vyberte **Vymazání**.
-6. Pro Windows 10 verze 1709 nebo novější máte také možnost **Zachovat stav registrace a uživatelský účet**. 
+6. Pro Windows 10 verze 1709 nebo novější máte také **zařízení pro vymazání, ale možnost zachovat stav registrace a přidružený uživatelský účet** . 
     
     |Zachová se při vymazání |Nezachová se|
     | -------------|------------|

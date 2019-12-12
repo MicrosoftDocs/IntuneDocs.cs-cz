@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: dd37813e5ea0b6a64d7fae22cada06cccb01a942
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74059222"
 ---
 # <a name="add-wi-fi-settings-for-ios-devices-in-microsoft-intune"></a>Přidání nastavení Wi-Fi pro zařízení s iOSem v Microsoft Intune
@@ -75,7 +75,7 @@ Těmito nastaveními se zabývá tento článek.
 
   - **EAP-TLS**: Dále zadejte:
 
-    - **Důvěryhodnost serveru** - **Názvy certifikačních serverů**: **přidejte** jeden nebo více běžných názvů používaných v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA) na servery bezdrátového přístupu k síti. Přidejte například `mywirelessserver.contoso.com` nebo `mywirelessserver`. Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
+    - **Důvěryhodnost serveru** - **Názvy certifikačních serverů**: **přidejte** jeden nebo více běžných názvů používaných v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA) na servery bezdrátové sítě pro přístup. Přidejte například `mywirelessserver.contoso.com` nebo `mywirelessserver`. Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
     - **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Tento certifikát umožňuje klientovi, aby důvěřoval certifikátu serveru pro přístup k bezdrátové síti.
 
     - **Ověřování klienta** Vyberte **metodu ověřování**. Možnosti:
@@ -88,7 +88,7 @@ Těmito nastaveními se zabývá tento článek.
 
   - **EAP-TTLS**: Dále zadejte:
 
-    - **Důvěryhodnost serveru** - **Názvy certifikačních serverů**: **přidejte** jeden nebo více běžných názvů používaných v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA) na servery bezdrátového přístupu k síti. Přidejte například `mywirelessserver.contoso.com` nebo `mywirelessserver`. Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
+    - **Důvěryhodnost serveru** - **Názvy certifikačních serverů**: **přidejte** jeden nebo více běžných názvů používaných v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA) na servery bezdrátové sítě pro přístup. Přidejte například `mywirelessserver.contoso.com` nebo `mywirelessserver`. Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
     - **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Tento certifikát umožňuje klientovi, aby důvěřoval certifikátu serveru pro přístup k bezdrátové síti.
 
     - **Ověřování klientů**: Zvolte **metodu ověřování**. Možnosti:
@@ -108,7 +108,7 @@ Těmito nastaveními se zabývá tento článek.
 
   - **PEAP**: Dále zadejte:
 
-    - **Důvěryhodnost serveru** - **Názvy certifikačních serverů**: **přidejte** jeden nebo více běžných názvů používaných v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA) na servery bezdrátového přístupu k síti. Přidejte například `mywirelessserver.contoso.com` nebo `mywirelessserver`. Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
+    - **Důvěryhodnost serveru** - **Názvy certifikačních serverů**: **přidejte** jeden nebo více běžných názvů používaných v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA) na servery bezdrátové sítě pro přístup. Přidejte například `mywirelessserver.contoso.com` nebo `mywirelessserver`. Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
     - **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Tento certifikát umožňuje klientovi, aby důvěřoval certifikátu serveru pro přístup k bezdrátové síti.
 
     - **Ověřování klientů**: Zvolte **metodu ověřování**. Možnosti:

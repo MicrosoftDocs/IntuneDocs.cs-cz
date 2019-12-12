@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 78d38b72c9853a9eadaf71fcdff7567fc66d35ca
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73414671"
 ---
 # <a name="sign-up-or-sign-in-to-microsoft-intune"></a>Registrace nebo přihlášení k Microsoft Intune
@@ -74,7 +74,7 @@ Klasický portál Intune: https://manage.microsoft.com klasický portál Intune 
 
 Microsoft 365 Business: https://portal.microsoft.com/adminportal
 
-Správa mobilních zařízení Office 365: https://portal.office.com/adminportal/home#/MifoDevices
+Správa mobilních zařízení s Office 365: https://portal.office.com/adminportal/home#/MifoDevices
 
 ## <a name="see-also"></a>Související témata
 

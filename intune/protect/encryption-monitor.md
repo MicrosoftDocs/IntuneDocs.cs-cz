@@ -18,10 +18,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.openlocfilehash: 5d9508c5d69b0790efa37ee633f8216bfd2bb30c
-ms.sourcegitcommit: 15e099a9a1e18296580bb345610aee7cc4acd126
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74164678"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Monitorování šifrování zařízení pomocí Intune
@@ -34,7 +34,7 @@ Sestavu můžete najít tak, že se přihlásíte do [centra pro správu Microso
 
 Sestava šifrování zobrazuje společné podrobnosti napříč podporovanými zařízeními, která spravujete. Následující části obsahují podrobné informace o informacích, které Intune prezentuje v sestavě.
 
-### <a name="prerequisites"></a>Předpoklady
+### <a name="prerequisites"></a>Požadované součásti
 
 Sestava šifrování podporuje vytváření sestav na zařízeních, na kterých běží následující verze operačního systému:
 
@@ -124,7 +124,7 @@ Když vyberete zařízení ze sestavy šifrování, Intune zobrazí podokno **st
 
     *Zvažte: počínaje verzí MacOS 10,15 (Catalina) může nastavení registrace schválená uživatelem způsobit požadavek, aby uživatelé ručně schválili šifrování trezoru. Další informace najdete v dokumentaci k [registraci schválené uživatelem](../enrollment/macos-enroll.md) v dokumentaci k Intune*.
 
-  - Neznámý.
+  - Neznámá
 
     *Vezměte v úvahu: možnou příčinou neznámého stavu je to, že zařízení je uzamčené a Intune nemůže spustit v úschově nebo proces šifrování. Po odemknutí zařízení může pokračovat průběh*.
 

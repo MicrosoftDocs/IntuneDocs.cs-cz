@@ -16,10 +16,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.openlocfilehash: d0b4f8d5124924d013e7ac131dafc947a95c7b65
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74059793"
 ---
 # <a name="application-protection-policies-and-work-profiles-on-android-enterprise-devices-in-intune"></a>Zásady ochrany aplikací a pracovní profily na zařízeních s Androidem Enterprise v Intune
@@ -59,7 +59,7 @@ Pokud chcete zobrazit seznam aplikací povolených pro aplikaci, přečtěte si 
 
 Tato část popisuje důležité charakteristiky scénářů nasazení pracovních profilů pro aplikace a Android Enterprise.
 
-### <a name="app-we"></a>APP – WE
+### <a name="app-we"></a>APP-WE
 
 APLIKACE – nasazení (zásady ochrany aplikací bez registrace) definuje zásady pro aplikace, ne zařízení. V tomto scénáři zařízení obvykle nejsou zaregistrovaná nebo spravovaná autoritou MDM, jako je třeba Intune. Aby mohli správci chránit aplikace a přistupovat k datům organizace, používají aplikace spravované aplikací a pro tyto aplikace platí zásady ochrany dat.
 

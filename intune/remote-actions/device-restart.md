@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18cf8e3aec0c7ed7d8869c0f5b13b6e39df23d77
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: b7b77c4f0127c9ee16b255d0e0e28622b85c323b
+ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713413"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74907249"
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Vzdálené restartování zařízení přes Intune
 
@@ -46,7 +46,7 @@ Akce zařízení **Restartovat** způsobí, že se zvolené zařízení restartu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Vyberte **Zařízení** > **Všechna zařízení**.
-4. V seznamu zařízení, která spravujete, zvolte zařízení, zvolte **Více** a pak zvolte akci se vzdáleným zařízením **Restartovat**.
+4. V seznamu zařízení, která spravujete, vyberte zařízení > **restartovat** > **Ano**.
 
 ## <a name="next-steps"></a>Další kroky
 

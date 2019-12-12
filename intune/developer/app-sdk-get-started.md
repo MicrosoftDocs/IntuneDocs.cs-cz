@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 428da4581e9946b62bd6ee7c5f7d17d69f93ad9b
-ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
+ms.openlocfilehash: 9742305905c5ba49930e13646bf13d8c248426b6
+ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592027"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74899389"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Začínáme s Microsoft Intune App SDK
 
@@ -34,7 +34,7 @@ Intune App SDK podporuje podobné scénáře v systémech iOS a Android a je ur�
 
 ### <a name="if-your-app-is-internal-to-your-organization-and-will-not-be-publicly-available"></a>Pokud aplikaci používáte v organizaci interně a nebude veřejně dostupná:
 
-_**Nemusíte**_ Registrovat aplikaci. Pro interní [obchodní aplikace](../apps/apps-add.md#app-types-in-microsoft-intune) , které byly napsané nebo pro vaši firmu, bude správce IT aplikaci nasazovat interně. Intune rozpozná, že je aplikace vytvořená pomocí sady SDK, a umožní správci IT použít pro něj zásady ochrany aplikací. Můžete přeskočit k části [Povolení zásad ochrany aplikací v aplikaci pro iOS nebo Android](#enable-your-ios-or-android-app-for-app-protection-policy).
+_**Nemusíte**_ registrovat aplikaci. Pro interní [obchodní aplikace](../apps/apps-add.md#app-types-in-microsoft-intune) , které byly napsané nebo pro vaši firmu, bude správce IT aplikaci nasazovat interně. Intune rozpozná, že je aplikace vytvořená pomocí sady SDK, a umožní správci IT použít pro něj zásady ochrany aplikací. Můžete přeskočit k části [Povolení zásad ochrany aplikací v aplikaci pro iOS nebo Android](#enable-your-ios-or-android-app-for-app-protection-policy).
 
 ### <a name="if-your-app-will-be-released-to-a-public-app-store-like-the-apple-app-store-or-google-play"></a>Pokud bude vaše aplikace vydána ve veřejném obchodě s aplikacemi, například Apple App Storu nebo Google Play:
 
@@ -164,7 +164,7 @@ Po dokončení nezbytných kroků pro integraci vaší aplikace pro iOS nebo And
 
   * Pokud testujete aplikaci na mobilním zařízení pomocí účtu koncového uživatele, ujistěte se, že jste po přihlášení pomocí účtu správce předali licenci na Intune na webu centra pro správu Microsoft 365. informace najdete v tématu [přiřazení Microsoft Intune licence](../fundamentals/licenses-assign.md).
 
-* **Zásady ochrany aplikací Intune**: Pokud chcete otestovat aplikaci se všemi zásadami ochrany aplikací Intune, měli byste vědět, jaké chování je očekávané pro každé nastavení zásad. Více najdete v popisech [zásad ochrany aplikací pro iOS](../apps/app-protection-policy-settings-ios.md) a [zásad ochrany aplikací pro Android](../apps/app-protection-policy-settings-android.md). Pokud je vaše aplikace integrovaná s Intune SDK, ale ještě není uvedená v Azure Portal jako cílová aplikace, můžete ji cílit na zásadu tak, že vyberete možnost + Další aplikace a v textovém poli zadáte ID sady (iOS) nebo název balíčku (Android).
+* **Zásady ochrany aplikací Intune**: Pokud chcete otestovat aplikaci se všemi zásadami ochrany aplikací Intune, měli byste vědět, jaké chování je očekávané pro každé nastavení zásad. Více najdete v popisech [zásad ochrany aplikací pro iOS](../apps/app-protection-policy-settings-ios.md) a [zásad ochrany aplikací pro Android](../apps/app-protection-policy-settings-android.md). Pokud je vaše aplikace integrovaná s Intune SDK, ale není uvedená v seznamu cílových aplikací, můžete při výběru možnosti vlastní aplikace zadat v textovém poli ID sady (iOS) nebo název balíčku (Android). 
 
 * **Řešení potíží**: Pokud při instalaci aplikace narazíte na problémy při ručním testování uživatelského prostředí, přečtěte si článek o [řešení potíží s instalací aplikace](../apps/troubleshoot-app-install.md). 
 

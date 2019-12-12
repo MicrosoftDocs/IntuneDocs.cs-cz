@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 80d6068a17e1d278f9226e26c9efab24d597e52e
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74564265"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem Enterprise
@@ -70,13 +70,13 @@ Pokud jako typ hodnoty zvolíte proměnnou, můžete vybírat z následujících
 | Možnost | Příklad |
 |----|----|
 | ID zařízení AAD | dc0dc142-11d8-4b12-bfea-cae2a8514c82 |
-| ID účtu | fc0dc142-71d8-4B12-bbea-bae2a8514c81 |
-| ID zařízení Intune | b9841cd9-9843-405F-be28-b2265c59ef97 |
+| ID účtu | fc0dc142-71d8-4b12-bbea-bae2a8514c81 |
+| ID zařízení Intune | b9841cd9-9843-405f-be28-b2265c59ef97 |
 | Doména | contoso.com |
 | Mail | john@contoso.com |
 | Částečný hlavní název uživatele | Jan |
 | ID uživatele | 3ec2c00f-b125-4519-acf0-302ac3761822 |
-| Uživatelské jméno | Jan Karásek |
+| Uživatelské jméno | Rudolf Spousta |
 | Hlavní název uživatele | john@contoso.com |
 
 
@@ -86,7 +86,7 @@ Pro zařízení s Androidem použijte následující dvojice klíč/hodnota:
 
 | **Klíč** | com.microsoft.intune.mam.AllowedAccountUPNs |
 |---|---|
-| **Hodnota** | <ul><li>Jeden nebo více hlavních názvů uživatele (UPN) oddělených <code>;</code>.</li><li>Jediné povolené účty jsou spravované uživatelské účty definované pomocí tohoto klíče.</li><li> Pro zařízení zaregistrovaná v Intune se může použít token <code>{{userprincipalname}}</code>, aby představoval účet zaregistrovaného uživatele.</li></ul> |
+| **Hodnoty** | <ul><li>Jeden nebo více hlavních názvů uživatele (UPN) oddělených <code>;</code>.</li><li>Jediné povolené účty jsou spravované uživatelské účty definované pomocí tohoto klíče.</li><li> Pro zařízení zaregistrovaná v Intune se může použít token <code>{{userprincipalname}}</code>, aby představoval účet zaregistrovaného uživatele.</li></ul> |
 
    > [!NOTE]
    > Pokud chcete povolit jenom nakonfigurované účty organizace s více identitami, musíte použít Outlook pro Android 2.2.222 a novější, Word, Excel, PowerPoint pro Android 16.0.9327.1000 a novější nebo OneDrive pro Android 5,28 a novější.<p></p>

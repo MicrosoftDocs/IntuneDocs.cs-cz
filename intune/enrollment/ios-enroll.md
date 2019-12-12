@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2fb5208cd7df6dc68bcd20455ae9e06a9dbd7ff5
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72503147"
 ---
 # <a name="enroll-ios-devices-in-intune"></a>Registrace zařízení s iOSem v Intune
@@ -63,7 +63,7 @@ Zařízení s iOSem, která patří společnosti, můžete také zaregistrovat p
 
 Organizace můžou nakupovat zařízení s iOSem prostřednictvím Programu registrace zařízení (DEP) společnosti Apple. Program DEP umožňuje vzdáleně (bezdrátově) nasadit registrační profil, který umožní správu těchto zařízení. Další informace najdete v tématu [program registrace zařízení](device-enrollment-program-enroll-ios.md).
 
-## <a name="user-enrollment"></a>Zápis uživatele
+## <a name="user-enrollment"></a>Registrace uživatele
 Registrace uživatele umožňuje správcům podmnožinu možností správy ve srovnání s jinými metodami registrace. Další informace najdete v tématech [podporované akce při registraci uživatelů, hesla a další možnosti](ios-user-enrollment-supported-actions.md) a [Nastavení registrace uživatele pro iOS a iPadOS](ios-user-enrollment.md).
 
 ## <a name="apple-school-manager"></a>Apple School Manager

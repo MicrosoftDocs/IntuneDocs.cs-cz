@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ca8b24a1e8d0da4386ab185533fec38d9b34eb21
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72506255"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Registrace zařízení s Windows 10 pomocí Portál společnosti Intune
@@ -39,7 +39,7 @@ Tento postup popisuje, jak zaregistrovat zařízení, které běží ve Windows 
 
 1. Přejděte na **Start**. Pokud jste na zařízení s Windows 10 Mobile, pokračujte na seznam **všechny aplikace** .
 
-2. Otevřete aplikaci **Nastavení** . Pokud aplikace není v seznamu aplikací snadno dostupná, otevřete panel hledání a zadejte "nastavení".
+2. Otevřete aplikaci **Nastavení**. Pokud aplikace není v seznamu aplikací snadno dostupná, otevřete panel hledání a zadejte "nastavení".
 
 3. Vyberte **Účty** > **Přístup do práce nebo do školy** > **Připojit**.  
 
@@ -74,7 +74,7 @@ Tento postup popisuje, jak zaregistrovat zařízení, které běží ve Windows 
 
 1. Přejděte na **Start**. Pokud jste na zařízení s Windows 10 Mobile, pokračujte na seznam **všechny aplikace** .
 
-2. Otevřete aplikaci **Nastavení** . Pokud aplikace není v seznamu aplikací snadno dostupná, otevřete panel hledání a zadejte "nastavení".
+2. Otevřete aplikaci **Nastavení**. Pokud aplikace není v seznamu aplikací snadno dostupná, otevřete panel hledání a zadejte "nastavení".
 
 3. Vyberte **účty** > **váš účet**.  
 

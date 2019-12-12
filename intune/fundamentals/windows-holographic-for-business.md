@@ -17,13 +17,13 @@ search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 0f82fce8cc31a831f2c032b85d6464e418bd215c
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74058486"
 ---
-# <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Správa a používání různých funkcí správy zařízení na zařízeních s Windows holografickými a HoloLens pomocí Intune
+# <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Spravovat a využívat funkce správy různých zařízení na Windows Holographic a zařízení HoloLens s Intune
 
 Microsoft Intune zahrnuje mnoho funkcí pro usnadnění správy zařízení s Windows Holographic pro firmy, jako [Microsoft HoloLens](https://docs.microsoft.com/hololens/). Pomocí Intune můžete potvrdit, že jsou zařízení v souladu s pravidly vaší organizace, a můžete zařízení přizpůsobit tak, že přidáte profil sítě VPN nebo Wi-Fi. Další klíčovou funkcí je použití zařízení jako veřejného terminálu a spuštění konkrétní aplikace nebo konkrétní sady aplikací.
 
@@ -35,9 +35,9 @@ Pokud chcete používat zařízení s Windows Holographic v Intune, vytvořte pr
 
 Azure Active Directory (AD) představuje skvělý prostředek, který vám pomůže se správou a řízením zařízení, na nichž běží Windows Holographic for Business. Pomocí Intune a Azure AD můžete: 
 
-- **[Připojit zařízení k Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)** : v Azure Active Directory (AD) můžete přidat vlastní zařízení s Windows 10, včetně zařízení s Windows holografickým pro firmy. Tato funkce umožňuje službě Azure AD řídit zařízení. Pomůže vám zajistit, že uživatelé používají prostředky společnosti ze zařízení, která jsou v souladu s vámi stanovenými standardy zabezpečení a dodržování předpisů.
+- **[Připojení zařízení k Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)** : V Azure Active Directory (AD), můžete přidat vlastní pracovní zařízení s Windows 10, včetně zařízení s Windows Holographic for Business. Tato funkce umožňuje službě Azure AD řídit zařízení. Pomůže vám zajistit, že uživatelé používají prostředky společnosti ze zařízení, která jsou v souladu s vámi stanovenými standardy zabezpečení a dodržování předpisů.
 
-  Další podrobnosti najdete [v správě zařízení ve službě Azure AD](https://docs.microsoft.com/azure/active-directory/devices/overview) .
+  [Správa zařízení ve službě Azure AD](https://docs.microsoft.com/azure/active-directory/devices/overview) obsahuje další podrobnosti.
 
 - **[Hromadně registrovat zařízení s Windows](../enrollment/windows-bulk-enroll.md)** : K Azure Active Directory (AD) a Intune můžete připojit větší počet nových zařízení s Windows. Tato funkce se označuje jako hromadná registrace a využívá zřizovací balíčky. Tyto balíčky připojí zařízení s Windows Holographic for Business k tenantovi Azure AD a zaregistrují je v Intune.
 

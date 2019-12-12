@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 12/04/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fb025e6b698eba3deeabbda788fcd990a19105f
-ms.sourcegitcommit: b752acefec077c719e169e665c955adb944e85c6
+ms.openlocfilehash: 78daf56f7e1d22b88d7134ac6cea86f1d999f0c6
+ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74781171"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74860243"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Windows 10 (a novějším) pro povolení nebo omezení funkcí pomocí Intune
 
@@ -33,7 +33,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte profil konfigurace zařízení](device-restrictions-configure.md#create-the-profile).
+[Vytvořit profil konfigurace zařízení](device-restrictions-configure.md#create-the-profile).
 
 ## <a name="app-store"></a>App Store
 
@@ -42,11 +42,11 @@ Tato nastavení používají [zprostředkovatele CSP zásad ApplicationManagemen
 - **App Store** (jenom mobilní): **Nenakonfigurováno** (výchozí) umožňuje koncovým uživatelům přístup k obchodu s aplikacemi na mobilních zařízeních. **Blok** zabraňuje použití App Storu.
 - **Automatické aktualizace aplikací ze Storu**: **Nenakonfigurováno** (výchozí) povolí automatickou aktualizaci aplikací nainstalovaných z Microsoft Store. **Blok** zabraňuje automatické instalaci aktualizací.
 - **Instalace důvěryhodných aplikací**: vyberte, jestli se můžou instalovat aplikace, které nejsou Microsoft Store, označované taky jako zkušební načtení. Probíhá instalace zkušebního načtení a následné spuštění nebo otestování aplikace, která není certifikována Microsoft Store. Například aplikace, která je interní pro vaši společnost. Možnosti:
-  - **Nenakonfigurováno** (výchozí): používá výchozí operační systém.
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
   - **Blok**: zabraňuje zkušebnímu načtení. NeMicrosoft Store aplikace se nedají nainstalovat.
   - **Povolit**: umožňuje zkušební načtení. Je možné nainstalovat aplikace, které nejsou Microsoft Store.
 - **Odemčení pro vývojáře**: umožňuje povolit nastavení vývojářů pro Windows, jako je například umožnění úprav aplikací zkušebně načtené koncovými uživateli. Možnosti:
-  - **Nenakonfigurováno** (výchozí): používá výchozí operační systém.
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
   - **Blok**: znemožní vývojářský režim a aplikace pro zkušební načtení.
   - **Povolit**: povolí vývojářský režim a aplikace pro zkušební načtení.
 
@@ -70,7 +70,7 @@ Tato nastavení používají [zprostředkovatele CSP zásad ApplicationManagemen
 
 - **Uživatelský ovládací prvek při instalacích**: Pokud je nastavené na **Nenakonfigurováno** (výchozí), instalační služba systému Windows zabránit uživatelům v změně možností instalace, které jsou obvykle rezervované pro správce systému, jako je například zadání adresáře pro instalaci souborů. **Blok** umožňuje uživatelům změnit tyto možnosti instalace a některé z instalační služba systému Windows funkcí zabezpečení jsou vynechány.
 
-  [CSP ApplicationManagement/MSIAllowUserControlOverInstall](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msiallowusercontroloverinstall)
+  [ApplicationManagement/MSIAllowUserControlOverInstall CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msiallowusercontroloverinstall)
 
 - **Instalovat aplikace se zvýšenými oprávněními**: Pokud je nastavené na **Nenakonfigurováno** (výchozí), systém použije oprávnění aktuálního uživatele při instalaci programů, které správce systému neimplementuje nebo nenabídne. **Zablokuje** Instalační služba systému Windows, aby při instalaci jakéhokoli programu do systému používal zvýšené oprávnění. Tato oprávnění se rozšiřují na všechny programy.
 
@@ -78,7 +78,7 @@ Tato nastavení používají [zprostředkovatele CSP zásad ApplicationManagemen
 
 - **Spouštěné aplikace**: Zadejte seznam aplikací, které se otevřou po přihlášení uživatele k zařízení. Nezapomeňte použít středníkem oddělený seznam názvů (PFN) aplikací pro Windows, které jsou odděleny středníky. Aby tyto zásady fungovaly, musí manifest v aplikacích pro Windows používat úlohu po spuštění.
 
-  [CSP ApplicationManagement/LaunchAppAfterLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-launchappafterlogon)
+  [ApplicationManagement/LaunchAppAfterLogOn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-launchappafterlogon)
 
 ## <a name="cellular-and-connectivity"></a>Mobilní síť a připojení
 
@@ -87,7 +87,7 @@ Tato nastavení používají [zásady připojení](https://docs.microsoft.com/wi
 - [CSP zásad sítě Wi-Fi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wifi)
 
 - **Mobilní datový kanál**: vyberte, jestli koncoví uživatelé můžou používat data, jako je procházení webu, při připojení k mobilní síti. Možnosti:
-  - **Nenakonfigurováno** (výchozí): používá výchozí operační systém, který může umožňovat mobilní datový kanál. Koncoví uživatelé ji můžou vypnout.
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Koncoví uživatelé ji můžou vypnout.
   - **Blok**: nepovoluje mobilní datový kanál. Koncoví uživatelé je nemůžou zapnout.
   - **Povolit (není editovatelné)** : povoluje mobilní datový kanál. Koncoví uživatelé ji nemohou vypnout.
 
@@ -101,7 +101,7 @@ Tato nastavení používají [zásady připojení](https://docs.microsoft.com/wi
 - **Ruční konfigurace Wi-Fi**: **blok** zabraňuje zařízením v připojení k Wi-Fi mimo sítě instalované na MDM serveru. **Nenakonfigurováno** (výchozí) umožňuje koncovým uživatelům přidat a nakonfigurovat vlastní sítě SSID sítě Wi-Fi Connections.
 - **Interval kontroly sítě Wi-Fi**: zadejte, jak často zařízení hledají sítě Wi-Fi. Zadejte hodnotu od 1 (nejčastější) do 500 (nejméně časté). Výchozí hodnota je `0` (nula).
 
-### <a name="bluetooth"></a>Protokolu
+### <a name="bluetooth"></a>Bluetooth
 
 Tato nastavení používají [poskytovatele zásad Bluetooth](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth). Zobrazuje se taky podporované edice Windows.
 
@@ -139,24 +139,24 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách EnterpriseClou
 ## <a name="control-panel-and-settings"></a>Ovládací panely a nastavení
 
 - **Nastavení aplikace**: **blok** zabraňuje koncovým uživatelům v přístupu k aplikaci nastavení systému Windows. **Nenakonfigurováno** (výchozí) umožňuje uživatelům otevřít na zařízení aplikaci nastavení.
-  - **System**: **Block** znemožní přístup k systémové oblasti aplikace nastavení. **Nenakonfigurováno** (výchozí) umožňuje přístup.
+  - **System**: **Block** znemožní přístup k systémové oblasti aplikace nastavení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
     - **Změny nastavení napájení a režimu spánku** (jenom desktopové služby): **blok** znemožní koncovým uživatelům měnit nastavení napájení a režimu spánku na zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživatelům změnit nastavení napájení a režimu spánku.
-  - **Zařízení**: **blok** znemožní přístup k oblasti zařízení aplikace nastavení na zařízení. **Nenakonfigurováno** (výchozí) umožňuje přístup.
-  - **Síť Internet**: **blok** znemožní přístup k síti & internetovou oblast aplikace nastavení na zařízení. **Nenakonfigurováno** (výchozí) umožňuje přístup.
-  - **Přizpůsobení**: **blok** brání v přístupu k oblasti přizpůsobení aplikace nastavení na zařízení. **Nenakonfigurováno** (výchozí) umožňuje přístup.
-  - **Aplikace**: **blok** znemožní přístup k oblasti aplikace v aplikaci nastavení na zařízení. **Nenakonfigurováno** (výchozí) umožňuje přístup.
-  - **Accounts**: **Block** zabrání přístupu k oblasti účtů aplikace nastavení na zařízení. **Nenakonfigurováno** (výchozí) umožňuje přístup.
-  - **Čas a jazyk**: **blok** znemožní přístup k oblasti času & jazyka aplikace nastavení na zařízení. **Nenakonfigurováno** (výchozí) umožňuje přístup.
-    - **Změna systémového času**: **blok** znemožní koncovým uživatelům změnit nastavení data a času v zařízení. **Není nakonfigurováno** umožňuje uživatelům změnit tato nastavení.
-    - **Změny nastavení oblasti** (jenom desktopové): **blok** znemožní koncovým uživatelům změnit nastavení oblasti na zařízení. **Není nakonfigurováno** umožňuje uživatelům změnit tato nastavení.
-    - **Změny nastavení jazyka (jenom desktopové verze)** : **blok** znemožní koncovým uživatelům změnit nastavení jazyka v zařízení. **Není nakonfigurováno** umožňuje uživatelům změnit tato nastavení.
+  - **Zařízení**: **blok** znemožní přístup k oblasti zařízení aplikace nastavení na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+  - **Síť Internet**: **blok** znemožní přístup k síti & internetovou oblast aplikace nastavení na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+  - **Přizpůsobení**: **blok** brání v přístupu k oblasti přizpůsobení aplikace nastavení na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+  - **Aplikace**: **blok** znemožní přístup k oblasti aplikace v aplikaci nastavení na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+  - **Accounts**: **Block** zabrání přístupu k oblasti účtů aplikace nastavení na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+  - **Čas a jazyk**: **blok** znemožní přístup k oblasti času & jazyka aplikace nastavení na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+    - **Změna systémového času**: **blok** znemožní koncovým uživatelům změnit nastavení data a času v zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Uživatelé můžou tato nastavení změnit.
+    - **Změny nastavení oblasti** (jenom desktopové): **blok** znemožní koncovým uživatelům změnit nastavení oblasti na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Uživatelé můžou tato nastavení změnit.
+    - **Změny nastavení jazyka (jenom desktopové verze)** : **blok** znemožní koncovým uživatelům změnit nastavení jazyka v zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Uživatelé můžou tato nastavení změnit.
 
       [Zásady nastavení – CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings)
 
-  - **Hraní her**: **blok** znemožní přístup k herní oblasti aplikace nastavení na zařízení. **Nenakonfigurováno** (výchozí) umožňuje přístup.
-  - **Usnadnění přístupu**: **blok** znemožní přístup k oblasti snadného přístupu v aplikaci nastavení na zařízení. **Nenakonfigurováno** (výchozí) umožňuje přístup.
-  - **Ochrana osobních údajů**: **blok** znemožní přístup k oblasti soukromí v aplikaci nastavení na zařízení. **Nenakonfigurováno** (výchozí) umožňuje přístup.
-  - **Aktualizace a zabezpečení**: **blok** znemožní přístup k oblasti zabezpečení & aktualizace aplikace nastavení na zařízení. **Nenakonfigurováno** (výchozí) umožňuje přístup.
+  - **Hraní her**: **blok** znemožní přístup k herní oblasti aplikace nastavení na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+  - **Usnadnění přístupu**: **blok** znemožní přístup k oblasti snadného přístupu v aplikaci nastavení na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+  - **Ochrana osobních údajů**: **blok** znemožní přístup k oblasti soukromí v aplikaci nastavení na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+  - **Aktualizace a zabezpečení**: **blok** znemožní přístup k oblasti zabezpečení & aktualizace aplikace nastavení na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
 ## <a name="display"></a>Zobrazit
 
@@ -178,31 +178,31 @@ Můžete také **naimportovat** soubor. CSV se seznamem aplikací.
 
 Tato nastavení používají [poskytovatele cloudových zásad](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience) Zobrazuje se taky podporované edice Windows. 
 
-- **Snímek obrazovky** (jenom mobilní): **blok** znemožňuje koncovým uživatelům získat na zařízení snímky obrazovky. **Nenakonfigurováno** (výchozí) povolí tuto funkci.
-- **Kopírování a vkládání (jenom mobilní)** : **blok** brání koncovým uživatelům v používání kopírování a vkládání mezi aplikacemi na zařízení. **Nenakonfigurováno** (výchozí) povolí tuto funkci.
-- **Ruční zrušení registrace**: **blok** znemožní koncovým uživatelům odstranit pracovní účet pomocí ovládacích panelů na pracovišti na zařízení. **Nenakonfigurováno** (výchozí) povolí tuto funkci.
+- **Snímek obrazovky** (jenom mobilní): **blok** znemožňuje koncovým uživatelům získat na zařízení snímky obrazovky. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Kopírování a vkládání (jenom mobilní)** : **blok** brání koncovým uživatelům v používání kopírování a vkládání mezi aplikacemi na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Ruční zrušení registrace**: **blok** znemožní koncovým uživatelům odstranit pracovní účet pomocí ovládacích panelů na pracovišti na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
   Nastavení této zásady se nepoužije, pokud je počítač připojený k Azure AD a je povolená Automatická registrace.
 
-- **Ruční instalace kořenového certifikátu** (jenom mobilní zařízení): **blok** brání koncovým uživatelům v ruční instalaci kořenových certifikátů a zprostředkujících certifikátů Cap. **Nenakonfigurováno** (výchozí) povolí tuto funkci.
-- **Kamera**: **Block** znemožní koncovým uživatelům používat fotoaparát na zařízení. **Nenakonfigurováno** (výchozí) povolí tuto funkci.
+- **Ruční instalace kořenového certifikátu** (jenom mobilní zařízení): **blok** brání koncovým uživatelům v ruční instalaci kořenových certifikátů a zprostředkujících certifikátů Cap. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Kamera**: **Block** znemožní koncovým uživatelům používat fotoaparát na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
   [CSP pro kameru](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-camera)
 
-- **Synchronizace souborů na OneDrivu**: **blok** brání koncovým uživatelům v synchronizaci souborů s OneDrivem ze zařízení. **Nenakonfigurováno** (výchozí) povolí tuto funkci.
-- **Vyměnitelné úložiště**: **blok** zabraňuje koncovým uživatelům v používání externích úložných zařízení, jako jsou karty SD, se zařízením. **Nenakonfigurováno** (výchozí) povolí tuto funkci.
-- **Zeměpisná poloha**: **blok** brání koncovým uživatelům v zapnutí služby zjišťování polohy na zařízení. **Nenakonfigurováno** (výchozí) povolí tuto funkci.
-- **Sdílení internetu**: **blok** zabraňuje sdílení internetového připojení na zařízení. **Nenakonfigurováno** (výchozí) povolí tuto funkci.
-- **Resetování telefonu**: **blok** brání koncovým uživatelům v vymazání nebo obnovení továrního nastavení v zařízení. **Nenakonfigurováno** (výchozí) povolí tuto funkci.
-- **Připojení USB**: **blok** zabraňuje přístupu k externímu úložnému zařízení přes připojení USB na zařízení. **Nenakonfigurováno** (výchozí) povolí tuto funkci. Toto nastavení neovlivňuje zpoplatnění přes USB.
-- **Režim AntiTheft** (jenom mobilní): **blok** brání koncovým uživatelům v výběru předvolby režimu AntiTheft na zařízení. **Nenakonfigurováno** (výchozí) povolí tuto funkci.
+- **Synchronizace souborů na OneDrivu**: **blok** brání koncovým uživatelům v synchronizaci souborů s OneDrivem ze zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Vyměnitelné úložiště**: **blok** zabraňuje koncovým uživatelům v používání externích úložných zařízení, jako jsou karty SD, se zařízením. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Zeměpisná poloha**: **blok** brání koncovým uživatelům v zapnutí služby zjišťování polohy na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Sdílení internetu**: **blok** zabraňuje sdílení internetového připojení na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Resetování telefonu**: **blok** brání koncovým uživatelům v vymazání nebo obnovení továrního nastavení v zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Připojení USB**: **blok** zabraňuje přístupu k externímu úložnému zařízení přes připojení USB na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Toto nastavení neovlivňuje zpoplatnění přes USB.
+- **Režim AntiTheft** (jenom mobilní): **blok** brání koncovým uživatelům v výběru předvolby režimu AntiTheft na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Cortana**: **Block** zakáže hlasového asistenta Cortany na zařízení. Když je Cortana vypnutá, uživatelé můžou pořád vyhledávat položky v zařízení. **Nenakonfigurováno** (výchozí) umožňuje Cortaně.
 - **Záznam hlasu** (jenom mobilní): **blok** znemožní koncovým uživatelům používat na zařízení záznam hlasu zařízení. **Nenakonfigurováno** (výchozí) umožňuje záznam hlasu pro aplikace.
-- **Úprava názvu zařízení** (jenom mobilní): **blok** brání koncovým uživatelům ve změně názvu zařízení. **Nenakonfigurováno** (výchozí) povolí tuto funkci.
-- **Přidat zřizovací balíčky**: **blok** zabraňuje agentovi konfigurace běhu, který instaluje zřizovací balíčky na zařízení. **Nenakonfigurováno** (výchozí) povolí tuto funkci.
-- **Odebrat zřizovací balíčky**: **blok** zabraňuje agentům konfigurace běhu, který ze zařízení odebírá zřizovací balíčky. **Nenakonfigurováno** (výchozí) povolí tuto funkci.
-- **Zjišťování zařízení**: **blok** zabraňuje tomu, aby se zařízení zjistilo jinými zařízeními. **Nenakonfigurováno** (výchozí) povolí tuto funkci.
-- **Přepínání úloh** (jenom mobilní): **blok** zabraňuje přepínání úloh na zařízení. **Nenakonfigurováno** (výchozí) povolí tuto funkci.
+- **Úprava názvu zařízení** (jenom mobilní): **blok** brání koncovým uživatelům ve změně názvu zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Přidat zřizovací balíčky**: **blok** zabraňuje agentovi konfigurace běhu, který instaluje zřizovací balíčky na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Odebrat zřizovací balíčky**: **blok** zabraňuje agentům konfigurace běhu, který ze zařízení odebírá zřizovací balíčky. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Zjišťování zařízení**: **blok** zabraňuje tomu, aby se zařízení zjistilo jinými zařízeními. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Přepínání úloh** (jenom mobilní): **blok** zabraňuje přepínání úloh na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Chybový dialog SIM karty** (jenom mobilní): **blokovat** zobrazování chybových zpráv na zařízení, pokud se nezjistí žádná SIM karta. **Nenakonfigurováno** (výchozí) zobrazí chybové zprávy.
 - **Pracovní prostor Ink**: vyberte, jestli a jak má uživatel přístup k pracovnímu prostoru rukopisu. Možnosti:
   - **Nenakonfigurováno** (výchozí): zapne pracovní prostor rukopisu a uživatel ho může používat nad zamykací obrazovkou.
@@ -228,16 +228,16 @@ Tato nastavení používají [poskytovatele cloudových zásad](https://docs.mic
 
 - **Oznámení centra akcí (jenom mobilní)** : **blok** zabraňuje zobrazování oznámení centra akcí na zamykací obrazovce zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživatelům zvolit, které aplikace budou zobrazovat oznámení na zamykací obrazovce.
 
-  [CSP AboveLock/AllowActionCenterNotifications](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#AboveLock_AllowActionCenterNotifications)
+  [AboveLock/AllowActionCenterNotifications CSP](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#AboveLock_AllowActionCenterNotifications)
 
 - **Adresa URL obrázku pro zamknutou obrazovku (jenom desktopové aplikace)** : zadejte adresu URL obrázku ve formátu jpg, JPEG nebo PNG, který se používá jako tapeta zamykací obrazovky Windows. Zadejte například `https://contoso.com/image.png`. Toto nastavení zamkne obrázek a nedá se změnit.
 - **Uživatelem konfigurovatelný časový limit obrazovky (jenom mobilní)** : **Povolení** umožňuje uživatelům nakonfigurovat časový limit obrazovky. **Nenakonfigurováno** (výchozí) neuděluje uživatelům tuto možnost.
 
-  [CSP DeviceLock/AllowScreenTimeoutWhileLockedUserConfig](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#DeviceLock_AllowScreenTimeoutWhileLockedUserConfig)
+  [DeviceLock/AllowScreenTimeoutWhileLockedUserConfig CSP](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#DeviceLock_AllowScreenTimeoutWhileLockedUserConfig)
 
 - **Cortana na uzamčené obrazovce** (jenom stolní počítače): **blok** zabraňuje uživatelům v interakci s Cortana, když je zařízení na zamykací obrazovce. **Nenakonfigurováno** (výchozí) umožňuje interakci s Cortana.
 
-  [CSP AboveLock/AllowCortanaAboveLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowcortanaabovelock)
+  [AboveLock/AllowCortanaAboveLock CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowcortanaabovelock)
 
 - **Informační zprávy na uzamčené obrazovce**: **blok** znemožní zobrazování oznámení na zamykací obrazovce zařízení. **Nenakonfigurováno** (výchozí) povolí tato oznámení.
 
@@ -247,7 +247,7 @@ Tato nastavení používají [poskytovatele cloudových zásad](https://docs.mic
 
   [CSP DeviceLock/ScreenTimeoutWhileLocked](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#DeviceLock_ScreenTimeoutWhileLocked)
 
-## <a name="messaging"></a>Omezován
+## <a name="messaging"></a>Zasílání zpráv
 
 Tato nastavení používají [zásady zasílání zpráv CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-messaging); Zobrazuje se taky podporované edice Windows.
 
@@ -272,7 +272,7 @@ Dostupná nastavení se mění v závislosti na tom, co zvolíte. Možnosti:
 > [!TIP]
 > Další informace o tom, co tyto možnosti dělají, najdete v článku [typy konfigurace celoobrazovkového režimu Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
-Tento profil omezení zařízení přímo souvisí s profilem veřejného terminálu, který vytvoříte pomocí [Nastavení veřejného terminálu Windows](kiosk-settings-windows.md). Sumarizace:
+Tento profil omezení zařízení přímo souvisí s profilem veřejného terminálu, který vytvoříte pomocí [Nastavení veřejného terminálu Windows](kiosk-settings-windows.md). Pro shrnutí:
 
 1. Vytvořte profil [Nastavení veřejného terminálu Windows](kiosk-settings-windows.md) pro spuštění zařízení v celoobrazovkovém režimu. Jako aplikaci vyberte Microsoft Edge a v profilu veřejného terminálu nastavte celoobrazovkový režim Microsoft Edge.
 2. Vytvořte profil omezení zařízení, který je popsaný v tomto článku, a nakonfigurujte konkrétní funkce a nastavení povolená v Microsoft Edge. Nezapomeňte zvolit stejný typ celoobrazovkového režimu Microsoft Edge, jak je vybraný v profilu veřejného terminálu ([Nastavení veřejného terminálu pro Windows](kiosk-settings-windows.md)). 
@@ -335,7 +335,7 @@ Tento profil omezení zařízení přímo souvisí s profilem veřejného termin
 - **Synchronizovat oblíbené položky mezi prohlížeči Microsoft** (jenom desktopové aplikace): **Ano** vynutí, aby Windows synchronizoval oblíbené položky mezi Internet Explorerem a Microsoft Edgem. Přidání, odstranění, úpravy a změna pořadí oblíbených položek jsou sdíleny mezi prohlížeči.  **Ne** (výchozí) používá výchozí nastavení operačního systému, které může uživatelům umožnit synchronizaci oblíbených položek mezi prohlížeči.
 - **Výchozí vyhledávací modul**: Vyberte výchozí vyhledávací web na zařízení. Koncoví uživatelé mohou tuto hodnotu kdykoli změnit. Možnosti:
   - Vyhledávací modul v nastavení klienta Microsoft Edge
-  - Zjišťuje
+  - Bing
   - Google
   - Yahoo
   - Vlastní hodnota: v **adrese URL XML OpenSearch**zadejte adresu URL protokolu HTTPS se souborem XML, který obsahuje krátký název a adresu URL vyhledávacího stroje. Zadejte například `https://www.contoso.com/opensearch.xml`.
@@ -367,7 +367,7 @@ Když je vybraná možnost blokovat a povolit uživatele, může přepsat označ
 - **Povolit shromažďování dat živé dlaždice**: **Ano** (výchozí) umožňuje Microsoft Edge shromažďovat informace z živých dlaždic připnuté do nabídky Start. **Žádné** nebrání shromažďování těchto informací, což může uživatelům poskytnout omezené prostředí.
 - **Uživatel může přepsat chyby certifikátu**: **Ano** (výchozí) umožňuje uživatelům přístup k webům s chybami protokolu SSL/TLS (SSL (Secure Sockets Layer)/Transport Layer Security). **Ne** (doporučeno pro zvýšené zabezpečení) znemožní uživatelům přístup k webům s chybami SSL nebo TLS.
 
-### <a name="additional"></a>Přídavn
+### <a name="additional"></a>Další informace
 
 - **Povolit prohlížeč Microsoft Edge** (jenom mobilní zařízení): **Ano** (výchozí) umožňuje používat na mobilním zařízení webový prohlížeč Microsoft Edge. Na zařízení **nebrání použití** Microsoft Edge. Pokud zvolíte **ne**, ostatní individuální nastavení platí pouze pro plochu.
 - Možnost **Povolit panel Adresa**: **Ano** (výchozí) umožňuje, aby Microsoft Edge zobrazoval rozevírací seznam s panelem Adresa se seznamem návrhů. V takovém případě se v rozevíracím seznamu při psaní **nezastaví zobrazení** seznamu návrhů v Microsoft Edge. Pokud je nastavena na **ne**, můžete:
@@ -420,21 +420,21 @@ Tato nastavení používají [zprostředkovatele CSP zásad DeviceLock](https://
   - **Zakázat opakované použití předchozích hesel**: zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Zadejte například `5`, takže uživatelé nemůžou nastavit nové heslo nebo některá z předchozích čtyř hesel.
   - **Vyžadovat heslo při návratu zařízení ze stavu nečinnosti** (mobilní a holografické): vyberte **vyžadovat** , aby uživatelé před nečinným zařízením museli odemknout heslo. **Není nakonfigurováno** (výchozí) při obnovení zařízení ze stavu nečinnosti nevyžaduje PIN kód ani heslo.
   - **Jednoduchá hesla**: nastavte **blokování** , aby uživatelé nemohli vytvářet jednoduchá hesla, například `1234` nebo `1111`. Nastavte na **Nenakonfigurováno** (výchozí), aby uživatelé mohli vytvářet hesla, jako je `1234` nebo `1111`. Toto nastavení také povolí obrázková hesla Windows (nebo je zablokuje).
-- **Automatické šifrování během AADJ**: **blok** zabraňuje automatickému šifrování zařízení bitlockerem, když je zařízení připravené k prvnímu použití, když je zařízení připojené ke službě Azure AD. **Nenakonfigurováno** (výchozí) používá výchozí operační systém, který může šifrování povolit. Další informace o [šifrování zařízení nástrojem BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption).
+- **Automatické šifrování během AADJ**: **blok** zabraňuje automatickému šifrování zařízení bitlockerem, když je zařízení připravené k prvnímu použití, když je zařízení připojené ke službě Azure AD. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Další informace o [šifrování zařízení nástrojem BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption).
 
-  [CSP pro zabezpečení/PreventAutomaticDeviceEncryptionForAzureADJoinedDevices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-security#security-preventautomaticdeviceencryptionforazureadjoineddevices)
+  [Security/PreventAutomaticDeviceEncryptionForAzureADJoinedDevices CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-security#security-preventautomaticdeviceencryptionforazureadjoineddevices)
 
-- **Zásada FIPS (Federal Information Processing Standard)** : **povoluje** použití zásad FIPS (Federal Information Processing Standard), což je standard státní správy USA pro šifrování, algoritmus hash a podepisování. **Nenakonfigurováno** (výchozí) používá výchozí operační systém, který nepoužívá FIPS.
+- **Zásada FIPS (Federal Information Processing Standard)** : **povoluje** použití zásad FIPS (Federal Information Processing Standard), což je standard státní správy USA pro šifrování, algoritmus hash a podepisování. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Výchozí operační systém nemůže používat FIPS.
 
-  [Kryptografie/AllowFipsAlgorithmPolicy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-cryptography#cryptography-allowfipsalgorithmpolicy)
+  [Cryptography/AllowFipsAlgorithmPolicy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-cryptography#cryptography-allowfipsalgorithmpolicy)
 
-- **Ověřování zařízení ve Windows Hello**: **umožňuje** uživatelům používat doprovodné zařízení Windows Hello, jako je telefon, síť vhodnosti nebo zařízení IoT, pro přihlášení k počítači s Windows 10. **Nenakonfigurováno** (výchozí) používá výchozí operační systém, což může zabránit tomu, aby doprovodná zařízení Windows HELLA mohla ověřit ve Windows.
+- **Ověřování zařízení ve Windows Hello**: **umožňuje** uživatelům používat doprovodné zařízení Windows Hello, jako je telefon, síť vhodnosti nebo zařízení IoT, pro přihlášení k počítači s Windows 10. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Výchozí operační systém může zabránit tomu, aby se doprovodná zařízení Windows Hello mohla ověřit ve Windows.
 
-  [Ověřování/AllowSecondaryAuthenticationDevice CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-allowsecondaryauthenticationdevice)
+  [Authentication/AllowSecondaryAuthenticationDevice CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-allowsecondaryauthenticationdevice)
 
 - **Webové přihlašování**: umožňuje přihlášení Windows pro federované zprostředkovatele bez služby ADFS (Active Directory Federation Services (AD FS)), jako je například Security ASSERTION MARKUP Language (SAML). SAML používá zabezpečené tokeny, které poskytují webovým prohlížečům jednotné přihlašování (SSO). Možnosti:
 
-  - **Nenakonfigurováno** (výchozí): používá výchozí operační systém na zařízení.
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
   - **Povoleno**: poskytovatel přihlašovacích údajů webu je povolen pro přihlášení.
   - **Zakázáno**: poskytovatel přihlašovacích údajů webu je zakázán pro přihlášení.
 
@@ -442,7 +442,7 @@ Tato nastavení používají [zprostředkovatele CSP zásad DeviceLock](https://
 
 - **Upřednostňovaná doména tenanta Azure AD**: zadejte název existující domény v organizaci Azure AD. Když se uživatelé v této doméně přihlásí, nemusí zadávat název domény. Zadejte například `contoso.com`. Uživatelé v doméně `contoso.com` se mohou přihlásit pomocí svého uživatelského jména, jako je například `abby`namísto `abby@contoso.com`.
 
-  [Ověřování/PreferredAadTenantDomainName CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-preferredaadtenantdomainname)
+  [Authentication/PreferredAadTenantDomainName CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-preferredaadtenantdomainname)
 
 ## <a name="per-app-privacy-exceptions"></a>Výjimky ze zásad ochrany osobních údajů pro jednotlivé aplikace
 
@@ -478,7 +478,7 @@ Tato nastavení používají [zprostředkovatele kryptografických služeb v zá
 
 - **Adresa URL obrázku na pozadí plochy (jenom desktopové aplikace)** : zadejte adresu URL obrázku ve formátu. jpg,. jpeg nebo. png, který chcete použít jako tapetu plochy Windows. Uživatelé nemohou tento obrázek změnit. Zadejte například `https://contoso.com/logo.png`.
 
-## <a name="printer"></a>Tiskárně
+## <a name="printer"></a>Tiskárna
 
 - **Tiskárny**: seznam místních tiskáren, které byly přidány.
 - **Výchozí tiskárna**: Nastavte výchozí tiskárnu.
@@ -491,7 +491,7 @@ Tato nastavení používají [CSP zásady ochrany osobních údajů](https://doc
 - **Přizpůsobení vstupu**: **blok** zabraňuje použití hlasu pro diktování a komunikaci s Cortana a dalšími aplikacemi, které využívají rozpoznávání řeči od Microsoftu. Je zakázaná a uživatelé nemůžou povolit online rozpoznávání řeči pomocí nastavení. **Nenakonfigurováno** (výchozí) umožňuje uživatelům zvolit. Pokud povolíte tyto služby, může společnost Microsoft shromažďovat hlasová data pro zlepšení služby.
 - **Automatické přijetí párování a výzev k souhlasu uživatele s ochranou osobních údajů**: vyberte možnost **umožnit** , aby systém Windows mohl automaticky přijímat párování a zprávy o souhlasu s ochranou osobních údajů při spouštění aplikací. **Nenakonfigurováno** (výchozí) zabraňuje automatickému přijetí párování a okna souhlasu uživatele s ochranou osobních údajů při otevírání aplikací.
 - **Publikování aktivit uživatelů**: **blok** zabraňuje sdíleným prostředím a zjišťování naposledy použitých prostředků v informačním kanálu o aktivitách. **Nenakonfigurováno** (výchozí) povolí tuto funkci, aby aplikace mohla publikovat aktivity koncového uživatele.
-- **Pouze místní aktivity**: **blok** zabraňuje sdíleným prostředím a zjišťování naposledy použitých prostředků v přepínání úloh na základě pouze místních aktivit. **Nenakonfigurováno** (výchozí) povolí tuto funkci.
+- **Pouze místní aktivity**: **blok** zabraňuje sdíleným prostředím a zjišťování naposledy použitých prostředků v přepínání úloh na základě pouze místních aktivit. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 
 Můžete nakonfigurovat informace, ke kterým mají přístup všechny aplikace na zařízení. Také definujte výjimky pro jednotlivé aplikace pomocí **výjimek ochrany osobních údajů pro jednotlivé aplikace**.
 
@@ -536,12 +536,12 @@ Tato nastavení používají [zprostředkovatele CSP zásad WirelessDisplay](htt
   [CSP pro System/AllowTelemetry](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-allowtelemetry)
 
 - **Odeslat data o procházení Microsoft Edge do Microsoft 365 Analytics**: Pokud chcete tuto funkci používat, nastavte nastavení **sdílet data o využití** na **Rozšířené** nebo **úplné**. Tato funkce řídí, jaká data Microsoft Edge odesílá Microsoft 365 analýze pro podniková zařízení s nakonfigurovaným komerčním ID. Možnosti:
-  - **Nenakonfigurováno**: používá výchozí operační systém, který nemusí odesílat žádná data historie procházení.
+  - **Nenakonfigurováno**: Intune toto nastavení nemění ani neaktualizuje. Výchozí operační systém nemusí odesílat žádná data historie procházení.
   - **Odesílat jenom intranetová data**: umožňuje správcům odesílat historii dat intranetu.
   - **Odesílat pouze Internetová data**: umožňuje správcům odesílat historii internetových dat.
   - **Odesílat intranetová a Internetová data**: umožňuje správcům odesílat historii intranetových a internetových dat.
 
-  [CSP pro Browser/ConfigureTelemetryForMicrosoft365Analytics](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-configuretelemetryformicrosoft365analytics)
+  [Browser/ConfigureTelemetryForMicrosoft365Analytics CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-configuretelemetryformicrosoft365analytics)
 
 - **Proxy server telemetrie**: zadejte plně kvalifikovaný název domény (FQDN) nebo IP adresu proxy server, aby se předaly požadavky na uživatelské prostředí a telemetrie pomocí připojení SSL (Secure SOCKETS Layer) (SSL). Formát pro toto nastavení je *server*:*port*. Pokud pojmenovaný proxy server selhává nebo pokud při povolování této zásady nezadá proxy server, neodesílají se data o prostředích a telemetrii připojené uživatele a zůstanou na místním zařízení.
 
@@ -591,11 +591,11 @@ Tato nastavení používají [zprostředkovatele CSP zásad spuštění](https:/
 - **Dlaždice uživatele**: **blokování** skryje dlaždici uživatele v nabídce Start. **Není nakonfigurováno** (výchozí) zobrazuje dlaždici uživatele a také nastavuje následující nastavení:
   - **Lock**: **Block** skryje možnost **zámku** v zobrazení na dlaždici uživatele v nabídce Start. **Nenakonfigurováno** (výchozí) zobrazí možnost **zámku** .
   - **Odhlásit**: **blok** skryje možnost **Odhlásit** se ze zobrazení na dlaždici uživatele v nabídce Start. **Nenakonfigurováno** (výchozí) zobrazí možnost **Odhlásit** se.
-- **Vypnout**: **blokovat** skryje možnosti **aktualizace a vypnutí** a **vypnutí** v nabídce Start na tlačítku napájení. **Nenakonfigurováno** (výchozí) zobrazí tyto možnosti.
-- **Režim spánku**: **blok** skryje možnost **spánku** v zobrazení tlačítka napájení v nabídce Start. **Nenakonfigurováno** (výchozí) zobrazí tuto možnost.
-- **Hibernace**: **blok** skryje možnost **Hibernace** na tlačítku napájení v nabídce Start. **Nenakonfigurováno** (výchozí) zobrazí tuto možnost.
-- **Přepínač Account**: **Block** skryje na dlaždici uživatele v nabídce Start **účet Switch** . **Nenakonfigurováno** (výchozí) zobrazí tuto možnost.
-- **Možnosti restartování**: **blokovat** skryje možnosti **aktualizace a restartování** a **restartování** z tlačítka napájení v nabídce Start. **Nenakonfigurováno** (výchozí) zobrazí tyto možnosti.
+- **Vypnout**: **blokovat** skryje možnosti **aktualizace a vypnutí** a **vypnutí** v nabídce Start na tlačítku napájení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Režim spánku**: **blok** skryje možnost **spánku** v zobrazení tlačítka napájení v nabídce Start. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Hibernace**: **blok** skryje možnost **Hibernace** na tlačítku napájení v nabídce Start. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Přepínač Account**: **Block** skryje na dlaždici uživatele v nabídce Start **účet Switch** . Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+- **Možnosti restartování**: **blokovat** skryje možnosti **aktualizace a restartování** a **restartování** z tlačítka napájení v nabídce Start. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
 - **Dokumenty na začátku**: skryje nebo zobrazí složku dokumenty v nabídce Start systému Windows. Možnosti:
   - **Nenakonfigurováno** (výchozí): není vynuceno žádné nastavení. Uživatelé mají možnost zobrazit nebo skrýt zástupce.
   - **Skrýt**: zástupce je skrytý a v aplikaci nastavení se zakáže nastavení.
@@ -643,15 +643,15 @@ Tato nastavení používají [zprostředkovatele CSP zásad spuštění](https:/
 
   Microsoft Edge používá filtr SmartScreen v programu Microsoft Defender (zapnutý) k ochraně uživatelů před potenciálními podvodnými zprávami a škodlivým softwarem.
 
-  [CSP pro Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
+  [Browser/AllowSmartScreen CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
 
 - **Přístup ke škodlivému webu**: **blok** zabraňuje uživatelům ignorovat upozornění filtru SmartScreen v programu Microsoft Defender a zablokuje jejich přechodu na web. **Nenakonfigurováno** (výchozí) umožňuje uživatelům ignorovat upozornění a pokračovat v lokalitě.
 
-  [CSP pro Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
+  [Browser/PreventSmartScreenPromptOverride CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
 - **Stahování neověřených souborů**: **blok** zabraňuje uživatelům ignorovat upozornění filtru SmartScreen v programu Microsoft Defender a zablokuje stahování neověřených souborů. **Nenakonfigurováno** (výchozí) umožňuje uživatelům ignorovat upozornění a pokračovat v stahování neověřených souborů.
 
-  [CSP pro Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
+  [Browser/PreventSmartScreenPromptOverrideForFiles CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
 
 ## <a name="windows-spotlight"></a>Windows Spotlight
 
@@ -659,9 +659,9 @@ Tato nastavení používají [zprostředkovatele kryptografických služeb (CSP]
 
 - **Windows Spotlight**: **blokování** vypne Windows Spotlight na zamykací obrazovce, tipůch pro Windows, funkcích Microsoftu pro uživatele a dalších souvisejících funkcích. Pokud je vaším cílem minimalizovat síťový provoz ze zařízení, nastavte tuto hodnotu na **blokovat**. **Nenakonfigurováno** (výchozí) povolí funkce Windows Spotlight a můžou být řízeny koncovými uživateli. Když je tato možnost povolená, můžete taky povolit nebo zablokovat následující nastavení:
 
-  - **Windows Spotlight na zamykací obrazovce**: **blokovat** zastaví zobrazování informací na zamykací obrazovce zařízení ve Windows Spotlightu. **Nenakonfigurováno** (výchozí) povolí tuto funkci.
+  - **Windows Spotlight na zamykací obrazovce**: **blokovat** zastaví zobrazování informací na zamykací obrazovce zařízení ve Windows Spotlightu. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
   - **Návrhy třetích stran ve Windows Spotlightu**: **blok** zastaví Windows Spotlight z návrhu obsahu, který nepublikoval Microsoft. **Nenakonfigurováno** (výchozí): umožňuje navrhovat návrhy aplikací a obsahu od vydavatelů partnerských softwaru ve funkcích Windows Spotlight, jako je Spotlight na zamykací obrazovce, navrhované aplikace v nabídce Start a tipy pro Windows.
-  - **Uživatelské funkce**: **blokování** vypne prostředí, která jsou obvykle jenom pro příjemce, jako jsou návrhy spuštění, oznámení o členství, představová instalace aplikace po box a přesměrovat dlaždice. **Není nakonfigurováno** (výchozí) tyto funkce povolují.
+  - **Uživatelské funkce**: **blokování** vypne prostředí, která jsou obvykle jenom pro příjemce, jako jsou návrhy spuštění, oznámení o členství, představová instalace aplikace po box a přesměrovat dlaždice. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
   - **Tipy pro Windows**: **blokování** zakáže automaticky otevíraná okna s tipy pro Windows. **Nenakonfigurováno** (výchozí) umožňuje zobrazit tipy pro systém Windows.
   - **Windows Spotlight v centru akcí**: **blok** zabraňuje zobrazování oznámení Windows Spotlightu v centru akcí. **Nenakonfigurováno** (výchozí) může zobrazovat oznámení v centru akcí, které navrhuje aplikace nebo funkce, které uživatelům pomůžou zvýšit produktivitu Windows.
   - **Přizpůsobení Windows Spotlightu**: **blok** zabraňuje systému Windows používat diagnostická data k poskytování přizpůsobených prostředí uživateli. **Nenakonfigurováno** (výchozí) umožňuje Microsoftu používat diagnostická data k poskytování individuálních doporučení, tipů a nabídek k přizpůsobení Windows potřebám uživatelů.
@@ -673,7 +673,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
 - **Sledování v reálném čase**: **Povolení** zapne kontrolu v reálném čase pro malware, spyware a další nežádoucí software. Uživatelé ji nemůžou vypnout. 
 
-  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune toto nastavení nedotkne. Pokud toto nastavení povolíte a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dřív nakonfigurovaném stavu. Ve výchozím nastavení operační systém tuto funkci zapne a umožňuje uživatelům ji změnit.
+  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Pokud toto nastavení povolíte a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dřív nakonfigurovaném stavu. Ve výchozím nastavení operační systém tuto funkci zapne a umožňuje uživatelům ji změnit.
 
   Intune tuto funkci nevypne. Pokud ho chcete zakázat, použijte vlastní identifikátor URI.
 
@@ -681,7 +681,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
 - **Monitorování chování**: **Povolit** zapne monitorování chování a kontroluje určité známé vzorce podezřelé aktivity na zařízeních. Uživatelé nemůžou monitorování chování vypnout. 
 
-  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune toto nastavení nedotkne. Pokud toto nastavení povolíte a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dřív nakonfigurovaném stavu. Ve výchozím nastavení operační systém zapne monitorování chování a umožňuje uživatelům ho změnit.
+  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Pokud toto nastavení povolíte a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dřív nakonfigurovaném stavu. Ve výchozím nastavení operační systém zapne monitorování chování a umožňuje uživatelům ho změnit.
 
   Intune tuto funkci nevypne. Pokud ho chcete zakázat, použijte vlastní identifikátor URI.
 
@@ -691,7 +691,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
   **Povolit zapne možnost** zapnout ochranu sítě a síťové blokování. Uživatelé ji nemůžou vypnout. Pokud je tato možnost povolená, uživatelé se budou moct připojit ke známým chybám zabezpečení.
 
-  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune toto nastavení nedotkne. Pokud toto nastavení povolíte a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dřív nakonfigurovaném stavu. Ve výchozím nastavení operační systém zapne službu NIS a umožňuje uživatelům ji změnit.
+  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Pokud toto nastavení povolíte a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dřív nakonfigurovaném stavu. Ve výchozím nastavení operační systém zapne službu NIS a umožňuje uživatelům ji změnit.
 
   Intune tuto funkci nevypne. Pokud ho chcete zakázat, použijte vlastní identifikátor URI.
 
@@ -699,7 +699,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
 - **Prohledat všechny soubory ke stažení**: **Povolit** zapne toto nastavení a Defender zkontroluje všechny soubory stažené z Internetu. Uživatelé toto nastavení nemůžou vypnout. 
 
-  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune toto nastavení nedotkne. Pokud toto nastavení povolíte a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dřív nakonfigurovaném stavu. Ve výchozím nastavení operační systém toto nastavení zapne a umožňuje uživatelům ho změnit.
+  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Pokud toto nastavení povolíte a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dřív nakonfigurovaném stavu. Ve výchozím nastavení operační systém toto nastavení zapne a umožňuje uživatelům ho změnit.
 
   Intune tuto funkci nevypne. Pokud ho chcete zakázat, použijte vlastní identifikátor URI.
 
@@ -707,7 +707,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
 - **Kontrolovat skripty načtené do webových prohlížečů Microsoftu**: **Povolit** umožňuje programu Defender kontrolovat skripty, které se používají v Internet Exploreru. Uživatelé toto nastavení nemůžou vypnout. 
 
-  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune toto nastavení nedotkne. Pokud toto nastavení povolíte a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dřív nakonfigurovaném stavu. Ve výchozím nastavení operační systém toto nastavení zapne a umožňuje uživatelům ho změnit.
+  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Pokud toto nastavení povolíte a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dřív nakonfigurovaném stavu. Ve výchozím nastavení operační systém toto nastavení zapne a umožňuje uživatelům ho změnit.
 
   Intune tuto funkci nevypne. Pokud ho chcete zakázat, použijte vlastní identifikátor URI.
 
@@ -715,7 +715,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
 - **Přístup koncového uživatele k programu Defender**: **blok** skryje uživatelské rozhraní programu Microsoft Defender před koncovými uživateli. Potlačí se také všechna oznámení programu Microsoft Defender.
 
-  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune toto nastavení nedotkne. Pokud nastavení zablokujete a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dříve nakonfigurovaném stavu. Ve výchozím nastavení operační systém umožňuje uživateli přístup k uživatelskému rozhraní programu Microsoft Defender a umožňuje uživatelům ho změnit.
+  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Pokud nastavení zablokujete a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dříve nakonfigurovaném stavu. Ve výchozím nastavení operační systém umožňuje uživateli přístup k uživatelskému rozhraní programu Microsoft Defender a umožňuje uživatelům ho změnit.
 
   Intune tuto funkci nevypne. Pokud ho chcete zakázat, použijte vlastní identifikátor URI.
 
@@ -725,7 +725,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
 - **Interval aktualizace Security Intelligence (v hodinách)** : zadejte interval, který Defender kontroluje pro nové Security Intelligence, od 0-24. Možnosti:
 
-  - **Nenakonfigurováno** (výchozí): vyhledejte aktualizace každých 8 hodin.
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Výchozí operační systém může kontrolovat aktualizace každých 8 hodin.
   - **Nekontrolovat**: Defender nehledá nové aktualizace Security Intelligence.
   - **1-24**: `1` kontroluje každou hodinu, `2` kontroluje každé dvě hodiny, `24` kontroluje každý den atd.
   
@@ -733,7 +733,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
   
 - **Monitorovat aktivitu souborů a programů**: umožňuje programu Defender monitorovat aktivitu souborů a programů na zařízeních. Možnosti:
 
-  - **Nenakonfigurováno** (výchozí): monitoruje všechny soubory.
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Výchozí hodnota operačního systému může monitorovat všechny soubory.
   - **Monitorování zakázáno**
   - **Monitorovat všechny soubory**
   - **Monitorovat pouze příchozí soubory**
@@ -748,7 +748,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 - **Limit využití procesoru při kontrole**: Omezte počet procesorů, které mohou kontroly využít, od `0` k `100`.
 - **Kontrolovat archivní soubory**: **Povolit** zapne Defender, aby kontroloval archivní soubory, jako jsou soubory ZIP nebo CAB. Uživatelé toto nastavení nemůžou vypnout.
 
-  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune toto nastavení nedotkne. Pokud toto nastavení povolíte a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dřív nakonfigurovaném stavu. Ve výchozím nastavení operační systém toto skenování zapne a umožňuje uživatelům ho změnit.
+  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Pokud toto nastavení povolíte a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dřív nakonfigurovaném stavu. Ve výchozím nastavení operační systém toto skenování zapne a umožňuje uživatelům ho změnit.
 
   Intune tuto funkci nevypne. Pokud ho chcete zakázat, použijte vlastní identifikátor URI.
 
@@ -756,7 +756,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
 - **Kontrolovat příchozí e-mailové zprávy**: **Povolit** umožňuje programu Defender kontrolovat e-mailové zprávy při jejich doručování do zařízení. Pokud je tento modul povolený, analyzuje poštovní schránku a e-mailové soubory a analyzuje body pošty a přílohy. Můžete kontrolovat formáty. PST (Outlook),. dbx,. mbx, MIME (Outlook Express) a BinHex (Mac).
 
-  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune toto nastavení nedotkne. Pokud toto nastavení povolíte a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dřív nakonfigurovaném stavu. Ve výchozím nastavení operační systém vypne tuto kontrolu a umožní uživatelům ji změnit.
+  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Pokud toto nastavení povolíte a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dřív nakonfigurovaném stavu. Ve výchozím nastavení operační systém vypne tuto kontrolu a umožní uživatelům ji změnit.
 
   Intune tuto funkci nevypne. Pokud ho chcete zakázat, použijte vlastní identifikátor URI.
 
@@ -764,7 +764,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
 - **Kontrolovat vyměnitelné jednotky během úplného prohledávání**: **Povolit zapne možnost** při úplné kontrole zapnout kontrolu vyměnitelných jednotek v Defenderu. Uživatelé toto nastavení nemůžou vypnout.
 
-  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune toto nastavení nedotkne. Pokud toto nastavení povolíte a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dřív nakonfigurovaném stavu. Ve výchozím nastavení operační systém umožňuje programu Defender kontrolovat vyměnitelné jednotky, jako jsou USB hole, a umožňuje uživatelům změnit toto nastavení.
+  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Pokud toto nastavení povolíte a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dřív nakonfigurovaném stavu. Ve výchozím nastavení operační systém umožňuje programu Defender kontrolovat vyměnitelné jednotky, jako jsou USB hole, a umožňuje uživatelům změnit toto nastavení.
 
   Během rychlé kontroly mohou být vyměnitelné jednotky stále prohledávány.
 
@@ -774,7 +774,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
 - **Kontrolovat namapované síťové jednotky během úplného prohledávání**: **Povolit** programu Defender prohledává soubory na namapovaných síťových jednotkách. Pokud jsou soubory na disku jen pro čtení, Defender nemůže odebrat žádný malware, který v nich našel. Uživatelé toto nastavení nemůžou vypnout.
 
-  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune toto nastavení nedotkne. Pokud toto nastavení povolíte a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dřív nakonfigurovaném stavu. Ve výchozím nastavení operační systém tuto funkci zapne a umožňuje uživatelům ji změnit.
+  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Pokud toto nastavení povolíte a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dřív nakonfigurovaném stavu. Ve výchozím nastavení operační systém tuto funkci zapne a umožňuje uživatelům ji změnit.
 
   Během rychlé kontroly mohou být namapované síťové jednotky stále prohledávány.
 
@@ -784,7 +784,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
 - **Kontrolovat soubory otevřené ze síťových složek**: **možnost Povolit** v programu Defender prohledává soubory otevřené ze síťových složek nebo sdílených síťových jednotek, jako jsou například soubory dostupné z cesty UNC. Uživatelé toto nastavení nemůžou vypnout. Pokud jsou soubory na disku jen pro čtení, Defender nemůže odebrat žádný malware, který v nich našel.
 
-  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune toto nastavení nedotkne. Pokud toto nastavení povolíte a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dřív nakonfigurovaném stavu. Ve výchozím nastavení operační systém kontroluje soubory otevřené ze síťových složek a umožňuje uživatelům jejich změnu.
+  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Pokud toto nastavení povolíte a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dřív nakonfigurovaném stavu. Ve výchozím nastavení operační systém kontroluje soubory otevřené ze síťových složek a umožňuje uživatelům jejich změnu.
 
   Intune tuto funkci nevypne. Pokud ho chcete zakázat, použijte vlastní identifikátor URI.
 
@@ -792,7 +792,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
 - **Ochrana cloudu**: **Povolit** zapne služba Microsoft Active Protection Service pro příjem informací o činnosti malwaru ze zařízení, která spravujete. Uživatelé toto nastavení nemůžou změnit. 
 
-  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune toto nastavení nedotkne. Pokud toto nastavení povolíte a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dřív nakonfigurovaném stavu. Ve výchozím nastavení operační systém umožňuje služba Microsoft Active Protection Service přijímat informace a umožňuje uživatelům změnit toto nastavení.
+  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Pokud toto nastavení povolíte a pak ho změníte zpátky na **není nakonfigurované**, Intune ponechá nastavení v dřív nakonfigurovaném stavu. Ve výchozím nastavení operační systém umožňuje služba Microsoft Active Protection Service přijímat informace a umožňuje uživatelům změnit toto nastavení.
 
   Intune tuto funkci nevypne. Pokud ho chcete zakázat, použijte vlastní identifikátor URI.
 
@@ -800,7 +800,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
 - **Dotázat se uživatele před odesláním vzorku**: Určuje, jestli se mají do Microsoftu automaticky posílat potenciálně škodlivé soubory, které by mohly vyžadovat další analýzu. Možnosti:
 
-  - **Nenakonfigurováno** (výchozí): automatické odesílání vzorků.
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Výchozí nastavení operačního systému může automaticky odesílat bezpečné vzorky.
   - **Vždycky se zeptat**
   - **Dotázat se před odesláním osobních údajů**
   - **Nikdy Neodesílat data**
@@ -864,6 +864,88 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 - **Soubory a složky, které se mají vyloučit z kontrol a ochrany v reálném**čase: přidá do seznamu vyloučení jeden nebo víc souborů a složek, jako je **c:\Cesta** nebo **%ProgramFiles%\cesta\soubor.exe** . Tyto soubory a složky nejsou zahrnuté do kontrol probíhajících v reálném čase ani do plánovaných kontrol.
 - **Přípony souborů, které se mají vyloučit z kontrol a ochrany v reálném čase**: do seznamu vyloučení přidejte jednu nebo víc přípon souborů, jako je **jpg** nebo **txt** . Všechny soubory s těmito příponami nejsou zahrnuté do kontrol probíhajících v reálném čase ani do plánovaných kontrol.
 - **Procesy, které se mají vyloučit z kontrol a ochrany v reálném**čase: přidejte jeden nebo více procesů typu **. exe**, **. com**nebo **. scr** do seznamu vyloučení. Tyto procesy nejsou zahrnuté do kontrol prováděných v reálném čase ani do plánovaných kontrol.
+
+## <a name="power-settings"></a>Nastavení napájení
+
+### <a name="battery"></a>Baterie
+
+- **Úroveň baterie**: Pokud zařízení používá napájení z baterie, zadejte úroveň nabití baterie, abyste zapnuli úsporu energie z 0-100. Zadejte procentuální hodnotu, která označuje úroveň nabití baterie. Výchozí hodnota je 70%. Když je nastavená na 70%, úspora energie se zapne, když má baterie za 70% nebo méně dostupného.
+
+  [CSP pro Power/EnergySaverBatteryThresholdOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdonbattery)
+
+- **Zavření víka (jenom mobilní)** : Pokud zařízení používá napájení z baterie, vyberte, co se stane po zavření víka. Možnosti:
+
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
+  - **Žádná akce**: zařízení zůstává zapnuté a nadále používá napájení z baterie.
+  - **Režim spánku**: zařízení přejde do režimu spánku a použije malé množství poplatků za baterii. Počítač je stále zapnutý a otevřené aplikace a soubory jsou uložené v paměti RAM (Random Access Memory).
+  - **Hibernace**: zařízení přejde do režimu hibernace. Otevřené aplikace a soubory se ukládají na pevný disk a zařízení se vypne.
+  - **Vypnutí**: zařízení se vypíná. Otevřené aplikace a soubory se zavřou bez uložení.
+
+  [CSP pro Power/SelectLidCloseActionOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectlidcloseactiononbattery)
+
+- **Tlačítko napájení**: Pokud zařízení používá napájení z baterie, vyberte, co se stane po výběru tlačítka napájení. Možnosti:
+
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
+  - **Žádná akce**: zařízení zůstává zapnuté a nadále používá napájení z baterie.
+  - **Režim spánku**: zařízení přejde do režimu spánku a použije malé množství poplatků za baterii. Počítač je stále zapnutý a otevřené aplikace a soubory jsou uložené v paměti RAM (Random Access Memory).
+  - **Hibernace**: zařízení přejde do režimu hibernace. Otevřené aplikace a soubory se ukládají na pevný disk a zařízení se vypne.
+  - **Vypnutí**: zařízení se vypíná. Otevřené aplikace a soubory se zavřou bez uložení.
+
+  [CSP pro Power/SelectPowerButtonActionOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectpowerbuttonactiononbattery)
+
+- **Tlačítko režimu spánku**: když zařízení používá napájení z baterie, vyberte, co se stane po výběru tlačítka režimu spánku. Možnosti:
+
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
+  - **Žádná akce**: zařízení zůstává zapnuté a nadále používá napájení z baterie.
+  - **Režim spánku**: zařízení přejde do režimu spánku a použije malé množství poplatků za baterii. Počítač je stále zapnutý a otevřené aplikace a soubory jsou uložené v paměti RAM (Random Access Memory).
+  - **Hibernace**: zařízení přejde do režimu hibernace. Otevřené aplikace a soubory se ukládají na pevný disk a zařízení se vypne.
+  - **Vypnutí**: zařízení se vypíná. Otevřené aplikace a soubory se zavřou bez uložení.
+
+  [CSP pro Power/SelectSleepButtonActionOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectsleepbuttonactiononbattery)
+
+- **Hybridní režim spánku**: když zařízení používá napájení z baterie, **zakažte zakázat** zabrání zařízení v přechodu do hybridního režimu spánku. V hybridním režimu spánku se otevřené aplikace a soubory ukládají do paměti RAM a na pevném disku. Používá malé množství poplatků za napájení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+
+  [CSP pro Power/TurnOffHybridSleepOnBattery](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-turnoffhybridsleeponbattery)
+
+### <a name="pluggedin"></a>PluggedIn
+
+- **Úroveň baterie**: Pokud je zařízení napájené z energie, zadejte úroveň nabití baterie, abyste zapnuli úsporu energie z 0-100. Zadejte procentuální hodnotu, která označuje úroveň nabití baterie. Výchozí hodnota je 70%. Když je nastavená na 70%, úspora energie se zapne, když má baterie za 70% nebo méně dostupného.
+
+  [CSP pro Power/EnergySaverBatteryThresholdPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdpluggedin)
+
+- **Zavření víka (jenom mobilní)** : když je zařízení napájené z elektrické sítě, vyberte, co se stane po zavření víka. Možnosti:
+
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
+  - **Žádná akce**: zařízení zůstane zapnuté.
+  - **Režim spánku**: zařízení přejde do režimu spánku. Počítač je stále zapnutý a otevřené aplikace a soubory jsou uložené v paměti RAM (Random Access Memory).
+  - **Hibernace**: zařízení přejde do režimu hibernace. Otevřené aplikace a soubory se ukládají na pevný disk a zařízení se vypne.
+  - **Vypnutí**: zařízení se vypíná. Otevřené aplikace a soubory se zavřou bez uložení.
+  
+    [CSP pro Power/SelectLidCloseActionPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectlidcloseactionpluggedin)
+  
+- **Tlačítko napájení**: když je zařízení napájené z elektrické sítě, vyberte, co se stane po výběru tlačítka napájení. Možnosti:
+
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
+  - **Žádná akce**: zařízení zůstane zapnuté.
+  - **Režim spánku**: zařízení přejde do režimu spánku. Počítač je stále zapnutý a otevřené aplikace a soubory jsou uložené v paměti RAM (Random Access Memory).
+  - **Hibernace**: zařízení přejde do režimu hibernace. Otevřené aplikace a soubory se ukládají na pevný disk a zařízení se vypne.
+  - **Vypnutí**: zařízení se vypíná. Otevřené aplikace a soubory se zavřou bez uložení.
+
+  [CSP pro Power/SelectPowerButtonActionPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectpowerbuttonactionpluggedin)
+
+- **Tlačítko pro režim spánku**: když je zařízení napájené z elektrické sítě, vyberte, co se stane, když se vybere tlačítko režimu spánku. Možnosti:
+
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
+  - **Žádná akce**: zařízení zůstane zapnuté.
+  - **Režim spánku**: zařízení přejde do režimu spánku. Počítač je stále zapnutý a otevřené aplikace a soubory jsou uložené v paměti RAM (Random Access Memory).
+  - **Hibernace**: zařízení přejde do režimu hibernace. Otevřené aplikace a soubory se ukládají na pevný disk a zařízení se vypne.
+  - **Vypnutí**: zařízení se vypíná. Otevřené aplikace a soubory se zavřou bez uložení.
+
+  [CSP pro Power/SelectSleepButtonActionPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectsleepbuttonactionpluggedin)
+
+- **Hybridní režim spánku**: když je zařízení napájené ze sítě, **zakažte** zabránit v přechodu do hybridního režimu spánku. V hybridním režimu spánku se otevřené aplikace a soubory ukládají do paměti RAM a na pevném disku. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení.
+
+  [CSP pro Power/TurnOffHybridSleepPluggedIn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-turnoffhybridsleeppluggedin)
 
 ## <a name="next-steps"></a>Další kroky
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 26972bb034ea4cb65f1bf64c61c20395cf94dc36
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74564173"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Jak monitorovat zásady ochrany aplikací
@@ -69,7 +69,7 @@ Můžete vyhledat konkrétního uživatele a zkontrolovat u něj stav dodržová
 - **Název zařízení**: zařízení, která jsou přidružená k účtu uživatele.
 - **Typ zařízení**: typ zařízení nebo operačního systému, na kterém zařízení běží.
 - **Zásady**: zásady přidružené k aplikaci.
-- **Stav**:
+- **Stav:**
   - **Zaregistrováno:** Zásada byla u uživatele nasazena a aplikace byla alespoň jednou použita v pracovním kontextu.
   - **Není zaregistrováno**: zásada byla nasazena uživateli, ale aplikace nebyla od té doby použita v pracovním kontextu.
 - **Poslední synchronizace**: čas poslední synchronizace aplikace s Intune. 

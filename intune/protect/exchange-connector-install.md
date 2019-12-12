@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 62db99fc2e47bdfa1a767db3bb2916649dedc074
-ms.sourcegitcommit: 15e099a9a1e18296580bb345610aee7cc4acd126
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74164691"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>Nastavení místního Intune Exchange Connectoru
@@ -65,8 +65,8 @@ V následující tabulce jsou uvedené požadavky na počítač, na který nains
 
 Vytvořte uživatelský účet služby Active Directory pro Intune Exchange Connector. Tento účet musí mít oprávnění ke spuštění následujících rutin Windows PowerShellu pro Exchange:  
 
-- `Get-ActiveSyncOrganizationSettings``Set-ActiveSyncOrganizationSettings`
-- `Get-CasMailbox``Set-CasMailbox`
+- `Get-ActiveSyncOrganizationSettings`, `Set-ActiveSyncOrganizationSettings`
+- `Get-CasMailbox`, `Set-CasMailbox`
 - `Get-ActiveSyncMailboxPolicy`, `Set-ActiveSyncMailboxPolicy`, `New-ActiveSyncMailboxPolicy`, `Remove-ActiveSyncMailboxPolicy`
 - `Get-ActiveSyncDeviceAccessRule`, `Set-ActiveSyncDeviceAccessRule`, `New-ActiveSyncDeviceAccessRule`, `Remove-ActiveSyncDeviceAccessRule`
 - `Get-ActiveSyncDeviceStatistics`
@@ -74,7 +74,7 @@ Vytvořte uživatelský účet služby Active Directory pro Intune Exchange Conn
 - `Get-ExchangeServer`
 - `Get-ActiveSyncDeviceClass`
 - `Get-Recipient`
-- `Clear-ActiveSyncDevice``Remove-ActiveSyncDevice`
+- `Clear-ActiveSyncDevice`, `Remove-ActiveSyncDevice`
 - `Set-ADServerSettings`
 - `Get-Command`
 

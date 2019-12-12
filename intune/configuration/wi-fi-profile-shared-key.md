@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 02d1311be0943d93f80f2f5a1c3f421d476af1e5
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74059830"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Vytvoření profilu Wi-Fi s předsdíleným klíčem pomocí vlastního profilu zařízení v Intune
@@ -70,7 +70,7 @@ Tato funkce podporuje:
         > [!NOTE]
         > Nezapomeňte použít tečku na začátku.
 
-        SSID je identifikátor SSID, pro který vytváříte zásadu. Pokud má například síť Wi-Fi název `Hotspot-1`, zadejte `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
+        SSID je identifikátor SSID, pro který vytváříte zásadu. Pokud se například síť Wi-Fi jmenuje `Hotspot-1`, zadejte `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
 
     4. **Datový typ**: vyberte **řetězec**.
 
@@ -232,16 +232,16 @@ Můžete také vytvořit soubor XML z existujícího připojení Wi-Fi. V počí
 3. Spusťte `netsh wlan show profiles`. Zobrazí se názvy všech profilů.
 4. Spusťte `netsh wlan export profile name="YourProfileName" folder=c:\Wifi`. Tento příkaz vytvoří soubor s názvem `Wi-Fi-YourProfileName.xml` v c:\Wifi.
 
-    - Pokud exportujete profil Wi-Fi, který obsahuje předsdílený klíč, přidejte do příkazu `key=clear`:
+    - Pokud exportujete profil Wi-Fi, který obsahuje předsdílený klíč, přidejte `key=clear` k příkazu:
   
         `netsh wlan export profile name="YourProfileName" key=clear folder=c:\Wifi`
 
-        `key=clear` exportuje klíč do prostého textu, který je požadován pro úspěšné použití profilu.
+        `key=clear` exportuje klíč do prostého textu, který je nutný k úspěšnému použití profilu.
 
 Až budete mít soubor XML, zkopírujte a vložte syntax XML do nastavení OMA-URI > **datový typ**. [Vytvoření vlastního profilu](#create-a-custom-profile) (v tomto článku) obsahuje seznam kroků.
 
 > [!TIP]
-> `\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}` zahrnuje také všechny profily ve formátu XML.
+> `\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}` také zahrnuje všechny profily ve formátu XML.
 
 ## <a name="best-practices"></a>Osvědčené postupy
 

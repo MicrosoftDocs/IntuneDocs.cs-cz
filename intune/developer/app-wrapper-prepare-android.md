@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8fa63540afa18450f731180da3c2cee729010a65
-ms.sourcegitcommit: ce518a5dfe62c546a77f32ef372f36efbaad473f
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74465704"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro Android na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
@@ -32,7 +32,7 @@ Jde o nástroj příkazového řádku Windows, který běží v PowerShellu a�
 
 Před spuštěním nástroje si přečtěte část [Důležité informace o zabezpečení při spuštění nástroje App Wrapping Tool](#security-considerations-for-running-the-app-wrapping-tool). Nástroj si můžete stáhnout ze stránky [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) na GitHubu.
 
-## <a name="fulfill-the-prerequisites-for-using-the-app-wrapping-tool"></a>Splnění požadavků používání nastroje App Wrapping
+## <a name="fulfill-the-prerequisites-for-using-the-app-wrapping-tool"></a>Splnění požadavků na používání nástroje App Wrapping Tool
 
 - Nástroj App Wrapping Tool je možné spustit na počítači se systémem Windows 7 nebo novějším.
 
@@ -59,7 +59,7 @@ Před spuštěním nástroje si přečtěte část [Důležité informace o zabe
   - Pomocí ProGuard můžete eliminovat nepoužívané odkazy na třídy z primárního souboru DEX aplikace.
   - Pro zákazníky, kteří používají 3.1.0 nebo novější modul plug-in Android Gradle, zakažte [D8 dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html).  
 
-## <a name="install-the-app-wrapping-tool"></a>Instalace nástroje pro zabalení aplikace
+## <a name="install-the-app-wrapping-tool"></a>Instalace nástroje App Wrapping Tool
 
 1. Z [úložiště GitHubu](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) si do počítače s Windows stáhněte instalační soubor InstallAWT.exe nástroje Intune App Wrapping Tool for Android. Otevřete instalační soubor.
 
@@ -67,7 +67,7 @@ Před spuštěním nástroje si přečtěte část [Důležité informace o zabe
 
 Poznamenejte si složku, do které jste nainstalovali nástroj. Výchozí umístění je: C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool.
 
-## <a name="run-the-app-wrapping-tool"></a>Spuštění nástroje pro zabalení aplikace
+## <a name="run-the-app-wrapping-tool"></a>Spuštění nástroje App Wrapping Tool
 
 1. Na počítači s Windows, na který jste nainstalovali nástroj App Wrapping Tool, otevřete okno PowerShell.
 
@@ -155,7 +155,7 @@ Pro zabránění potenciálnímu falšování identity, zpřístupnění informa
 
 - Zabezpečte výstupní adresář se zabalenou aplikací. Zvažte použití adresáře na úrovni uživatele pro výstup.
 
-## <a name="see-also"></a>Viz taky
+## <a name="see-also"></a>Související témata
 - [Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune](../developer/apps-prepare-mobile-application-management.md)
 
 - [Microsoft Intune App SDK pro Android – Příručka pro vývojáře](../developer/app-sdk-android.md)

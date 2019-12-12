@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: eed0b8a74e69bc1552ae3e2badf485364ba37e94
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74563829"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Jak spravovat aplikace pro iOS a macOS zakoupené prostřednictvím Apple Volume Purchase Program s využitím Microsoft Intune
@@ -128,13 +128,13 @@ Koncový uživatel obdrží výzvu k instalaci aplikace v rámci VPP v řadě sc
 
 | # | Scénář                                | Pozvánka do programu Apple VPP                              | Výzva při instalaci aplikace | Výzva k zadání Apple ID |
 |---|--------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------|-----------------------------------|
-| 1 | Vlastní zařízení – licencovaný uživatel                             | Požadované                                                                                               | Požadované                                           | Požadované                                 |
-| 2 | Zařízení společnosti – licencovaný uživatel (zařízení není pod dohledem)     | Požadované                                                                                               | Požadované                                           | Požadované                                 |
-| 3 | Zařízení společnosti – licencovaný uživatel (zařízení pod dohledem)         | Požadované                                                                                               | N                                           | Požadované                                 |
-| 4 | Vlastní zařízení – licencované zařízení                           | N                                                                                               | Požadované                                           | N                                 |
-| 5 | Zařízení společnosti – licencované zařízení (zařízení není pod dohledem)                           | N                                                                                               | Požadované                                           | N                                 |
-| 6 | Zařízení společnosti – licencované zařízení (zařízení pod dohledem)                           | N                                                                                               | N                                           | N                                 |
-| 7 | Beznabídkový režim (zařízení pod dohledem) – licencované zařízení | N                                                                                               | N                                           | N                                 |
+| 1 | Vlastní zařízení – licencovaný uživatel                             | Ano                                                                                               | Ano                                           | Ano                                 |
+| 2 | Zařízení společnosti – licencovaný uživatel (zařízení není pod dohledem)     | Ano                                                                                               | Ano                                           | Ano                                 |
+| 3 | Zařízení společnosti – licencovaný uživatel (zařízení pod dohledem)         | Ano                                                                                               | Ne                                           | Ano                                 |
+| 4 | Vlastní zařízení – licencované zařízení                           | Ne                                                                                               | Ano                                           | Ne                                 |
+| 5 | Zařízení společnosti – licencované zařízení (zařízení není pod dohledem)                           | Ne                                                                                               | Ano                                           | Ne                                 |
+| 6 | Zařízení společnosti – licencované zařízení (zařízení pod dohledem)                           | Ne                                                                                               | Ne                                           | Ne                                 |
+| 7 | Beznabídkový režim (zařízení pod dohledem) – licencované zařízení | Ne                                                                                               | Ne                                           | Ne                                 |
 | 8 | Beznabídkový režim (zařízení pod dohledem) – licencovaný uživatel   | --- | ---                                          | ---                                |
 
 > [!Note]  

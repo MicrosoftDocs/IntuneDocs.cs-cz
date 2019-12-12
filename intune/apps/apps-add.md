@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ef9548a77a3a745eda24b927118d1447d5afd1f0
-ms.sourcegitcommit: 78faf608510fbaca09bc410d63df1aa5254dee45
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74784234"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune 
@@ -37,7 +37,7 @@ Uživatelé aplikací a zařízení ve vaší společnosti (pracovníci vaší s
 
 Intune podporuje širokou škálu typů aplikací. Dostupné možnosti se pro jednotlivé typy aplikací liší. Intune umožňuje přidat a přiřadit tyto typy aplikací:
 
-| Typy aplikací | Zařízením | Updates |
+| Typy aplikací | Instalace | Updates |
 |---|---|---|
 | Aplikace pocházející ze Storu (aplikace ze Storu) | Intune nainstaluje aplikaci na zařízení.  | Aplikace se aktualizují automaticky. |
 | Interně napsané aplikace (obchodní) | Intune nainstaluje aplikaci na zařízení (vy dodáte instalační soubor). | Aplikaci musíte aktualizovat sami. |

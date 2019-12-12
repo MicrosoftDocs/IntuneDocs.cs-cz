@@ -13,13 +13,13 @@ groups:
   prompt: Zvolit verzi
   pivots:
   - id: mdm-may-2019
-    title: Květen 2019
+    title: květen 2019
   - id: mdm-preview
     title: Preview – říjen 2018
 metadata:
   ms.openlocfilehash: 1b1f0e7b28dfda7ba9b4867c9641154147aa4c1f
-  ms.sourcegitcommit: 393953dd2a15aff68b246d3633b47566dd43f7cc
+  ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
   ms.translationtype: MT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 09/09/2019
+  ms.lasthandoff: 12/05/2019
   ms.locfileid: "70816042"

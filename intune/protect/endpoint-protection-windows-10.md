@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e2909e7ad1ced9483a6cec58f1f3009f56946f5f
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74058432"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Nastavení Windows 10 (a novější) pro ochranu zařízení pomocí Intune
@@ -67,7 +67,7 @@ Ochrana Application Guard je dostupná jenom pro zařízení s Windows 10 (64bit
 
   Vyberte povolený obsah schránky.  
   - **Není nakonfigurováno**  
-  - **Text**  
+  - **text**  
   - **Obrázky**  
   - **Text a obrázky**  
 
@@ -92,7 +92,7 @@ Ochrana Application Guard je dostupná jenom pro zařízení s Windows 10 (64bit
     - Místní tiskárny
     - Síťové tiskárny  
 
-- **Shromažďovat protokoly**  
+- **Shromažďování protokolů**  
   **Výchozí**: Nenakonfigurováno  
   Zprostředkovatel kryptografických služeb Application Guard: [audit/AuditApplicationGuard](https://go.microsoft.com/fwlink/?linkid=872418)  
 
@@ -642,7 +642,7 @@ Tato nastavení platí konkrétně pro datové jednotky s operačním systémem.
     
     Toto nastavení inicializuje otočení hesla pro obnovení na základě klienta po obnovení jednotky operačního systému (buď pomocí programu Bootmgr nebo WinRE).  
 
-    - Není nakonfigurováno  
+    - Nenakonfigurováno  
     - Zakázané střídání klíčů  
     - Rotace klíčů povolená pro dedivizi připojenou ke službě Azure AD  
     - Zapnuté střídání klíčů pro Azure AD a zařízení připojená k hybridnímu připojení  
@@ -739,7 +739,7 @@ Tato nastavení platí konkrétně pro pevné datové jednotky.
     
     Toto nastavení inicializuje otočení hesla pro obnovení na základě klienta po obnovení jednotky operačního systému (buď pomocí programu Bootmgr nebo WinRE).  
 
-    - Není nakonfigurováno  
+    - Nenakonfigurováno  
     - Zakázané střídání klíčů  
     - Rotace klíčů povolená pro dedivizi připojenou ke službě Azure AD  
     - Zapnuté střídání klíčů pro Azure AD a zařízení připojená k hybridnímu připojení  
@@ -939,7 +939,7 @@ Z důvodu ochrany před e-mailovými hrozbami zablokujte tuto akci:
   Umožňuje chránit soubory a složky před neautorizovanými změnami od neznámých aplikací.  
 
   - **Není nakonfigurováno**  
-  - **Povolit**  
+  - **Enable**  
   - **Jenom audit**  
   - **Zablokovat úpravu disku**  
   - **Auditovat úpravu disku**  
@@ -1135,7 +1135,7 @@ Zablokujte přístup koncových uživatelů k různým oblastem aplikace Securit
   Nakonfigurujte zobrazení tlačítka vymazat čip TPM.  
   
   - **Není nakonfigurováno**  
-  - **Dezaktivovat**  
+  - **Zakázat**  
 
 - **Upozornění na aktualizaci firmwaru TPM**  
   **Výchozí**: Nenakonfigurováno  
@@ -1596,7 +1596,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [TaskScheduler/EnableXboxGameSaveTask](https://go.microsoft.com/fwlink/?linkid=875480)  
    
   Toto nastavení určuje, zda je úloha uložení hry Xbox povolená nebo zakázaná.  
-  - **Umožněn**
+  - **Povoleno**
   - **Není nakonfigurováno**
 
 - **Služba správy příslušenství pro Xbox**  
@@ -1606,7 +1606,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   Toto nastavení určuje typ spuštění služby pro správu doplňku.  
   - **Zásah**
   - **Automaticky**
-  - **Zakázané**
+  - **Disabled** (Zakázáno)
 
 - **Služba Xbox Live auth Manager**  
   **Výchozí**: ruční  
@@ -1615,7 +1615,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   Toto nastavení určuje typ spuštění služby Live auth Manager.  
   - **Zásah**
   - **Automaticky**
-  - **Zakázané**
+  - **Disabled** (Zakázáno)
  
 - **Služba Xbox Live pro uložení her**  
   **Výchozí**: ruční  
@@ -1624,7 +1624,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   Toto nastavení určuje typ spuštění služby Live Game Save.  
   - **Zásah**
   - **Automaticky**
-  - **Zakázané**
+  - **Disabled** (Zakázáno)
 
 - **Síťová služba Xbox Live**  
   **Výchozí**: ruční  
@@ -1633,7 +1633,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   Toto nastavení určuje typ spuštění síťové služby.  
   - **Zásah**
   - **Automaticky**
-  - **Zakázané**
+  - **Disabled** (Zakázáno)
 
 ## <a name="user-rights"></a>Uživatelská práva
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 465f8b0001e5e2a049a3ffe12469bdb5057854ec
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73712847"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Nastavení zásad podmíněného přístupu na základě aplikace v Intune
@@ -69,7 +69,7 @@ Než budete moct vytvořit zásady podmíněného přístupu z centra pro správ
 ## <a name="next-steps"></a>Další kroky
 [Blokování aplikací, které nepoužívají moderní ověřování](app-modern-authentication-block.md)
 
-## <a name="see-also"></a>Viz taky
+## <a name="see-also"></a>Související témata
 
 [Ochrana dat aplikací pomocí zásad ochrany aplikací](../apps/app-protection-policies.md)
 [Podmíněný přístup ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)

@@ -19,17 +19,17 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2b58cbd0aa07babd36c7a7e5aa3dcc5b8d32d58a
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73415039"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Podporované operační systémy a prohlížeče v Intune
 
 Před nastavením Microsoft Intune zkontrolujte podporované operační systémy a prohlížeče.
 
-Nápovědu k instalaci Intune na zařízení najdete v tématu [použití spravovaných zařízení k tomu, abyste mohli provádět práce](https://docs.microsoft.com/intune-user-help/company-portal-frequently-asked-questions) a [využití šířky pásma Intune](network-bandwidth-use.md).
+Nápovědu k instalaci Intune na zařízení, najdete v článku [práce pomocí spravovaných zařízení](https://docs.microsoft.com/intune-user-help/company-portal-frequently-asked-questions) a [využití šířky pásma sítě Intune](network-bandwidth-use.md).
 
 Další informace o podpoře poskytovatele konfigurační služby najdete v referenčních informacích o [poskytovateli služby konfigurace](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
 
@@ -106,7 +106,7 @@ You can manage [Exchange ActiveSync devices](../enrollment/device-enrollment.md#
 
 Různé úlohy správy vyžadují, abyste použili některý z následujících webů pro správu.
 
-- [Centrum pro správu Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854)
+- [Centrum pro správu Microsoftu 365](https://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Azure Portal](https://portal.azure.com/)
 
 Portály podporují následující prohlížeče:

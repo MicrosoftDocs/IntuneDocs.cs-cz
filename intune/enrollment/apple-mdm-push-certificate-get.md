@@ -1,7 +1,7 @@
 ---
-title: Získání certifikátu Apple MDM push Certificate pro Intune
+title: Získat certifikát Apple MDM Push certificate pro Intune
 titleSuffix: ''
-description: Získání certifikátu Apple MDM push Certificate pro správu zařízení s iOS pomocí Intune
+description: Získáte certifikát Apple MDM Push certificate pro správu zařízení s Iosem v Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d15fd73a608c799745c92c4b07df4b9705d00106
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 178e1a3d0f58eb925c4d48be10bfa46e68c6b2c6
+ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72490319"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955452"
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>Získání certifikátu Apple MDM Push Certificate
 
@@ -41,7 +41,7 @@ Když platnost certifikátu Push vyprší, je nutné ho obnovit. Při obnovován
 
 
 ## <a name="steps-to-get-your-certificate"></a>Kroky k získání certifikátu
-Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), zvolte **registrace zařízení** > **registrace Apple** > **Apple MDM push Certificate**a pak postupujte podle těchto kroků v [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+Přihlaste se [do centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), zvolte **zařízení** > **registrovat zařízení** > **registraci Apple** > **Apple MDM push Certificate**a pak postupujte podle těchto kroků.
 
 ### <a name="step-1-grant-microsoft-permission-to-send-user-and-device-information-to-apple"></a>Krok 1: Udělte Microsoftu oprávnění k odesílání informací o uživatelích a zařízeních společnosti Apple.
 Vyberte možnost **Souhlasím.** a udělte tak Microsoftu oprávnění posílat data do Applu.
@@ -68,7 +68,7 @@ Certifikát Apple MDM Push Certificate je platný po dobu jednoho roku a je pot�
 
 Certifikát je přidružený k Apple ID, pomocí kterého byl vytvořen. Obnovte MDM Push Certificate pomocí stejného Apple ID, které jste použili k jeho vytvoření.
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), zvolte **registrace zařízení** > **registrace Apple**a pak zvolte dlaždici **Apple MDM push Certificate** v oblasti Podrobnosti.
+1. Přihlaste se [do centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberte **zařízení** > **registrace zařízení** > **registrace Apple** > **Apple MDM push Certificate**.
 2. Vyberte **Stáhnout CSR** a uložte si soubor žádosti .csr místně. Soubor slouží k vyžádání certifikátu vztahu důvěryhodnosti z portálu Apple Push Certificates Portal.
 3. Vyberte **Vytvořit certifikát MDM Push Certificate**. Tím přejdete na Apple Push Certificates Portal. Najděte certifikát, který chcete obnovit, a vyberte **Obnovit**.
 4. Na obrazovce **Prodloužit platnost certifikátu MDM Push Certificate** zadejte poznámky, které vám v budoucnosti pomůžou certifikát identifikovat, vyberte **Zvolit soubor**, přejděte na nový soubor žádosti, který jste stáhli, a zvolte **Nahrát**.

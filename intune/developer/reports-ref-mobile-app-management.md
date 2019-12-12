@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: eb1833a6a54fe0a7f78958e653468921df952b4d
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72505692"
 ---
 # <a name="reference-for-mobile-app-management-mam-entities"></a>Referenční informace o entitách správy mobilních aplikací (MAM)
@@ -52,7 +52,7 @@ Entita **mamApplication** obsahuje seznam obchodních aplikací (LOB), které js
 | rowLastModifiedDateTimeUTC |Datum a čas ve standardu UTC, kdy se tato aplikace MAM v datovém skladu naposledy změnila |23.11.2016 12:00:00 |
 
 
-## <a name="mamapplicationinstances"></a>MamApplicationInstances
+## <a name="mamapplicationinstances"></a>mamApplicationInstances
 
 Entita **mamApplicationInstance** obsahuje seznam spravovaných aplikací pro správu mobilních aplikací (MAM) jako jednotné instance na uživatele a zařízení. Všichni uživatelé a zařízení, kteří jsou v této entitě uvedení, jsou chránění, protože mají přiřazenou aspoň jednu zásadu MAM.
 
@@ -65,7 +65,7 @@ Entita **mamApplicationInstance** obsahuje seznam spravovaných aplikací pro sp
 | mamApplicationId | ID aplikace mam, pro kterou se vytvořila tato instance aplikace mam   | 23.11.2016 12:00:00   |
 |     applicationVersion     |                                                                                     Verze aplikace pro danou aplikaci MAM                                                                                      |                  2                   |
 |        createdDate         |                                                                 Datum vytvoření daného záznamu instance aplikace MAM Hodnota může být null.                                                                 |        23.11.2016 12:00:00        |
-|          platformy          |                                                                          Platforma zařízení, na kterém je daná aplikace MAM nainstalovaná                                                                           |                  2                   |
+|          Platforma          |                                                                          Platforma zařízení, na kterém je daná aplikace MAM nainstalovaná                                                                           |                  2                   |
 |      platformVersion       |                                                                      Verze platformy zařízení, na kterém je daná aplikace MAM nainstalovaná                                                                       |                 2.2                  |
 |         sdkVersion         |                                                                            Verze sady SDK MAM, pomocí které byla daná aplikace MAM zabalena                                                                            |                 3.2                  |
 | mamDeviceId | ID zařízení, ke kterému je přidružená instance aplikace MAM   | 23.11.2016 12:00:00   |
@@ -77,7 +77,7 @@ Entita **mamApplicationInstance** obsahuje seznam spravovaných aplikací pro sp
 | rowLastModifiedDateTimeUtc |                                                           Datum a čas ve standardu UTC, kdy se tato instance aplikace MAM v datovém skladu naposledy změnila                                                            |        23.11.2016 12:00:00        |
 
 
-## <a name="mamcheckins"></a>MamCheckins
+## <a name="mamcheckins"></a>mamCheckins
 
 Entita **mamCheckin** představuje data shromážděná při vrácení instance aplikace správy mobilních aplikací (MAM) ve službě Intune. 
 
@@ -103,7 +103,7 @@ Entita **mamDeviceHealth** představuje zařízení, která mají nasazené zás
 | Vlastnost | Description | Příklad |
 |---------|------------|--------|
 | Vlastnosti devicehealthkey |Jedinečný identifikátor zařízení a jeho přidruženého stavu v datovém skladu – náhradní klíč |123 |
-| Přidružený |Jedinečný identifikátor zařízení a jeho přidruženého stavu – podobá se vlastnosti DeviceHealthKey, ale tento identifikátor představuje přirozený klíč. |b66bc706-FFFF-7777-0340-032819502773 |
+| deviceHealth |Jedinečný identifikátor zařízení a jeho přidruženého stavu – podobá se vlastnosti DeviceHealthKey, ale tento identifikátor představuje přirozený klíč. |b66bc706-ffff-7777-0340-032819502773 |
 | deviceHealthName |Představuje stav zařízení. <br>Není k dispozici – žádné informace o tomto zařízení nejsou dostupné. <br>V pořádku – nejedná se o zařízení s jailbreakem. <br>Není v pořádku – jedná se o zařízení s jailbreakem. |Není k dispozici, V pořádku, Není v pořádku |
 | rowLastModifiedDateTimeUtc |Datum a čas ve standardu UTC, kdy se tento konkrétní stav zařízení MAM v datovém skladu naposledy změnil |23.11.2016 12:00:00 |
 
@@ -125,7 +125,7 @@ Entita **mamPlatform** obsahuje seznam názvů a typů platforem, na kterých se
 |          Vlastnost          |                                    Description                                    |                         Příklad                         |
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
 |        Vlastnosti platformkey         |     Jedinečný identifikátor platformy v datovém skladu – náhradní klíč      |                           123                           |
-|          platformy          | Jedinečný identifikátor platformy – podobá se vlastnosti PlatformKey, jedná se ale o přirozený klíč. |                           123                           |
-|        platformName        |                                   Název platformy                                   | Není k dispozici <br>Žádné <br>Windows <br>iOS <br>Svém. |
+|          Platforma          | Jedinečný identifikátor platformy – podobá se vlastnosti PlatformKey, jedná se ale o přirozený klíč. |                           123                           |
+|        platformName        |                                   Název platformy                                   | Není k dispozici <br>Žádné <br>Windows <br>iOS <br>Android. |
 | rowLastModifiedDateTimeUtc | Datum a čas ve standardu UTC, kdy se tato platforma v datovém skladu naposledy změnila  |                 23.11.2016 12:00:00                  |
 

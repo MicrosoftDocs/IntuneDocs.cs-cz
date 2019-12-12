@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2503013e6ca0d907a05c81f895b44878784dbbd4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72502722"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Koncové body sítě pro Microsoft Intune  
@@ -47,7 +47,7 @@ Spravovaná zařízení musí být nakonfigurovaná tak, aby **všichni uživate
 
 Následující tabulky obsahují seznam portů a služeb, ke kterým přistupuje klient Intune:
 
-|Domény    |IP adresa      |
+|Domains    |IP adresa      |
 |-----------|----------------|
 |login.microsoftonline.com <br> *. officeconfig.msocdn.com <br> config.office.com <br> graph.windows.net| Další informace: [Office 365 –adresy URL a rozsahy IP adres](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) |
 |portal.manage.microsoft.com<br> m.manage.microsoft.com |52.175.12.209<br>20.188.107.228<br>52.138.193.149<br>51.144.161.187<br>52.160.70.20<br>52.168.54.64 <br>13.72.226.202<br>52.189.220.232|
@@ -143,7 +143,7 @@ Pro metadata Optimalizace doručení:
 
 ## <a name="apple-device-network-information"></a>Informace o síti pro zařízení Apple  
 
-|Používá se pro|Název hostitele (IP adresa/podsíť)|Protocol (Protokol)|Port|
+|Používáno pro|Název hostitele (IP adresa/podsíť)|Protokol|Port|
 |-----|--------|------|-------|
 |Načítání a zobrazování obsahu ze serverů Apple|itunes.apple.com<br>\*.itunes.apple.com<br>\*.mzstatic.com<br>\*.phobos.apple.com<br> \*.phobos.itunes-apple.com.akadns.net |    HTTP    |      80      |
 |Komunikace se servery APNS|#-courier.push.apple.com<br>' # ' je náhodné číslo od 0 do 50.|    TCP     |  5223 a 443  |

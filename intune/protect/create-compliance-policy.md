@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8452f9b56032864380ec703bfd444dc85ef129b
-ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
+ms.openlocfilehash: ba6b8fb66d25af3833e55eebc12e8b6df2fb5ba5
+ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74188266"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74860226"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Vytvoření zásady dodržování předpisů v Microsoft Intune
 
@@ -52,7 +52,7 @@ Pokud chcete používat zásady dodržování předpisů zařízením, ujistěte
   - iOS
   - macOS
   - Windows 10
-  - Windows 8.1
+  - Windows 8.1
   - Wvdows Phone 8.1
 
 - Registrace zařízení v Intune (vyžaduje se pro zobrazení stavu dodržování předpisů)
@@ -100,7 +100,7 @@ Pokud chcete používat zásady dodržování předpisů zařízením, ujistěte
 
      Pokud například používáte funkci Umístění, přidáte do zásady dodržování předpisů nějaké umístění a vyberete aspoň jedno umístění, použije se pro nevyhovující zařízení výchozí akce. Pokud zařízení není připojené k vybraným umístěním, považuje se hned za nevyhovující. Uživatelům můžete dát určitou lhůtu, třeba jeden den.
 
-   - **Scope (značky)** : značky oboru jsou skvělým způsobem, jak přiřadit a filtrovat zásady pro konkrétní skupiny, jako je například prodej, HR, všichni zaměstnanci USA-NC atd. Po přidání nastavení můžete také přidat značku oboru do zásad dodržování předpisů. [Použití značek oboru k filtrování zásad](../fundamentals/scope-tags.md) je dobrým prostředkem.
+   - **Scope (značky)** : značky oboru představují skvělý způsob, jak filtrovat zásady na konkrétní skupiny, například `US-NC IT Team` nebo `JohnGlenn_ITDepartment`. Po přidání nastavení můžete také přidat značku oboru do zásad dodržování předpisů. [Použití značek oboru k filtrování zásad](../fundamentals/scope-tags.md) je dobrým prostředkem.
 
 4. Po dokončení vyberte **OK** > **vytvořit** a uložte provedené změny. Zásada se vytvoří a zobrazí se v seznamu. Potom tyto zásady přiřaďte do skupin.
 
@@ -172,7 +172,7 @@ Pokud má nějaké zařízení několik zásad dodržování předpisů a pro dv
 |Stav  |Závažnost  |
 |---------|---------|
 |Neznámé     |1|
-|NotApplicable     |2|
+|Neužívá se     |2|
 |Vyhovuje|3|
 |V období odkladu|4|
 |Nevyhovující předpisům|5|

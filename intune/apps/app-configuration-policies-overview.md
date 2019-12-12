@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 42d17c15a2a32f828c5715dfad51f34c5e531e76
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72507549"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Zásady konfigurace aplikací v Microsoft Intune
@@ -66,7 +66,7 @@ Zásady konfigurace aplikací můžete použít pro aplikace, které ji podporuj
 ### <a name="managed-apps"></a>Spravované aplikace
 Obchodní aplikace si můžete připravit buď tak, že [sadu Intune App SDK](../developer/app-sdk.md) zařadíte do aplikace, nebo po jejím vývoji aplikaci pomocí [Nástroje pro zabalení aplikace Intune](../developer/apps-prepare-mobile-application-management.md). Sada Intune App SDK se snaží minimalizovat množství změn v kódu, které vyžaduje vývojář aplikace. Další informace najdete v tématu [Přehled sady Intune App SDK](../developer/app-sdk.md). Porovnání mezi sadou Intune App SDK a nástrojem pro zabalení aplikace Intune najdete v tématu [Příprava obchodních aplikací na zásady ochrany aplikací](../developer/apps-prepare-mobile-application-management.md#feature-comparison).
 
-Výběr **spravovaných aplikací** jako **typ registrace zařízení** konkrétně odkazuje na aplikace nakonfigurované zásadami konfigurace Intune na zařízení, které není zaregistrované ve správě zařízení, zatímco **spravovaná zařízení** se vztahují na nasazené aplikace. prostřednictvím kanálu MDM a proto je spravuje Intune. Podle těchto popisů vyberte vhodnou volbu. 
+Výběr **spravovaných aplikací** jako **typ registrace zařízení** konkrétně odkazuje na aplikace nakonfigurované zásadami konfigurace Intune na zařízení, které není zaregistrované ve správě zařízení, zatímco **spravovaná zařízení** se vztahují na aplikace nasazené prostřednictvím kanálu MDM, a proto se spravují přes Intune. Podle těchto popisů vyberte vhodnou volbu. 
 
 ![Typ registrace zařízení](./media/app-configuration-policies-overview/device-enrollment-type.png)
 
@@ -85,7 +85,7 @@ Zásady konfigurace aplikací můžete ověřit pomocí následujících tří m
 
       ![Druhý snímek stavu instalace zařízení](./media/app-configuration-policies-overview/device-install-status-2.png)
 
-      Kromě toho v části **Intune** -> **zařízení** -> **všechna zařízení** na levé straně obrazovky se v možnosti **Konfigurace aplikace** zobrazí všechny přiřazené zásady a jejich stav:
+      Kromě toho v části **Intune** -> **zařízení** -> **všechna zařízení** na levé straně obrazovky, v možnosti **Konfigurace aplikace** se zobrazí všechny přiřazené zásady a jejich stav:
 
       ![Snímek obrazovky s konfigurací aplikace](./media/app-configuration-policies-overview/app-configuration.png)
 
@@ -97,7 +97,7 @@ Konfiguraci iOS můžete ověřit pomocí **diagnostického protokolu Intune** n
 
 1. Pokud na zařízení ještě není nainstalovaná, Stáhněte si a nainstalujte **Intune Managed Browser** z App Storu. Další informace najdete v tématu [Microsoft Intune Protected Apps](apps-supported-intune-apps.md).
 2. Spusťte **Intune Managed Browser** a v navigačním panelu vyberte **o** > **intunehelp** .
-3. Klikněte **na Začínáme.**
+3. Klikněte na **Začít**.
 4. Klikněte na **sdílet protokoly**.
 5. Pomocí e-mailové aplikace dle vašeho výběru můžete protokol odeslat sami sobě, aby se mohl zobrazit v počítači. 
 6. Zkontrolujte soubor **IntuneMAMDiagnostics. txt** v prohlížeči textových souborů.
@@ -141,7 +141,7 @@ Konfiguraci iOS můžete ověřit pomocí **diagnostického protokolu Intune** n
 
 1. Pokud na zařízení ještě není nainstalovaná, Stáhněte si a nainstalujte **Intune Managed Browser** z App Storu. Další informace najdete v tématu [Microsoft Intune Protected Apps](apps-supported-intune-apps.md).
 2. Spusťte **Intune Managed Browser** a v navigačním panelu vyberte **o** > **intunehelp** .
-3. Klikněte **na Začínáme.**
+3. Klikněte na **Začít**.
 4. Klikněte na **sdílet protokoly**.
 5. Pomocí e-mailové aplikace dle vašeho výběru můžete protokol odeslat sami sobě, aby se mohl zobrazit v počítači. 
 6. Zkontrolujte soubor **IntuneMAMDiagnostics. txt** v prohlížeči textových souborů.
@@ -151,7 +151,7 @@ Konfiguraci iOS můžete ověřit pomocí **diagnostického protokolu Intune** n
 
 Konfiguraci iOS můžete ověřit pomocí **diagnostického protokolu Intune** na spravovaných zařízeních pro konfiguraci spravované aplikace.
 
-Pokud chcete shromažďovat protokoly ze zařízení s Androidem, musíte vy nebo koncový uživatel stáhnout protokoly ze zařízení přes připojení USB (nebo v **Průzkumníku souborů** ekvivalentní na zařízení). Tady je postup:
+Pokud chcete shromažďovat protokoly ze zařízení s Androidem, musíte vy nebo koncový uživatel stáhnout protokoly ze zařízení přes připojení USB (nebo v **Průzkumníku souborů** ekvivalentní na zařízení). Postup je následující:
 
 1. Připojte zařízení s Androidem k počítači pomocí kabelu USB.
 2. V počítači vyhledejte adresář, který má název vašeho zařízení. V tomto adresáři Najděte `Android Device\Phone\Android\data\com.microsoft.windowsintune.companyportal`.

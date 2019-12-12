@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a3b391bb4ab064c080083e2c31dc28483f6d419a
-ms.sourcegitcommit: 76ae5aea5deee7a590e24c3b2bb52f88125943e5
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74098219"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
@@ -58,13 +58,13 @@ Kontrolní seznam nastavení v aplikaci Portál společnosti pro Android byl akt
 
 Na následujících obrazovkách se zobrazuje aktualizovaný kontrolní seznam pro registraci pracovního profilu Androidu:
 
-|Aktualizuj|Předchozí|  
+|Aktualizováno|Předchozí|  
 |---|---|  
 |![Příklad obrázku nastavení pracovního profilu v Portál společnosti zobrazuje zjednodušený kontrolní seznam a nové ikony.](./media/whats-new-app-ui/work-profile-checklist-1911.png)|![Příklad obrázku předchozího nastavení pracovního profilu v Portál společnosti se zobrazením kontrolního seznamu vytíženější.](./media/whats-new-app-ui/work-profile-checklist-1904.png)|   
 
 Na následujících obrazovkách je zobrazen aktualizovaný kontrolní seznam pro registraci Správce zařízení s Androidem:  
 
-|Aktualizuj|Předchozí|  
+|Aktualizováno|Předchozí|  
 |---|---|  
 |![Příklad obrázku nastavení Správce zařízení s Androidem v Portál společnosti, který ukazuje zjednodušený kontrolní seznam a nové ikony.](./media/whats-new-app-ui/android-checklist-1911.png)|![Příklad obrázku předchozího nastavení Správce zařízení s Androidem v Portál společnosti, který ukazuje kontrolní seznam vytíženější.](./media/whats-new-app-ui/android-checklist-1904.png)|  
 
@@ -175,7 +175,7 @@ Mezi nové aktualizace patří:
 - Vylepšený výkon u velkých katalogů aplikací
 - Lepší přístupnost pro všechny uživatele  
 
-|Aktualizuj|Předchozí|
+|Aktualizováno|Předchozí|
 |---|---|
 |![Aktualizovaná stránka zařízení zobrazuje zařízení přímo nad informacemi o zařízení a zařízení se už nezobrazuje nad celým seznamem.](./media/whats-new-app-ui/iwp-device-after-1803.png)|![Předchozí verze stránky zařízení](./media/whats-new-app-ui/iwp-device-before-1803.png)|
 |![Aktualizovaná stránka instalace aplikace zobrazuje aplikaci přímo nad popisem a různými informacemi o instalaci, jako jsou datum publikování, verze a typ aplikace.](./media/whats-new-app-ui/iwp-app-install-after-1803.png)|![Předchozí verze stránky instalace aplikace](./media/whats-new-app-ui/iwp-app-install-before-1803.png)|  
@@ -222,8 +222,8 @@ Další vylepšení:
 |Dříve|Nyní|
 |---|---|
 |![01](./media/whats-new-app-ui/cp_iosRedesign_before_1803_01.png)|![01](./media/whats-new-app-ui/cp_iosRedesign_after_1803_01.png)|
-|*Zkombinováno s předchozím krokem*|![–](./media/whats-new-app-ui/cp_iosRedesign_after_1803_02.png)|
-|![0,03](./media/whats-new-app-ui/cp_iosRedesign_before_1803_02.png)|![0,03](./media/whats-new-app-ui/cp_iosRedesign_after_1803_03.png)|
+|*Zkombinováno s předchozím krokem*|![02](./media/whats-new-app-ui/cp_iosRedesign_after_1803_02.png)|
+|![03](./media/whats-new-app-ui/cp_iosRedesign_before_1803_02.png)|![03](./media/whats-new-app-ui/cp_iosRedesign_after_1803_03.png)|
 
 ### <a name="improvements-to-the-language-in-the-company-portal-app-for-windows----1683758---"></a>Vylepšení jazyka v aplikaci Portál společnosti pro Windows <!-- 1683758 -->
 Vylepšili jsme jazyk v aplikaci Portál společnosti pro Windows 10 tak, aby byl uživatelsky přívětivější a lépe přizpůsobený vaší firmě.
@@ -231,7 +231,7 @@ Vylepšili jsme jazyk v aplikaci Portál společnosti pro Windows 10 tak, aby by
 |Dříve|Nyní|
 |---|---|
 |![01](./media/whats-new-app-ui/windows_enroll_before_1803.png)|![01](./media/whats-new-app-ui/windows_enroll_after_1803.png)|
-|![–](./media/whats-new-app-ui/windows_view_policy_issues_before_1803.png)|![–](./media/whats-new-app-ui/windows_view_policy_issues_after_1803.png)
+|![02](./media/whats-new-app-ui/windows_view_policy_issues_before_1803.png)|![02](./media/whats-new-app-ui/windows_view_policy_issues_after_1803.png)
 
 ## <a name="week-of-march-12-2018"></a>Týden od 12. března 2018
 
@@ -242,9 +242,9 @@ Aktualizovali jsme aplikaci Portál společnosti pro Android v souladu s pokyny 
 |Dříve|Nyní|
 |---|---|
 |![01](./media/whats-new-app-ui/android_about_before_1803.png)|![01](./media/whats-new-app-ui/androidCP_about_after_1803.png)|
-|![–](./media/whats-new-app-ui/android_contact_it_before_1803.png)|![–](./media/whats-new-app-ui/android_contact_it_after_1803.png)|
-|![0,03](./media/whats-new-app-ui/android_devices_before_1803.png)|![0,03](./media/whats-new-app-ui/androidCP_devicelist_after_1803.png)|
-|![karet](./media/whats-new-app-ui/android_device_details_before_1803.png)|![05](./media/whats-new-app-ui/androidCP_devicedetails_1_after1803.png)|
+|![02](./media/whats-new-app-ui/android_contact_it_before_1803.png)|![02](./media/whats-new-app-ui/android_contact_it_after_1803.png)|
+|![03](./media/whats-new-app-ui/android_devices_before_1803.png)|![03](./media/whats-new-app-ui/androidCP_devicelist_after_1803.png)|
+|![04](./media/whats-new-app-ui/android_device_details_before_1803.png)|![05](./media/whats-new-app-ui/androidCP_devicedetails_1_after1803.png)|
 |![05](./media/whats-new-app-ui/android_device_details_update_settings_before_1803.png)|![05](./media/whats-new-app-ui/androidCP_devicedetails_red_box_2_after1803.png)|
 |![06](./media/whats-new-app-ui/android_profile_before_1803.png)|![06](./media/whats-new-app-ui/android_profile_after_1803.png)|
 |![07](./media/whats-new-app-ui/androidCP_Setup01_before_1803.png)|![07](./media/whats-new-app-ui/androidCP_Setup01_after_1803.png)|
@@ -270,9 +270,9 @@ Vylepšili jsme pracovní postup instalace zařízení v aplikaci Portál spole�
 |Dříve|Nyní|
 |---|---|
 |![01](./media/whats-new-app-ui/ios_cp_enroll_01_before_1711.png)|![01](./media/whats-new-app-ui/ios_cp_enroll_01_after_1711.png)|
-|![–](./media/whats-new-app-ui/ios_cp_enroll_02_before_1711.png)|*Zkombinováno s předchozím krokem*|
-|![0,03](./media/whats-new-app-ui/ios_cp_enroll_03_before_1711.png)|![0,03](./media/whats-new-app-ui/ios_cp_enroll_03_after_1711.png)|
-|![karet](./media/whats-new-app-ui/ios_cp_enroll_04_before_1711.png)|![karet](./media/whats-new-app-ui/ios_cp_enroll_04_after_1711.png)|
+|![02](./media/whats-new-app-ui/ios_cp_enroll_02_before_1711.png)|*Zkombinováno s předchozím krokem*|
+|![03](./media/whats-new-app-ui/ios_cp_enroll_03_before_1711.png)|![03](./media/whats-new-app-ui/ios_cp_enroll_03_after_1711.png)|
+|![04](./media/whats-new-app-ui/ios_cp_enroll_04_before_1711.png)|![04](./media/whats-new-app-ui/ios_cp_enroll_04_after_1711.png)|
 |![05](./media/whats-new-app-ui/ios_cp_enroll_05_before_1711.png)|![05](./media/whats-new-app-ui/ios_cp_enroll_05_after_1711.png)|
 |![06](./media/whats-new-app-ui/ios_cp_enroll_06_before_1711.png)|![06](./media/whats-new-app-ui/ios_cp_enroll_06_after_1711.png)|
 |![07](./media/whats-new-app-ui/ios_cp_enroll_07_before_1711.png)|![07](./media/whats-new-app-ui/ios_cp_enroll_07_after_1711.png)|
@@ -285,7 +285,7 @@ Stránka Nastavení aplikace Portál společnosti pro Windows 10 je aktualizovan
 
 |Dříve|Nyní|
 |---|---|
-|![01](./media/whats-new-app-ui/w10-share-logs.png)|![–](./media/whats-new-app-ui/w10-share-logs-after-1711.png)|
+|![01](./media/whats-new-app-ui/w10-share-logs.png)|![02](./media/whats-new-app-ui/w10-share-logs-after-1711.png)|
 
 
 ### <a name="search-improvements-to-the-company-portal-apps-and-website----1418189---"></a>Hledání ve Portál společnosti aplikací a na webu <!-- 1418189 -->
@@ -316,14 +316,14 @@ Vylepšili jsme pracovní postup instalace zařízení v aplikaci Portál spole�
 |---|---|
 |![01](./media/whats-new-app-ui/android_cp_enroll_01_post_1709.png)|![01](./media/whats-new-app-ui/android_cp_enroll_01_1709_new.png)|
 |![01a](./media/whats-new-app-ui/android_cp_enroll_01_before_1710.png)| *Zkombinováno s předchozím krokem* |
-|![–](./media/whats-new-app-ui/android_cp_enroll_02_before_1710.png)|![–](./media/whats-new-app-ui/android_cp_enroll_02_after_1710.png)|
-|![0,03](./media/whats-new-app-ui/android_cp_enroll_03_before_1710.png)|![0,03](./media/whats-new-app-ui/android_cp_enroll_03_after_1710.png)|
+|![02](./media/whats-new-app-ui/android_cp_enroll_02_before_1710.png)|![02](./media/whats-new-app-ui/android_cp_enroll_02_after_1710.png)|
+|![03](./media/whats-new-app-ui/android_cp_enroll_03_before_1710.png)|![03](./media/whats-new-app-ui/android_cp_enroll_03_after_1710.png)|
 
 Vylepšili jsme další kroky na zařízeních s pracovním profilem Androidu.
 
 |Dříve|Nyní|
 |---|---|
-|![karet](./media/whats-new-app-ui/android_work_cp_enroll_01_before_1710.png)|![karet](./media/whats-new-app-ui/android_work_cp_enroll_01_after_1710.png)|
+|![04](./media/whats-new-app-ui/android_work_cp_enroll_01_before_1710.png)|![04](./media/whats-new-app-ui/android_work_cp_enroll_01_after_1710.png)|
 |![05](./media/whats-new-app-ui/android_work_cp_enroll_02_before_1710.png)| *Zkombinováno s předchozím krokem* |
 |![06](./media/whats-new-app-ui/android_work_cp_enroll_03_before_1710.png)|![06](./media/whats-new-app-ui/android_work_cp_enroll_03_after_1710.png)|
 |![07](./media/whats-new-app-ui/android_work_cp_enroll_04_before_1710.png)|![07](./media/whats-new-app-ui/android_work_cp_enroll_04_after_1710.png)|
@@ -345,9 +345,9 @@ Proces registrace aplikace Portál společnosti pro Android byl zjednodušen nov
 |Dříve|Nyní|
 |---|---|
 |![01](./media/whats-new-app-ui/android_cp_enroll_01_before_1709.png)|![01](./media/whats-new-app-ui/android_cp_enroll_01_post_1709.png)|
-|![–](./media/whats-new-app-ui/android_cp_enroll_02_before_1709.png)|![–](./media/whats-new-app-ui/android_cp_enroll_02_post_1709.png)|
-|![0,03](./media/whats-new-app-ui/android_cp_enroll_03_before_1709.png)|![0,03](./media/whats-new-app-ui/android_cp_enroll_03_post_1709.png)|
-|![karet](./media/whats-new-app-ui/android_cp_enroll_04_before_1709.png)|![karet](./media/whats-new-app-ui/android_cp_enroll_04_post_1709.png)|
+|![02](./media/whats-new-app-ui/android_cp_enroll_02_before_1709.png)|![02](./media/whats-new-app-ui/android_cp_enroll_02_post_1709.png)|
+|![03](./media/whats-new-app-ui/android_cp_enroll_03_before_1709.png)|![03](./media/whats-new-app-ui/android_cp_enroll_03_post_1709.png)|
+|![04](./media/whats-new-app-ui/android_cp_enroll_04_before_1709.png)|![04](./media/whats-new-app-ui/android_cp_enroll_04_post_1709.png)|
 |![05](./media/whats-new-app-ui/android_cp_enroll_05_before_1709.png)|![05](./media/whats-new-app-ui/android_cp_enroll_05_post_1709.png)|
 
 

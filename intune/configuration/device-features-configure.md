@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 12/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f02188e6dd6cea6048731d119f8f307224810dd9
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: d887c7bc3c7e9ea8b6719993b5ba4909e9c18ea8
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059952"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992936"
 ---
 # <a name="add-ios-or-macos-device-feature-settings-in-intune"></a>Přidání nastavení funkcí zařízení se systémem iOS nebo macOS v Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Intune zahrnuje mnoho funkcí a nastavení, které správcům pomůžou řídit zařízení s iOS a macOS. Správci můžou například:
 
@@ -48,13 +46,13 @@ Seznam nastavení, která můžete nakonfigurovat v Intune, najdete v článku o
 
 Další informace o protiskech najdete v tématu [o](https://support.apple.com/HT201311) prostudování na webu společnosti Apple.
 
-Platí pro:
+Týká se
 
 - iOS 7,0 a novější
 - iPadOS 13,0 a novější
 - macOS 10,10 a novější
 
-## <a name="app-notifications"></a>Oznámení aplikací
+## <a name="app-notifications"></a>App notifications
 
 Vyberte způsob, jakým aplikace na zařízeních s iOS a iPadem dostanou oznámení. Například z Intune můžete odesílat oznámení aplikací tak, aby se zobrazovala v centru oznámení, zobrazit na zamykací obrazovce nebo přehrát zvuk.
 
@@ -62,14 +60,14 @@ Seznam nastavení, která můžete nakonfigurovat v Intune, najdete v tématu [o
 
 Další informace o této funkci najdete v tématu [oznámení](https://developer.apple.com/notifications/) na webu společnosti Apple.
 
-Platí pro:
+Týká se
 
 - iOS 9,3 a novější
 - iPadOS 13,0 a novější
 
 ## <a name="associated-domains"></a>Přidružené domény
 
-Přidružené domény umožňují vytvořit relaci mezi vašimi doménami, například `contoso.com` a vašimi aplikacemi. Tato funkce umožňuje:
+Přidružené domény umožňují vytvořit relaci mezi vašimi doménami, například `contoso.com`a vašimi aplikacemi. Tato funkce umožňuje:
 
 - Sdílejte data a přihlaste přihlašovací údaje mezi aplikacemi a weby ve vaší organizaci.
 - Používejte funkce aplikací, které jsou založené na vašem webu, jako je například rozšíření aplikace jednotného přihlašování, univerzální odkazy a automatické vyplňování hesel.
@@ -80,7 +78,7 @@ Seznam nastavení, která můžete nakonfigurovat v Intune, najdete v tématu [p
 
 Další informace o této funkci najdete v tématu [nastavení přidružených domén aplikace](https://developer.apple.com/documentation/security/password_autofill/setting_up_an_app_s_associated_domains) na webu společnosti Apple.
 
-Platí pro:
+Týká se
 
 - macOS 10,15 a novější
 
@@ -93,7 +91,7 @@ Tato nastavení konfigurují rozložení a složky aplikace v Dock a na domácí
 
 Seznam nastavení, která můžete nakonfigurovat v Intune, najdete v tématu [rozložení domovské obrazovky v systému iOS](ios-device-features-settings.md#home-screen-layout).
 
-Platí pro:
+Týká se
 
 - iOS 9,3 a novější
 - iPadOS 13,0 a novější
@@ -106,18 +104,18 @@ Seznam nastavení, která můžete nakonfigurovat v Intune, najdete v tématu [N
 
 Další informace o zprávě zamykací obrazovky najdete v tématu [LockScreenMessage](https://developer.apple.com/documentation/devicemanagement/lockscreenmessage) na webu společnosti Apple.
 
-Platí pro:
+Týká se
 
 - iOS 9,3 a novější
 - iPadOS 13,0 a novější
 
 ## <a name="login-items"></a>Přihlašovací položky
 
-Pomocí této funkce můžete zvolit aplikace, vlastní aplikace, soubory a složky, které se otevřou, když se uživatelé přihlásí k zařízením. 
+Pomocí této funkce můžete zvolit aplikace, vlastní aplikace, soubory a složky, které se otevřou, když se uživatelé přihlásí k zařízením.
 
 Seznam nastavení, která můžete nakonfigurovat v Intune, najdete v tématu [přihlášení k položkám v MacOS](macos-device-features-settings.md#login-items).
 
-Platí pro:
+Týká se
 
 - macOS 10,13 a novější
 
@@ -127,7 +125,7 @@ Můžete ovládat vzhled přihlašovací obrazovky a funkcí, které uživatelé
 
 Seznam nastavení, která můžete v Intune nakonfigurovat, najdete v tématu [přihlašovací okno v MacOS](macos-device-features-settings.md#login-window).
 
-Platí pro:
+Týká se
 
 - macOS 10,7 a novější
 
@@ -144,7 +142,7 @@ Pokud chcete použít jednotné přihlašování, ujistěte se, že máte:
 
 Seznam nastavení, která můžete v Intune nakonfigurovat, najdete v tématu [jednotné přihlašování v iOS](ios-device-features-settings.md#single-sign-on).
 
-Platí pro:
+Týká se
 
 - iOS 7,0 a novější
 - iPadOS 13,0 a novější
@@ -153,47 +151,54 @@ Platí pro:
 
 Tato nastavení konfigurují rozšíření aplikace, které umožňuje jednotné přihlašování (SSO) pro zařízení s iOS, iPadOS a macOS. Většina obchodních aplikací a webů organizace vyžaduje určitou úroveň zabezpečeného ověřování uživatelů. V mnoha případech ověřování vyžaduje, aby uživatelé opakovaně zadali stejné přihlašovací údaje. Jednotné přihlašování umožňuje uživatelům přístup k aplikacím a webům po zadání přihlašovacích údajů jednou. Po přihlášení uživatelé budou mít přístup k aplikacím a webům automaticky, nebo k získání přístupu použít ID obličeje, dotykové ID nebo Apple heslo.
 
-Pomocí těchto nastavení můžete v Intune nakonfigurovat integrované rozšíření protokolu Kerberos společnosti Apple nebo nakonfigurovat rozšíření aplikace jednotného přihlašování vytvořené vaší organizací. Rozšíření aplikace jednotného přihlašování zpracovává ověřování pro vaše uživatele. Tato nastavení konfigurují rozšíření aplikace jednotného přihlašování typu přihlašovacích údajů, která jsou určená pro toky ověřování s výzvou a odpovědí. Můžete si vybrat z rozšíření přihlašovací údaje specifického pro protokol Kerberos, které poskytuje Apple, a obecné rozšíření přihlašovacích údajů.
+Pomocí těchto nastavení můžete v Intune nakonfigurovat rozšíření přístupového bodu jednotného přihlašování, které vytvořila vaše organizace, zprostředkovatel identity nebo Apple. Rozšíření aplikace jednotného přihlašování zpracovává ověřování pro vaše uživatele. Tato nastavení konfigurují rozšíření aplikace jednotného přihlašování pro typ přesměrování a přihlašovací údaje.
+
+- Typ přesměrování je navržený pro moderní protokoly ověřování, jako je OAuth a typu Saml2.
+- Typ přihlašovacích údajů je určený pro toky ověřování typu Challenge a Response. Můžete si vybrat z rozšíření přihlašovací údaje specifického pro protokol Kerberos, které poskytuje Apple, a obecné rozšíření přihlašovacích údajů.
 
 Seznam nastavení, která můžete nakonfigurovat v Intune, najdete v tématu [rozšíření aplikace pro iOS SSO](ios-device-features-settings.md#single-sign-on-app-extension) a [rozšíření aplikace MacOS SSO](macos-device-features-settings.md#single-sign-on-app-extension).
 
-Další informace o vývoji rozšíření aplikace jednotného přihlašování najdete na webu společnosti Apple v [rozšiřitelném podnikovém přihlašování](https://developer.apple.com/videos/play/tech-talks/301) .
+Další informace o vývoji rozšíření aplikace jednotného přihlašování najdete na webu společnosti Apple v [rozšiřitelném podnikovém přihlašování](https://developer.apple.com/videos/play/tech-talks/301) . Pokud si chcete přečíst popis této funkce, podívejte se na [nastavení datové části rozšíření jednotného přihlašování](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web). 
 
 > [!NOTE]
 > Funkce **rozšíření aplikace jednotného přihlašování** se liší od funkce **jednotného přihlašování** :
 >
-> - Nastavení **rozšíření aplikace s jednotným přihlašováním** platí pro iPadOS 13,0 (a novější) a iOS 13,0 (a novější). Nastavení **jednotného přihlašování** platí pro iPadOS 13,0 (a novější) a iOS 7,0 a novější.
-> - **Rozšíření aplikace s jednotným přihlašováním** zpracovává ověřování s operačním systémem. V rámci **jednotného přihlašování**konkrétní aplikace zpracovává ověřování.
-> - Při používání **rozšíření aplikace s jednotným přihlašováním**se uživatelé přihlásí k aplikacím a webům v tichém režimu nebo s ID obličeje, dotykovým číslem nebo PINCODE nebo heslem společnosti Apple. Při použití **jednotného přihlašování**se uživatelé přihlásí k aplikacím a webům pomocí jiné aplikace.
+> - Nastavení **rozšíření aplikace s jednotným přihlašováním** platí pro iPadOS 13,0 (a novější), iOS 13,0 (a novější) a MacOS 10,15 (a novější). Nastavení **jednotného přihlašování** platí pro iPadOS 13,0 (a novější) a iOS 7,0 a novější.
 >
->    **Rozšíření aplikace jednotného přihlašování** používá k ověření operační systém Apple. Proto může poskytovat lepší prostředí pro koncové uživatele.
+> - Nastavení **rozšíření aplikace s jednotným přihlašováním** definuje rozšíření pro použití poskytovateli identity nebo organizacemi k zajištění bezproblémového podnikového přihlašování. Nastavení **jednotného přihlašování** definuje informace o účtu Kerberos pro přístup uživatelů k serverům nebo aplikacím.
 >
-> - V perspektivě vývoje může **rozšíření jednotného přihlašování** použít jakýkoliv typ ověřování SSO. S **jednotným přihlašováním**můžete použít jenom ověřování pomocí protokolu Kerberos SSO.  
+> - **Rozšíření aplikace jednotného přihlašování** používá k ověření operační systém Apple. Proto může poskytovat prostředí koncového uživatele, které je lepší než **jednotné přihlašování**.
+>
+> - Z perspektivy vývoje s použitím **rozšíření aplikace s jednotným přihlašováním**můžete použít libovolný typ přesměrované ověřování SSO nebo přihlašovacích údajů jednotného přihlašování. S **jednotným přihlašováním**můžete použít jenom ověřování pomocí protokolu Kerberos SSO.
+>
+> - **Rozšíření aplikace pro jednotné přihlašování** pomocí protokolu Kerberos bylo vyvinuto společností Apple a je integrováno do platforem iOS 13.0 + a MacOS 10.15 +. Integrované rozšíření protokolu Kerberos se dá použít k protokolování uživatelů do nativních aplikací a webů, které podporují ověřování pomocí protokolu Kerberos. **Jednotné přihlašování** není Apple implementace protokolu Kerberos.
+>
+> - Integrované **rozšíření pro jednotné přihlašování** pomocí protokolu Kerberos zpracovává výzvy protokolu Kerberos pro webové stránky a aplikace stejně jako **jednotné přihlašování**. Integrované rozšíření protokolu Kerberos ale podporuje změny hesla a v podnikových sítích je lépe fungovat. Při rozhodování mezi **rozšířením jednotného přihlašování** pomocí protokolu Kerberos a **jednotným přihlašováním**doporučujeme použít rozšíření kvůli lepšímu výkonu a funkcím.
 
-Platí pro:
+Týká se
 
 - iOS 13,0 a novější
 - iPadOS 13,0 a novější
 - macOS 10,15 a novější
 
-## <a name="wallpaper"></a>Lock
+## <a name="wallpaper"></a>Tapeta
 
 Přidejte vlastní obrázek. png,. jpg nebo. jpeg do zařízení se systémem iOS pod dohledem. Pomocí Intune můžete například přidat logo společnosti do zamykací obrazovky na svých zařízeních.
 
 Seznam nastavení, která můžete nakonfigurovat v Intune, najdete v tématu [Tapeta v iOS](ios-device-features-settings.md#wallpaper).
 
-Platí pro:
+Týká se
 
 - iOS
 - iPadOS 13,0 a novější
 
 ## <a name="web-content-filter"></a>Filtr webového obsahu
 
-Tato nastavení mohou použít vestavěný algoritmus automatického filtru společnosti Apple k vyhodnocení webových stránek a k blokování obsahu pro dospělé a pro dospělého. Můžete také vytvořit seznam povolených webových odkazů a omezených webových odkazů. Můžete například dovolit, aby se otevíraly jenom `contoso` webů.
+Tato nastavení mohou použít vestavěný algoritmus automatického filtru společnosti Apple k vyhodnocení webových stránek a k blokování obsahu pro dospělé a pro dospělého. Můžete také vytvořit seznam povolených webových odkazů a omezených webových odkazů. Můžete například dovolit, aby se otevíraly jenom `contoso` weby.
 
 Seznam nastavení, která můžete v Intune nakonfigurovat, najdete v tématu věnovaném [filtru webového obsahu v iOS](ios-device-features-settings.md#web-content-filter).
 
-Platí pro:
+Týká se
 
 - iOS 7,0 a novější
 - iPadOS 13,0 a novější

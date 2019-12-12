@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b74cdf29999bccdefaa94c84673b9ea89c335537
-ms.sourcegitcommit: 7001dc5a9cffeb2e161748f9e6dba126bf1cb06f
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74694943"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Použití funkcí a nastavení v zařízeních pomocí profilů zařízení v Microsoft Intune
@@ -115,7 +115,7 @@ Tato funkce podporuje:
 - iOS/iPadOS
 - macOS
 - Windows 10 a novější
-- Tým Windows 10
+- Windows 10 Team
 
 ## <a name="edition-upgrade"></a>Upgrade edice
 
@@ -161,7 +161,7 @@ Tato funkce podporuje:
 
 - Windows 10 Fall Creators Update a novější
 
-## <a name="extensions"></a>SND
+## <a name="extensions"></a>Rozšíření
 
 [Rozšíření jádra](kernel-extensions-overview-macos.md) umožňují správcům přidávat funkce nebo programy na úrovni jádra na zařízeních MacOS. Nakonfigurujte tato nastavení tak, aby důvěřovala všem rozšířením z konkrétního vývojáře nebo partnera, nebo povolte specifická rozšíření jádra.
 
@@ -196,7 +196,7 @@ Tato funkce podporuje:
 
 - Android Enterprise (OEMConfig)
 
-## <a name="powershell-scripts"></a>PowerShellové skripty
+## <a name="powershell-scripts"></a>Skripty prostředí PowerShell
 
 [Skripty PowerShellu na zařízeních s Windows 10](../apps/intune-management-extension.md) používají rozšíření pro správu Intune k nahrání skriptů PowerShellu v Intune a pak tyto skripty na svých zařízeních spustíte. Podívejte se také na to, co je potřeba k používání tohoto rozšíření, jak je přidat do Intune a další důležité informace.
 

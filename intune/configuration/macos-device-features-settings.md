@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 12/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 54995b54d7810c02c5a8b24e5ddff3fa1f08cb05
-ms.sourcegitcommit: 737ad6c675deedfc6009f792023ff95981b06582
+ms.openlocfilehash: 5519bdc405e725556db18d36fa98289c4edb5090
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74117868"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992895"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>nastavení funkcí zařízení macOS v Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Intune obsahuje některá vestavěná nastavení pro přizpůsobení funkcí na zařízeních macOS. Správci můžou například přidat tiskárny pro průchozí tisk, zvolit způsob, jakým se uživatelé přihlásí, konfigurovat řízení spotřeby, používat ověřování pomocí jednotného přihlašování a další.
 
@@ -85,7 +83,7 @@ Chcete-li přidat servery s modulem pro tisk, budete potřebovat IP adresu tisk�
 
 ## <a name="login-window"></a>Přihlašovací okno
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Nastavení platí pro: registrace zařízení a automatický zápis zařízení 
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Nastavení platí pro: registrace zařízení a automatický zápis zařízení
 
 #### <a name="window-layout"></a>Rozložení okna
 
@@ -107,7 +105,7 @@ Chcete-li přidat servery s modulem pro tisk, budete potřebovat IP adresu tisk�
 - **Tlačítko restartovat**: **Skrýt** na přihlašovací obrazovce nezobrazuje tlačítko restartovat. **Nenakonfigurováno** (výchozí) zobrazí tlačítko restartovat.
 - **Tlačítko režimu spánku**: **Skrýt** nezobrazuje na přihlašovací obrazovce tlačítko režimu spánku. **Nenakonfigurováno** (výchozí) zobrazí tlačítko režimu spánku.
 
-#### <a name="other"></a>Jiný uživatel
+#### <a name="other"></a>Ostatní
 
 - **Zakázat přihlášení uživatele z konzoly**: **Disable zakáže** a skryje příkaz MacOS, který se používá pro přihlášení. V případě typických uživatelů toto nastavení **zakažte** . **Nenakonfigurováno** (výchozí) umožňuje pokročilým uživatelům přihlašovat se pomocí příkazového řádku MacOS. Chcete-li přejít do režimu konzoly, uživatelé zadají `>console` do pole uživatelské jméno a musí se ověřit v okně konzoly.
 
@@ -131,33 +129,40 @@ Tato funkce platí pro:
 
 - **Typ rozšíření aplikace jednotného přihlašování**: Vyberte typ rozšíření aplikace jednotného přihlašování. Možnosti:
 
-  - **Nenakonfigurováno**: rozšíření aplikací se nepoužívají. Pokud chcete zakázat rozšíření aplikace jednotného přihlašování, přepněte typ rozšíření aplikace jednotného přihlašování z **protokolu Kerberos** nebo **přihlašovací údaje** na **Nenakonfigurováno**.
-  - **Přihlašovací údaje**: k použití jednotného přihlašování použijte obecné rozšíření aplikace s přizpůsobitelnou přihlašovacími údaji. Ujistěte se, že znáte ID rozšíření a ID týmu pro rozšíření aplikace jednotného přihlašování ve vaší organizaci.  
+  - **Nenakonfigurováno**: rozšíření aplikací se nepoužívají. Pokud chcete rozšíření aplikace zakázat, přepněte typ rozšíření aplikace jednotného přihlašování na **Nenakonfigurováno**.
+  - **Přesměrování**: pomocí obecného přizpůsobitelné přípony aplikace pro přesměrování provede jednotné přihlašování s moderními toky ověřování. Ujistěte se, že znáte rozšíření a ID týmu pro rozšíření aplikace vaší organizace.
+  - **Přihlašovací údaje**: pomocí obecného rozšíření aplikace s přizpůsobitelnými přihlašovacími údaji můžete provádět jednotné přihlašování s toky ověřování typu výzva a odpověď. Ujistěte se, že znáte ID rozšíření a ID týmu pro rozšíření aplikace jednotného přihlašování ve vaší organizaci.  
   - **Kerberos**: použijte integrované rozšíření protokolu Kerberos společnosti Apple, které je součástí macOS Catalina 10,15 a novějších. Tato možnost je verze rozšíření **přihlašovacích údajů** specifická pro Kerberos.
 
   > [!TIP]
-  > Pomocí typu **přihlašovacích údajů** přidáte vlastní hodnoty konfigurace, které chcete předat prostřednictvím rozšíření. Místo toho zvažte použití předdefinovaného nastavení konfigurace poskytované společností Apple v typu **Kerberos** .
+  > Pomocí typů **přesměrování** a **přihlašovacích údajů** přidáte vlastní hodnoty konfigurace, které budou předávány prostřednictvím rozšíření. Pokud používáte **přihlašovací údaje**, zvažte použití integrovaného nastavení konfigurace poskytovaného společností Apple v typu **Kerberos** .
 
-- **ID rozšíření** (jenom přihlašovací údaje): zadejte identifikátor sady prostředků, který identifikuje vaše rozšíření aplikace jednotného přihlašování, například `com.apple.ssoexample`.
-- **ID týmu** (pouze přihlašovací údaje): zadejte identifikátor týmu rozšíření aplikace jednotného přihlašování. Identifikátor týmu je alfanumerický řetězec (čísla a písmena), který vygenerovala společnost Apple, například `ABCDE12345`. 
+- **ID rozšíření** (přesměrování a přihlašovací údaje): zadejte identifikátor sady prostředků, který identifikuje vaše rozšíření aplikace jednotného přihlašování, například `com.apple.ssoexample`.
+- **ID týmu** (přesměrování a přihlašovací údaje): zadejte identifikátor týmu rozšíření aplikace jednotného přihlašování. Identifikátor týmu je alfanumerický řetězec (čísla a písmena), který vygenerovala společnost Apple, například `ABCDE12345`. 
 
   [Najděte své ID týmu](https://help.apple.com/developer-account/#/dev55c3c710c) (otevře se webová stránka společnosti Apple), kde najdete další informace.
 
-- **Sféra**: zadejte název sféry ověřování. Název sféry by měl být velkými písmeny, například `CONTOSO.COM`. Název vaší sféry je typicky stejný jako název vaší domény DNS, ale jenom na velká písmena.
-- **Domény**: zadejte doménu nebo názvy hostitelů pro weby, které se dají ověřit pomocí jednotného přihlašování. Pokud je váš web například `mysite.contoso.com`, `mysite` je název hostitele a `contoso.com` je název domény. Když se uživatelé připojí k některé z těchto webů, aplikace App Extension zpracuje výzvu ověřování. Toto ověřování umožňuje uživatelům k přihlášení použít ID obličeje, dotykové ID nebo Apple PINCODE/přístupový kód.
+- **Sféra** (přihlašovací údaje a Kerberos): zadejte název sféry ověřování. Název sféry by měl být velkými písmeny, například `CONTOSO.COM`. Název vaší sféry je typicky stejný jako název vaší domény DNS, ale jenom na velká písmena.
+
+- **Domény** (přihlašovací údaje a Kerberos): zadejte doménu nebo názvy hostitelů pro weby, které se dají ověřit pomocí jednotného přihlašování. Pokud je váš web například `mysite.contoso.com`, `mysite` je název hostitele a `contoso.com` je název domény. Když se uživatelé připojí k některé z těchto webů, aplikace App Extension zpracuje výzvu ověřování. Toto ověřování umožňuje uživatelům k přihlášení použít ID obličeje, dotykové ID nebo Apple PINCODE/přístupový kód.
 
   - Všechny domény v profilech služby Intune, které mají rozšíření pro aplikace jednotného přihlašování, musí být jedinečné. Doménu nemůžete opakovat v žádném profilu rozšíření aplikace pro přihlášení, i když používáte různé typy rozšíření aplikace jednotného přihlašování.
   - U těchto domén se nerozlišují velká a malá písmena.
 
-- **Další konfigurace** (jenom přihlašovací údaje): zadejte další data specifická pro rozšíření, která chcete předat rozšíření aplikace jednotného přihlašování:
-  - **Konfigurační klíč**: zadejte název položky, kterou chcete přidat, například `user name`.
-  - **Typ hodnoty**: zadejte typ dat. Možnosti:
+- **Adresy URL** (pouze přesměrované): zadejte PŘEDPONY adresy URL vašich zprostředkovatelů identity, na jejichž základě provede rozšíření přesměrování aplikace, které provádí jednotné přihlašování. Když se uživatel přesměruje na tyto adresy URL, rozšíření aplikace jednotného přihlašování se zachová a zobrazí výzvu k přihlášení SSO.
+
+  - Všechny adresy URL v profilech rozšíření aplikace jednotného přihlašování Intune musí být jedinečné. Doménu nejde opakovat v žádném profilu rozšíření aplikace jednotného přihlašování, a to ani v případě, že používáte různé typy rozšíření aplikace jednotného přihlašování.
+  - Adresy URL musí začínat na http://nebo https://.
+
+- **Další konfigurace** (přesměrování a přihlašovací údaje): zadejte další data specifická pro rozšíření, která chcete předat rozšíření aplikace jednotného přihlašování:
+  - **Klíč**: zadejte název položky, kterou chcete přidat, například `user name`.
+  - **Typ**: zadejte typ dat. Možnosti:
 
     - Řetězec
     - Boolean: v **hodnotě konfigurace**zadejte `True` nebo `False`.
     - Integer: v **hodnotě konfigurace**zadejte číslo.
     
-  - **Hodnota konfigurace**: zadejte data.
+  - **Hodnota**: zadejte data.
   
   - **Přidat**: vyberte, pokud chcete přidat konfigurační klíče.
 
@@ -179,13 +184,19 @@ Tato funkce platí pro:
 - **Minimální stáří hesla** (jenom Kerberos): zadejte počet dní, po které se musí heslo v doméně používat, než ho uživatel může změnit. **Nenakonfigurováno** (výchozí) neuplatňuje minimální stáří hesla, než bude možné je změnit.
 - **Oznámení vypršení platnosti hesla** (jenom Kerberos): zadejte počet dní, než heslo vyprší, uživatelé obdrží oznámení o vypršení platnosti hesla. **Nenakonfigurováno** (výchozí) používá `15` dnů.
 - **Vypršení platnosti hesla** (pouze Kerberos): zadejte počet dní, než bude nutné změnit heslo zařízení. **Nenakonfigurováno** (výchozí) znamená, že uživatelská hesla nikdy nevyprší.
+- **Adresa URL pro změnu hesla** (jenom Kerberos): zadejte adresu URL, která se spustí, když uživatel zahájí změnu hesla protokolu Kerberos.
 - **Hlavní název** (jenom Kerberos): zadejte uživatelské jméno objektu zabezpečení protokolu Kerberos. Nemusíte zahrnovat název sféry. Například v `user@contoso.com``user` je hlavní název a `contoso.com` je název sféry.
+
+  > [!TIP]
+  > - Můžete také použít proměnné v hlavním názvu zadáním složených závorek `{{ }}`. Chcete-li například zobrazit uživatelské jméno, zadejte `Username: {{username}}`. 
+  > - Buďte ale opatrní s náhradou proměnných, protože proměnné nejsou v uživatelském rozhraní ověřené a rozlišují velká a malá písmena. Nezapomeňte zadat správné informace.
+  
 - **Kód lokality služby Active Directory** (pouze Kerberos): zadejte název lokality služby Active Directory, kterou má rozšíření protokolu Kerberos použít. Tuto hodnotu pravděpodobně nebudete muset měnit, protože rozšíření protokolu Kerberos může automaticky najít kód lokality služby Active Directory.
 - **Název mezipaměti** (jenom Kerberos): zadejte název obecné služby zabezpečení (GSS) mezipaměti protokolu Kerberos. Tuto hodnotu pravděpodobně nemusíte nastavovat.  
 - **Zpráva požadavky na heslo** (jenom Kerberos): zadejte textovou verzi požadavků na heslo vaší organizace, které se zobrazují uživatelům. Zpráva se zobrazí, pokud nepožadujete požadavky na složitost hesla služby Active Directory nebo nezadáte minimální délku hesla.  
 - **ID sady prostředků aplikace** (jenom Kerberos): **přidejte** identifikátory sady prostředků aplikace, které by měly na svých zařízeních používat jednotné přihlašování. Těmto aplikacím je udělen přístup k lístku pro udělení lístku protokolu Kerberos, ověřovacímu lístku a ověřování uživatelů pro služby, kterým mají oprávnění k přístupu.
 - **Mapování sféry domény** (jenom Kerberos): **přidejte** přípony DNS domény, které by se měly namapovat do vaší sféry. Toto nastavení použijte, pokud názvy DNS hostitelů neodpovídají názvu sféry. Pravděpodobně nemusíte vytvářet vlastní mapování domén na sféru.
-- **Certifikát PKINIT** (jenom Kerberos): **Vyberte** certifikát kryptografie s veřejným klíčem pro počáteční ověřování (PKINIT), který se dá použít k obnovení přihlašovacích údajů Kerberos bez zásahu uživatele. Certifikát by měl být certifikát PKCS nebo SCEP, který jste dříve přidali do Intune.
+- **PKINIT certifikát** (jenom Kerberos): **Vyberte** certifikát kryptografie s veřejným klíčem pro počáteční ověřování (PKINIT), který se dá použít pro ověřování protokolem Kerberos. Můžete si vybrat z certifikátů [PKCS](../protect/certficates-pfx-configure.md) nebo [SCEP](../protect/certificates-scep-configure.md) , které jste přidali v Intune. Další informace o certifikátech najdete v tématu [použití certifikátů k ověřování v Microsoft Intune](../protect/certificates-configure.md).
 
 ## <a name="associated-domains"></a>Přidružené domény
 

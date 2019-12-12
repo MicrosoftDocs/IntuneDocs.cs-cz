@@ -19,14 +19,14 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: bce0e96ecdd4cf254273e26564b8cb132a6d2080
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74563860"
 ---
-# <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows v Intune pomocí automatických pilotů Windows  
-Automatický pilotní modul Windows zjednodušuje registraci zařízení v Intune. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
+# <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows v Intune pomocí Windows Autopilot  
+Windows Autopilot usnadňuje registraci zařízení v Intune. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
 
 Existují čtyři typy nasazení autopilotu:
 - [Režim automatického nasazení](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) pro veřejné terminály, digitální podpisy nebo sdílené zařízení
@@ -102,7 +102,7 @@ Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem. 
     ![Snímek obrazovky se stránkou OOBE](./media/enrollment-autopilot/create-profile-outofbox.png)
 
 6. V poli **Připojit k Azure AD jako** zvolte **Připojeno k Azure AD**.
-7. Nakonfigurujte následující možnosti:
+7. Nakonfigurujte tyhle možnosti:
     - **Licenční smlouva s koncovým uživatelem (EULA)** : (Windows 10 verze 1709 nebo novější) Vyberte, jestli se má uživatelům zobrazit EULA.
     - **Nastavení ochrany osobních údajů**: Vyberte, jestli se mají uživatelům zobrazit nastavení ochrany osobních údajů.
     >[!IMPORTANT]
@@ -113,7 +113,7 @@ Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem. 
     - **Povolit White šetrnější OOBE** (vyžaduje Windows 10 verze 1903 nebo novější; [další fyzické požadavky](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove#prerequisites)): Pokud chcete povolit podporu bílé šetrnější, vyberte **Ano** .
     - **Použít šablonu názvu zařízení** (vyžaduje Windows 10, verze 1809 nebo novější a typ připojení Azure AD): Pokud chcete vytvořit šablonu, která se použije při pojmenování zařízení během registrace, klikněte na **Ano** . Názvy musí být maximálně 15 znaků dlouhé a mohou obsahovat písmena, číslice a pomlčky. Nemohou být ale tvořené jen číslicemi. Pomocí [makra %SERIAL%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) můžete přidat sériové číslo specifické pro určitý hardware. Nebo můžete použít [makro %RAND:x%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp), které přidá náhodný řetězec číslic (x značí počet přidaných číslic). V [profilu připojení k doméně](windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile)můžete zadat jenom předběžnou opravu pro hybridní zařízení. 
     - **Jazyk (oblast)** \*: Zvolte jazyk, který chcete použít pro dané zařízení. Tato možnost je k dispozici, jen pokud jste si pro **Režim nasazení** zvolili **Nasazení sebou samým**.
-    - **Automaticky konfigurovat\*klávesnice** : Pokud je vybraná možnost **jazyk (oblast)** , můžete stránku výběr klávesnice přeskočit kliknutím na **tlačítko Ano** . Tato možnost je k dispozici, jen pokud jste si pro **Režim nasazení** zvolili **Nasazení sebou samým**.
+    - **Automaticky nakonfigurovat klávesnici**\*: Pokud **jazyk (oblast)** je vybraná, zvolte **Ano** přeskočit stránka pro výběr klávesnice. Tato možnost je k dispozici, jen pokud jste si pro **Režim nasazení** zvolili **Nasazení sebou samým**.
 8. Vyberte **Další**.
 9. Na stránce **značky oboru** můžete volitelně přidat značky oboru, které chcete použít pro tento profil. Další informace o značkách oboru najdete v tématu [použití značek řízení přístupu na základě role a rozsahu pro distribuci IT](../fundamentals/scope-tags.md).
 10. Vyberte **Další**.

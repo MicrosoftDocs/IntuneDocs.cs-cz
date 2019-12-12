@@ -16,10 +16,10 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c79f24d44ad0aed78ed0ae6fce0873a080b2904d
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72504845"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>Použití stránky stavu tenanta Intune
@@ -49,7 +49,7 @@ Pokud je k dispozici více než jeden konektor libovolného typu, je stav souhrn
 - **Není v pořádku**
   - Platnost certifikátu nebo přihlašovacích údajů vypršela.
   - Poslední synchronizace proběhla před třemi nebo více dny.
-- **Upozornění**
+- **Upozornění:**
   - Platnost certifikátu nebo přihlašovacích údajů vyprší do sedmi dnů.
   - Poslední synchronizace proběhla před víc než jedním dnem.
 - **V pořádku**
@@ -60,7 +60,7 @@ Když vyberete konektor ze seznamu, portál zobrazí stránku portálu, která j
 
 Pokud například vyberete konektor **Datum vypršení platnosti VPP** , otevře se stránka **tokeny programu Volume koupené pro iOS** , kde můžete zobrazit další podrobnosti o tomto konektoru. Můžete také vytvořit novou konfiguraci nebo upravit a opravit problémy s existujícím.
 
-## <a name="service-health-dashboard"></a>Řídicí panel stavu služby  
+## <a name="service-health-dashboard"></a>Řídicí panel pro sledování stavu služby  
 Na řídicím panelu stavu služby můžete zobrazit podrobnosti o *incidentech služby* , které mají vliv na vašeho tenanta, a *novinky Intune* , které poskytují informace o aktualizacích a plánovaných změnách.
 
 ### <a name="intune-service-health"></a>Service Health Intune

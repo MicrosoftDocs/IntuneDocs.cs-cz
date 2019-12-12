@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 80da0e6952c5aaab6fa8146b2d91d32259966d5d
-ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74691727"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Nastavení zařízení s Windows 10 a novějším, která se mají spustit jako veřejný terminál v Intune
@@ -36,7 +36,7 @@ Další informace o funkci veřejného terminálu Windows v Intune najdete v té
 
 - [Vytvořte profil](kiosk-settings.md#create-the-profile).
 
-- Tento profil veřejného terminálu přímo souvisí s profilem omezení zařízení, které vytvoříte pomocí [nastavení Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser)na veřejném terminálu. Sumarizace:
+- Tento profil veřejného terminálu přímo souvisí s profilem omezení zařízení, které vytvoříte pomocí [nastavení Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser)na veřejném terminálu. Pro shrnutí:
 
   1. Vytvořte tento profil veřejného terminálu pro spuštění zařízení v celoobrazovkovém režimu.
   2. Umožňuje vytvořit [profil omezení zařízení](device-restrictions-windows-10.md#microsoft-edge-browser)a nakonfigurovat konkrétní funkce a nastavení povolená v Microsoft Edge.
@@ -111,7 +111,7 @@ Spustí na zařízení jenom jednu aplikaci.
      - **Opakování časového období údržby**: výchozí hodnota je denně.
          Nastavte, jak často proběhne časová období údržby pro aktualizace aplikací. Doporučení je každodenní, aby nedocházelo k neplánovanému restartování aplikace.
 
-  [CSP ApplicationManagement/ScheduleForceRestartForUpdateFailures](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
+  [ApplicationManagement/ScheduleForceRestartForUpdateFailures CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
 
 ## <a name="multi-app-kiosks"></a>Veřejné terminály s více aplikacemi
 
@@ -165,7 +165,7 @@ Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou j
       > [!NOTE]
       > Veřejné terminály s Windows 10 s povoleným přihlašováním pomocí prohlížeče veřejného terminálu Microsoftu musí používat licenci offline od Microsoft Store pro firmy. Důvodem je to, že automatické přihlašování používá místní uživatelský účet bez přihlašovacích údajů Azure Active Directory (AD). Licence Online proto nejde vyhodnotit. Další informace najdete v tématu [distribuce offline aplikací](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).
 
-  - **Vyrovnání**
+  - **Aplikace**
 
     - **Přidat aplikaci pro Store**: Přidejte aplikaci z Microsoft Storu pro firmy. Pokud nejsou zobrazené žádné aplikace, můžete je získat a [přidat do Intune](../apps/store-apps-windows.md). Můžete například přidat Kiosk Browser, Excel, OneNote a další.
 

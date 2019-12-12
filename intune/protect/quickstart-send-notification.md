@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6d89cfcafd5452b990509e0fa6fd431a614ee5c1
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74410267"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Rychlý start: Odeslání oznámení zařízením nedodržujícím předpisy
@@ -35,7 +35,7 @@ Jedna akce, která se má provést, když zařízení nevyhovuje předpisům, je
 
 Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební účet](../fundamentals/free-trial-sign-up.md).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadované součásti
 
 Pokud používáte zásady dodržování předpisů zařízením k blokování zařízení z firemních prostředků, musíte nastavit podmíněný přístup Azure AD. Pokud jste dokončili rychlý Start pro [vytváření zásad dodržování předpisů pro zařízení](quickstart-set-password-length-android.md) , používáte Azure Active Directory. Další informace o Azure AD najdete v tématu [podmíněný přístup v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) a [běžné způsoby použití podmíněného přístupu s Intune](../protect/conditional-access-intune-common-ways-use.md).
 

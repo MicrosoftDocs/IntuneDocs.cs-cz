@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 04b284a62076122cec70b6b455151a0377470521
-ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74540736"
 ---
 # <a name="in-development-for-microsoft-intune---december-2019"></a>Ve vývoji pro Microsoft Intune – prosince 2019
@@ -91,13 +91,13 @@ Na zařízeních pro vlastní zařízení s Androidem Enterprise se bude zabloko
 
 Pokud chcete zobrazit aktuální nastavení, přejděte na [nastavení zařízení s Androidem Enterprise a povolte nebo omezte funkce pomocí Intune](../configuration/device-restrictions-android-for-work.md).
 
-Platí pro:
+Týká se
 - Vlastník zařízení se systémem Android Enterprise, včetně vyhrazených a plně spravovaných zařízení
 
 ### <a name="wired-network-device-configuration-profiles-for-macos-devices---3508686-idready---"></a>Profily konfigurace síťových zařízení s drátovou sítí pro zařízení macOS<!-- 3508686 idready -->
 V zařízeních macOS bude budoucí aktualizace zahrnovat nový profil konfigurace zařízení, který konfiguruje drátové sítě (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **MacOS** pro typ profilu > **drátovou síť** platformy pro typ profilu). Pomocí této funkce můžete vytvořit profily 802.1 x ke správě drátových sítí a tyto drátové sítě nasadit do zařízení macOS.
 
-Platí pro:
+Týká se
 - macOS
 
 ### <a name="add-automatic-proxy-settings-to-wi-fi-profiles-for-android-enterprise-work-profiles---4490822-idready---"></a>Přidání automatických nastavení proxy do profilů sítě Wi-Fi pro pracovní profily Android Enterprise<!-- 4490822 idready -->
@@ -107,7 +107,7 @@ Když v budoucí aktualizaci zvolíte typ podniku, budete moct zadat automatick�
 
 Pokud chcete zobrazit aktuální nastavení Wi-Fi, která můžete nakonfigurovat, přejděte na [Přidat nastavení Wi-Fi pro zařízení s Androidem Enterprise a Androidem v Microsoft Intune](../configuration/wi-fi-settings-android-enterprise.md).
 
-Platí pro:
+Týká se
 - Pracovní profil Android Enterprise
 
 ### <a name="enable-network-access-control-nac-with-cisco-anyconnect-vpn-on-ios-devices---4860111-idready---"></a>Povolení řízení přístupu k síti (NAC) pomocí Cisco AnyConnect VPN na zařízeních s iOS<!-- 4860111 idready -->
@@ -120,7 +120,7 @@ V budoucí aktualizaci budete moci povolit řízení přístupu k síti (NAC) po
 
 Všechna dostupná nastavení sítě VPN zobrazíte tak, že přejdete na [Konfigurace nastavení sítě VPN na zařízeních s iOS](../configuration/vpn-settings-ios.md).
 
-Platí pro:
+Týká se
 - iOS
 
 ### <a name="updated-single-sign-on-experience-for-apps-and-websites-on-your-ios-ipados-and-macos-devices---4999578-idready---"></a>Aktualizované prostředí jednotného přihlašování pro aplikace a weby na zařízeních s iOS, iPadOS a macOS<!-- 4999578 idready -->
@@ -130,7 +130,7 @@ Tato nastavení slouží ke konfiguraci bezproblémového jednotného přihlašo
 
 Pokud chcete zobrazit nastavení rozšíření aplikace jednotného přihlašování, které můžete nakonfigurovat, přejděte na adresu [SSO v iOS](../configuration/ios-device-features-settings.md#single-sign-on-app-extension) a [SSO v MacOS](../configuration/macos-device-features-settings.md#single-sign-on-app-extension).
 
-Platí pro:
+Týká se
 - iOS/iPadOS
 - macOS
 
@@ -138,15 +138,15 @@ Platí pro:
 Budete moct zadat seznam schválených klávesnic pro použití ve spravovaných aplikacích pro Android. Ve spravované aplikaci se uživateli zobrazí výzva k přepnutí na jednu ze schválených klávesnic, které už jsou na svém zařízení nainstalované, nebo v případě potřeby budou přesměrovány na Obchod Google Play ke stažení a nastavení jedné ze schválených klávesnic. Uživatel bude moci upravovat textová pole ve spravované aplikaci, pokud je jejich aktivní klávesnicí jednou ze schválených klávesnic.
 
 ### <a name="use-pkcs-certificates-with-wi-fi-profiles-on-windows-10-and-later-devices---3246388----"></a>Použití certifikátů PKCS s profily sítě Wi-Fi na zařízeních s Windows 10 a novějším<!-- 3246388  -->
-V současné době můžete ověřit profily Wi-Fi pro Windows pomocí certifikátů SCEP (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Windows 10 a novější** pro platformu > **Wi-Fi** pro Typ profilu > **Enterprise** > **typ protokolu EAP**). Certifikáty PKCS budete moct používat se profily Wi-Fi pro Windows. Tato funkce umožňuje uživatelům ověřovat profily sítě Wi-Fi pomocí nových nebo existujících profilů certifikátů PKCS ve vašem tenantovi. 
+V současné době můžete ověřit profily Wi-Fi pro Windows pomocí certifikátů SCEP (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Windows 10 a novější** pro platform > **Wi-Fi** pro typ profilu > **typ protokolu EAP** **Enterprise** > . Certifikáty PKCS budete moct používat se profily Wi-Fi pro Windows. Tato funkce umožňuje uživatelům ověřovat profily sítě Wi-Fi pomocí nových nebo existujících profilů certifikátů PKCS ve vašem tenantovi. 
 
 Další informace o profilech sítě Wi-Fi najdete v tématu [Přidání nastavení Wi-Fi pro zařízení s Windows 10 a novějším v Intune](../configuration/wi-fi-settings-windows.md).
 
-Platí pro:
+Týká se
 - Windows 10 a novější
 
 ### <a name="new-exchangeactivesync-settings-when-creating-an-email-device-configuration-profile-on-ios-devices---4892824----"></a>Nové nastavení ExchangeActiveSync při vytváření profilu konfigurace e-mailového zařízení na zařízeních s iOS<!-- 4892824  --> 
-V zařízeních se systémem iOS/iPadOS můžete nakonfigurovat připojení e-mailu v profilu konfigurace zařízení (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **iOS/iPadOS** pro **> pro** platformy. pro typ profilu). 
+V zařízeních s iOS/iPadOS můžete nakonfigurovat připojení e-mailu v profilu konfigurace zařízení (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **iOS/iPadOS** **pro > pro** daný typ profilu). 
 
 K dispozici jsou nová nastavení ExchangeActiveSync, včetně:
 - Vyberte služby, které se mají synchronizovat (nebo blokovat synchronizaci), jako je e-mail, kalendář a kontakty.
@@ -154,27 +154,27 @@ K dispozici jsou nová nastavení ExchangeActiveSync, včetně:
 
 Pokud chcete zobrazit aktuální nastavení, přejděte na [Nastavení e-mailového profilu pro zařízení s iOS v Intune](../configuration/email-settings-ios.md).
 
-Platí pro:
+Týká se
 - iOS 13,0 a novější
 - iPadOS 13,0 a novější
 
 ### <a name="prevent-users-from-adding-personal-google-accounts-to-android-enterprise-device-owner-and-dedicated-devices---5353228----"></a>Zabránit uživatelům v přidávání osobních účtů Google na vlastníka zařízení s Androidem Enterprise a vyhrazená zařízení<!-- 5353228  -->
-Uživatelům budete moct zabránit v vytváření osobních účtů Google na základě vlastníka zařízení s Androidem Enterprise a vyhrazených zařízení (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Android Enterprise.** pro > **jenom pro vlastníka zařízení > omezení zařízení** pro typ profilu > **nastavení uživatelé a účty**).
+Budete moct uživatelům zabránit v vytváření osobních účtů Google na základě vlastníka zařízení s Androidem Enterprise a vyhrazených zařízení (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Android Enterprise** pro > Platform **jenom pro vlastníka zařízení > omezení** pro typ profilu > **Nastavení uživatelů a účtů**).
 
 Pokud chcete zobrazit aktuální nastavení, která můžete nakonfigurovat, přejděte na [nastavení zařízení s Androidem Enterprise a povolte nebo omezte funkce pomocí Intune](../configuration/device-restrictions-android-for-work.md).
 
-Platí pro:
+Týká se
 - Vlastník zařízení se systémem Android Enterprise
 - Zařízení se systémem Android Enterprise vyhrazená
 
 ### <a name="server-side-logging-for-siri-commands-setting-is-removed-in-ios-device-restrictions-profile---5468501----"></a>Nastavení příkazů protokolování na straně serveru pro příkazy Siri se v profilu omezení zařízení s iOS odeberou.<!-- 5468501  -->
-Na zařízeních s iOS můžete vytvořit profily omezení zařízení, které nakonfigurují protokolování na straně serveru pro příkazy Siri (**Konfigurace zařízení** > **profily** > **Vytvoření profilu** > **iOS/iPadOS** pro platformu. > **Omezení zařízení** pro typ profilu > **integrovaných aplikací**). Bude odebráno nastavení **protokolování na straně serveru pro příkazy Siri** .
+Na zařízeních s iOS můžete vytvořit profily omezení zařízení, které nakonfigurují protokolování na straně serveru pro příkazy Siri (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **iOS/iPadOS** pro > **omezení zařízení** pro typ profilu > **integrované aplikace**). Bude odebráno nastavení **protokolování na straně serveru pro příkazy Siri** .
 
 Toto nastavení se odebere z konzoly pro správu Intune. Toto nastavení nemá na zařízení žádný vliv, i když existující zásady s nakonfigurovaným nastavením budou pokračovat v zobrazování tohoto nastavení. Pokud chcete odebrat nastavení z existujících zásad, přečtěte si zásady, udělejte dílčí úpravu, uložte ji a zásady se aktualizují.
 
 Nastavení, která můžete konfigurovat, najdete v tématu [nastavení zařízení s iOS a iPadOS, které umožňuje povolit nebo zakázat funkce využívající Intune](../configuration/device-restrictions-ios.md).
 
-Platí pro:
+Týká se
 - iOS
 
 <!-- ***********************************************-->

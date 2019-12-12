@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9e3867bfc2de29c059766e134bd0d2c8801e1c70
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73712914"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatizace e-mailu a přidání akcí pro zařízení nedodržující předpisy v Intune
@@ -80,7 +80,7 @@ Pokud chcete svým uživatelům odeslat e-mail, vytvořte šablonu zprávy s ozn
 
    ![Příklad oznámení o dodržování předpisů v Intune](./media/actions-for-noncompliance/actionsfornoncompliance-1.PNG)
 
-   Pokračujte výběrem **Další** .
+   Pokračujte výběrem tlačítka **Next** (Další).
 
 5. V části **Revize + vytvořit**Zkontrolujte konfigurace a ověřte, že je šablona zprávy s oznámením připravená k použití. Vytvoření oznámení dokončíte výběrem **vytvořit** .
 

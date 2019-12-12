@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9deee0dca675d7fd95445131ed98ea195972c6ac
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74409856"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Kurz: Ochrana e-mailu Exchange Online na spravovaných zařízeních
@@ -37,7 +37,7 @@ V tomto kurzu se naučíte:
 
 Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební účet](../fundamentals/free-trial-sign-up.md).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadované součásti
 
 Pro účely tohoto kurzu budete potřebovat testovacího tenanta s následujícími předplatnými:
 
@@ -185,7 +185,7 @@ Pokud už testovací zásady nepotřebujete, můžete je odebrat.
 
 4. Vyberte možnost **zabezpečení koncového bodu** > **podmíněný přístup**.
 
-5. V seznamu **Název zásady** vyberte u testovací zásady místní nabídku ( **...** ) a potom vyberte **Odstranit**. Kliknutím na **tlačítko Ano** potvrďte akci.
+5. V seznamu **Název zásady** vyberte u testovací zásady místní nabídku ( **...** ) a potom vyberte **Odstranit**. Odstranění potvrďte výběrem **Ano**.
 
 ## <a name="next-steps"></a>Další kroky
 

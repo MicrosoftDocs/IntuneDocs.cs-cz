@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 644297777e8a103d6ffdc5f025ebf8f29591fda8
-ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74188473"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Vytvoření zásady podmíněného přístupu pro místní Exchange a vyhrazenou verzi Exchange Online
@@ -50,7 +50,7 @@ Než budete moct nakonfigurovat podmíněný přístup, ověřte, že existují 
 
 - Pokud jsou zásady podmíněného přístupu nakonfigurované a cílené na uživatele, musí být předtím, než se uživatel může připojit k e-mailu, použít následující **zařízení** :
   - Musí být **zaregistrovaný** ve službě Intune nebo se musí jednat o počítač připojený k doméně.
-  - **Musí být zaregistrované v Azure Active Directory**. Kromě toho musí být ve službě Azure Active Directory zaregistrované ID protokolu Exchange ActiveSync klienta.
+  - **Je zaregistrované v Azure Active Directory**. Kromě toho musí být ve službě Azure Active Directory zaregistrované ID protokolu Exchange ActiveSync klienta.
 
 - Pro zákazníky s Intune a Office 365 se služba Azure AD Device Registration Service (DRS) aktivuje automaticky. Zákazníci, kteří už mají nasazenou službu AD FS Device Registration Service, nevidí registrovaná zařízení v místní službě Active Directory. **To neplatí pro počítače s Windows ani zařízení Windows Phone**.
 

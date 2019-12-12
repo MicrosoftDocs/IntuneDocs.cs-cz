@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eff4ccdc8b40da4d72394001b88446653ff71bd0
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 2e7c9824711ecbfb43a7c7dde71cc01b306b7fab
+ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564249"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74899410"
 ---
 # <a name="intune-discovered-apps"></a>Zjištěné aplikace Intune
 
@@ -56,16 +56,17 @@ Následující seznam poskytuje typ aplikační platformy, aplikace, které jsou
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
 | Windows 10 (aplikace Win32) Poznámka: [vyžaduje rozšíření správy Intune](intune-management-extension.md) na zařízení. | Nelze použít | Všechny aplikace Win32 nalezené v seznamu přidat nebo odebrat programy | Každých 24 hodin od registrace zařízení |
 | Windows 10 (moderní aplikace) | Jenom spravované moderní aplikace | Všechny moderní aplikace nainstalované v zařízení | Každých 7 dnů od registrace zařízení |
-| Windows 8.1 | Jenom spravované aplikace | Jenom spravované aplikace | Každých 7 dnů od registrace zařízení |
-| Windows Phone 8 | Jenom spravované aplikace | Jenom spravované aplikace | Každých 7 dnů od registrace zařízení |
-| Windows RT | Jenom spravované aplikace | Jenom spravované aplikace | Každých 7 dnů od registrace zařízení |
-| iOS | Jenom spravované aplikace | Všechny aplikace nainstalované v zařízení | Každých 7 dnů od registrace zařízení |
-| macOS | Všechny aplikace nainstalované v zařízení | Všechny aplikace nainstalované v zařízení | Každých 7 dnů od registrace zařízení |
-| Android | Jenom spravované aplikace | Všechny aplikace nainstalované v zařízení | Každých 7 dnů od registrace zařízení |
-| Android Enterprise | Jenom spravované aplikace | Jenom aplikace nainstalované v pracovním profilu | Každých 7 dnů od registrace zařízení |
+| Windows 8.1 | Pouze spravované aplikace | Pouze spravované aplikace | Každých 7 dnů od registrace zařízení |
+| Windows Phone 8 | Pouze spravované aplikace | Pouze spravované aplikace | Každých 7 dnů od registrace zařízení |
+| Windows RT | Pouze spravované aplikace | Pouze spravované aplikace | Každých 7 dnů od registrace zařízení |
+| iOS | Pouze spravované aplikace | Všechny aplikace instalované na zařízení | Každých 7 dnů od registrace zařízení |
+| macOS | Pouze spravované aplikace | Všechny aplikace instalované na zařízení | Každých 7 dnů od registrace zařízení |
+| Android | Pouze spravované aplikace | Všechny aplikace instalované na zařízení | Každých 7 dnů od registrace zařízení |
+| Android Enterprise | Pouze spravované aplikace | Jenom aplikace nainstalované v pracovním profilu | Každých 7 dnů od registrace zařízení |
 
 > [!NOTE]
-> Hybridní zařízení s Windows 10 připojená k Azure AD, jak je znázorněno v úloze správy aplikací v Configuration Manager, teď neshromažďují inventář aplikací prostřednictvím rozšíření pro správu Intune (IME) podle výše uvedeného plánu. Aby se tento problém vyřešil, měla by být úloha správy aplikací v Configuration Manager přepnuta do Intune, aby se editor IME nainstaloval na zařízení (vyžaduje se editor IME pro inventarizaci a nasazení PowerShellu). Všimněte si, že jakékoli změny nebo aktualizace tohoto chování jsou oznámeny ve [vývoji](../fundamentals/in-development.md) a/nebo [co je nového](../fundamentals/whats-new.md).
+> - Hybridní zařízení s Windows 10 připojená k Azure AD, jak je znázorněno v úloze správy aplikací v Configuration Manager, teď neshromažďují inventář aplikací prostřednictvím rozšíření pro správu Intune (IME) podle výše uvedeného plánu. Aby se tento problém vyřešil, měla by být úloha správy aplikací v Configuration Manager přepnuta do Intune, aby se editor IME nainstaloval na zařízení (vyžaduje se editor IME pro inventarizaci a nasazení PowerShellu). Všimněte si, že jakékoli změny nebo aktualizace tohoto chování jsou oznámeny ve [vývoji](../fundamentals/in-development.md) a/nebo [co je nového](../fundamentals/whats-new.md).
+> - Zařízení macOS ve vlastnictví, která se zaregistrují do listopadu 2019, můžou dál zobrazovat všechny aplikace nainstalované v zařízení, dokud se zařízení znovu nezaregistrují.
 
 Počet zjištěných aplikací nemusí odpovídat stavovému počtu instalací aplikací. K příčinám nekonzistencí můžou patřit tyto:
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/27/2019
+ms.date: 12/04/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa6dacf8b6498175e9e7658689bee3a527e684cc
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: bce5d4377a1f5a591c71ff704937afeaccabf429
+ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72490710"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74899360"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Ověřování v Intune Data Warehouse pouze na úrovni aplikace
 
@@ -77,7 +77,7 @@ V této části Azure AD vygeneruje hodnotu klíče pro vaši aplikaci.
 V této části udělíte aplikacím oprávnění.
 
 1. V okně **Nastavení** vyberte **Požadovaná oprávnění**.
-2. Klikněte na tlačítko **Přidat**.
+2. Klikněte na tlačítko **Add** (Přidat).
 3. Vyberte **Přidat rozhraní API**, aby se zobrazilo okno **Vyberte rozhraní API**.
 4. Vyberte **Microsoft Intune API (MicrosoftIntuneAPI)** a pak v okně **Vyberte rozhraní API** klikněte na **Vybrat**. Je vybraný krok **Vybrat oprávnění** a zobrazené okno **Povolit přístup**.
 5. Zvolte možnost **Získat informace o datovém skladu z Microsoft Intune** z části **Oprávnění aplikace**.
@@ -93,7 +93,7 @@ Pomocí sady Visual Studio vytvořte projekt Konzolová aplikace (.NET Framework
 2. Na levé straně vyberte **Visual C#** , aby se zobrazily všechny projekty rozhraní .NET Framework.
 3. Vyberte **Konzolová aplikace (.NET Framework)** , přidejte název aplikace a pak kliknutím na **OK** aplikaci vytvořte.
 4. V **Průzkumníku řešení** vyberte **Program.cs**, aby se zobrazil kód.
-5. V Průzkumník řešení přidejte odkaz na sestavení `System.Configuration`.
+5. V Průzkumník řešení přidejte odkaz na `System.Configuration`sestavení.
 6. V místní nabídce vyberte **Přidat** > **Nová položka**. Zobrazí se dialogové okno **Přidat novou položku**.
 7. Na levé straně v části **Visual C#** vyberte **Kód**.
 8. Vyberte **Třída**, změňte název třídy na *IntuneDataWarehouseClass.cs* a klikněte na **Přidat**.

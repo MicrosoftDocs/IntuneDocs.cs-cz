@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 64fc1bab596715be80fd3a91c003cac1176fe787
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72490277"
 ---
 # <a name="reference-for-policy-entities"></a>Referenční informace pro entity zásad
@@ -65,20 +65,20 @@ Entita **deviceConfigurationProfileDeviceActivity** uvádí počet **zařízení
 | Vlastnost  | Description | Příklad |
 |---------|------------|--------|
 | dateKey |Klíč data, kdy se přihlášení konfiguračního profilu zařízení v datovém skladu zaznamenalo |20160703 |
-| Uložené |Počet jedinečných zařízení v čekajícím stavu |123 |
+| Čeká se na zadání |Počet jedinečných zařízení v čekajícím stavu |123 |
 | Úspěšné |Počet jedinečných zařízení v úspěšném stavu |12 |
 | Chyba |Počet jedinečných zařízení v chybovém stavu |10 |
-| Nepovedlo se |Počet jedinečných zařízení v neúspěšném stavu |2 |
+| selhalo |Počet jedinečných zařízení v neúspěšném stavu |2 |
 
 Entita **entita deviceconfigurationprofileuseractivity** uvádí počet **uživatelů** v úspěšném, nevyřízeném, neúspěšném nebo chybovém stavu za den. Číslo odráží konfigurační profily Zařízení přiřazené entitě. Například pokud je **uživatel** v úspěšném stavu pro všechny přiřazené zásady, posune čítač úspěšného počítadla o jeden den. Pokud má uživatel přiřazené dva profily, jeden je v úspěšném stavu a druhý je v chybovém stavu, započítá se uživatel v chybovém stavu.  Entita **entita deviceconfigurationprofileuseractivity** uvádí, kolik uživatelů se v daném dni během posledních 30 dnů zobrazuje.
 
 | Vlastnost  | Description | Příklad |
 |---------|------------|--------|
 | dateKey |Klíč data, kdy se přihlášení konfiguračního profilu zařízení v datovém skladu zaznamenalo |20160703 |
-| Uložené |Počet jedinečných uživatelů v čekajícím stavu |123 |
+| Čeká se na zadání |Počet jedinečných uživatelů v čekajícím stavu |123 |
 | Úspěšné |Počet jedinečných uživatelů v úspěšném stavu |12 |
 | Chyba |Počet jedinečných uživatelů v chybovém stavu |10 |
-| Nepovedlo se |Počet jedinečných uživatelů v neúspěšném stavu |2 |
+| selhalo |Počet jedinečných uživatelů v neúspěšném stavu |2 |
 
 ## <a name="policytypeactivities"></a>policyTypeActivities
 
@@ -89,10 +89,10 @@ Entita **policyTypeActivity** obsahuje kumulativní počet zařízení v úspě�
 | dateKey |dateKey, když se v datovém skladu zaznamenalo vrácení se změnami konfiguračního profilu zařízení. |20160703 |
 | policyKey |policyKey se dá připojit k zásadám a získat tak zásadu. |Směrný plán Windows 10 |
 | policyTypeKey |Typ klíče zásad, který jde připojit k typu zásad a získat tak název typu zásad |Zásady dodržování předpisů Windows 10 |
-| Uložené |Počet jedinečných zařízení v čekajícím stavu |123 |
+| Čeká se na zadání |Počet jedinečných zařízení v čekajícím stavu |123 |
 | Úspěšné |Počet jedinečných zařízení v úspěšném stavu |12 |
 | Chyba |Počet jedinečných zařízení v chybovém stavu |10 |
-| Nepovedlo se |Počet jedinečných zařízení v neúspěšném stavu |2 |
+| selhalo |Počet jedinečných zařízení v neúspěšném stavu |2 |
 
 ## <a name="compliance-policy"></a>Zásady dodržování předpisů
 
@@ -106,11 +106,11 @@ Následující tabulka shrnuje stav přiřazení zásad dodržování předpisů
 |Vlastnost     |Description  |Příklad  |
 |---------|---------|---------|
 |dateKey  |Klíč data, kdy se vytvořil souhrn pro zásady dodržování předpisů|20161204 |
-|Neznámý  |Počet zařízení, která jsou offline nebo kterým se nepodařilo komunikovat s Intune nebo Azure AD z jiných důvodů |5|
-|NotApplicable      |Počet zařízení, ve kterých nejsou použitelné zásady dodržování předpisů, na které zacílil správce|201 |
+|neznámé  |Počet zařízení, která jsou offline nebo kterým se nepodařilo komunikovat s Intune nebo Azure AD z jiných důvodů |5|
+|notApplicable      |Počet zařízení, ve kterých nejsou použitelné zásady dodržování předpisů, na které zacílil správce|201 |
 |kompatibilní      |Počet zařízení, ve kterých se úspěšně použily jedny nebo více zásad dodržování předpisů, na které zacílil správce |4083 |
 |V období odkladu      |Počet zařízení, která nevyhovují předpisům, ale jsou v období odkladu definovaném správcem |57|
-|Nekompatibilních      |Počet zařízení, u kterých se nepodařilo použít jedny nebo více zásad dodržování předpisů, na které zacílil správce nebo u kterých uživatel nedodržel zásady, na které zacílil správce|43 |
+|nekompatibilních      |Počet zařízení, u kterých se nepodařilo použít jedny nebo více zásad dodržování předpisů, na které zacílil správce nebo u kterých uživatel nedodržel zásady, na které zacílil správce|43 |
 |Chyba      |Počet zařízení, kterým se nepodařilo komunikovat s Intune nebo Azure AD a která vrátila chybovou zprávu |3|
 
 ### <a name="compliancepolicystatusdeviceperpolicyactivities"></a>compliancePolicyStatusDevicePerPolicyActivities 
@@ -124,11 +124,11 @@ Následující tabulka shrnuje stav přiřazení zásad dodržování předpisů
 |dateKey  |Klíč data, kdy se vytvořil souhrn pro zásady dodržování předpisů|20161219|
 |policyKey     |Klíč pro zásady dodržování předpisů, pro který se vytvořil souhrn |10178 |
 |policyPlatformKey      |Klíč pro typ platformy zásad dodržování předpisů, pro který se vytvořil souhrn|5|
-|Neznámý     |Počet zařízení, která jsou offline nebo kterým se nepodařilo komunikovat s Intune nebo Azure AD z jiných důvodů|13,5|
-|NotApplicable     |Počet zařízení, ve kterých nejsou použitelné zásady dodržování předpisů, na které zacílil správce|3|
+|neznámé     |Počet zařízení, která jsou offline nebo kterým se nepodařilo komunikovat s Intune nebo Azure AD z jiných důvodů|13|
+|notApplicable     |Počet zařízení, ve kterých nejsou použitelné zásady dodržování předpisů, na které zacílil správce|3|
 |kompatibilní      |Počet zařízení, ve kterých se úspěšně použily jedny nebo více zásad dodržování předpisů, na které zacílil správce |45|
 |V období odkladu      |Počet zařízení, která nevyhovují předpisům, ale jsou v období odkladu definovaném správcem |3|
-|Nekompatibilních      |Počet zařízení, u kterých se nepodařilo použít jedny nebo více zásad dodržování předpisů, na které zacílil správce nebo u kterých uživatel nedodržel zásady, na které zacílil správce|7|
+|nekompatibilních      |Počet zařízení, u kterých se nepodařilo použít jedny nebo více zásad dodržování předpisů, na které zacílil správce nebo u kterých uživatel nedodržel zásady, na které zacílil správce|7|
 |Chyba      |Počet zařízení, kterým se nepodařilo komunikovat s Intune nebo Azure AD a která vrátila chybovou zprávu |3|
 
 ### <a name="policyplatformtypes"></a>policyPlatformTypes
@@ -149,11 +149,11 @@ Následující tabulka uvádí počet zařízení v úspěšném, čekajícím, 
 |Vlastnost  |Description  |Příklad  |
 |---------|---------|---------|
 |dateKey|Klíč data, kdy se přihlášení konfiguračního profilu zařízení v datovém skladu zaznamenalo|20160703|
-|Uložené|Počet jedinečných zařízení v čekajícím stavu|123|
+|Čeká se na zadání|Počet jedinečných zařízení v čekajícím stavu|123|
 |Úspěšné|Počet jedinečných zařízení v úspěšném stavu|12|
 |policyKey|policyKey se dá připojit k zásadám a získat tak zásadu.|Směrný plán Windows 10|
 |Chyba|Počet jedinečných zařízení v chybovém stavu|10|
-|Nepovedlo se|Počet jedinečných zařízení v neúspěšném stavu|2|
+|selhalo|Počet jedinečných zařízení v neúspěšném stavu|2|
 
 ### <a name="policyuseractivities"></a>policyUserActivities
 
@@ -163,7 +163,7 @@ Následující tabulka uvádí počet uživatelů v úspěšném, čekajícím, 
 | Vlastnost  |                                         Description                                         |       Příklad       |
 |-----------|---------------------------------------------------------------------------------------------|---------------------|
 |  dateKey  | Klíč data, kdy se přihlášení konfiguračního profilu zařízení v datovém skladu zaznamenalo |      20160703       |
-|  Uložené  |                         Počet jedinečných zařízení v čekajícím stavu                          |         123         |
+|  Čeká se na zadání  |                         Počet jedinečných zařízení v čekajícím stavu                          |         123         |
 | Úspěšné |                         Počet jedinečných zařízení v úspěšném stavu                          |         12          |
 | policyKey |                 policyKey se dá připojit k zásadám a získat tak zásadu.                 | Směrný plán Windows 10 |
 |   Chyba   |                          Počet jedinečných zařízení v chybovém stavu                           |         10          |

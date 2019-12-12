@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 81c842eb27b1b9131c164ced5aeed86a78a37353
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72506288"
 ---
 # <a name="enroll-your-corporate-device-with-the-microsoft-intune-app"></a>Registrace podnikového zařízení pomocí aplikace Microsoft Intune
@@ -102,7 +102,7 @@ V této části provedete kontrolu kódu QR poskytovaného vaší společností.
    ![Příklad obrázku úvodní obrazovky instalace zařízení, zvýraznění pokynů pro klepnutí na obrazovku](./media/qr-code-intune-app-01.png)  
 
 2. Připojte se k Wi-Fi podle pokynů na obrazovce.  
-3. Pokud zařízení nemá skener kódu QR, obrazovky instalačního programu zobrazí průběh instalace skeneru. Počkejte, až se instalace dokončí.  
+3. Pokud zařízení nemá skener kódu QR, obrazovky instalačního programu zobrazí průběh instalace skeneru. Počkejte na dokončení instalace.  
 4. Po zobrazení výzvy Naskenujte kód QR v registračním profilu, který vám vaše organizace poskytla.  
 5. Vraťte se k [registraci zařízení](#enroll-device), krok 4 pro pokračování v instalaci.  
 
@@ -119,7 +119,7 @@ V této části zadáte svůj token poskytovaný společností. Až budete hotov
 
 4. Vyberte **zadat kód**.  
 
-5. Na obrazovce **Kontrola nebo zadání kódu** zadejte kód, který vám vaše organizace poskytla.  Pak klikněte na **Další**.  
+5. Na obrazovce **Kontrola nebo zadání kódu** zadejte kód, který vám vaše organizace poskytla.  Pak klikněte na tlačítko **Další**.  
 
    ![Příklad obrázku skenování nebo zadání kódu obrazovky, zvýraznění tlačítka Další](./media/token-intune-app-04.png)  
 

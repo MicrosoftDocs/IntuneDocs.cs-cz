@@ -17,10 +17,10 @@ ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 122872eff92a37c8724fd4a853091e51a0a54c66
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72506528"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Nastavení zařízení s Windows 10 a Windows holografické pro přidání připojení k síti VPN pomocí Intune
@@ -177,7 +177,7 @@ Pokud je uživatel připojen k příponě DNS v seznamu, uživatel se nebude aut
 
 Pokud je například uživatel již připojen k důvěryhodné příponě DNS, následující automatické triggery se ignorují. Konkrétně přípony DNS v seznamu zruší všechny ostatní automatické triggery připojení, včetně:
 
-- Vždy zapnuto
+- Stálé připojení
 - Aktivační událost na základě aplikace
 - Automatické triggery DNS
 

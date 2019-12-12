@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 93b48fd5f6482669da923e4c15dcb09c7d328197
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72503449"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
@@ -31,7 +31,7 @@ ms.locfileid: "72503449"
 
 Sada Microsoft Intune App SDK pro iOS umožňuje začlenit do vaší nativní aplikace pro iOS zásady ochrany aplikací Intune (označované také jako zásady APP nebo MAM). Aplikace s povolenou funkcí MAM je integrovaná se sadou Intune App SDK. Správci IT můžou zásady ochrany aplikací nasadit do vaší mobilní aplikace, když Intune tuto aplikaci aktivně spravuje.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadované součásti
 
 * Budete potřebovat počítač s Mac OS, na kterém běží OS X 10.8.5 nebo novější, a má nainstalované taky Xcode 9 nebo novější.
 
@@ -243,7 +243,7 @@ V rámci tohoto slovníku IntuneMAMSettings můžete sadu Intune App SDK nakonfi
 
 Některá z těchto nastavení jsou možná popsaná v předchozích částech a některá se nevztahují na všechny aplikace.
 
-Nastavení  | Typ  | Definice | Požadováno?
+Nastavení  | Typ  | Definition | Požadované?
 --       |  --   |   --       |  --
 ADALClientId  | Řetězec  | Identifikátor klienta Azure AD aplikace | Vyžaduje se pro všechny aplikace, které používají MSAL a všechny aplikace ADAL, které přistupují k prostředku AAD bez Intune. |
 ADALAuthority | Řetězec | Autorita Azure AD aplikace se používá. Měli byste použít vlastní prostředí, ve kterém jsou nakonfigurované účty AAD. | Vyžaduje se, pokud aplikace používá ADAL nebo MSAL k přístupu k prostředku AAD bez Intune. Pokud tato hodnota chybí, použije se výchozí hodnota Intune.|
@@ -273,7 +273,7 @@ WebViewHandledURLSchemes | Pole řetězců | Určuje schémata URL zpracovávan�
 
 ## <a name="receive-app-protection-policy"></a>Příjem zásad ochrany aplikací
 
-### <a name="overview"></a>Přehled
+### <a name="overview"></a>Overview
 
 Kvůli příjmu zásad ochrany aplikací Intune musí aplikace inicializovat žádost o registraci ve službě Intune MAM. Aplikace lze v konzole Intune nakonfigurovat tak, aby přijímaly zásady ochrany aplikací s registrací zařízení nebo bez registrace zařízení. Zásady ochrany aplikací bez registrace, označované také jako **APP-WE** nebo MAM-WE, umožňují správu aplikací přes Intune bez nutnosti registrace zařízení do správy mobilních zařízení Intune (MDM). V obou případech se pro příjem zásad vyžaduje registrace ve službě Intune MAM.
 
@@ -332,7 +332,7 @@ Příklad:
 
 Pokud chcete, aby sada Intune SDK zpracovávala všechna ověřování pomocí ADAL/MSAL a registraci předtím, než se aplikace dokončí, a vaše aplikace vždy vyžaduje zásadu aplikace, nemusíte používat rozhraní `loginAndEnrollAccount` API. Můžete jednoduše ve slovníku IntuneMAMSettings v souboru Info.plist dané aplikace nastavit dvě níže uvedená nastavení na ANO.
 
-Nastavení  | Typ  | Definice |
+Nastavení  | Typ  | Definition |
 --       |  --   |   --       |  
 AutoEnrollOnLaunch| Logická hodnota| Určuje, zda se má aplikace pokusit o automatickou registraci při spuštění, pokud se zjistí existující spravovaná identita a aplikace se ještě nezaregistrovala. Výchozí hodnota je NE. <br><br> Poznámka: Pokud se nenalezne žádná spravovaná identita nebo v mezipaměti ADAL/MSAL není k dispozici žádný platný token pro identitu, pokus o registraci selže bez výzvy k zadání přihlašovacích údajů, pokud aplikace také nenastaví MAMPolicyRequired na Ano. |
 MAMPolicyRequired| Logická hodnota| Určuje, jestli se aplikaci zabrání ve spuštění, pokud nebude mít zásady ochrany aplikací Intune. Výchozí hodnota je NE. <br><br> Poznámka: Aplikace odeslané do App Storu nemůžou mít možnost MAMPolicyRequired nastavenou na ANO. Při nastavení možnosti MAMPolicyRequired na ANO je vhodné nastavit na ANO také možnost AutoEnrollOn. |
@@ -416,7 +416,7 @@ Tyto metody delegáta vracejí objekt `IntuneMAMEnrollmentStatus`, který obsahu
 * Chybový řetězec s popisem stavového kódu
 * Objekt `NSError`. Tento objekt je definovaný v souboru `IntuneMAMEnrollmentStatus.h` společně s konkrétními stavovými kódy, které můžou být vráceny.
 
-### <a name="sample-code"></a>Ukázka kódu
+### <a name="sample-code"></a>Příklad kódu
 
 Toto jsou ukázky implementace metod delegáta:
 
@@ -458,7 +458,7 @@ Z návratové hodnoty této metody sada SDK pozná, jestli požadované restarto
 
 Sada Intune App SDK má několik rozhraní API, které můžete volat, abyste získali informace o zásadách Intune APP nasazených do aplikace. Pomocí těchto dat můžete přizpůsobit chování aplikace. Následující tabulka poskytuje informace o některých základních třídách Intune, které budete používat.
 
-Třída | Popis
+Třída | Description
 ----- | -----------
 IntuneMAMPolicyManager.h | Třída IntuneMAMPolicyManager zveřejňuje zásady Intune APP nasazené do aplikace. Zveřejňuje zejména rozhraní API, která slouží k [povolení více identit](app-sdk-ios.md#enable-multi-identity-optional). |
 IntuneMAMPolicy.h | Třída IntuneMAMPolicy zveřejňuje některá nastavení zásad MAM, která se týkají aplikace. Tato nastavení zásad se zveřejňují, aby aplikace mohla přizpůsobit svoje uživatelské rozhraní. Většinu nastavení zásad vynucuje sada SDK, nikoli aplikace. Jediné nastavení, které by aplikace měla implementovat, je ovládací prvek Uložit jako. Tato třída zveřejňuje některá rozhraní API, která jsou nezbytná k implementaci ovládacího prvku Uložit jako. |
@@ -735,7 +735,7 @@ Ano, správce IT může do aplikace poslat příkaz k selektivnímu vymazání. 
 
 ### <a name="is-there-a-sample-app-that-demonstrates-how-to-integrate-the-sdk"></a>Je k dispozici ukázková aplikace, která demonstruje integraci sady SDK?
 
-Ano! Nedávno jsme přepracovali naši open-source ukázkovou aplikaci [Wagr pro iOS](https://github.com/Microsoft/Wagr-Sample-Intune-iOS-App). Aplikace Wagr teď umožňuje použít zásady ochrany aplikací pomocí sady Intune App SDK.
+Ano. Nedávno jsme přepracovali naši open-source ukázkovou aplikaci [Wagr pro iOS](https://github.com/Microsoft/Wagr-Sample-Intune-iOS-App). Aplikace Wagr teď umožňuje použít zásady ochrany aplikací pomocí sady Intune App SDK.
 
 ### <a name="how-can-i-troubleshoot-my-app"></a>Jak můžu řešit potíže s aplikací?
 

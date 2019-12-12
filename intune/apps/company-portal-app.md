@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7a4d6db4f61dea1b073ccce7c4c3f727a91402c1
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74563643"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Konfigurace aplikace Portál společnosti služby Microsoft Intune
@@ -149,13 +149,13 @@ V aplikaci Portál společnosti pro Windows jsou k dispozici následující klá
 
 | Oblast | Description | Klávesová zkratka |
 |:------------------:|:--------------:|:-----------------:|
-| Navigační nabídka | Cházení | ALT + M |
-|  | Domů | ALT + H |
+| Navigační nabídka | Navigace | Alt+M |
+|  | Domů | Alt+H |
 |  | Všechny aplikace | ALT + A |
 |  | Nainstalované aplikace | Alt+I |
-|  | Váš názor | ALT + F |
-|  | Můj profil | ALT + U |
-|  | Nastavení | Alt + T |
+|  | Váš názor | Alt+F |
+|  | Můj profil | Alt+U |
+|  | Nastavení | Alt+T |
 | Úvodní stránka – dlaždice Zařízení | Přejmenovat | F2 |
 |  | Odebrat | Ctrl+D nebo Delete |
 |  | Zkontrolovat přístup | Ctrl+M nebo F9 |
@@ -163,7 +163,7 @@ V aplikaci Portál společnosti pro Windows jsou k dispozici následující klá
 |  | Odebrat | Ctrl+D nebo Delete |
 |  | Zkontrolovat přístup | Ctrl+M nebo F9 |
 | Podrobnosti aplikace | Install | Ctrl+I |
-| Zařízení | K dispozici | CTRL + D |
+| Zařízení | K dispozici | Ctrl+D |
 
 Koncoví uživatelé budou také moci zobrazit dostupné zkratky v aplikaci pro Windows Portál společnosti.
 
@@ -187,12 +187,12 @@ Některé platformy a konfigurace neumožňují akce zařízení samoobslužné 
 |  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
 | Vyřazení | K dispozici<sup>(1)</sup> | K dispozici | K dispozici | K dispozici<sup>(7)</sup> |
-| Vymazání | K dispozici | K dispozici<sup>(5)</sup> | NÁ | K dispozici<sup>(7)</sup> |
+| Vymazání | K dispozici | K dispozici<sup>(5)</sup> | Není k dispozici | K dispozici<sup>(7)</sup> |
 | Přejmenovat<sup>(4)</sup> | K dispozici | K dispozici | K dispozici | K dispozici |
-| Brání | K dispozici | K dispozici | K dispozici | K dispozici |
+| Synchronizace | K dispozici | K dispozici | K dispozici | K dispozici |
 | Vzdálené uzamčení | Pouze Windows Phone | K dispozici | K dispozici | K dispozici |
-| Resetovat heslo | Pouze Windows Phone | K dispozici<sup>(8)</sup> | NÁ | K dispozici<sup>(6)</sup> |
-| Obnovení klíče | NÁ | NÁ | K dispozici<sup>(2)</sup> | NÁ |
+| Resetovat heslo | Pouze Windows Phone | K dispozici<sup>(8)</sup> | Není k dispozici | K dispozici<sup>(6)</sup> |
+| Key Recovery | Není k dispozici | Není k dispozici | K dispozici<sup>(2)</sup> | Není k dispozici |
 
 <sup>(1)</sup> **vyřazení** je vždycky blokované na zařízeních s Windows připojená k Azure AD.<br>
 <sup>(2)</sup> **obnovení klíče** pro MacOS je dostupné jenom přes webový portál.<br>

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 39775f3acf1a1c3da7c836afe1699958560d509a
-ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74691835"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatická registrace zařízení s iOSem pomocí Programu registrace zařízení společnosti Apple
@@ -166,7 +166,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
 
     Multi-Factor Authentication se nepodporuje v jednom zařízení uzamčeném v režimu jedné aplikace. Toto omezení existuje, protože zařízení nemůže přepnout na jinou aplikaci, aby bylo možné dokončit druhý faktor ověřování. Proto pokud chcete vícefaktorové ověřování na jednom zařízení v režimu aplikace, druhý faktor musí být na jiném zařízení.
 
-    Tato funkce je podporována pouze pro iOS 11.3.1 a novější.
+    Tato funkce je podporované jenom pro iOS 11.3.1 a novější.
 
    ![Snímek obrazovky režimu jedné aplikace](./media/device-enrollment-program-enroll-ios/single-app-mode.png)
 
@@ -223,12 +223,12 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
     | <strong>Důvěrnost</strong> | Zobrazit obrazovku ochrany osobních údajů uživateli. |
     | <strong>Migrace pro Android</strong> | Poskytněte uživateli možnost migrovat datum ze zařízení s Androidem. |
     | <strong>iMessage a FaceTime</strong> | Poskytněte uživateli možnost nastavit iMessage a FaceTime. |
-    | <strong>Registrace</strong> | Zobrazuje informační obrazovky pro vzdělávání uživatelů, jako je například titulní stránka a multitasking a řídicí centrum. |
+    | <strong>Připojování</strong> | Zobrazuje informační obrazovky pro vzdělávání uživatelů, jako je například titulní stránka a multitasking a řídicí centrum. |
     | <strong>Sledovat migraci</strong> | Poskytněte uživateli možnost migrovat data ze sledovacího zařízení. |
     | <strong>Čas obrazovky</strong> | Zobrazí obrazovku čas obrazovky. |
     | <strong>Aktualizace softwaru</strong> | Zobrazte povinnou obrazovku aktualizace softwaru. |
     | <strong>Nastavení SIM</strong> | Poskytněte uživateli možnost Přidat plán pro mobilní síť. |
-    | <strong>Příznaky</strong> | Zobrazit obrazovku vzhled pro uživatele |
+    | <strong>Vzhled</strong> | Zobrazit obrazovku vzhled pro uživatele |
     | <strong>Jazyk Express</strong>| Zobrazit obrazovku jazyka Express pro uživatele |
     | <strong>Preferovaný jazyk</strong> | Poskytněte uživateli možnost zvolit si **preferovaný jazyk**. |
     | <strong>Migrace zařízení do zařízení</strong> | Poskytněte uživateli možnost migrovat data ze starého zařízení do tohoto zařízení.|

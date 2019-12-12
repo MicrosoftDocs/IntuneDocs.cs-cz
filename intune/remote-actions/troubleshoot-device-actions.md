@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96f6dc3d1a8f8589395cf49b3bb934adadf437a4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 239dd8630eb361da8609e3a34eb2c9346a64dab0
+ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508511"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74907181"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Řešení potíží s akcemi zařízení v Intune
 
@@ -32,7 +32,7 @@ Microsoft Intune má mnoho akcí, které vám pomůžou se spravovanými zaříz
 ## <a name="bypass-activation-lock-action"></a>Akce obejít Zámek aktivace
 
 ### <a name="i-clicked-the-bypass-activation-lock-action-in-the-portal-but-nothing-happened-on-the-device"></a>Na portálu jsem kliknul na akci vynechat Zámek aktivace, ale na zařízení nic neproběhlo.
-Toto je očekávané. Po zahájení akce obejití Zámek aktivace se službě Intune požádalo o aktualizovaný kód od společnosti Apple. Po zobrazení zařízení na obrazovce Zámek aktivace ručně zadáte kód do pole heslo. Tento kód je platný jenom po dobu 15 dnů, takže nezapomeňte kliknout na akci a zkopírovat kód před tím, než vydáte vymazání.
+Toto chování se očekává. Po zahájení akce obejití Zámek aktivace se službě Intune požádalo o aktualizovaný kód od společnosti Apple. Po zobrazení zařízení na obrazovce Zámek aktivace ručně zadáte kód do pole heslo. Tento kód je platný jenom po dobu 15 dnů, takže nezapomeňte kliknout na akci a zkopírovat kód před tím, než vydáte vymazání.
 
 ### <a name="why-dont-i-see-the-bypass-activation-lock-code-in-the-hardware-overview-blade-of-my-ios-device"></a>Proč se mi nezobrazuje kód pro obejití Zámek aktivace v okně Přehled hardwaru zařízení s iOS?
 K nejpravděpodobnějším důvodům patří:
@@ -54,11 +54,11 @@ Ne. A nemusíte zadávat pomlčky.
 ## <a name="remove-devices-action"></a>Akce odebrání zařízení
 
 ### <a name="how-do-i-tell-who-started-a-retirewipe"></a>Návody informovat, kdo zahájil vyřazení/vymazání?
-V **Intune** > **zařízení** > **Akce zařízení** > Ověřte sloupce **iniciované ve** sloupci.
+V centru pro [správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)přejdete do části **Správa tenanta** > **protokoly auditu** > Zkontrolujte sloupce **iniciované ve** sloupci.
 Pokud položku nevidíte, nejpravděpodobnější osoba, která iniciovala tuto akci, je uživatel tohoto zařízení. Pravděpodobně použili Portál společnosti aplikaci nebo portal.manage.microsoft.com.
 
 ### <a name="why-wasnt-my-application-uninstalled-after-using-retire"></a>Proč se mi po použití vyřazení nenainstalovala moje aplikace?
-Protože není považována za spravovanou aplikaci. V tomto kontextu je spravovaná aplikace aplikace, která byla nainstalována pomocí služby Intune. To zahrnuje:
+Protože není považována za spravovanou aplikaci. V tomto kontextu je spravovaná aplikace aplikace, která byla nainstalována pomocí služby Intune. Patří mezi ně:
 - Aplikace se nasadila jako povinná.
 - Aplikace byla nasazená jako dostupná a pak koncovým uživatelem nainstalovaná v aplikaci Portál společnosti.
 
@@ -69,7 +69,7 @@ Toto je očekávané chování. Google neumožňuje obnovení továrního nastav
 Protože vyřazení zařízení z provozu neodvolává přístupové tokeny. Pomocí zásad podmíněného přístupu můžete zmírnit tuto podmínku.
 
 ### <a name="how-can-i-monitor-a-retirewipe-action-after-it-was-issued"></a>Jak můžu monitorovat akci vyřazení/vymazání po jejím vydání?
-V **Intune** > **zařízení** > **Akce zařízení**.
+V centru pro [správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)přejdete do části **Správa tenanta** > **protokoly auditu**.
 
 ### <a name="why-do-wipes-sometimes-show-as-pending-indefinitely"></a>Proč se vymazání někdy zobrazuje na neomezenou dobu?
 Zařízení před zahájením resetování vždy hlásí svůj stav zpět do služby Intune. Proto se akce zobrazí jako čeká na vyřízení. Pokud jste ověřili, že se akce úspěšně provedla, odstraňte zařízení ze služby.

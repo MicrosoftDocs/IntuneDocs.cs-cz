@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f0e2e2101706b9b9afa77553244a438a2299903b
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73414026"
 ---
 # <a name="common-ways-to-use-microsoft-intune"></a>Běžné způsoby použití Microsoft Intune
@@ -53,13 +53,13 @@ V takových případech je možné k podnikovým datům získat přístup jedin�
 
 Ochrana podnikových dat (e-mailů, dokumentů, rychlých zpráv, kontaktů) v Office 365 je navržena tak, abyste ji mohli co nejjednodušeji nastavit a vaše uživatele nijak neomezovala v práci.
 
-Intune a Microsoft Enterprise Mobility + Security poskytují jedinečné integrované řešení podmíněného přístupu, které nemá přístup k datům Office 365 bez uživatelů, aplikací nebo zařízení, pokud nesplňují požadavky na dodržování předpisů vaší společnosti (provedené [ Multi-Factor Authentication](../enrollment/multi-factor-authentication.md), zaregistrované v Intune, pomocí spravované aplikace, podporované verze operačního systému, kódu PIN zařízení, nízkých uživatelských rizikových profilů atd.)
+Intune a Microsoft Enterprise Mobility + Security poskytují jedinečné integrované řešení podmíněného přístupu, které nesplňuje žádné uživatele, aplikace nebo zařízení k datům Office 365, pokud nesplňují požadavky vaší společnosti na dodržování předpisů (provedlo se [vícefaktorové ověřování](../enrollment/multi-factor-authentication.md), zaregistrované v Intune, s využitím spravované aplikace, podporované verze operačního systému, PIN kód zařízení, profil nízkého uživatelského rizika atd.).
 
 Mobilní aplikace Office v příslušných obchodech s aplikacemi jsou připravené na vynucování zásad zabránění úniku dat, které můžete nakonfigurovat přes Intune. To vám umožňuje chránit data před sdílením s aplikacemi (třeba s nativními e-mailovými aplikacemi) a umístěními úložiště (třeba Dropboxem), která nespravuje IT. Tato funkce je integrovaná v Office 365 a EMS. Tuto výhodu získáte bez nutnosti nasazovat další infrastrukturu.
 
 Běžnou praxí při nasazování Office 365 je vyžadovat, aby se zařízení registrovala do systému správy, pokud je nutné jejich kompletní nastavení včetně konfigurací podnikových aplikací, certifikátů, Wi-Fi, VPN, což je běžný scénář pro zařízení ve vlastnictví společnosti.  
 
-Pokud ale uživatel potřebuje přístup k firemnímu e-mailu a dokumentům, což často platí pro zařízení v osobním vlastnictví, můžete vyžadovat, aby uživatel používal mobilní aplikace Office (na které jste nastavili [Zásady ochrany aplikací](../apps/app-protection-policies.md) a přeskočíte registraci. zařízení zcela.  
+Pokud ale uživatel potřebuje přístup k firemnímu e-mailu a dokumentům, což často platí pro zařízení v osobním vlastnictví, můžete vyžadovat, aby uživatel používal mobilní aplikace Office (na které jste použili [Zásady ochrany aplikací](../apps/app-protection-policies.md) , a pokud chcete zařízení úplně zaregistrovat, přeskočte.  
 
 V každém případě budou data Office 365 zabezpečena zásadami, které jste definovali.
 

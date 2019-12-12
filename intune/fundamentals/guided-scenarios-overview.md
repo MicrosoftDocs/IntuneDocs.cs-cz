@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 460cabead711e6fa4559bcec39e556448cdf2237
-ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
+ms.openlocfilehash: ebb17324355fff9631ef74a76388ef0ab797d437
+ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73635366"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74899142"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Přehled scénářů s asistencí pro Intune 
 
@@ -33,7 +33,7 @@ Scénáře s asistencí nepatří mezi běžné pracovní postupy Intune o jiný
 
 ## <a name="types-of-guided-scenarios"></a>Typy scénářů s průvodcem 
 
-V zájmu jednoduchosti vynechává všechny scénáře s asistencí složité funkce oboru, jako jsou například značky oboru <link>, skupiny vyloučení a přiřazení virtuálních skupin <link>. Všechny prostředky vytvořené ve scénáři s asistencí zdědí všechny značky oboru správce, který dokončí scénář. Některé scénáře nabízejí určitou úroveň přizpůsobení pro běžné nastavení, které pokrývá úzce související scénáře. Tyto scénáře, přiřazení skupiny podpory pouze pro skupiny zahrnutí. U dalších scénářů s asistencí celý scénář garantuje jednotné prostředí tím, že nabízí žádné přizpůsobení a automaticky vygeneruje novou skupinu pro příjem všech přiřazení. Až se průvodce dokončí, budete moct používat složitější přiřazení přímo prostřednictvím stávajících zásad, úloh aplikací a profilů.  
+V zájmu jednoduchosti vynechává všechny scénáře s asistencí složité funkce oboru, například značky oboru, skupiny vyloučení a přiřazení virtuálních skupin. Všechny prostředky vytvořené ve scénáři s asistencí zdědí všechny značky oboru správce, který dokončí scénář. Některé scénáře nabízejí určitou úroveň přizpůsobení pro běžné nastavení, které pokrývá úzce související scénáře. Tyto scénáře, přiřazení skupiny podpory pouze pro skupiny zahrnutí. U dalších scénářů s asistencí celý scénář garantuje jednotné prostředí tím, že nabízí žádné přizpůsobení a automaticky vygeneruje novou skupinu pro příjem všech přiřazení. Až se průvodce dokončí, budete moct používat složitější přiřazení přímo prostřednictvím stávajících zásad, úloh aplikací a profilů.  
 
 Následující scénáře jsou vedeny: 
 - Nasazení Microsoft Edge pro mobilní zařízení 
@@ -60,7 +60,7 @@ Dalším krokem je nasazení scénáře. Nasazení scénáře vytvoří a ulož�
 > Seznam uvedený na konci scénáře s asistencí není uložen a je možné jej zobrazit pouze v případě, že je otevřený scénář s asistencí.  
 Pokud při nasazení scénáře dojde k chybě, všechny změny se vrátí. 
 
-### <a name="editing"></a>Upravuje 
+### <a name="editing"></a>Úpravy 
 
 Scénáře s asistencí nelze použít pro úpravu existujících prostředků. Po vytvoření se musí všechny prostředky, skupiny a přiřazení upravovat pomocí stávajících úloh.
 
@@ -72,7 +72,7 @@ Scénáře s asistencí nelze použít k monitorování existujících prostřed
 
 Scénáře s asistencí nelze použít k vyřazení existujících prostředků Kromě automatického vyčištění během chyby při počátečním nasazení. Po vytvoření musí být všechny prostředky, skupiny a přiřazení vyřazeny pomocí stávajících úloh. 
 
-### <a name="updating"></a>Doplnění
+### <a name="updating"></a>Aktualizace
 
 V době, kdy se vyvíjí technologie, může Intune čas od času aktualizovat scénář s asistencí pro zlepšení uživatelského prostředí, zabezpečení nebo dalších aspektů scénáře. Tato aktualizace bude mít vliv jenom na nová nasazení vytvořená ve scénáři s asistencí. Intune nebude aktualizovat existující prostředky dřív vygenerované scénářem s asistencí, aby odpovídaly novým osvědčeným postupům nebo doporučením.  
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8d7a5f67dfd8f7256559cb54d873ed48205ad751
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72490426"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Připojení k datovému skladu pomocí Power BI
@@ -80,7 +80,7 @@ S klientem ověřeným v Azure AD se adresa URL pro OData připojí ke koncovém
 3. V okně vytváření sestav načtěte adresu URL vlastního kanálu, například:<br>
     `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
 4. Otevřete aplikaci **Power BI Desktop**.
-5. Vyberte **soubor** > **načíst data**. Vyberte **Datový kanál OData**.
+5. Vyberte **soubor** > **získat data**. Vyberte **Datový kanál OData**.
 6. Zvolte **Základní**.
 7. Do pole adresy URL zadejte nebo vložte **adresu URL pro OData**.
 8. Vyberte **OK**.
@@ -88,7 +88,7 @@ S klientem ověřeným v Azure AD se adresa URL pro OData připojí ke koncovém
     1. Vyberte **Účet organizace**.  
     2. Zadejte své uživatelské jméno a heslo.  
     3. Vyberte **Přihlásit se**.  
-    4. Vyberte **připojit**.  
+    4. Vyberte **Connect** (Připojit).  
 10. Vyberte **Načíst**.
 
 ## <a name="next-steps"></a>Další kroky

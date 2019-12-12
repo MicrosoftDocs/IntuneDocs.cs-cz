@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: cdc849405b7404203faa6e86d3fed1ea8e35ec43
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73414635"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Správa přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune
@@ -40,7 +40,7 @@ Pomocí zásad ochrany aplikací se službou pro **správu** systému iOS může
 
 - **Zařízení nespravovaná žádným řešením MDM:** Nastavení zásad ochrany aplikací můžete nastavit tak, abyste mohli řídit sdílení dat s jinými aplikacemi prostřednictvím rozšíření *otevřít* nebo *sdílet*.  Uděláte to tak, že nakonfigurujete nastavení **Odeslat organizační data na jiné aplikace** do **aplikací spravovaných podle zásad s hodnotou filtrování otevřít v/sdílet** .  Chování funkce *otevřít v/sdílet* v *aplikaci spravované zásadou* prezentuje jenom jiné *aplikace spravované zásadou* jako možnosti pro sdílení. 
 
-- **Zařízení spravovaná řešeními MDM**: u zařízení zaregistrovaných v řešení MDM pro Intune nebo jiných výrobců se sdílení dat mezi aplikacemi se zásadami ochrany aplikací a dalšími spravovanými aplikacemi pro iOS nasazenými prostřednictvím MDM řídí zásadami aplikací Intune a s **otevřenými iOS. funkce správy** . Aby se zajistilo, že aplikace nasazené pomocí řešení MDM jsou taky přidružené k zásadám ochrany aplikací Intune, nakonfigurujte nastavení hlavního názvu uživatele (UPN), jak je popsáno v následující části [Konfigurace nastavení hlavního názvu uživatele (UPN)](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). Chcete-li určit, jak chcete povolit přenos dat do jiných aplikací, povolte možnost **Odeslat organizační data do jiných aplikací** a pak zvolte upřednostňovanou úroveň sdílení. Pokud chcete určit, jak chcete aplikaci povolit, aby přijímala data z jiných aplikací, povolte **příjem dat z jiných aplikací** a pak zvolte upřednostňovanou úroveň přijímání dat. Další informace o přijímání a sdílení dat aplikací najdete v tématu [Nastavení přemístění dat](app-protection-policy-settings-ios.md#data-protection).
+- **Zařízení spravovaná řešeními MDM**: u zařízení zaregistrovaných v rámci služby Intune nebo řešení MDM jiných výrobců se sdílení dat mezi aplikacemi se zásadami ochrany aplikací a dalšími spravovanými aplikacemi pro iOS nasazenými prostřednictvím MDM řídí zásadami aplikací Intune a funkcí **pro iOS Open in** . Aby se zajistilo, že aplikace nasazené pomocí řešení MDM jsou taky přidružené k zásadám ochrany aplikací Intune, nakonfigurujte nastavení hlavního názvu uživatele (UPN), jak je popsáno v následující části [Konfigurace nastavení hlavního názvu uživatele (UPN)](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). Chcete-li určit, jak chcete povolit přenos dat do jiných aplikací, povolte možnost **Odeslat organizační data do jiných aplikací** a pak zvolte upřednostňovanou úroveň sdílení. Pokud chcete určit, jak chcete aplikaci povolit, aby přijímala data z jiných aplikací, povolte **příjem dat z jiných aplikací** a pak zvolte upřednostňovanou úroveň přijímání dat. Další informace o přijímání a sdílení dat aplikací najdete v tématu [Nastavení přemístění dat](app-protection-policy-settings-ios.md#data-protection).
 
 ## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>Konfigurace nastavení hlavního názvu uživatele (UPN) pro Microsoft Intune nebo řešení EMM (Enterprise Mobility Management) jiného výrobce
 Konfigurace nastavení hlavního názvu uživatele (UPN) se **vyžaduje** pro zařízení spravovaná pomocí Intune nebo řešení EMM jiného výrobce k identifikaci zaregistrovaného uživatelského účtu. Konfigurace hlavního názvu uživatele (UPN) spolupracuje se zásadami ochrany aplikací, které nasazujete z Intune. Následující postup představuje obecné informace o tom, jak nakonfigurovat nastavení hlavního názvu uživatele (UPN) a výsledné prostředí uživatele:
@@ -81,7 +81,7 @@ Konfigurace nastavení hlavního názvu uživatele (UPN) se **vyžaduje** pro za
    |Správce mobilních zařízení ManageEngine | IntuneMAMUPN | Řetězec | %upn% |
 
 > [!NOTE]  
-> Pokud pro Outlook pro iOS nasadíte zásadu konfigurace aplikace spravovaná zařízení s možností "použití návrháře konfigurace" a povolíte možnost **Povolit pouze pracovní nebo školní účty**, konfigurační klíč IntuneMAMUPN se automaticky nakonfiguruje na pozadí. pro tuto zásadu. Další podrobnosti najdete v části Nejčastější dotazy v [nové aplikaci Outlook pro zásady konfigurace aplikací pro iOS a Android – konfigurace obecné aplikace](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481). 
+> Pokud v případě Outlooku pro iOS nasadíte zásadu konfigurace aplikace spravovaná zařízení s možností "použití návrháře konfigurace" a povolíte možnost **Povolit pouze pracovní nebo školní účty**, konfigurační klíč IntuneMAMUPN se automaticky nakonfiguruje na pozadí zásady. Další podrobnosti najdete v části Nejčastější dotazy v [nové aplikaci Outlook pro zásady konfigurace aplikací pro iOS a Android – konfigurace obecné aplikace](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481). 
 
 
 ### <a name="example-2-end-user-experience"></a>Příklad 2: Činnost koncového uživatele

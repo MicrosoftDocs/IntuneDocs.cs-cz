@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: af1c7d1f9d8236fd95413317acefbe8887d90f47
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72507667"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>Šifrované zařízení, ale aplikace říkají jinak
@@ -32,7 +32,7 @@ Pokud Portál společnosti nebo aplikace Microsoft Intune říká, že vaše za�
 
 ## <a name="add-a-startup-pin"></a>Přidání spouštěcího kódu PIN
 
-Určitá zařízení s Androidem budou vyžadovat vytvoření spouštěcího PIN kódu, který zaručí, že je zařízení zabezpečené. Umístění tohoto nastavení bude v aplikaci **Nastavení** vašeho zařízení. Název a umístění nastavení se může lišit. Například na S7 Samsung Galaxy se toto nastavení označuje jako **zabezpečené spuštění**. Pokud ho chcete povolit a vytvořit heslo, přečtěte si **nastavení** > **zamykací obrazovka a zabezpečení** > **zabezpečené spuštění**.  
+Určitá zařízení s Androidem budou vyžadovat vytvoření spouštěcího PIN kódu, který zaručí, že je zařízení zabezpečené. Umístění tohoto nastavení bude v aplikaci **Nastavení** vašeho zařízení. Název a umístění nastavení se může lišit. Například na S7 Samsung Galaxy se toto nastavení označuje jako **zabezpečené spuštění**. Pokud ho chcete povolit a vytvořit heslo, přečtěte si **nastavení** > **zamykací obrazovce a zabezpečení** > **zabezpečeném spuštění**.  
 
 ## <a name="encrypt-the-entire-device"></a>Zašifrujte celé zařízení.
 

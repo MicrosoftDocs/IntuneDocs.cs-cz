@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 1/14/2019
+ms.date: 12/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 844e93f3a063ae43342d2967cbd544f3ec425c21
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.openlocfilehash: 947472c5e589cb443c9a15d20a732c299cc48b44
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74410152"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992979"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorování zásad dodržování předpisů zařízením v Intune
 
@@ -98,9 +98,8 @@ V grafu **Stav dodržování předpisů pro zařízení** vyberte některý stav
 
 ![Výběr stavu dodržování předpisů](./media/compliance-policy-monitor/select-not-compliant-status.png)
 
-Tato akce otevře okno **dodržování předpisů zařízením** a zobrazí zařízení v grafu **stavu zařízení** . Graf zobrazuje více podrobností o zařízeních v tomto stavu, včetně platformy operačního systému, data posledního vrácení se změnami a dalších. 
-
-![Snímek řídicího panelu s podrobnostmi o zařízeních v příslušném stavu](./media/compliance-policy-monitor/drill-down-details.png)
+Tato akce otevře okno **dodržování předpisů zařízením** a zobrazí zařízení v grafu **stavu zařízení** . Graf zobrazuje více podrobností o zařízeních v tomto stavu, včetně platformy operačního systému, data posledního vrácení se změnami a dalších.
+Obrázek řídicího panelu ![zobrazí další podrobnosti o zařízení v určitém stavu](./media/compliance-policy-monitor/drill-down-details.png)
 
 Pokud chcete zobrazit všechna zařízení vlastněná konkrétním uživatelem, můžete sestavu grafu také filtrovat zadáním jeho e-mailové adresy.
 
@@ -132,7 +131,7 @@ Když tuto dlaždici vyberete, zobrazí se všechna zařízení bez zásad dodr�
 
 - U nastavení zabezpečení **Označit zařízení, která nemají přiřazené žádné zásady dodržování předpisů, jako** je důležité určit zařízení bez zásad dodržování předpisů. Potom jim můžete přiřadit aspoň jednu zásadu dodržování předpisů.
 
-  Nastavení zabezpečení můžete konfigurovat na portálu Intune. Do **zařízení** > **zásady dodržování předpisů** > **nastavení zásad dodržování předpisů**. Potom nastavte možnost **Označit zařízení, která nemají přiřazené žádné zásady dodržování předpisů, jako** na **Vyhovující předpisům**, nebo **Nevyhovující předpisům**. 
+  Nastavení zabezpečení můžete konfigurovat na portálu Intune. Do **zařízení** > **zásady dodržování předpisů** > **nastavení zásad dodržování předpisů**. Potom nastavte možnost **Označit zařízení, která nemají přiřazené žádné zásady dodržování předpisů, jako** na **Vyhovující předpisům**, nebo **Nevyhovující předpisům**.
 
   Další informace najdete v článku o [vylepšeních zabezpečení ve službě Intune](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
 
@@ -140,7 +139,7 @@ Když tuto dlaždici vyberete, zobrazí se všechna zařízení bez zásad dodr�
 
 ### <a name="per-policy-device-compliance"></a>Dodržování předpisů zařízením podle zásad
 
-V grafu **dodržování zásad** se zobrazují zásady a kolik zařízení dodržuje předpisy a nedodržují předpisy. 
+V grafu **dodržování zásad** se zobrazují zásady a kolik zařízení dodržuje předpisy a nedodržují předpisy.
 
 ![Snímek seznamu zásad s počtem zařízení, které je splňují a nesplňují](./media/compliance-policy-monitor/idc-8.png)
 
@@ -149,11 +148,6 @@ V grafu **dodržování zásad** se zobrazují zásady a kolik zařízení dodr�
 Graf **Nastavení dodržování předpisů** zobrazuje všechna nastavení zásad dodržování předpisů zařízením ze všech zásad dodržování předpisů, platformy nastavení zásad a počet zařízení nesplňujících požadavky.
 
 ![Snímek seznamu všech nastavení v různých zásadách](./media/compliance-policy-monitor/idc-10.png)
-
-> [!NOTE]
-> Do zařízení se dá přiřadit zásada a uživatel na tomto zařízení. V některých scénářích se může zařízení synchronizovat, než se uživatel přihlásí, například když se zařízení restartuje. Dodržování předpisů může tento uživatel vyhodnotit a Ukázat tak, že zařízení nedodržuje předpisy. Toto chování může také zobrazit systémový účet jako nevyhovující uživatel.
->
-> Jedná se o známý problém s více uživateli zařízení s Windows 10. Jakékoli změny nebo aktualizace tohoto chování jsou oznámeny ve [vývoji](../fundamentals/in-development.md) a/nebo [co je nového](../fundamentals/whats-new.md).
 
 ## <a name="view-compliance-reports"></a>Zobrazení sestav dodržování předpisů
 
@@ -183,14 +177,15 @@ Tato funkce je zahrnutá v sestavách stavu zařízení:
 2. Vyberte zásadu > **Přehled**. Přiřazení zásad v tomto zobrazení zahrnuje následující stavy:
 
     - **Úspěch**: zásada se použije
-    - **Chyba**: zásadu se nepovedlo použít. Tato zpráva se obvykle zobrazí s chybovým kódem, který odkazuje na vysvětlení. 
+    - **Chyba**: zásadu se nepovedlo použít. Tato zpráva se obvykle zobrazí s chybovým kódem, který odkazuje na vysvětlení.
     - **Konflikt**: pro stejné zařízení se aplikují dvě nastavení a Intune ho nedokáže rozřadit do konfliktu. Správce by měl provést kontrolu.
-    - **Čeká na vyřízení**: zařízení ještě není zaregistrované v Intune, aby bylo možné tyto zásady přijmout. 
-    - **Nedá se použít**: zařízení nemůže tuto zásadu přijmout. Zásada například aktualizuje nastavení pro iOS 11.1, ale zařízení používá iOS 10. 
+    - **Čeká na vyřízení**: zařízení ještě není zaregistrované v Intune, aby bylo možné tyto zásady přijmout.
+    - **Nedá se použít**: zařízení nemůže tuto zásadu přijmout. Zásada například aktualizuje nastavení pro iOS 11.1, ale zařízení používá iOS 10.
 
 3. Pokud chcete zobrazit podrobnosti o zařízeních používajících tyto zásady, vyberte některý stav. Vyberte například **Úspěšné**. V dalším okně se zobrazí podrobnosti o konkrétním zařízení včetně jeho názvu a stavu nasazení.
 
 ## <a name="how-intune-resolves-policy-conflicts"></a>Způsob řešení konfliktů zásad v Intune
+
 Konflikty zásad můžou vzniknout, když se na zařízení použije více zásad Intune. Pokud se nastavení zásad překrývají, vyřeší Intune všechny konflikty s použitím následujících pravidel:
 
 - Pokud konfliktní nastavení pocházejí ze zásad konfigurace a dodržování předpisů služby Intune, bude mít nastavení v zásadách dodržování předpisů přednost před nastavením v zásadách konfigurace. Platí to i v situaci, kdy je nastavení v zásadách konfigurace bezpečnější.

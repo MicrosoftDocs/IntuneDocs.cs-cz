@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c344a518890a2309a7805d61a5675e2646029bbb
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74564049"
 ---
 # <a name="configure-google-chrome-for-android-devices-using-intune"></a>Konfigurace Google Chrome pro zařízení s Androidem pomocí Intune 
@@ -69,7 +69,7 @@ Další podrobnosti o přidání spravované aplikace Google Play do Intune najd
 
     Po přidání nastavení konfigurace pomocí návrháře konfigurace budou uvedená v tabulce. 
 
-    ![Společná nastavení](~/apps/media/apps-configure-chrome-android/common-settings.png)
+    ![Obecná nastavení](~/apps/media/apps-configure-chrome-android/common-settings.png)
 
     Výše uvedená nastavení vytvoří záložky a zablokuje přístup ke všem adresám URL s výjimkou `baidu.com`, `yahoo.com`, `chromium.org`a `chrome://`.
 

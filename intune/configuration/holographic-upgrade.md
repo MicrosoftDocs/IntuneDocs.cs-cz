@@ -1,5 +1,5 @@
 ---
-title: Upgrade na Windows Holografick pro firmy
+title: Upgrade na Windows Holographic for Business
 titleSuffix: Microsoft Intune
 description: Přečtěte si, jak upgradovat v zařízení software Windows Holographic na Windows Holographic for Business.
 keywords: ''
@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6342ed23f67c37c2f5084e58594294d826a28e40
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72506717"
 ---
 # <a name="upgrade-devices-running-windows-holographic-to-windows-holographic-for-business"></a>Upgrade zařízení se softwarem Windows Holographic na Windows Holographic for Business
@@ -33,7 +33,7 @@ Další informace o této funkci najdete v tématu [upgrade edice Windows 10 neb
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte profil konfigurace zařízení](edition-upgrade-configure-windows-10.md#create-the-profile).
+[Vytvořit profil konfigurace zařízení](edition-upgrade-configure-windows-10.md#create-the-profile).
 
 ## <a name="edition-upgrade"></a>Upgrade edice
 

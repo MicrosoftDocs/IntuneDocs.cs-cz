@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c4d0772f9a0afce0607d0193bfb82ea6bd22709d
-ms.sourcegitcommit: d2d18eef64bcf16eec1a48fcb67f1362537c0245
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/02/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73445327"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Použití odvozených přihlašovacích údajů v Microsoft Intune
@@ -160,7 +160,7 @@ Vyhněte se vyžadování použití odvozeného pověření pro přístup k proc
 
 Před vytvořením zásad, které vyžadují použití odvozených přihlašovacích údajů, nastavte vystavitele přihlašovacích údajů v konzole Intune. Odvozený Vystavitel přihlašovacích údajů je nastavení v rámci tenanta. Klienti podporují pouze jednoho vystavitele najednou.
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a použijte **konfiguraci zařízení**  > **odvozené přihlašovací údaje**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a použijte **konfiguraci zařízení** > **odvozené přihlašovací údaje**.
 
    ![Konfigurace odvozených přihlašovacích údajů v konzole](./media/derived-credentials/configure-provider.png)
 
@@ -203,8 +203,8 @@ Kromě nasazení aplikace v Intune nakonfigurujte síť VPN Intune na aplikaci p
 
 Můžete zadat **odvozená pověření** pro následující typy profilů a účely:
 
-- [Vyrovnání](#use-derived-credentials-for-app-authentication)
-- [Elektron](../configuration/email-settings-ios.md)
+- [Aplikace](#use-derived-credentials-for-app-authentication)
+- [E-mail](../configuration/email-settings-ios.md)
 - [VPN](../configuration/vpn-settings-ios.md)
 - [Podepisování a šifrování S/MIME](certificates-s-mime-encryption-sign.md)
 - [Wi-Fi](../configuration/wi-fi-settings-ios.md)
@@ -218,7 +218,7 @@ Můžete zadat **odvozená pověření** pro následující typy profilů a úč
 
 Použijte odvozená pověření pro ověřování pomocí certifikátů u webů a aplikací. Pokud chcete zajistit odvozenou přihlašovací údaje k ověřování aplikací, proveďte v konzole Intune následující kroky:  
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a pokračujte na **Konfigurace zařízení**  > **profily** a vyberte **vytvořit profil**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a pokračujte na **Konfigurace zařízení** > **profily** a vyberte **vytvořit profil**.
 
 2. Do pole **název**zadejte popisný název profilu.
 
@@ -252,7 +252,7 @@ Po změně vystavitele se uživatelům zobrazí výzva, aby od nového vystavite
 > [!IMPORTANT]  
 > Pokud odstraníte vystavitele a ihned znovu nakonfigurujete téhož vystavitele, musíte pořád aktualizovat profily a zařízení, aby se použily odvozené přihlašovací údaje od tohoto vystavitele. Odvozené přihlašovací údaje, které byly získány před odstraněním vystavitele, již nejsou platné.
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a použijte **konfiguraci zařízení**  > **odvozené přihlašovací údaje**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a použijte **konfiguraci zařízení** > **odvozené přihlašovací údaje**.
 
 2. Vyberte **Odstranit** pro odebrání aktuálního odvozeného vystavitele přihlašovacích údajů.
 

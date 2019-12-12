@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: bb1538d484590a19eb7525a1451b5082ebab245d
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72506043"
 ---
 # <a name="unenroll-your-android-device-from-management"></a>Zrušení správy registrovaného zařízení s Androidem  
@@ -59,7 +59,7 @@ Postup odebrání všech dat, která do zařízení uložila aplikace Portál sp
 
 Portál společnosti je aplikace pro správu zařízení. Nedá se odinstalovat, dokud zrušíte registraci zařízení od jeho správy. Jakmile registraci zrušíte, klepněte na ikonu aplikace Portál společnosti a podržte ji, dokud se nezobrazí **Odinstalovat**. Klepněte na **Odinstalovat** a aplikaci ze zařízení odeberte.  
 
-Případně klepněte na **nastavení** > **aplikace** > **portál společnosti** **odinstalaci** > .  
+Případně klepněte na **nastavení** > **aplikace** > **portál společnosti** > **odinstalovat**.  
 
 ### <a name="remove-the-company-portal-app-as-a-device-administrator"></a>Odebrání aplikace Portál společnosti jako správce zařízení
 
@@ -76,7 +76,7 @@ Tady je postup, jak zakázat Portál společnosti jako správce zařízení. Sku
 
 **Možnost 2**:
 
-1. Vyberte **nastavení** > **zamykací obrazovka a zabezpečení** > **Další nastavení zabezpečení** > **aplikace pro správu zařízení**.
+1. Vyberte **nastavení** > **zamykací obrazovce a zabezpečení** > **Další nastavení zabezpečení** > **aplikace pro správu zařízení**.
 2. Zrušte zaškrtnutí **portál společnosti** výběru.
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

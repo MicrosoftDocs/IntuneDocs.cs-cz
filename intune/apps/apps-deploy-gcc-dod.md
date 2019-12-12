@@ -19,15 +19,15 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8a6c430ab15c40166e8c3afbccd6fcc7c2c5976d
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72507270"
 ---
 # <a name="deploying-apps-using-intune-on-the-gcc-high-and-dod-environments"></a>Nasazení aplikací pomocí Intune pro prostředí RSZ s vysokým a DoD 
 
-Microsoft Intune je můžou používat Správci klienta k distribuci aplikací do jejich zaměstnanců. Pracovní síly jsou zaměstnanci společnosti, uživatelé aplikací. V prostředích služby Intune s vysokým nebo DoD. je možné nasadit spoustu typů aplikací. Pokud správce potřebuje nahrát a distribuovat aplikaci pro Windows, která je určená pro skupinu s vysokou nebo oslavou, kterou vytvořili dodavatelé třetích stran, nebo jako offline aplikaci staženou z [Microsoft Store pro firmy](https://businessstore.microsoft.com/store), může správce zvolit Distribuujte ho jako [obchodní aplikaci](apps-add.md#app-types-in-microsoft-intune).  
+Microsoft Intune je můžou používat Správci klienta k distribuci aplikací do jejich zaměstnanců. Pracovní síly jsou zaměstnanci společnosti, uživatelé aplikací. V prostředích služby Intune s vysokým nebo DoD. je možné nasadit spoustu typů aplikací. Pokud správce potřebuje nahrát a distribuovat aplikaci pro Windows, která je určená pro skupinu s vysokou nebo oslavou na základě vlastního vlastnictví, kterou vytvořili dodavatelé třetích stran, nebo jako offline aplikaci staženou z [Microsoft Store pro firmy](https://businessstore.microsoft.com/store), může ji správce rozhodnout distribuovat jako [obchodní aplikaci](apps-add.md#app-types-in-microsoft-intune).  
 
 > [!NOTE]
 > V případě komerčních prostředí může správce tenanta synchronizovat své úložiště pro firmy s Intune, ale pro prostředí RSZ High a DoD není tato služba k dispozici. Správci v této situaci musí aplikaci nasadit nahrajte přímo do Intune.  
@@ -41,10 +41,10 @@ Pokud chcete přidat obchodní aplikaci, která je určená pro prostředí RSZ 
 Pokud potřebujete [stáhnout offline aplikaci licencovanou](https://docs.microsoft.com/microsoft-store/distribute-offline-apps#download-an-offline-licensed-app) z Microsoft Store pro firmy, postupujte podle těchto kroků a stáhněte aplikaci: 
 
 1. Přihlaste se ke [Storu pro firmy](https://businessstore.microsoft.com/).
-2. Vyberte možnost **Spravovat** **Nastavení** > .
+2. Vyberte **spravovat** > **Nastavení**.
 3. V části **možnosti nákupu**nastavte **Zobrazit offline aplikace** na **zapnuto**.
 
-Pokud je v případě, že je k dispozici offline verze, při nákupu pro aplikace, můžete zvolit možnost změnit typ licence na offline. Po získání aplikace ji můžete spravovat tak, že vyberete **spravovat** > **produkty & služby** ve [Storu pro firmy](https://businessstore.microsoft.com/). Navíc můžete stáhnout aplikaci a její závislosti. Pak můžete tuto staženou aplikaci (a její závislosti) nasadit uživatelům pomocí Intune.  
+Pokud je v případě, že je k dispozici offline verze, při nákupu pro aplikace, můžete zvolit možnost změnit typ licence na offline. Po získání aplikace ji můžete spravovat tak, že vyberete **spravovat** > **Products & Services** ve [Storu pro firmy](https://businessstore.microsoft.com/). Navíc můžete stáhnout aplikaci a její závislosti. Pak můžete tuto staženou aplikaci (a její závislosti) nasadit uživatelům pomocí Intune.  
 
 ## <a name="syncing-intune-to-the-store-for-business"></a>Synchronizuje se Intune s Storem pro firmy. 
 

@@ -18,10 +18,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.openlocfilehash: 13d6a2b9cdc8596c7f5cf81218377754e9412be1
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74390353"
 ---
 # <a name="use-device-encryption-with-intune"></a>Použití šifrování zařízení s Intune
@@ -77,7 +77,7 @@ Podrobnosti o nastavení trezoru klíčů, které můžete spravovat pomocí Int
    >
    > Pokud je možnost **Zakázat výzvu při odhlášení** nastavena na hodnotu *není nakonfigurováno*, **počet povolených potlačení** nemůže být *nakonfigurován* nebo mít hodnotu.
    >
-   > Tento problém bude vyřešen v budoucí aktualizaci.
+   > Tento problém opraví budoucí aktualizace.
 
 8. Dokončete konfiguraci dalšího nastavení a potom profil uložte.  
 
@@ -114,7 +114,7 @@ Nakonfigurujte BitLocker při vytváření [profilu konfigurace zařízení](../
 
 6. Dokončete konfiguraci dalšího nastavení a potom profil uložte.
 
-### <a name="manage-bitlocker"></a>Správa nástroje BitLocker
+### <a name="manage-bitlocker"></a>Spravovat nástroj BitLocker
 
 Jakmile Intune zašifruje zařízení s Windows 10 pomocí nástroje BitLocker, můžete zobrazit a načíst klíče pro obnovení nástroje BitLocker při zobrazení [sestavy šifrování](encryption-monitor.md)Intune.
 
@@ -122,7 +122,7 @@ Jakmile Intune zašifruje zařízení s Windows 10 pomocí nástroje BitLocker, 
 
 Pomocí akce zařízení v Intune můžete vzdáleně otočit obnovovací klíč BitLockeru zařízení se systémem Windows 10 verze 1909 nebo novějším.
 
-#### <a name="prerequisites"></a>Předpoklady
+#### <a name="prerequisites"></a>Požadované součásti
 
 Zařízení musí splňovat následující požadavky, aby podporovaly rotaci obnovovacího klíče nástroje BitLocker:
 
@@ -153,5 +153,5 @@ Pomocí sestavy šifrování můžete spravovat:
 
 Zkontrolujte nastavení šifrování, která můžete nakonfigurovat pomocí Intune pro:
 
-- [Zapnut](endpoint-protection-windows-10.md#windows-encryption)
+- [BitLocker](endpoint-protection-windows-10.md#windows-encryption)
 - [FileVault](endpoint-protection-macos.md#filevault)

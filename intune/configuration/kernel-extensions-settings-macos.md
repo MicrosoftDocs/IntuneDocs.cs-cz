@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8632f5b8df0f483de3bb4d06a6823639ba52c604
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72506698"
 ---
 # <a name="macos-device-settings-to-configure-and-use-kernel-extensions-in-intune"></a>nastavení zařízení macOS pro konfiguraci a používání rozšíření jádra v Intune
@@ -58,14 +58,14 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 - **Povolená rozšíření jádra**: pomocí tohoto nastavení můžete povolit specifická rozšíření jádra. Jsou povolená nebo důvěryhodná jenom rozšíření jádra, která zadáte. 
 
-  **Přidejte** identifikátor sady prostředků a identifikátor týmu rozšíření jádra, které chcete načíst. U nepodepsaných starších rozšíření jádra použijte prázdný identifikátor týmu. Můžete přidat více rozšíření jádra. Identifikátor týmu musí být alfanumerický (písmena a číslice) a musí obsahovat 10 znaků. Zadejte například `com.contoso.appname.macos` pro **ID sady**a `ABCDE12345` pro **identifikátor týmu**.
+  **Přidejte** identifikátor sady prostředků a identifikátor týmu rozšíření jádra, které chcete načíst. U nepodepsaných starších rozšíření jádra použijte prázdný identifikátor týmu. Můžete přidat více rozšíření jádra. Identifikátor týmu musí být alfanumerický (písmena a číslice) a musí obsahovat 10 znaků. Zadejte například `com.contoso.appname.macos` pro **ID sady prostředků**a `ABCDE12345` pro **identifikátor týmu**.
 
   > [!TIP]
   > Pokud chcete získat ID sady rozšíření jádra (kext) na zařízení macOS, můžete:
   >
-  > 1. V terminálu spusťte `kextstat | grep -v com.apple` a poznamenejte si výstup. Nainstalujte software nebo KEXT, který chcete. Znovu spusťte `kextstat | grep -v com.apple` a vyhledejte změny.
+  > 1. V terminálu spusťte `kextstat | grep -v com.apple`a poznamenejte si výstup. Nainstalujte software nebo KEXT, který chcete. Znovu spusťte `kextstat | grep -v com.apple` a vyhledejte změny.
   >
-  >    V terminálu `kextstat` Vypíše všechna rozšíření jádra v operačním systému. 
+  >    V terminálu `kextstat` zobrazí seznam všech rozšíření jádra v operačním systému. 
   >
   > 2. V zařízení otevřete seznam vlastností informace (info. plist) pro KEXT. Zobrazí se ID sady prostředků. Každý KEXT má soubor info. plist uložený v rámci. 
 

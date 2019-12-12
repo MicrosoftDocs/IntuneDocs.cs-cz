@@ -6,7 +6,7 @@ keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2019
+ms.date: 12/04/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9740eed3ab727d76a9af4e46642d8279b310fd9
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: a37699542c5a9fe5268541aadc91b4c5d3ab5e9a
+ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72490518"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74899317"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Protokol změn pro rozhraní API datového skladu Intune
 
@@ -38,7 +38,7 @@ _Vydáno v dubnu 2019_
 
 V následující tabulce je uveden seznam nedávných odebraných kolekcí a kolekcí nahrazení v datovém skladu Intune.
 
-|    Kolekce                          |    Mění     |    Další informace                                                                                                                                                                                                                                                                                                                                                                 |
+|    Kolekce                          |    Změnit     |    Další informace                                                                                                                                                                                                                                                                                                                                                                 |
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    mobileAppDeviceUserInstallStatus    |    Odebrané    |    Místo toho použijte [mobileAppInstallStatusCounts](intune-data-warehouse-collections.md#mobileappinstallstatuscounts) .                                                                                                                                                                                                                                                                     |
 |    Entita enrollmenttypes                     |    Odebrané    |    Místo toho použijte [deviceEnrollmentTypes](intune-data-warehouse-collections.md#deviceenrollmenttypes) .                                                                                                                                                                                                                                                                                      |
@@ -68,7 +68,7 @@ V následující tabulce jsou uvedeny staré vlastnosti dříve nalezené v kole
 |    Jailbreak                  |    devicePropertyHistories v kolekci pro jailbreak                             |
 |    meid                        |    vlastnost MEID v kolekci zařízení                                      |
 |    OEM                         |    výrobce v kolekci zařízení                                           |
-|    osName                      |    deviceTypeKey v kolekci zařízení, odkazování na kolekci deviceTypes    |
+|    NázevOperačníhoSystému                      |    deviceTypeKey v kolekci zařízení, odkazování na kolekci deviceTypes    |
 |    phoneNumber                 |    kolekce phoneNumber v zařízeních                                            |
 |    platformType                |    model v kolekci zařízení                                                  |
 |    produkt                     |    deviceTypeKey v kolekci zařízení                                          |
@@ -105,7 +105,7 @@ V následující tabulce jsou uvedeny změny vlastností nalezené v kolekci [de
 |    model                         |    model v kolekci zařízení                                      |
 |    Atribut                      |    operatingSystem v kolekci zařízení                            |
 |    osRevisionNumber              |    kolekce osVersion v zařízeních                                  |
-|    ProcessorArchitecture         |    Odebrané                                                          |
+|    processorArchitecture         |    Odebrané                                                          |
 |    referenceId                   |    azureAdDeviceId v kolekci zařízení                            |
 |    serialNumber                  |    Sériové v kolekci zařízení                               |
 |    workplaceJoinStateKey         |    azureAdRegistered                                                |
@@ -130,7 +130,7 @@ V následující tabulce jsou uvedeny změny vlastností nalezené v kolekci [za
 |    lastPolicyUpdateUtc           |    Odebrané                                                          |
 |    mdmStatusKey                  |    complianceStateKey, odkazování na kolekci complianceStates    |
 |    Atribut                      |    operatingSystem                                                  |
-|    ProcessorArchitecture         |    Odebrané                                                          |
+|    processorArchitecture         |    Odebrané                                                          |
 |    referenceId                   |    azureAdDeviceId                                                  |
 |    workplaceJoinStateKey         |    azureAdRegistered                                                |
 
@@ -145,7 +145,7 @@ V následující tabulce jsou uvedeny změny vlastností nalezené v kolekci [ma
 |    Stará vlastnost       |    Změnit nebo nahradit    |
 |-----------------------|--------------------------|
 |    applicationKey     |    mamApplicationKey     |
-|    ApplicationName    |    mamApplicationName    |
+|    applicationName    |    mamApplicationName    |
 |    applicationId      |    mamApplicationId      |
 
 V následující tabulce jsou uvedeny změny vlastností nalezené v kolekci [mamApplicationInstances](intune-data-warehouse-collections.md#mamapplicationinstances) : 

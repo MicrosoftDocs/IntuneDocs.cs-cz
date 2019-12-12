@@ -17,10 +17,10 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 1d3a2ce9e5a31e989452141a094b70b5e75cf464
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74409954"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurace zařízení s Windows 10 v Intune pomocí směrných plánů zabezpečení
@@ -95,7 +95,7 @@ Mezi běžné úlohy při práci se standardními hodnotami zabezpečení patř�
 - [Odebrání přiřazení standardních hodnot](#remove-a-security-baseline-assignment) – Zjistěte, co se stane, když zastavíte správu nastavení se směrným plánem zabezpečení.
 
 
-### <a name="prerequisites"></a>Předpoklady
+### <a name="prerequisites"></a>Požadované součásti
 
 - Aby bylo možné spravovat směrné plány v Intune, musí mít váš účet předdefinovanou roli [správce zásad a profilů](../fundamentals/role-based-access-control.md#built-in-roles) .
 
@@ -182,7 +182,7 @@ Po uložení se po dokončení převodu směrný plán okamžitě znovu nasadí 
    - **Přijmout změny směrného plánu, ale zachovat existující přizpůsobení nastavení** – Tato možnost zachovává vlastní nastavení, které jste provedli v profilu standardních hodnot, a aplikuje je na novou verzi, kterou jste vybrali k použití.
    - **Přijmout změny směrného plánu a zahodit existující přizpůsobení nastavení** – Tato možnost přepíše původní profil úplně. Aktualizovaný profil bude používat výchozí hodnoty pro všechna nastavení.
 
-7. Vyberte **Odeslat**. Profil se aktualizuje na vybranou základní verzi a po dokončení převodu se směrný plán hned znovu nasadí do přiřazených skupin.
+7. Vyberte **odeslat**. Profil se aktualizuje na vybranou základní verzi a po dokončení převodu se směrný plán hned znovu nasadí do přiřazených skupin.
 
 ### <a name="remove-a-security-baseline-assignment"></a>Odebrání přiřazení standardních hodnot zabezpečení
 

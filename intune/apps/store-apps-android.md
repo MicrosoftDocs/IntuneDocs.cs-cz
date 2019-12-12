@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ec800064d109cca42878c79ade6777de9b782015
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74563504"
 ---
 # <a name="add-android-store-apps-to-microsoft-intune"></a>Přidání aplikací z obchodu pro Android do Microsoft Intune
@@ -31,7 +31,7 @@ ms.locfileid: "74563504"
 
 Před přiřazením aplikace k zařízení nebo skupině uživatelů je nejprve potřeba danou aplikaci přidat do Microsoft Intune. 
 
-## <a name="add-an-app"></a>Přidání aplikace
+## <a name="add-an-app"></a>Přidat aplikaci
 
 Aplikaci z obchodu pro Android můžete přidat do Intune z portálu Azure Portal následujícím postupem:
 

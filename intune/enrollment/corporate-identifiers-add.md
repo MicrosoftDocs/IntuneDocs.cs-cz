@@ -1,7 +1,7 @@
 ---
 title: Přidání podnikových identifikátorů do Intune
 titleSuffix: ''
-description: Přečtěte si, jak přidat podnikové identifikátory (metodu registrace, IMEI a sériová čísla) do Microsoft Intune.
+description: Zjistěte, jak přidat podnikové identifikátory (způsob registrace, IMEI a sériová čísla) do Microsoft Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3d98a0e3c5bd2a5c11c9aa72d791306dfbe6578
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 4e1ee8ae54d81a050f3c8983269f40e8f61b5e75
+ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503296"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955469"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifikace zařízení jako vlastněných společností
 
@@ -85,9 +85,7 @@ V textovém editoru vypadá soubor .csv takhle:
 
 ### <a name="upload-a-csv-list-of-corporate-identifiers"></a>Nahrání seznamu podnikových identifikátorů ve formátu .csv
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), vyberte **registrace zařízení** > **identifikátory podnikových zařízení** > **Přidat** **soubor CSV pro nahrávání** > .
-
-   ![Pracovní prostor s identifikátory podnikových zařízení a zvýrazněným tlačítkem Přidat](./media/corporate-identifiers-add/add-corp-id.png)
+1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), vyberte **zařízení** > **registrace zařízení** > **identifikátory podnikových zařízení** > **přidejte** > **nahrát soubor CSV**.
 
 2. V okně **Přidat identifikátory** zadejte typ identifikátoru: **IMEI** nebo **Sériové**.
 
@@ -97,7 +95,7 @@ V textovém editoru vypadá soubor .csv takhle:
 
 ## <a name="manually-enter-corporate-identifiers"></a>Ruční zadání podnikových identifikátorů
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), vyberte **registrace zařízení** > **identifikátory podnikových zařízení** > **Přidat** > **Zadejte ručně**.
+1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), vyberte **zařízení** > **registrace zařízení** > **identifikátory podnikových zařízení** > **přidejte** > **zadat ručně**.
 
 2. V okně **Přidat identifikátory** zadejte typ identifikátoru: **IMEI** nebo **Sériové**.
 
@@ -111,7 +109,7 @@ Importovaná zařízení nemusí být nutně zaregistrovaná. Zařízení můžo
 
 ## <a name="delete-corporate-identifiers"></a>Odstranění podnikových identifikátorů
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), vyberte **registrace zařízení** > **identifikátory podnikových zařízení**.
+1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a vyberte **zařízení** > **registrace zařízení** > **identifikátory podnikových zařízení**.
 2. Vyberte identifikátory zařízení, které chcete odstranit, a zvolte **Odstranit**.
 3. Potvrďte odstranění.
 
@@ -125,7 +123,7 @@ Podrobné specifikace o číslech IMEI najdete na stránce [3GGPP TS 23.003](ht
 U každého záznamu zařízení v Intune se ve vlastnostech zařízení zobrazuje **Vlastnictví**. Jako správce můžete zařízení označit jako **Osobní** nebo **Firemní**. Když se typ vlastnictví zařízení změní z osobní na firemní, Intune odstraní všechny informace o aplikaci dříve shromážděné z tohoto zařízení do 7 dnů. V případě potřeby bude Intune také odstraňovat telefonní číslo na záznamu. 
 
 **Vlastnictví zařízení změníte takto:**
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), otevřete **zařízení a vyberte zařízení.**
+1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), vyberte **zařízení** > **všechna zařízení** > vyberte zařízení.
 2. Zvolte **Vlastnosti**.
 3. Určete **Vlastnictví zařízení** jako **Osobní** nebo **Firemní**.
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d77a275e3a48845f56b22ecc21b75f664ea619c5
-ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74691758"
 ---
 # <a name="set-up-ios-and-ipados-user-enrollment-preview"></a>Nastavení registrace uživatele pro iOS a iPadOS (Preview)
@@ -49,14 +49,14 @@ Registrační profil definuje nastavení použité pro skupinu zařízení běhe
 
 2. Na stránce **základy** zadejte **název** a **Popis** profilu pro účely správy. Uživatelé tyto podrobnosti nevidí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [dynamických skupinách Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
 
-    ![Stránka základy](./media/ios-user-enrollment/basics-page.png)
+    ![Základní informace o stránce](./media/ios-user-enrollment/basics-page.png)
 
 
 3. Vyberte **Další**.
 
 4. Na stránce **Nastavení** se můžete rozhodnout, že uživatelům dáte možnost výběru typu zápisu, který budou používat. Alternativně můžete nastavit výchozí nastavení.
 
-    ![Stránka nastavení](./media/ios-user-enrollment/settings-page.png)
+    ![Stránka Nastavení](./media/ios-user-enrollment/settings-page.png)
 
     - Pokud chcete, aby všichni uživatelé v tomto profilu používali zápis uživatele, postupujte takto:
         1. Pokud **chcete, aby uživatel vybral typ zařízení**, vyberte **nenakonfigurované**.

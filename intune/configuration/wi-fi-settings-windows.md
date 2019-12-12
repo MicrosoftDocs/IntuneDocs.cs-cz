@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 68601d8ccf06cebf668c75857d23536e2c9e6553
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72503520"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Přidání nastavení Wi-Fi pro zařízení s Windows 10 a novější verzí v Intune
@@ -55,7 +55,7 @@ Těmito nastaveními se zabývá tento článek.
   - **Pevné**: Tuto možnost použijte, pokud je síť nakonfigurovaná s pevně stanoveným limitem síťového provozu. Po dosažení limitu se přístup k síti zakáže.
   - **Proměnná**: Tuto možnost použijte, pokud se síťový provoz účtuje po bajtech (cena za bajt).
 
-- **Typ zabezpečení bezdrátové sítě**: Zadejte protokol zabezpečení, který bude ověřovat zařízení v síti. Máte tyto možnosti:
+- **Typ zabezpečení bezdrátové sítě**: Zadejte protokol zabezpečení, který bude ověřovat zařízení v síti. Možnosti:
   - **Otevřené (bez zabezpečení):** tuto možnost použijte jenom v případě, že síť není zabezpečená.
   - **WPA/WPA2-osobní**: Jedná se o možnost s vyšším zabezpečením, která se obvykle používá pro připojení Wi-Fi. Z důvodu dalšího zvýšení zabezpečení můžete zadat také heslo předsdíleného klíče nebo síťový klíč.
 
@@ -94,7 +94,7 @@ Vyberte **OK** > **Vytvořit** a změny uložte. Profil se vytvoří a zobrazí 
   - **Pevné**: Tuto možnost použijte, pokud je síť nakonfigurovaná s pevně stanoveným limitem síťového provozu. Po dosažení limitu se přístup k síti zakáže.
   - **Proměnná**: Tuto možnost použijte, pokud se síťový provoz účtuje po bajtech.
 
-- **Jednotné přihlašování:** Umožňuje vám nakonfigurovat jednotné přihlašování (SSO), u kterého se přihlašovací údaje k počítači i síti Wi-Fi sdílejí. Máte tyto možnosti:
+- **Jednotné přihlašování:** Umožňuje vám nakonfigurovat jednotné přihlašování (SSO), u kterého se přihlašovací údaje k počítači i síti Wi-Fi sdílejí. Možnosti:
   - **Zakázat:** Jednotné přihlašování se zakáže. Uživatel se musí v síti ověřit zvlášť.
   - **Povolit dříve, než se uživatel přihlásí k zařízení:** Použití jednotného přihlašování k síti těsně předtím, než se uživatel přihlásí
   - **Povolit, až se uživatel přihlásí k zařízení:** Použití jednotného přihlašování k síti hned poté, co se uživatel přihlásil
@@ -163,7 +163,7 @@ Pro libovolné nastavení, které není v Intune k dispozici, můžete exportova
 
 Profil se vytvoří, ale nic nedělá. Dále [tento profil přiřaďte](device-profile-assign.md).
 
-## <a name="more-resources"></a>Další zdroje
+## <a name="more-resources"></a>Další materiály
 
 - Podívejte se na nastavení, která jsou dostupná pro [Windows 8.1](wi-fi-settings-import-windows-8-1.md).
 - [Přehled nastavení Wi-Fi](wi-fi-settings-configure.md), včetně dalších platforem

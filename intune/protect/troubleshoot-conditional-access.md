@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c662de98ffa497c5fbc89ac1b78ed8537ff0d80c
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "71729230"
 ---
 # <a name="troubleshoot-conditional-access"></a>Řešení potíží s podmíněným přístupem
@@ -42,7 +42,7 @@ Aby podmíněný přístup fungoval, musí být splněné následující požada
 
 - Uživatel i zařízení musí vyhovovat přiřazeným zásadám dodržování předpisů Intune.
 
-- Uživateli se standardně musí přiřadit zásady dodržování předpisů pro zařízení. To může záviset na konfiguraci nastavení **označení zařízení bez přiřazených zásad dodržování předpisů,** které se vztahuje na**nastavení zásad dodržování** předpisů pro **zařízení** >  na portálu pro správu Intune.
+- Uživateli se standardně musí přiřadit zásady dodržování předpisů pro zařízení. To může záviset na konfiguraci nastavení **označení zařízení bez přiřazených zásad dodržování předpisů,** které se vztahuje na **nastavení zásad** dodržování předpisů pro **zařízení** > na portálu pro správu Intune.
 
 - Pokud uživatel nepoužívá Outlook, ale nativního poštovního klienta daného zařízení, musí být v zařízení aktivovaný protokol Exchange ActiveSync. K tomu dochází automaticky pro zařízení se systémy iOS, Windows Phone a Android Knox.
 
@@ -93,7 +93,7 @@ Tyto podmínky si můžete prohlédnout u každého zařízení na webu Azure Po
 
 ## <a name="devices-are-noncompliant-but-users-are-not-blocked"></a>Zařízení nedodržují předpisy, ale uživatelé nejsou blokovaní
 
-- U počítačů s Windows podmíněný přístup blokuje jenom nativní e-mailovou aplikaci, Office 2013 s moderním ověřováním nebo Office 2016. Blokování starších verzí aplikace Outlook nebo všech e-mailových aplikací na počítačích s Windows vyžaduje konfigurace zařízení AAD a Active Directory Federation Services (AD FS) (AD FS) podle [nastavení služby SharePoint Online a Exchange Online pro Azure Active Directory podmíněné. Přístup](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication).
+- U počítačů s Windows podmíněný přístup blokuje jenom nativní e-mailovou aplikaci, Office 2013 s moderním ověřováním nebo Office 2016. Blokování starších verzí aplikace Outlook nebo všech e-mailových aplikací na počítačích s Windows vyžaduje konfigurace zařízení AAD a Active Directory Federation Services (AD FS) (AD FS) podle [nastavení služby SharePoint Online a Exchange Online pro Azure Active Directory podmíněný přístup](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication).
 
 - Pokud se zařízení z Intune selektivně vymaže nebo vyřadí, může mu několik hodin po vyřazení nadále zůstat možnost přístupu. Důvodem je to, že Exchange ukládá přístupová práva do mezipaměti po dobu šesti hodin. Zvažte možnost použití jiných způsobů ochrany dat na vyřazených zařízení v tomto scénáři.
 

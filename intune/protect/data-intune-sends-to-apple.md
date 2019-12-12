@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a2f1be7a2457cca7da62883370c9e273168c6a29
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72502439"
 ---
 # <a name="data-intune-sends-to-apple"></a>Data z Intune odesílaná Applu
@@ -40,7 +40,7 @@ Aby mohla služba Microsoft Intune navázat spojení, je napřed nutné pro kaž
 
 Následující tabulka uvádí data, která Microsoft Intune odesílá ze zařízení do povolených služeb Apple. 
 
-| Služba | Data odesílaná Applu | Používá se pro |
+| Služba | Data odesílaná Applu | Používáno pro |
 |---|---| ---|
 | [APNS](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token, PushMagic | Pokud server přijme zařízení, dané zařízení poskytne serveru svůj token zařízení pro nabízená oznámení. Pomocí tohoto tokenu by měl server odesílat nabízené zprávy do daného zařízení. Tato přihlašovací zpráva obsahuje také řetězec PushMagic. Server si musí pamatovat tento řetězec a zahrnout ho do každé nabízené zprávy, kterou odesílá do daného zařízení. |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token serveru | Token zařízení pro nabízená oznámení, který se používá k ověření služby Apple |

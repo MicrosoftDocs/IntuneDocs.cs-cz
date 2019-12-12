@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d2965d6a017d92bd4535a29a2257c0cac5e6deaf
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72506358"
 ---
 # <a name="encrypting-your-android-device"></a>Šifrování zařízení s Androidem
@@ -45,7 +45,7 @@ Pokud Portál společnosti nebo aplikace Microsoft Intune vyzve k zašifrování
     c. Při konfiguraci zámku obrazovky postupujte podle pokynů na obrazovce.  
 
 2. Vraťte se na **zamykací obrazovku a zabezpečení** a vyberte **zabezpečené spuštění**.
-3. Vyberte **vyžadovat PIN kód, když se zařízení zapne** > **OK**.
+3. Vyberte **vyžadovat připnutí, když se zařízení zapne** > **OK**.
 4. Zadejte svůj PIN kód a potvrďte a Zašifrujte své zařízení.
 5. Otevřete Portál společnosti nebo Microsoft Intune aplikaci.
     * Portál společnosti uživatelé: Vyberte zařízení a klepněte na **kontrolovat nastavení zařízení**. 
@@ -54,8 +54,8 @@ Pokud Portál společnosti nebo aplikace Microsoft Intune vyzve k zašifrování
 Zařízení se systémem Android 4,4 a starším nemusí mít možnost **zabezpečeného spuštění** . V takovém případě proveďte následující kroky k zašifrování zařízení.
 
 1. Přejít na **nastavení** > **zabezpečení** > **šifrování zařízení**. Mezi zařízeními s Androidem se liší popisky na obrazovce. Pokud nevidíte možnost **Šifrovat zařízení** , vraťte se změnami:
-    * **Úložiště** > **šifrování úložiště**
-    * @No__t **úložiště**– 1**zamykací obrazovka a zabezpečení** > **Další nastavení zabezpečení** 
+    * **Šifrování** **úložiště > úložiště**
+    * **Úložiště** > **zamykací obrazovce a zabezpečení** > **Další nastavení zabezpečení** 
 
 2. Postupujte podle pokynů na obrazovce. Během šifrování se zařízení může několikrát restartovat.
 3. Otevřete Portál společnosti nebo Microsoft Intune aplikaci.

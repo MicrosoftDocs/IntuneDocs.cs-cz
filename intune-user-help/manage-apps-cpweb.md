@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: edc45fb3ddab43ef77a3f072c5a1a31f8f88c957
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72506108"
 ---
 # <a name="manage-apps-from-the-company-portal-website"></a>Správa aplikací z Portál společnosti webu 
@@ -80,7 +80,7 @@ Pokud chcete zobrazit možnosti filtrování a řazení, vyberte **Upřesnit** .
 * Název vydavatele, vzestupně nebo sestupně abecedy  
 * Datum publikování, nejstarší nebo poslední  
 
-Potřebujete další informace? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Potřebujete další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 ### <a name="available-and-required-apps"></a>Dostupné a požadované aplikace
 Aplikace vám jsou přiřazeny vaší organizací a jsou označené jako dostupné nebo povinné. Stránka **nainstalované aplikace** zobrazuje, které aplikace máte pod sloupcem **Typ přiřazení** . 

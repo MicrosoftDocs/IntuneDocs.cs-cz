@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 170ed2fbf300299796401b10a906d875b6f50bf5
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72490461"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Koncový bod rozhraní API datového skladu Intune
@@ -64,7 +64,7 @@ Nejnovější funkce datového skladu můžete vyzkoušet pomocí beta verze. Po
 
 ## <a name="odata-query-options"></a>Možnosti dotazu OData
 
-Aktuální verze podporuje tyto parametry dotazu OData: `$filter`, `$select`, `$skip,` a `$top`. V `$filter` může být podporován pouze `DateKey` nebo `RowLastModifiedDateTimeUTC`, pokud jsou sloupce použity a další vlastnosti budou aktivovat chybný požadavek.
+Aktuální verze podporuje tyto parametry dotazu OData: `$filter`, `$select`, `$skip,` a `$top`. V `$filter`může být podporován pouze `DateKey` nebo `RowLastModifiedDateTimeUTC`, pokud jsou sloupce použity a další vlastnosti budou aktivovat chybný požadavek.
 
 ## <a name="datekey-range-filters"></a>Filtry rozsahu DateKey
 
@@ -80,8 +80,8 @@ Filtry rozsahu `DateKey` se dají použít k omezení množství dat ke stažen�
 
 |                             Filtr                             |           Optimalizace výkonu           |                                          Description                                          |
 |:--------------------------------------------------------------:|:--------------------------------------------:|:---------------------------------------------------------------------------------------------:|
-|    `maxhistorydays=7`                                            |    Kompletní                                      |    Vrátí data s hodnotou `DateKey` mezi 20180214 a 20180221.                                     |
-|    `$filter=DateKey eq 20180214`                                 |    Kompletní                                      |    Vrátí data s hodnotou `DateKey` rovnající se 20180214.                                                    |
-|    `$filter=DateKey ge 20180214 and DateKey lt 20180221`         |    Kompletní                                      |    Vrátí data s hodnotou `DateKey` mezi 20180214 a 20180220.                                     |
-|    `maxhistorydays=7&$filter=DateKey eq 20180214`                |    Kompletní                                      |    Vrátí data s hodnotou `DateKey` rovnající se 20180214. `maxhistorydays` se ignoruje.                            |
-|    `$filter=RowLastModifiedDateTimeUTC ge 2018-02-21T23:18:51.3277273Z`                                |    Kompletní                                       |    Vrátí data s `RowLastModifiedDateTimeUTC` je větší nebo rovna `2018-02-21T23:18:51.3277273Z`.                             |
+|    `maxhistorydays=7`                                            |    Úplná                                      |    Vrátí data s hodnotou `DateKey` mezi 20180214 a 20180221.                                     |
+|    `$filter=DateKey eq 20180214`                                 |    Úplná                                      |    Vrátí data s hodnotou `DateKey` rovnající se 20180214.                                                    |
+|    `$filter=DateKey ge 20180214 and DateKey lt 20180221`         |    Úplná                                      |    Vrátí data s hodnotou `DateKey` mezi 20180214 a 20180220.                                     |
+|    `maxhistorydays=7&$filter=DateKey eq 20180214`                |    Úplná                                      |    Vrátí data s hodnotou `DateKey` rovnající se 20180214. `maxhistorydays` se ignoruje.                            |
+|    `$filter=RowLastModifiedDateTimeUTC ge 2018-02-21T23:18:51.3277273Z`                                |    Úplná                                       |    Vrácení dat pomocí `RowLastModifiedDateTimeUTC` je větší nebo rovno `2018-02-21T23:18:51.3277273Z`                             |

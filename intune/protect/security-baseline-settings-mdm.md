@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 0d673650a26f3917fa32babba42e5e2054c87e59
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74060026"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Nastavení standardních hodnot zabezpečení MDM pro Intune  
@@ -122,7 +122,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Bit
     **Výchozí**: Ano  
   
 
-## <a name="browser"></a>Browser  
+## <a name="browser"></a>Prohlížeč  
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – prohlížeč](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) .  
 
 - **Vyžadovat filtr SmartScreen pro Microsoft Edge**  
@@ -209,7 +209,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dat
   
   **Výchozí**: Ano  
 
-## <a name="device-guard"></a>Ochrana zařízení  
+## <a name="device-guard"></a>Device Guard  
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard
 ) .  
 
@@ -296,13 +296,13 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
       
     **Výchozí**: 10  
 
-  - **Konec platnosti hesla (dny)**  
+  - **Vypršení platnosti hesla (dny)**  
     Nastavení zásad maximální stáří hesla určuje, jak dlouho (ve dnech) se dá heslo použít, než systém vyžaduje, aby ho uživatel změnil. Můžete nastavit, aby platnost hesla vyprší po uplynutí počtu dní od 1 do 999, nebo můžete zadat, že hesla budou nikdy vypršet nastavením počtu dní na hodnotu 0. Pokud je maximální stáří hesla mezi 1 a 999 dny, minimální stáří hesla musí být kratší než maximální stáří hesla. Pokud je maximální stáří hesla nastavené na 0, minimální stáří hesla může být libovolná hodnota mezi 0 a 998 dny.  
     [Další informace](https://go.microsoft.com/fwlink/?linkid=2067028)  
     
     **Výchozí**: 60  
 
-  - **Vyžadovaný typ hesla**  
+  - **Požadovaný typ hesla**  
     Určuje typ kódu PIN nebo hesla, které se vyžaduje.  
     [Další informace](https://go.microsoft.com/fwlink/?linkid=2067027)  
     
@@ -1370,7 +1370,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – MSS
 
   **Výchozí**: zakázáno
   
-## <a name="power"></a>Vypněte  
+## <a name="power"></a>Napájení  
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – napájení](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power) .  
 
 - **Vyžadovat heslo při probuzení při napájení ze sítě**  
@@ -1522,7 +1522,7 @@ Další informace najdete v tématu [zásady CSP – hledání](https://docs.mic
   
   **Výchozí**: Ano
   
-## <a name="smart-screen"></a>Inteligentní obrazovka  
+## <a name="smart-screen"></a>Smart Screen  
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – filtr](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) .  
 
 - **Zablokovat provádění neověřených souborů**  
@@ -1540,7 +1540,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
 
   **Výchozí**: Ano
   
-## <a name="system"></a>Systém  
+## <a name="system"></a>Systému  
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – systém](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system) .  
 
 - **Inicializace ovladače spuštění systému**  
@@ -1616,7 +1616,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   **Výchozí**: blok
   
 - **Zabránit krádeži pověření typu**  
-  Ochrana přihlašovacích údajů v programu Microsoft Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným kódům může vést k útokům využívajícím krádež přihlašovacích údajů, jako je například Pass-the-Hash nebo Pass-The-Ticket. Ochrana přihlašovacích údajů v programu Microsoft Defender brání těmto útokům ochranou hodnot hash hesla NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
+  Ochrana přihlašovacích údajů v programu Microsoft Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto důvěrným informacím může vést k útokům zahrnujícím krádeže přihlašovacích údajů, jako je například Pass-the-Hash nebo Pass-The-Ticket. Ochrana přihlašovacích údajů v programu Microsoft Defender brání těmto útokům ochranou hodnot hash hesla NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067065)  
   
   **Výchozí**: Povolit

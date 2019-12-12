@@ -17,10 +17,10 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
 ms.openlocfilehash: f49ea9e1e59fadcb90a773e362ec3ef41e25ab63
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72502223"
 ---
 # <a name="windows-10-device-settings-to-enable-windows-hello-for-business-in-intune"></a>Nastavení zařízení s Windows 10 pro povolení Windows Hello pro firmy v Intune
@@ -108,14 +108,14 @@ Další informace o profilech Windows Hello pro firmy v Intune najdete v tématu
     **Výchozí**: Nenakonfigurováno
 
   - **Povolení biometrického ověřování**  
-     Jako alternativu ke kódu PIN pro Windows Hello pro firmy umožňuje biometrické ověřování, například rozpoznávání obličeje nebo otisků prstů. Uživatelé ale stejně musí nakonfigurovat pracovní PIN kód pro případ, že se biometrické ověření nepovede. Vybírejte z těchto možností:
+     Jako alternativu ke kódu PIN pro Windows Hello pro firmy umožňuje biometrické ověřování, například rozpoznávání obličeje nebo otisků prstů. Uživatelé ale stejně musí nakonfigurovat pracovní kód PIN pro případ, že se biometrické ověření nepovede. Vybírejte z těchto možností:
 
     - **Povolit** – Windows Hello pro firmy umožňuje biometrické ověřování.
     - **Nenakonfigurováno** – Windows Hello pro firmy neumožňuje biometrické ověřování (pro všechny typy účtů).
 
     **Výchozí**: Nenakonfigurováno
 
-  - **Použít vylepšenou ochranu proti falšování identity, pokud je dostupná**  
+  - **Používat rozšířenou ochranu proti falšování identity, pokud je dostupná**  
     Konfiguruje, jestli se v zařízení použijí funkce ochrany proti falšování identity Windows Hello, pokud je zařízení podporuje (třeba rozpoznání fotografie tváře místo skutečné tváře).  
     - **Povolit** – Windows vyžaduje, aby všichni uživatelé používali pro funkce obličeje ochranu proti falšování identity, pokud je tato možnost podporovaná.
     - **Nenakonfigurováno** – Windows respektuje konfigurace ochrany proti falšování identity na zařízení.

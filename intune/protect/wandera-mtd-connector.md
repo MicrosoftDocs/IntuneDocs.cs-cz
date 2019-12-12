@@ -16,10 +16,10 @@ ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7cc63be3c7c536cba67ef92288c12cc4032ae200
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72508816"
 ---
 # <a name="wandera-mobile-threat-defense-connector-with-intune"></a>Konektor ochrany před mobilními hrozbami Wandera s Intune  
@@ -46,7 +46,7 @@ U zařízení, která nedodržují předpisy, může být přístup k prostředk
 Pro Wandera se při registraci do Intune podporují tyto platformy:
 
 - Android 5,0 a novější  
-- iOS 10,2 a novější  
+- iOS 10.2 nebo novější  
 
 Další informace o platformě a zařízení najdete na [webu Wandera](https://www.wandera.com/why-wandera/features/device-support/).
 

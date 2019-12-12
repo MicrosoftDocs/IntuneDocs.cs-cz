@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ca087ec67542102a0cd3111d27a860500b23d3c4
-ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74547975"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Pomocí šablon Windows 10 můžete nakonfigurovat nastavení zásad skupiny v Microsoft Intune
@@ -41,7 +41,7 @@ Tento článek obsahuje seznam kroků pro vytvoření šablony pro zařízení s
 
 - Nastavení systému Windows používají [zprostředkovatele CSP v zásadách systému Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies). Zprostředkovatelé CSP fungují na různých edicích Windows, jako jsou například Home, Professional, Enterprise atd. Pokud chcete zjistit, jestli zprostředkovatel kryptografických služeb funguje na konkrétní edici, přejděte na [Zásady Windows CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies).
 
-## <a name="create-a-template"></a>Vytvoření šablony
+## <a name="create-a-template"></a>Umožňuje vytvořit šablonu.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
@@ -74,7 +74,7 @@ Tento článek obsahuje seznam kroků pro vytvoření šablony pro zařízení s
 6. Vyberte libovolné nastavení. Můžete například vyfiltrovat **sadu Office**a vybrat **Aktivovat prohlížení s omezeným přístupem**. Zobrazí se podrobný popis nastavení. Vyberte možnost **povoleno**, **zakázáno**nebo ponechat nastavení jako **Nenakonfigurováno** (výchozí). Podrobný popis také vysvětluje, co se stane, když vyberete možnost **povoleno**, **zakázáno**nebo **není nakonfigurováno**.
 7. Výběrem **OK** uložte změny.
 
-Přejděte do seznamu nastavení a nakonfigurujte požadovaná nastavení v prostředí. Tady je několik příkladů:
+Přejděte do seznamu nastavení a nakonfigurujte požadovaná nastavení v prostředí. Následuje několik příkladů:
 
 - Pomocí nastavení pro **oznamování maker v jazyce VBA** můžete zpracovávat makra VBA v různých systém Microsoft Office programech, včetně Wordu a Excelu.
 - Pomocí nastavení **povolení stahování souborů** povolte nebo Zabraňte stažení z aplikace Internet Explorer.
@@ -82,7 +82,7 @@ Přejděte do seznamu nastavení a nakonfigurujte požadovaná nastavení v pros
 - Pomocí nastavení **Stáhnout nepodepsané ovládací prvky ActiveX** zabráníte uživatelům v Stahování nepodepsaných ovládacích prvků ActiveX z Internet Exploreru.
 - Pomocí nastavení **vypnout obnovení systému** povolíte nebo zabráníte uživatelům v zařízení spouštět obnovení systému.
 - Nastavení **povoluje Import oblíbených položek** použijte, když chcete uživatelům dovolit nebo zablokovat Import oblíbených položek z jiného prohlížeče do Microsoft Edge.
-- A mnohem víc...
+- A spoustu dalších věcí...
 
 ## <a name="find-some-settings"></a>Najít některá nastavení
 
@@ -92,7 +92,7 @@ V těchto šablonách jsou k dispozici stovky nastavení. Aby bylo snazší naj�
 
   ![Kliknutím na cesta zobrazíte všechna nastavení seskupená podle zásad skupiny nebo cesty k ADMX v šablonách pro správu v Intune.](./media/administrative-templates-windows/path-filter-shows-excel-options.png)
 
-- V šabloně vyhledejte konkrétní nastavení pomocí **vyhledávacího** pole. Můžete hledat nastavením nadpisu nebo cesty. Vyhledejte například `copy`. Zobrazí se všechna nastavení s `copy`:
+- V šabloně vyhledejte konkrétní nastavení pomocí **vyhledávacího** pole. Můžete hledat nastavením nadpisu nebo cesty. Například vyhledejte zprávu `copy`. Zobrazí se všechna nastavení s `copy`:
 
   ![Vyhledat kopii pro zobrazení všech nastavení systému Windows a sady Office v šablonách pro správu v Intune](./media/administrative-templates-windows/search-copy-settings.png) 
 

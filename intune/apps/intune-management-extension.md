@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: cef30238a4470395ccf58cf4d0619db78dd85b5a
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74563468"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Použití skriptů PowerShellu na zařízeních s Windows 10 v Intune
@@ -66,10 +66,10 @@ Rozšíření pro správu Intune má následující požadavky. Po splnění po�
   
     - [Co je společná správa](https://docs.microsoft.com/sccm/comanage/overview) 
     - [Zatížení klientských aplikací](https://docs.microsoft.com/sccm/comanage/workloads#client-apps)
-    - [Přepnutí úloh Configuration Manager do Intune](https://docs.microsoft.com/sccm/comanage/how-to-switch-workloads)
+    - [Přepnutí úloh Configuration Manageru do Intune](https://docs.microsoft.com/sccm/comanage/how-to-switch-workloads)
   
 > [!TIP]
-> Ujistěte se, že jsou zařízení [připojená](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) k Azure AD. Zařízení, která jsou [registrována](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) pouze ve službě Azure AD, nebudou přijímat vaše skripty.
+> Ujistěte se, že [připojená](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) jsou zařízení k Azure AD. Zařízení, která jsou [registrována](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) pouze ve službě Azure AD, nebudou přijímat vaše skripty.
 
 ## <a name="create-a-script-policy-and-assign-it"></a>Vytvoření zásady skriptu a její přiřazení
 
@@ -91,8 +91,8 @@ Rozšíření pro správu Intune má následující požadavky. Po splnění po�
 
       | Spustit skript v 64 hostitele PS | Architektura klienta | Nový skript PS | Existující skript zásad PS |
       | --- | --- | --- | --- | 
-      | Ne | 32 – bit  | 32 podporovaný hostitel PS | Spouští se jenom v 32 hostitelích PS, který funguje na 32 64 a 32bitových architekturách. |
-      | Ano | 64 – bit | Spustí skript v 64-bitovém hostiteli PS pro 64 bitové architektury. Pokud běžela na 32-bit, skript se spustí na 32ém hostiteli PS. | Spustí skript v 32-bitovém hostiteli PS. Pokud se toto nastavení změní na 64-bit, otevře se skript (nespustí se) v 64ém hostiteli PS a nahlásí výsledky. Pokud běžela na 32-bit, skript se spustí v 32m hostiteli PS. |
+      | Ne | 32 bitů  | 32 podporovaný hostitel PS | Spouští se jenom v 32 hostitelích PS, který funguje na 32 64 a 32bitových architekturách. |
+      | Ano | 64 bitů | Spustí skript v 64-bitovém hostiteli PS pro 64 bitové architektury. Pokud běžela na 32-bit, skript se spustí na 32ém hostiteli PS. | Spustí skript v 32-bitovém hostiteli PS. Pokud se toto nastavení změní na 64-bit, otevře se skript (nespustí se) v 64ém hostiteli PS a nahlásí výsledky. Pokud běžela na 32-bit, skript se spustí v 32m hostiteli PS. |
 
 5. Vyberte **značky oboru**. Značky oboru jsou volitelné. [Použijte řízení přístupu na základě role (RBAC) a značky oboru pro distribuované oddělení IT](../fundamentals/scope-tags.md) s dalšími informacemi.
 
@@ -142,7 +142,7 @@ Protokoly agenta v klientském počítači jsou obvykle v `\ProgramData\Microsof
 
 V části **Powershellové skripty** klikněte pravým tlačítkem na skript a vyberte **Odstranit**.
 
-## <a name="common-issues-and-resolutions"></a>Běžné problémy a jejich řešení
+## <a name="common-issues-and-resolutions"></a>Známé problémy a jejich řešení
 
 ### <a name="issue-intune-management-extension-doesnt-download"></a>Problém: rozšíření pro správu Intune se nestáhne.
 
@@ -175,7 +175,7 @@ Pokud chcete zjistit, jestli je zařízení automaticky zaregistrované, můžet
     > [!TIP]
     > **Rozšíření pro správu Microsoft Intune** je služba, která běží na zařízení stejně jako jakákoli jiná služba uvedená v aplikaci služby (Services. msc). Po restartování zařízení se tato služba může také restartovat a vyhledat všechny přiřazené skripty PowerShellu se službou Intune. Pokud je služba **rozšíření správy Microsoft Intune** nastavena na ruční, služba se po restartování zařízení nemusí restartovat.
 
-- Ujistěte se, že jsou zařízení [připojená k Azure AD](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network). Zařízení, která jsou připojená jenom k vašemu pracovišti nebo organizaci ([zaregistrovaná](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) ve službě Azure AD), nebudou dostávat skripty.
+- Ujistěte se, že jsou zařízení [připojená k Azure AD](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network). Zařízení, která jsou připojená jenom k vašemu pracovišti[zaregistrovaná](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) nebo organizaci ( ve službě Azure AD), nebudou dostávat skripty.
 - Klient rozšíření pro správu Intune se jednou za hodinu kontroluje v případě jakýchkoli změn ve skriptu nebo zásadách v Intune.
 - Potvrďte, že se do `%ProgramFiles(x86)%\Microsoft Intune Management Extension`stáhlo rozšíření správy Intune.
 - Skripty se nespouštějí na rozbočovačích Surface nebo Windows 10 v režimu S.
@@ -185,7 +185,7 @@ Pokud chcete zjistit, jestli je zařízení automaticky zaregistrované, můžet
 - Chcete-li izolovat problémy skriptování, můžete:
 
   - Zkontrolujte konfiguraci spouštění PowerShellu na vašich zařízeních. Pokyny najdete v tématu [zásady spouštění prostředí PowerShell](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6) .
-  - Spusťte ukázkový skript pomocí rozšíření pro správu Intune. Vytvořte například `C:\Scripts` adresář a poskytněte všem úplnému řízení. Spusťte následující skript:
+  - Spusťte ukázkový skript pomocí rozšíření pro správu Intune. Vytvořte například `C:\Scripts` adresář a poskytněte všem úplnému řízení. Spusťte tento skript:
 
     ```powershell
     write-output "Script worked" | out-file c:\Scripts\output.txt

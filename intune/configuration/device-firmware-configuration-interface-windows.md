@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 38f02d694f1935e4732805f3ae7c66fd9718057a
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74059610"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Použití profilů rozhraní pro konfiguraci firmwaru zařízení na zařízeních s Windows v Microsoft Intune (Public Preview)
@@ -54,7 +54,7 @@ Tato funkce platí pro:
 
 ## <a name="create-your-azure-ad-security-groups"></a>Vytvoření skupin zabezpečení služby Azure AD
 
-Profily nasazení autopilotu jsou přiřazené ke skupinám zabezpečení Azure AD. Nezapomeňte vytvořit skupiny, které zahrnují vaše zařízení s podporou DFCI. U zařízení DFCI může většina organizací vytvářet skupiny zařízení místo skupin uživatelů. Vezměte v úvahu následující scénáře:
+Profily nasazení autopilotu jsou přiřazené ke skupinám zabezpečení Azure AD. Nezapomeňte vytvořit skupiny, které zahrnují vaše zařízení s podporou DFCI. U zařízení DFCI může většina organizací vytvářet skupiny zařízení místo skupin uživatelů. Zvažte následující scénáře:
 
 - Lidské zdroje (HR) mají různá zařízení s Windows. Z bezpečnostních důvodů nechcete, aby se na zařízeních používala žádná z uživatelů v této skupině. V tomto scénáři můžete vytvořit skupinu uživatelů zabezpečení lidských zdrojů, aby se zásady platily pro uživatele ve skupině HR bez ohledu na typ zařízení.
 - Na výrobním patře máte 10 zařízení. Na všech zařízeních chcete zabránit spouštění zařízení ze zařízení USB. V tomto scénáři můžete vytvořit skupinu zařízení zabezpečení a přidat do ní Tato 10 zařízení.
@@ -148,7 +148,7 @@ Můžete také [signalizovat zařízení, která se mají vrátit](../remote-act
 
 ## <a name="reuse-retire-or-recover-the-device"></a>Opětovné použití, vyřazení nebo obnovení zařízení
 
-### <a name="reuse"></a>Opakovan
+### <a name="reuse"></a>Opakované použití
 
 Pokud se chystáte resetovat Windows, aby se zařízení obnovilo, pak [zařízení vymažte](../remote-actions/devices-wipe.md). **Neodstraňujte** záznam zařízení autopilot.
 
@@ -167,7 +167,7 @@ Tyto kroky odemknou nabídky systému UEFI (BIOS) zařízení. Hodnoty zůstanou
 
 Teď jste připraveni zařízení vymazat. Jakmile bude zařízení vymazáno, odstraňte záznam autopilotu. Odstraněním záznamu zabráníte, aby se zařízení při restartování automaticky znovu zaregistrovalo.
 
-### <a name="recover"></a>Opravitelné
+### <a name="recover"></a>Zotavit
 
 Pokud zařízení vymažete a odstraníte záznam autopilotu před tím, než se odzamkne nabídky rozhraní UEFI (BIOS), zůstanou nabídky uzamčené. Intune nemůže odeslat aktualizace profilu, aby ho odemkl.
 

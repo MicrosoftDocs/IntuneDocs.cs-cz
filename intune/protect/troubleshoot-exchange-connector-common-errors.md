@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b30a7e843850d6918abc2e76f84397a1f197516f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72508857"
 ---
 # <a name="resolve-common-errors-for-the-intune-exchange-connector"></a>Řešení běžných chyb pro Intune Exchange Connector
@@ -30,7 +30,7 @@ Tento článek vám může pomáhat správci Intune vyřešit konkrétní chyby 
 
 ## <a name="configuration-failed-and-returned-error-code-0x0000001"></a>Konfigurace se nezdařila a vrátila kód chyby 0x0000001
 
-**Problém**:  
+**Problém:**  
 Při pokusu o konfiguraci Microsoft Intune Exchange Connector se zobrazí následující chybová zpráva:
 
 ```
@@ -53,7 +53,7 @@ Konfigurovat nastavení proxy serveru:
 
 ## <a name="configuration-failed-and-returned-error-code-0x000000b"></a>Konfigurace se nezdařila a vrátila kód chyby 0x000000b   
 
-**Problém**:  
+**Problém:**  
 Při pokusu o konfiguraci Microsoft Intune Exchange Connector se zobrazí následující chybová zpráva:  
 
 ```
@@ -69,7 +69,7 @@ Přihlaste se k Intune pomocí účtu, který je globálním správcem, nebo př
 
 ## <a name="configuration-failed-and-returned-error-code-0x0000006"></a>Konfigurace se nezdařila a vrátila kód chyby 0x0000006
 
-**Problém**:  
+**Problém:**  
 Při pokusu o konfiguraci Microsoft Intune Exchange Connector se zobrazí následující chybová zpráva:  
 
 ```  
@@ -89,7 +89,7 @@ K této chybě může dojít, pokud proxy server slouží k připojení k Intern
 
 ## <a name="event-7000-or-7041-microsoft-intune-exchange-connector-service-wont-start"></a>Událost 7000 nebo 7041: Služba Microsoft Intune Exchange Connector se nespustí
 
-**Problém**:  
+**Problém:**  
 Nepovedlo se zaregistrovat zařízení s iOS v Intune a vygeneruje se jedna z těchto chybových zpráv:  
 
 ```  
@@ -126,17 +126,17 @@ Nepovedlo se zaregistrovat zařízení s iOS v Intune a vygeneruje se jedna z t�
 K tomuto problému může dojít, pokud účet **WIEC_User** nemá uživatelské právo **Přihlásit se jako služba** v místních zásadách.
 
 **Řešení:**  
-V počítači, na kterém běží Intune Exchange Connector, přiřaďte k účtu služby **WIEC_User** uživatelské právo **Přihlásit se jako služba** . Pokud je počítač uzlem v clusteru, nezapomeňte účtu Clusterové služby na všech uzlech v clusteru přiřadit uživatelské právo *Přihlásit se jako služba* .  
+V počítači, na kterém běží Intune Exchange Connector, přiřaďte uživatelské právo **Přihlásit se jako služba** k účtu služby **WIEC_User** . Pokud je počítač uzlem v clusteru, nezapomeňte účtu Clusterové služby na všech uzlech v clusteru přiřadit uživatelské právo *Přihlásit se jako služba* .  
 
-Chcete-li přiřadit uživatelské právo **Přihlásit se jako služba** k účtu služby **WIEC_User** v počítači, postupujte takto:
+Chcete-li přiřadit uživatelské právo **Přihlásit se jako služba** k účtu služby **WIEC_User** v počítači, postupujte podle následujících kroků:
 
 1. Přihlaste se k počítači jako správce nebo jako člen skupiny Administrators.
 2. Spusťte **secpol. msc** a otevřete tak místní zásady zabezpečení.
-3. Přejít na **nastavení zabezpečení** > **místní zásady**a potom vyberte **přiřazení uživatelských práv**.
+3. V **nastavení zabezpečení** > **místní zásady**a potom vyberte **přiřazení uživatelských práv**.
 4. V pravém podokně klikněte dvakrát na možnost **Přihlásit se jako služba**.
-5. Vyberte **Přidat uživatele nebo skupinu**, do zásady přidejte **WIEC_USER** a pak dvakrát vyberte **OK** .
+5. Vyberte **Přidat uživatele nebo skupinu**, přidejte **WIEC_USER** k zásadě a pak vyberte **OK** dvakrát.
 
-Pokud byla uživatelská práva **Přihlásit se jako služba** přiřazená k **WIEC_User** , ale později se odebrala, požádejte správce domény, aby určil, jestli nastavení zásady skupiny Přepisuje.  
+Pokud byla uživatelská práva **Přihlásit se jako služba** přiřazena **WIEC_User** , ale později byla odebrána, požádejte správce domény, aby určil, zda nastavení zásady skupiny Přepisuje.  
 
 ## <a name="next-steps"></a>Další kroky  
 

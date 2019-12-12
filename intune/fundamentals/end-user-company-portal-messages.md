@@ -18,10 +18,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 57467d3d073666c1c22ac0a412f68a258d5b3d75
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73414077"
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Vysvětlení zpráv aplikace Portál společnosti pro koncové uživatele
@@ -142,7 +142,7 @@ Když tyto aplikace nainstalujete pomocí Portál společnosti a aplikaci spust�
 
 1. Po spuštění nainstalované firemní aplikace (obchodní aplikace) se zobrazí zpráva "nedůvěryhodná verze Enterprise Developer". <br>
    Stiskněte **Zrušit**.
-2. Přejděte na **nastavení** > **obecná** **Správa zařízení** > .
+2. Přejděte na **nastavení** > **Obecná** > **Správa zařízení**.
 
    ![uživatelské rozhraní zařízení s iOS – Správa zařízení](./media/end-user-company-portal-messages/end-user-company-portal-messages-02.png)
 

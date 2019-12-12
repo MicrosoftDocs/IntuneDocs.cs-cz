@@ -5,7 +5,7 @@ keywords: SDK, Xamarin, Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/21/2019
+ms.date: 12/04/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec234a3d93127a26af4203a4776545602334858b
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: aa8d4fd8dabd862899cab116c61d4ae4584d398c
+ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709562"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74899380"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Xamarinové vazby sady Microsoft Intune App SDK
 
@@ -109,9 +109,9 @@ Ukázkové aplikace zvýrazňování MAM funkcí v aplikacích Xamarin. iOS jsou
 Úplný přehled integrace sady Intune App SDK najdete v [příručce pro vývojáře sady Microsoft Intune App SDK pro Android](app-sdk-android.md). Jak si přečtete příručku a integrujte sadu Intune App SDK s vaší aplikací Xamarin. následující oddíly mají za cíl zvýraznit rozdíly mezi implementací nativní aplikace pro Android vyvinuté v jazyce Java a aplikací Xamarin vyvinutou v C#. Tyto části by se měly považovat za doplňkové a nemůžou fungovat jako náhrada za celý průvodce.
 
 #### <a name="remapper"></a>Remapper
-Od verze 1.4428.1 se balíček `Microsoft.Intune.MAM.Remapper` dá přidat do aplikace Xamarin. Android jako [Nástroj pro vytváření](app-sdk-android.md#build-tooling) , který umožňuje přemístit mam třídu, metodu a služby Systems. Pokud je přemapování zahrnuto, MAM ekvivalentní části přejmenovaných metod a oddílů aplikace MAM budou automaticky provedeny při sestavení aplikace.
+Od verze 1.4428.1 se balíček `Microsoft.Intune.MAM.Remapper` dá přidat do aplikace Xamarin. Android jako [Nástroje pro vytváření](app-sdk-android.md#build-tooling) , aby se prováděly přemístění třídy, metody a služeb systému mam. Pokud je přemapování zahrnuto, MAM ekvivalentní části přejmenovaných metod a oddílů aplikace MAM budou automaticky provedeny při sestavení aplikace.
 
-Chcete-li vyloučit třídu z MAM-sjednocení přemapováním, lze do projektu přidat následující vlastnost `.csproj` souboru.
+Chcete-li vyloučit třídu z MAM sjednocení přemapováním, lze do projektů `.csproj` souboru přidat následující vlastnost.
 
 ```xml
   <PropertyGroup>
@@ -182,12 +182,12 @@ IMAMEnrollmentManager mgr = MAMComponents.Get<IMAMEnrollmentManager>();
 
 ### <a name="xamarinforms-integration"></a>Integrace Xamarin.Forms
 
-U aplikací `Xamarin.Forms` balíček `Microsoft.Intune.MAM.Remapper` provádí nahrazení třídy MAM automaticky vložením tříd `MAM` do hierarchie tříd běžně používaných tříd `Xamarin.Forms`. 
+Pro `Xamarin.Forms` aplikace `Microsoft.Intune.MAM.Remapper` balíček provádí nahrazení třídy MAM automaticky vložením `MAM` tříd do hierarchie tříd běžně používaných tříd `Xamarin.Forms`. 
 
 > [!NOTE]
 > Integraci Xamarin. Forms je třeba provést společně s výše podrobnější integrací Xamarin. Android. Remapovače se chová jinak pro aplikace Xamarin. Forms, takže ruční MAM nahrazení bude stále potřeba provést.
 
-Po přidání remapovače do projektu budete muset provést přemístění ekvivalenty MAM. Například `FormsAppCompatActivity` a `FormsApplicationActivity` lze nadále používat ve vaší aplikaci, které přepíší do `OnCreate` a `OnResume` se nahrazují ekvivalenty MAM `OnMAMCreate` a `OnMAMResume` v uvedeném pořadí.
+Po přidání remapovače do projektu budete muset provést přemístění ekvivalenty MAM. Například `FormsAppCompatActivity` a `FormsApplicationActivity` mohou být ve vaší aplikaci nadále použity pro přepsání `OnCreate` a `OnResume` jsou nahrazeny MAM ekvivalenty `OnMAMCreate` a `OnMAMResume` v uvedeném pořadí.
 
 ```csharp
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
@@ -201,9 +201,9 @@ Po přidání remapovače do projektu budete muset provést přemístění ekviv
 ```
 
 Pokud nejsou náhrady provedeny, může dojít k následujícím chybám při kompilaci, dokud neprovedete náhrady:
-* [Chyba kompilátoru CS0239](https://docs.microsoft.com/dotnet/csharp/misc/cs0239). Tato chyba se běžně zobrazuje v tomto formátu ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed``.
+* [Chyba kompilátoru CS0239](https://docs.microsoft.com/dotnet/csharp/misc/cs0239). Tato chyba se obvykle objevuje v této ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed``formuláře.
 To je očekáváno, protože když přemapování mění dědění tříd Xamarin, budou provedeny určité funkce `sealed` a místo toho je přidána nová varianta MAM k přepsání.
-* [Chyba kompilátoru CS0507](https://docs.microsoft.com/dotnet/csharp/language-reference/compiler-messages/cs0507): Tato chyba se běžně zobrazuje v tomto formuláři ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...``. Pokud přemapování změní dědění některých tříd Xamarin, budou některé členské funkce změněny na `public`. Pokud přepíšete některou z těchto funkcí, budete muset změnit tyto modifikátory přístupu, aby tato přepsání byla také `public`.
+* [Chyba kompilátoru CS0507](https://docs.microsoft.com/dotnet/csharp/language-reference/compiler-messages/cs0507): Tato chyba se běžně zobrazuje v tomto formuláři ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...``. Pokud přemapování změní dědění některých tříd Xamarin, budou některé členské funkce změněny na `public`. Pokud přepíšete některou z těchto funkcí, budete muset změnit tyto modifikátory přístupu, aby bylo toto přepsání také `public`.
 
 > [!NOTE]
 > Remapper znovu zapíše závislost, kterou Visual Studio používá pro automatické dokončování IntelliSense. Proto může být nutné znovu načíst a znovu sestavit projekt při přidání nového mapování pro technologii IntelliSense, aby byly změny správně rozpoznány.

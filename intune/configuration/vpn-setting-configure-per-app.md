@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f0cd3dd71a5999b69e3f5c34ef4cc73fb3d6a938
-ms.sourcegitcommit: b752acefec077c719e169e665c955adb944e85c6
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74781154"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-ios-devices-in-intune"></a>Nastavení virtuální privátní sítě (VPN) pro aplikaci pro zařízení s iOS v Intune
@@ -43,7 +43,7 @@ Některé sítě VPN umožňují ověřování uživatelského jména a hesla u 
 
 ## <a name="per-app-vpn-with-zscaler"></a>SÍŤ VPN pro jednotlivé aplikace s Zscaler
 
-Zscaler Private Access (ZPA) se integruje s Azure Active Directory (Azure AD) pro ověřování. Pokud používáte ZPA, nepotřebujete profily [](#create-a-trusted-certificate-profile) [certifikátů SCEP nebo PKCS](#create-a-scep-or-pkcs-certificate-profile) (popsané v tomto článku). Pokud máte nastaven profil sítě VPN pro jednotlivé aplikace pro Zscaler, otevření jedné z přidružených aplikací se automaticky nepřipojí k ZPA. Místo toho se uživatel musí nejdřív přihlašovat do aplikace Zscaler. Vzdálený přístup je pak omezen na přidružené aplikace.
+Zscaler Private Access (ZPA) se integruje s Azure Active Directory (Azure AD) pro ověřování. Pokud používáte ZPA, nepotřebujete profily [důvěryhodný certifikát](#create-a-trusted-certificate-profile) [certifikátů SCEP nebo PKCS](#create-a-scep-or-pkcs-certificate-profile) (popsané v tomto článku). Pokud máte nastaven profil sítě VPN pro jednotlivé aplikace pro Zscaler, otevření jedné z přidružených aplikací se automaticky nepřipojí k ZPA. Místo toho se uživatel musí nejdřív přihlašovat do aplikace Zscaler. Vzdálený přístup je pak omezen na přidružené aplikace.
 
 ## <a name="prerequisites-for-per-app-vpn"></a>Předpoklady pro síť VPN pro jednotlivé aplikace
 

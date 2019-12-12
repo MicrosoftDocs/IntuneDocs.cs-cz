@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 77f5787509438ec3280f29be8449d78979806042
-ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74542328"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Řešení potíží s profily konfigurace zařízení Wi-Fi v Microsoft Intune
@@ -194,7 +194,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
   1. Přejděte na **nastavení** > **účty** > **přístup do práce nebo do školy**.
   2. Vyberte svůj pracovní nebo školní účet > **informace**.
   3. V dolní části stránky **Nastavení** vyberte **vytvořit sestavu**.
-  4. Otevře se okno, které zobrazuje cestu k souborům protokolu. Vyberte **exportovat**.
+  4. Otevře se okno, které zobrazuje cestu k souborům protokolu. Vyberte **Exportovat**.
   5. Přejít na `\Users\Public\Documents\MDMDiagnostics` cestu a zobrazit sestavu:
 
       > [!div class="mx-imgBorder"]

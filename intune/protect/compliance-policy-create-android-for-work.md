@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: be1fbb72821b61566da84d6f98094c9a2f6ffef2
-ms.sourcegitcommit: 3ace4cba6e2f6fefa9120be3807387a49b200c9b
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72810255"
 ---
 # <a name="android-enterprise-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení Androidu Enterprise k označení zařízení jako kompatibilních nebo nekompatibilních s Intune
@@ -115,7 +115,7 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 
     - **Počet požadovaných znaků bez**písmen: zadejte počet jiných než písmen (kromě písmen v abecedě), které musí heslo obsahovat, 0 až 16 znaků.
 
-    - **Požadovaný počet**číslic: zadejte počet číselných znaků (`1`, `2`, `3` atd.) heslo musí mít 0 až 16 znaků.
+    - **Požadovaný počet**číslic: zadejte počet číselných znaků (`1`, `2`, `3`atd.) heslo musí mít 0 až 16 znaků.
     
     - **Požadovaný počet znaků symbolu**: zadejte počet znaků symbolu (`&`, `#`, `%`atd.) heslo musí mít 0 až 16 znaků.
  

@@ -1,11 +1,11 @@
 ---
 title: Zásady dodržování předpisů zařízením v Microsoft Intune – Azure | Microsoft Docs
-description: Začněte používat zásady dodržování předpisů pro zařízení, Přehled stavů a úrovní závažnosti, použití stavu V období odkladu, práce s podmíněným přístupem, zpracování zařízení bez přiřazených zásad a rozdíly v dodržování předpisů v Azure Portal a klasický portál v Microsoft Intune
+description: Začněte používat zásady dodržování předpisů pro zařízení, Přehled stavů a úrovní závažnosti, použití stavu V období odkladu, práce s podmíněným přístupem a zpracování zařízení bez přiřazených zásad.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 967bf9937c71ff3ca7277f43fd969291eb5af6de
-ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
+ms.openlocfilehash: 83b8c48d2bb594ca8b9c527d78922332e582363f
+ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749183"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74860291"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Nastavení pravidel na zařízeních pro povolení přístupu k prostředkům ve vaší organizaci pomocí Intune
 
@@ -91,7 +91,7 @@ Intune také obsahuje sadu předdefinovaných nastavení zásad dodržování p�
   - **Kompatibilní** (*výchozí*): vypnutá funkce zabezpečení
   - **Nekompatibilní**: funkce zabezpečení zapnuta
 
-  Pokud zařízení nemá přiřazené zásady dodržování předpisů, považuje se toto zařízení za vyhovující ve výchozím nastavení. Pokud používáte podmíněný přístup se zásadami dodržování předpisů, doporučujeme změnit výchozí nastavení na **nekompatibilní**. Pokud koncový uživatel nedodržuje předpisy, protože zásada není přiřazená, zobrazí se v [aplikaci Portál společnosti](../apps/company-portal-app.md) `No compliance policies have been assigned`.
+  Pokud zařízení nemá přiřazené zásady dodržování předpisů, považuje se toto zařízení za vyhovující ve výchozím nastavení. Pokud používáte podmíněný přístup se zásadami dodržování předpisů, doporučujeme změnit výchozí nastavení na **nekompatibilní**. Pokud koncový uživatel nedodržuje předpisy, protože zásada není přiřazená, zobrazí se `No compliance policies have been assigned`[aplikace Portál společnosti](../apps/company-portal-app.md) .
 
 - **Vylepšené zjišťování jailbreaků**: Pokud je toto nastavení povolené, zařízení s iOS se budou v Intune kontrolovat častěji. Pokud je povolena, používá tato vlastnost funkce zjišťování polohy zařízení a má vliv na výdrž baterie. Data o umístění uživatele neukládá Intune.
 
@@ -115,7 +115,7 @@ Následující tabulka popisuje, jak se spravují nevyhovující nastavení při
 |**Nastavení zásad**| **Platforma** |
 | --- | ----|
 | **Konfigurace kódu PIN nebo hesla** | - **Android 4,0 a novější**: v karanténě<br>- **Samsung KNOX Standard 4,0 a novější**: v karanténě<br>- **Android Enterprise**: v karanténě  <br>  <br>- **iOS 8,0 a novější**: Opraveno<br>- **macOS 10,11 a novější**: Opraveno  <br>  <br>- **Windows 8.1 a novější**: Opraveno<br>- **Windows Phone 8,1 a novější**: Opraveno|
-| **Šifrování zařízení** | - **Android 4,0 a novější**: v karanténě<br>- **Samsung KNOX Standard 4,0 a novější**: v karanténě<br>- **Android Enterprise**: v karanténě<br><br>- **iOS 8,0 a novější**: opravené (nastavením PIN kódu)<br>- **macOS 10,11 a novější**: Opraveno (nastavením PIN kódu)<br><br>- **Windows 8.1 a novější**: nejde použít.<br>- **Windows Phone 8,1 a novější**: Opraveno |
+| **Šifrování zařízení** | - **Android 4,0 a novější**: v karanténě<br>- **Samsung KNOX Standard 4,0 a novější**: v karanténě<br>- **Android Enterprise**: v karanténě<br><br>- **iOS 8,0 a novější**: opravené (nastavením PIN kódu)<br>- **macOS 10,11 a novější**: opravené (nastavením PIN kódu)<br><br>- **Windows 8.1 a novější**: nejde použít.<br>- **Windows Phone 8,1 a novější**: Opraveno |
 | **Zařízení s jailbreakem nebo rootem** | - **Android 4,0 a novější**: v karanténě (nejedná se o nastavení)<br>- **Samsung KNOX Standard 4,0 a novější**: v karanténě (nejedná se o nastavení)<br>- **Android Enterprise**: v karanténě (nejedná se o nastavení)<br><br>- **iOS 8,0 a novější**: v karanténě (nejedná se o nastavení)<br>- **macOS 10,11 a novější**: nelze použít<br><br>- **Windows 8.1 a novější**: nejde použít.<br>- **Windows Phone 8,1 a novější**: nelze použít |
 | **E-mailový profil** | - **Android 4,0 a novější**: nejde použít.<br>- **Samsung KNOX Standard 4,0 a novější**: nejde použít.<br>- **Android Enterprise**: nejde použít.<br><br>- **iOS 8,0 a novější**: v karanténě<br>- **macOS 10,11 a novější**: v karanténě<br><br>- **Windows 8.1 a novější**: nejde použít.<br>- **Windows Phone 8,1 a novější**: nelze použít |
 | **Minimální verze operačního systému** | - **Android 4,0 a novější**: v karanténě<br>- **Samsung KNOX Standard 4,0 a novější**: v karanténě<br>- **Android Enterprise**: v karanténě<br><br>- **iOS 8,0 a novější**: v karanténě<br>- **macOS 10,11 a novější**: v karanténě<br><br>- **Windows 8.1 a novější**: v karanténě<br>- **Windows Phone 8,1 a novější**: v karanténě |
@@ -130,21 +130,6 @@ Následující tabulka popisuje, jak se spravují nevyhovující nastavení při
 
 - Pokud se zásady podmíněného přístupu vztahují na uživatele, zařízení se zablokuje.
 - Aplikace Portál společnosti upozorní uživatele na jakékoli problémy s dodržováním předpisů.
-
-## <a name="azure-classic-portal-vs-azure-portal"></a>Portál Azure Classic vs. Azure Portal
-
-Hlavním rozdíl při použití zásad dodržování předpisů zařízením na portálu Azure Portal:
-
-- Zásady dodržování předpisů se na portálu Azure Portal vytvářejí zvlášť pro každou podporovanou platformu.
-- Na portálu Azure Classic mají všechny podporované platformy společnou jednu zásadu dodržování předpisů zařízeními.
-
-<!--- - In the Azure portal, you have the ability to specify actions and notifications that are initiated when a device is determined to be noncompliant. This ability does not exist in the Intune admin console.
-
-- In the Azure portal, you can set a grace period to allow time for the end-user to get their device back to compliance status before they completely lose the ability to get company data on their device. This is not available in the Intune admin console.--->
-
-Zásady dodržování předpisů vytvořené na [portálu Classic](https://manage.microsoft.com) se na portálu [Azure Portal](https://portal.azure.com) nezobrazují. Pro uživatele ale nadále platí a dají se spravovat prostřednictvím portálu Classic.
-
-Pokud chcete využívat nové funkce související s dodržováním předpisů zařízeními na portálu Azure Portal, musíte vytvořit nové zásady dodržování předpisů zařízeními na portálu Azure Portal. Pokud přiřadíte zásady dodržování předpisů zařízením na Azure Portalu uživateli, kterému byly přiřazeny zásady dodržování předpisů zařízením také na klasickém portálu, budou mít zásady na Azure Portalu přednost před těmi, které byly vytvořeny na klasickém portálu.
 
 ## <a name="next-steps"></a>Další kroky
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a8768022872d32116add0ed4ea4caf1f8fcb800f
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74059271"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Řešení potíží se zásadami a profily a v Intune
@@ -79,7 +79,7 @@ Zkontrolujte [stav tenanta](../fundamentals/tenant-status.md) a potvrďte, že j
             - Na zařízení s Androidem otevřete Portál společnosti App > **zařízení** > vyberte zařízení ze seznamu > **Ověřte nastavení zařízení**.
             - Na zařízení s iOS otevřete aplikaci Portál společnosti > **zařízení** > v seznamu vyberte zařízení > **kontrolu nastavení**.
 
-        - Na zařízení s Windows otevřete **nastavení** > **účty** > **přístup do práce nebo do školy** > vyberte účet nebo registraci MDM > **informace** > **Sync**.
+        - Na zařízení s Windows otevřete **nastavení** > **účty** > **přístup do práce nebo do školy** > vyberte účet nebo registraci MDM > **informace** > **synchronizaci**.
 
     - Pokud chcete zobrazit informace specifické pro zásady, vyberte zařízení.
 
@@ -142,7 +142,7 @@ Pokud zrušíte přiřazení zásady (zastavit nasazení), zařízení s Windows
 
 V závislosti na platformě zařízení může být potřeba resetovat zásady zabezpečení, pokud chcete zásadu změnit na méně bezpečnou hodnotu.
 
-Například v Windows 8.1 na ploše potáhnutím prstem zprava otevřete panel **ovládací tlačítka** . Vyberte **nastavení** > **ovládací Panel** **uživatelské účty** > . Na levé straně vyberte odkaz **Resetovat zásady zabezpečení** a zvolte **Resetovat zásady**.
+Například v Windows 8.1 na ploše potáhnutím prstem zprava otevřete panel **ovládací tlačítka** . Vyberte **nastavení** > **Ovládací panely** > **uživatelské účty**. Na levé straně vyberte odkaz **Resetovat zásady zabezpečení** a zvolte **Resetovat zásady**.
 
 Jiné platformy, například zařízení se systémem Android, iOS a Windows Phone 8,1, může být potřeba vyřadit a znovu zaregistrovat, aby bylo možné použít méně omezující zásadu.
 
@@ -155,7 +155,7 @@ Jiné platformy, například zařízení se systémem Android, iOS a Windows Pho
 
 ### <a name="microsoft-intune-policy-related-errors-in-policyplatformlog"></a>Chyby související se zásadami Microsoft Intune v souboru policyplatform.log
 
-Pro počítače s Windows spravované pomocí softwarového klienta Intune můžou chyby zásad v souboru `policyplatform.log` být z nevýchozího nastavení v nástroji Řízení uživatelských účtů (UAC) systému Windows v zařízení. Některá nevýchozí nastavení UAC můžou ovlivnit zpracování zásad a instalace klientů Microsoft Intune.
+U počítačů s Windows spravovaných pomocí softwarového klienta Intune můžou chyby zásad v souboru `policyplatform.log` být z nevýchozího nastavení v nástroji Řízení uživatelských účtů (UAC) systému Windows v zařízení. Některá nevýchozí nastavení UAC můžou ovlivnit zpracování zásad a instalace klientů Microsoft Intune.
 
 #### <a name="resolve-uac-issues"></a>Řešení potíží s UAC
 

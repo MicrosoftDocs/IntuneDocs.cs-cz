@@ -1,5 +1,5 @@
 ---
-title: Nastavení kontrolního bodu SandBlast MTD
+title: Nastavení Check Point SandBlast MTD
 titleSuffix: Microsoft Intune
 description: Přečtěte si o integraci Intune se službou Check Point SandBlast Mobile Threat Defense za účelem regulace přístupu mobilních zařízení k firemním prostředkům.
 keywords: ''
@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c4cffafd4145ab536157ea55c732ac27bec29538
-ms.sourcegitcommit: b5e719fb507b1bc4774674e76c856c435e69f68c
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73801613"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Konektor Check Point SandBlast Mobile Threat Defense s Intune

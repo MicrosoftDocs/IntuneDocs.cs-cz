@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 86aeb2b54d45f111864d71e65b8c90fce7205868
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72508024"
 ---
 # <a name="windows-device-enrollment-in-intune-company-portal"></a>Registrace zařízení s Windows v Portál společnosti Intune  
@@ -63,7 +63,7 @@ Postup registrace se liší u různých verzí zařízení s Windows 10. Násled
 4. Pokud je vaše verze  
 
     * __1607 nebo novější__: Zaregistrujte zařízení podle [ **Nastavení** > **účet** > **přístup k pracovnímu nebo školnímu** postupu](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
-    * __1511 nebo starší__: Zaregistrujte své zařízení způsobem [ **Nastavení** > **účet** >  trasy**k vašim účtům** ](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
+    * __1511 nebo starší__: Zaregistrujte zařízení podle [ **Nastavení** > **účtu** > trasy **k vašim účtům** ](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
 ### <a name="windows-10-mobile-devices"></a>Zařízení s Windows 10 Mobile
 
@@ -72,8 +72,8 @@ Postup registrace se liší u různých verzí zařízení s Windows 10. Násled
 3. V části __informace o zařízení__vyhledejte __verzi__.  
 4. Pokud je vaše verze  
 
-    * __1607 nebo novější__: Zaregistrujte zařízení pomocí [ **Nastavení** > **pracovní nebo školní** trasy](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
-    * __1511 nebo starší__: Zaregistrujte své zařízení pomocí [trasy**účtů**  > ](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
+    * __1607 nebo novější__: Zaregistrujte své zařízení pomocí [ **Nastavení** > **přístup k pracovnímu nebo školnímu** postupu](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
+    * __1511 nebo starší__: Zaregistrujte zařízení pomocí [ **Nastavení** > trasy **účtů** ](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
 ## <a name="enroll-non-windows-10-devices"></a>Registrace zařízení bez Windows 10  
 Následující články použijte k registraci dalších podporovaných zařízení s Windows prostřednictvím webu Portál společnosti:   

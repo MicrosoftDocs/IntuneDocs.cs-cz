@@ -16,17 +16,17 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 40569af35a812074cc62546e3f85929416202b3b
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72506424"
 ---
 # <a name="import-wi-fi-settings-for-windows-devices-in-intune"></a>Import nastavení Wi-Fi pro zařízení s Windows v Intune
 
 Pro zařízení s Windows můžete importovat konfigurační profil Wi-Fi, který jste předtím exportovali do souboru. **Pro zařízení, na kterých běží Windows 10 a vyšší, můžete také [vytvořit profil Wi-Fi](wi-fi-settings-windows.md) přímo v Intune**.
 
-Platí pro:  
+Týká se  
 - Windows 8.1 a vyšší
 - Windows 10 a novější
 - Windows 10 Desktop nebo Mobile
@@ -67,6 +67,6 @@ Na počítači s Windows, který už má nainstalovaný požadovaný profil WiFi
 
 Profil se vytvoří, ale nic nedělá. Dále [tento profil přiřaďte](device-profile-assign.md).
 
-## <a name="more-resources"></a>Další zdroje
+## <a name="more-resources"></a>Další materiály
 
 [Přehled nastavení Wi-Fi](wi-fi-settings-configure.md), včetně dalších dostupných platforem

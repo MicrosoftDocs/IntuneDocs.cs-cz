@@ -12,10 +12,10 @@ ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 42e16be44dba539007967dd921da4c8d4f095ec4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72504821"
 ---
 # <a name="using-the-intune-docs"></a>Používání dokumentace Intune
@@ -26,17 +26,17 @@ Obecnou nápovědu a podporu pro Intune najdete v tématu [získání podpory pr
 
 ## <a name="search-the-docs"></a>Prohledávání dokumentů
 
- Pomocí následujících tipů pro hledání vám pomůžete najít informace, které potřebujete:  
+ Následující tipy vám můžou pomoct při hledání požadovaných informací:  
 
 - Při použití preferovaného vyhledávacího modulu k vyhledání obsahu pro Microsoft Intune přidejte `Intune` společně s klíčovými slovy hledání.  
 
   - Hledání výsledků z docs.microsoft.com. Výsledky z technet.microsoft.com nebo msdn.microsoft.com jsou pro starší verze produktu.  
 
-  - Chcete-li se zaměřit na výsledky hledání v aktuální knihovně obsahu, zahrňte `site:docs.microsoft.com` pro určení oboru vyhledávacího modulu.  
+  - Chcete-li se zaměřit na výsledky hledání do aktuální knihovny obsahu, zahrňte `site:docs.microsoft.com` do oboru vyhledávacího modulu.  
 
 - Použijte hledané výrazy, které odpovídají terminologii v uživatelském rozhraní a online dokumentaci. Vyhněte se neoficiálním podmínkám nebo zkratkám, které by se vám mohly zobrazit v obsahu komunity.
 
-- Pokud chcete hledat v aktuálně zobrazeném článku, použijte funkci **Najít** v prohlížeči. Ve většině moderních webových prohlížečů stiskněte **Ctrl**+**F** a pak zadejte hledané výrazy.  
+- Pokud chcete hledat v aktuálně zobrazeném článku, použijte funkci **Najít** v prohlížeči. Ve většině moderních webových prohlížečů stiskněte **kombinaci kláves Ctrl**+**F** a zadejte hledané výrazy.  
 
 - Každý článek v docs.microsoft.com obsahuje následující pole, která vám pomůžou při hledání obsahu:  
 
@@ -86,7 +86,7 @@ Dokumentace ke službě Intune, jako je většina obsahu v docs.microsoft.com, j
 
 4. V části navrhnout změnu souboru zadejte komentář veřejné potvrzení popisující, *co* jste změnili. Pak klikněte na **navrhnout změnu souboru**.  
 
-5. Posuňte se dolů a ověřte změny, které jste provedli. Kliknutím na **vytvořit žádost o získání dat** otevřete formulář. Popište, *Proč* jste tuto změnu provedli. Klikněte na **vytvořit žádost o získání dat**.
+5. Posuňte se dolů a ověřte změny, které jste provedli. Kliknutím na **vytvořit žádost o získání dat** otevřete formulář. Popište, *Proč* jste tuto změnu provedli. Klikněte na **Create pull request** (Vytvořit žádost o přijetí změn).
 
 Tým pro psaní obdrží vaši žádost o přijetí změn, přiřadí položku příslušnému zapisovači, zkontroluje text a provede v něm rychlé úpravy a schválí a sloučí změny, nebo vám poskytne další informace o této aktualizaci.  
 
@@ -94,7 +94,7 @@ Tým pro psaní obdrží vaši žádost o přijetí změn, přiřadí položku p
 
 Pokud máte zájem o přispívání, ale nevíte, kde začít, podívejte se na následující návrhy:  
 
-- Projděte si článek s přesností. Pak aktualizujte metadata **MS. Date** pomocí formátu `mm/dd/yyyy`. Tento příspěvek pomáhá udržet obsah v čerstvém stavu.  
+- Projděte si článek s přesností. Pak aktualizujte metadata **MS. Date** pomocí `mm/dd/yyyy` formátu. Tento příspěvek pomáhá udržet obsah v čerstvém stavu.  
 
 - Na základě vašeho prostředí přidejte vysvětlení, příklady nebo pokyny. Tento příspěvek využívá sílu komunity ke sdílení znalostí.
 

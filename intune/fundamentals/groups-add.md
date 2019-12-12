@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6e3219e32ef9bea838f0c19258d0b22a99083a12
-ms.sourcegitcommit: 1a22b8b31424847d3c86590f00f56c5bc3de2eb5
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74261585"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Přidání skupin pro uspořádání uživatelů a zařízení
@@ -85,7 +85,7 @@ Pomocí následujícího postupu vytvořte novou skupinu.
 > - Všechna zařízení s Androidem Enterprise
 > - Všechna zařízení se systémem iOS 11 a starším
 > - Marketing
-> - Personální oddělení
+> - Lidské zdroje
 > - Všichni zaměstnanci Charlotte
 > - Všichni zaměstnanci v WA
 
@@ -103,7 +103,7 @@ Pokud chcete vytvořit základní požadavky vaší organizace na dodržování 
 
 Doporučení a pokyny ke konfiguračnímu profilu najdete v tématu [přiřazení zásad ke skupinám uživatelů nebo skupinám zařízení](../configuration/device-profile-assign.md#user-groups-vs-device-groups) a [doporučením profilu](../configuration/device-profile-create.md#recommendations).
 
-## <a name="see-also"></a>Viz taky
+## <a name="see-also"></a>Související témata
 
 - [Řízení přístupu na základě role (RBAC) s Microsoft Intune](role-based-access-control.md)
 - [Správa přístupu k prostředkům pomocí skupin Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-manage-groups)

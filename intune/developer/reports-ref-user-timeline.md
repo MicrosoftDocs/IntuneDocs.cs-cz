@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b94be3e1454c60f16ff40e73ce37f8c4e349126d
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72813346"
 ---
 # <a name="user-lifetime-representation-in-the-microsoft-intune-data-warehouse"></a>Znázornění životnosti uživatele v datovém skladu Microsoft Intune
@@ -39,14 +39,14 @@ Představte si uživatele **Jan Macek**, který získá licenci na 1.6.2017. V t
  
 | DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
-| Jan Macek | CHYBNÉ | 1\.6.2017 | 31.12.9999 | PODMÍNKA
+| Jan Macek | FALSE | 1\.6.2017 | 31.12.9999 | TRUE
  
 Jan Macek vrací licenci 25.7.2017. Tabulka **Uživatel** obsahuje následující položky. Změny v existujících záznamech jsou `marked`. 
 
 | DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
-| Jan Macek | CHYBNÉ | 1\.6.2017 | `07/26/2017` | `FALSE` 
-| Jan Macek | PODMÍNKA | 26.7.2017 | 31.12.9999 | PODMÍNKA 
+| Jan Macek | FALSE | 1\.6.2017 | `07/26/2017` | `FALSE` 
+| Jan Macek | TRUE | 26.7.2017 | 31.12.9999 | TRUE 
 
 První řádek označuje, že Jan Macek existoval v Intune od 1.6.2017 do 25.7.2017. Druhý záznam označuje, že uživatel byl 25.7.2017 odstraněn a již není v Intune k dispozici.
 
@@ -54,9 +54,9 @@ Nyní si představte, že uživatel Jan Macek získá novou licenci dne 31.8.201
  
 | DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
-| Jan Macek | CHYBNÉ | 1\.6.2017 | 26.7.2017 | CHYBNÉ 
-| Jan Macek | PODMÍNKA | 26.7.2017 | `08/31/2017` | `FALSE` 
-| Jan Macek | CHYBNÉ | 08/31/2017 | 31.12.9999 | PODMÍNKA 
+| Jan Macek | FALSE | 1\.6.2017 | 26.7.2017 | FALSE 
+| Jan Macek | TRUE | 26.7.2017 | `08/31/2017` | `FALSE` 
+| Jan Macek | FALSE | 08/31/2017 | 31.12.9999 | TRUE 
  
 Osoba, která chce zobrazit aktuální stav všech uživatelů, musí použít filtr `IsCurrent = TRUE`. 
  

@@ -1,7 +1,7 @@
 ---
 title: Nastavení stránky stavu registrace
 titleSuffix: Microsoft Intune
-description: Nastavte stránku pozdravu pro uživatele, kteří registrují zařízení s Windows 10.
+description: Nastavte na stránce s pozdravem uživatelé, kteří registrují zařízení s Windows 10.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a3a470c9a92f7792af2b371acf873807ad344afb
-ms.sourcegitcommit: b752acefec077c719e169e665c955adb944e85c6
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74781103"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Nastavení stránky stavu registrace
@@ -86,16 +86,16 @@ Uživatel může být v mnoha skupinách a mít velký počet profilů stránek 
 2. Najeďte myší na profil v seznamu.
 3. Pomocí tří svislých teček přetáhněte profil na požadované místo v seznamu.
 
-## <a name="block-access-to-a-device-until-a-specific-application-is-installed"></a>Zablokovat přístup k zařízení, dokud není nainstalovaná konkrétní aplikace
+## <a name="block-access-to-a-device-until-a-specific-application-is-installed"></a>Blokovat přístup k zařízení, do konkrétní aplikace je nainstalována.
 
-Můžete určit, které aplikace se musí nainstalovat, než uživatel bude moci získat přístup k ploše.
+Můžete určit aplikace, které je potřeba nainstalovat předtím, než uživatel může přístup k ploše.
 
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** >  > Windows **registrace systému Windows** > **Stránka stavu registrace**.
-2. Vyberte profil > **Nastavení**.
-3. Pokud chcete **Zobrazit průběh instalace aplikací a profilů**, klikněte na **Ano** .
-4. Vyberte možnost **Ano** pro **blokování použití zařízení, dokud nebudou nainstalovány všechny aplikace a profily**.
+2. Zvolte profil > **nastavení**.
+3. Zvolte **Ano** pro **zobrazit průběh instalace aplikaci a profilu**.
+4. Zvolte **Ano** pro **zablokovat používání zařízení, dokud nebudou nainstalovány všechny aplikace a profily**.
 5. Vyberte možnost **Vybraná** pro **blokování použití zařízení, dokud se tyto požadované aplikace neinstalují, pokud jsou přiřazené uživateli nebo zařízení**.
-6. Zvolte **vybrat aplikace** > zvolte aplikace > **Vyberte** > **Uložit**.
+6. Zvolte **vyberte aplikace** > vyberte aplikace > **vyberte** > **Uložit**.
 
 ## <a name="enrollment-status-page-tracking-information"></a>Informace o sledování stránky stavu registrace
 

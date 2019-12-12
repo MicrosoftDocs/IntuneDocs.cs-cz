@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31bb0e2ff4379c55829afc65fb99b768c9099a47
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 1b712922824fa9d54f33fb43114e852fbeb52a81
+ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498952"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74899435"
 ---
 # <a name="app-protection-policies-overview"></a>Přehled zásad ochrany aplikací
 
@@ -62,7 +62,7 @@ Mezi důležité výhody použití zásad ochrany aplikací patří následujíc
 
 - **Produktivita koncového uživatele není ovlivněná a zásady se při použití aplikace v osobním kontextu nepoužijí.** Zásady se použijí jenom v pracovním kontextu, což umožňuje chránit podniková data bez zásahu do osobních dat.
 
-- **Zásady ochrany aplikací zajišťují, že jsou zavedena ochrana aplikační vrstvy.** Můžete například:
+- **Zásady ochrany aplikací zajišťují, že jsou zavedena ochrana aplikační vrstvy.** Můžete třeba:
   - Vyžadovat PIN k otevření aplikace v pracovním kontextu 
   - Řídit sdílení dat mezi aplikacemi 
   - Zabránit ukládání dat firemních aplikací do osobního úložiště
@@ -177,7 +177,7 @@ Mezi další požadavky na používání aplikací pro [Word, Excel a PowerPoint
   > Mobilní aplikace Office aktuálně podporují jenom SharePoint Online a ne místní SharePoint.
 
 ### <a name="managed-location-needed-for-office"></a>Spravované umístění, které je potřeba pro Office
-Spravované umístění (tj. OneDrive), které je potřeba pro Office. Intune označí všechna data v aplikaci buď jako firemní, nebo jako osobní. Data se považují za podniková, když pocházejí z firemního umístění. U aplikací Office považuje Intune za firemní následující umístění: e-mail (Exchange) nebo cloudové úložiště (aplikace OneDrive s účtem OneDrive pro firmy).
+Pro Office je potřeba spravované umístění (tj. OneDrive). Intune označí všechna data v aplikaci buď jako firemní, nebo jako osobní. Data se považují za podniková, když pocházejí z firemního umístění. U aplikací Office považuje Intune za firemní následující umístění: e-mail (Exchange) nebo cloudové úložiště (aplikace OneDrive s účtem OneDrive pro firmy).
 
 ### <a name="skype-for-business"></a>Skype pro firmy
 Existují další požadavky na používání Skypu pro firmy. Viz licenční požadavky [Skypu pro firmy](https://products.office.com/skype-for-business/it-pros). Informace o hybridních a místních konfiguracích Skypu pro firmy najdete v článcích [Hybridní moderní ověřování pro Skype pro firmy a Exchange bude všeobecně dostupné](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756) a [Moderní ověřování pro Skype pro firmy v místním prostředí s AAD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910).
@@ -215,12 +215,12 @@ Osobní identifikační číslo (PIN) je heslo, kterým se ověřuje, že s daty
 **Výzva k zadání kódu PIN**<br>
 Intune vyzve uživatele k zadání PINu aplikace, když se uživatel chystá pracovat s podnikovými daty. V aplikacích s více identitami, jako je Word, Excel nebo PowerPoint, se uživateli zobrazí výzva k zadání PIN kódu při pokusu o otevření firemního dokumentu nebo souboru. V aplikacích s jedinou identitou, jako jsou obchodní aplikace spravované pomocí [Nástroje pro zabalení aplikace Intune](../developer/apps-prepare-mobile-application-management.md), se PIN kód zobrazí při spuštění, protože [sada Intune App SDK](../developer/app-sdk.md) ví, že se uživatelské prostředí v aplikaci vždycky zobrazuje jako "Podniková".
 
-**Frekvence výzvy k zadání kódu PIN**<br>
-Správce IT může v konzole pro správu Intune definovat nastavení zásad ochrany aplikací Intune znovu **ověřit požadavky na přístup po (minuty)** . Toto nastavení určuje dobu, než se v zařízení zkontrolují požadavky na přístup a znovu se zobrazí obrazovka pro kód PIN aplikace. Četnost, s jakou se budou uživateli zobrazovat výzvy, ale ovlivňují důležité detaily týkající se kódu PIN:
+**Výzva k zadání kódu PIN nebo výzva k zadání podnikových přihlašovacích údajů, frekvence**<br>
+Správce IT může v konzole pro správu Intune definovat nastavení zásad ochrany aplikací Intune znovu **ověřit požadavky na přístup po (minuty)** . Toto nastavení určuje dobu, po jejímž uplynutí se v zařízení zkontrolují požadavky na přístup a zobrazí se obrazovka pro PIN kód aplikace nebo výzva k zadání podnikových přihlašovacích údajů. Četnost, s jakou se budou uživateli zobrazovat výzvy, ale ovlivňují důležité detaily týkající se kódu PIN:
 
-- **PIN kód se sdílí mezi aplikacemi stejného vydavatele, aby se zlepšila použitelnost:**<br> V systému iOS je jeden PIN kód aplikace sdílený mezi všemi aplikacemi **stejného vydavatele aplikace**. V Androidu se kód PIN jedné aplikace sdílí mezi všemi aplikacemi.
-  - **Po restartování zařízení *znovu ověřit chování požadavků na přístup po (minuty)* :**<br> "Časovač kódu PIN" sleduje počet minut nečinnosti, které určují, kdy se má zobrazit kód PIN aplikace Intune. V systému iOS nemá restart zařízení na časovač kódu PIN vliv. Proto restart zařízení nemá vliv na počet minut, během kterých byl uživatel v aplikaci pro iOS se zásadou pro PIN nečinný. V systému Android restartování zařízení časovač kódu PIN vynuluje. Proto aplikace pro Android se zásadou pro PIN budou pravděpodobně **po restartu zařízení** vyžadovat PIN aplikace bez ohledu na hodnotu nastavení „Překontrolovat požadavky na přístup za (minuty)“.  
-  - **Kumulovaná povaha časovače přidruženého k PIN kódu:**<br> Po zadání kódu PIN pro přístup k aplikaci (App A) a aplikace opustí na zařízení popředí (hlavní vstupní fokus), časovač PIN kódu pro tento PIN kód se obnoví. Jakákoli aplikace (aplikace B), která tento kód PIN sdílí, nevyzve uživatele k jeho zadání, protože časovač se vynuloval. Tato výzva se zobrazí znovu, jakmile je opět splněna hodnota nastavení Překontrolovat požadavky na přístup za (minuty).
+- **PIN kód se sdílí mezi aplikacemi stejného vydavatele, aby se zlepšila použitelnost:**<br> V systému iOS je jeden PIN kód aplikace sdílený mezi všemi aplikacemi **stejného vydavatele aplikace**. Například všechny aplikace Microsoftu mají stejný kód PIN. V Androidu se kód PIN jedné aplikace sdílí mezi všemi aplikacemi.
+- **Po restartování zařízení *znovu ověřit chování požadavků na přístup po (minuty)* :**<br> Časovač sleduje počet minut nečinnosti, které určují, kdy se má zobrazovat PIN kód aplikace Intune, nebo se zobrazí výzva k zadání podnikových přihlašovacích údajů dál. V systému iOS nemá časovač vliv na restartování zařízení. Proto by restart zařízení nemá žádný vliv na počet minut, po který byl uživatel neaktivní z aplikace pro iOS s cílem zásady PIN kódu (nebo podnikových přihlašovacích údajů) v Intune. V Androidu se časovač resetuje při restartování zařízení. Aplikace pro Android s PIN kódem (nebo firemními přihlašovacími údaji) v Intune nejspíš budou vyzváni k zadání PIN kódu aplikace nebo k zobrazení výzvy k zadání podnikových přihlašovacích údajů, a to bez ohledu na nastavení hodnoty po **restartování zařízení**po (minuty).  
+- **Kumulovaná povaha časovače přidruženého k PIN kódu:**<br> Po zadání kódu PIN pro přístup k aplikaci (App A) a aplikace opustí na zařízení popředí (hlavní vstupní fokus), časovač se obnoví pro tento PIN kód. Jakákoli aplikace (aplikace B), která tento kód PIN sdílí, nevyzve uživatele k jeho zadání, protože časovač se vynuloval. Tato výzva se zobrazí znovu, jakmile je opět splněna hodnota nastavení Překontrolovat požadavky na přístup za (minuty).
 
 Na zařízeních s iOSem platí, že i když stejný PIN používají aplikace od různých vydavatelů, zobrazí se výzva znovu po splnění hodnoty nastavení **Znovu zkontrolovat požadavky na přístup po (minuty)** u aplikace, která se nenachází v hlavním fokusu. Představte si například, že má uživatel aplikaci _A_ od vydavatele _X_ a aplikaci _B_ od vydavatele _Y_ a na obou se používá stejný PIN. Uživatel se zaměřuje na aplikaci _A_ (popředí), aplikace _B_ se minimalizuje. Když se splní hodnota **Znovu zkontrolovat požadavky na přístup po (minuty)** a uživatel přepne na aplikaci _B_, bude vyžadován PIN.
 
@@ -262,7 +262,6 @@ Správci IT můžou nasadit zásadu ochrany aplikace, která vyžaduje šifrová
 U obchodních aplikací spravovaných pomocí [Nástroje pro zabalení aplikace Intune](../developer/apps-prepare-mobile-application-management.md)se všechna data aplikací považují za podniková.
 
 **Vzdáleně vymazat data**<br>
-
 Intune může data aplikace vymazat třemi různými způsoby: 
 - Úplné vymazání zařízení
 - Selektivní vymazání pro MDM 

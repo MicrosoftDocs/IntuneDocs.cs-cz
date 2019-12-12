@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c75029c60609b0383e2f647e5b94144d4186248c
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73754876"
 ---
 # <a name="microsoft-edge-baseline-settings-for-intune"></a>Základní nastavení Microsoft Edge pro Intune
@@ -45,9 +45,9 @@ Zobrazení standardních nastavení webového prohlížeče Microsoft Edge, kter
 
   Nastavte minimální podporovanou verzi SSL. Pokud nastavíte tuto zásadu na *nenakonfigurovanou*, Microsoft Edge použije výchozí minimální verzi *TLS 1,0*. Pokud je nastavené na *povoleno*, můžete vybrat minimální verzi z následujících hodnot:
 
-  - TLS 1,0
-  - TLS 1,1
-  - TLS 1,2
+  - TLS 1.0
+  - TLS 1.1
+  - TLS 1.2
 
   - **Minimální povolená verze SSL**  
     **Výchozí**: TLS 1,2
@@ -99,7 +99,7 @@ Zobrazení standardních nastavení webového prohlížeče Microsoft Edge, kter
   - **Podporovaná schémata ověřování**  
     Vyberte z následujících možností: 
     - Basic
-    - otisk
+    - Otisk
     - Protokol NTLM *(vybraný ve výchozím nastavení)*
     - Negotiate *(vybráno ve výchozím nastavení)*
 

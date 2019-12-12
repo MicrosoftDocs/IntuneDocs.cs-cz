@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b4661b151493eb68cc6f71a5a77bd023ac27b826
-ms.sourcegitcommit: 3ace4cba6e2f6fefa9120be3807387a49b200c9b
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72810226"
 ---
 # <a name="set-up-lookout-mobile-endpoint-security-integration-with-intune"></a>Nastavení integrace zabezpečení mobilních koncových bodů pomocí Intune
@@ -51,12 +51,12 @@ Pokud chcete povolit integraci předplatného mobilního koncového bodu zabezpe
 
 1. Přihlaste se k [Azure Portal](https://portal.azure.com) pomocí účtu globálního správce.
 
-2. Přejděte na **Azure Active Directory** **vlastnosti**  >  a vyhledejte **ID adresáře**. Pomocí tlačítka *Kopírovat* zkopírujte ID adresáře a uložte ho do textového souboru.
+2. Přejděte na **Azure Active Directory** **vlastnosti** > a vyhledejte **ID vašeho adresáře**. Pomocí tlačítka *Kopírovat* zkopírujte ID adresáře a uložte ho do textového souboru.
 
    ![Vlastnosti služby Azure AD](./media/lookout-mtd-connector-integration/azure-ad-properties.png)  
 
 3. V dalším kroku Najděte ID skupiny Azure AD pro účty, které používáte k udělení přístupu uživatelům Azure AD k konzole pro vyhledávání. Jedna skupina má *úplný přístup*a druhá skupina pro *omezený přístup* je volitelná. Pro získání *ID objektu*pro každý účet:  
-   1. Chcete-li otevřít podokno *skupiny – všechny skupiny* , přejít na **Azure Active Directory** **skupiny**  > .  
+   1. Chcete-li otevřít podokno *skupiny – všechny skupiny* , otevřete **Azure Active Directory** > **skupiny** .  
 
    2. Vyberte skupinu, kterou jste vytvořili pro *úplný přístup* , a otevřete její podokno *přehledu* .  
 
@@ -75,19 +75,19 @@ Následující kroky se dokončí v konzole pro správu vyhledávání v podniku
 Když podpora vyhledávání vytvoří účet pro hledání v podnikovém účtu, požádejte o podporu hledání na primární kontakt vaší společnosti e-mail s odkazem na přihlašovací adresu URL: https://aad.lookout.com/les?action=consent. 
 
 ### <a name="initial-sign-in"></a>Počáteční přihlášení  
-Při prvním přihlášení na konzolu prohledat mimo jiné se zobrazí stránka souhlasu (https://aad.lookout.com/les?action=consent). Globální správce Azure AD stačí přihlásit a **přijmout**. Následné přihlášení nevyžaduje, aby uživatel měl tuto úroveň oprávnění Azure AD. 
+Při prvním přihlášení ke konzole nástroje pro vyhledávání se zobrazí stránka souhlasu (https://aad.lookout.com/les?action=consent). Globální správce Azure AD stačí přihlásit a **přijmout**. Následné přihlášení nevyžaduje, aby uživatel měl tuto úroveň oprávnění Azure AD. 
 
  Zobrazí se stránka pro vyjádření souhlasu. Vyberte možnost **přijmout** a dokončete registraci. 
    ![snímku obrazovky první přihlašovací stránky v konzole pro hledání](./media/lookout-mtd-connector-integration/lookout_mtp_initial_login.png)
 
 Když souhlasíte a souhlasíte, budete přesměrováni do konzoly pro hledání.
 
-Po dokončení počátečního přihlášení a souhlasu se uživatelé, kteří se přihlásí z https://aad.lookout.com, přesměrují do konzoly výrobců. Pokud se souhlas ještě neudělil, všechny pokusy o přihlášení mají za následek chybnou přihlašovací chybu.
+Po dokončení počátečního přihlášení a souhlasu se uživatelé, kteří se přihlásí z https://aad.lookout.com, přesměrují do konzoly. Pokud se souhlas ještě neudělil, všechny pokusy o přihlášení mají za následek chybnou přihlašovací chybu.
 
 ### <a name="configure-the-intune-connector"></a>Konfigurace konektoru Intune  
 Následující postup předpokládá, že jste dříve vytvořili skupinu uživatelů ve službě Azure AD za účelem testování vašeho nasazení vyhledávání. Osvědčeným postupem je začít s malou skupinou uživatelů, aby mohli správci Intune seznámit s integrací produktů. Po jejich znalosti můžete registraci rozšíříte do dalších skupin uživatelů.
 
-1. Přihlaste se [ke konzole](https://aad.lookout.com) nástroje pro hledání softwaru, vyhledejte**konektory** **systému** >  a pak vyberte **Přidat konektor**.  Vyberte **Intune**.
+1. Přihlaste se ke konzole nástroje pro [hledání](https://aad.lookout.com) a pak na **konektory** **systému** > a pak vyberte **Přidat konektor**.  Vyberte **Intune**.
 
    ![Obrázek konzoly pro hledání s možností Intune na kartě konektory](./media/lookout-mtd-connector-integration/lookout_mtp_setup-intune-connector.png)
 
@@ -95,7 +95,7 @@ Následující postup předpokládá, že jste dříve vytvořili skupinu uživa
 
    ![Obrázek karty nastavení připojení s nakonfigurovanou frekvencí prezenčního signálu](./media/lookout-mtd-connector-integration/lookout-mtp-connection-settings.png)
 
-3. Vyberte **Správa**registrací a **použijte následující skupiny zabezpečení Azure AD k identifikaci zařízení, která by se měla zaregistrovat v Lookout for Work**, zadejte *název skupiny* skupiny Azure AD, který se má použít pro hledání, a pak vyberte Uložit.  **změny**.
+3. Vyberte **Správa**registrací a **použijte následující skupiny zabezpečení Azure AD k identifikaci zařízení, která by se měla zaregistrovat v Lookout for Work**, zadejte *název skupiny* skupiny Azure AD, který se má použít pro hledání, a pak vyberte **Uložit změny**.
 
     ![snímek obrazovky zobrazující stránku registrace konektoru Intune](./media/lookout-mtd-connector-integration/lookout-mtp-enrollment.png)  
 
@@ -119,7 +119,7 @@ Až nakonfigurujete Intune, musíte nastavit připojení, které se bude [zobraz
 Níže najdete další nastavení, která můžete konfigurovat v konzole nástroje pro vyhledávání.  
 
 ### <a name="configure-enrollment-settings"></a>Konfigurace nastavení registrace
-V konzole prohledat v systému vyberte možnost **systém** > **Spravovat** **Nastavení registrace**registrace  > .  
+V konzole prohledat v **systému vyberte systém** > spravovat **Nastavení**registrace > **registrace** .  
 
 - V poli **stav odpojeno**zadejte počet dní, než se nepřipojené zařízení označí jako odpojené.  
 

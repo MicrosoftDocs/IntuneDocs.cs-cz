@@ -18,17 +18,17 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ae3c2380aa27096be2490d2404858179ea9d222e
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72503177"
 ---
 # <a name="incomplete-user-enrollments-report"></a>Sestava nekompletních zápisů uživatelů
 
 Tato sestava obsahuje informace o tom, kde v procesu registrace Portál společnosti uživatelé nedokončují proces registrace.
 
-Pokud se chcete podívat na sestavu **, vyberte** **registrace zařízení** >   > **nekompletní registrace uživatelů**.
+Pokud chcete zobrazit sestavu, vyberte > **Intune** **registrace zařízení** > **nedokončené registrace uživatelů**.
 
 Pomocí těchto informací můžete aktualizovat dokumenty pro připojování, aby uživatelé mohli dokončit registraci. Pokud například končí mnoho uživatelů u podmínek použití, můžete tuto oblast prozkoumat a upravit, aby byla pro uživatele intuitivnější.
 
@@ -79,7 +79,7 @@ Následující tabulky obsahují seznam akcí uživatele, které se dotáže na 
 | EnrollmentWrapUp | Výzva k otevření stránky v Portálu společnosti | iOS/Android | **Zrušit** |
 | EnrollmentWrapUp | Obrazovka registrace zařízení až do dokončení **načítání firemních prostředků** | iOS/Android | Trvalo > 30 minut |
 | DeviceCategory | Výběr kategorie zařízení (pokud ji správce nakonfiguroval) až do kliknutí na **Hotovo** | iOS/Android | Trvalo > 30 minut |
-| PreEnrollmentWizard | Obrazovka nastavení přístupu, pokud byla registrace zahájena, ale vrátila se k nastavení přístupu | iOS/Android| **Odklad** |
+| PreEnrollmentWizard | Obrazovka nastavení přístupu, pokud byla registrace zahájena, ale vrátila se k nastavení přístupu | iOS/Android| **Odložit** |
 | PreEnrollmentWizard | Obrazovka nastavení přístupu až do kliknutí na **Další** na obrazovce **Co dál** | iOS/Android | Trvalo > 30 minut |
 
 #### <a name="platform-screens-section"></a>Část Obrazovky platformy
@@ -106,9 +106,9 @@ Následující tabulky obsahují seznam akcí uživatele, které se dotáže na 
 
 | Název akce | Obrazovka nebo tok | Platforma | Akce |
 | ---- |---- |---- |---- |
-| Dodržování předpisů | Dodržování předpisů zařízením (pokud je správce nakonfiguroval) se v nastavení přístupu po registraci zobrazuje jinak než zeleně.| iOS/Android | **Odklad** |
+| Dodržování předpisů | Dodržování předpisů zařízením (pokud je správce nakonfiguroval) se v nastavení přístupu po registraci zobrazuje jinak než zeleně.| iOS/Android | **Odložit** |
 | Dodržování předpisů | Dodržování předpisů zařízením se zobrazuje jinak než zeleně až do aktualizace, po které se zobrazuje zeleně. | iOS/Android | Trvalo > 30 minut |
-| Aktivovat | Aktivace registrace (pokud ji správce nakonfiguroval) se v nastavení přístupu zobrazuje jinak než zeleně. | iOS/Android | **Odklad** |
+| Aktivace | Aktivace registrace (pokud ji správce nakonfiguroval) se v nastavení přístupu zobrazuje jinak než zeleně. | iOS/Android | **Odložit** |
 | Dodržování předpisů | Aktivace zařízení se zobrazuje jinak než zeleně až do aktualizace, po které se zobrazuje zeleně. | iOS/Android | Trvalo > 30 minut |
 
 ## <a name="next-steps"></a>Další kroky

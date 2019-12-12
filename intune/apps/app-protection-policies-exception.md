@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 18b1b8feda00f5c669b39bc365c637dcd3968078
-ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73984076"
 ---
 # <a name="how-to-create-exceptions-to-the-intune-app-protection-policy-app-data-transfer-policy"></a>Jak vytvořit výjimky zásad pro přenos dat zásad Intune App Protection (APP)
@@ -55,7 +55,7 @@ Po přidání balíčku **Webex** jako výjimky k zásadám přenosu dat MAM se 
 
 - Příklad **WebEx** pro iOS: Pokud chcete určit výjimku pro aplikaci **WebEx** , aby ji mohly vyvolávat spravované aplikace Intune, je nutné přidat výjimku přenosu dat pro následující řetězec: <code>wbx</code>
     
-- Příklad **mapování** iOS: Pokud chcete určit výjimku pro nativní aplikaci **Maps** , aby ji mohly vyvolávat spravované aplikace Intune, je nutné přidat výjimku přenosu dat pro tento řetězec: <code>maps</code>
+- Příklad **map** iOS: Pokud chcete určit výjimku pro nativní aplikaci **Maps** , aby ji mohly vyvolávat spravované aplikace Intune, je nutné přidat výjimku přenosu dat pro následující řetězec: <code>maps</code>
 
 - Příklad **WebEx** pro Android: Pokud chcete určit výjimku pro aplikaci **WebEx** , aby ji mohly vyvolávat spravované aplikace Intune, je nutné přidat výjimku přenosu dat pro následující řetězec: <code>com.cisco.webex.meetings</code>
     

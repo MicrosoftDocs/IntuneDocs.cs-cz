@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: bd02e2b7f9582308109d1e6986d7e6a8014e5af7
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72585891"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Scénář s asistencí – zabezpečené systém Microsoft Office mobilní aplikace 
@@ -112,7 +112,7 @@ V tomto kroku musíte nakonfigurovat požadavky pro přístup k firemním soubor
 | Znovu ověřit požadavky na přístup po (minuty neaktivity) | Pokud je aplikace spravovaná zásadou neaktivní po dobu delší, než je zadaný počet minut nečinnosti, aplikace se vyzve k zadání požadavků na přístup (tj. Připnutí, nastavení podmíněného spuštění), které se má po spuštění aplikace znovu ověřit. | 30 |
 | Tisk organizačních dat | Pokud je zablokovaná, aplikace nemůže tisknout chráněná data. | Blokování |
 | Otevření odkazů aplikací spravovaných zásadou v nespravovaných prohlížečích | Pokud je zablokované, musí se odkazy na aplikace spravované podle zásad otevřít ve spravovaném prohlížeči. | Blokování |
-| Kopírování dat do nespravovaných aplikací | Pokud je blokované, spravovaná data zůstanou ve spravovaných aplikacích. | Povolil |
+| Kopírování dat do nespravovaných aplikací | Pokud je blokované, spravovaná data zůstanou ve spravovaných aplikacích. | Allow |
 
 ## <a name="step-5---assignments"></a>Krok 5 – přiřazení
 

@@ -16,10 +16,10 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3f3359bc5544b3a353271ea17083c8c3acb49742
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72584472"
 ---
 # <a name="windows-update-settings-for-intune"></a>Nastavení služby Windows Update pro Intune  
@@ -28,7 +28,7 @@ Prohlédněte si nastavení aktualizace Windows 10, která můžete [Konfigurova
 
 Když konfigurujete nastavení pro aktualizační kanály Windows 10 v Intune, konfigurujete nastavení web Windows Update. Pokud má nastavení Windows Update závislost na verzi Windows 10, zaznamená se závislost na verzi v podrobnostech nastavení.  
 
-## <a name="update-settings"></a>Aktualizovat nastavení  
+## <a name="update-settings"></a>Aktualizace nastavení  
 
 Nastavení aktualizace řídí, co se bude stahovat a kdy se zařízení stáhne. Další informace o chování jednotlivých nastaveních najdete v referenční dokumentaci k systému Windows.  
 

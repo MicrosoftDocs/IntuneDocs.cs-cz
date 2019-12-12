@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e8b3ee799374f4b3777f771d4bd6e186ddaeb55c
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74564027"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatná verze Intune – Správa aplikací Win32
@@ -83,7 +83,7 @@ Pokud spustíte `IntuneWinAppUtil.exe` z příkazového okna bez parametrů, ná
 Při generování souboru *. intunewin* uložte všechny soubory, které potřebujete odkazovat do podsložky složky nastavení. Pak použijte relativní cestu k odkazování na konkrétní soubor, který potřebujete. Například:
 
 **Zdrojová složka instalačního programu:** *c:\testapp\v1.0*<br>
-**Soubor s licencí:** *c:\testapp\v1.0\licenses\license.txt*
+**License file:** *c:\testapp\v1.0\licenses\license.txt*
 
 Informace o souboru *License. txt* najdete pomocí relativní cesty *licenses\license.txt*.
 
@@ -150,7 +150,7 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
 
 3. Chcete-li provést konfiguraci **příkazu Uninstall**, přidejte k odinstalaci aplikace na základě identifikátoru GUID aplikace úplný příkazový řádek pro odinstalaci. 
 
-    Příklad: `msiexec /x “{12345A67-89B0-1234-5678-000001000000}”`
+    Například: `msiexec /x “{12345A67-89B0-1234-5678-000001000000}”`
 
 4. Nastavte **chování pro instalaci** buď na **systém** , nebo na **uživatele**.
 
@@ -382,7 +382,7 @@ Protokoly agenta na klientském počítači se obvykle nachází ve složce `C:\
 > [!IMPORTANT]
 > Aby bylo možné správně nainstalovat a spustit aplikace pro obchodní prostředí Win32, nastavení antimalwarového programu by mělo vyloučit následující adresáře, aby byly prohledávány:<p>
 > **Na klientských počítačích x64**:<br>
-> *C:\Program Files (x86) \Microsoft Intune Management Extension\Content*<br>
+> *C:\Program Files (x86)\Microsoft Intune Management Extension\Content*<br>
 > *C:\windows\IMECache*
 >  
 > **Na klientských počítačích x86**:<br>

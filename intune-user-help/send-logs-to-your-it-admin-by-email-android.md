@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8eef3af9a82e7a61bc5200bf45143657072d6db7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72508366"
 ---
 # <a name="upload-and-email-logs"></a>Nahrávání a e-mailové protokoly  
@@ -38,7 +38,7 @@ Podrobnosti o skutečných chybách se v zařízení uchovávají ve speciální
 ## <a name="upload-and-email-logs-from-company-portal"></a>Nahrávání a e-mailové protokoly z Portál společnosti  
 
 1. V aplikaci Portál společnosti existují dva způsoby, jak zahájit podporu e-mailu.
-    * Z obrazovky domů: klepněte na **nabídku** > **help** > **e-mailová podpora**.  
+    * Z obrazovky domů: klepněte na **nabídku** >  > **e-mailová podpora**pro **pomoc** .  
     * Z chybové zprávy: klepněte na tlačítko **help** nebo **Odeslat informace**, je-li k dispozici.  
 
     > [!NOTE]
@@ -52,7 +52,7 @@ Podrobnosti o skutečných chybách se v zařízení uchovávají ve speciální
 ## <a name="upload-and-email-logs-from-microsoft-intune-app"></a>Nahrávání a e-mailové protokoly z aplikace Microsoft Intune   
 
 1. V aplikaci Microsoft Intune existují dva způsoby, jak zahájit podporu e-mailu.  
-    * Z domovské obrazovky: klepněte na **nabídku** > **Nápověda** > **získat podporu**.  
+    * Z obrazovky domů: klepněte na **nabídku** > **Nápověda** > **získat podporu**.  
     * Z chybové zprávy: klepněte na tlačítko **help** nebo **Odeslat informace**, je-li k dispozici.  
 
     > [!NOTE]

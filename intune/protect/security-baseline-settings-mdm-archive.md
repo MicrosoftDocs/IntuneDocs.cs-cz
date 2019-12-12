@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3980720101489d32b27957a2e2d3e0e951e58da6
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72509011"
 ---
 <!-- This article contains the exact baseline details for baseline versions that were previously published in security-baseline-settings-mdm.md.  -->
@@ -119,7 +119,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Bit
   - **Metoda šifrování**  
     **Výchozí**: AES 256bit XTS  
 
-### <a name="browser"></a>Browser  
+### <a name="browser"></a>Prohlížeč  
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – prohlížeč](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) .  
 
@@ -194,7 +194,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dat
   
   **Výchozí**: Ano  
 
-### <a name="device-guard"></a>Ochrana zařízení  
+### <a name="device-guard"></a>Device Guard  
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard
 ) .  
@@ -275,12 +275,12 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
     
     **Výchozí**: 10  
   
-  - **Konec platnosti hesla (dny)**  
+  - **Vypršení platnosti hesla (dny)**  
     Nastavení zásad maximální stáří hesla určuje, jak dlouho (ve dnech) se dá heslo použít, než systém vyžaduje, aby ho uživatel změnil. Můžete nastavit, aby platnost hesla vyprší po uplynutí počtu dní od 1 do 999, nebo můžete zadat, že hesla budou nikdy vypršet nastavením počtu dní na hodnotu 0. Pokud je maximální stáří hesla mezi 1 a 999 dny, minimální stáří hesla musí být kratší než maximální stáří hesla. Pokud je maximální stáří hesla nastavené na 0, minimální stáří hesla může být libovolná hodnota mezi 0 a 998 dny.
     
     **Výchozí**: 60  
   
-  - **Vyžadovaný typ hesla**  
+  - **Požadovaný typ hesla**  
     Určuje typ kódu PIN nebo hesla, které se vyžaduje.
     
     **Výchozí**: alfanumerické  
@@ -1127,7 +1127,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – MSS
 - **Přesměrování sítě protokolu ICMP přesměruje vygenerované protokolem OSPF**  
   **Výchozí**: zakázáno
   
-### <a name="power"></a>Vypněte  
+### <a name="power"></a>Napájení  
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – napájení](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power) .  
 
@@ -1241,7 +1241,7 @@ Další informace najdete v tématu [zásady CSP – hledání](https://docs.mic
   
 **Výchozí**: Ano
   
-### <a name="smart-screen"></a>Inteligentní obrazovka  
+### <a name="smart-screen"></a>Smart Screen  
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – filtr](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) .  
 
@@ -1262,7 +1262,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
 
   **Výchozí**: Ano
   
-### <a name="system"></a>Systém  
+### <a name="system"></a>Systému  
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – systém](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system) .  
 
@@ -1335,7 +1335,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   **Výchozí**: blok
   
 - **Zabránit krádeži pověření typu**  
-  Ochrana Credential Guard v programu Windows Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným kódům může vést k útokům využívajícím krádež přihlašovacích údajů, jako je například Pass-the-Hash nebo Pass-The-Ticket. Ochrana Credential Guard v programu Windows Defender brání těmto útokům ochranou hodnot hash hesel protokolu NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.
+  Ochrana Credential Guard v programu Windows Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto důvěrným informacím může vést k útokům zahrnujícím krádeže přihlašovacích údajů, jako je například Pass-the-Hash nebo Pass-The-Ticket. Ochrana Credential Guard v programu Windows Defender brání těmto útokům ochranou hodnot hash hesel protokolu NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.
   
   **Výchozí**: Povolit
 

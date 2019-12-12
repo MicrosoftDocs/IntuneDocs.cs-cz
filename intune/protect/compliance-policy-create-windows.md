@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/02/2019
+ms.date: 12/09/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11cad62f0fd997610feba51a2d28dcfed5658806
-ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
+ms.openlocfilehash: 60a87340c1a275b8fb878ef2f3891cca23fc9c85
+ms.sourcegitcommit: f5108039f0ade52e95ea3ac1da1aa16d02224af3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74691707"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74946650"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení Windows 10 a novějších označení zařízení jako kompatibilních nebo nekompatibilních s Intune
 
@@ -62,7 +62,7 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
   -  **Vyžadovat** – vyžaduje integritu kódu, která detekuje, jestli se do jádra nenačítá nepodepsaný ovladač nebo systémový soubor. Také zjistí, zda je systémový soubor změněn škodlivým softwarem nebo spuštěn pomocí uživatelského účtu s oprávněními správce.
 
-Další zdroje informací:
+Další materiály:
 
 - Podrobnosti o tom, jak služba ověření stavu funguje, najdete v tématu [poskytovatel CSP služby Health Attestation](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp).
 - [Tip podpory: použití nastavení ověření stavu zařízení jako součást zásad dodržování předpisů v Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).
@@ -199,7 +199,7 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
 
 - **Antimalware v programu Microsoft Defender**:  
   - **Nenakonfigurováno** (*výchozí*) – Intune neřídí službu ani nemění stávající nastavení.
-  - **Vyžadovat** – zapnout službu Microsoft Defender anti-malware a zabránit uživatelům v jejich vypnutí. 
+  - **Vyžadovat** – zapnout službu Microsoft Defender anti-malware a zabránit uživatelům v jejich vypnutí.
 
 - **Minimální verze antimalwaru v programu Microsoft Defender**:  
   Zadejte minimální povolenou verzi služby Microsoft Defender anti-malware. Zadejte například `4.11.0.0`. Pokud je ponecháno prázdné, bude možné použít jakoukoli verzi služby Microsoft Defender anti-malware.  
@@ -207,10 +207,12 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
   *Ve výchozím nastavení není nakonfigurována žádná verze*.
 
 - **Microsoft Defender antimalwar Security –** přehledy v aktuálním stavu:  
-  Řídí aktualizace ochrany proti virům a hrozbám zabezpečení systému Windows na zařízeních.  
+  Řídí aktualizace ochrany proti virům a hrozbám zabezpečení systému Windows na zařízeních.
   - **Nenakonfigurováno** (*výchozí*) – Intune neuplatňuje žádné požadavky.
-  - **Vyžadovat** – vynuťte aktuálnost Microsoft Defender Security Intelligence. 
+  - **Vyžadovat** – vynuťte aktuálnost Microsoft Defender Security Intelligence.
 
+  [Defender/Health/SignatureOutOfDate CSP](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
+  
   Další informace najdete v článku [aktualizace Security Intelligence pro antivirovou ochranu v programu Microsoft Defender a další antimalware Microsoftu](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
 - **Ochrana v reálném čase**:  

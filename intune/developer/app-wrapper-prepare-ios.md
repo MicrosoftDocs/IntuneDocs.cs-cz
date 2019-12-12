@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c0fac5e9d34890272253eaefd82ed13dc1014ba0
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73713472"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro iOS na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
@@ -200,7 +200,7 @@ V nástroji App Wrapping Tool můžete používat následující parametry pří
 |**-h**| Zobrazí podrobné informace o použití dostupných vlastností příkazového řádku nástroje App Wrapping. |
 |**– AA**|(Volitelné) `<Authority URI of the input app if the app uses the Azure Active Directory Authentication Library>`, tj. `login.windows.net/common` |
 |**– AC**|(Volitelné) `<Client ID of the input app if the app uses the Azure Active Directory Authentication Library>` Toto je identifikátor GUID v poli ID klienta je ze seznamu vaší aplikace v okně registrace aplikace. |
-|**– ar**|(Volitelné) `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` Toto je identifikátor URI pro přesměrování nakonfigurovaný v registraci vaší aplikace. Obvykle by to byl protokol adresy URL aplikace, kterou Microsoft Authenticator aplikace vrátila po zprostředkované ověřování. |
+|**– ar**|(Volitelné) `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` Toto je identifikátor URI přesměrování konfigurovaný v registraci vaší aplikace. Obvykle by to byl protokol adresy URL aplikace, kterou Microsoft Authenticator aplikace vrátila po zprostředkované ověřování. |
 |**-v**| (Nepovinná) Zobrazí v konzole podrobné zprávy. Tento příznak doporučujeme používat k ladění všech chyb. |
 |**-e**| (Nepovinná) Tímto příznakem zajistíte, že nástroj App Wrapping při zpracování aplikace odebere chybějící oprávnění. Další informace najdete v části [Nastavení oprávnění aplikace](#setting-app-entitlements).|
 |**-xe**| (Nepovinná) Zobrazí informace o rozšířeních iOS v aplikaci a o oprávněních, která potřebujete k jejich používání. Další informace najdete v části [Nastavení oprávnění aplikace](#setting-app-entitlements). |

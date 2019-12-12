@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/25/2019
+ms.date: 12/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fde277e16043662420864adcc0458e3dccad308
-ms.sourcegitcommit: ce518a5dfe62c546a77f32ef372f36efbaad473f
+ms.openlocfilehash: 5f9a01adaa6f5ab59819c2924172c30a437ebd8c
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74465656"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992916"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s iOS a iPadOS pro povolení nebo omezení funkcí pomocí Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Tento článek obsahuje seznam a popisuje různá nastavení, která můžete řídit na zařízeních s iOS a iPadOS. V rámci řešení pro správu mobilních zařízení (MDM) pomocí těchto nastavení můžete povolit nebo zakázat funkce, nastavit pravidla pro hesla, povolit nebo omezit konkrétní aplikace a další.
 
@@ -47,12 +45,12 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 - **Sdílet data o využití**: vyberte možnost **blokovat** , pokud chcete zabránit tomu, aby zařízení odesílalo data o diagnostice a využití do Applu. **Nenakonfigurováno** (výchozí) umožňuje odesílat tato data.
 
-- **Snímek obrazovky**: vyberte možnost **blokovat** , pokud chcete zabránit snímekům obrazovky nebo snímku obrazovky na zařízení. V iOS 9,0 a novějších blokují také nahrávky obrazovky. **Nenakonfigurováno** (výchozí) umožňuje uživateli zachytit obsah obrazovky jako obrázek nebo jako video.
+- **Snímek obrazovky**: Zvolte **bloku** k zabránění snímky obrazovky nebo na zařízení snímky obrazovky. V iOS 9,0 a novějších blokují také nahrávky obrazovky. **Nenakonfigurováno** (výchozí) umožňuje uživateli zachytit obsah obrazovky jako obrázek nebo jako video.
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
 - **Nedůvěryhodné certifikáty TLS**: vyberte **blok** , aby se zabránilo nedůvěryhodným certifikátům TLS (Transport Layer Security) na zařízení. **Nenakonfigurováno** (výchozí) POVOLÍ certifikáty TLS.
-- Povolení bezplatných **aktualizací PKI** **: umožňuje** uživatelům přijímat aktualizace softwaru bez připojení jejich zařízení k počítači.
+- **Zablokovat vysoce dolety aktualizace PKI**: **blok** znemožní uživatelům přijímat aktualizace softwaru bez připojení zařízení k počítači. **Nenakonfigurováno** (výchozí) neaktualizuje toto nastavení na zařízení.
 - **Omezení sledování služby AD**: volbou možnosti **omezit** zakažte identifikátor inzerce zařízení. **Není nakonfigurováno** (výchozí) udržuje povoleno.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
@@ -95,7 +93,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 - **Změny profilu konfigurace**: **blok** zabraňuje změnám konfiguračního profilu na zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživateli instalovat konfigurační profily.
 - **Zámek aktivace**: vyberte **povolit** pro povolení zámek aktivace na zařízeních s iOS pod dohledem. Zámek aktivace znemožňuje opětovné aktivaci ztraceného nebo odcizeného zařízení.
 - **Blokovat odebrání aplikace**: vyberte možnost **blokovat** , pokud chcete uživatelům zabránit v odebírání aplikací. **Nenakonfigurováno** (výchozí) umožňuje uživatelům odebírat aplikace ze zařízení.
-- **Blokuje omezený režim USB**: vyberte možnost **blokovat** , pokud chcete zakázat režim omezeného portu USB na zařízeních pod dohledem. Režim omezeného USB brání příslušenství USB v výměně dat se zařízením, které je po celou hodinu uzamčené. **Není nakonfigurováno** (výchozí) umožňuje režim s omezeným přístupem USB.
+- **Povolí příslušenství USB, když je zařízení zamknuté**: **umožňuje dovolit** , aby data Exchange příslušenství využívala zařízení, které je po celou hodinu uzamčené. **Nenakonfigurováno** (výchozí) neaktualizuje na zařízení režim omezeného portu USB.
 - **Vynutit automatické datum a čas**: **vyžaduje** , aby zařízení pod dohledem, aby automaticky nastavila datum &ho času. Časové pásmo zařízení se aktualizuje, když má zařízení mobilní připojení nebo má Wi-Fi s povolenými službami zjišťování polohy.
 - **Vyžadovat, aby studenti požádali o oprávnění k opuštění kurzu učebnosti**: **vyžadovat** , aby studenti zaregistrovaní v nespravovaném kurzu pomocí aplikace učeben požádali o oprávnění od učitelů k opuštění tohoto kurzu. **Nenakonfigurováno** (výchozí) nenutí studenta požádat o oprávnění.
 
@@ -325,7 +323,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
-- **Kamera**: vyberte možnost **blokovat** , pokud chcete zabránit přístupu k fotoaparátu na zařízení. **Nenakonfigurováno** (výchozí) umožňuje přístup k kameře zařízení.
+- **Fotoaparát**: Zvolte **bloku** zabránit přístupu k fotoaparátu v zařízení. **Nenakonfigurováno** (výchozí) umožňuje přístup k kameře zařízení.
 
   Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
@@ -672,8 +670,8 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
 > - iTunes
 > - Explicitní obsah
 > - Dokumenty a data v iCloudu
-> - Hry pro více hráčů
-> - Přidat Game Center přátelé
+> - Hry pro víc hráčů
+> - Přidat přátele z herního centra
 > - Siri
 
 ## <a name="next-steps"></a>Další kroky

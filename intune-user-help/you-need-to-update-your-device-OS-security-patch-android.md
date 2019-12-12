@@ -1,7 +1,7 @@
 ---
 title: Potřebujete si aktualizovat zařízení s Androidem | Dokumentace Microsoftu
 titlesuffix: Microsoft Intune
-description: Je potřeba aktualizovat operační systém vašeho zařízení s Androidem.
+description: Je potřeba aktualizovat operační systém zařízení s Androidem.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -19,10 +19,10 @@ ROBOTS: ''
 ms.custom: intune-enduser; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f72ecdea6fc9743ad4ee225b2d490e791363be1f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72507723"
 ---
 # <a name="you-need-to-update-your-android-devices-operating-system"></a>Potřebujete si aktualizovat operační systém zařízení s Androidem
