@@ -179,7 +179,7 @@ Po zaregistrování aplikace v rámci tenanta Azure a jejich zobrazení v rámci
 3. Klikněte na **+ Přidat oprávnění**.
 4. Klikněte na **rozhraní API moje organizace používá**. 
 5. Do vyhledávacího pole zadejte **Microsoft Mobile Application Management** (Správa mobilních aplikací Microsoftu).
-6. V části **delegovaná oprávnění**vyberte **DeviceManagementManagedApps. přečte: číst a zapisovat data správy aplikací uživatele***.
+6. V části **delegovaná oprávnění**vyberte **DeviceManagementManagedApps. přečte: číst a zapisovat data správy aplikací uživatele** *.
 7. Klikněte na tlačítko **Přidat oprávnění**.
 
 > [!NOTE]
