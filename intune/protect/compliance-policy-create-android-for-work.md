@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/16/2019
+ms.date: 12/19/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be1fbb72821b61566da84d6f98094c9a2f6ffef2
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 42127964f72177bda1808bf4b9285af52cf32b80
+ms.sourcegitcommit: 42183c87b137710b8529049f8710d47127e99900
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72810255"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75303040"
 ---
 # <a name="android-enterprise-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení Androidu Enterprise k označení zařízení jako kompatibilních nebo nekompatibilních s Intune
 
@@ -56,6 +56,8 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 > [!NOTE] 
 > Následující poskytovatelé ochrany před mobilními hrozbami (MTD) podporují nasazení vlastníků zařízení s Androidem Enterprise pomocí konfigurace aplikace:
 > - Lepší mobilní zařízení 
+> - Check Point SandBlast Mobile
+> - Lookout for Work
 > - Pradeo
 > - Sophos Mobile
 > - Zimperium 
@@ -143,7 +145,7 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 
 - **Zařízení s rootem**: 
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
-  - Zařízení s označením root (jailbreak) jako nevyhovující předpisům.  
+  - **** Zařízení s označením root (jailbreak) jako nevyhovující předpisům.  
 
 - **Vyžadovat, aby zařízení bylo na úrovni hrozby pro zařízení nebo pod**ní: Vyberte maximální povolenou úroveň hrozby pro zařízení vyhodnocenou [službou ochrany před mobilními hrozbami](mobile-threat-defense.md). Zařízení, která přesahují tuto úroveň hrozby, se označí jako nedodržující předpisy. Pokud chcete nastavení použít, zvolte povolenou úroveň ohrožení:
 

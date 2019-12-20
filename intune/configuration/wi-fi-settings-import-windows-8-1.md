@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/18/2018
+ms.date: 12/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,18 +15,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 40569af35a812074cc62546e3f85929416202b3b
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: f79ccdc71ddbfa3f25daef629515fb612de01852
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506424"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207005"
 ---
 # <a name="import-wi-fi-settings-for-windows-devices-in-intune"></a>Import nastavení Wi-Fi pro zařízení s Windows v Intune
 
 Pro zařízení s Windows můžete importovat konfigurační profil Wi-Fi, který jste předtím exportovali do souboru. **Pro zařízení, na kterých běží Windows 10 a vyšší, můžete také [vytvořit profil Wi-Fi](wi-fi-settings-windows.md) přímo v Intune**.
 
-Týká se  
+Platí pro:  
 - Windows 8.1 a vyšší
 - Windows 10 a novější
 - Windows 10 Desktop nebo Mobile
@@ -40,33 +40,36 @@ Na počítači s Windows, který už má nainstalovaný požadovaný profil WiFi
 
 1. Vytvořte místní složku pro exportované profily Wi-Fi, například **c:\WiFi**.
 2. Otevřete příkazový řádek jako správce.
-3. Spusťte příkaz `netsh wlan show profiles` a uveďte název profilu, který chcete exportovat. V tomto příkladu je název profilu **WiFiNázev**.
+3. Spusťte příkaz `netsh wlan show profiles`. Poznamenejte si název profilu, který chcete exportovat. V tomto příkladu je název profilu **WiFiNázev**.
 4. Spusťte příkaz `netsh wlan export profile name="ProfileName" folder=c:\Wifi`. Tento příkaz vytvoří v cílové složce soubor profilu Wi-Fi s názvem **Wi-Fi-WiFiNázev.xml**.
 
 ## <a name="import-the-wi-fi-settings-into-intune"></a>Import nastavení Wi-Fi do Intune
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
-3. Zadejte **název** a **popis** profilu omezení zařízení.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
+3. Zadejte následující nastavení:
+
+    - **Název**: zadejte popisný název profilu. Název **musí** být stejný jako atribut name v souboru XML profilu Wi-Fi. V opačném případě dojde k chybě.
+    - **Popis:** Zadejte popis, který nastavení stručně charakterizuje, a další důležité podrobnosti.
+    - **Platforma**: vyberte **Windows 8.1 a novější**.
+    - **Typ profilu**: vyberte **Import Wi-Fi**.
 
     > [!IMPORTANT]
-    > - Název **musí** být stejný jako atribut name v souboru XML profilu Wi-Fi. V opačném případě dojde k chybě.
     > - Pokud exportujete profil Wi-Fi s předsdíleným klíčem, **musíte** do příkazu přidat `key=clear`. Zadejte například `netsh wlan export profile name="ProfileName" key=clear folder=c:\Wifi`.
-    > - Při použití předsdíleného klíče ve Windows 10 se v Intune zobrazí chyba odstranění problému. Když k ní dojde, profil Wi-Fi se správně přiřadí k zařízení a profil bude fungovat podle očekávání.
+    > - Použití předsdíleného klíče se systémem Windows 10 způsobuje chybu opravy v Intune. Když k ní dojde, profil Wi-Fi se správně přiřadí k zařízení a profil bude fungovat podle očekávání.
     > - Pokud exportujete profil Wi-Fi s předsdíleným klíčem, ověřte si, že je soubor chráněný. Klíč má formát prostého textu, takže jeho ochranu zajišťujete vy.
 
-4. V části **Platforma** vyberte **Windows 8.1 a novější**.
-5. V části **Typ profilu** vyberte **Import Wi-Fi**.
-6. Proveďte konfiguraci následujících nastavení:
-    - **Název připojení**: Zadejte název připojení Wi-Fi. Tento název se zobrazí koncovým uživatelům, když budou procházet dostupné Wi-Fi sítě.
-    - **XML profilu**: Vyberte tlačítko pro procházení a zvolte soubor XML obsahující nastavení profilu Wi-Fi, která chcete importovat.
+4. Zadejte následující nastavení:
+
+    - **Název připojení**: Zadejte název připojení Wi-Fi. Tento název se uživatelům zobrazí, když procházejí dostupné sítě Wi-Fi.
+    - **XML profilu**: klikněte na tlačítko Procházet a vyberte soubor XML obsahující nastavení profilu sítě Wi-Fi, které chcete importovat.
     - **Obsah souboru**: Zobrazuje kód XML vybraného konfiguračního profilu.
-7. Až to budete mít, vyberte **OK** > **Vytvořit** a změny uložte. Profil se vytvoří a zobrazí se v seznamu profilů.
+
+5. Výběrem **OK** uložte změny.
+6. Po dokončení vyberte **OK** > **vytvořit** a vytvořte profil Intune. Po dokončení se Váš profil zobrazí v seznamu **zařízení – konfigurační profily** .
 
 ## <a name="next-steps"></a>Další kroky
 
-Profil se vytvoří, ale nic nedělá. Dále [tento profil přiřaďte](device-profile-assign.md).
+Profil se vytvoří, ale nic nedělá. Dále [Přiřaďte profil](../device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).
 
-## <a name="more-resources"></a>Další materiály
-
-[Přehled nastavení Wi-Fi](wi-fi-settings-configure.md), včetně dalších dostupných platforem
+Podívejte se na [Přehled nastavení sítě Wi-Fi](wi-fi-settings-configure.md), včetně dalších dostupných platforem.

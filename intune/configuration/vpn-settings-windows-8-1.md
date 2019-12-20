@@ -1,12 +1,11 @@
 ---
-title: Nastavení sítě VPN pro zařízení s Windows 8.1 v Microsoft Intune
-titleSuffix: ''
-description: Zjistěte, jaká nastavení můžete v Intune použít ke konfiguraci připojení VPN na zařízeních s Windows 8.1.
+title: Konfigurace nastavení sítě VPN na zařízeních Windows 8.1 v Microsoft Intune – Azure | Microsoft Docs
+description: Přidejte nebo vytvořte konfigurační profil sítě VPN pomocí nastavení konfigurace virtuální privátní sítě (VPN), včetně podrobností o připojení, a nastavení proxy serveru pro zahrnutí IP adresy nebo adresy FQDN a portu TCP v Microsoft Intune na zařízeních s Windows 8.1.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/6/2018
+ms.date: 12/19/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 12267ce4e29fe2d53d01aa8115cafbf2196d50ed
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9f9a1399d5474d79ac8fd48a8aa3a844f20eb640
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72490853"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207039"
 ---
-# <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-windows-81"></a>Nastavení sítě VPN v Microsoft Intune pro zařízení s Windows 8.1
+# <a name="add-vpn-settings-on-windows-81-devices-in-microsoft-intune"></a>Přidat nastavení sítě VPN na zařízeních Windows 8.1 v Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Tento článek popisuje, jaká nastavení můžete v Intune použít ke konfiguraci připojení VPN na zařízeních s Windows 8.1.
 
@@ -33,66 +32,69 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím sezna
 
 ## <a name="base-vpn-settings"></a>Základní nastavení sítě VPN
 
+- **Použít všechna nastavení jenom na Windows 8.1**: nakonfigurujte toto nastavení na klasickém portálu Intune. V centru pro správu Microsoft Endpoint Manageru toto nastavení nejde změnit. Při nastavení **Konfigurace**se všechna nastavení aplikují jenom na zařízení Windows 8.1. Pokud je nastavené na **Nenakonfigurováno**, tato nastavení se vztahují také na zařízení s Windows 10.
+- **Název připojení**: zadejte název tohoto připojení. Tento název uživatelé vidí, když na svém zařízení procházejí seznamem dostupných připojení VPN.
+- **Servery**: přidejte minimálně jeden VPN server, ke kterému se budou zařízení připojovat.
+  - **Přidat**: otevře stránku **Přidat řádek** , kde můžete zadat následující informace:
+    - **Popis**: zadejte popisný název serveru, jako je **Contoso VPN server**.
+    - **IP adresa nebo plně kvalifikovaný**název domény: zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se zařízení připojují. Příklady: **192.168.1.1**, **vpn.contoso.com**.
+    - **Výchozí server**: povolí tento server jako výchozí server, který budou zařízení používat k navázání připojení. Jako výchozí server musí být nastavený jenom jeden server.
+  - **Importovat**: vyhledejte soubor s oddělovači se seznamem serverů ve formátu popis, IP adresa nebo plně kvalifikovaný název domény, výchozí server. Pomocí **OK** servery naimportujte do seznamu **Servery**.
+  - **Export**: exportuje seznam serverů do textového souboru s oddělovači (CSV).
 
-- **Použít všechna nastavení jenom na Windows 8.1** – toto je nastavení, které můžete nakonfigurovat na klasickém portálu Intune. Na portálu Azure Portal toto nastavení nejde změnit. Pokud je nastavené na **Nakonfigurováno**, nastavení platí jenom pro zařízení s Windows 8.1. Pokud je nastavené na **Nenakonfigurováno**, platí nastavení také pro zařízení s Windows 10.
-- **Název připojení** – zadejte název pro toto připojení. Tento název uživatelé vidí, když na svém zařízení procházejí seznamem dostupných připojení VPN.
-- **Servery** – přidejte minimálně jeden VPN server, ke kterému se budou zařízení připojovat.
-  - **Přidat** – otevře podokno **Přidat řádek**, ve kterém můžete zadat následující informace:
-    - **Popis** – zadejte popisný název serveru, například **VPN server Contoso**.
-    - **IP adresa nebo plně kvalifikovaný název domény** – zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se zařízení připojí. Příklady: **192.168.1.1**, **vpn.contoso.com**.
-    - **Výchozí server** – povolí tento server jako výchozí server, který budou zařízení používat k navázání připojení. Jako výchozí server musí být nastavený jenom jeden server.
-  - **Importovat** – vyhledejte soubor, který obsahuje seznam serverů oddělených čárkami ve formátu popis, IP adresa nebo plně kvalifikovaný název domény, výchozí server. Zvolte **OK** a naimportujte tak servery do seznamu **Servery**.
-  - **Exportovat** – exportuje seznam serverů do textového souboru s oddělovači (CSV).
+- **Typ připojení**: z následujícího seznamu dodavatelů vyberte typ připojení VPN:
+  - **Check Point Capsule VPN**
+  - **SonicWall Mobile Connect**
+  - **F5 Edge Client**
+  - **Pulse Secure**
 
-- **Typ připojení** – vyberte typ připojení VPN z tohoto seznamu dodavatelů:
-- **Check Point Capsule VPN**
-- **SonicWall Mobile Connect**
-- **F5 Edge Client**
-- **Pulse Secure**
+<!--- **Fingerprint** (Check Point Capsule VPN only): Specify a string (for example, "Contoso Fingerprint Code") that will be used to verify that the VPN server can be trusted. A fingerprint can be sent to the client so it knows to trust any server that presents the same fingerprint when connecting. If the device doesn’t already have the fingerprint, it will prompt the user to trust the VPN server that they are connecting to while showing the fingerprint. (The user manually verifies the fingerprint and chooses **trust** to connect.) --->
 
-<!--- **Fingerprint** (Check Point Capsule VPN only) - Specify a string (for example, "Contoso Fingerprint Code") that will be used to verify that the VPN server can be trusted. A fingerprint can be sent to the client so it knows to trust any server that presents the same fingerprint when connecting. If the device doesn’t already have the fingerprint, it will prompt the user to trust the VPN server that they are connecting to while showing the fingerprint. (The user manually verifies the fingerprint and chooses **trust** to connect.) --->
+- **Doména nebo skupina přihlášení** (jenom SonicWALL Mobile Connect): zadejte název přihlašovací skupiny nebo domény, ke které se chcete připojit.
 
-- **Doména nebo skupina přihlášení** (jenom SonicWall Mobile Connect) – zadejte název domény nebo skupiny přihlášení, ke které se chcete připojit.
+- **Role** (jenom Pulse Secure): zadejte název role uživatele, která má přístup k tomuto připojení. Role uživatele definuje osobní nastavení a možnosti a povolí nebo zakáže určité funkce přístupu.
 
-- **Role** (pouze Pulse Secure) – zadejte název role uživatele, která má přístup k tomuto připojení. Role uživatele definuje osobní nastavení a možnosti a povolí nebo zakáže určité funkce přístupu.
+- **Sféra** (pouze Pulse Secure): zadejte název sféry ověření, kterou chcete použít. Sféra ověření je seskupení prostředků ověření používaných typem připojení Pulse Secure.
 
-- **Sféra** (pouze Pulse Secure) – zadejte název sféry ověření, kterou chcete použít. Sféra ověření je seskupení prostředků ověření používaných typem připojení Pulse Secure.
+- **Vlastní XML**: Zadejte libovolné vlastní příkazy XML, které KONFIGURUJÍ připojení VPN.
 
+  **Příklad zabezpečení Pulse**:
 
-- **Vlastní XML** – zadejte vlastní příkazy XML pro konfiguraci připojení VPN.
+  ```xml
+  <pulse-schema><isSingleSignOnCredential>true</isSingleSignOnCredential></pulse-schema>
+  ```
 
-**Příklad pro Pulse Secure:**
+  **Příklad kontrolního bodu mobilní sítě VPN**:
 
-```xml
-    <pulse-schema><isSingleSignOnCredential>true</isSingleSignOnCredential></pulse-schema>
-```
+  ```xml
+  <CheckPointVPN port="443" name="CheckPointSelfhost" sso="true" debug="3" />
+  ```
 
-**Příklad pro CheckPoint Mobile VPN:**
+  **Příklad mobilního připojení SonicWALL**:
 
-```xml
-    <CheckPointVPN port="443" name="CheckPointSelfhost" sso="true" debug="3" />
-```
+  ```xml
+  <MobileConnect><Compression>false</Compression><debugLogging>True</debugLogging><packetCapture>False</packetCapture></MobileConnect>
+  ```
 
-**Příklad pro SonicWall Mobile Connect:**
+  **F5 Edge Client příklad**:
 
-```xml
-    <MobileConnect><Compression>false</Compression><debugLogging>True</debugLogging><packetCapture>False</packetCapture></MobileConnect>
-```
+  ```xml
+  <f5-vpn-conf><single-sign-on-credential /></f5-vpn-conf>
+  ```
 
-**Příklad pro F5 Edge Client:**
-
-```xml
-    <f5-vpn-conf><single-sign-on-credential /></f5-vpn-conf>
-```
-
-Další informace o tom, jak psát vlastní příkazy XML, najdete v dokumentaci k síti VPN jednotlivých výrobců.
-
+  Další informace o tom, jak psát vlastní příkazy XML, najdete v dokumentaci k síti VPN od výrobce.
 
 ## <a name="proxy-settings"></a>Nastavení proxy serveru
 
-- **Automaticky zjišťovat nastavení proxy serveru** – pokud VPN server vyžaduje pro připojení proxy server, zadejte, jestli mají zařízení automaticky zjišťovat nastavení připojení. Další informace najdete v dokumentaci k Windows Serveru.
-- **Skript automatické konfigurace** – ke konfiguraci proxy serveru použijte konfigurační soubor. Zadejte **adresu URL proxy serveru** , který obsahuje konfigurační soubor. Zadejte například `http://proxy.contoso.com`.
-- **Použít proxy server** – tuto možnost povolte, pokud chcete zadat nastavení proxy serveru ručně.
-  - **Adresa** – zadejte adresu proxy serveru (jako IP adresu).
-  - **Číslo portu** – zadejte číslo portu přidruženého k proxy serveru.
-- **Obejít proxy server pro místní adresy** – pokud VPN server vyžaduje pro připojení proxy server, vyberte tuto možnost, když nechcete používat proxy server pro místní adresy, které zadáte. Další informace najdete v dokumentaci k Windows Serveru.
+- **Automaticky zjišťovat nastavení proxy**serveru: Pokud server VPN vyžaduje pro připojení proxy server, určete, jestli chcete, aby zařízení automaticky zjišťoval nastavení připojení.
+- **Skript automatické konfigurace**: ke konfiguraci proxy serveru použijte konfigurační soubor. Zadejte **adresu URL proxy serveru** , který obsahuje konfigurační soubor. Zadejte například `http://proxy.contoso.com`.
+- **Použít proxy server**: tuto možnost povolte, pokud chcete ručně zadat nastavení proxy server.
+  - **Adresa**: zadejte adresu proxy server (jako IP adresu).
+  - **Číslo portu**: Zadejte číslo portu přidruženého k proxy serveru.
+- **Obejít proxy server pro místní adresy**: Pokud server VPN vyžaduje pro připojení proxy server, nechcete použít proxy server pro místní adresy, které zadáte, a pak tuto možnost vyberte.
+
+## <a name="next-steps"></a>Další kroky
+
+Profil je vytvořený, ale zatím se nepoužívá. Dále [Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).
+
+Nakonfigurujte nastavení sítě VPN na zařízeních se systémem [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [MacOS](vpn-settings-macos.md)a [Windows 10](vpn-settings-windows-10.md) .

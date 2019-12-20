@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73848ee8301362f14fe2866a57329425d5e5cfbe
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: b566dd58b01a411126ffabb46d526e4480c2ba0a
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74563662"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75205968"
 ---
 # <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Přidání aplikací Office 365 do zařízení s Windows 10 pomocí Microsoft Intune
 
@@ -129,7 +129,7 @@ Pokud jste v rozevíracím seznamu **formát nastavení** vybrali možnost **Ná
 ## <a name="select-scope-tags-optional"></a>Vybrat značky oboru (volitelné)
 Pomocí značek Scope můžete určit, kdo může v Intune zobrazit informace o klientské aplikaci. Úplné podrobnosti o značkách oboru najdete v tématu [použití značek řízení přístupu na základě role a rozsahu pro distribuci IT](../fundamentals/scope-tags.md).
 
-1. Vyberte **obor (značky)**  > **Přidat**.
+1. Vyberte **obor (značky)** > **Přidat**.
 2. Pro vyhledání značek oboru použijte pole **Vybrat** .
 3. Zaškrtněte políčko vedle značek oboru, které chcete této aplikaci přiřadit.
 4. Zvolte **Vybrat** > **OK**.
@@ -142,7 +142,7 @@ Pokud jste v rozevíracím seznamu **formát nastavení** vybrali možnost **zad
 
 Až budete hotoví, v podokně **Přidat aplikaci** zvolte **Přidat**. Aplikace, kterou jste vytvořili, se zobrazí v seznamu aplikací. V dalším kroku přiřadíte aplikace do skupin, které zvolíte. Podrobnosti najdete v článku [Přiřazení aplikací do skupin](~/apps/apps-deploy.md).
 
-## <a name="deployment-details"></a>Podrobnosti nasazení
+## <a name="deployment-details"></a>Podrobnosti o nasazení
 
 Jakmile se zásada nasazení z Intune přiřadí cílovým počítačům prostřednictvím [zprostředkovatele CSP (Office Configuration Service Provider)](https://docs.microsoft.com/windows/client-management/mdm/office-csp), bude koncové zařízení automaticky stahovat instalační balíček z umístění *officecdn.Microsoft.com* . V adresáři *Program Files* se zobrazí dva adresáře:
 
@@ -171,7 +171,7 @@ Nemůžete-li nainstalovat aplikace O365 do zařízení, je nutné zjistit, zda 
 - V zařízení je aktivní síťové připojení. Pokud je zařízení v režimu v letadle, je vypnuté nebo se nachází v umístění bez služby, zásada se nepoužije, dokud nebude navázáno připojení k síti.
 - Jsou splněné požadavky na síť Intune i Office 365 a související rozsahy IP adres jsou dostupné v závislosti na následujících článcích:
 
-  - [Požadavky na konfiguraci a šířka pásma sítě pro Intune](https://docs.microsoft.com/intune/network-bandwidth-use)
+  - [Požadavky na konfiguraci sítě a šířka pásma pro Intune](https://docs.microsoft.com/intune/network-bandwidth-use)
   - [Adresy URL a rozsahy IP adres pro Office 365](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges)
 
 - Této sadě aplikací O365 byly přiřazeny správné skupiny. 
@@ -186,7 +186,7 @@ Až se rozhodnete, že jak Intune, tak i síťová infrastruktura fungují podle
   [Office nainstalované s kliknou a Instalační služba systému Windows na stejném počítači se nepodporuje.](https://support.office.com/article/office-installed-with-click-to-run-and-windows-installer-on-same-computer-isn-t-supported-30775ef4-fa77-4f47-98fb-c5826a6926cd)
 - Přihlášený uživatel by měl mít oprávnění k instalaci aplikací do zařízení.
 - Potvrďte, že neexistují žádné problémy založené na protokolech Windows Prohlížeč událostí protokolů **windows** -> **aplikacích**.
-- Zachytit podrobné protokoly instalace Office během instalace Přitom postupujte takto:<br>
+- Zachytit podrobné protokoly instalace Office během instalace Uděláte to takto:<br>
     1. Aktivujte podrobné protokolování pro instalaci Office na cílových počítačích. Chcete-li to provést, spusťte následující příkaz pro úpravu registru:<br>
         `reg add HKLM\SOFTWARE\Microsoft\ClickToRun\OverRide /v LogLevel /t REG_DWORD /d 3`<br>
     2. Znovu nasaďte sadu Office 365 do cílových zařízení.<br>
@@ -197,7 +197,7 @@ Až se rozhodnete, že jak Intune, tak i síťová infrastruktura fungují podle
 
 ## <a name="errors-during-installation-of-the-app-suite"></a>Chyby při instalaci sady aplikací
 
-Informace o tom, jak zobrazit podrobné protokoly instalace, najdete v tématu [Jak povolit protokolování ULS pro Office 365](https://blogs.technet.microsoft.com/odsupport/2018/06/18/how-to-enable-office-365-proplus-uls-logging) .
+Informace o tom, jak zobrazit podrobné protokoly instalace, najdete v tématu [Jak povolit protokolování ULS pro Office 365](/office/troubleshoot/diagnostic-logs/how-to-enable-office-365-proplus-uls-logging) .
 
 V následující tabulce jsou uvedené běžné kódy chyb, se kterými se můžete setkat, a jejich význam.
 

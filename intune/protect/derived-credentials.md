@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 12/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c4d0772f9a0afce0607d0193bfb82ea6bd22709d
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: f9e8bc347dc6336f665fcabfb4e716fef4818515
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73445327"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207195"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Použití odvozených přihlašovacích údajů v Microsoft Intune
 
@@ -160,28 +160,30 @@ Vyhněte se vyžadování použití odvozeného pověření pro přístup k proc
 
 Před vytvořením zásad, které vyžadují použití odvozených přihlašovacích údajů, nastavte vystavitele přihlašovacích údajů v konzole Intune. Odvozený Vystavitel přihlašovacích údajů je nastavení v rámci tenanta. Klienti podporují pouze jednoho vystavitele najednou.
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a použijte **konfiguraci zařízení** > **odvozené přihlašovací údaje**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte možnost **Správa tenanta** > **konektory a tokeny** > **odvozených přihlašovacích údajů**.
 
-   ![Konfigurace odvozených přihlašovacích údajů v konzole](./media/derived-credentials/configure-provider.png)
+    > [!div class="mx-imgBorder"]
+    > ![nakonfigurovat odvozené přihlašovací údaje v konzole](./media/derived-credentials/configure-provider.png)
 
-2. Zadejte popisný **Zobrazovaný název** pro odvozenou zásadu vystavitele přihlašovacích údajů.  Tento název se nezobrazuje uživatelům zařízení.
+3. Zadejte popisný **Zobrazovaný název** pro odvozenou zásadu vystavitele přihlašovacích údajů.  Tento název se nezobrazuje uživatelům zařízení.
 
-3. U **vystavitele odvozeného pověření**vyberte vystavitele odvozeného pověření, které jste si zvolili pro vašeho tenanta:
+4. U **vystavitele odvozeného pověření**vyberte vystavitele odvozeného pověření, které jste si zvolili pro vašeho tenanta:
    - DISA purebred
    - Entrust Datacard
    - Intercede  
 
-4. Zadejte **adresu URL pro odvozenou přihlašovací údaje** , která poskytuje odkaz na umístění, které obsahuje vlastní pokyny, které uživatelům pomůžou získat odvozené přihlašovací údaje pro vaši organizaci. Pokyny by měly být specifické pro vaši organizaci a pracovní postup, který je nezbytný k získání přihlašovacích údajů od zvoleného vystavitele. Odkaz se zobrazí v aplikaci Portál společnosti a měl by být přístupný ze zařízení.
+5. Zadejte **adresu URL pro odvozenou přihlašovací údaje** , která poskytuje odkaz na umístění, které obsahuje vlastní pokyny, které uživatelům pomůžou získat odvozené přihlašovací údaje pro vaši organizaci. Pokyny by měly být specifické pro vaši organizaci a pracovní postup, který je nezbytný k získání přihlašovacích údajů od zvoleného vystavitele. Odkaz se zobrazí v aplikaci Portál společnosti a měl by být přístupný ze zařízení.
 
    Pokud nezadáte svoji vlastní adresu URL, Intune poskytuje odkaz na obecné podrobnosti, které nemůžou pokrýt všechny scénáře. Tyto obecné doprovodné materiály nemusí být pro vaše prostředí přesné.
 
-5. Vyberte jednu nebo více možností pro **Typ oznámení**. Typy oznámení jsou metody, které slouží k informování uživatelů o následujících scénářích:
+6. Vyberte jednu nebo více možností pro **Typ oznámení**. Typy oznámení jsou metody, které slouží k informování uživatelů o následujících scénářích:
 
    - Pokud chcete získat nové odvozené přihlašovací údaje, zaregistrujte zařízení pomocí vystavitele.
    - Získejte nové odvozené přihlašovací údaje, když se aktuální přihlašovací údaje blíží k vypršení platnosti.
    - Použijte odvozené přihlašovací údaje se zásadou pro ověřování Wi-Fi, VPN, e-mailu nebo aplikací a pro podepisování a šifrování S/MIME.
 
-6. Až budete připraveni, vyberte **Save (Uložit** ) a dokončete konfiguraci odvozeného vystavitele přihlašovacích údajů.
+7. Až budete připraveni, vyberte **Save (Uložit** ) a dokončete konfiguraci odvozeného vystavitele přihlašovacích údajů.
 
 Po uložení konfigurace můžete provádět změny ve všech polích s výjimkou *odvozeného vystavitele přihlašovacích údajů*.  Informace o změně vystavitele najdete v tématu [Změna odvozeného vystavitele přihlašovacích údajů](#change-the-derived-credential-issuer).
 
@@ -203,7 +205,7 @@ Kromě nasazení aplikace v Intune nakonfigurujte síť VPN Intune na aplikaci p
 
 Můžete zadat **odvozená pověření** pro následující typy profilů a účely:
 
-- [Aplikace](#use-derived-credentials-for-app-authentication)
+- [Vyrovnání](#use-derived-credentials-for-app-authentication)
 - [E-mail](../configuration/email-settings-ios.md)
 - [VPN](../configuration/vpn-settings-ios.md)
 - [Podepisování a šifrování S/MIME](certificates-s-mime-encryption-sign.md)
@@ -216,19 +218,20 @@ Můžete zadat **odvozená pověření** pro následující typy profilů a úč
 
 ### <a name="use-derived-credentials-for-app-authentication"></a>Použití odvozených přihlašovacích údajů pro ověřování aplikací
 
-Použijte odvozená pověření pro ověřování pomocí certifikátů u webů a aplikací. Pokud chcete zajistit odvozenou přihlašovací údaje k ověřování aplikací, proveďte v konzole Intune následující kroky:  
+Použijte odvozená pověření pro ověřování pomocí certifikátů u webů a aplikací. Postup při doručování odvozených přihlašovacích údajů pro ověřování aplikací:
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a pokračujte na **Konfigurace zařízení** > **profily** a vyberte **vytvořit profil**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
+3. Zadejte následující nastavení:
 
-2. Do pole **název**zadejte popisný název profilu.
+    - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **odvozená pověření pro profil zařízení s iOS**.
+    - **Popis:** Zadejte popis, který nastavení stručně charakterizuje, a další důležité podrobnosti.
+    - **Platforma**: vyberte **iOS/iPadOS**.
+    - **Typ profilu**: vyberte **odvozené přihlašovací údaje**.
 
-3. U možnosti **Platforma** vyberte **iOS**.
-
-4. Jako **typ profilu**vyberte **odvozené přihlašovací údaje**.
-
-5. Vyberte **OK** a pak klikněte na **vytvořit**.
-
-6. Vyberte **přiřazení** a zvolte, které skupiny mají tyto zásady přijímat.
+4. Výběrem **OK** uložte změny.
+5. Po dokončení vyberte **OK** > **vytvořit** a vytvořte profil Intune. Po dokončení se Váš profil zobrazí v seznamu **zařízení – konfigurační profily** .
+6. Vyberte nové > **přiřazení**profilu. Vyberte skupiny, které by měly tuto zásadu přijímat.
  
 Uživatelé obdrží aplikaci nebo e-mailové oznámení v závislosti na nastaveních, která jste zadali při vytváření odvozeného vystavitele přihlašovacích údajů. Oznámení informuje uživatele o spuštění Portál společnosti tak, aby bylo možné zpracovat odvozené zásady pověření.
 
@@ -252,11 +255,10 @@ Po změně vystavitele se uživatelům zobrazí výzva, aby od nového vystavite
 > [!IMPORTANT]  
 > Pokud odstraníte vystavitele a ihned znovu nakonfigurujete téhož vystavitele, musíte pořád aktualizovat profily a zařízení, aby se použily odvozené přihlašovací údaje od tohoto vystavitele. Odvozené přihlašovací údaje, které byly získány před odstraněním vystavitele, již nejsou platné.
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a použijte **konfiguraci zařízení** > **odvozené přihlašovací údaje**.
-
-2. Vyberte **Odstranit** pro odebrání aktuálního odvozeného vystavitele přihlašovacích údajů.
-
-3. Nakonfigurujte nového vystavitele.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte možnost **Správa tenanta** > **konektory a tokeny** > **odvozených přihlašovacích údajů**.
+3. Vyberte **Odstranit** pro odebrání aktuálního odvozeného vystavitele přihlašovacích údajů.
+4. Nakonfigurujte nového vystavitele.
 
 ### <a name="update-profiles-that-use-derived-credentials"></a>Aktualizovat profily používající odvozené přihlašovací údaje
 
@@ -268,4 +270,4 @@ Po odstranění vystavitele a přidání nového musí uživatel zařízení po�
 
 ## <a name="next-steps"></a>Další kroky
 
-[Vytvoření profilů konfigurace zařízení](../configuration/device-profile-create.md)
+[Vytvořte profily konfigurace zařízení](../configuration/device-profile-create.md).

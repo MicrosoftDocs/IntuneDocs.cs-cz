@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d876c0268f38a09ea3729a7e19ee00b321ae897a
-ms.sourcegitcommit: edd06a494a241d198ca9b0d3030c92195976e0d3
+ms.openlocfilehash: 02c1508dd3eb9c8a8932c1504c6f4d0a53c5a0d5
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75000393"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207379"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Koncové body pro státní správu USA pro Microsoft Intune
 
@@ -31,12 +31,14 @@ Tato stránka obsahuje seznam koncových bodů pro státní správu USA potřebn
 
 Pokud chcete spravovat zařízení za branami firewall a proxy servery, musíte povolit komunikaci s Intune.
 
-- Proxy server musí podporovat **HTTP (80)** i **HTTPS (443)** , protože klienti Intune používají oba protokoly.
+- Proxy server musí podporovat **HTTP (80)** i **HTTPS (443)**, protože klienti Intune používají oba protokoly.
 - U některých úloh (například stahování aktualizací softwaru) vyžaduje Intune neověřený proxy server přístup k manage.microsoft.com.
 
 Nastavení proxy server můžete upravit na jednotlivých klientských počítačích. Nastavení Zásady skupiny můžete použít také ke změně nastavení všech klientských počítačů umístěných za zadaným proxy server.
 
 Spravovaná zařízení musí být nakonfigurovaná tak, aby **všichni uživatelé** měli přístup ke službám přes brány firewall.
+
+Další informace o automatické registraci Windows 10 a registraci zařízení pro státní správu USA najdete v tématu [Nastavení registrace pro zařízení s Windows](../enrollment/windows-enroll.md#windows-10-auto-enrollment-and-device-registration).
 
 Následující tabulky obsahují seznam portů a služeb, ke kterým přistupuje klient Intune:
 
@@ -78,4 +80,3 @@ Více informací najdete v následujících tématech:
 ## <a name="next-steps"></a>Další kroky
 [Koncové body sítě pro Microsoft Intune](intune-endpoints.md)
 
-[Automatická registrace Windows 10 a registrace zařízení](../enrollment/windows-enroll.md#registration-and-enrollment-cnames)

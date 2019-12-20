@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2019
+ms.date: 12/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -13,12 +13,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f9750603d19d9b19697c7d2660351c4586432f6
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: bb146fdee7a1d7d770575334eeed84f73cda8894
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73984186"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207481"
 ---
 # <a name="add-ios-software-update-policies-in-intune"></a>Přidání zásad aktualizace softwaru pro iOS do Intune
 
@@ -32,8 +32,8 @@ Zařízení se přihlašuje k Intune přibližně každých 8 hodin. Pokud je ak
 
 ## <a name="configure-the-policy"></a>Konfigurace zásad
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Vyberte **Aktualizace softwaru** > **Aktualizovat zásady pro iOS** > **Vytvořit**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **zařízení** > **aktualizace zásad pro iOS** > **vytvořit**.
 3. Na kartě **základy** zadejte název této zásady, zadejte popis (volitelné) a pak vyberte **Další**.
 
    ![Karta základy](./media/software-updates-ios/basics-tab.png) 
@@ -77,10 +77,10 @@ Pokyny z týmu podpory pro Intune najdete v tématu [zpoždění viditelnosti ak
 ## <a name="edit-a-policy"></a>Upravit zásadu
 Můžete upravit existující zásadu, včetně změny časových omezení:
 
-1. V části **aktualizace softwaru**vyberte možnost **aktualizovat zásady pro iOS** a pak vyberte zásadu, kterou chcete upravit.
+1. Vyberte **zařízení** > **aktualizace zásad pro iOS**. Vyberte zásadu, kterou chcete upravit.
 
 2. Při prohlížení **vlastností**zásad vyberte **Upravit** pro stránku zásady, kterou chcete upravit.  
-   ![upravit policejní](./media/software-updates-ios/edit-policy.png)   
+   ![upravit zásadu](./media/software-updates-ios/edit-policy.png)   
 
 3. Po zavedení změny vyberte **zkontrolovat + uložit** > **Uložit** , aby se změny uložily, a vraťte se do *vlastností*zásad.  
  

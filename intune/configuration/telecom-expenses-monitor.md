@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 340659adfa3bbd40f98ccec9d8d44e952f7ec9b9
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9c97a3ad329ce0e431c6dc8ef318306e4e002f36
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059928"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207107"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Nastavení služby TEM (Telecom Expense Management) v Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Pomocí Intune můžete spravovat telekomunikační výdaje ze využívání dat na mobilních zařízeních vlastněných organizací. Intune se integruje se [správou telekomunikačních výdajů Datalert](http://datalert.biz/get-started)v Saaswedo. Datalert je řešení pro správu telekomunikačních výdajů v reálném čase, které spravuje využití telekomunikačních dat. Může vám to zabránit nákladným a neočekávaným datům a poplatkům za roaming pro vaše zařízení spravovaná pomocí Intune.
 

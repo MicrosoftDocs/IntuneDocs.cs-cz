@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e3219e32ef9bea838f0c19258d0b22a99083a12
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: fe37ac412d01d3032685a0e66827d20e13b0db64
+ms.sourcegitcommit: 42183c87b137710b8529049f8710d47127e99900
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74261585"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75303079"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Přidání skupin pro uspořádání uživatelů a zařízení
 
@@ -47,7 +47,7 @@ Pomocí následujícího postupu vytvořte novou skupinu.
 
 3. V poli **typ skupiny**vyberte jednu z následujících možností:
 
-    - **Zabezpečení**: skupiny zabezpečení definují, kdo má přístup k prostředkům a jsou doporučováni pro skupiny v Intune. Můžete například vytvořit skupiny pro uživatele, jako jsou **Všichni Charlotte zaměstnanci** nebo **Všichni ženy ve společnosti Contoso**. Nebo můžete vytvořit skupiny pro zařízení, například **všechna zařízení** se systémem iOS nebo **všechna zařízení s Windows 10 pro studenty**.
+    - **Zabezpečení**: skupiny zabezpečení definují, kdo má přístup k prostředkům a jsou doporučováni pro skupiny v Intune. Můžete například vytvořit skupiny pro uživatele, například **všechny zaměstnance Charlotte** nebo **vzdálené pracovní procesy**. Nebo můžete vytvořit skupiny pro zařízení, například **všechna zařízení** se systémem iOS nebo **všechna zařízení s Windows 10 pro studenty**.
 
         > [!TIP]
         > Vytvořené uživatele a skupiny lze také zobrazit v [centru pro správu Microsoft 365](https://admin.microsoft.com), v centru pro správu Azure Active Directory a [Microsoft Intune v Azure Portal](https://go.microsoft.com/fwlink/?linkid=2090973). V tenantovi vaší organizace můžete vytvářet a spravovat skupiny ve všech těchto oblastech.

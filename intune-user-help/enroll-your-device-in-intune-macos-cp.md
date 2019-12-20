@@ -5,7 +5,7 @@ keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/14/2019
+ms.date: 12/16/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: kakyker
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba285fc9de58b3fb739a16722e0e05e36e840e87
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: f26594435689a4f7a178035264e006a497719d3e
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74098118"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75205470"
 ---
 # <a name="enroll-your-macos-device-using-the-company-portal-app"></a>Registrace zařízení macOS pomocí aplikace Portál společnosti  
 
@@ -67,18 +67,17 @@ Pomocí následujících kroků zaregistrujete zařízení macOS ve vaší organ
 
 1. Přihlaste se k Portál společnosti pomocí svého pracovního nebo školního účtu.  
 2. Po otevření aplikace vyberte **začít**.  
-3. Přečtěte si [, co vaše organizace uvidí a](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) neuvidí na zaregistrovaném zařízení. Potom vyberte **Pokračovat**.  
-4. Na obrazovce **Instalace profilu správy** vyberte **Stáhnout profil**.   
+3. Přečtěte si, co vaše organizace uvidí a neuvidí na zaregistrovaném zařízení. Potom vyberte **Pokračovat**.
+4.  Pokud se zobrazí výzva, zadejte heslo zařízení na obrazovce **Instalace profilu správy** .
 
-    ![Ukázkový snímek obrazovky Portál společnosti, instalace profilu správy, zvýraznění tlačítka "profil pro stažení".](./media/install-mgmt-profile-mac-1911.PNG)   
-5. Spustí se Předvolby systému vašeho zařízení. Vyberte **nainstalovat** a pak znovu vyberte **nainstalovat** . Pokud budete vyzváni k zadání hesla zařízení.  
+    ![Příklad obrazovky Portál společnosti, obrazovky pro instalaci profilu správy, zvýrazňování výzvy k zadání hesla](./media/install-management-profile-macos-1912.PNG)   
+5. Na obrazovce **Potvrdit správu zařízení** vyberte **Otevřít Předvolby systému**.  
 
-    ![Ukázkový snímek obrazovky předvoleb macOS systému, výzva k instalaci a zvýraznění tlačítka "instalovat".](./media/system-preference-install-1911.PNG)  
-6. Po instalaci se profil zobrazí v seznamu profily v části **Profil správy.**  
-
-   ![Příklad obrazovky Předvolby systému macOS, obrazovka profily a zvýraznění nainstalovaného profilu správy.](./media/system-preference-verify-1911.PNG)   
-7. Vraťte se na Portál společnosti.   
-8. Vaše organizace může vyžadovat, abyste aktualizovali nastavení zařízení. Po dokončení aktualizace nastavení vyberte možnost **kontrolovat nastavení**.  
+    ![Příklad obrazovky s potvrzením obrazovky potvrdit správu zařízení, zvýraznění "otevřené Předvolby systému".](./media/confirm-device-management-macos-1912.PNG)  
+6. Spustí se Předvolby systému vašeho zařízení. V seznamu profily zařízení vyberte možnost **Profil správy** a pak vyberte **schválit** > **schválit**.  
+    ![Příklad obrazovky Předvolby systému, obrazovka profilu správy, zvýrazňování tlačítka "schválit".](./media/management-profile-approve-macos-1912.PNG)   
+1. Vraťte se do Portál společnosti a vyberte **pokračovat**.    
+2. Vaše organizace může vyžadovat, abyste aktualizovali nastavení zařízení. Po dokončení aktualizace nastavení vyberte možnost **kontrolovat nastavení**.  
 
     ![Ukázkový snímek obrazovky Portál společnosti, aktualizace nastavení zařízení, zvýraznění tlačítka "kontrolovat nastavení".](./media/update-settings-mac-1911.PNG)  
 9. Po dokončení instalace vyberte **Hotovo**.  

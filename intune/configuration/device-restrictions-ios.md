@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f9a01adaa6f5ab59819c2924172c30a437ebd8c
-ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
+ms.openlocfilehash: 476817b70f18fdd45a678ef3e12d1d3312c03dd3
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992916"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206529"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s iOS a iPadOS pro povolení nebo omezení funkcí pomocí Intune
 
@@ -50,7 +50,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
 - **Nedůvěryhodné certifikáty TLS**: vyberte **blok** , aby se zabránilo nedůvěryhodným certifikátům TLS (Transport Layer Security) na zařízení. **Nenakonfigurováno** (výchozí) POVOLÍ certifikáty TLS.
-- **Zablokovat vysoce dolety aktualizace PKI**: **blok** znemožní uživatelům přijímat aktualizace softwaru bez připojení zařízení k počítači. **Nenakonfigurováno** (výchozí) neaktualizuje toto nastavení na zařízení.
+- **Zablokovat vysoce Air aktualizace PKI**: **blok** znemožní uživatelům přijímat aktualizace softwaru, pokud není zařízení připojené k počítači. **Nenakonfigurováno** (výchozí): umožňuje zařízení přijímat aktualizace softwaru bez připojení k počítači.
 - **Omezení sledování služby AD**: volbou možnosti **omezit** zakažte identifikátor inzerce zařízení. **Není nakonfigurováno** (výchozí) udržuje povoleno.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
@@ -93,7 +93,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 - **Změny profilu konfigurace**: **blok** zabraňuje změnám konfiguračního profilu na zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživateli instalovat konfigurační profily.
 - **Zámek aktivace**: vyberte **povolit** pro povolení zámek aktivace na zařízeních s iOS pod dohledem. Zámek aktivace znemožňuje opětovné aktivaci ztraceného nebo odcizeného zařízení.
 - **Blokovat odebrání aplikace**: vyberte možnost **blokovat** , pokud chcete uživatelům zabránit v odebírání aplikací. **Nenakonfigurováno** (výchozí) umožňuje uživatelům odebírat aplikace ze zařízení.
-- **Povolí příslušenství USB, když je zařízení zamknuté**: **umožňuje dovolit** , aby data Exchange příslušenství využívala zařízení, které je po celou hodinu uzamčené. **Nenakonfigurováno** (výchozí) neaktualizuje na zařízení režim omezeného portu USB.
+- **Povolí příslušenství USB, když je zařízení zamknuté**: **umožňuje dovolit** , aby data Exchange příslušenství využívala zařízení, které je po celou hodinu uzamčené. **Nenakonfigurováno** (výchozí) neaktualizuje režim omezeného portu USB na zařízení a příslušenství USB bude zablokováno v přenosu dat ze zařízení, pokud je po celou hodinu uzamčené.
 - **Vynutit automatické datum a čas**: **vyžaduje** , aby zařízení pod dohledem, aby automaticky nastavila datum &ho času. Časové pásmo zařízení se aktualizuje, když má zařízení mobilní připojení nebo má Wi-Fi s povolenými službami zjišťování polohy.
 - **Vyžadovat, aby studenti požádali o oprávnění k opuštění kurzu učebnosti**: **vyžadovat** , aby studenti zaregistrovaní v nespravovaném kurzu pomocí aplikace učeben požádali o oprávnění od učitelů k opuštění tohoto kurzu. **Nenakonfigurováno** (výchozí) nenutí studenta požádat o oprávnění.
 
@@ -189,7 +189,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
   > [!NOTE]
   > Uživatelské rozhraní Intune pro toto nastavení nedělí podporované hodnoty pro iOS a iPadOS. Uživatelské rozhraní může být v budoucí verzi aktualizováno.
 
-- **Vypršení platnosti hesla (dny)** : zadejte počet dní, než bude nutné změnit heslo zařízení.
+- **Vypršení platnosti hesla (dny)**: zadejte počet dní, než bude nutné změnit heslo zařízení.
 - **Zakázat opakované použití předchozích hesel**: zadejte počet nových hesel, která se musí použít, až bude možné znovu použít starou.
 - **Dotykové ID a odemknutí ID obličeje**: vyberte **blok** , abyste zabránili použití otisku prstu nebo obličeje k odemknutí zařízení. **Není nakonfigurováno** umožňuje uživateli odemknout zařízení pomocí těchto metod.
 
@@ -264,7 +264,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 - **Vyžadovat heslo pro iTunes Store pro všechny nákupy**: **vyžaduje** , aby uživatel zadal heslo Apple ID pro každý nákup v aplikaci nebo iTunes. **Nenakonfigurováno** (výchozí) umožňuje nákupy bez výzvy k zadání hesla pokaždé, když.
 - **Nákupy v aplikaci**: vyberte možnost **blokovat** , aby se zabránilo nákupům v aplikaci ze Storu. **Nenakonfigurováno** (výchozí) umožňuje nákup obchodů v běžící aplikaci.
-- **Stáhnout obsah z úložiště obchodu iBooks s označením jako ' Erotika '** : vyberte možnost **blokovat** , pokud chcete zabránit uživatelům v stahování médií z obchodu iBooks úložiště, které je označeno jako erotika. **Nenakonfigurováno** (výchozí) umožňuje uživateli stahovat knihy s kategorií "Erotika".
+- **Stáhnout obsah z úložiště obchodu iBooks s označením jako ' Erotika '**: vyberte možnost **blokovat** , pokud chcete zabránit uživatelům v stahování médií z obchodu iBooks úložiště, které je označeno jako erotika. **Nenakonfigurováno** (výchozí) umožňuje uživateli stahovat knihy s kategorií "Erotika".
 - **Povoluje spravovaným aplikacím psát kontakty na nespravované účty kontaktů**: Když nastavíte možnost **povoleno**, spravované aplikace, jako je například mobilní aplikace Outlook, můžou ukládat nebo synchronizovat kontaktní informace, včetně obchodních a firemních kontaktů, do integrované aplikace pro kontakty pro iOS. Pokud je nastavené na **Nenakonfigurováno** (výchozí), spravované aplikace nemůžou ukládat ani synchronizovat kontaktní informace na integrované aplikaci kontaktů pro iOS na zařízení.
   
   Pokud chcete použít toto nastavení, nastavte možnost **zobrazení firemních dokumentů v nespravovaných aplikacích** na **blokovat**.
@@ -450,7 +450,7 @@ Poznámka potřeba pro datový roaming (Tip nebo důležitá Poznámka pro usnad
   > [!IMPORTANT]
   > Toto nastavení se považuje za akci vzdáleného zařízení. Toto nastavení se proto nezobrazí v profilu správy na zařízení. Pokaždé, když se změní stav osobního hotspotu na zařízení, služba Intune zablokuje **osobní hotspot** . Pokud se v Intune zobrazuje stav sestavy úspěch, pak víte, že funguje, i když se toto nastavení nezobrazí v profilu správy na zařízení.
 
-- **Pravidla pro mobilní použití (jenom spravované aplikace)** : Definujte datové typy, které spravované aplikace můžou používat při použití v mobilních sítích. Možnosti:
+- **Pravidla pro mobilní použití (jenom spravované aplikace)**: Definujte datové typy, které spravované aplikace můžou používat při použití v mobilních sítích. Možnosti:
   - **Zablokovat používání mobilních dat**: blokuje používání mobilních dat pro **všechny spravované aplikace** nebo umožňuje **zvolit konkrétní aplikace**.
   - **Zablokovat používání mobilních dat při roamingu**: při roamingu používejte mobilní data pro **všechny spravované aplikace** nebo **vyberte konkrétní aplikace**.
 
@@ -529,7 +529,7 @@ Poznámka potřeba pro datový roaming (Tip nebo důležitá Poznámka pro usnad
 - **Šifrované zálohování**: **vyžaduje** , aby bylo zálohování zařízení nutné šifrovat.
 - **Synchronizace spravovaných aplikací do cloudu**: **Nenakonfigurováno** (výchozí) umožňuje, aby aplikace Intune spravovaly data na účet iCloud uživatele. **Blok** zabraňuje synchronizaci těchto dat s iCloud.
 - **Blokovat zálohování v podnikové knize**: vyberte možnost **blokovat** , pokud chcete uživatelům zabránit v zálohování podnikových knih. **Nenakonfigurováno** (výchozí) umožňuje uživatelům zálohovat tyto knihy.
-- **Blokování synchronizace metadat v podnikovém adresáři (poznámky a zvýraznění)** : **blok** zabraňuje synchronizaci poznámek a světel v podnikových knihách. **Nenakonfigurováno** (výchozí) umožňuje synchronizaci.
+- **Blokování synchronizace metadat v podnikovém adresáři (poznámky a zvýraznění)**: **blok** zabraňuje synchronizaci poznámek a světel v podnikových knihách. **Nenakonfigurováno** (výchozí) umožňuje synchronizaci.
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
@@ -670,8 +670,8 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
 > - iTunes
 > - Explicitní obsah
 > - Dokumenty a data v iCloudu
-> - Hry pro víc hráčů
-> - Přidat přátele z herního centra
+> - Hry pro více hráčů
+> - Přidat Game Center přátelé
 > - Siri
 
 ## <a name="next-steps"></a>Další kroky

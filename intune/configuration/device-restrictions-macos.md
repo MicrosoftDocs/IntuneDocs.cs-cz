@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b2efdc04414d29fc1d8d200525cb3a4a880ec01
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 6513c09f252d5a914ace4e57e5a593877a387172
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72776890"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206546"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>macOS nastavení zařízení pro povolení nebo omezení funkcí pomocí Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Tento článek obsahuje seznam a popisuje různá nastavení, která můžete řídit na zařízeních macOS. V rámci řešení pro správu mobilních zařízení (MDM) pomocí těchto nastavení můžete povolit nebo zakázat funkce, nastavit pravidla pro hesla, povolit nebo omezit konkrétní aplikace a další.
 
@@ -90,12 +90,12 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
     Tato funkce platí pro:  
     - macOS 10.10.3 a novější
 
-  - **Počet nealfanumerických znaků v hesle**: zadejte počet složitých znaků vyžadovaných v hesle (**0** až **4**).<br>Složitý znak je symbol, například **?** .
+  - **Počet nealfanumerických znaků v hesle**: zadejte počet složitých znaků vyžadovaných v hesle (**0** až **4**).<br>Složitý znak je symbol, například **?**.
   - **Minimální délka hesla**: zadejte minimální délku hesla, které uživatel musí nakonfigurovat (mezi **4** a **16** znaky).
   - **Jednoduchá hesla**: povolí použití jednoduchých hesel, jako je **0000** nebo **1234**.
   - **Maximální počet minut po uzamčení obrazovky, než se požaduje heslo**: Určete, jak dlouho musí být počítač neaktivní, než bude nutné heslo odemknout.
   - **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**: zadejte dobu, po kterou musí být počítač nečinný, než se zamkne obrazovka.
-  - **Vypršení platnosti hesla (dny)** : zadejte počet dnů, po jejichž uplynutí musí uživatel změnit heslo (**1** až **255** dní).
+  - **Vypršení platnosti hesla (dny)**: zadejte počet dnů, po jejichž uplynutí musí uživatel změnit heslo (**1** až **255** dní).
   - **Zakázat opakované použití předchozích hesel**: zadejte počet dříve použitých hesel, která se nesmí znovu použít, od **1** do **24**.
 
 - **Zablokovat uživateli změnu hesla**: vyberte **blok** pro zastavení změny, přidání nebo odebrání hesla. **Nenakonfigurováno** (výchozí) umožňuje přidávat, měnit a odebírat hesla.

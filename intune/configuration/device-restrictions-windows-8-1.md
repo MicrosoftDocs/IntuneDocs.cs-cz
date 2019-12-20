@@ -1,12 +1,12 @@
 ---
-title: Nastavení omezení pro zařízení s Windows 8.1 v Microsoft Intune
+title: Windows 8.1 nastavení omezení pro zařízení v Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
 description: Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s Windows 8.1.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/6/2018
+ms.date: 12/19/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,19 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0df55e79dbc54926c0507889620f2667d7b8bd7b
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 82eaf1bc2c0737e1cc54751ff6fb5751227d180c
+ms.sourcegitcommit: 42183c87b137710b8529049f8710d47127e99900
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72489827"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302970"
 ---
-# <a name="microsoft-intune-windows-81-and-later-device-restriction-settings"></a>Nastavení omezení pro zařízení s Windows 8.1 a novější v Microsoft Intune
+# <a name="microsoft-intune-windows-81-device-restriction-settings"></a>Nastavení omezení Microsoft Intune Windows 8.1 zařízení
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
-Tento článek ukazuje nastavení omezení zařízení v Microsoft Intune, která můžete nakonfigurovat pro zařízení s Windows 8.1 a novější.
-
+V tomto článku se dozvíte, jak Microsoft Intune nastavení omezení zařízení, která můžete nakonfigurovat pro zařízení s Windows 8.1.
 
 ## <a name="general"></a>Obecné
 
@@ -48,8 +45,6 @@ Tento článek ukazuje nastavení omezení zařízení v Microsoft Intune, kter�
 Pokud toto nastavení povolíte pro zařízení s Windows 8.1, všichni uživatelé zařízení musí mít účet Microsoft.
 Šifrování funguje, jenom když zařízení splňuje hardwarové požadavky certifikace [Microsoft InstantGo](https://blogs.windows.com/windowsexperience/2014/06/19/instantgo-a-better-way-to-sleep/#IBHULcTfI4PokO8X.97).
 Pokud vynutíte šifrování na zařízení, je obnovovací klíč přístupný jenom uživatelům s účtem Microsoft, ke kterému přistupují z účtu na Onedrivu. Tento klíč se nedá obnovit jménem uživatele. 
-
-
 
 ## <a name="browser"></a>Prohlížeč
 - **Automatické vyplňování** – Povolí uživatelům změnit nastavení automatického dokončování v prohlížeči.
@@ -75,3 +70,7 @@ Když zapnete toto nastavení můžete také určit **Umístění sestavy protok
 ## <a name="cloud-and-storage"></a>Cloud a úložiště
 - **Adresa URL pracovních složek** – Nastaví adresu URL pracovní složky, aby bylo možné synchronizovat dokumenty na všech zařízeních.
 - **Přístup k aplikaci Windows Pošta bez účtu Microsoft** – Povolí přístup k aplikaci Windows Pošta bez účtu Microsoft.
+
+## <a name="next-steps"></a>Další kroky
+
+Vytvořte profil omezení zařízení ve [Windows 10 a novějším](device-restrictions-windows-10.md).

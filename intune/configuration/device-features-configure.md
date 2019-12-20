@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d887c7bc3c7e9ea8b6719993b5ba4909e9c18ea8
-ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
+ms.openlocfilehash: 1fb628d68f50ce1862b3cce51f9fd08804d042a6
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992936"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206716"
 ---
 # <a name="add-ios-or-macos-device-feature-settings-in-intune"></a>Přidání nastavení funkcí zařízení se systémem iOS nebo macOS v Intune
 
@@ -46,13 +46,13 @@ Seznam nastavení, která můžete nakonfigurovat v Intune, najdete v článku o
 
 Další informace o protiskech najdete v tématu [o](https://support.apple.com/HT201311) prostudování na webu společnosti Apple.
 
-Týká se
+Platí pro:
 
 - iOS 7,0 a novější
 - iPadOS 13,0 a novější
 - macOS 10,10 a novější
 
-## <a name="app-notifications"></a>App notifications
+## <a name="app-notifications"></a>Oznámení aplikací
 
 Vyberte způsob, jakým aplikace na zařízeních s iOS a iPadem dostanou oznámení. Například z Intune můžete odesílat oznámení aplikací tak, aby se zobrazovala v centru oznámení, zobrazit na zamykací obrazovce nebo přehrát zvuk.
 
@@ -60,7 +60,7 @@ Seznam nastavení, která můžete nakonfigurovat v Intune, najdete v tématu [o
 
 Další informace o této funkci najdete v tématu [oznámení](https://developer.apple.com/notifications/) na webu společnosti Apple.
 
-Týká se
+Platí pro:
 
 - iOS 9,3 a novější
 - iPadOS 13,0 a novější
@@ -78,7 +78,7 @@ Seznam nastavení, která můžete nakonfigurovat v Intune, najdete v tématu [p
 
 Další informace o této funkci najdete v tématu [nastavení přidružených domén aplikace](https://developer.apple.com/documentation/security/password_autofill/setting_up_an_app_s_associated_domains) na webu společnosti Apple.
 
-Týká se
+Platí pro:
 
 - macOS 10,15 a novější
 
@@ -91,7 +91,7 @@ Tato nastavení konfigurují rozložení a složky aplikace v Dock a na domácí
 
 Seznam nastavení, která můžete nakonfigurovat v Intune, najdete v tématu [rozložení domovské obrazovky v systému iOS](ios-device-features-settings.md#home-screen-layout).
 
-Týká se
+Platí pro:
 
 - iOS 9,3 a novější
 - iPadOS 13,0 a novější
@@ -104,7 +104,7 @@ Seznam nastavení, která můžete nakonfigurovat v Intune, najdete v tématu [N
 
 Další informace o zprávě zamykací obrazovky najdete v tématu [LockScreenMessage](https://developer.apple.com/documentation/devicemanagement/lockscreenmessage) na webu společnosti Apple.
 
-Týká se
+Platí pro:
 
 - iOS 9,3 a novější
 - iPadOS 13,0 a novější
@@ -115,7 +115,7 @@ Pomocí této funkce můžete zvolit aplikace, vlastní aplikace, soubory a slo�
 
 Seznam nastavení, která můžete nakonfigurovat v Intune, najdete v tématu [přihlášení k položkám v MacOS](macos-device-features-settings.md#login-items).
 
-Týká se
+Platí pro:
 
 - macOS 10,13 a novější
 
@@ -125,7 +125,7 @@ Můžete ovládat vzhled přihlašovací obrazovky a funkcí, které uživatelé
 
 Seznam nastavení, která můžete v Intune nakonfigurovat, najdete v tématu [přihlašovací okno v MacOS](macos-device-features-settings.md#login-window).
 
-Týká se
+Platí pro:
 
 - macOS 10,7 a novější
 
@@ -142,7 +142,7 @@ Pokud chcete použít jednotné přihlašování, ujistěte se, že máte:
 
 Seznam nastavení, která můžete v Intune nakonfigurovat, najdete v tématu [jednotné přihlašování v iOS](ios-device-features-settings.md#single-sign-on).
 
-Týká se
+Platí pro:
 
 - iOS 7,0 a novější
 - iPadOS 13,0 a novější
@@ -175,19 +175,19 @@ Další informace o vývoji rozšíření aplikace jednotného přihlašování 
 >
 > - Integrované **rozšíření pro jednotné přihlašování** pomocí protokolu Kerberos zpracovává výzvy protokolu Kerberos pro webové stránky a aplikace stejně jako **jednotné přihlašování**. Integrované rozšíření protokolu Kerberos ale podporuje změny hesla a v podnikových sítích je lépe fungovat. Při rozhodování mezi **rozšířením jednotného přihlašování** pomocí protokolu Kerberos a **jednotným přihlašováním**doporučujeme použít rozšíření kvůli lepšímu výkonu a funkcím.
 
-Týká se
+Platí pro:
 
 - iOS 13,0 a novější
 - iPadOS 13,0 a novější
 - macOS 10,15 a novější
 
-## <a name="wallpaper"></a>Tapeta
+## <a name="wallpaper"></a>Lock
 
 Přidejte vlastní obrázek. png,. jpg nebo. jpeg do zařízení se systémem iOS pod dohledem. Pomocí Intune můžete například přidat logo společnosti do zamykací obrazovky na svých zařízeních.
 
 Seznam nastavení, která můžete nakonfigurovat v Intune, najdete v tématu [Tapeta v iOS](ios-device-features-settings.md#wallpaper).
 
-Týká se
+Platí pro:
 
 - iOS
 - iPadOS 13,0 a novější
@@ -198,7 +198,7 @@ Tato nastavení mohou použít vestavěný algoritmus automatického filtru spol
 
 Seznam nastavení, která můžete v Intune nakonfigurovat, najdete v tématu věnovaném [filtru webového obsahu v iOS](ios-device-features-settings.md#web-content-filter).
 
-Týká se
+Platí pro:
 
 - iOS 7,0 a novější
 - iPadOS 13,0 a novější

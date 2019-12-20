@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02d1311be0943d93f80f2f5a1c3f421d476af1e5
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 5a65000d46941876b95e0b110d21f2dfb900ca33
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059830"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206223"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Vytvoření profilu Wi-Fi s předsdíleným klíčem pomocí vlastního profilu zařízení v Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Předsdílený klíč (PSK) se obvykle používá k ověřování uživatelů v sítích Wi-Fi nebo bezdrátových sítích LAN. V Intune můžete vytvořit profil Wi-Fi s využitím předsdíleného klíče. Pokud chcete vytvořit profil, použijte funkci **vlastních profilů zařízení** v Intune. Tento článek také obsahuje několik příkladů vytvoření profilu Wi-Fi založeného na protokolu EAP.
 
@@ -227,7 +227,7 @@ Následující příklad obsahuje kód XML pro profil Wi-Fi založený na protok
 
 Můžete také vytvořit soubor XML z existujícího připojení Wi-Fi. V počítači se systémem Windows použijte následující postup:
 
-1. Vytvořte místní složku pro exportované profily W-Fi, například c:\WiFi.
+1. Vytvořte místní složku pro exportované profily W-Fi, například c:\WiFi..
 2. Otevřete příkazový řádek jako správce (klikněte pravým tlačítkem na `cmd` > **Spustit jako správce**).
 3. Spusťte `netsh wlan show profiles`. Zobrazí se názvy všech profilů.
 4. Spusťte `netsh wlan export profile name="YourProfileName" folder=c:\Wifi`. Tento příkaz vytvoří soubor s názvem `Wi-Fi-YourProfileName.xml` v c:\Wifi.

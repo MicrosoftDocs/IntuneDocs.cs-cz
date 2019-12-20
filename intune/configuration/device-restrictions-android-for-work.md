@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/09/2019
+ms.date: 12/19/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 904c3d2267decdfa3929bf29376c05a995c77eb8
-ms.sourcegitcommit: f5108039f0ade52e95ea3ac1da1aa16d02224af3
+ms.openlocfilehash: b6afd80517df3496e0c1402fc0c76f3fc24969fa
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74946646"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206597"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s androidem Enterprise k povolení nebo zakázání funkcí pomocí Intune
 
@@ -211,6 +211,7 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
   > [!NOTE]
   > Toto nastavení se nedodržuje u zařízení vlastníka zařízení (plně spravovaná). Pokud toto nastavení nakonfigurujete, nastavení se ignoruje a nemá žádný vliv.
 
+- **Uživatel může nakonfigurovat přihlašovací údaje**: **blok** znemožní uživatelům konfigurovat certifikáty přiřazené k zařízením, dokonce i zařízení, která nejsou přidružená k uživatelskému účtu. **Není nakonfigurováno** , může umožnit uživatelům konfigurovat nebo měnit své přihlašovací údaje, když k nim přistupují v úložišti klíčů. 
 - **Osobní účty Google**: **blok** zabraňuje uživatelům v přidávání osobního účtu Google do zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživatelům přidat svůj osobní účet Google.
 
 ### <a name="applications"></a>Aplikací
@@ -292,6 +293,9 @@ Tato nastavení se vztahují na typy registrace Androidu Enterprise, kde Intune 
 
 - **Přidat nebo odebrat účty**: Zvolte **bloku** aby koncoví uživatelé ručně přidávali nebo odebírali účty v pracovním profilu. Když do pracovního profilu Androidu nasadíte například aplikaci Gmail, můžete zabránit tomu, aby koncoví uživatelé přidávali nebo odebírali účty v tomto pracovním profilu. **Není nakonfigurováno** umožňuje přidání účtů v pracovním profilu.  
 
+  > [!NOTE]
+  > Účty Google se nedají přidat do pracovního profilu.
+
 - **Sdílení kontaktů přes Bluetooth**: Povoluje přístup k pracovním kontaktům z jiného zařízení, například ze zařízení v autě, které je spárováno pomocí Bluetooth. Ve výchozím nastavení toto nastavení není nakonfigurováno a pracovní kontakty se nezobrazují. Vyberte **Povolit** a sdílení povolte, aby se zobrazily kontakty pracovního profilu. Toto nastavení platí pro zařízení s pracovním profilem Android v systému Android OS v6.0 a novějších. Když toto nastavení povolíte, budou určitá zařízení Bluetooth ukládat pracovní kontakty do mezipaměti při prvním připojení. V případě jejího zakázání po počátečním zpárování/synchronizaci se pracovní kontakty ze zařízení Bluetooth nemusí odstranit.
 
 - **Snímek obrazovky**: Zvolte **bloku** k zabránění snímky obrazovky nebo v pracovním profilu zařízení snímky obrazovky. Brání tím také zobrazení obsahu na zobrazovacích zařízeních, která nemají bezpečný výstup videa. **Není nakonfigurováno** umožňuje získat snímky obrazovky.
@@ -312,7 +316,7 @@ Tato nastavení se vztahují na typy registrace Androidu Enterprise, kde Intune 
 - **Minimální délka hesla**: zadejte minimální počet znaků, které uživatelské heslo musí obsahovat, **4**-**16**.
 - **Maximální doba neaktivity v minutách, než se pracovní profil zamkne**: umožňuje vybrat dobu, po které se pracovní profil zamkne. Potom musí uživatel zadat svoje přihlašovací údaje znovu, když bude chtít získat přístup.
 - **Počet neúspěšných přihlášení před vymazáním obsahu zařízení**: zadejte, kolikrát může uživatel zadat nesprávné heslo, než se pracovní profil ze zařízení vymaže.
-- **Konec platnosti hesla (dny)** : zadejte počet dnů, po kterém uživatel bude muset změnit heslo (**1**-**255**).
+- **Konec platnosti hesla (dny)**: zadejte počet dnů, po kterém uživatel bude muset změnit heslo (**1**-**255**).
 - **Požadovaný typ hesla**: vyberte typ hesla, které musí být na zařízení nastaveno. Vybírejte z těchto možností:
   - **Výchozí ze zařízení**
   - **Biometrika s nízkým zabezpečením**
@@ -333,7 +337,7 @@ Tato nastavení hesla platí pro osobní profilů na zařízeních používajíc
 - **Minimální délka hesla**: zadejte minimální počet znaků, které uživatelské heslo musí obsahovat, **4**-**14**.
 - **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**: umožňuje vybrat dobu, po které neaktivní zařízení automaticky zamkne.
 - **Počet neúspěšných přihlášení před vymazáním obsahu zařízení**: zadejte, kolikrát může uživatel zadat nesprávné heslo, než se ze zařízení vymažou veškerá data.
-- **Konec platnosti hesla (dny)** : zadejte počet dnů, po kterém uživatel bude muset změnit heslo (**1**-**255**).
+- **Konec platnosti hesla (dny)**: zadejte počet dnů, po kterém uživatel bude muset změnit heslo (**1**-**255**).
 - **Požadovaný typ hesla**: vyberte typ hesla, které musí být na zařízení nastaveno. Vybírejte z těchto možností:
   - **Výchozí ze zařízení**
   - **Biometrika s nízkým zabezpečením**

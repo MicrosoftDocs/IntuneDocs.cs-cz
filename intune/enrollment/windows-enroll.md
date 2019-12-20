@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b84cd52dfe2eb6332ddbc89bc00a17ec3361b79
-ms.sourcegitcommit: edd06a494a241d198ca9b0d3030c92195976e0d3
+ms.openlocfilehash: add92c038e33ba1b5873eb0e9588242f8f3d0f57
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75000427"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207430"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Nastavení registrace pro zařízení s Windows
 
@@ -44,8 +44,8 @@ Způsob zjednodušení registrace zařízení s Windows určují dva faktory:
 
 ||**Azure AD Premium**|**Jiné AD**|
 |----------|---------------|---------------|  
-|**Windows 10**|[Automatická registrace](#enable-windows-10-automatic-enrollment) |Registrace uživatele|
-|**Starší verze Windows**|Registrace uživatele|Registrace uživatele|
+|**Windows 10**|[Automatická registrace](#enable-windows-10-automatic-enrollment) |Zápis uživatele|
+|**Starší verze Windows**|Zápis uživatele|Zápis uživatele|
 
 Organizace, které mohou používat automatickou registraci, také mohou nakonfigurovat [hromadnou registraci zařízení](../windows-bulk-enroll.md) v aplikaci Windows Configuration Designer.
 
@@ -102,7 +102,7 @@ EnterpriseEnrollment-s.manage.microsoft.com je upřednostňovaný plně kvalifik
 Použití jiné metody než konfigurace CNAME není podporováno. Například použití proxy server k přesměrování enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc na enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc nebo manage.microsoft.com/EnrollmentServer/Discovery.svc není podporováno.
 
 **Krok 2: Ověřte záznamy CNAME** (volitelné)<br>
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** >  > Windows **registrace** > **CNAME ověřování**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **** > Windows **registrace** > **CNAME ověřování**.
 2. Do pole **Doména** zadejte web společnosti a zvolte **Test**.
 
 ## <a name="tell-users-how-to-enroll-windows-devices"></a>Informování uživatelů, jak zařízení s Windows zaregistrovat
@@ -123,11 +123,14 @@ Azure Active Directory má jiný záznam CNAME, který používá k registraci z
 
 | Typ | Název hostitele | Odkazuje na | Hodnota TTL |
 | --- | --- | --- | --- |
-| JMÉNO | EnterpriseRegistration. company_domain. com | EnterpriseRegistration.windows.net | 1 hodina|
+| Jméno | EnterpriseRegistration. company_domain. com | EnterpriseRegistration.windows.net | 1 hodina|
 
 Další informace o registraci zařízení najdete v tématu [Správa identit zařízení pomocí Azure Portal](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal) .
 
 ## <a name="windows-10-auto-enrollment-and-device-registration"></a>Automatický zápis a registrace zařízení s Windows 10
+
+Tato část se vztahuje na zákazníky v cloudu pro státní správu USA.
+
 Vytváření položek CNAME DNS není povinné, ale záznamy CNAME usnadňují uživatelům registraci. Pokud nebude nalezen žádný záznam CNAME pro registraci, zobrazí se uživatelům výzva k zadání názvu serveru MDM, enrollment.manage.microsoft.us.
 
 | Typ | Název hostitele | Odkazuje na | Hodnota TTL |

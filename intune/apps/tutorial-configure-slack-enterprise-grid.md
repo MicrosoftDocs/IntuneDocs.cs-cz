@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3b01c1444b44e3f5c66fc129f78f321c9c9f5aa
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: dce6d71a4bc056146b581458d5c39325adad1584
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74563403"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206903"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Kurz: Konfigurace časové rezervy pro používání služby Intune pro modul EMM a konfiguraci aplikací
 
@@ -48,32 +48,31 @@ Budete také potřebovat plán [podnikové mřížky s časovou rezervou](https:
 Pomocí [pokynů pro časovou rezervu](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm) zapněte modul EMM pro plán podnikové mřížky s časovou rezervou a [Připojte Azure Active Directory](https://docs.microsoft.com/azure/active-directory/saas-apps/slack-tutorial) jako zprostředkovatele identity (IDP) vašeho plánu.
 
 ## <a name="sign-in-to-intune"></a>Přihlášení k Intune
-Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) jako globální správce nebo správce služby Intune. Pokud jste vytvořili zkušební předplatné Intune, účet, z něhož jste toto předplatné vytvořili, je globálním správcem.
+Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) jako globální správce nebo správce služby Intune. Pokud jste vytvořili zkušební předplatné Intune, účet, z něhož jste toto předplatné vytvořili, je globálním správcem.
 
 ## <a name="set-up-slack-for-emm-on-ios-devices"></a>Nastavení časové rezervy pro modul EMM na zařízeních s iOS
 Přidejte do tenanta Intune časovou rezervu aplikace pro systém iOS pro modul EMM a vytvořte zásadu konfigurace aplikace, která umožní uživatelům iOS vaší organizace povolit přístup k časové rezervě v Intune jako poskytovatel EMM.
 
 ### <a name="add-slack-for-emm-to-intune"></a>Přidání časové rezervy pro modul EMM do Intune
 Přidejte časovou rezervu pro modul EMM jako spravovanou aplikaci pro iOS v Intune a přiřaďte uživatele časové rezervy. Aplikace jsou specifické pro platformu, takže potřebujete přidat samostatnou aplikaci Intune pro uživatele časové rezervy na zařízeních s Androidem.
-1. V Intune vyberte **aplikace** > **všechny aplikace** > **Přidat**.
-2. V části Typ aplikace vyberte **Store app-iOS**.
-3. Vyberte **Hledat v App Storu**. Zadejte hledaný termín "časová rezerva pro modul EMM" a vyberte aplikaci.
-4. Vyberte **informace o aplikaci** a podle potřeby nakonfigurujte libovolné změny.
-5. Vyberte **Přidat**.
-6. Na panelu hledání zadejte "časová rezerva pro modul EMM" a vyberte aplikaci, kterou jste právě přidali.
-7. V možnosti Spravovat vyberte **přiřazení**.
-8. Vyberte **Přidat skupinu**. V závislosti na tom, na koho jste se zapnuli, když zapnete modul EMM pro časovou rezervu, vyberte v části **Typ přiřazení** , který chcete vybrat:
+1. V centru pro správu vyberte **aplikace** > **všechny aplikace** > **Přidat**.
+2. V části **Typ aplikace**vyberte aplikace pro **iOS** Store.
+3. Vyberte **Hledat v App Storu**. Zadejte hledaný termín "časová rezerva pro modul EMM" a vyberte aplikaci. V podokně Hledat v **App Storu** klikněte na **Vybrat** .
+4. Vyberte **informace o aplikaci** a podle potřeby nakonfigurujte libovolné změny. Vyberte **OK** a nastavte informace o aplikaci.
+5. Klikněte na tlačítko **Add** (Přidat).
+6. Zvolte **Přiřazení**.
+7. Klikněte na **Přidat skupinu**. V závislosti na tom, na koho jste se zapnuli, když zapnete modul EMM pro časovou rezervu, vyberte v části **Typ přiřazení** , který chcete vybrat:
     - **K dispozici pro zaregistrovaná zařízení** , pokud jste zvolili "Všichni členové (včetně hostů)" nebo
     - **K dispozici s registrací nebo bez registrace** , pokud jste vybrali "Všichni členové (kromě hostů)" nebo "volitelné".
-9. Vyberte **zahrnuté skupiny** a v části zpřístupnit tuto aplikaci všem uživatelům vyberte **Ano**.
-10. Klikněte na **OK**a pak znovu na **OK** .
-11. Klikněte na **Uložit**.
+8. Vyberte **zahrnuté skupiny** a v části **zpřístupnit tuto aplikaci všem uživatelům** vyberte **Ano**.
+9. Klikněte na **OK**a potom znovu klikněte na **OK** a přidejte skupinu.
+10. Klikněte na **Uložit**.
 
 ### <a name="add-an-app-configuration-policy-for-slack-for-emm"></a>Přidání zásad konfigurace aplikace pro časovou rezervu pro modul EMM
 Přidejte zásady konfigurace aplikace pro časovou rezervu pro modul EMM iOS. Zásady konfigurace aplikací pro spravovaná zařízení jsou specifické pro konkrétní platformu, takže musíte přidat samostatnou zásadu pro uživatele časové rezervy na zařízeních s Androidem.
-1. V Intune vyberte **aplikace** > **zásady konfigurace aplikací** > **Přidat**.
-2. Do název zadejte Test zásad konfigurace aplikace pro časovou rezervu.
-3. V části typ registrace zařízení vyberte **spravovaná zařízení**.
+1. V centru pro správu vyberte **aplikace** > **zásady konfigurace aplikací** > **Přidat** > **spravovaná zařízení**.
+2. Do název zadejte ' test zásad konfigurace aplikace pro časovou rezervu '.
+3. V části typ registrace zařízení potvrďte, že je nastavená **spravovaná zařízení** .
 4. V části platforma vyberte **iOS**.
 5. Vyberte **přidružená aplikace**.
 6. Na panelu hledání zadejte "časová rezerva pro modul EMM" a vyberte aplikaci.
@@ -86,7 +85,7 @@ Přidejte zásady konfigurace aplikace pro časovou rezervu pro modul EMM iOS. Z
 
 ### <a name="optional-create-an-ios-device-compliance-policy"></a>Volitelné Vytvoření zásady dodržování předpisů pro zařízení s iOS
 Nastavte zásadu dodržování předpisů zařízením s iOSem v Intune a nastavte podmínky, které zařízení musí splnit, než bude považováno za vyhovující. Pro účely tohoto kurzu vytvoříme zásadu dodržování předpisů pro zařízení s iOSem. Zásady dodržování předpisů jsou specifické pro konkrétní platformu, takže musíte vytvořit samostatnou zásadu pro uživatele časové rezervy na zařízeních s Androidem.
-1. V Intune vyberte **Dodržování předpisů zařízením** > **Zásady** > **Vytvořit zásadu**.
+1. V centru pro správu vyberte **zásady** > **dodržování předpisů zařízením** > **vytvořit zásadu**.
 2. Do název zadejte "test zásad dodržování předpisů pro iOS".
 3. V části Popis zadejte "test zásad dodržování předpisů pro iOS".
 4. V části platforma vyberte **iOS**.

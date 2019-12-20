@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 12/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 947472c5e589cb443c9a15d20a732c299cc48b44
-ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
+ms.openlocfilehash: 89b4516017d7ac8bf1e27134db6a67a0a86b17cb
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992979"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206070"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorování zásad dodržování předpisů zařízením v Intune
 
@@ -36,9 +36,9 @@ Sestavy dodržování předpisů slouží ke kontrole dodržování předpisů z
 
 Otevřete **řídicí panel Intune pro dodržování předpisů zařízením**:
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **Dodržování předpisů zařízením** > **Přehled**. Otevře se **řídicí panel Dodržování předpisů zařízením**.
+2. Vyberte **zařízení** > **Přehled** > karta **stav kompatibility** .
 
 > [!IMPORTANT]
 > Aby mohla zařízení přijímat zásady dodržování předpisů, musejí být zaregistrovaná v Intune.
@@ -151,7 +151,7 @@ Graf **Nastavení dodržování předpisů** zobrazuje všechna nastavení zása
 
 ## <a name="view-compliance-reports"></a>Zobrazení sestav dodržování předpisů
 
-Kromě použití grafů na *stav dodržování předpisů*můžete sestavy o dodržování předpisů zobrazit na stránce *monitorování* v centru pro správu.
+Kromě použití grafů na *stav dodržování předpisů*můžete přejít na **sestavy** > **dodržování předpisů zařízením**.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -191,3 +191,7 @@ Konflikty zásad můžou vzniknout, když se na zařízení použije více zása
 - Pokud konfliktní nastavení pocházejí ze zásad konfigurace a dodržování předpisů služby Intune, bude mít nastavení v zásadách dodržování předpisů přednost před nastavením v zásadách konfigurace. Platí to i v situaci, kdy je nastavení v zásadách konfigurace bezpečnější.
 
 - Pokud jste nasadili více zásad dodržování předpisů, použije Intune ty nejbezpečnější z nich.
+
+## <a name="next-steps"></a>Další kroky
+
+[Přehled zásad dodržování předpisů](device-compliance-get-started.md)

@@ -1,6 +1,6 @@
 ---
 title: Funkce a nastavení zařízení v Microsoft Intune – Azure | Microsoft Docs
-description: Přehled různých profilů zařízení Microsoft Intune. Získejte informace o funkcích, omezeních, e-mailu, Wi-Fi, VPN, vzdělávání, certifikátech, upgradech Windows 10, BitLockeru a programu Microsoft Defender, Windows Information Protection, šablonách pro správu a vlastním nastavení konfigurace zařízení v Azure Portal. Pomocí těchto profilů můžete spravovat a chránit data a zařízení ve vaší společnosti.
+description: Přehled různých profilů zařízení Microsoft Intune. Získejte informace o funkcích, omezeních, e-mailu, Wi-Fi, VPN, vzdělávání, certifikátech, upgradu Windows 10, BitLockeru a programu Microsoft Defender, Windows Information Protection, šablonách pro správu a vlastním nastavení konfigurace zařízení ve společnosti Microsoft. Centrum pro správu Správce koncových bodů. Pomocí těchto profilů můžete spravovat a chránit data a zařízení ve vaší společnosti.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b74cdf29999bccdefaa94c84673b9ea89c335537
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 800bbd5199bd4389ee1ae8aa98a68e21456e7000
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74694943"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206614"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Použití funkcí a nastavení v zařízeních pomocí profilů zařízení v Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Microsoft Intune zahrnuje nastavení a funkce, které můžete povolit nebo zakázat na různých zařízeních v rámci vaší organizace. Tato nastavení a funkce se přidají do části "konfigurační profily". Můžete vytvářet profily pro různá zařízení a různé platformy, včetně iOS, Androidu a Windows. Pak pomocí Intune aplikujte nebo přiřadíte profil k zařízením.
 
@@ -115,7 +115,7 @@ Tato funkce podporuje:
 - iOS/iPadOS
 - macOS
 - Windows 10 a novější
-- Windows 10 Team
+- Tým Windows 10
 
 ## <a name="edition-upgrade"></a>Upgrade edice
 
@@ -196,7 +196,7 @@ Tato funkce podporuje:
 
 - Android Enterprise (OEMConfig)
 
-## <a name="powershell-scripts"></a>Skripty prostředí PowerShell
+## <a name="powershell-scripts"></a>PowerShellové skripty
 
 [Skripty PowerShellu na zařízeních s Windows 10](../apps/intune-management-extension.md) používají rozšíření pro správu Intune k nahrání skriptů PowerShellu v Intune a pak tyto skripty na svých zařízeních spustíte. Podívejte se také na to, co je potřeba k používání tohoto rozšíření, jak je přidat do Intune a další důležité informace.
 

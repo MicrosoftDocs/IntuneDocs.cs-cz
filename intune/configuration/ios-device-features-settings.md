@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 12/19/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e73612080e52c8eb49a0c090b68e917e24fef3ab
-ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
+ms.openlocfilehash: 85fc8bf002a4d5d00d2163c0b75c49d11dcd9b61
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992956"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206359"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-ios-features-in-intune"></a>nastavení zařízení s iOS a iPadOS pro použití běžných funkcí iOS v Intune
 
@@ -87,9 +87,9 @@ Pro Dock zařízení můžete přidat až **šest** položek (kombinované aplik
 - **Přidat**: přidá aplikace nebo složky do Docku na zařízení.
 - **Zadejte**: přidat **aplikaci** nebo **složku**:
 
-  - **Aplikace**: tuto možnost vyberte, pokud chcete přidat aplikace do Dock na obrazovce. Zadejte:
+  - **Aplikace**: tuto možnost vyberte, pokud chcete přidat aplikace do Dock na obrazovce. Napište
 
-    - **Název aplikace**: zadejte název aplikace. Tento název se používá pro váš odkaz v Azure Portal. Nezobrazuje *se* na zařízení s iOS.
+    - **Název aplikace**: zadejte název aplikace. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení s iOS.
     - **ID sady prostředků aplikace**: Zadejte ID sady prostředků aplikace. Některé příklady najdete v tématu [ID sad pro integrované aplikace pro iOS](bundle-ids-built-in-ios-apps.md) .
 
   - **Složka**: tuto možnost vyberte, pokud chcete přidat složku do Docku na obrazovce.
@@ -99,8 +99,8 @@ Pro Dock zařízení můžete přidat až **šest** položek (kombinované aplik
     - **Název složky**: zadejte název složky. Tento název se zobrazí uživatelům na svém zařízení.
     - **Seznam stránek**: **přidejte** stránku a zadejte následující vlastnosti:
 
-      - **Název stránky**: zadejte název stránky. Tento název se používá pro váš odkaz v Azure Portal. Nezobrazuje *se* na zařízení s iOS.
-      - **Název aplikace**: zadejte název aplikace. Tento název se používá pro váš odkaz v Azure Portal. Nezobrazuje *se* na zařízení s iOS.
+      - **Název stránky**: zadejte název stránky. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení s iOS.
+      - **Název aplikace**: zadejte název aplikace. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení s iOS.
       - **ID sady prostředků aplikace**: Zadejte ID sady prostředků aplikace. Některé příklady najdete v tématu [ID sad pro integrované aplikace pro iOS](bundle-ids-built-in-ios-apps.md) .
 
       Pro Dock zařízení můžete přidat až **20** stránek.
@@ -129,7 +129,7 @@ Na zařízení můžete přidat až **40** stránek.
 
 - **Seznam stránek**: **přidejte** stránku a zadejte následující vlastnosti:
 
-  - **Název stránky**: zadejte název stránky. Tento název se používá pro váš odkaz v Azure Portal a *není* zobrazený na zařízení s iOS.
+  - **Název stránky**: zadejte název stránky. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manageru a na *zařízení s iOS se nezobrazuje.*
 
   Do zařízení můžete přidat až **60** položek (sloučené aplikace a složky).
 
@@ -139,7 +139,7 @@ Na zařízení můžete přidat až **40** stránek.
 
       - **Aplikace**: tuto možnost vyberte, pokud chcete přidat aplikace na stránku na obrazovce. Dále zadejte:
 
-        - **Název aplikace**: zadejte název aplikace. Tento název se používá pro váš odkaz v Azure Portal. Nezobrazuje *se* na zařízení s iOS.
+        - **Název aplikace**: zadejte název aplikace. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení s iOS.
         - **ID sady prostředků aplikace**: Zadejte ID sady prostředků aplikace. Některé příklady najdete v tématu [ID sad pro integrované aplikace pro iOS](bundle-ids-built-in-ios-apps.md) .
 
       - **Složka**: tuto možnost vyberte, pokud chcete přidat složku do Docku na obrazovce.
@@ -149,8 +149,8 @@ Na zařízení můžete přidat až **40** stránek.
         - **Název složky**: zadejte název složky. Tento název se zobrazí uživatelům na zařízení.
         - **Přidat**: přidá stránky do složky. Zadejte také následující vlastnosti:
 
-          - **Název stránky**: zadejte název stránky. Tento název se používá pro váš odkaz v Azure Portal. Nezobrazuje *se* na zařízení s iOS.
-          - **Název aplikace**: zadejte název aplikace. Tento název se používá pro váš odkaz v Azure Portal. Nezobrazuje *se* na zařízení s iOS.
+          - **Název stránky**: zadejte název stránky. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení s iOS.
+          - **Název aplikace**: zadejte název aplikace. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení s iOS.
           - **ID sady prostředků aplikace**: Zadejte ID sady prostředků aplikace. Některé příklady najdete v tématu [ID sad pro integrované aplikace pro iOS](bundle-ids-built-in-ios-apps.md) .
 
 #### <a name="example"></a>Příklad
@@ -163,7 +163,7 @@ Když přiřadíte zásady k iPhonu, stránka bude vypadat podobně jako na nás
 
 ![Zařízení s iOSem se změněnou domovskou obrazovkou](./media/ios-device-features-settings/Bd37PHa.png)
 
-## <a name="app-notifications"></a>App notifications
+## <a name="app-notifications"></a>Oznámení aplikací
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
@@ -172,8 +172,8 @@ Když přiřadíte zásady k iPhonu, stránka bude vypadat podobně jako na nás
     ![Přidání oznámení aplikace v profilu iOS v Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
 
   - **ID sady prostředků aplikace**: zadejte **ID sady prostředků** aplikace, kterou chcete přidat. Některé příklady najdete v tématu [ID sad pro integrované aplikace pro iOS](bundle-ids-built-in-ios-apps.md) .
-  - **Název aplikace**: zadejte název aplikace, kterou chcete přidat. Tento název se používá pro váš odkaz v Azure Portal. Nezobrazuje *se* na zařízení.
-  - **Vydavatel**: zadejte vydavatele aplikace, kterou přidáváte. Tento název se používá pro váš odkaz v Azure Portal. Nezobrazuje *se* na zařízení.
+  - **Název aplikace**: zadejte název aplikace, kterou chcete přidat. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení.
+  - **Vydavatel**: zadejte vydavatele aplikace, kterou přidáváte. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení.
   - **Oznámení**: **povolí** nebo **zakáže** aplikaci odesílat oznámení do zařízení.
     - **Zobrazit v centru oznámení**: **Povolit** aplikaci umožní zobrazovat oznámení v centru oznámení zařízení. **Disable** zabrání aplikaci v zobrazování oznámení v centru oznámení.
     - **Zobrazit na zamykací obrazovce**: výběrem **Povolit** zobrazíte oznámení z aplikace na zamykací obrazovce zařízení. **Disable** zabrání aplikaci zobrazovat oznámení na zamykací obrazovce.
@@ -339,7 +339,7 @@ Tato funkce platí pro:
 - **Mapování sféry domény** (jenom Kerberos): **přidejte** přípony DNS domény, které by se měly namapovat do vaší sféry. Toto nastavení použijte, pokud názvy DNS hostitelů neodpovídají názvu sféry. Pravděpodobně nemusíte vytvářet vlastní mapování domén na sféru.
 - **PKINIT certifikát** (jenom Kerberos): **Vyberte** certifikát kryptografie s veřejným klíčem pro počáteční ověřování (PKINIT), který se dá použít pro ověřování protokolem Kerberos. Můžete si vybrat z certifikátů [PKCS](../protect/certficates-pfx-configure.md) nebo [SCEP](../protect/certificates-scep-configure.md) , které jste přidali v Intune. Další informace o certifikátech najdete v tématu [použití certifikátů k ověřování v Microsoft Intune](../protect/certificates-configure.md).
 
-## <a name="wallpaper"></a>Tapeta
+## <a name="wallpaper"></a>Lock
 
 Pokud se zařízením s existující imagí nepřiřazuje profil bez obrázku, může docházet k neočekávanému chování. Můžete například vytvořit profil bez obrázku. Tento profil je přiřazen k zařízením, která již mají bitovou kopii. V tomto scénáři se image může změnit na výchozí nastavení zařízení, jinak se v zařízení může zachovat původní image. Toto chování se řídí a je omezené platformou MDM od společnosti Apple.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 12/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,30 +16,31 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dcdc2b69de52ea3bf23f4e3c5d11399b62bc8daa
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9a62cc6ef2f1b3bd6f305fe6fa23a24f95d3dd37
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414090"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207348"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Přiřazení licencí uživatelům, aby mohli zaregistrovat zařízení v Intune
 
 Ať už přidáváte uživatele ručně, nebo provádíte synchronizaci z místní služby Active Directory, musíte nejdřív všem uživatelům přiřadit licence Intune, aby mohli svá zařízení registrovat do Intune. Seznam licencí najdete v tématu [Licence zahrnující Intune](../licenses.md).
 
-## <a name="assign-an-intune-license-in-the-microsoft-365-admin-center"></a>Přiřazení licence Intune v centru pro správu Microsoft 365
+> [!NOTE]
+> Uživatelé, kteří mají přiřazenou zásadu ochrany aplikací Intune a nezaregistrují svá zařízení do Microsoft Intune, budou také vyžadovat pro příjem zásad licenci Intune. 
 
-[Centrum pro správu Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) můžete použít k ručnímu přidání cloudových uživatelů a přiřazení licencí ke cloudovým uživatelským účtům a účtům synchronizovaným z vaší místní služby Active Directory do Azure AD.
+## <a name="assign-an-intune-license-microsoft-endpoint-manager-admin-center"></a>Přiřazení licence k Intune v centru pro správu Microsoft Endpoint Manageru
 
-1. Přihlaste se k [centru pro správu Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) pomocí svých přihlašovacích údajů správce tenanta a pak zvolte **Uživatelé** > **aktivní uživatelé**.
+[Centrum pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) můžete použít k ručnímu přidání cloudových uživatelů a přiřazení licencí ke cloudovým uživatelským účtům a účtům synchronizovaným z místní služby Active Directory do Azure AD.
 
-2. Vyberte uživatelský účet, kterému chcete přiřadit uživatelskou licenci Intune, a potom vyberte **Licence na produkty** > **Upravit**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **Uživatelé** > **všech uživatelů** > vyberte > **přiřazení** **licence** pro uživatele >.
 
-3. Přepněte **Intune** nebo **Enterprise Mobility + Security** na **Zapnuto** a vyberte **Uložit**.
+2. Zaškrtněte políčko pro **Intune** > **Uložit**.
 
-   ![Snímek obrazovky oddílu Microsoft 365 licence k produktu centra pro správu](./media/licenses-assign/office-assign-license.png)
+   ![Snímek obrazovky oddílu Microsoft 365 licence k produktu centra pro správu](./media/licenses-assign/mem-assign-license.png)
 
-4. Uživatelský účet má teď oprávnění potřebná k používání služby a registraci zařízení pro správu.
+3. Uživatelský účet má teď oprávnění potřebná k používání služby a registraci zařízení pro správu.
 
 > [!NOTE]
 > Uživatelé se budou zobrazovat na portálu Intune Classic až po registraci zařízení pomocí POČÍTAČového klienta Intune. Můžete také vybrat skupinu uživatelů a přidat nebo odebrat licence pro všechny najednou.

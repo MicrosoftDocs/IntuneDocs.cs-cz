@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9454353ec4f8291d4d8c0001cc977838ecec787b
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 4d05e33dbc28707bc6f929be72ba4a77c2e0641c
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74540799"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206053"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Přidání partnerské certifikační autority pomocí protokolu SCEP do Intune
 
@@ -89,7 +89,7 @@ Ujistěte se, že máte k registraci aplikace Azure AD potřebná oprávnění. 
    > [!IMPORTANT]  
    > Než tuto stránku opustíte, zkopírujte hodnotu pro tajný klíč klienta a zaznamenejte ho pro pozdější použití s implementací CA třetí strany. Tato hodnota se znovu nezobrazí. Nezapomeňte si projít doprovodné materiály k vaší certifikační autoritě od třetí strany, jak si přeje nakonfigurovat ID aplikace, ověřovací klíč a ID tenanta.  
 
-6. Poznamenejte si **ID tenanta**. ID tenanta je text domény po přihlášení @ účtu. Pokud je váš účet například *admin@name.onmicrosoft.com* , je vaše ID tenanta **Name.onmicrosoft.com**.  
+6. Poznamenejte si **ID tenanta**. ID tenanta je text domény po přihlášení @ účtu. Pokud je váš účet například *admin@name.onmicrosoft.com*, je vaše ID tenanta **Name.onmicrosoft.com**.  
 
 7. V navigačním podokně aplikace otevřete v nabídce **Spravovat** **oprávnění rozhraní API** a pak vyberte **Přidat oprávnění**.  
 
@@ -119,7 +119,7 @@ Po zrušení registrace nebo vymazání zařízení se certifikáty odeberou. Ce
 ## <a name="third-party-certification-authority-partners"></a>Partneři externí certifikační autority
 Následující externí certifikační autority podporují Intune:
 
-- [Entrust Datacard](https://info.entrustdatacard.com/pki-eval-tool)
+- [Entrust Datacard](https://go.entrustdatacard.com/pki/intune/)
 - [GitHub EJBCA – verze open-source](https://github.com/agerbergt/intune-ejbca-connector)
 - [EverTrust](https://evertrust.fr/en/products/)
 - [GlobalSign](https://downloads.globalsign.com/acton/attachment/2674/f-6903f60b-9111-432d-b283-77823cc65500/1/-/-/-/-/globalsign-aeg-microsoft-intune-integration-guide.pdf)

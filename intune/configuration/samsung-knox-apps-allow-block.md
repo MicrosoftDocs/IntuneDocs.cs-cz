@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/5/2018
+ms.date: 12/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: afaee427b593cfaed957279b520765242a1aacd3
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 4b83a0339d87375502159467af323fceae5eb6e2
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506647"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207073"
 ---
 # <a name="use-custom-policies-in-microsoft-intune-to-allow-and-block-apps-for-samsung-knox-standard-devices"></a>Použití vlastních zásad v Microsoft Intune, které v povolí nebo blokují aplikace pro zařízení se zabezpečením Samsung Knox Standard 
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Postupy v tomto článku použijte k vytvoření vlastní zásady Microsoft Intune, která obsahuje jeden z těchto seznamů:
 
@@ -36,37 +34,41 @@ Tato nastavení mohou používat jenom zařízení se spuštěnou aplikací Sams
 
 ## <a name="create-an-allowed-or-blocked-app-list"></a>Vytvoření seznamu povolených nebo blokovaných aplikací
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. V podokně **Intune** zvolte **Konfigurace zařízení**.
-2. V podokně **Konfigurace zařízení** zvolte **Spravovat** > **Profily**.
-2. V podokně se seznamem profilů zvolte **Vytvořit profil**.
-3. V podokně **Vytvořit profil** zadejte **Název** a nepovinně **Popis** profilu zařízení.
-2. Jako **Platformu** zvolte **Android** a jako **Typ profilu** zvolte **Vlastní**.
-3. Klikněte na **Nastavení**.
-3. V podokně **Vlastní nastavení OMA-URI** zvolte **Přidat**.
-4. V dialogovém okně **Přidat nebo upravit nastavení OMA-URI** zadejte tato nastavení:
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
+3. Zadejte následující nastavení:
 
-   Seznam aplikací, u kterých je v příslušném zařízení blokované spuštění:
+    - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **vlastní profil Windows Phone**.
+    - **Popis:** Zadejte popis, který nastavení stručně charakterizuje, a další důležité podrobnosti.
+    - **Platforma**: vyberte **Android**.
+    - **Typ profilu**: vyberte **vlastní**.
 
-   - **Název** – zadejte **PreventStartPackages**.
-   - **Popis** – zadejte volitelný popis, např.: Seznam zakázaných aplikací.
-   - **Datový typ** – z rozevíracího seznamu zvolte **Řetězec**.
-   - **OMA-URI** – zadejte **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**.
-   - **Hodnota** – zadejte seznam názvů balíčků aplikací, které chcete povolit. Jako oddělovač můžete použít **; : ,** nebo **|** . (Příklad: package1;package2;)
+4. V nabídce **Vlastní nastavení OMA-URI** vyberte **Přidat**. Zadejte následující nastavení:
+
+    Seznam aplikací, u kterých je v příslušném zařízení blokované spuštění:
+
+    - **Název**: zadejte **PreventStartPackages**.
+    - **Popis:** Zadejte popis, který přehledně vystihuje nastavení, a další důležité informace kvůli jeho snadnějšímu vyhledání. Zadejte například **seznam aplikací, které jsou zablokovány pro spuštění**.
+    - **OMA-URI** (rozlišuje velká a malá písmena): zadejte **./Vendor/MSFT/PolicyManager/my/ApplicationManagement/PreventStartPackages**.
+    - **Datový typ**: vyberte **řetězec**.
+    - **Hodnota**: Zadejte seznam názvů balíčků aplikací, které chcete zakázat. Jako oddělovač můžete použít `;`, `:`nebo `|`. Zadejte například `package1;package2;`.
 
    Pro seznam aplikací, které si uživatelé můžou nainstalovat z obchodu Google Play, s vyloučením všech ostatních:
-   - **Název** – zadejte **AllowInstallPackages**.
-   - **Popis** – zadejte volitelný popis, například Seznam aplikací povolených pro instalaci z Google Play.
-   - **Datový typ** – z rozevíracího seznamu zvolte **Řetězec**.
-   - **OMA-URI** – zadejte **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/AllowInstallPackages**.
-   - **Hodnota** – zadejte seznam názvů balíčků aplikací, které chcete povolit. Jako oddělovač můžete použít **; : ,** nebo **|** . (Příklad: package1;package2;)
 
-4. Klikněte na **OK** a pak v podokně **Vytvořit profil** zvolte **Vytvořit**.
+    - **Název**: zadejte **AllowInstallPackages**.
+    - **Popis**: zadejte popis, který poskytuje přehled nastavení, a další důležité informace, které vám pomůžou najít profil. Například zadejte **seznam aplikací, které uživatelé mohou instalovat z Google Play**.
+    - **OMA-URI** (rozlišuje velká a malá písmena): zadejte **./Vendor/MSFT/PolicyManager/my/ApplicationManagement/AllowInstallPackages**.
+    - **Datový typ**: vyberte **řetězec**.
+    - **Hodnota**: Zadejte seznam názvů balíčků aplikací, které chcete zakázat. Jako oddělovač můžete použít `;`, `:`nebo `|`. Zadejte například `package1;package2;`.
+
+5. Výběrem **OK** uložte změny.
+6. Po dokončení vyberte **OK** > **vytvořit** a vytvořte profil Intune. Po dokončení se Váš profil zobrazí v seznamu **zařízení – konfigurační profily** .
 
 >[!TIP]
 > ID balíčku aplikace najdete tak, že na tuto aplikaci přejdete v obchodě Google Play. ID balíčku je součástí adresy URL stránky aplikace. Třeba aplikace Microsoft Word má ID balíčku **com.microsoft.office.word**.
 
-Nastavení aplikace se použijí, jakmile se cílené zařízení službě přihlásí.
+Při příštím ověření každého cílového zařízení se použije nastavení aplikace.
 
+## <a name="next-steps"></a>Další kroky
 
-<!---## Assign the custom profile--->
+Profil je vytvořený, ale zatím se nepoužívá. Dále [Přiřaďte profil](../device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).

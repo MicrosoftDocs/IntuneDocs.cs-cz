@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 122872eff92a37c8724fd4a853091e51a0a54c66
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: f2bee04eabb7036d9a28ac628175b27f763d0ccb
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506528"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207056"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Nastavení zařízení s Windows 10 a Windows holografické pro přidání připojení k síti VPN pomocí Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Pomocí Microsoft Intune můžete přidat a nakonfigurovat připojení k síti VPN pro zařízení. Tento článek obsahuje seznam a popisuje běžně používaná nastavení a funkce při vytváření virtuálních privátních sítí (VPN). Tato nastavení a funkce sítě VPN se používají v profilech konfigurace zařízení v Intune, která jsou vložená nebo nasazená do zařízení.
 
@@ -143,7 +143,7 @@ Další informace o vytváření vlastních dat XML protokolu EAP najdete v tém
 
   ![Výběr tří teček a kliknutí a přetažení za účelem přesunutí přípony DNS](./media/vpn-settings-windows-10/vpn-settings-windows10-move-dns-suffix.png)
 
-- **Pravidla pro tabulku zásad překladu IP adres (NRPT)** : pravidla pro překlad adres IP (NRPT) definují, jak DNS překládá názvy při připojení k síti VPN. Po navázání připojení VPN zvolíte, které servery DNS připojení VPN používá.
+- **Pravidla pro tabulku zásad překladu IP adres (NRPT)**: pravidla pro překlad adres IP (NRPT) definují, jak DNS překládá názvy při připojení k síti VPN. Po navázání připojení VPN zvolíte, které servery DNS připojení VPN používá.
 
   Do tabulky můžete přidat pravidla, která zahrnují doménu, server DNS, proxy a další podrobnosti pro překlad domény, kterou zadáte. Připojení VPN používá tato pravidla, když se uživatelé připojí k doménám, které zadáte.
 
@@ -177,7 +177,7 @@ Pokud je uživatel připojen k příponě DNS v seznamu, uživatel se nebude aut
 
 Pokud je například uživatel již připojen k důvěryhodné příponě DNS, následující automatické triggery se ignorují. Konkrétně přípony DNS v seznamu zruší všechny ostatní automatické triggery připojení, včetně:
 
-- Stálé připojení
+- Vždy zapnuto
 - Aktivační událost na základě aplikace
 - Automatické triggery DNS
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71f2bc855673b6b189ed7581b979527485e86083
-ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
+ms.openlocfilehash: c8748639f0407de7b1bb83f646b7decf8c838766
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74860379"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206665"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Vytvořte profil zařízení v Microsoft Intune
 
@@ -39,7 +39,7 @@ V tomto článku najdete:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **zařízení** > **konfigurační profily**. Máte tyto možnosti:
+2. Vyberte **zařízení** > **konfigurační profily**. Máte následující možnosti:
 
     - **Přehled**: zobrazuje stav profilů a poskytuje další podrobnosti o profilech, které jste přiřadili uživatelům a zařízením.
     - **Správa**: vytváření profilů zařízení, nahrávání vlastních [skriptů PowerShellu](../apps/intune-management-extension.md) , které se mají spustit v rámci profilu, a Přidání datových plánů do zařízení pomocí [eSIM karty](esim-device-configuration.md).
@@ -69,7 +69,7 @@ V tomto článku najdete:
        - [Funkce zařízení](../device-features-configure.md)
        - [Omezení zařízení](device-restrictions-configure.md)
        - [Upgrade edice a přepínač režimu](edition-upgrade-configure-windows-10.md)
-       - [Vzdělávání](education-settings-configure.md)
+       - [Školení](education-settings-configure.md)
        - [E-mail](email-settings-configure.md)
        - [Endpoint Protection](../protect/endpoint-protection-configure.md)
        - [Ochrana identit](../protect/identity-protection-configure.md)  
@@ -99,13 +99,13 @@ Další informace o značkách oboru a o tom, co můžete dělat, najdete v tém
 
 ### <a name="add-a-scope-tag"></a>Přidat značku oboru
 
-1. Vyberte **obor (značky)** .
+1. Vyberte **obor (značky)**.
 2. Vyberte **Přidat** a vytvořte novou značku oboru. Nebo vyberte ze seznamu existující značku oboru.
 3. Výběrem **OK** uložte změny.
 
 ## <a name="applicability-rules"></a>Pravidla použitelnosti
 
-Týká se
+Platí pro:
 
 - Windows 10 a novější
 

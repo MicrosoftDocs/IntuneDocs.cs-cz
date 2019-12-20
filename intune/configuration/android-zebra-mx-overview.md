@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 829d8f6b2691f91c14029e4f29e2ef11b070e596
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 83048061cc7b3e1aaeb09ff54dec819720f2571f
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059624"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206818"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Používání a Správa zařízení Zebra s rozšířeními mobility Zebra v Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Intune obsahuje bohatou sadu funkcí, včetně správy aplikací a konfigurace nastavení zařízení. Tyto integrované funkce a nastavení spravují zařízení s Androidem vyráběná technologiemi Zebra, označovaná také jako "Zebra zařízení".
 
@@ -106,7 +106,7 @@ Po dokončení prvního dvou kroků se Portál společnosti aplikace nainstaluje
 
 Pomocí StageNow vytvořte profil, který konfiguruje nastavení, která chcete na zařízení spravovat. Konkrétní podrobnosti najdete v dokumentaci k zebra. [Profily](http://techdocs.zebra.com/stagenow/3-2/stagingprofiles/) (otevře se webová stránka Zebra) může být dobrým prostředkem.
 
-Když vytvoříte profil v StageNow, vyberte v posledním kroku možnost **exportovat do MDM**. Tento krok generuje soubor XML. Soubor uložte. Budete ho potřebovat později.
+Když vytvoříte profil v StageNow, vyberte v posledním kroku možnost **exportovat do MDM**. Tento krok generuje soubor XML. Soubor uložte. Budete ho potřebovat v pozdějším kroku.
 
 - Doporučuje se profil otestovat předtím, než ho nasadíte do zařízení ve vaší organizaci. K otestování v posledním kroku při vytváření profilů s StageNow v počítači použijte možnosti **testu** . Pak na zařízení využívejte soubor generovaný StageNow a aplikaci StageNow.
 
@@ -140,7 +140,7 @@ V Intune vytvořte profil konfigurace zařízení:
     - **Název**: Zadejte popisný název nového profilu.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
     - **Platforma**: vyberte **Android**.
-    - **Typ profilu**: vyberte možnost **profil MX (jenom Zebra)** .
+    - **Typ profilu**: vyberte možnost **profil MX (jenom Zebra)**.
 
 4. V **profilu MX ve formátu. XML**přidejte soubor profilu XML, [který jste exportovali z StageNow](#step-4-create-a-device-management-profile-in-stagenow) (v tomto článku).
 5. Vyberte **OK** > **Vytvořit** a změny uložte. Zásada se vytvoří a zobrazí se v seznamu.

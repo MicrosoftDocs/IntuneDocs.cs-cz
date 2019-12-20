@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5b469c759ac34a6d8de09163534a580346e48a1
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: b25b761b3857fdf91bbbe827d288d09e350a1a7a
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73415026"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206087"
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Přidání uživatelů a udělení oprávnění pro správu v Intune
 
@@ -57,22 +57,20 @@ Do svého předplatného Intune můžete ručně přidat uživatele pomocí [cen
 
 ### <a name="add-intune-users-in-the-azure-portal"></a>Přidání uživatelů Intune na Azure Portalu
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Vyberte **Uživatelé** > **Všichni uživatelé**.
-3. V Centru pro správu vyberte **Nový uživatel**.
-   ![Snímek obrazovky přidání nového uživatele](./media/users-add/intune-add-user.png)
-4. Uveďte následující údaje o uživateli:
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **Uživatelé** > **Všichni uživatelé**.
+2. V Centru pro správu vyberte **Nový uživatel**.
+3. Uveďte následující údaje o uživateli:
    - **Název**
    - **Uživatelské jméno** – nové jméno na portálu Azure Active Directory ![Snímek obrazovky přidání jména a uživatelského jména](./media/users-add/intune-add-user-info.png) Pokračujte výběrem **OK**.
-5. Volitelně můžete zadat následující vlastnosti uživatele:
+4. Volitelně můžete zadat následující vlastnosti uživatele:
    - **Profil** – údaje týkající se práce včetně **pracovní pozice** a **oddělení**
    - **Skupiny** – vyberte skupiny, které chcete pro uživatele přidat
    - **Role adresáře** – přidělte uživateli oprávnění správce včetně role správce služeb Intune.
 
    Vyberte **Vytvořit** a přidejte tak nového uživatele do Intune.
-6. Vyberte **Profil** a potom pro nového uživatele vyberte **Místo využívání**. Místo využívání je nutné zadat, abyste mohli přiřadit novému uživateli licenci Intune. Pokračujte možností **Uložit**.
+5. Vyberte **Profil** a potom pro nového uživatele vyberte **Místo využívání**. Místo využívání je nutné zadat, abyste mohli přiřadit novému uživateli licenci Intune. Pokračujte možností **Uložit**.
     ![Snímek obrazovky místa využívání](./media/users-add/intune-add-user-loc.png)
-7. Vyberte **Licence**. Potom zvolte **Přiřadit** a přiřaďte tomuto uživateli licenci Intune. Licence Intune je nutná pro registraci zařízení a přístup k prostředkům společnosti. Vyberte **Produkty**, zvolte typ licence, **Vybrat** a potom **Přiřadit**.
+6. Vyberte **Licence**. Potom zvolte **Přiřadit** a přiřaďte tomuto uživateli licenci Intune. Licence Intune je nutná pro registraci zařízení a přístup k prostředkům společnosti. Vyberte **Produkty**, zvolte typ licence, **Vybrat** a potom **Přiřadit**.
 
 ## <a name="grant-admin-permissions"></a>Udělení oprávnění správce
 

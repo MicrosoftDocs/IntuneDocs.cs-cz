@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38f02d694f1935e4732805f3ae7c66fd9718057a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 1d07066bcd599dc0cdbaf8fcf90ac1ee76be45fa
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059610"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206682"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Použití profilů rozhraní pro konfiguraci firmwaru zařízení na zařízeních s Windows v Microsoft Intune (Public Preview)
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Pokud ke správě zařízení autopilot používáte Intune, můžete po registraci spravovat nastavení rozhraní UEFI (DFCI) pomocí rozhraní pro konfiguraci firmwaru zařízení. Přehled výhod, scénářů a požadavků najdete v tématu [Přehled DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/).
 
@@ -54,7 +54,7 @@ Tato funkce platí pro:
 
 ## <a name="create-your-azure-ad-security-groups"></a>Vytvoření skupin zabezpečení služby Azure AD
 
-Profily nasazení autopilotu jsou přiřazené ke skupinám zabezpečení Azure AD. Nezapomeňte vytvořit skupiny, které zahrnují vaše zařízení s podporou DFCI. U zařízení DFCI může většina organizací vytvářet skupiny zařízení místo skupin uživatelů. Zvažte následující scénáře:
+Profily nasazení autopilotu jsou přiřazené ke skupinám zabezpečení Azure AD. Nezapomeňte vytvořit skupiny, které zahrnují vaše zařízení s podporou DFCI. U zařízení DFCI může většina organizací vytvářet skupiny zařízení místo skupin uživatelů. Vezměte v úvahu následující scénáře:
 
 - Lidské zdroje (HR) mají různá zařízení s Windows. Z bezpečnostních důvodů nechcete, aby se na zařízeních používala žádná z uživatelů v této skupině. V tomto scénáři můžete vytvořit skupinu uživatelů zabezpečení lidských zdrojů, aby se zásady platily pro uživatele ve skupině HR bez ohledu na typ zařízení.
 - Na výrobním patře máte 10 zařízení. Na všech zařízeních chcete zabránit spouštění zařízení ze zařízení USB. V tomto scénáři můžete vytvořit skupinu zařízení zabezpečení a přidat do ní Tato 10 zařízení.
@@ -88,7 +88,7 @@ Tento profil obsahuje nastavení DFCI, která nakonfigurujete.
 
 4. Nakonfigurujte nastavení:
 
-    - **Umožňuje místnímu uživateli změnit nastavení rozhraní UEFI (BIOS)** : vaše možnosti:
+    - **Umožňuje místnímu uživateli změnit nastavení rozhraní UEFI (BIOS)**: vaše možnosti:
       - **Jenom nenakonfigurovaná nastavení**: místní uživatel může změnit jakékoli nastavení, *s výjimkou* toho, že nastavení je explicitně nastavené na **Povolit** nebo **Zakázat** v Intune.
       - **Žádné**: místní uživatel nesmí měnit nastavení rozhraní UEFI (BIOS), včetně nastavení nezobrazených v profilu DFCI.
 
@@ -104,7 +104,7 @@ Tento profil obsahuje nastavení DFCI, která nakonfigurujete.
         - **Nenakonfigurováno**: Intune se nedotkne této funkce a ponechá všechna nastavení tak, jak je.
         - **Povoleno**: jsou povoleny všechny integrované mikrofony a reproduktory přímo spravované rozhraním UEFI (BIOS). Periferní zařízení, jako jsou zařízení USB, ovlivněná nejsou.
         - **Zakázáno**: všechny integrované mikrofony a reproduktory přímo spravované pomocí rozhraní UEFI (BIOS) jsou zakázané. Periferní zařízení, jako jsou zařízení USB, ovlivněná nejsou.
-    - **Radiostanice (Bluetooth, Wi-Fi, NFC atd.)** : vaše možnosti:
+    - **Radiostanice (Bluetooth, Wi-Fi, NFC atd.)**: vaše možnosti:
         - **Nenakonfigurováno**: Intune se nedotkne této funkce a ponechá všechna nastavení tak, jak je.
         - **Povoleno**: jsou povoleny všechny vestavěné radiostanice přímo spravované pomocí rozhraní UEFI (BIOS). Periferní zařízení, jako jsou zařízení USB, ovlivněná nejsou.
         - **Zakázáno**: jsou zakázaná všechna integrovaná radiostanice přímo spravovaná rozhraním UEFI (BIOS). Periferní zařízení, jako jsou zařízení USB, ovlivněná nejsou.
@@ -112,7 +112,7 @@ Tento profil obsahuje nastavení DFCI, která nakonfigurujete.
         > [!WARNING]
         > Pokud zakážete nastavení **přepínačů** , bude zařízení vyžadovat kabelové připojení k síti. V opačném případě může být zařízení nemožné spravovat.
 
-    - **Spustit z externího média (USB, SD)** : vaše možnosti:
+    - **Spustit z externího média (USB, SD)**: vaše možnosti:
         - **Nenakonfigurováno**: Intune se nedotkne této funkce a ponechá všechna nastavení tak, jak je.
         - **Enabled**: rozhraní UEFI (BIOS) umožňuje spuštění z úložiště bez pevného disku.
         - **Disabled**: rozhraní UEFI (BIOS) neumožňuje spouštění z úložiště bez pevného disku.
@@ -148,7 +148,7 @@ Můžete také [signalizovat zařízení, která se mají vrátit](../remote-act
 
 ## <a name="reuse-retire-or-recover-the-device"></a>Opětovné použití, vyřazení nebo obnovení zařízení
 
-### <a name="reuse"></a>Opakované použití
+### <a name="reuse"></a>Opakovan
 
 Pokud se chystáte resetovat Windows, aby se zařízení obnovilo, pak [zařízení vymažte](../remote-actions/devices-wipe.md). **Neodstraňujte** záznam zařízení autopilot.
 
@@ -167,7 +167,7 @@ Tyto kroky odemknou nabídky systému UEFI (BIOS) zařízení. Hodnoty zůstanou
 
 Teď jste připraveni zařízení vymazat. Jakmile bude zařízení vymazáno, odstraňte záznam autopilotu. Odstraněním záznamu zabráníte, aby se zařízení při restartování automaticky znovu zaregistrovalo.
 
-### <a name="recover"></a>Zotavit
+### <a name="recover"></a>Opravitelné
 
 Pokud zařízení vymažete a odstraníte záznam autopilotu před tím, než se odzamkne nabídky rozhraní UEFI (BIOS), zůstanou nabídky uzamčené. Intune nemůže odeslat aktualizace profilu, aby ho odemkl.
 

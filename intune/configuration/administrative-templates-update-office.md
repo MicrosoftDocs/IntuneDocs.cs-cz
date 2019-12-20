@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf872387d6e6f4f91af9f074f54695b081b79119
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: dcd1948899ec4023a65c62f7106298b065b46883
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74549535"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206920"
 ---
 # <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>Pomocí nastavení aktualizace kanálu a cílové verze aktualizujte Office 365 pomocí Microsoft Intune Šablony pro správu
 
@@ -30,7 +30,7 @@ V tomto scénáři vytvoříte v Intune šablonu pro správu, která aktualizuje
 
 Další informace o šablonách pro správu najdete v tématu [šablony Windows 10 pro konfiguraci nastavení zásad skupiny](administrative-templates-windows.md).
 
-Týká se
+Platí pro:
 
 - Windows 10 a novější
 - Office 365
@@ -75,7 +75,7 @@ Po přiřazení zásad a synchronizace zařízení můžete potvrdit použití z
     ![Příklad šablony pro správu L_Updatebranch klíče registru](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
 
     > [!TIP]
-    > [Správa Office 365 ProPlus s Configuration Manager](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager) zobrazuje seznam hodnot a jejich význam. Hodnoty registru jsou založené na vybraném distribučním kanálu:
+    > [Správa Office 365 ProPlus s Configuration Manager](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) zobrazuje seznam hodnot a jejich význam. Hodnoty registru jsou založené na vybraném distribučním kanálu:
     >
     >- Měsíční kanál-hodnota = "aktuální"
     >- Měsíční kanál (cílený) – hodnota = "aktuální"
@@ -95,7 +95,7 @@ V tomto okamžiku se zásady Intune na zařízení úspěšně nastavily.
     - `UpdateChannel`: dynamický klíč, který se mění v závislosti na nakonfigurovaných nastaveních.
     - `CDNBaseUrl`: Nastavte, kdy se Office 365 nainstaluje na zařízení.
 
-3. Podívejte se na `UpdateChannel`ovou hodnotu. Hodnota určuje, jak často se Office aktualizuje. [Správa Office 365 ProPlus s Configuration Manager](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager) zobrazí seznam hodnot a jejich nastavení na.
+3. Podívejte se na `UpdateChannel`ovou hodnotu. Hodnota určuje, jak často se Office aktualizuje. [Správa Office 365 ProPlus s Configuration Manager](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) zobrazí seznam hodnot a jejich nastavení na.
 
     V následujícím příkladu vidíte `UpdateChannel` je nastavená na `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`, která je **měsíčně**:
 
@@ -173,7 +173,7 @@ Zvažte použití těchto kroků k otestování zásad před nasazením zásad v
 
 ## <a name="next-steps"></a>Další kroky
 
-[Aktualizace hodnot kanálu pro klienty Office 365](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager)
+[Aktualizace hodnot kanálu pro klienty Office 365](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
 
 [Přehled služby Office Cloud Policy Service pro Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service)
 

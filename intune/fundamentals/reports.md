@@ -6,7 +6,7 @@ keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 12/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 05258c5363b43398dee1815bb91c50878803e426
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 21b83ec7b295a79dafc7527633cb31729ee40502
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74390933"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206240"
 ---
 # <a name="intune-reports"></a>Sestavy Intune
 Sestavy Microsoft Intune vám umožňují efektivněji a aktivně monitorovat stav a činnost koncových bodů napříč vaší organizací a také poskytuje jiná data pro vytváření sestav v rámci Intune. Budete například moci zobrazit sestavy o dodržování předpisů zařízením, stavu zařízení a trendech zařízení. Kromě toho můžete vytvořit vlastní sestavy, abyste získali konkrétnější data. 
@@ -53,16 +53,19 @@ Zařízení nedodržující předpisy sestavují data Surface, která obvykle po
 
 Sestavu **zařízení nesplňující požadavky** můžete zobrazit pomocí následujících kroků:
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Vyberte **dodržování předpisů zařízením** > **zařízení nedodržující předpisy**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **zařízení** > **monitorování** > **zařízení, která nedodržují předpisy**.
 
     ![Sestava zařízení nedodržujících předpisy](./media/intune-reports/intune-reports-02.png)
+
+    > [!TIP]
+    > Pokud jste v Azure Portal dříve použili Intune, zjistili jste výše uvedené podrobnosti v Azure Portal tak, že se přihlásíte k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a vyberete **dodržování předpisů zařízením** > **zařízení nedodržující předpisy**.
 
 ## <a name="device-compliance-report-organizational"></a>Sestava dodržování předpisů pro zařízení (organizace)
 Sestavy dodržování předpisů pro zařízení mají být široké a poskytují obecnější zobrazení pro generování sestav dat k identifikaci agregovaných metrik. Tato sestava je navržena pro práci s velkými datovými sadami, aby získala úplný obrázek o dodržování předpisů zařízením. Například zpráva o dodržování předpisů zařízením pro dodržování předpisů zařízením zobrazuje všechny stavy dodržování předpisů pro zařízení, aby poskytovaly širší pohled na data, bez ohledu na to, jak velkou datovou sadu potřebujete. Tato sestava obsahuje kromě vhodné vizualizace agregovaných metrik úplné členění záznamů. Tuto sestavu můžete vygenerovat pomocí filtrů a výběrem tlačítka generovat sestavu. Tím se aktualizují data, aby se zobrazila poslední stav s možností zobrazení jednotlivých záznamů, které tvoří agregovaná data. Podobně jako u většiny sestav v novém rozhraní se tyto záznamy dají seřadit a prohledat, abyste se mohli zaměřit na informace, které potřebujete. 
 
 Chcete-li zobrazit vygenerovanou sestavu stavu zařízení, můžete použít následující postup:
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **sestavy** , chcete-li zobrazit souhrn sestav.
 3. Vyberte **Dodržování předpisů zařízením**.
 4. Vyberte Filtry **stav dodržování předpisů**, **operační systém**a **vlastnictví** k upřesnění sestavy.
@@ -79,7 +82,7 @@ Související informace najdete v tématu [vymáhání dodržování předpisů 
 
 Sestava dodržování předpisů zařízení je k dispozici jako Souhrnná sestava v úloze **sestav** . K zobrazení sestavy dodržování předpisů zařízením použijte následující postup:
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **sestavy** , chcete-li zobrazit souhrn sestav.
 
     ![Souhrn sestav Intune](./media/intune-reports/intune-reports-01.png)
@@ -91,7 +94,7 @@ Sestava trendu dodržování předpisů zařízením pro trendy dodržování p�
 
 Sestavu **trendů** můžete zobrazit pomocí následujících kroků:
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **sestavy** > **trendy** pro zobrazení dodržování předpisů zařízením během 60 dne trendu.
 
     ![Sestava trendů Intune](./media/intune-reports/intune-reports-03.png)
@@ -106,7 +109,7 @@ Ukázková sestavová sestava by mohla společně propojit data vlastnictví za�
 
 Vlastní sestavy můžete vytvářet a zobrazovat pomocí následujících kroků:
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **sestavy** > **nastavení diagnostiky** přidat [nastavení diagnostiky](reports.md#diagnostic-settings).
 
     ![Souhrn sestav Intune](./media/intune-reports/intune-reports-04.png)
@@ -140,7 +143,7 @@ Další informace o nastaveních diagnostiky najdete [v tématu Vytvoření nast
 ### <a name="log-analytics"></a>Log Analytics
 Log Analytics je primárním nástrojem v Azure Portal pro zápis dotazů protokolu a interaktivní analýzu výsledků dotazů. I v případě, že se dotaz protokolu používá jinde v Azure Monitor, obvykle nejprve zapíšete a otestujete dotaz pomocí Log Analytics. Podrobnosti o používání Log Analytics a vytváření dotazů protokolu najdete v tématu [Přehled dotazů protokolu v Azure monitor](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview). 
 
-### <a name="workbooks"></a>Workbooks
+### <a name="workbooks"></a>Sešity
 Sešity kombinují text, analytické dotazy, metriky Azure a parametry do propracovaných interaktivních sestav. Sešity mohou upravovat všichni ostatní členové týmu, kteří mají přístup ke stejným prostředkům Azure. Další informace o sešitech najdete v tématu [Azure monitor sešity](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks). Můžete také pracovat se šablonami sešitu a přispívat do nich. Další informace najdete v tématu [Azure monitor šablon sešitu](https://go.microsoft.com/fwlink/?linkid=867045).
 
 ## <a name="next-steps"></a>Další kroky
@@ -148,7 +151,7 @@ Sešity kombinují text, analytické dotazy, metriky Azure a parametry do propra
 Přečtěte si další informace o těchto technologiích:
 - [Blogový Microsoft Intune – rozhraní pro vytváření sestav](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553)
 - [Azure Monitor](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
-- [Co je služba Log Analytics?](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview#what-is-log-analytics)
+- [Co je Log Analytics?](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview#what-is-log-analytics)
 - [Dotazy protokolu](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview)
 - [Začínáme s Log Analytics v Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/log-query/get-started-portal)
 - [Azure Monitor sešity](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks)

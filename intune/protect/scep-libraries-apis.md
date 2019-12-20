@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a888e2087b98eeec82aeeb555677dddcb3eff4e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: e9b44e50300c3bd034ca2bb3b0454a5ce953dc18
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74058242"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206971"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Použití rozhraní API k přidání externích certifikačních autorit pro SCEP do Intune
 
@@ -202,7 +202,7 @@ Parametry:
 
     - transactionId           ID transakce SCEP
     - certificateRequest      DER kódovaná žádost o certifikát PKCS #10 v kódování Base64 jako řetězec
-    - certThumprint           Kryptografický otisk zřízeného certifikátu
+    - certThumprint SHA1 – hash kryptografický otisk zřízeného certifikátu
     - certSerialNumber        Sériové číslo zřízeného certifikátu
     - certExpirationDate      Datum vypršení platnosti zřízeného certifikátu – Řetězec datum a čas by měl být ve formátu webového času UTC (YYYY-MM-DDThh:mm:ss.sssTZD) podle normy ISO 8601.
     - certIssuingAuthority    Název certifikační autority, která certifikát vystavila

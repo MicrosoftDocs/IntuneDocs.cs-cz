@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/20/2019
+ms.date: 12/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7c3398f28d7c396c873dd29f3e3fdd719c1a7c6
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: ad630eb34b296d7ab77081a1e3063db8dffc64f9
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74691772"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207447"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Správa aktualizací softwaru Windows 10 v Intune
 
@@ -34,7 +34,7 @@ Intune poskytuje pro správu aktualizací následující typy zásad:
 
 - **Aktualizační kanál Windows 10**: Tato zásada je kolekcí nastavení, která konfigurují, kdy se aktualizace Windows 10 instalují.
 
-- **Aktualizace funkcí Windows 10 (Public Preview)** : Tato zásada přináší zařízení do zadané verze Windows a zablokuje sadu funkcí na těchto zařízeních, dokud se nerozhodnete je aktualizovat na novější verzi Windows.  I když verze funkce zůstává statická, zařízení můžou dál instalovat aktualizace kvality a zabezpečení, které jsou k dispozici pro jejich verzi funkcí.
+- **Aktualizace funkcí Windows 10 (Public Preview)**: Tato zásada přináší zařízení do zadané verze Windows a zablokuje sadu funkcí na těchto zařízeních, dokud se nerozhodnete je aktualizovat na novější verzi Windows.  I když verze funkce zůstává statická, zařízení můžou dál instalovat aktualizace kvality a zabezpečení, které jsou k dispozici pro jejich verzi funkcí.
 
 Pro skupiny zařízení přiřadíte zásady pro aktualizační kanály Windows 10 a aktualizace funkcí Windows 10. Oba typy zásad můžete použít ve stejném prostředí Intune ke správě aktualizací softwaru pro zařízení s Windows 10 a k vytvoření strategie aktualizace, která odráží vaše obchodní požadavky.
 
@@ -69,9 +69,6 @@ Aby se pro zařízení s Windows 10 v Intune používaly aktualizace Windows, mu
 
   Další informace o profilech zařízení najdete v tématu [Konfigurace nastavení omezení zařízení](../configuration/device-restrictions-configure.md).
 
-- Pokud používáte portál Azure Classic, [migrujte nastavení do Azure Portal](#migrate-update-settings-to-the-azure-portal).
-
-
 ## <a name="windows-10-update-rings"></a>Aktualizační kanály Windows 10
 
 Vytvořte aktualizační kanály, které určují, jak a kdy Windows jako služba aktualizuje vaše zařízení s Windows 10 pomocí aktualizací funkcí a kvality. Ve Windows 10 obsahují nové aktualizace funkcí a aktualizace pro zvýšení kvality obsah všech předchozích aktualizací. Pokud si nainstalujete nejnovější aktualizaci, máte jistotu, že jsou vaše zařízení s Windows 10 aktuální. Na rozdíl od předchozích verzí Windows je teď nutné nainstalovat celou aktualizaci (a ne jenom její část).
@@ -93,7 +90,7 @@ Aktualizační kanály Windows 10 podporují [značky oboru](../fundamentals/sco
 
    Až budete připraveni, vyberte **Další** a pokračujte v *přiřazení*.
 
-6. V části **přiřazení**zvolte **+ Vybrat skupiny, které chcete zahrnout** , a potom přiřaďte aktualizační kanál k jedné nebo více skupinám. Pomocí **+ Vyberte skupiny, které se vyloučí** , abyste mohli přiřazení vyladit. Pokračujte výběrem tlačítka **Next** (Další).
+6. V části **přiřazení**zvolte **+ Vybrat skupiny, které chcete zahrnout** , a potom přiřaďte aktualizační kanál k jedné nebo více skupinám. Pomocí **+ Vyberte skupiny, které se vyloučí** , abyste mohli přiřazení vyladit. Pokračujte výběrem **Další** .
 
 7. V části**zkontrolovat + vytvořit**zkontrolujte nastavení a pak vyberte **vytvořit** , jakmile budete připraveni Uložit aktualizační kanál Windows 10. Nový aktualizační kanál se zobrazí v seznamu aktualizačních kanálů.
 
@@ -104,10 +101,10 @@ Na portálu přejděte na **zařízení** > **Windows** > **aktualizačních kan
 Na této stránce můžete zobrazit stav přiřazení vyzvánění a v horní části podokna přehled vybrat následující akce ke správě aktualizačního kanálu:
 
 - [Odstranit](#delete)
-- [Pozastavit](#pause)
-- [Resume](#resume)
+- [Chvíli](#pause)
+- [Opakované](#resume)
 - [Zvětšení](#extend)
-- [Odinstalace](#uninstall)
+- [Uninstall](#uninstall)
 
 ![Dostupné akce](./media/windows-update-for-business-configure/overview-actions.png)
 
@@ -182,7 +179,7 @@ Při použití nástroje Uninstall Vezměte v úvahu následující skutečnosti
 
 - Po úspěšném vrácení aktualizace kvality na zařízení s Windows 10 se uživatelům zařízení nadále zobrazuje aktualizace uvedená v **nastavení Windows** > **aktualizace** > **historii aktualizací**.
 
-- V případě aktualizací funkcí je čas, který můžete odinstalovat, omezen na 2-60 dní. Toto období se konfiguruje pomocí nastavení aktualizace aktualizačních kroužků **nastavit interval odinstalace aktualizace funkcí (2 – 60 dní)** . Aktualizaci funkcí, která je nainstalovaná na zařízení, se nedá vrátit zpátky po instalaci aktualizace delší než nakonfigurované období odinstalace.
+- V případě aktualizací funkcí je čas, který můžete odinstalovat, omezen na 2-60 dní. Toto období se konfiguruje pomocí nastavení aktualizace aktualizačních kroužků **nastavit interval odinstalace aktualizace funkcí (2 – 60 dní)**. Aktualizaci funkcí, která je nainstalovaná na zařízení, se nedá vrátit zpátky po instalaci aktualizace delší než nakonfigurované období odinstalace.
 
   Představte si například aktualizační kanál s dobou odinstalace aktualizace funkcí o 20 dní. Po 25 dnech se rozhodnete vrátit nejnovější aktualizaci funkcí a použít možnost odinstalace.  Zařízení, na která se nainstalovala aktualizace funkcí víc než 20 dní, ji nemůžou odinstalovat, protože v rámci údržby odebrala potřebné bity. Zařízení, u kterých se tato funkce nainstalovala jenom do 19 dnů, ale můžou aktualizaci odinstalovat, jenom když se úspěšně zaregistrují, aby se před tím, než je doba odinstalace odinstalovala.
 
@@ -227,7 +224,7 @@ Když zařízení obdrží zásadu aktualizace funkcí Windows 10:
 
 3. V části **základy**zadejte název, popis (volitelný) a **aktualizaci funkcí k nasazení**, vyberte verzi Windows se sadou funkcí, kterou chcete použít, a pak vyberte **Další**.
 
-4. V části **přiřazení**zvolte **+ Vybrat skupiny, které chcete zahrnout** , a potom přiřaďte aktualizační kanál k jedné nebo více skupinám. Pokračujte výběrem tlačítka **Next** (Další).
+4. V části **přiřazení**zvolte **+ Vybrat skupiny, které se mají zahrnout** , a potom přiřaďte nasazení aktualizace funkcí do jedné nebo víc skupin. Pokračujte výběrem **Další** .
 
 5. V části **zkontrolovat + vytvořit**zkontrolujte nastavení a vyberte **vytvořit** , až budete připraveni Uložit zásady aktualizací funkcí Windows 10.  
 
@@ -240,17 +237,6 @@ V tomto podokně můžete:
 - Vyberte **Odstranit** , pokud chcete zásadu odstranit z Intune a odebrat ji ze zařízení.
 - Vyberte **vlastnosti** a upravte nasazení.  V podokně *vlastnosti* vyberte **Upravit** a otevřete *nastavení nasazení nebo přiřazení*, kde pak můžete nasazení upravit.
 - Chcete-li zobrazit informace o zásadě, vyberte možnost **stav aktualizace koncového uživatele** .
-
-## <a name="migrate-update-settings-to-the-azure-portal"></a>Migrace nastavení aktualizace na Azure Portal
-
-Portál Azure Classic má také omezený počet dalších nastavení aktualizací Windows 10 v profilu konfigurace zařízení. Pokud jsou některá z těchto nastavení nakonfigurovaná při migraci na Azure Portal, důrazně doporučujeme, abyste provedli následující akce:
-
-1. Na portále Azure Portal vytvořte aktualizační kanály Windows 10 s nastaveními, která potřebujete. Nastavení **Povolit funkce v předběžné verzi** není na webu Azure Portal podporované, protože už pro nejnovější buildy Windows 10 neplatí. Při vytváření aktualizačních kanálů můžete nakonfigurovat další tři nastavení a další nastavení aktualizací Windows 10.
-
-   > [!NOTE]
-   > Nastavení aktualizací Windows 10 vytvořená na klasickém portálu se na Azure Portalu po migraci nezobrazí. Tato nastavení se ale použijí. Pokud jste některá z nich migrovali a migrované zásady z Azure Portalu upravíte, tato nastavení se ze zásad odeberou.
-
-2. Odstraňte nastavení aktualizací na klasickém portálu. Po migraci na Azure Portal a přidání stejných nastavení do aktualizačního kanálu musíte nastavení na portálu Classic odstranit, aby se zabránilo možným konfliktům zásad. Pokud je například stejné nastavení nakonfigurované s různými hodnotami, dojde ke konfliktu. Neexistuje snadný způsob, jak zjistit, protože nastavení nakonfigurované na klasickém portálu se nezobrazuje v Azure Portal.
 
 ## <a name="next-steps"></a>Další kroky
 

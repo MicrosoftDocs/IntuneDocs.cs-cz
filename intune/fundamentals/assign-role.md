@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9e337d47757e3c5507c94433f90d5c2863bc1b0
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: c82805bf70259d43d738644e5663b93533bcb56a
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503007"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207158"
 ---
 # <a name="assign-a-role-to-an-intune-user"></a>Přiřazení role uživateli Intune
 
@@ -32,27 +32,23 @@ Abyste mohli vytvářet, upravovat nebo přiřazovat role, váš účet musí m�
 - **Globální správce**
 - **Správce služby Intune**
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **role** > **všechny role**.
 
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+2. V okně **role Intune – všechny role** vyberte předdefinovanou roli, kterou chcete přiřadit.
 
-3. V okně **Intune** vyberte **role** > **všechny role**.
+3. V okně <*název role*> – **přehled** vyberte **Spravovat** > **přiřazení**.
 
-4. V okně **role Intune – všechny role** vyberte předdefinovanou roli, kterou chcete přiřadit.
+4. V okně vlastní role zvolte **Přiřadit**.
 
-5. V okně <*název role*> – **přehled** vyberte **Spravovat** > **přiřazení**.
+5. V okně **přiřazení rolí** zadejte **název přiřazení** a nepovinný **Popis přiřazení** .
 
-6. V okně vlastní role zvolte **Přiřadit**.
+6. U **členů (skupin)** vyberte skupinu, která obsahuje uživatele, kterému chcete udělit oprávnění.
 
-7. V okně **přiřazení rolí** zadejte **název přiřazení** a nepovinný **Popis přiřazení** .
+7. V poli **rozsah (skupiny)** vyberte skupinu obsahující uživatele nebo zařízení, které bude člen výše moci spravovat.
 
-8. U **členů (skupin)** vyberte skupinu, která obsahuje uživatele, kterému chcete udělit oprávnění.
+8. V **oblasti rozsah (značky)** vyberte značky, ve kterých se bude toto přiřazení role použít.
 
-9. V poli **rozsah (skupiny)** vyberte skupinu obsahující uživatele nebo zařízení, které bude člen výše moci spravovat.
-
-10. V **oblasti rozsah (značky)** vyberte značky, ve kterých se bude toto přiřazení role použít.
-
-11. Po dokončení vyberte **OK**. Nové přiřazení se zobrazí v seznamu přiřazení.
+9. Po dokončení vyberte **OK**. Nové přiřazení se zobrazí v seznamu přiřazení.
 
 
 ## <a name="next-steps"></a>Další kroky
