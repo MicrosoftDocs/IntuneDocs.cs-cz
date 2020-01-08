@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f290370dd6ec05677a7073d9ca3edd854c9aa5e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: ecb043300578e5eba0613b6fa5f0fb249b1e515c
+ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505585"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75692148"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Automatická registrace zařízení s Androidem pomocí technologie Knox Mobile Enrollment od Samsungu
 
@@ -61,7 +61,7 @@ Když se vaše společnost úspěšně zaregistruje, můžete na portálu Knox p
 
 ### <a name="for-android-enterprise"></a>Android Enterprise
 
-| Pole profilu MDM| Požadované? | Hodnoty | 
+| Pole profilu MDM| Požadováno? | Hodnoty | 
 |-------------------|-----------|-------| 
 |MDM Server URI (URI serveru MDM)     | Ne        |Nechte prázdné. 
 |Profile Name (Název profilu)       | Ano       |Zadejte libovolný název profilu. 
@@ -75,9 +75,9 @@ Když se vaše společnost úspěšně zaregistruje, můžete na portálu Knox p
 
 ### <a name="for-android"></a>Pro Android
 
-Podrobné pokyny najdete v tématu [Průvodce nastavením profilu Samsung KNOX](https://docs.samsungknox.com/KME-Getting-Started/Content/getting-started-wizard.htm) .
+Podrobné pokyny najdete v pokynech k [vytváření profilů společnosti Samsung](https://docs.samsungknox.com/KME-Getting-Started/Content/create-profiles.htm) .
 
-| Pole profilu MDM| Požadované? | Hodnoty |
+| Pole profilu MDM| Požadováno? | Hodnoty |
 |-------------------|-----------|-------|
 |MDM Server URI (URI serveru MDM)     | Ne        |Nechte prázdné.
 |Profile Name (Název profilu)       | Ano       |Zadejte libovolný název profilu.
@@ -122,7 +122,7 @@ Potřebujete ještě další pomoc? Projděte si kompletní [uživatelskou pří
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
 
-- **Podpora vlastníka zařízení:**  - **Podpora vlastníka zařízení:** Intune podporuje registraci vyhrazených a plně spravovaných zařízení pomocí portálu KME. Další režimy vlastníka zařízení s Androidem Enterprise se budou podporovat, jakmile budou dostupné v Intune.
+- **Podpora vlastníka zařízení:** - **Podpora vlastníka zařízení:** Intune podporuje registraci vyhrazených a plně spravovaných zařízení pomocí portálu KME. Další režimy vlastníka zařízení s Androidem Enterprise se budou podporovat, jakmile budou dostupné v Intune.
 
 - **Bez podpory pracovní profil:** KME je metoda registrace firemních zařízení a zařízení zaregistrovaná v pracovním profilu Androidu zkontrolujte pracovní a osobní údaje jsou oddělené na osobních zařízeních. To znamená, že registrace zařízení do pracovního profilu pomocí KME není podporovaným scénářem v Intune.
 

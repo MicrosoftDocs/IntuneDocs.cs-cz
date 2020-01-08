@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8dd7127594a0e23c85b9f8141ce6d398d9a447a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: e1cf0a3d8b30955be8413b376acd223a924be843
+ms.sourcegitcommit: 06dce5c8111592ad774247e86e539dd3128117e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72795321"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545921"
 ---
 # <a name="add-mobile-threat-defense-apps-to-unenrolled-devices"></a>Přidání aplikací ochrany před mobilními hrozbami do neregistrovaných zařízení
 
@@ -34,7 +34,7 @@ Koncoví uživatelé potřebují k registraci zařízení Microsoft Authenticato
 Volitelně můžete pomocí Intune přidávat a nasazovat Microsoft Authenticator a taky aplikace pro ochranu před mobilními hrozbami (MTD).
 
 > [!NOTE] 
-> Tento článek se týká všech partnerů ochrany před mobilními hrozbami, které podporují zásady ochrany aplikací: lepší mobilní zařízení (Android), Zimperium (iOS), Lookout for Work (Android/iOS).
+> Tento článek se týká všech partnerů ochrany před mobilními hrozbami, které podporují zásady ochrany aplikací: lepší mobilní zařízení (Android), Zimperium (Android, iOS), Lookout for Work (Android/iOS).
 > 
 > U neregistrovaných zařízení **nepotřebujete zásady konfigurace aplikace pro iOS** , které nastaví ochranu před mobilními hrozbami pro aplikaci iOS, kterou používáte s Intune. Jedná se o klíčový rozdíl v porovnání s registrovanými zařízeními Intune. 
 
@@ -55,7 +55,7 @@ Pokud ale chcete, aby byla aplikace k dispozici koncovým uživatelům prostřed
 - [Přiřazení aplikace pomocí služby Intune](../apps/apps-deploy.md)
 
 ### <a name="making-lookout-for-work-available-to-end-users"></a>Umožnění Lookout for Work k dispozici koncovým uživatelům
-- **Androidemem**  
+- **Androidem**  
   - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](../apps/store-apps-android.md). Tuto [adresu URL Lookout for Work-obchod Play](https://play.google.com/store/apps/details?id=com.lookout.enterprise) použijte při dokončování části **Konfigurace informací o aplikaci** .
 
 - **iOS**
@@ -76,8 +76,8 @@ Pokud ale chcete, aby byla aplikace k dispozici koncovým uživatelům prostřed
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Check Point SandBlast Mobile - App Store URL](https://apps.apple.com/us/app/sandblast-mobile-protect/id1006390797) when completing the **Configure app information** section. -->
 
 ### <a name="making-zimperium-available-to-end-users"></a>Zpřístupnění Zimperium koncovým uživatelům
-<!-- - **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Zimperium - Play Store URL](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) when completing the **Configure app information** section. -->
+- **Androidem**
+  - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](../apps/store-apps-android.md). Při dokončování části **Konfigurace informací o aplikaci** použijte tuto [adresu Zimperium obchod Play](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) .
 - **iOS**
   - Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](../apps/store-apps-ios.md). Tuto [adresu URL obchodu s aplikacemi Zimperium](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8) použijte při dokončování části **Konfigurace informací o aplikaci** .
  
@@ -89,7 +89,7 @@ Pokud ale chcete, aby byla aplikace k dispozici koncovým uživatelům prostřed
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Pradeo - App Store URL](https://itunes.apple.com/us/app/pradeo-agent/id547979360?mt=8) when completing the **Configure app information** section. -->
 
 ### <a name="making-better-mobile-available-to-end-users"></a>Zpřístupnění lepšího mobilního telefonu koncovým uživatelům 
-- **Androidemem**
+- **Androidem**
   - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](../apps/store-apps-android.md). Tuto [aktivní adresu URL ochrany obchod Play](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) použijte při dokončování části **Konfigurace informací o aplikaci** .
 <!-- - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield - App Store URL](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) when completing the **Configure app information** section. -->

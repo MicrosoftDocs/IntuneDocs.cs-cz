@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9795ca8a585fd926cc269d493760b37aa7666eb
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d30749a7eaa3d516bef2f2acff3e010d69db1c0e
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74051963"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547050"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Jaké jsou běžné způsoby použití podmíněného přístupu s Intune?
 
@@ -55,7 +55,7 @@ Zásady podmíněného přístupu na základě zařízení pro Exchange Online a
 > 1. Spusťte **aplikaci Portál společnosti**.
 > 2. Přejděte na stránku **Nastavení** prostřednictvím tlačítka se třemi tečkami (...) nebo hardwarového tlačítka nabídky.
 > 3. Stiskněte tlačítko **Povolit přístup z prohlížeče**. 
-> 4. V prohlížeči Chrome se odhlaste z Office 365 a znovu spusťte Chrome.
+> 4. V prohlížeči Chrome se odhlásí z Office 365 a restartuje Chrome.
 
 ### <a name="conditional-access-based-on-network-access-control"></a>Podmíněný přístup na základě řízení přístupu k síti
 
@@ -83,11 +83,11 @@ Podmíněný přístup pro počítače poskytuje podobné možnosti jako pro mob
 
 #### <a name="corporate-owned"></a>Ve vlastnictví firmy
 
-- **Připojená místní doména AD:** Tato možnost se běžně používá v organizacích, které jsou dostatečně pohodlné, jak už spravují své počítače prostřednictvím zásad skupiny služby AD nebo System Center Configuration Manager.
+- **Připojená místní doména AD:** Tato možnost se běžně používá v organizacích, které jsou dostatečně pohodlné, jak už spravují své počítače prostřednictvím zásad skupiny služby AD nebo Configuration Manager.
 
 - **Připojené k doméně Azure AD a Správa Intune:** Tento scénář je určen pro organizace, které mají být nejprve cloudové služby (tedy primárně využívají cloudové služby, s cílem snížit využití místní infrastruktury) nebo pouze Cloud (bez místní infrastruktury). Funkce připojení k Azure AD funguje dobře v hybridním prostředí a umožňuje přístup ke cloudovým i místním aplikacím a prostředkům. Zařízení se připojí k Azure AD a zaregistruje se do Intune, které se dá použít jako kritéria podmíněného přístupu při přístupu k podnikovým prostředkům.
 
-- **Připojené k doméně služby AD a System Center Configuration Manager:** V rámci aktuální větve poskytuje System Center Configuration Manager možnosti podmíněného přístupu, které můžou vyhodnotit specifická kritéria dodržování předpisů, a to i počítač připojený k doméně:
+- **Připojené k doméně služby AD a Configuration Manager:** V rámci aktuální větve poskytuje Configuration Manager možnosti podmíněného přístupu, které můžou vyhodnotit specifická kritéria dodržování předpisů, a to i počítač připojený k doméně:
 
   - Je počítač zašifrovaný?
 

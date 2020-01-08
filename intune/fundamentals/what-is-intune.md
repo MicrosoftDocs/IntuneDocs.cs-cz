@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3c03c67a99b78804c999250f8d1148a4b3d1d97
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 6d24d1c7dbae12fb33ec277419b1bbfd47b46b07
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72504762"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548053"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune je poskytovatel MDM a MAM pro vaše zařízení.
 
@@ -34,7 +34,7 @@ Podívejte se na [větší verzi](./media/what-is-intune/intunearchitecture.svg)
 
 Intune vám umožňuje:
 
-- Vyberte možnost 100% Cloud s Intune nebo se [spoluspravuje](https://docs.microsoft.com/sccm/comanage/overview) pomocí Configuration Manager a Intune.
+- Vyberte možnost 100% Cloud s Intune nebo se [spoluspravuje](https://docs.microsoft.com/configmgr/comanage/overview) pomocí Configuration Manager a Intune.
 - Nastavte pravidla a nakonfigurujte nastavení na osobních zařízeních a na zařízeních vlastněných organizací pro přístup k datům a sítím.
 - Nasaďte a ověřte aplikace na zařízeních – místně a mobilní zařízení.
 - Zabezpečte informace společnosti tím, že řídíte způsob přístupu uživatelů k informacím a jejich sdílení.

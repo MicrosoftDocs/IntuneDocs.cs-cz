@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79e1ba2441baa6773632c27f204bef01b015b990
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 48ad9ffe32dc7493195ec161e070734776381427
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74832725"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547797"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Řešení potíží při registraci zařízení v Microsoft Intune
 
@@ -113,7 +113,7 @@ Pokud se chcete vyhnout dosažení limitu počtu zařízení, nezapomínejte ode
 
     4. Znovu zapněte službu DirSync a zkontrolujte, jestli je teď uživatel správně synchronizovaný.
 
-3. Pokud používáte nástroj System Center Configuration Manager se službou Intune, zkontrolujte, jestli má uživatel platné ID uživatele cloudu:
+3. V případě, že používáte Configuration Manager s Intune, ověřte, jestli má uživatel platné ID uživatele cloudu:
 
     1. Otevřete nástroj SQL Management Studio.
 
@@ -261,7 +261,7 @@ Následující kroky popisují jednom jeden z mnoha způsobů a nástrojů, pomo
 Pokud je certifikát serveru správně nainstalovaný, uvidíte ve výsledcích všechny značky zaškrtnutí. Pokud výše popsaný problém přetrvává, zobrazí se v sekcích výsledné sestavy „Certificate name matches“ (Název certifikátu odpovídá) a „SSL Certificate is correctly Installed“ (Certifikát SSL je správně nainstalovaný) červený symbol X.
 
 
-## <a name="ios-issues"></a>Problémy na zařízeních s iOSem
+## <a name="ios-issues"></a>Problémy na zařízeních s iOS
 
 ### <a name="ios-enrollment-errors"></a>Chyby registrace zařízení se systémem iOS
 Následující tabulka obsahuje chyby, které se můžou koncovým uživatelům zobrazit při registraci zařízení s iOsem v Intune.
@@ -306,7 +306,7 @@ Po registraci se zařízení vrátí do stavu správné funkce a znovu získá p
 ### <a name="verify-ws-trust-13-is-enabled"></a>Ověření, že koncový bod WS-Trust 1.3 je povolený
 **Problém:** Zařízení s iOSem a programem registrace zařízení (DEP) není možné zaregistrovat.
 
-Registrace zařízení s programem DEP s přidružením uživatele vyžaduje aktivaci koncového bodu WS-Trust 1.3 Username/Mixed, aby bylo možné požádat o token uživatele. Active Directory má tento koncový bod ve výchozím nastavení povolený. Seznam povolených koncových bodů získáte použitím rutiny PowerShellu Get-AdfsEndpoint a vyhledáním koncového bodu trust/13/UsernameMixed. Například:
+Registrace zařízení s programem DEP s přidružením uživatele vyžaduje aktivaci koncového bodu WS-Trust 1.3 Username/Mixed, aby bylo možné požádat o token uživatele. Active Directory má tento koncový bod ve výchozím nastavení povolený. Seznam povolených koncových bodů získáte použitím rutiny PowerShellu Get-AdfsEndpoint a vyhledáním koncového bodu trust/13/UsernameMixed. Příklad:
 
       Get-AdfsEndpoint -AddressPath “/adfs/services/trust/13/UsernameMixed”
 
@@ -332,7 +332,7 @@ Další informace najdete v tématu [Doporučené postupy zabezpečení služby
 
 5. Potvrďte nastavení výchozích prohlížečů Safari (pro iOS) a povolení souborů cookie.
 
-### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-system-center-configuration-manager-with-intune"></a>Zaregistrovaná zařízení s iOSem se při používání nástroje System Center Configuration Manager se službou Intune nezobrazí v konzole
+### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-configuration-manager-with-intune"></a>Zaregistrovaná zařízení s iOS se při použití Configuration Manager s Intune nezobrazí v konzole.
 **Problém:** Uživatel registruje zařízení s iOSem, to se ale nezobrazí v konzole pro správu nástroje Configuration Manager. Zařízení neindikuje, že je zaregistrované. Možné příčiny:
 
 - Konektor služby Microsoft Intune v lokalitě nástroje Configuration Manager nekomunikuje se službou Intune.
@@ -419,7 +419,7 @@ Po vymazání blokovaných zařízení můžete uživatelům předat pokyn, aby 
     3. Najděte zařízení s problematickou registrací. Výsledky můžete upřesnit hledáním podle názvu zařízení nebo adresy MAC/hardwaru.
     4. Vyberte toto zařízení > **Odstranit**. Odstraňte všechny ostatní záznamy spojené s tímto zařízením.  
 
-## <a name="issues-when-using-system-center-configuration-manager-with-intune"></a>Problémy při použití nástroje System Center Configuration Manager se službou Intune
+## <a name="issues-when-using-configuration-manager-with-intune"></a>Problémy při použití Configuration Manager s Intune
 
 ### <a name="mobile-devices-disappear"></a>Mobilní zařízení zmizí
 
@@ -478,7 +478,7 @@ Na počítači se stále nachází certifikát předchozího účtu.
 1. Zkuste se znovu zaregistrovat.
 
     > [!IMPORTANT]
-    > Tato část, metoda nebo úloha obsahují kroky, které vám pomohou s úpravou registru. Pokud ale budete měnit registr a uděláte tam něco špatně, můžete mít velké problémy s počítačem. Proto je důležité, abyste pečlivě postupovali podle těchto kroků. Než začnete registr měnit, pro jistotu si ho zazálohujte. Pak budete moct v případě problémů registr obnovit.
+    > Tato část, metoda nebo úloha obsahují kroky, které vám pomohou s úpravou registru. Pokud však upravíte registr nesprávně, může dojít k vážným problémům. Proto je důležité, abyste pečlivě postupovali podle těchto kroků. Pro zvýšení ochrany před upravováním registr zálohujte. Následně můžete v případě problémů registr obnovit.
     > Další informace o tom, jak zálohovat a obnovovat registr, najdete v tématu [Postup zálohování a obnovení registru v systému Windows](https://support.microsoft.com/kb/322756).
 
 ## <a name="general-enrollment-error-codes"></a>Obecné kódy chyb registrace

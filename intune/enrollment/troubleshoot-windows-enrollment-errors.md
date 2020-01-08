@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46012b11cdb458243658e858b53c2dfb1a69dc88
-ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
+ms.openlocfilehash: 622c09d03507a3a47433eab5b21702a656f8bffb
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991797"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547511"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Řešení potíží s registrací zařízení s Windows v Microsoft Intune
 
@@ -40,7 +40,7 @@ Shromážděte následující informace o problému:
 - Jakou platformu (Android, iOS, Windows) má problém?
 - Kolika uživatelů se to týká? Ovlivnili všichni uživatelé nebo jen některé?
 - Kolik zařízení je ovlivněno? Jsou všechna zařízení ovlivněná nebo jenom některá?
-- Co je Autorita MDM? Pokud je System Center Configuration Manager, jakou verzi Configuration Manager používáte?
+- Co je Autorita MDM? Pokud se jedná o Configuration Manager koncového bodu Microsoftu, jakou verzi Configuration Manager používáte?
 - Jak se provádí registrace? Přináší vaše vlastní zařízení (BYOD) nebo Apple Program registrace zařízení (DEP) pomocí profilů zápisu?
 
 ## <a name="error-messages"></a>Chybovými zprávami
@@ -389,4 +389,4 @@ K tomuto problému obvykle dochází, když nesprávně delegujete oprávnění 
 - [Podívejte se na blog týmu podpory Microsoft Intune.](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Podívejte se na blog Microsoft Enterprise mobility and Security.](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
 - [Získat podporu pro Microsoft Intune](../fundamentals/get-support.md)
-- [Najít chyby při registraci spolusprávy](https://docs.microsoft.com/sccm/comanage/how-to-monitor#enrollment-errors)
+- [Najít chyby při registraci spolusprávy](https://docs.microsoft.com/configmgr/comanage/how-to-monitor#enrollment-errors)

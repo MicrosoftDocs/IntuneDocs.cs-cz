@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4761e2565402b4c3cdc993ff89cbedea8273609
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 304a6a60ea8dbfa98e62eb8e52a69e14af795746
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74563896"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548011"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune
 
@@ -39,7 +39,7 @@ Zásady ochrany Microsoft Intune pro Microsoft Edge usnadňují ochranu dat a pr
 ## <a name="getting-started"></a>Začínáme
 
 Vy a vaši koncoví uživatelé si můžete stáhnout Microsoft Edge z veřejných obchodů s aplikacemi pro použití ve svých organizacích. Požadavky na operační systém pro zásady prohlížeče jsou některé z těchto možností:
-- Android 4 a novější
+- Android 4 nebo novější
 - iOS 8.0 a novější
 
 ## <a name="application-protection-policies-for-microsoft-edge"></a>Zásady ochrany aplikací pro Microsoft Edge
@@ -199,6 +199,14 @@ Pak použijte následující páry klíč/hodnota, které přidělí vaší orga
 |    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandLogo    |    True (Pravda)    |
 |    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandColor    |    True (Pravda)    |
 
+## <a name="display-relevant-industry-news-on-new-tab-pages"></a>Zobrazit relevantní novinky v odvětví na nových stránkách karty
+
+V rámci Microsoft Edge Mobile můžete nakonfigurovat nové možnosti stránky s kartami a zobrazit tak novinky v oboru, které jsou relevantní pro vaši organizaci. Když tuto funkci povolíte, Microosft Edge Mobile používá název domény vaší organizace k agregaci zpráv z webu o vaší organizaci, oboru organizace a comeptitors, aby vaši uživatelé mohli najít relevantní externí novinky z centeralized nového. stránky karet v Microsoft Edge Novinky v oboru jsou ve výchozím nastavení vypnuté a můžete je použít k jejímu přihlášení ve vaší organizaci. 
+
+|    Klíč    |    Hodnota    |
+|------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+|    ' com. Microsoft. Intune. SohwIndustryNews '    |    **Hodnota true** zobrazí zprávy v odvětví na stránce Nová karta pro mobilní zařízení Microsoft Edge.<p>**False** (výchozí) skryje v oboru zprávy na nové kartě.    |
+
 ## <a name="configure-managed-bookmarks-for-microsoft-edge"></a>Konfigurace spravovaných záložek pro Microsoft Edge
 
 Pro usnadnění přístupu můžete nakonfigurovat záložky, které chcete, aby uživatelé měli k dispozici, když používají Microsoft Edge. 
@@ -268,7 +276,7 @@ K vytvoření seznamu povolených a blokovaných webů můžete použít různé
   - `http://www.contoso.com:*`
   - `http://www.contoso.com: /*`
 
-## <a name="define-behavior-when-users-try-to-access-a-blocked-site"></a>Definování chování při pokusu uživatele o přístup k blokovanému webu
+## <a name="transition-users-to-their-personal-context-when-trying-to-access-a-blocked-site"></a>Při pokusu o přístup k blokovanému webu převeďte uživatele do svého osobního kontextu.
 
 Pomocí modelu duální identity postaveného na Microsoft Edge můžete vašim koncovým uživatelům povolit flexibilnější prostředí, než bylo možné s Intune Managed Browser. Když uživatelé projdou blokovaný web na Microsoft Edge, můžete je vyzvat, aby otevřeli odkaz v jejich osobním kontextu místo jejich pracovního kontextu. Díky tomu můžou být pořád chráněná a přitom udržují firemní prostředky v bezpečí. Pokud se například uživateli pošle odkaz na článek příspěvky prostřednictvím Outlooku, může odkaz otevřít v osobním kontextu nebo na kartě InPrivate. Jejich pracovní kontext neumožňuje webům s novinkami. Ve výchozím nastavení jsou tyto přechody povoleny.
 
@@ -276,7 +284,16 @@ Použijte následující dvojici klíč/hodnota ke konfiguraci, zda jsou tyto m�
 
 |    Klíč    |    Hodnota    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    ' com. Microsoft. Intune. mam. managedbrowser. openInPrivateIfBlock '    |    **Hodnota true** způsobí, že se odkazy na přímé otevření přímo v procházení InPrivate.<p>**Hodnota false** (výchozí) zobrazí uživatelům možnost otevření omezeného odkazu s možností procházení InPrivate nebo se svým osobním účtem (MSA).    |
+
+## <a name="open-restricted-links-directly-in-inprivate-tab-pages"></a>Otevřít omezené odkazy přímo na kartách InPrivate
+
+Můžete nakonfigurovat, jestli mají být odkazy s omezeným přístupem otevřeny přímo v procházení InPrivate, což uživatelům poskytuje pohodlnější možnosti procházení. Tím ušetříte uživatelům krok pro převzetí služeb při selhání do svého osobního kontextu pro zobrazení lokality. Procházení InPrivate je považováno za nespravované, takže uživatelé nebudou mít přístup při použití režimu procházení InPrivate. 
+
+|    Klíč    |    Hodnota    |
+|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **True** umožňuje, aby Microsoft Edge přešl uživatele do svého osobního kontextu a otevřel Blokované weby.<p>**Blok** zabraňuje uživatelům, kteří přecházejí z přechodu na Microsoft Edge. Uživatelům se zobrazí zpráva s informacemi o tom, že lokalita, ke které se pokouší získat přístup, je blokovaná.    |
+
 
 ## <a name="use-microsoft-edge-on-ios-to-access-managed-app-logs"></a>Přístup k protokolům spravovaných aplikací pomocí Microsoft Edge v iOS 
 

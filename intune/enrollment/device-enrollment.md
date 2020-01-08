@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bb9aa6349a88f226c063703d6cb035b3c89636fd
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: feee58d926a25e9132204798ba93d10a7c90f41e
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503249"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547830"
 ---
 # <a name="what-is-device-enrollment"></a>Co je registrace zařízení?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -60,7 +60,7 @@ Standardně se do Intune můžou registrovat zařízení pro všechny platformy.
 |**Automatická registrace** | Ne |Ano |Ne | [Další informace](windows-enroll.md#enable-windows-10-automatic-enrollment)|
 |**Autopilot** |Ano |Ano |Ne | [Další informace](enrollment-autopilot.md)
 |**Hromadná registrace** |Ne |Ne |Ne | [Další informace](windows-bulk-enroll.md) |
-|**Spoluspráva** |Ne |Ano |Ne | [Další informace](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview)
+|**Spoluspráva** |Ne |Ano |Ne | [Další informace](https://docs.microsoft.com/configmgr/core/clients/manage/co-management-overview)
 |**Objekty zásad skupiny** |Ne |Ano |Ne | [Další informace](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 
 ## <a name="android-enrollment-methods"></a>Metody registrace zařízení s Androidem
@@ -97,7 +97,7 @@ Registrace DEP pro iOS je podrobněji popsaná zde:
 - [Volba způsobu registrace zařízení s iOSem](ios-enroll.md)
 - [Registrace zařízení s iOSem pomocí Programu registrace zařízení (DEP)](device-enrollment-program-enroll-ios.md)
 
-### <a name="usb-sa"></a>USB (pomocník pro instalaci)
+### <a name="usb-sa"></a>USB (SA)
 Správci IT používají k ruční přípravě každého zařízení vlastněného společností pro registraci Apple Configurator (přes USB) a Pomocníka s nastavením. Správce IT vytvoří registrační profil a vyexportuje ho do Apple Configuratoru. Když uživatelé dostanou svá zařízení, zobrazí se jim výzva ke spuštění pomocníka s nastavením pro registraci zařízení. Tato metoda podporuje režim **iOS – Pod dohledem**, který umožňuje následující funkce:
 - Registrace uzamčeného zařízení
 - Beznabídkový režim a další pokročilé konfigurace a omezení

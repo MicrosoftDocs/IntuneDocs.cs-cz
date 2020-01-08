@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24f15cb179dfc2b12b642f5f196d04dce58d4377
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 5c18f3e8fb14d8592789b39856ec420790fad286
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505212"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547549"
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
 
@@ -84,7 +84,7 @@ Vaše současné prostředí může ovlivnit rozhodování o návrhu a mělo by 
 
   - Jak spravujete počítačové a serverové prostředí?
 
-  - Používáte System Center Configuration Manager? Používáte platformu pro správu systémů od jiného výrobce?
+  - Používáte Microsoft Endpoint Configuration Manager? Používáte platformu pro správu systémů od jiného výrobce?
 
 - **Řešení VPN**
 
@@ -101,7 +101,7 @@ Při popisu současného prostředí MDM nezapomeňte zaznamenat všechny projek
 | **SharePoint** | Místní SharePoint | Plány přechodu na SharePoint Online neexistují. |  
 | **Současné řešení MDM** | Exchange ActiveSync |  |
 | **Řešení pro certifikáty** | Microsoft Server 2012 R2, AD Certificate Services | Infrastruktura veřejných klíčů se používá jen pro webové servery. |
-| **Správa systému** | System Center Configuration Manager CB 1606 | Zájem o hybridní řešení Intune |
+| **Správa systému** | Configuration Manager 1606 | Zájem o hybridní řešení Intune |
 | **Řešení VPN** | Cisco AnyConnect |  |
 
 
@@ -109,7 +109,7 @@ Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet
 
 ## <a name="choose-an-intune-deployment-option"></a>Volba způsobu nasazení Intune
 
-Intune nabízí dvě možnosti nasazení: samostatné a hybridní. Samostatně odkazuje na službu Intune běžící v cloudu, hybrid odkazuje na integraci Intune s System Center Configuration Manager. Tato příručka je určená primárně pro možnost samostatného nasazení. [Rozhodněte, která možnost vyhovuje požadavkům vaší firmy](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
+Intune nabízí dvě možnosti nasazení: samostatné a hybridní. Samostatně odkazuje na službu Intune běžící v cloudu, hybrid odkazuje na integraci Intune s Configuration Manager. Tato příručka je určená primárně pro možnost samostatného nasazení. [Rozhodněte, která možnost vyhovuje požadavkům vaší firmy](https://docs.microsoft.com/configmgr/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
 
 > [!Important]
 >Připojování nových zákazníků hybridních MDM se už nepoužívá. Další informace najdete v příspěvku na blogu o [přesunu z hybridní správy mobilních zařízení do Intune v Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150) .
@@ -202,7 +202,7 @@ Při vytváření návrhu potřebujete vědět, jaká zařízení budou v prost�
 
 ### <a name="devices"></a>Zařízení
 
-Intune slouží ke správě mobilních zařízení. Zabezpečuje firemní data a umožňuje koncovým uživatelům pracovat z více míst. Intune podporuje množství platforem zařízení, proto doporučujeme, abyste zdokumentovali zařízení, platformy operačních systémů a verze, které budou v návrhu vaší organizace podporované. Například:
+Intune slouží ke správě mobilních zařízení. Zabezpečuje firemní data a umožňuje koncovým uživatelům pracovat z více míst. Intune podporuje množství platforem zařízení, proto doporučujeme, abyste zdokumentovali zařízení, platformy operačních systémů a verze, které budou v návrhu vaší organizace podporované. Příklad:
 
 | **Platforma zařízení** | **Verze OS** |
 |:---:|:---:|
@@ -250,7 +250,7 @@ Musíte určit, jestli jsou zásady pro podmínky a ujednání potřeba. Pokud t
 | **Název podmínek a ujednání** | **Případ použití** | **Cílová skupina** |
 |:---:|:---:|:---:|
 | Firemní podmínky a ujednání | Firemní | Firemní uživatelé |                 
-| Podmínky a ujednání pro uživatele s vlastním zařízením | uživatelé s vlastním zařízením (BYOD) | Uživatelé s vlastním zařízením |                
+| Podmínky a ujednání pro uživatele s vlastním zařízením | Uživatelé s vlastním zařízením | Uživatelé s vlastním zařízením |                
 
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a namapovat podmínky a ujednání na své skupiny uživatelů.
@@ -277,9 +277,9 @@ Profily pomáhají koncovému uživateli připojit se k firemním datům. Intune
 
 - Profily certifikátů
 
-- profil Wi-Fi
+- Wi-Fi profil
 
-- Profil VPN
+- profil VPN
 
 - e-mailový profil
 
@@ -310,7 +310,7 @@ Tady je příklad, jak při návrhu dokumentovat certifikáty:
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní profily certifikátů.
 
-#### <a name="wi-fi-profile"></a>profil Wi-Fi
+#### <a name="wi-fi-profile"></a>Wi-Fi profil
 
 Profily Wi-Fi se používají k automatickému připojení mobilního zařízení k bezdrátové síti. Intune podporuje nasazení profilů Wi-Fi pro všechny podporované platformy. Přečtěte si další informace o tom, [jak Intune podporuje profily Wi-Fi.](../configuration/wi-fi-settings-configure.md)
 
@@ -320,7 +320,7 @@ Tady je příklad návrhu profilu Wi-Fi:
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní profily Wi-Fi.
 
-#### <a name="vpn-profile"></a>Profil VPN
+#### <a name="vpn-profile"></a>profil VPN
 
 Profily VPN nabízejí uživatelům bezpečný přístup k síti ze vzdálených míst. Intune podporuje profily VPN nativních mobilních připojení VPN a externích dodavatelů. Další informace o [profilech VPN a dodavatelích podporovaných službou Intune](../configuration/vpn-settings-configure.md).
 
@@ -342,7 +342,7 @@ Tady je příklad, jak dokumentovat návrh e-mailových profilů:
 | **Typ** | **Název profilu** | **Platforma zařízení** | **Případy použití** |
 |:---:|:---:|:---:|:---:|
 | e-mailový profil | E-mailový profil pro iOS | iOS | Firemní – informatik (uživatel s vlastním zařízením) |
-| e-mailový profil | E-mailový profil pro Android Knox | Android Knox | uživatelé s vlastním zařízením (BYOD) |
+| e-mailový profil | E-mailový profil pro Android Knox | Android Knox | Uživatelé s vlastním zařízením |
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní e-mailové profily.
 ### <a name="apps"></a>Apps
@@ -372,7 +372,7 @@ Protože aplikace můžete nasazovat uživatelům a zařízením, doporučujeme,
 - Jsou aplikace veřejně dostupné v obchodu s aplikacemi, nebo jde o vlastní obchodní aplikace?
 
 
-#### <a name="app-protection-policies"></a>Zásady ochrany aplikací
+#### <a name="app-protection-policies"></a>Zásady ochrany aplikace
 
 Zásady ochrany aplikace minimalizují ztrátu dat tím, že definují, jak aplikace spravuje firemní data. Intune podporuje zásady ochrany pro každou aplikaci vytvořenou tak, aby fungovala se správou mobilních aplikací. Při návrhu zásad ochrany aplikací se musíte rozhodnout, jaká omezení chcete uplatnit na firemní data v dané aplikaci. Doporučujeme vám prostudovat, jak [zásady ochrany aplikací](../apps/app-protection-policy.md) fungují. Tady je příklad, jak dokumentovat stávající aplikace a jakou ochranu potřebují.
 
@@ -383,7 +383,7 @@ Zásady ochrany aplikace minimalizují ztrátu dat tím, že definují, jak apli
 
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní zásady ochrany aplikací.
-#### <a name="compliance-policies"></a>Zásady dodržování předpisů
+#### <a name="compliance-policies"></a>Compliance zásady
 
 Zásady dodržování předpisů určují, zda zařízení vyhovuje určitým požadavkům. Služba Intune používá zásady dodržování předpisů k tomu, aby zjistila, jestli zařízení vyhovuje nebo nevyhovuje. Stav dodržování předpisů je pak možné použít k zakázání nebo povolení přístupu k firemním prostředkům. Pokud se vyžaduje podmíněný přístup, doporučujeme navrhnout [zásadu dodržování předpisů pro zařízení](../protect/device-compliance-get-started.md).
 

@@ -16,15 +16,15 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d7b8d96ae1582b5cb434c80d44ef55a31c4781b
-ms.sourcegitcommit: 0a85af9d584709ecc29062f91645a4c47a61ebb9
+ms.openlocfilehash: 23708968ac229c2721635d9fc31527558e9bd3d2
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74882301"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547471"
 ---
 # <a name="microsoft-intune-licensing"></a>Microsoft Intune licencování
-Microsoft Intune je k dispozici pro různé potřeby zákazníků a velikosti organizace, od jednoduchého prostředí pro správu škol a malých firem až po pokročilejší funkce, které vyžadují Podnikoví zákazníci. Většina licencí, které zahrnují Microsoft Intune, také uděluje práva k použití System Center Configuration Manager, pokud předplatné zůstane aktivní. 
+Microsoft Intune je k dispozici pro různé potřeby zákazníků a velikosti organizace, od jednoduchého prostředí pro správu škol a malých firem až po pokročilejší funkce, které vyžadují Podnikoví zákazníci. Většina licencí, které zahrnují Microsoft Intune, také uděluje práva k používání koncového bodu Microsoft Configuration Manager, pokud předplatné zůstane aktivní. 
 
 ## <a name="microsoft-intune"></a>Microsoft Intune
 Intune je součástí těchto licencí:

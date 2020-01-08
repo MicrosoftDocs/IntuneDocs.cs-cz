@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: ''
-ms.openlocfilehash: b6144767ee69de8c1ff14e5c189c078994a9dcf4
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 060c3c00a228794d3f237a6362b048bf23e1a933
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74819709"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547724"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>Metody registrace zařízení s Windows v Intune
 
@@ -49,7 +49,7 @@ Pokud správce nakonfiguroval automatický zápis (dostupný s předplatnými Az
 Správci mohou nastavit následující metody registrace, které nevyžadují zásah uživatele:
 
 - [Připojení k hybridní službě Azure AD](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) umožňuje správcům nakonfigurovat zásady skupiny služby Active Directory tak, aby automaticky zaregistrovaly zařízení, která jsou připojená k hybridní službě Azure AD 
-- [Configuration Manager spoluspráva](https://docs.microsoft.com/sccm/comanage/overview) umožňuje správcům zaregistrovat svá existující Configuration Manager spravovaná zařízení do Intune a získat tak duální výhody Intune a Configuration Manager. 
+- [Configuration Manager spoluspráva](https://docs.microsoft.com/configmgr/comanage/overview) umožňuje správcům zaregistrovat svá existující Configuration Manager spravovaná zařízení do Intune a získat tak duální výhody Intune a Configuration Manager. 
 - [Správce registrace zařízení](device-enrollment-manager-enroll.md) (DEM) je zvláštní účet služby. Účty DEM mají oprávnění, která oprávněným uživatelům umožňuje registrovat a spravovat více zařízení vlastněných společností. Tyto typy zařízení se hodí například pro aplikace POS a jednoúčelové aplikace, ale nehodí se pro uživatele, kteří potřebují přístup k e-mailu nebo k prostředkům společnosti. Tato metoda nepovoluje použití funkcí, jako je například podmíněný přístup. 
 - [Hromadný zápis](../windows-bulk-enroll.md) umožňuje oprávněnému uživateli připojit velký počet nových zařízení vlastněných společností Azure Active Directory a Intune. Zřizovací balíček vytvoříte pomocí aplikace Windows Configuration Designer (WCD). Pak pomocí média USB během počátečního prostředí Windows OOBE nebo z existujícího počítače s Windows nainstalujete zřizovací balíček, aby se zařízení automaticky zaregistrovala do Intune. Tato metoda nepovoluje použití podmíněného přístupu. 
 - [Registrace zařízení s Windows IoT Core](https://docs.microsoft.com/windows/iot-core/manage-your-device/intunedeviceenrollment) se provádí pomocí řídicího panelu Windows IoT Core k přípravě zařízení a následnému vytvoření zřizovacího balíčku pomocí nástroje Windows Configuration Designer. Když pak při počátečním spuštění použijete médium karty SD, nainstaluje zřizovací balíček, aby se zařízení automaticky zaregistrovala do Intune.

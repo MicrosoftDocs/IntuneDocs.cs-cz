@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c33ab3c72d6e76b44fec85ce40dc2d6510a294bc
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 70f471e7f4db7ddce89d8956474822375c684944
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207124"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547978"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Řešení potíží s profily konfigurace zařízení Wi-Fi v Microsoft Intune
 
@@ -236,7 +236,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
   - Potvrďte, že všechny požadované certifikáty v rámci kompletního řetězu certifikátů jsou na zařízení s Androidem. V opačném případě se profil sítě Wi-Fi nedá na zařízení nainstalovat. Další informace najdete v tématu [chybějící zprostředkující certifikační autorita](https://developer.android.com/training/articles/security-ssl#MissingCa) (otevře web v Androidu).
   - Vyfiltrujte Omadmlog s klíčovými slovy pro hledání informací, například který certifikát se používá v profilu sítě Wi-Fi, a pokud byl profil úspěšně použit.
 
-    Můžete například použít [CMTrace](https://docs.microsoft.com/sccm/core/support/cmtrace) ke čtení protokolů. Pomocí vyhledávacího řetězce vyfiltrujte "wifimgr":
+    Můžete například použít [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) ke čtení protokolů. Pomocí vyhledávacího řetězce vyfiltrujte "wifimgr":
 
     > [!div class="mx-imgBorder"]
     > ![CMTrace filtru pro hledání konfiguračních profilů WiFiMgr na zařízeních s Androidem](./media/troubleshoot-wi-fi-profiles/cmtrace-filter-wifimgr.png)

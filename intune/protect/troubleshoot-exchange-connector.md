@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 962e66a9fdf6d8abcf6855f645775026ee4db850
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d50db72a66ee98b773973e96e03b7786c3c2d298
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508837"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547939"
 ---
 # <a name="troubleshoot-the-intune-exchange-connector"></a>Řešení potíží s Intune Exchange Connectorem
 
@@ -40,7 +40,7 @@ Než začnete řešit potíže s Exchange Connectorem v Intune, shromážděte n
   - Nastavování konektoru poprvé? 
   - Pracoval konektor správně a pak selže?
   - Pokud fungovalo, k jakým změnám došlo v prostředí Intune, prostředí Exchange nebo na počítači, na kterém běží konektorový software?
-- Co je Autorita MDM? Pokud je System Center Configuration Manager, kterou verzi Configuration Manager používáte?
+- Co je Autorita MDM? Pokud se jedná o Configuration Manager koncového bodu Microsoftu, kterou verzi Configuration Manager používáte?
 - Jakou verzi Exchange používáte?
 
 ### <a name="use-powershell-to-get-more-data-on-exchange-connector-issues"></a>Použití PowerShellu k získání dalších informací o problémech s Exchange Connectorem

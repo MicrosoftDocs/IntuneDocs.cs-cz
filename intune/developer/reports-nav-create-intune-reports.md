@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f382ce35d1d13a59f1aa5ca6a904c0c9babff8c1
-ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
+ms.openlocfilehash: 58c4db1f4c778050bc91bde79494742e018f5329
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899340"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547905"
 ---
 # <a name="use-the-microsoft-intune-data-warehouse"></a>Použití datového skladu Microsoft Intune
 
@@ -43,7 +43,7 @@ Datový sklad poskytuje přístup k více informacím týkajícím se vašeho mo
 - Datovému modelu používajícímu standard OData
 
 > [!Note]
-> Pokud používáte spoluspravovanou správu mobilních zařízení (MDM) s System Center Configuration Manager a Microsoft Intune, je nutné načíst data z Configuration Manager. Datový sklad Intune obsahuje jenom data Intune. Pro vlastní sestavy můžete použít řídicí panel Configuration Manager Power BI. Další informace najdete v článku [Announcing the Power BI solution template for System Center Configuration Manager]( https://powerbi.microsoft.com/blog/sccm-solution-template) (Představujeme šablonu řešení pro System Center Configuration Manager) a [Power BI content for Dynamics 365](https://docs.microsoft.com/dynamics365/unified-operations/dev-itpro/analytics/power-bi-home-page) (Obsah Power BI pro Dynamics 365).
+> Pokud používáte spoluspravovanou správu mobilních zařízení (MDM) se službou Microsoft Endpoint Configuration Manager a Microsoft Intune, je nutné načíst data z Configuration Manager. Datový sklad Intune obsahuje jenom data Intune. Pro vlastní sestavy můžete použít řídicí panel Configuration Manager Power BI. Další informace najdete v tématu o[oznámení Power BI šablony řešení pro Configuration Manager](https://powerbi.microsoft.com/blog/sccm-solution-template)a[Power BI obsahu pro Dynamics 365](https://docs.microsoft.com/dynamics365/unified-operations/dev-itpro/analytics/power-bi-home-page).
 
 > [!Important]  
 > Nastavením parametru dotazu  `api-version=v1.0` můžete teď používat verzi datového skladu Intune v1.0. Aktualizace kolekcí v datovém skladu mají aditivní povahu a nijak nenarušují existující scénáře.<br><br>

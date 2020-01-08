@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42d07f02e76669c735d09b5d7843a4102dd0f835
-ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
+ms.openlocfilehash: 7ceaf5c62f34cc248813a064de9e8e3710797779
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899248"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547917"
 ---
 # <a name="intune-data-warehouse-collections"></a>Shromažďování dat do datového skladu
 
@@ -84,10 +84,10 @@ Následující tabulka shrnuje stav přiřazení zásad dodržování předpisů
 |:-------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------:|
 | DateKey       | Klíč data, kdy se vytvořil souhrn pro zásady dodržování předpisů.                                                                                                                   | 20161204 |
 | Neznámé       | Počet zařízení, která jsou offline nebo kterým se nepodařilo komunikovat s Intune nebo Azure AD z jiných důvodů.                                                                           | 5        |
-| Neužívá se | Počet zařízení, ve kterých nejsou použitelné zásady dodržování předpisů, na které zacílil správce.                                                                                     | 201      |
-| Vyhovuje     | Počet zařízení, ve kterých se úspěšně použily jedny nebo více zásad dodržování předpisů, na které zacílil správce.                                                                        | 4083     |
-| V období odkladu | Počet zařízení, která nevyhovují předpisům, ale jsou v období odkladu definovaném správcem.                                                                                  | 57       |
-| Nevyhovující předpisům  | Počet zařízení, u kterých se nepodařilo použít jedny nebo více zásad dodržování předpisů, na které zacílil správce nebo u kterých uživatel nedodržel zásady, na které správce zacílil. | 43       |
+| NotApplicable | Počet zařízení, ve kterých nejsou použitelné zásady dodržování předpisů, na které zacílil správce.                                                                                     | 201      |
+| dodržoval předpisy     | Počet zařízení, ve kterých se úspěšně použily jedny nebo více zásad dodržování předpisů, na které zacílil správce.                                                                        | 4083     |
+| InGracePeriod | Počet zařízení, která nevyhovují předpisům, ale jsou v období odkladu definovaném správcem.                                                                                  | 57       |
+| NonCompliant  | Počet zařízení, u kterých se nepodařilo použít jedny nebo více zásad dodržování předpisů, na které zacílil správce nebo u kterých uživatel nedodržel zásady, na které správce zacílil. | 43       |
 |    Chyba      |    Počet zařízení, kterým se nepodařilo komunikovat s Intune nebo Azure AD a která vrátila chybovou zprávu.                                                                          |    3     |
 
 ## <a name="compliancepolicystatusdeviceperpolicyactivities"></a>compliancePolicyStatusDevicePerPolicyActivities
@@ -99,10 +99,10 @@ Následující tabulka shrnuje stav přiřazení zásad dodržování předpisů
 | PolicyKey         | Klíč pro zásady dodržování předpisů, pro který se vytvořil souhrn.                                                                                                                   | 10178    |
 | PolicyPlatformKey | Klíč pro typ platformy zásad dodržování předpisů, pro který se vytvořil souhrn.                                                                                            | 5        |
 | Neznámé           | Počet zařízení, která jsou offline nebo kterým se nepodařilo komunikovat s Intune nebo Azure AD z jiných důvodů.                                                                           | 13       |
-| Neužívá se     | Počet zařízení, ve kterých nejsou použitelné zásady dodržování předpisů, na které zacílil správce.                                                                                     | 3        |
-| Vyhovuje         | Počet zařízení, ve kterých se úspěšně použily jedny nebo více zásad dodržování předpisů, na které zacílil správce.                                                                        | 45       |
-| V období odkladu     | Počet zařízení, která nevyhovují předpisům, ale jsou v období odkladu definovaném správcem.                                                                                  | 3        |
-| Nevyhovující předpisům      | Počet zařízení, u kterých se nepodařilo použít jedny nebo více zásad dodržování předpisů, na které zacílil správce nebo u kterých uživatel nedodržel zásady, na které správce zacílil. | 7        |
+| NotApplicable     | Počet zařízení, ve kterých nejsou použitelné zásady dodržování předpisů, na které zacílil správce.                                                                                     | 3        |
+| dodržoval předpisy         | Počet zařízení, ve kterých se úspěšně použily jedny nebo více zásad dodržování předpisů, na které zacílil správce.                                                                        | 45       |
+| InGracePeriod     | Počet zařízení, která nevyhovují předpisům, ale jsou v období odkladu definovaném správcem.                                                                                  | 3        |
+| NonCompliant      | Počet zařízení, u kterých se nepodařilo použít jedny nebo více zásad dodržování předpisů, na které zacílil správce nebo u kterých uživatel nedodržel zásady, na které správce zacílil. | 7        |
 | Chyba             | Počet zařízení, kterým se nepodařilo komunikovat s Intune nebo Azure AD a která vrátila chybovou zprávu.                                                                             | 3        |
 ## <a name="compliancestates"></a>complianceStates
 
@@ -117,12 +117,12 @@ Následující tabulka shrnuje stav přiřazení zásad dodržování předpisů
 |  complianceStatus  |                       Description                      |
 |:------------------:|:------------------------------------------------------:|
 |    Neznámé         |    Neznámá                                                                        |
-|    Vyhovuje       |    Dodržuje předpisy.                                                                      |
-|    a nevyhovující    |       Zařízení nedodržuje předpisy a má zablokovaný přístup k podnikovým prostředkům.             |
+|    dodržoval předpisy       |    Dodržuje předpisy.                                                                      |
+|    Nevyhovuje    |       Zařízení nedodržuje předpisy a má zablokovaný přístup k podnikovým prostředkům.             |
 |    Konflikt        |    Konflikt s jinými pravidly                                                      |
 |    Chyba           |       Chyba                                                                       |
 |    ConfigManager   |    Spravované nástrojem Configuration Manager                                                      |
-|    V období odkladu   |       Zařízení nedodržuje předpisy, ale stále má přístup k podnikovým prostředkům.          |
+|    InGracePeriod   |       Zařízení nedodržuje předpisy, ale stále má přístup k podnikovým prostředkům.          |
 
 ## <a name="dates"></a>kalendářní data
 Entita **date** zastupuje kalendářní data, na která odkazují různé entity datového skladu.
@@ -356,7 +356,7 @@ Entita **EnrollmentFailureCategory** indikuje, proč se registrace zařízení n
 
 | enrollmentFailureCategoryName   | Description                                                                                                   |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Nelze použít                  | Kategorie selhání registrace se nedá použít.                                                            |
+| Nepoužitelné                  | Kategorie selhání registrace se nedá použít.                                                            |
 | Není k dispozici                   | Kategorie selhání registrace není k dispozici.                                                             |
 | Neznámé                         | Neznámá chyba                                                                                                |
 | Ověřování                  | Ověření se nezdařilo.                                                                                        |
@@ -383,7 +383,7 @@ Entita **EnrollmentFailureReason** označuje podrobnější důvod selhání reg
 
 | enrollmentFailureReasonName      | Description                                                                                                                                                                                            |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Nelze použít                   | Důvod selhání registrace se nedá použít.                                                                                                                                                       |
+| Nepoužitelné                   | Důvod selhání registrace se nedá použít.                                                                                                                                                       |
 | Není k dispozici                    | Důvod selhání registrace není k dispozici.                                                                                                                                                        |
 | Neznámé                          | Neznámá chyba.                                                                                                                                                                                         |
 | UserNotLicensed                  | Uživatel se v Intune nenašel nebo nemá platnou licenci.                                                                                                                                     |
@@ -418,7 +418,7 @@ Entita **EnrollmentFailureReason** označuje podrobnější důvod selhání reg
 |      Vlastnost     |                   Description                  | Příklad |
 |:-----------------:|:----------------------------------------------:|:-------:|
 | ExtensionStateKey | Jedinečný identifikátor stavu           | 2       |
-| ExtensionState    | Stav IntuneManagementExtension | V pořádku |
+| ExtensionState    | Stav IntuneManagementExtension | Healthy |
 
 ## <a name="intunemanagementextensionversions"></a>intuneManagementExtensionVersions
 Entita **IntuneManagementExtensionVersion** uvádí seznam všech verzí, které **IntuneManagementExtension** používá.
@@ -525,7 +525,7 @@ Entita **managementAgentType** představuje agenty používané ke správě zař
 | 3                     | EasMdm                            | Zařízení se spravuje pomocí protokolu Exchange Active Sync i pomocí agenta MDM.        |
 | 4                     | IntuneClient                      | Zařízení se spravuje pomocí agenta Intune pro počítače.                               |
 | 5                     | EasIntuneClient                   | Zařízení se spravuje pomocí protokolu Exchange Active Sync i pomocí agenta Intune pro počítače. |
-| 8                     | ConfigManagerClient               | Zařízení se spravuje pomocí agenta produktu System Center Configuration Manager.     |
+| 8                     | ConfigManagerClient               | Zařízení spravuje agent Configuration Manager.     |
 | 10                    | ConfigurationManagerClientMdm     | Zařízení se spravuje pomocí Configuration Manageru a MDM.                    |
 | 11                    | ConfigurationManagerCLientMdmEas  | Zařízení se spravuje pomocí Configuration Manager, MDM a Exchange Active Sync.               |
 | 16                    | Neznámé                           | Neznámý typ agenta správy                                              |
@@ -576,7 +576,7 @@ Představuje stav instalace mobilní aplikace pomocí správy mobilních aplikac
 | AppKey             | Klíč mobilní aplikace, který se používá k identifikaci instance AppRevision.                                                          |
 | DeviceTypeKey      | Klíč typu zařízení přidruženého k mobilní aplikaci                                                              |
 | AppInstallStateKey | Klíč stavu instalace aplikace, který se používá k identifikaci instance MobileAppInstallState.                                         |
-| Kód chyby          | Kód chyby, který vrací instalační program aplikace, mobilní platforma nebo služba, které se instalace aplikace týká. |
+| ErrorCode          | Kód chyby, který vrací instalační program aplikace, mobilní platforma nebo služba, které se instalace aplikace týká. |
 | Počet              | Celkový počet                                                                                                                  |
 
 ## <a name="ownertypes"></a>ownerTypes
