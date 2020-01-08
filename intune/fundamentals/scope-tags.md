@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c2ec3ab62c6effd80d6a02d6ae9052b41fed23c
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: e1f81d26227bb206aa55ca495f4a4ee5e8ae9907
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207314"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548125"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Použití řízení přístupu na základě role (RBAC) a značek oboru pro distribuci
 
@@ -39,11 +39,11 @@ Pomocí značek řízení přístupu založených na rolích a oborech můžete 
 ## <a name="default-scope-tag"></a>Výchozí značka oboru
 Výchozí značka oboru je automaticky přidána do všech netagovaných objektů, které podporují značky oboru.
 
-Výchozí funkce značky oboru je podobná funkci rozsahů zabezpečení v System Center Configuration Manager. 
+Výchozí funkce značky oboru je podobná funkci obory zabezpečení ve službě Microsoft Endpoint Configuration Manager. 
 
 ## <a name="to-create-a-scope-tag"></a>Vytvoření značky oboru
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **Správa tenanta** > **role** > **oboru (značky)** > **vytvořit**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **Správa tenanta** > **role** > **oboru (značky)**  > **vytvořit**.
 
     ![Snímek obrazovky s vytvořením značky oboru](./media/scope-tags/create-scope-tag.png)
 
@@ -57,11 +57,11 @@ Výchozí funkce značky oboru je podobná funkci rozsahů zabezpečení v Syste
 
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte možnost **Správa tenanta** > **role** > **všechny role** > vyberte role > **přiřazení** > **přiřadit**.
 2. Zadejte název a **Popis** **přiřazení** .
-3. Zvolte **Členové (skupiny)** > **Přidat** > zvolte skupiny, které chcete jako součást tohoto přiřazení, > **Vyberte** > **OK**. Uživatelé v této skupině budou mít oprávnění ke správě uživatelů nebo zařízení v oboru (skupiny).
+3. Zvolte **Členové (skupiny)**  > **Přidat** > zvolte skupiny, které chcete jako součást tohoto přiřazení, > **Vyberte** > **OK**. Uživatelé v této skupině budou mít oprávnění ke správě uživatelů nebo zařízení v oboru (skupiny).
 
     ![Snímek obrazovky s vybranými skupinami členů](./media/scope-tags/select-member-groups.png)
 
-4. Pokud chcete spravovat uživatele nebo zařízení v určité sadě skupin, zvolte **rozsah (skupiny)** > **vybrané skupiny** > **Vybrat skupiny, které chcete zahrnout** > zvolte skupiny > **Vyberte** > **OK**. Všichni uživatelé/zařízení v této skupině budou spravováni správci v členech (skupině).
+4. Pokud chcete spravovat uživatele nebo zařízení v určité sadě skupin, zvolte **rozsah (skupiny)**  > **vybrané skupiny** > **Vybrat skupiny, které chcete zahrnout** > zvolte skupiny > **Vyberte** > **OK**. Všichni uživatelé/zařízení v této skupině budou spravováni správci v členech (skupině).
 
     ![Snímek obrazovky s vybranými skupinami oborů](./media/scope-tags/select-scope-groups.png)
 
@@ -69,7 +69,7 @@ Výchozí funkce značky oboru je podobná funkci rozsahů zabezpečení v Syste
 
     ![Snímek obrazovky s dalšími možnostmi pro vybrané skupiny oborů.](./media/scope-tags/scope-group-other-options.png)
     
-5. Zvolte **rozsah (značky)** > **Přidat** > vyberte značky, které chcete přidat do této role > **Vyberte** > **OK**. Uživatelé v členech (skupinách) budou mít přístup k objektům Intune, které mají také stejnou značku oboru.
+5. Zvolte **rozsah (značky)**  > **Přidat** > vyberte značky, které chcete přidat do této role > **Vyberte** > **OK**. Uživatelé v členech (skupinách) budou mít přístup k objektům Intune, které mají také stejnou značku oboru.
 
     ![Snímek obrazovky s vybranými značkami oboru](./media/scope-tags/select-scope-tags.png)
 
@@ -81,7 +81,7 @@ Pro objekty, které podporují značky oboru, se značky oboru obvykle zobrazuj�
 
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **konfigurační profily** > zvolit profil.
 
-2. Vyberte **vlastnosti** > **rozsah (značky)** > **Přidat**.
+2. Vyberte **vlastnosti** > **rozsah (značky)**  > **Přidat**.
 
     ![Snímek obrazovky s přidáním značek oboru](./media/scope-tags/add-scope-tags.png)
 

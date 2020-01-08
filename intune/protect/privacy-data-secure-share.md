@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b17b87462b2c73e265f062c33a06a810e7c58bf8
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: cfa2c5366d1b38cf819cfc68840a29fad9002979
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72504343"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548111"
 ---
 # <a name="data-security-and-sharing-in-intune"></a>Zabezpečení a sdílení údajů v Intune
 
@@ -68,11 +68,11 @@ Informace o datech sdílených s některými třetími stranami najdete v násle
 - [Data z Googlu odesílaná do Intune](data-google-sends-to-intune.md)
 - [Data Jamf pro odesílá do Intune.](data-jamf-sends-to-intune.md)
 
-### <a name="system-center-configuration-manager-data-sharing"></a>Sdílení dat System Center Configuration Manageru
+### <a name="microsoft-endpoint-configuration-manager-data-sharing"></a>Sdílení dat v Microsoft Endpoint Configuration Manager
 
-Microsoft Intune nesdílí žádná data se System Center Configuration Managerem. System Center Configuration Manager je místní produkt nasazený, spravovaný a provozovaný přímo zákazníkem. Diagnostická data a data o využití shromažďovaná Configuration Managerem se využívají pouze ke zlepšení instalace produktu, kvality a zabezpečení budoucích verzí.
+Microsoft Intune nesdílí žádná data s Configuration Manager. Configuration Manager je místní produkt nasazený, spravovaný a provozovaný přímo zákazníkem. Diagnostická data a data o využití shromažďovaná Configuration Managerem se využívají pouze ke zlepšení instalace produktu, kvality a zabezpečení budoucích verzí.
 
-Podrobnosti najdete v tématu věnovaném [diagnostickým datům a datům o využití pro SCCM](https://docs.microsoft.com/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data). 
+Další informace najdete v tématu [Diagnostika a data o využití pro Configuration Manager](https://docs.microsoft.com/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data). 
 
 
 ## <a name="next-steps"></a>Další kroky

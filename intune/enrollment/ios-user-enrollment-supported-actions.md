@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ffabcace189efd60e9d532172ecd1f2a048eec2c
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: e23e582a853f0b424296d8fb42f6c7d8fdd2984c
+ms.sourcegitcommit: 0d9e1452fcf5f15a80230838f80a427b9951cdb1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74562413"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75324861"
 ---
 # <a name="intune-actions-and-options-supported-with-apple-user-enrollment"></a>Akce a možnosti Intune podporované při registraci uživatele Apple
 
@@ -38,7 +38,7 @@ Pokud nakonfigurujete nastavení hesla na zařízeních pro zápis uživatelů, 
 
 Například nakonfigurujete nastavení **vypršení platnosti hesla** a tuto zásadu nahrajete do zařízení zaregistrovaných uživatelem. V zařízeních dojde k následujícímu:
 - Nastavení **vypršení platnosti hesla** je ignorováno.
-- Jednoduchá hesla, například `1111` nebo `1234`, nejsou povolena.
+- Jednoduchá hesla, například `111111` nebo `123456`, nejsou povolena.
 - Je vynutil kód PIN pro číslice 6.
 
 ## <a name="administrator-remote-device-actions-and-options"></a>Akce a možnosti vzdáleného zařízení pro správu

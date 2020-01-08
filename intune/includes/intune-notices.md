@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: a6ac1a5435104c1eeae203621179e62aa2b17568
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
-ms.translationtype: HT
+ms.openlocfilehash: 0c64f9a6afc054a3d22518c4305bda62a36d67c7
+ms.sourcegitcommit: 8ab98c2773f112f5cf2d817c170633b15de3dec2
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207280"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75323035"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune.
 
@@ -55,25 +55,6 @@ Po 20. února 2020 tato zařízení neobdrží žádné aktualizace zabezpečen�
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
 Můžete si prohlédnout sestavy Intune a zjistit, která zařízení nebo uživatelé to mohou mít vliv. Přejděte na Zařízení > Všechna zařízení a vyfiltrujte si je podle operačního systému. Můžete přidat další sloupce, které vám pomůžou určit, kdo ve vaší organizaci má zařízení s Windows Phone 8,1. Požádejte koncové uživatele, aby svá zařízení upgradovali na podporovanou verzi operačního systému.
-
-### <a name="update-your-intune-outlook-app-protection-policies-app--2576686--"></a>Aktualizace zásad ochrany aplikací Intune Outlook (aplikace)<!--2576686-->
-Pokud jste v centru zpráv přijali MC195618, možná budete muset provést akci. Jak se sdílí v Microsoft 365 najdete ID funkcí v plánu: 56325 a 56326, Intune a Outlook pro iOS a Android vycházejí z podpory omezování citlivých dat v oznámeních e-mailů a v kalendářích. V důsledku těchto vylepšení bude Outlook pro iOS a Android odebírat podporu pro několik konfiguračních klíčů aplikace ochrany dat, které v tuto chvíli používáte ke správě oznámení.
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-I když se nové funkce nedodaly, následující konfigurační klíče aplikace už nebudou fungovat v Outlooku pro iOS a Android:
-- com. Microsoft. Outlook. mail. NotificationsEnabled
-- com. Microsoft. Outlook. mail. NotificationsEnabled. UserChangeAllowed
-- com. Microsoft. Outlook. Calendar. NotificationsEnabled
-- com. Microsoft. Outlook. Calendar. NotificationsEnabled. UserChangeAllowed
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
-Doporučujeme, abyste pro tuto novou funkci nakonfigurovali nastavení ochrany dat pro Intune App Protection zásady organizace s hodnotou "blokovat org data". Od 16. prosince 2019 budou v Outlooku pro iOS a Android začínat nastavení Ochrana dat pro data organizace a už nebude podporovat výše uvedené klíče. Konfigurací tohoto nového nastavení zajistíte nevracení citlivých dat, když výše uvedené konfigurační klíče už nejsou podporované. Kromě toho Outlook poskytuje další členitost, pokud je nastavení ochrany dat "e-mailová oznámení" nastavená na "blokovat org data" s nastavením další konfigurace aplikace, "oznámení v kalendáři". Kombinace nastavení zásad ochrany aplikací a nastavení konfigurace této aplikace omezuje citlivé informace v oznámeních e-mailů, a přitom vystavuje citlivé informace v oznámeních o kalendáři, aby se uživatelé mohli dostat na své schůze na základě přehledu rychle v oznámení nebo centru oznámení.
-
-#### <a name="additional-information"></a>Další informace
-Další informace o nastavení aplikace a nastavení aplikace Outlook najdete tady:
-- [Nastavení zásad ochrany aplikací, Android](../apps/app-protection-policy-settings-android.md)
-- [Nastavení zásad ochrany aplikací, iOS](../apps/app-protection-policy-settings-ios.md)
-- [Nasazení Outlooku pro iOS a nastavení konfigurace aplikací pro Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 
 ### <a name="intune-plan-for-change-windows-10-version-1703-company-portal-moving-out-of-support--5026679--"></a>Naplánování změny v Intune: Windows 10, verze 1703 Portál společnosti přesun mimo podporu<!--5026679-->

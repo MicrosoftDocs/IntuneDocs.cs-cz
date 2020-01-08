@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f31e500b7a3383c5c0c53f1df72cb4a42660328f
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 4669d02f149e7f815ff94b4daa85c4c539c26c96
+ms.sourcegitcommit: 90369aef160945171435b03d82bae395609c7a62
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74284090"
+ms.lasthandoff: 12/26/2019
+ms.locfileid: "75500172"
 ---
 
 
@@ -34,7 +34,7 @@ ms.locfileid: "74284090"
 - Windows 10 Teams (Surface Hub)
 
    Další informace o správě zařízení s Windows 10 Teams najdete v tématu [správa Surface Hub s MDM](https://docs.microsoft.com/surface-hub/manage-settings-with-mdm-for-surface-hub) .
-- Windows Phone 8.1, Windows 8.1 RT, počítače s Windows 8.1 (udržovací režim)
+- Windows 10 1709 (RS3) a novější Windows Phone 8,1 Windows 8.1 RT, počítače se systémem Windows 8.1 (trvalý režim)
 
 > [!NOTE]
 > Ne všechny edice Windows podporují konfiguraci všech dostupných funkcí operačního systému prostřednictvím MDM. Viz [Referenční dokumentace poskytovatele služby Windows Configuration Service](https://docs.microsoft.com/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers). Každý CSP zvýrazňuje, které edice Windows jsou podporované.
