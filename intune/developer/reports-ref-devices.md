@@ -6,7 +6,7 @@ keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/03/2019
+ms.date: 01/03/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36407bda1f74d0c4601f78cedc2af5426e944fee
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 85b6d49f435ec45a2c6a2b81387ea25a1c15299b
+ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503417"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75654069"
 ---
 # <a name="reference-for-devices-entities"></a>Referenční informace o entitách zařízení
 
@@ -115,7 +115,7 @@ Entita **EnrollmentFailureCategory** indikuje, proč se registrace zařízení n
 
 | enrollmentFailureCategoryName   | Description                                                                                                   |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Nelze použít                  | Kategorie selhání registrace se nedá použít.                                                            |
+| Nepoužitelné                  | Kategorie selhání registrace se nedá použít.                                                            |
 | Není k dispozici                   | Kategorie selhání registrace není k dispozici.                                                             |
 | Neznámé                         | Neznámá chyba                                                                                                |
 | Ověřování                  | Ověření se nezdařilo.                                                                                        |
@@ -142,7 +142,7 @@ Entita **EnrollmentFailureReason** označuje podrobnější důvod selhání reg
 
 | enrollmentFailureReasonName      | Description                                                                                                                                                                                            |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Nelze použít                   | Důvod selhání registrace se nedá použít.                                                                                                                                                       |
+| Nepoužitelné                   | Důvod selhání registrace se nedá použít.                                                                                                                                                       |
 | Není k dispozici                    | Důvod selhání registrace není k dispozici.                                                                                                                                                        |
 | Neznámé                          | Neznámá chyba.                                                                                                                                                                                         |
 | UserNotLicensed                  | Uživatel se v Intune nenašel nebo nemá platnou licenci.                                                                                                                                     |
@@ -218,7 +218,7 @@ Entita **ManagementAgentType** představuje agenty používané ke správě zař
 | 3 |EasMdm | Zařízení se spravuje pomocí protokolu Exchange Active Sync i pomocí agenta MDM. |
 | 4 |IntuneClient | Zařízení se spravuje pomocí agenta Intune pro počítače. |
 | 5 |EasIntuneClient | Zařízení se spravuje pomocí protokolu Exchange Active Sync i pomocí agenta Intune pro počítače. |
-| 8 |ConfigManagerClient | Zařízení se spravuje pomocí agenta produktu System Center Configuration Manager. |
+| 8 |ConfigManagerClient | Zařízení spravuje agent Configuration Manager. |
 | 16 |Neznámé | Neznámý typ agenta správy |
 
 ## <a name="devices"></a>devices

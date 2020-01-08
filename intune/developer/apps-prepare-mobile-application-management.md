@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 01/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 901eaafb24cda185540ffc4b1a56484042af74c1
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: a8b5b323c4bb80cd15bf9c6c8f0f7a8be577d6bf
+ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74547685"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75653933"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Příprava obchodních aplikací na zásady ochrany aplikací
 
@@ -32,7 +32,7 @@ Svým aplikacím můžete umožnit použití zásad ochrany aplikací buď prost
 
 Nástroj App Wrapping se používá hlavně pro **interní** obchodní aplikace. Je to aplikace příkazového řádku, která vytvoří kolem aplikace obálku, a ta potom umožní správu aplikace pomocí zásad ochrany aplikací Intune. Při ochraně aplikace poskytované nezávislým výrobcem softwaru (ISV) je důležité objasnit, jestli bude ISV podporovat i zabalenou aplikaci.
 
-K použití nástroje nepotřebujete zdrojový kód, ale potřebujete přihlašovací údaje k podepisování. Další informace o přihlašovacích údajích k podepisování najdete na [blogu o Intune](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/). Dokumentaci k nástroji pro zabalení aplikace najdete v tématu Nástroj pro zabalení [aplikace pro Android](app-wrapper-prepare-android.md) a [Nástroj pro zabalení aplikace pro iOS](app-wrapper-prepare-ios.md).
+K použití nástroje nepotřebujete zdrojový kód, ale potřebujete přihlašovací údaje k podepisování. Další informace o přihlašovacích údajích k podepisování najdete v [blogu o Intune](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/). Dokumentaci k nástroji pro zabalení aplikace najdete v tématu Nástroj pro zabalení [aplikace pro Android](app-wrapper-prepare-android.md) a [Nástroj pro zabalení aplikace pro iOS](app-wrapper-prepare-ios.md).
 
 Nástroj App Wrapping **nepodporuje** aplikace v Apple App Storu nebo obchodu Google Play. Nepodporuje ani některé funkce, které vyžadují vývojářskou integraci (viz následující tabulka s porovnáním funkcí).
 
@@ -52,7 +52,7 @@ Další informace o nástroji App Wrapping Tool pro zásady ochrany aplikací na
 |**Nástroj App Wrapping** | **Xamarin** |**Cordova** |
 |------|----|----|
 |**iOS** |Ano|Ano|
-|**Androidemem**|Ne – Použijte [xamarinové vazby sady Intune App SDK](app-sdk-xamarin.md).|Ano|
+|**Androidem**|Ne – Použijte [xamarinové vazby sady Intune App SDK](app-sdk-xamarin.md).|Ano|
 
 ## <a name="intune-app-sdk"></a>Sada Intune App SDK
 
@@ -74,7 +74,7 @@ Další informace o sadě SDK najdete v tématu [Přehled](app-sdk.md). Pokud ch
 |**Intune App SDK** |**Xamarin** |**Cordova**
 |------|----|----|
 |**iOS**|Ano – Použijte [xamarinové vazby sady Intune App SDK](app-sdk-xamarin.md).|Ne|
-|**Androidemem**| Ano – Použijte [xamarinové vazby sady Intune App SDK](app-sdk-xamarin.md).|Ne|
+|**Androidem**| Ano – Použijte [xamarinové vazby sady Intune App SDK](app-sdk-xamarin.md).|Ne|
 
 ### <a name="not-using-an-app-development-platform-listed-above"></a>Nepoužíváte platformu pro vývoj aplikací uvedenou výše?
 
@@ -84,7 +84,7 @@ Vývojový tým sady Intune SDK aktivně testuje a udržuje podporu pro aplikace
 
 Tato tabulka obsahuje seznam nastavení, která můžete použít v sadě SDK a nástroji App Wrapping.
 
-|Funkce|App SDK (sada)|Nástroj App Wrapping|
+|Funkce|Sada App SDK|Nástroj App Wrapping|
 |-----------|---------------------|-----------|
 |Omezit zobrazování obsahu webu jenom na podnikový spravovaný prohlížeč|X|X|
 |Zabránit zálohování Androidu, iTunes a iCloudu|X|X|

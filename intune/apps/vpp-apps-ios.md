@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 12/17/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eed0b8a74e69bc1552ae3e2badf485364ba37e94
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 01c95e1961871f33a3d8ed8c0b6c22502faca3a9
+ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74563829"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75654018"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Jak spravovat aplikace pro iOS a macOS zakoupené prostřednictvím Apple Volume Purchase Program s využitím Microsoft Intune
 
@@ -95,12 +95,12 @@ Než začnete, potřebujete od společnosti Apple získat token VPP a nahrát ho
         > Když se změní země nebo oblast, aktualizují se metadata aplikace a adresa URL Storu při příští synchronizaci se službou Apple pro aplikace vytvořené pomocí tohoto tokenu. Aplikace nebude aktualizována, pokud neexistuje v úložišti nové země/oblast.
 
     - **Typ účtu VPP** – zvolte jednu z možností: **Obchodní** nebo **Vzdělávání**.
-    - **Automatické aktualizace aplikací** – zvolte **Zapnuto** nebo **Vypnuto** podle toho, jestli chcete automatické aktualizace povolit nebo zakázat. Když je tato možnost povolená, Intune zjistí aktualizace aplikací VPP v App Storu a automaticky je odešle do zařízení, jakmile se ohlásí. Automatické aktualizace aplikací Apple VPP automaticky aktualizují jenom aplikace nasazené pomocí instalačního záměru **Povinné**. U aplikací nasazených s **dostupným** záměrem instalace vygeneruje Automatická aktualizace stavovou zprávu pro správce IT, která informuje o tom, že je k dispozici nová verze aplikace. Tato stavová zpráva se zobrazí tak, že se vybere aplikace, vyberete stav instalace zařízení a zkontrolujete podrobnosti o stavu. Kromě toho uživatel uvidí tuto aplikaci jako nenainstalovanou na Portálu společnosti, i když je nainstalovaná starší verze aplikace. V takovém případě může uživatel aplikaci přeinstalovat kliknutím na tlačítko **nainstalovat** na obrazovce s podrobnostmi o aplikaci v aplikaci Portál společnosti pro instalaci novější verze aplikace.
+    - **Automatické aktualizace aplikací** – zvolte **Zapnuto** nebo **Vypnuto** podle toho, jestli chcete automatické aktualizace povolit nebo zakázat. Když je tato možnost povolená, Intune zjistí aktualizace aplikací VPP v App Storu a automaticky je odešle do zařízení, jakmile se ohlásí. Automatické aktualizace aplikací Apple VPP automaticky aktualizují jenom aplikace nasazené pomocí instalačního záměru **Povinné**. U aplikací nasazených s **dostupným** záměrem instalace uvidí uživatel, že aplikace není nainstalovaná na portál společnosti, a to i v případě, že je nainstalovaná starší verze aplikace. V takovém případě může uživatel aplikaci přeinstalovat kliknutím na tlačítko **nainstalovat** na obrazovce s podrobnostmi o aplikaci v aplikaci Portál společnosti pro instalaci novější verze aplikace. Všimněte si, že pro uživatelem zaregistrovaná zařízení s iOS budou koncoví uživatelé dál zobrazovat všechny aplikace VPP licencované uživateli v rámci Portál společnosti. 
 
         > [!NOTE]
         > Automatické aktualizace aplikací fungují pro aplikace i uživatele licencované pro iOS 11,0 a vyšší nebo macOS 10,12 a novější.
 
-    - **Udělujem Microsoftu oprávnění odesílat informace o uživatelích i zařízeních do společnosti Apple.** – **Chcete-li pokračovat** , je nutné vybrat souhlasím. Pokud chcete zjistit, co data Microisoft odesílá do Applu, přečtěte si téma [data Intune odesílají společnosti Apple](~/protect/data-intune-sends-to-apple.md).
+    - **Udělujem Microsoftu oprávnění odesílat informace o uživatelích i zařízeních do společnosti Apple.** – **Chcete-li pokračovat** , je nutné vybrat souhlasím. Informace o tom, jaká data Microsoft posílá společnosti Apple, najdete v tématu [data Intune odesílají společnosti Apple](~/protect/data-intune-sends-to-apple.md).
 
 6. Až to budete mít, vyberte **Vytvořit**.
 
@@ -128,13 +128,13 @@ Koncový uživatel obdrží výzvu k instalaci aplikace v rámci VPP v řadě sc
 
 | # | Scénář                                | Pozvánka do programu Apple VPP                              | Výzva při instalaci aplikace | Výzva k zadání Apple ID |
 |---|--------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------|-----------------------------------|
-| 1 | Vlastní zařízení – licencovaný uživatel                             | Ano                                                                                               | Ano                                           | Ano                                 |
-| 2 | Zařízení společnosti – licencovaný uživatel (zařízení není pod dohledem)     | Ano                                                                                               | Ano                                           | Ano                                 |
-| 3 | Zařízení společnosti – licencovaný uživatel (zařízení pod dohledem)         | Ano                                                                                               | Ne                                           | Ano                                 |
-| 4 | Vlastní zařízení – licencované zařízení                           | Ne                                                                                               | Ano                                           | Ne                                 |
-| 5 | Zařízení společnosti – licencované zařízení (zařízení není pod dohledem)                           | Ne                                                                                               | Ano                                           | Ne                                 |
-| 6 | Zařízení společnosti – licencované zařízení (zařízení pod dohledem)                           | Ne                                                                                               | Ne                                           | Ne                                 |
-| 7 | Beznabídkový režim (zařízení pod dohledem) – licencované zařízení | Ne                                                                                               | Ne                                           | Ne                                 |
+| 1 | Vlastní zařízení – licencovaný uživatel                             | A                                                                                               | A                                           | A                                 |
+| 2 | Zařízení společnosti – licencovaný uživatel (zařízení není pod dohledem)     | A                                                                                               | A                                           | A                                 |
+| 3 | Zařízení společnosti – licencovaný uživatel (zařízení pod dohledem)         | A                                                                                               | N                                           | A                                 |
+| 4 | Vlastní zařízení – licencované zařízení                           | N                                                                                               | A                                           | N                                 |
+| 5 | Zařízení společnosti – licencované zařízení (zařízení není pod dohledem)                           | N                                                                                               | A                                           | N                                 |
+| 6 | Zařízení společnosti – licencované zařízení (zařízení pod dohledem)                           | N                                                                                               | N                                           | N                                 |
+| 7 | Beznabídkový režim (zařízení pod dohledem) – licencované zařízení | N                                                                                               | N                                           | N                                 |
 | 8 | Beznabídkový režim (zařízení pod dohledem) – licencovaný uživatel   | --- | ---                                          | ---                                |
 
 > [!Note]  

@@ -6,7 +6,7 @@ keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 01/03/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64fc1bab596715be80fd3a91c003cac1176fe787
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 1fe4fabc86e7be647fa161d68fe8a4fe35e9eb6b
+ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72490277"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75654120"
 ---
 # <a name="reference-for-policy-entities"></a>Referenční informace pro entity zásad
 
@@ -106,7 +106,7 @@ Následující tabulka shrnuje stav přiřazení zásad dodržování předpisů
 |Vlastnost     |Description  |Příklad  |
 |---------|---------|---------|
 |dateKey  |Klíč data, kdy se vytvořil souhrn pro zásady dodržování předpisů|20161204 |
-|neznámé  |Počet zařízení, která jsou offline nebo kterým se nepodařilo komunikovat s Intune nebo Azure AD z jiných důvodů |5|
+|unknown  |Počet zařízení, která jsou offline nebo kterým se nepodařilo komunikovat s Intune nebo Azure AD z jiných důvodů |5|
 |notApplicable      |Počet zařízení, ve kterých nejsou použitelné zásady dodržování předpisů, na které zacílil správce|201 |
 |kompatibilní      |Počet zařízení, ve kterých se úspěšně použily jedny nebo více zásad dodržování předpisů, na které zacílil správce |4083 |
 |V období odkladu      |Počet zařízení, která nevyhovují předpisům, ale jsou v období odkladu definovaném správcem |57|
@@ -124,7 +124,7 @@ Následující tabulka shrnuje stav přiřazení zásad dodržování předpisů
 |dateKey  |Klíč data, kdy se vytvořil souhrn pro zásady dodržování předpisů|20161219|
 |policyKey     |Klíč pro zásady dodržování předpisů, pro který se vytvořil souhrn |10178 |
 |policyPlatformKey      |Klíč pro typ platformy zásad dodržování předpisů, pro který se vytvořil souhrn|5|
-|neznámé     |Počet zařízení, která jsou offline nebo kterým se nepodařilo komunikovat s Intune nebo Azure AD z jiných důvodů|13|
+|unknown     |Počet zařízení, která jsou offline nebo kterým se nepodařilo komunikovat s Intune nebo Azure AD z jiných důvodů|13|
 |notApplicable     |Počet zařízení, ve kterých nejsou použitelné zásady dodržování předpisů, na které zacílil správce|3|
 |kompatibilní      |Počet zařízení, ve kterých se úspěšně použily jedny nebo více zásad dodržování předpisů, na které zacílil správce |45|
 |V období odkladu      |Počet zařízení, která nevyhovují předpisům, ale jsou v období odkladu definovaném správcem |3|

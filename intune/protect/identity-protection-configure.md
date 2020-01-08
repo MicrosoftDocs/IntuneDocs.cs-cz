@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4fce03913042675588ea12e5399e6f5a1be04946
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: a4f5d3a232cab25c60189132732a0ea3f347c74a
+ms.sourcegitcommit: 107fef144013b01ed768ca8973373f9cb3f0f7dc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74188252"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683795"
 ---
 # <a name="use-windows-hello-for-business-on-windows-10-devices-with-microsoft-intune"></a>Použití Windows Hello pro firmy na zařízeních s Windows 10 s Microsoft Intune
 
@@ -46,7 +46,7 @@ V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení. Sezn
 
 2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
 
-3. Zadejte následující vlastnosti:
+3. Zadejte tyto vlastnosti:
 
    - **Název**: Zadejte popisný název nového profilu.
    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
@@ -65,12 +65,15 @@ V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení. Sezn
 
    - **Použít bezpečnostní klíče pro přihlášení**: Povolte klíč zabezpečení Windows Hello jako přihlašovací údaje pro všechny počítače v tenantovi.
 
-     - **Enable**
+     - **Povolení**
      - **Nenakonfigurováno** (výchozí)
 
 5. Až to budete mít, vyberte **OK** > **Vytvořit** a změny uložte.
 
 Profil se vytvoří a zobrazí se v seznamu profily. V dalším kroku [přiřaďte](../configuration/device-profile-assign.md) tento profil skupinám uživatelů a zařízení, aby vyhovovaly vašim potřebám.
+
+> [!IMPORTANT]
+> Pokud chcete, aby bylo možné zřídit více uživatelů na zařízení, určete, že se pro zařízení použijí zásady Windows Hello pro firmy. Pokud se zásada použije jenom pro uživatele, dá se zařízení zřídit jenom u jednoho uživatele.
 
 <!--  Removing image as part of design review; retaining source until we known the disposition.
 

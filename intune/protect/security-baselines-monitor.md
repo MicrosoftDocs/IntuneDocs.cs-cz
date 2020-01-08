@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b7f14e939e7241cd34c01d73e9af822dea7acdc
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: cbf82c0bef88e4a6d0e790f4b0ecdf73d2731d5d
+ms.sourcegitcommit: 9bb1bcd9f1bdd53b470073da956bbd8b0935dfbc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74410126"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556398"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Sledování standardních hodnot zabezpečení a profilů v Microsoft Intune
 
@@ -42,11 +42,15 @@ V podokně **Přehled** jsou k dispozici dvě metody monitorování stavu:
 - **Zobrazení zařízení** – souhrn toho, kolik zařízení je v každé kategorii stavů pro směrný plán.
 - **Podle kategorií** – zobrazení, které zobrazuje jednotlivé kategorie ve standardních hodnotách a zahrnuje procento zařízení pro každou skupinu stavů pro každou kategorii standardních hodnot.
 
-Každé zařízení je reprezentované jedním z následujících stavů, které se používají v zobrazení *zařízení* , a v *jednotlivých kategoriích* zobrazení:
+Každé zařízení je reprezentované jedním z následujících stavů (používá se v zobrazení *zařízení* a také v zobrazení *podle kategorií* ):
 
 - **Odpovídá směrnému plánu** – všechna nastavení v směrném plánu odpovídají doporučeným nastavením.
 - Neodpovídá **směrnému plánu** – nejméně jedno nastavení v směrném plánu se neshoduje s doporučeným nastavením.
-- **Nesprávně nakonfigurovaná – aspoň** jedno nastavení není správně nakonfigurované. Tento stav znamená, že je nastavení v konfliktu, chyba nebo čeká na vyřízení.
+
+  > [!NOTE]
+  > Když vytváříte nebo upravujete základní profil, všechny změny provedené v nastavení výchozí hodnoty nebo konfigurace způsobí, že dojde k výskytu stavu neshoda směrného plánu. Nápovědu k určení nastavení, která byla změněna, získáte od podpora Microsoftu. 
+
+- **Nesprávně nakonfigurovaná – aspoň** jedno nastavení není správně nakonfigurované. Tento stav znamená, že nastavení je v konfliktu, chyba nebo stav čekání na vyřízení.
 - **Nedá se použít** – aspoň jedno nastavení se nedá použít a není použité.
 
 ### <a name="device-view"></a>Zobrazení zařízení
@@ -59,7 +63,7 @@ Pokud má zařízení různý stav z různých kategorií na základě směrnéh
 
 Například, pokud zařízení obsahuje nastavení jsou klasifikovány jako *nesprávně nakonfigurované* a jedno nebo více nastavení, které jsou klasifikovány jako *neodpovídá směrného plánu*, zařízení je klasifikován tak *správněnakonfigurovaný*.
 
-Kliknutím na graf můžete procházet a zobrazit seznam zařízení s různými stavy. Pak můžete vybrat jednotlivá zařízení z tohoto seznamu a zobrazit podrobnosti o jednotlivých zařízeních. Například:
+Kliknutím na graf můžete procházet a zobrazit seznam zařízení s různými stavy. Pak můžete vybrat jednotlivá zařízení z tohoto seznamu a zobrazit podrobnosti o jednotlivých zařízeních. Příklad:
 
 - Vyberte **Konfigurace zařízení** > vyberte profil s chybovým stavem:
 

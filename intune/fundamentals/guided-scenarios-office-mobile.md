@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/16/2019
+ms.date: 01/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd02e2b7f9582308109d1e6986d7e6a8014e5af7
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 3399cf006543c0a3554c4c6ec812554462d74231
+ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72585891"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75691808"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Scénář s asistencí – zabezpečené systém Microsoft Office mobilní aplikace 
 
@@ -46,7 +46,7 @@ Mobilní aplikace Office a Microsoft Edge pro mobilní zařízení podporují du
 [Zásady ochrany aplikací Intune](~/apps/app-protection-policy.md) vám pomůžou chránit pracovní soubory na zařízeních, která jsou zaregistrovaná v Intune. Zásady ochrany aplikací můžete použít také u zařízení vlastněných zaměstnanci, která nejsou zaregistrovaná ke správě v Intune. V takovém případě, i když vaše společnost zařízení nespravuje, je stále nutné zajistit, aby byly pracovní soubory a prostředky chráněné.
 
 Pomocí zásad ochrany aplikací můžete uživatelům zabránit v ukládání pracovních souborů v nechráněných umístěních. Můžete také zamezit přesunu dat do jiných aplikací, které nejsou chráněné zásadami ochrany aplikací. Mezi nastavení zásad ochrany aplikací patří:
-- Zásady přemístění dat, jako například zabránit uložení jako, a omezit vyjmutí, zkopírování a vložení.
+- Zásady přemístění dat, jako jsou **ukládání kopií org data**, a **omezení vyjmutí, kopírování a vložení**.
 - Nastavení zásad přístupu, které vyžaduje pro přístup jednoduchý kód PIN a zablokuje spouštění spravovaných aplikací na zařízeních s jailbreakem nebo rootem.
 
 Podmíněný přístup založený na aplikaci a správa klientských aplikací přidávají další vrstvu zabezpečení. Zajišťují, aby přístup k Exchangi Online a dalším službám Office 365 měly jenom klientské aplikace, které podporují řešení Intune s jeho zásadami ochrany aplikací.
@@ -112,7 +112,7 @@ V tomto kroku musíte nakonfigurovat požadavky pro přístup k firemním soubor
 | Znovu ověřit požadavky na přístup po (minuty neaktivity) | Pokud je aplikace spravovaná zásadou neaktivní po dobu delší, než je zadaný počet minut nečinnosti, aplikace se vyzve k zadání požadavků na přístup (tj. Připnutí, nastavení podmíněného spuštění), které se má po spuštění aplikace znovu ověřit. | 30 |
 | Tisk organizačních dat | Pokud je zablokovaná, aplikace nemůže tisknout chráněná data. | Blokování |
 | Otevření odkazů aplikací spravovaných zásadou v nespravovaných prohlížečích | Pokud je zablokované, musí se odkazy na aplikace spravované podle zásad otevřít ve spravovaném prohlížeči. | Blokování |
-| Kopírování dat do nespravovaných aplikací | Pokud je blokované, spravovaná data zůstanou ve spravovaných aplikacích. | Allow |
+| Kopírování dat do nespravovaných aplikací | Pokud je blokované, spravovaná data zůstanou ve spravovaných aplikacích. | Povolit |
 
 ## <a name="step-5---assignments"></a>Krok 5 – přiřazení
 

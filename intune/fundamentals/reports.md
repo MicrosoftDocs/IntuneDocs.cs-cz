@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 21b83ec7b295a79dafc7527633cb31729ee40502
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 3ae06ae3f9f76d86a792721d45f8319bfe6491fd
+ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206240"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75654222"
 ---
 # <a name="intune-reports"></a>Sestavy Intune
 Sestavy Microsoft Intune vám umožňují efektivněji a aktivně monitorovat stav a činnost koncových bodů napříč vaší organizací a také poskytuje jiná data pro vytváření sestav v rámci Intune. Budete například moci zobrazit sestavy o dodržování předpisů zařízením, stavu zařízení a trendech zařízení. Kromě toho můžete vytvořit vlastní sestavy, abyste získali konkrétnější data. 
@@ -143,15 +143,15 @@ Další informace o nastaveních diagnostiky najdete [v tématu Vytvoření nast
 ### <a name="log-analytics"></a>Log Analytics
 Log Analytics je primárním nástrojem v Azure Portal pro zápis dotazů protokolu a interaktivní analýzu výsledků dotazů. I v případě, že se dotaz protokolu používá jinde v Azure Monitor, obvykle nejprve zapíšete a otestujete dotaz pomocí Log Analytics. Podrobnosti o používání Log Analytics a vytváření dotazů protokolu najdete v tématu [Přehled dotazů protokolu v Azure monitor](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview). 
 
-### <a name="workbooks"></a>Sešity
+### <a name="workbooks"></a>Workbooks
 Sešity kombinují text, analytické dotazy, metriky Azure a parametry do propracovaných interaktivních sestav. Sešity mohou upravovat všichni ostatní členové týmu, kteří mají přístup ke stejným prostředkům Azure. Další informace o sešitech najdete v tématu [Azure monitor sešity](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks). Můžete také pracovat se šablonami sešitu a přispívat do nich. Další informace najdete v tématu [Azure monitor šablon sešitu](https://go.microsoft.com/fwlink/?linkid=867045).
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další kroky 
 
 Přečtěte si další informace o těchto technologiích:
 - [Blogový Microsoft Intune – rozhraní pro vytváření sestav](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553)
 - [Azure Monitor](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
-- [Co je Log Analytics?](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview#what-is-log-analytics)
+- [Co je služba Log Analytics?](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview#what-is-log-analytics)
 - [Dotazy protokolu](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview)
 - [Začínáme s Log Analytics v Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/log-query/get-started-portal)
 - [Azure Monitor sešity](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks)

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/18/2019
+ms.date: 12/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68a44027c14e0a52d72fc032a6ab42413fa8df96
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 6f736e8119230748dc5e848807afeae9e9a4e86f
+ms.sourcegitcommit: d21539e52631c589bfeaa182418390f66672736c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508301"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75564930"
 ---
 # <a name="sign-in-to-company-portal"></a>Přihlášení k Portál společnosti  
 
@@ -56,6 +56,7 @@ Následující kroky ukazují snímky obrazovky z Portál společnosti pro iOS.
    ![Po provedení procesu ověřování se aplikace Portál společnosti přihlásí, zobrazí pruh načítání.](/intune-user-help/media/cp_ios_aad_signin_after_1804_004.png)
 
 ## <a name="sign-in-with-certificate-based-authentication"></a>Přihlaste se pomocí ověřování založeného na certifikátech
+Tato možnost přihlášení se zobrazí jenom v případě, že vaše organizace povoluje ověřování pomocí certifikátů a máte k dispozici certifikát k použití.  
 
 1. Na svém zařízení otevřete aplikaci Portál společnosti.  
 

@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 01/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8fa63540afa18450f731180da3c2cee729010a65
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 256fe3e193e5ab3959c6f9712df8b62246377c6d
+ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74465704"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75653950"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro Android na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -32,7 +32,7 @@ Jde o nástroj příkazového řádku Windows, který běží v PowerShellu a�
 
 Před spuštěním nástroje si přečtěte část [Důležité informace o zabezpečení při spuštění nástroje App Wrapping Tool](#security-considerations-for-running-the-app-wrapping-tool). Nástroj si můžete stáhnout ze stránky [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) na GitHubu.
 
-## <a name="fulfill-the-prerequisites-for-using-the-app-wrapping-tool"></a>Splnění požadavků na používání nástroje App Wrapping Tool
+## <a name="fulfill-the-prerequisites-for-using-the-app-wrapping-tool"></a>Splnění požadavků používání nastroje App Wrapping
 
 - Nástroj App Wrapping Tool je možné spustit na počítači se systémem Windows 7 nebo novějším.
 

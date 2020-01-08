@@ -1,11 +1,11 @@
 ---
-title: Aplikace pro iOS a zásady jejich ochrany
+title: Aplikace pro iOS se zásadami ochrany aplikací
 description: Toto téma popisuje, co můžete očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/15/2018
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -17,20 +17,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1a3dcd7068a004f94b97b5ec6c43c609662a76d
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 165ce160339647e396b9cfc3a8374f21c77665f8
+ms.sourcegitcommit: f9dc50642efa8656054ef67f9335b9b46b655f93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414558"
+ms.lasthandoff: 01/02/2020
+ms.locfileid: "75606617"
 ---
 # <a name="what-to-expect-when-your-ios-app-is-managed-by-app-protection-policies"></a>Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací
 
- Toto téma popisuje činnost koncového uživatele při použití aplikací, které používají zásady ochrany aplikací. Zásady ochrany aplikací se použijí jen v případě, že se aplikace používají v pracovním kontextu, například když uživatel k aplikacím přistupuje pomocí pracovního účtu nebo používá soubory, které jsou uložené na firemním OneDrivu.
+Zásady ochrany aplikací Intune se vztahují na aplikace, které se používaly pro práci nebo školu. To znamená, že když vaši zaměstnanci a studenti používají své aplikace v osobním kontextu, můžou si všimnout žádného rozdílu ve svém prostředí. V pracovním nebo školním kontextu se ale můžou zobrazovat výzvy k rozhodování o rozhodnutích, aktualizovat jejich nastavení nebo se obrátit na nápovědu. V tomto článku se dozvíte, co se uživatelům snaží při pokusu o přístup a používání aplikací chráněných v Intune.  
 
 ## <a name="access-apps"></a>Přístup k aplikacím
 
-Pokud zařízení **není zaregistrované v Intune**, zobrazí se uživateli při prvním použití aplikace výzva k jejímu restartování. Aby se pro aplikaci mohly použít zásady ochrany aplikací, je nutné restartování.
+Pokud zařízení **není zaregistrované v Intune**, zobrazí se uživateli při prvním použití aplikace výzva k jejímu restartování. Aby bylo možné v aplikaci použít zásady ochrany aplikací, je nutné restartovat počítač.
 
 <!--- The following screenshot from the Skype app illustrates this restart request: --->
 
@@ -40,30 +40,29 @@ Na zařízeních, která jsou **zaregistrovaná pro správu přes Intune**, se u
 
 ## <a name="use-apps-with-multi-identity-support"></a>Použití aplikací s podporou více identit
 
-Aplikace, které podporují více identit, umožňují pro přístup ke stejným aplikacím používat různé účty (pracovní a osobní). Zásady ochrany aplikací se použijí, jen když jsou aplikace použité v pracovním kontextu.  
+Aplikace, které podporují více identit, umožňují pro přístup ke stejným aplikacím používat různé pracovní a osobní účty. Zásady ochrany aplikací, jako je zadání PIN kódu zařízení, se aktivují, když uživatelé přistupují k těmto aplikacím v pracovním nebo školním kontextu.   
 
-Uživateli se třeba při přístupu k pracovním datům zobrazí výzva k zadání kódu PIN. U **aplikace Outlook** se uživateli zobrazí výzva k zadání kódu PIN při spouštění aplikace. U **aplikace OneDrive** se uživateli zobrazí výzva k zadání kódu PIN při zadání pracovního účtu.  U aplikací Microsoft **Word**, **PowerPoint** a **Excel** se uživateli zobrazí výzva k zadání kódu PIN, když přistupuje k dokumentům uloženým v umístění OneDrive pro firmy.
+V závislosti na tom, jak nakonfigurujete zásady, se uživatelé můžou setkat s výzvou k zadání kódu PIN v různých aplikacích.  Můžete například nakonfigurovat zásady tak, aby:       
+* Aplikace Microsoft Outlook vyzve uživatele k zadání kódu PIN při spuštění aplikace. 
+* OneDrive vyzve uživatele k zadání kódu PIN, když se přihlásí ke svému pracovnímu účtu.  
+* Microsoft Word, PowerPoint a Excel vyzve uživatele k zadání kódu PIN, když přistupuje k dokumentům uloženým v umístění OneDrive pro firmy.  
 
-- Přečtěte si další informace o aplikacích, které podporují [ochranu aplikací a více identit](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) s Intune.
+- Přečtěte si další informace o aplikacích, které podporují [ochranu aplikací a více identit](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) s Intune.  
 
-Zásady ochrany aplikací se používají jen v pracovním kontextu. Aplikace se proto můžou chovat odlišně podle toho, jestli je kontext pracovní nebo osobní.
+## <a name="manage-user-accounts-on-the-device"></a>Správa uživatelských účtů v zařízení  
 
-## <a name="manage-user-accounts-on-the-device"></a>Správa uživatelských účtů v zařízení
+Zásady ochrany aplikací Intune omezují uživatele na jeden spravovaný pracovní nebo školní účet na aplikaci. Zásady ochrany aplikací neomezují počet nespravovaných účtů, které uživatel může přidat.   
 
-Aplikace s podporou více identit umožňují uživatelům přidat více účtů.  Aplikace Intune podporuje jenom jeden spravovaný účet.  Aplikace Intune neomezuje počet nespravovaných účtů.
+- Pokud se uživatel pokusí přidat druhý spravovaný účet, zobrazí se mu výzva k výběru spravovaného účtu, který se má použít. Pokud uživatel přidá druhý účet, první účet se odebere.
+- Pokud přidáte zásady ochrany na jiný účet uživatele, zobrazí se uživateli výzva k výběru spravovaného účtu, který se má použít. Druhý účet se odebere. 
 
-Když je v aplikaci spravovaný účet:
+Někteří uživatelé nezískají možnost přepínat a vybírat mezi spravovanými účty. Tato možnost není k dispozici na zařízeních, která jsou:
+* Spravované přes Intune  
+* Spravuje řešení pro správu firemní mobility třetích stran a konfigurují se s nastavením IntuneMAMUPN. 
 
-- Pokud se uživatel pokusí přidat druhý spravovaný účet, zobrazí se mu výzva k výběru spravovaného účtu, který se má použít.  Druhý účet se odebere.
-- Pokud správce IT přidá zásady pro druhý existující účet, zobrazí se uživateli výzva k výběru spravovaného účtu, který se má použít.  Druhý účet se odebere.
+Následující vzorový scénář popisuje, jak se zachází s několika uživatelskými účty:  
 
-Přečtěte si následující ukázkový scénář, abyste lépe pochopili, jak se pracuje s více uživatelskými účty.
-
-Uživatel A funguje pro dvě společnosti –**společnosti X** a **firmu Y**. Uživatel A má pro každou společnost pracovní účet a obě služby používají Intune k nasazení zásad ochrany aplikací. **Společnost X** nasadí zásady ochrany aplikací **před** **firmou Y**. Účet, který je přidružený ke **společnosti X** , získá nejdřív zásady ochrany aplikací. Pokud chcete, aby uživatelský účet přidružený ke společnosti Y spravovaly zásady ochrany aplikací, musíte odebrat uživatelský účet přidružený ke společnosti X a přidat uživatelský účet přidružený ke společnosti Y.
-
-### <a name="add-a-second-account"></a>Přidání druhého účtu
-
-Pokud používáte zařízení s iOSem, může se při pokusu o přidání druhého pracovního účtu na zařízení zobrazit zpráva o blokování. Účty se zobrazí a můžete zvolit účet, který chcete odebrat.
+Uživatel A funguje pro dvě společnosti –**společnosti X** a **firmu Y**. Uživatel A má pro každou společnost pracovní účet a obě služby používají Intune k nasazení zásad ochrany aplikací. **Společnost X** nasadí zásady ochrany aplikací **před** **firmou Y**. Účet, který je přidružený ke **společnosti X** , získá nejdřív zásady ochrany aplikací. Pokud chcete, aby uživatelský účet přidružený ke společnosti Y spravovaly zásady ochrany aplikací, musíte odebrat uživatelský účet přidružený ke společnosti X a přidat uživatelský účet přidružený ke společnosti Y.  
 
 ## <a name="next-steps"></a>Další kroky
 

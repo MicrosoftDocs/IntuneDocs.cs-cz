@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 7ce6def40c6c0fff3a28f884c458220283979234
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 001e68fdbab7074abb4e1bbefc697d3e34c47762
+ms.sourcegitcommit: 107fef144013b01ed768ca8973373f9cb3f0f7dc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74465767"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683778"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integrace Windows Hello pro firmy s Microsoft Intune  
 
@@ -53,9 +53,9 @@ Pomocí tohoto článku můžete vytvořit výchozí zásadu pro službu Windows
 
 ## <a name="create-a-windows-hello-for-business-policy"></a>Vytvoření zásad pro službu Windows Hello pro firmy
 
-1. Přihlaste se k [centru pro správu Microsoft Endpoint Manageru] (https://go.microsoft.com/fwlink/?linkid=2109431.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. V **zařízení** > Registrace * * > registrace **zařízení** > **registraci systému Windows** > **Windows Hello pro firmy**. Otevře se podokno Windows Hello pro firmy.
+2. Přejít na **zařízení** >  **registrace** > registrace **zařízení** > **registraci systému Windows** > **Windows Hello pro firmy**. Otevře se podokno Windows Hello pro firmy.
 
 3. Pro **konfiguraci Windows Hello pro firmy**vyberte z těchto možností:
 
@@ -98,7 +98,7 @@ Pomocí tohoto článku můžete vytvořit výchozí zásadu pro službu Windows
 
    - **Povolení biometrického ověřování**:
 
-     Jako alternativu ke kódu PIN pro Windows Hello pro firmy umožňuje biometrické ověřování, například rozpoznávání obličeje nebo otisků prstů. Uživatelé ale stejně musí nakonfigurovat pracovní kód PIN pro případ, že se biometrické ověření nepovede. Vybírejte z těchto možností:
+     Jako alternativu ke kódu PIN pro Windows Hello pro firmy umožňuje biometrické ověřování, například rozpoznávání obličeje nebo otisků prstů. Uživatelé ale stejně musí nakonfigurovat pracovní PIN kód pro případ, že se biometrické ověření nepovede. Vybírejte z těchto možností:
 
      - **Ano**. Windows Hello pro firmy umožňuje biometrické ověřování.
      - **Ne**. Windows Hello pro firmy neumožňuje biometrické ověřování (pro všechny typy účtů).
@@ -111,7 +111,7 @@ Pomocí tohoto článku můžete vytvořit výchozí zásadu pro službu Windows
 
    - **Povolení přihlášení telefonem**:
 
-     Pokud je tato možnost nastavená na hodnotu **Ano**, uživatelé můžou použít vzdálenou službu Passport, která bude sloužit jako přenosné doprovodné zařízení pro ověřování stolního počítače. Stolní počítač musí být připojený ke službě Azure Active Directory a v doprovodném zařízení musí být nakonfigurovaný kód PIN služby Windows Hello pro firmy.
+     Pokud je tato možnost nastavená na hodnotu **Ano**, uživatelé můžou použít vzdálenou službu Passport, která bude sloužit jako přenosné doprovodné zařízení pro ověřování stolního počítače. Stolní počítač musí být připojený ke službě Azure Active Directory a v doprovodném zařízení musí být nakonfigurovaný PIN kód pro Windows Hello pro firmy.
 
 ## <a name="windows-holographic-for-business-support"></a>Podpora Windows Holographic for Business
 

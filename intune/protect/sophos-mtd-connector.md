@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8823aa8467ef380223a486874c68d52926db733
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: f41d5d1ec3e302a277fe5e6ff6af9d33a7e89517
+ms.sourcegitcommit: d21539e52631c589bfeaa182418390f66672736c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503743"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75564913"
 ---
 # <a name="sophos-mobile-threat-defense-connector-with-intune"></a>Nastavení konektoru ochrany před mobilními hrozbami v Intune
 Přístup mobilních zařízení k podnikovým prostředkům můžete řídit pomocí podmíněného přístupu na základě posouzení rizik, které provádí společnost Sophos Mobile, řešení ochrany před mobilními hrozbami (MTD), které se integruje s Microsoft Intune. Riziko se vyhodnocuje na základě telemetrie shromážděných ze zařízení s mobilní aplikací Sophos.
@@ -72,7 +72,7 @@ Detekuje hrozby pro vaši síť, jako jsou útoky prostředníkem, a zabraňuje 
 - Odběr služby Microsoft Intune 
 - Předplatné ochrany před mobilními hrozbami v Sophos
 
-Další informace najdete na [webu Sophos](https://www.sophos.com/products/mobile-control).  
+Další informace najdete na [webu Sophos](https://www.sophos.com/en-us/products/mobile-control.aspx).
 
 ## <a name="next-steps"></a>Další kroky  
 - [Integrace Sophos s Intune](sophos-mtd-connector-integration.md)

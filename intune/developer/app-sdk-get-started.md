@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 01/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9742305905c5ba49930e13646bf13d8c248426b6
-ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
+ms.openlocfilehash: 3529a21483d0207dbfe55af914badf3ed895af1a
+ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899389"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75691868"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Začínáme s Microsoft Intune App SDK
 
@@ -60,7 +60,7 @@ E-mailové adresy, které uvedete ve svých odpovědích v dotazníku, použijem
 
 4. Nakonec přidáme přímý odkaz na vaši aplikaci do další měsíční aktualizace služby Intune. Pokud se například proces registrace dokončí v červenci, bude se přímý odkaz podporovat v polovině srpna.
 
-Pokud se v budoucnosti přímý odkaz na aplikaci změní, budete ji muset znovu zaregistrovat.
+Přímý odkaz je odkazem na výpis vaší aplikace ve veřejném obchodě s aplikacemi. Pokud se v budoucnosti přímý odkaz na aplikaci změní, budete ji muset znovu zaregistrovat.
 
 > [!NOTE]
 > Pokud aplikaci aktualizujete novou verzí sady Intune App SDK, musíte nás informovat.
@@ -183,7 +183,7 @@ Po zaregistrování aplikace v rámci tenanta Azure a jejich zobrazení v rámci
 7. Klikněte na tlačítko **Přidat oprávnění**.
 
 > [!NOTE]
-> Pokud vaše aplikace neomezuje přihlášení z důvodu chyby přístupu k tomuto prostředku: https://intunemam.microsoftonline.com, musíte Odeslat poznámku, která msintuneappsdk@microsoft.com s ID klienta vaší aplikace. Toto je ruční proces schvalování ještě dnes.
+> Pokud vaše aplikace neomezuje přihlášení z důvodu chyby přístupu k tomuto prostředku: https\://intunemam.microsoftonline.com, musíte Odeslat poznámku, která msintuneappsdk@microsoft.com s ID klienta vaší aplikace. Toto je ruční proces schvalování ještě dnes.
 
 ### <a name="badge-your-app-optional"></a>Označte si aplikaci (volitelné)
 
