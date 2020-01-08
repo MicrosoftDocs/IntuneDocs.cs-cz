@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a45160fc0e728b4c53590455a2bd0b5d904ddb1
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 2a300070e06725e165316172bf10ca079861f56f
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72504896"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547562"
 ---
 # <a name="set-up-intune"></a>Nastavení Intune
 
@@ -30,7 +30,7 @@ Tento postup nastavení vám umožní povolit správu mobilních zařízení (MD
 
 Některé kroky, například nastavení předplatného Intune a nastavení autority pro správu mobilních zařízení, jsou ve většině situací povinné. Jiné kroky, například konfigurace vlastní domény nebo přidání aplikací, jsou nepovinné a závisejí na potřebách vaší firmy.
 
-Pokud při správě počítačů a serverů aktuálně používáte Microsoft System Center Configuration Manager, můžete [Configuration Manager pomocí spolusprávy připojit k cloudu](https://docs.microsoft.com/sccm/comanage/overview).
+Pokud ke správě počítačů a serverů aktuálně používáte Microsoft Endpoint Configuration Manager, můžete [Configuration Manager pomocí spolusprávy připojit k cloudu](https://docs.microsoft.com/configmgr/comanage/overview).
 
 >[!TIP]
 >Pokud zakoupíte aspoň 150 licencí v rámci opravňujícího plánu Intune, můžete využít *zvýhodnění centra FastTrack*. Tato služba vám poskytne spolupráci se specialisty Microsoftu na připravení prostředí pro službu Intune. Přečtěte si téma [Zvýhodnění centra FastTrack pro Enterprise Mobility + Security (EMS)](https://docs.microsoft.com/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
