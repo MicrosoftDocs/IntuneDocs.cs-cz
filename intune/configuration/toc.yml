@@ -5,10 +5,14 @@
   items:
     - name: Přehled konfigurace zařízení
       href: device-profiles.md
-- name: Rychlý start
+- name: Rychlé starty
   items:
     - name: Vytvoření e-mailového profilu zařízení
       href: quickstart-email-profile.md
+- name: Výukové kurzy
+  items:
+    - name: Vytvoření šablony pro správu
+      href: tutorial-walkthrough-administrative-templates.md
 - name: Praktičtí průvodci
   items:
     - name: Vytvoření profilu
@@ -27,7 +31,7 @@
     - name: Nastavení systému BIOS ve Windows
       href: device-firmware-configuration-interface-windows.md
       displayName: 'DFCI, firmware'
-    - name: Updates
+    - name: Aktualizace
       href: delivery-optimization-windows.md
       displayName: delivery optimization; updates
     - name: Upgradování edicí a režim S
@@ -72,7 +76,7 @@
       href: device-profile-assign.md
     - name: Monitorování profilů
       href: device-profile-monitor.md
-    - name: Řešení problémů
+    - name: Odstraňování potíží
       items:
         - name: Řešení potíží se zásadami a profily
           href: troubleshoot-policies-in-microsoft-intune.md
@@ -145,8 +149,6 @@
               href: vpn-settings-macos.md
             - name: Wi-Fi
               href: wi-fi-settings-macos.md
-            - name: Drátová síť
-              href: wired-network-settings-macos.md
             - name: Vlastní
               href: custom-settings-macos.md
         - name: Windows 10 a novější
