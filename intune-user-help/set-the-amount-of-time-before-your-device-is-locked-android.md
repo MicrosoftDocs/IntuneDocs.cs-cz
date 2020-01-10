@@ -18,19 +18,19 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce0736845b1aca2f70b5c8802e726995ca18159b
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 749bc2e7015bd43a811fae8de55169a3cfcc2999
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508262"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857926"
 ---
 # <a name="how-to-set-the-amount-of-time-before-your-device-is-locked"></a>Nastavení časového intervalu před zablokováním zařízení
 
 Aby vaše data na zařízení s Androidem byla ve větším bezpečí, může firemní podpora nastavit zásady, které vyžadují nastavení doby, po kterou může být zařízení neaktivní před automatickým zamčením. Pomocí těchto kroků můžete nastavte dobu, než se zařízení zamkne.
 
-1. V **Nastavení** zařízení klikněte na **Zabezpečení** &gt; **Automatické uzamčení** (na některých zařízeních se zobrazuje jako **Uzamknout telefon po**).
+1. V **Nastavení** zařízení klikněte na **zabezpečení** &gt; **automaticky uzamknout** (na některých zařízeních se zobrazuje jako **Uzamknout telefon po** ).
 
 2. Zadejte hodnotu časového limitu hesla.
 

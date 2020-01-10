@@ -16,13 +16,13 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f395a9cedc72a8184cfe3e29d6fcd3117a1473d
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 6b75712cf05626999c09e8d74fd28252666313c4
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72987448"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857870"
 ---
 # <a name="install-mobile-threat-defense"></a>Instalace ochrany před mobilními hrozbami   
 
@@ -62,7 +62,7 @@ Další informace o registraci zařízení najdete v tématu [registrace osobní
     * Na obrazovce **získat přístup** vyberte možnost znovu **ověřit**.  
     * Vraťte se do aplikace MTD a vyhledejte existující hrozby. Dokončete doporučený postup a vyřešte hrozbu a získejte přístup.    
 
-### <a name="android-setup"></a>Android – nastavení 
+### <a name="android-setup"></a>Instalace v systému Android 
 
 1. Na obrazovce **získat přístup** postupujte podle pokynů k instalaci aplikace MTD, kterou vyžaduje vaše organizace.  
 2. Vraťte se na obrazovku **získat přístup** a vyberte **otevřít**.  

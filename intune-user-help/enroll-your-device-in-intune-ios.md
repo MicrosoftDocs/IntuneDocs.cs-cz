@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbe0ca9991f427e11d72d85814bcd2d1b8882494
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.collection: ''
+ms.openlocfilehash: bd9fd38fdc244bc48333496c2f266ff039e55585
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75205073"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75855559"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Nastavení přístupu zařízení s iOSem k prostředkům společnosti  
 
@@ -72,7 +72,7 @@ Pozastavení aplikace po dobu delší než několik minut může způsobit ukon�
 
 4. Zobrazí se obrazovka **Vybrat typ zařízení a registrace** a zobrazí výzvu k zadání typu zařízení.  
     * Klepněte na **(organizace) Toto zařízení vlastní** , pokud jste si dostali zařízení z vaší organizace. Potom přejděte na [zabezpečení celé zařízení](###secure-entire-device) v tomto článku a dokončete instalaci.  
-    * Pokud používáte osobní zařízení, které jste napravili z domova, klepněte na **Toto zařízení** . Pak pokračujte k dalšímu kroku.  
+    * Pokud používáte osobní zařízení, které jste napravili z domova, klepněte na **Toto zařízení** . Pak pokračujte na další krok.  
 
     Pokud tuto obrazovku nevidíte, přejděte k nastavení [zabezpečit celé zařízení](enroll-your-device-in-intune-ios.md#secure-entire-device) a dokončete instalaci.  
     

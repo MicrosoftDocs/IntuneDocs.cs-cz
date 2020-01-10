@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5accdf3699770444b7aafeb39d431755f9d3ba9
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: a7eaf8e1cf17624491824ddf3f8911757eea9080
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72501820"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857567"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>Použití zařízení s Windows na Portálu společnosti Intune
 
@@ -40,7 +40,7 @@ Přečtěte si téma [Přihlášení k Portálu společnosti](https://docs.micro
 Portál společnosti aktuálně podporuje zařízení, na kterých běží následující verze Windows:
 
 * Windows 10 (verze Home, Pro, Education, s režimem S a Enterprise)
-* Windows Phone 8.1 a novější
+* Windows Phone 8.1 nebo novější
 * Windows 8.1 RT
 * Windows 8.1
 
@@ -55,7 +55,7 @@ Na Portálu společnosti se podporují i jiné verze Windows, například [Windo
 
 ## <a name="things-you-can-do-after-your-device-is-enrolled-in-management"></a>Kroky, které můžete provést po registraci zařízení pro správu
 - [Ruční synchronizace zařízení](sync-your-device-manually-windows.md)
-- [Vypnutí shromažďování dat Microsoftu o využití](turn-off-microsoft-usage-data-collection-windows.md)
+- [Vypnutí shromažďování dat o využití Microsoftem](turn-off-microsoft-usage-data-collection-windows.md)
 - [Vymazání dat ze ztraceného nebo odcizeného zařízení](reset-erase-your-device-cpwebsite.md)
 - [Co se stane po resetování zařízení na Portálu společnosti?](what-happens-if-you-reset-your-device-using-the-company-portal-windows.md)
 - [Odebrání zařízení ze správy](unenroll-your-device-from-intune-windows.md)

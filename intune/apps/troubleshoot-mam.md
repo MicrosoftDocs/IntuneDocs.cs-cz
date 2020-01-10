@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/03/2019
+ms.date: 01/09/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43fd8207a07f64fd293eb9c90bbfc2a8dadd9157
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 49bf59805476ebbcce3148738e40bfd11e4744eb
+ms.sourcegitcommit: 637375a390b6e34f9c4415c77b99fe2980bbf554
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72489927"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75839314"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Řešení potíží se správou mobilních aplikací
 
@@ -58,7 +58,7 @@ Běžné problémy koncových uživatelů jsou rozdělené do následujících k
 
 Platforma | Scénář | Vysvětlení |
 ---| --- | --- |
-iOS | Koncový uživatel může pomocí rozšíření pro sdílení v iOSu otevírat pracovní nebo školní data v nespravovaných aplikacích, a to i v případě, že je u zásad pro přenos dat nastavená možnost **Pouze spravované aplikace** nebo **Žádné aplikace**. Nemůže při tom dojít k úniku dat? | Zásady ochrany aplikací pro Intune nemůžou ovládat rozšíření pro sdílení v iOS, když dané zařízení nespravují. Proto **Intune „podniková“ data před jejich sdílením mimo příslušnou aplikaci zašifruje**. Můžete si to ověřit pokusem o otevření „podnikového“ souboru mimo spravovanou aplikaci. Soubor by měl být zašifrovaný a mimo spravovanou aplikaci by ho nemělo být možné otevřít.
+iOS | Koncový uživatel může pomocí rozšíření pro sdílení v iOSu otevírat pracovní nebo školní data v nespravovaných aplikacích, a to i v případě, že je u zásad pro přenos dat nastavená možnost **Pouze spravované aplikace** nebo **Žádné aplikace**. Nemůže při tom dojít k úniku dat? | Zásady ochrany aplikací pro Intune nemůžou ovládat rozšíření pro sdílení v iOS, když dané zařízení nespravují. Proto **Intune „podniková“ data před jejich sdílením mimo příslušnou aplikaci zašifruje**. Můžete si to ověřit pokusem o otevření „podnikového“ souboru mimo spravovanou aplikaci. Měl by být zašifrovaný a mimo spravovanou aplikaci by ho nemělo být možné otevřít.
 iOS | Proč se koncovým uživatelům **zobrazí výzva k instalaci aplikace Microsoft Authenticator** | To je potřeba v případě, že se používá podmíněný přístup na základě aplikace, přečtěte si téma [vyžadování schválené klientské aplikace](https://docs.microsoft.com/azure/active-directory/conditional-access/app-based-conditional-access).
 Android | Proč je potřeba, aby si koncový uživatel **nainstaloval aplikaci Portál společnosti** i v případě, že používám ochranu aplikací MAM bez registrace zařízení?  | V Androidu je většina funkcí ochrany aplikací integrovaná do aplikace Portál společnosti. **Aplikace Portál společnosti se sice vyžaduje vždycky, ale registrace zařízení se nevyžaduje**. K ochraně aplikací bez registrace je jenom nutné, aby měl koncový uživatel aplikaci Portál společnosti na zařízení nainstalovanou.
 iOS/Android | Zásady ochrany aplikací se nepoužívají při použití konceptu e-mailu v aplikaci Outlook. | Vzhledem k tomu, že Outlook podporuje podnikový i osobní kontext, nevynutilo MAM v konceptu e-mailu.

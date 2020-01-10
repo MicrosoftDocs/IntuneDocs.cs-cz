@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e96f46dc0e79de3fc78739c246abdc0b9e52702
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: f368f5f15f71246a2899f2acb7a791d65df26c99
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75205526"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857039"
 ---
 # <a name="intune-discovered-apps"></a>Zjištěné aplikace Intune
 
@@ -54,19 +54,20 @@ Následující seznam poskytuje typ aplikační platformy, aplikace, které jsou
 
 | Platforma | Pro zařízení vlastněná osobně | Pro zařízení vlastněná společností | Aktualizovat cyklus |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
-| Windows 10 (aplikace Win32) Poznámka: [vyžaduje rozšíření správy Intune](intune-management-extension.md) na zařízení. | Nelze použít | Jenom spravované aplikace | Každých 24 hodin od registrace zařízení |
+| Windows 10 (aplikace Win32) Poznámka: [vyžaduje rozšíření správy Intune](intune-management-extension.md) na zařízení. | Nepoužitelné | Pouze spravované aplikace | Každých 24 hodin od registrace zařízení |
 | Windows 10 (moderní aplikace) | Jenom spravované moderní aplikace | Všechny moderní aplikace nainstalované v zařízení | Každých 7 dnů od registrace zařízení |
-| Windows 8.1 | Jenom spravované aplikace | Jenom spravované aplikace | Každých 7 dnů od registrace zařízení |
-| Windows Phone 8 | Jenom spravované aplikace | Jenom spravované aplikace | Každých 7 dnů od registrace zařízení |
-| Windows RT | Jenom spravované aplikace | Jenom spravované aplikace | Každých 7 dnů od registrace zařízení |
-| iOS | Jenom spravované aplikace | Všechny aplikace nainstalované v zařízení | Každých 7 dnů od registrace zařízení |
-| macOS | Jenom spravované aplikace | Všechny aplikace nainstalované v zařízení | Každých 7 dnů od registrace zařízení |
-| Android | Jenom spravované aplikace | Všechny aplikace nainstalované v zařízení | Každých 7 dnů od registrace zařízení |
-| Android Enterprise | Jenom spravované aplikace | Jenom aplikace nainstalované v pracovním profilu | Každých 7 dnů od registrace zařízení |
+| Windows 8.1 | Pouze spravované aplikace | Pouze spravované aplikace | Každých 7 dnů od registrace zařízení |
+| Windows Phone 8 | Pouze spravované aplikace | Pouze spravované aplikace | Každých 7 dnů od registrace zařízení |
+| Windows RT | Pouze spravované aplikace | Pouze spravované aplikace | Každých 7 dnů od registrace zařízení |
+| iOS | Pouze spravované aplikace | Všechny aplikace instalované na zařízení | Každých 7 dnů od registrace zařízení |
+| macOS | Pouze spravované aplikace | Všechny aplikace instalované na zařízení | Každých 7 dnů od registrace zařízení |
+| Android | Pouze spravované aplikace | Všechny aplikace instalované na zařízení | Každých 7 dnů od registrace zařízení |
+| Android Enterprise | Pouze spravované aplikace | Jenom aplikace nainstalované v pracovním profilu | Každých 7 dnů od registrace zařízení |
 
 > [!NOTE]
 > - Hybridní zařízení s Windows 10 připojená k Azure AD, jak je znázorněno v úloze správy aplikací v Configuration Manager, teď neshromažďují inventář aplikací prostřednictvím rozšíření pro správu Intune (IME) podle výše uvedeného plánu. Aby se tento problém vyřešil, měla by být úloha správy aplikací v Configuration Manager přepnuta do Intune, aby se editor IME nainstaloval na zařízení (vyžaduje se editor IME pro inventarizaci a nasazení PowerShellu). Všimněte si, že jakékoli změny nebo aktualizace tohoto chování jsou oznámeny ve [vývoji](../fundamentals/in-development.md) a/nebo [co je nového](../fundamentals/whats-new.md).
 > - Zařízení macOS ve vlastnictví, která se zaregistrují do listopadu 2019, můžou dál zobrazovat všechny aplikace nainstalované v zařízení, dokud se zařízení znovu nezaregistrují.
+> - V případě plně spravované a vyhrazené verze Android Enterprise se nezobrazují zjištěné aplikace.
 
 Počet zjištěných aplikací nemusí odpovídat stavovému počtu instalací aplikací. K příčinám nekonzistencí můžou patřit tyto:
 

@@ -1,5 +1,5 @@
 ---
-title: Registrace zařízení s iOSem ve službě TEM (Telecom Expense Management) pomocí Intune
+title: Registrace zařízení s iOS ve službě TEM (Telecom Expense Management) pomocí Intune
 description: Přečtěte si, jak zaregistrovat zařízení s iOSem ve službě TEM (Telecom Expense Management).
 keywords: ''
 author: lenewsad
@@ -18,19 +18,19 @@ ROBOTS: ''
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84098d4d2152d62eda888cdcde1cf88e5081a470
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: c9bb0ba02b5d7576f4dafad8e612f56969e8dd57
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506178"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75855489"
 ---
 # <a name="enroll-your-ios-device-in-telecom-expense-management"></a>Registrace zařízení s iOSem ve službě TEM (Telecom Expense Management)
 
 Vaše organizace může používat software pro správu telekomunikačních výdajů (TEM – Telecom Expense Management), aby zajistila využívání datových a hlasových tarifů v rámci přijatelných limitů. Po dokončení registrace zařízení budete vyzváni k výběru nejvhodnější kategorie tohoto zařízení.
 
-  ![Snímek obrazovky s výběrem nejvhodnější kategorie pro zařízení s iOS. Zobrazuje výběr firemní nebo osobní registrace.](./media/ios-enroll-10-tem-select-best-category.png)
+  ![Snímek obrazovky s výběrem nejvhodnější kategorie pro zařízení s iOSem. Zobrazuje výběr firemní nebo osobní registrace.](./media/ios-enroll-10-tem-select-best-category.png)
 
 Po výběru příslušné možnosti dostanete oznámení s pokynem k instalaci aplikace [__Datalert__](https://itunes.apple.com/app/datalert/id771029268?mt=8) z App Storu. Aplikace Datalert umožňuje vaší organizaci měřit využití dat. Pokud má vaše organizace nakonfigurovanou možnost pracovní nebo školní registrace, budete se muset přihlásit pomocí pracovního nebo školního účtu. Pokud taková možnost není povolena, budete muset zadat údaje, jako je vaše telefonní číslo, a ověřit zařízení pomocí kódu, abyste se mohli z aplikace zaregistrovat ve službě Datalert.
 

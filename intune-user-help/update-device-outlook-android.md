@@ -19,20 +19,20 @@ ROBOTS: ''
 ms.reviewer: vadona
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c3e4ecccef1ef094000136e49effac138bdfe88
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 9d44895f5a10eecac82e9984767c820bd2ad457e
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72501903"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857652"
 ---
 # <a name="you-need-to-update-your-android-device-to-install-the-outlook-app"></a>Abyste si mohli nainstalovat aplikaci Outlook, musíte si aktualizovat zařízení s Androidem
 
 Díky aplikaci Outlook si můžou miliony uživatelů na zařízeních s [Androidem](https://play.google.com/store/apps/details?id=com.microsoft.office.outlook) připojit všechny svoje e-mailové účty, kalendáře a soubory pohodlně do jednoho místa.
 
 >[!NOTE]
-> Hledáte pokyny pro zařízení s iOSem? [Přečtěte si další informace](update-device-outlook-ios.md).
+> Hledáte pokyny pro zařízení s iOSem? [Další informace najdete tady](update-device-outlook-ios.md).
 
 Někdy se může stát, že se instalace aplikace nezdaří, třeba v případě, že zařízení není v aktuálním stavu. Pokud se zobrazí nějaká podobná zpráva, bude potřeba, abyste si před dalším pokusem zařízení s Androidem aktualizovali.
 

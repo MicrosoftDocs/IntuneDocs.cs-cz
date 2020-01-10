@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5665ae7d8093decc8ef2ea4ab1911b27e20e25dd
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: edea807b8c71f519c28f19b0343fa8ea0977712a
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505786"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75855142"
 ---
 # <a name="how-to-set-the-amount-of-time-before-your-android-device-locks-its-screen"></a>Nastavení doby do zamknutí obrazovky zařízení s Androidem
 
@@ -32,17 +32,17 @@ Abyste se mohli znovu připojit ke své práci, budete muset na svém zařízen�
 
 ## <a name="native-non-samsung-knox-device"></a>Nativní zařízení (bez zabezpečení Samsung Knox)
 
-1. V **Nastavení** zařízení klepněte na **Zabezpečení** &gt; **Automatické uzamčení** (na některých zařízeních se zobrazuje jako **Uzamknout telefon po**).
+1. V **Nastavení** zařízení klepněte na **zabezpečení** &gt; **Automatické uzamčení** (na některých zařízeních se zobrazuje jako **Uzamknout telefon po** ).
 
-    Pokud se **Automatické uzamčení** (**Uzamknout telefon po** na některých zařízeních) nezobrazí, zkontrolujte, jestli jste v části **Nastavení** &gt; **Zámek obrazovky** &gt; **Heslo** nastavili platné heslo.
+    Pokud se **Automatické uzamčení** (**Uzamknout telefon po** na některých zařízeních) nezobrazí, ujistěte se, že jste v části **Nastavení** &gt; **Zámek obrazovky** &gt; **heslo**nastavili platné heslo.
 
 2. Vyberte hodnotu časového limitu hesla.
 
 ## <a name="samsung-knox-device"></a>Zařízení se zabezpečením Samsung Knox
 
-1. V **Nastavení** vašeho zařízení klepněte na **Zamykací obrazovka a zabezpečení** &gt; **Uzamknout automaticky**.
+1. V **Nastavení** zařízení klepněte na **zamykací obrazovka a zabezpečení** &gt; **automaticky zamknout**.
 
-    Pokud se **Automatické uzamčení** (**Uzamknout telefon po** na některých zařízeních) nezobrazí, zkontrolujte, jestli jste v části **Nastavení** &gt; **Zámek obrazovky** &gt; **Heslo** nastavili platné heslo.
+    Pokud se **Automatické** uzamčení (**Uzamknout telefon po** na některých zařízeních) nezobrazí, ujistěte se, že jste v části **Nastavení** &gt; **Zámek obrazovky** &gt; **heslo**nastavili platné heslo.
 
 2. Vyberte hodnotu časového limitu hesla.
 

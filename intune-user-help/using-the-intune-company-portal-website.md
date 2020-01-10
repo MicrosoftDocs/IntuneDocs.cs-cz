@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50eb3495362d4b88071707e25a5faa39b76b6c3b
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: f23e17be92f8d5ce8f8eff1fe1847d56d2215e59
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72810362"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857601"
 ---
 # <a name="using-the-intune-company-portal-website"></a>Použití webu Portál společnosti Intune
 [Web portál společnosti](https://portal.manage.microsoft.com) slouží k hledání, instalaci a odinstalaci aplikací pro školu nebo práci. a můžete zobrazit, upravit, přidat a odebrat zaregistrovaná zařízení.  

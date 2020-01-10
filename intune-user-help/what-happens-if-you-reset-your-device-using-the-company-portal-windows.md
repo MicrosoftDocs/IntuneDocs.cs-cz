@@ -18,17 +18,17 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb1a5e56a0c328a1338498bd0606bb33f06486fa
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: b5ef58f4528a0e1133ca38f50d118e3216fe085d
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505986"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857584"
 ---
 # <a name="what-happens-if-you-reset-your-windows-device-using-the-company-portal"></a>Co se stane, když resetujete zařízení s Windows pomocí Portálu společnosti?
 
-Když k resetování zařízení se systémem Windows použijete aplikaci Portál společnosti nebo [web Portál společnosti](reset-erase-your-device-cpwebsite.md), v zařízení se obnoví tovární nastavení a odstraní se všechny aplikace, nastavení a data, včetně vašich osobních údajů. Co se u jednotlivých zařízení stane, závisí na typu zařízení a způsobu jeho použití (jak popisuje následující tabulka). Pokyny, jak resetovat ztracené nebo odcizené zařízení, najdete v části [Resetování (vymazání) ztraceného nebo odcizeného zařízení](reset-erase-your-device-cpwebsite.md).
+Když k resetování zařízení se systémem Windows použijete aplikaci Portál společnosti nebo [web Portál společnosti](reset-erase-your-device-cpwebsite.md), v zařízení se obnoví tovární nastavení a odstraní se všechny aplikace, nastavení a data, včetně vašich osobních údajů. Co se u jednotlivých zařízení stane, závisí na typu zařízení a způsobu jeho použití (jak popisuje následující tabulka). Pokyny, jak resetovat ztracené nebo odcizené zařízení, najdete v části [Reset (Vymazání) ztraceného nebo odcizeného zařízení](reset-erase-your-device-cpwebsite.md).
 
 |Správa a konfigurace zařízení|Typ zařízení|
 |---------------------------------------|---------------|

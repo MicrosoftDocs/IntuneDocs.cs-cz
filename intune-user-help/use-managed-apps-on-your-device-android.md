@@ -18,20 +18,20 @@ ROBOTS: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28ba1d2d50f366e5e34fae06ae188293dd0fb8b5
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 2f075aed1c9cc00963c89a9e76122484d1a430b1
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74781205"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857635"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Použití spravovaných aplikací na zařízení s Androidem
 Spravované aplikace jsou nakonfigurované tak, aby splňovaly požadavky organizace týkající se zabezpečení a chránily pracovní a školní data. Tyto aplikace máte k dispozici, abyste si je mohli nainstalovat na své zařízení nebo je automaticky používat. 
 
 Předtím, než spravovanou aplikaci dostanete a nainstalujete, musí organizace nakonfigurovat její oprávnění. Organizace může omezit funkce a použití aplikace, aby chránila její data před neoprávněnými osobami, které by mohli je mohli sdílet nebo prohlížet. Organizace například může uživateli, který používá aplikaci, zablokovat kopírování a vkládání dat. Nebo může omezit ukládání dat do místního úložiště zařízení.
 
-Pokud chce organizace co nejvíce chránit data, může nakonfigurovat spolupráci několika spravovaných aplikací. Například:
+Pokud chce organizace co nejvíce chránit data, může nakonfigurovat spolupráci několika spravovaných aplikací. Příklad:
 1. Připojíte se k síti organizace ve spravovaném prohlížeči, třeba v Microsoft Edge.
 2. Kliknutím na odkaz otevřete spolupracovníkův soubor s prezentací.
 3. Soubor se otevře v příslušné spravované aplikaci, třeba v Microsoft PowerPointu.

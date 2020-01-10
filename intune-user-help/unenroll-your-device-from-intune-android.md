@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: bb1538d484590a19eb7525a1451b5082ebab245d
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: be980a8cd2eb7f0cbe40002f73f9bc36a36d1193
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506043"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75859062"
 ---
 # <a name="unenroll-your-android-device-from-management"></a>Zrušení správy registrovaného zařízení s Androidem  
 
@@ -74,7 +74,7 @@ Tady je postup, jak zakázat Portál společnosti jako správce zařízení. Sku
 1. Vyberte **nastavení** > **zabezpečení** > **Další nastavení zabezpečení** > **Správci zařízení**.  
 2. Zrušte zaškrtnutí **portál společnosti** výběru.  
 
-**Možnost 2**:
+**Možnost 2:**
 
 1. Vyberte **nastavení** > **zamykací obrazovce a zabezpečení** > **Další nastavení zabezpečení** > **aplikace pro správu zařízení**.
 2. Zrušte zaškrtnutí **portál společnosti** výběru.

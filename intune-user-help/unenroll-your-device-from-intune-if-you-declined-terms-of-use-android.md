@@ -18,19 +18,19 @@ ROBOTS: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 169007541bccfc3e26184ac71197265931afbfdd
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: f54f0d9453e93ad54a1d2a96ff25051f3d8bd3a1
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508116"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857669"
 ---
 # <a name="remove-your-device-from-management-if-you-declined-terms-of-use"></a>Odebrání zařízení ze správy při nepřijetí podmínek použití
 
 Pokud při pokusu o přihlášení do aplikace Portál společnosti odmítnete přijmout podmínky použití, nebudou další pokusy o přihlášení k této aplikaci v budoucnosti možné. Proto musíte k odebrání zařízení z Intune použít alternativní postup.
 
-Při odinstalaci aplikace Portál společnosti současně odebíráte zařízení z Intune. Vaše zařízení už nebude mít přístup k prostředkům společnosti. Další informace o tom, co se stane, když zařízení odeberete ze správy, najdete v tématu [Co se stane, když zrušíte registraci zařízení v Intune](what-happens-if-you-unenroll-your-device-from-intune-android.md).
+Při odinstalaci aplikace Portál společnosti současně odebíráte zařízení z Intune. Vaše zařízení už nebude mít přístup k prostředkům společnosti. Další informace o důsledcích odebrání zařízení ze správy najdete v tématu [Co se stane, když zrušíte registraci zařízení v Intune](what-happens-if-you-unenroll-your-device-from-intune-android.md).
 
 Než odinstalujete aplikaci Portál společnosti, musíte přejít na nastavení **Správci zařízení** a vypnout **Portál společnosti**. Přesný postup se může mírně lišit v závislosti na tom, jako zařízení se systémem Android používáte.
 
@@ -38,7 +38,7 @@ Než odinstalujete aplikaci Portál společnosti, musíte přejít na nastavení
 
 Postup odebrání zařízení z Intune a odinstalace aplikace Portál společnosti:
 
-1. Přejděte na **Nastavení** &gt; **Zabezpečení &amp; Zamykací obrazovka** &gt; **Správci zařízení**.
+1. Přejít na **nastavení** &gt; **zabezpečení &amp; zamykací obrazovce** &gt; **Správci zařízení**.
 
     Provedením tohoto kroku okamžitě zrušíte registraci zařízení.
 
@@ -54,4 +54,4 @@ Postup odebrání všech dat, která do zařízení uložila aplikace Portál sp
 - Odstraňte složku „\storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal“.
 
 
-Potřebujete ještě další pomoc? Obraťte se na svou firemní podporu (kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having unenrolling my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.
+Potřebujete ještě další pomoc? Obraťte se na firemní podporu (kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having unenrolling my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.

@@ -16,13 +16,13 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50b5db465b79e3309375a34078c645a52f0427f0
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: acdf5dfd817dcd9a76e6192749009f1a0c254d25
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508274"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857961"
 ---
 # <a name="set-or-change-your-passcode"></a>Nastavení nebo změna vašeho přístupového kódu
 
@@ -35,13 +35,13 @@ Pokud máte potíže při vytváření nebo změně hesla, obraťte se na pracov
 
 ## <a name="set-your-passcode"></a>Nastavení přístupového kódu
 
-1. Klepněte na **Nastavení** > **Touch ID a kódový zámek**.
+1. Klepněte na **Nastavení** > **Touch ID & Passcode** (Touch ID a přístupový kód).
 2. V nabídce **Touch ID a kódový zámek** klepněte na **Zapnout kódový zámek**.
 3. Zadejte nový přístupový kód, který splňuje požadavky firemní podpory, a potom ho opětovným zadáním ověřte.
 
 ## <a name="change-your-passcode"></a>Změna přístupového kódu
 
-1. Klepněte na **Nastavení** > **Touch ID a kódový zámek**.
+1. Klepněte na **Nastavení** > **Touch ID & Passcode** (Touch ID a přístupový kód).
 2. Zadejte přístupový kód. Otevře se nabídka **Touch ID a kódový zámek**.
 2. Klepněte na **Změnit přístupový kód** a zadejte svoje staré heslo.
 3. Zadejte nový přístupový kód, který splňuje požadavky firemní podpory, a potom ho opětovným zadáním ověřte.
