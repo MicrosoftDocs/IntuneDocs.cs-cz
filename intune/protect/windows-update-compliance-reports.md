@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0de98a0820e15a09c2b3724b216359580327259e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: f1e493e0d2d562c0f69454d1999e82b528c724a2
+ms.sourcegitcommit: e4602481a25a5e12379f673dfe801c611f51c35b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74465718"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75731275"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>Sestavy dodržování předpisů v Intune pro aktualizace
 
@@ -51,7 +51,7 @@ Uvádění Windows 10 Update můžete monitorovat pomocí [Update Compliance](ht
 
 Když použijete toto řešení, nasadíte komerční ID do libovolného zařízení s Windows 10 spravovaných pomocí Intune, pro které chcete ohlásit dodržování předpisů pro aktualizace.  
 
-V Intune můžete ke konfiguraci komerčního ID použít nastavení OMA-URI vlastní zásady. Viz [nastavení zásad Intune pro zařízení s Windows 10 v Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/windows-10-policy-settings-in-microsoft-intune).  
+V Intune můžete ke konfiguraci komerčního ID použít nastavení OMA-URI vlastní zásady. Viz [použití vlastních nastavení pro zařízení s Windows 10 v Intune](../configuration/custom-settings-windows-10.md).
 
 Cesta OMA-URI (s rozlišováním velkých a malých písmen) pro konfiguraci komerčního ID je: *./VENDOR/MSFT/DMCLIENT/Provider/MS DM Server/CommercialID*  
 

@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46b46cd4a407df686e094198c588371ed4a01bb6
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: de0d85b7e7fbc39e7ee78c3b54da08158b02b009
+ms.sourcegitcommit: e4602481a25a5e12379f673dfe801c611f51c35b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74832580"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75731486"
 ---
 # <a name="troubleshoot-ios-device-enrollment-problems-in-microsoft-intune"></a>Řešení potíží s registrací zařízení s iOS v Microsoft Intune
 
@@ -40,7 +40,7 @@ Shromážděte následující informace o problému:
 - Jakou platformu (Android, iOS, Windows) má problém?
 - Kolika uživatelů se to týká? Ovlivnili všichni uživatelé nebo jen některé?
 - Kolik zařízení je ovlivněno? Jsou všechna zařízení ovlivněná nebo jenom některá?
-- Co je Autorita MDM? Pokud je System Center Configuration Manager, jakou verzi Configuration Manager používáte?
+- Co je Autorita MDM? Pokud je Configuration Manager, jakou verzi Configuration Manager používáte?
 - Jak se provádí registrace? Přináší vaše vlastní zařízení (BYOD) nebo Apple Program registrace zařízení (DEP) pomocí profilů zápisu?
 
 ## <a name="error-messages"></a>Chybovými zprávami
@@ -186,7 +186,7 @@ Pokud vaše společnost používá více domén pro přihlašovací údaje uživ
 **Příčina:** Certifikát služby Apple Push Notification Service (APNs) chybí, je neplatný nebo vypršela jeho platnost.
 
 #### <a name="resolution"></a>Řešení
-Ověřte, že se do Intune přidal platný certifikát APNs. Další informace najdete v tématu [Nastavení správy zařízení s iOS a Mac](https://docs.microsoft.com/intune-classic/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune). 
+Ověřte, že se do Intune přidal platný certifikát APNs. Další informace najdete v tématu [Nastavení registrace zařízení se systémem iOS](ios-enroll.md).
 
 ### <a name="accountnotonboarded"></a>AccountNotOnboarded
 
@@ -199,7 +199,7 @@ Obnovte certifikát APNs a pak zařízení znovu zaregistrujte.
 > Ujistěte se, že jste obnovili certifikát APNs. Neměňte certifikát APNs. Pokud certifikát nahradíte, budete muset znovu zaregistrovat všechna zařízení s iOS v Intune. 
 
 - Informace o obnovení certifikátu APNs v samostatné službě Intune najdete v tématu [obnovení certifikátu Apple MDM push Certificate](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate).
-- Informace o obnovení certifikátu APNs v programu Intune Hybrid pomocí Configuration Manager najdete v tématu [nastavení hybridní správy zařízení s iOS pomocí System Center Configuration Manager a Microsoft Intune](https://docs.microsoft.com/sccm/mdm/deploy-use/enroll-hybrid-ios-mac).
+- Informace o obnovení certifikátu APNs v programu Intune Hybrid pomocí Configuration Manager najdete v tématu [nastavení hybridní správy zařízení s iOS pomocí Configuration Manager a Microsoft Intune](https://docs.microsoft.com/configmgr/mdm/deploy-use/enroll-hybrid-ios-mac).
 - Informace o obnovení certifikátu APNs v Office 365 najdete v tématu [Vytvoření certifikátu APNS pro zařízení s iOS](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
 
 ### <a name="xpc_type_error-connection-invalid"></a>Neplatné připojení XPC_TYPE_ERROR

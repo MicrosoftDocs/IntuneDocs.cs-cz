@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 01/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b848bc3cd6461b5c31e940ffbe330bc60374795
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 442432e7638c69083dcad5abc571c00e4051553d
+ms.sourcegitcommit: e4602481a25a5e12379f673dfe801c611f51c35b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206886"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75731520"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Pomocí šablon Windows 10 můžete nakonfigurovat nastavení zásad skupiny v Microsoft Intune
 
@@ -41,35 +41,37 @@ Tento článek obsahuje seznam kroků pro vytvoření šablony pro zařízení s
 
 - Nastavení systému Windows používají [zprostředkovatele CSP v zásadách systému Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies). Zprostředkovatelé CSP fungují na různých edicích Windows, jako jsou například Home, Professional, Enterprise atd. Pokud chcete zjistit, jestli zprostředkovatel kryptografických služeb funguje na konkrétní edici, přejděte na [Zásady Windows CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies).
 
-## <a name="create-a-template"></a>Vytvoření šablony
+## <a name="create-a-template"></a>Umožňuje vytvořit šablonu.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
-3. Zadejte následující vlastnosti:
+3. Zadejte tyto vlastnosti:
 
     - **Název**: zadejte název profilu.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
     - **Platforma**: vyberte **Windows 10 a novější**.
     - **Typ profilu**: vyberte **šablony pro správu**.
 
-4. Vyberte **Vytvořit**. V novém okně vyberte **Nastavení**. V seznamu je uvedeno každé nastavení a pomocí šipek před a další můžete zobrazit další nastavení:
+4. Vyberte **Vytvořit**. V novém okně vyberte rozevírací seznam a vyberte **všechny produkty**. V seznamu můžete také filtrovat nastavení tak, aby se zobrazila pouze nastavení **systému Windows** , zobrazit pouze nastavení **Office** nebo pouze zobrazit **Edge verze 77 nebo novější** :
 
-    ![Podívejte se na vzorový seznam nastavení a použijte tlačítka předchozí a další.](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
-
-    > [!TIP]
-    > Nastavení Windows v Intune se koreluje s cestou k místní zásadě skupiny, kterou vidíte v Editor místních zásad skupiny (`gpedit`).
-
-5. V rozevíracím seznamu vyberte možnost **všechny produkty**. V seznamu můžete také filtrovat nastavení tak, aby se zobrazila pouze nastavení **systému Windows** , zobrazit pouze nastavení **Office** nebo pouze zobrazit **Edge verze 77 nebo novější** :
-
-    ![Vyfiltruje seznam, aby se zobrazila všechna okna nebo všechna nastavení Office v šablonách pro správu v Intune.](./media/administrative-templates-windows/administrative-templates-choose-windows-office-all-products.png)
+    > [!div class="mx-imgBorder"]
+    > ![filtrovat seznam, aby se zobrazila všechna okna nebo všechna nastavení Office v šablonách pro správu v Intune](./media/administrative-templates-windows/administrative-templates-choose-windows-office-all-products.png)
 
     > [!NOTE]
     > Nastavení Microsoft Edge platí pro:
     >
-    > - Microsoft Edge verze 77 a novější. Pokud chcete nakonfigurovat Microsoft Edge verze 45 a starší, přečtěte si téma [Nastavení omezení pro zařízení v prohlížeči Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser).
+    > - Microsoft Edge verze 77 a novější Pokud chcete nakonfigurovat Microsoft Edge verze 45 a starší, přečtěte si téma [Nastavení omezení pro zařízení v prohlížeči Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser).
     > - Windows 10 RS4 a novější s nainstalovanou verzí [KB 4512509](https://support.microsoft.com/kb/4512509)
     > - Windows 10 RS5 a novější s nainstalovanou verzí [KB 4512534](https://support.microsoft.com/kb/4512534)
     > - Windows 10 19H1 a novější s nainstalovanou verzí [KB 4512941](https://support.microsoft.com/kb/4512941)
+
+5. V seznamu je uvedeno každé nastavení a pomocí šipek před a další můžete zobrazit další nastavení:
+
+    > [!div class="mx-imgBorder"]
+    > ![se zobrazí ukázkový seznam nastavení a použití tlačítek předchozí a další](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
+
+    > [!TIP]
+    > Nastavení Windows v Intune se koreluje s cestou k místní zásadě skupiny, kterou vidíte v Editor místních zásad skupiny (`gpedit`).
 
 6. Vyberte libovolné nastavení. Můžete například vyfiltrovat **sadu Office**a vybrat **Aktivovat prohlížení s omezeným přístupem**. Zobrazí se podrobný popis nastavení. Vyberte možnost **povoleno**, **zakázáno**nebo ponechat nastavení jako **Nenakonfigurováno** (výchozí). Podrobný popis také vysvětluje, co se stane, když vyberete možnost **povoleno**, **zakázáno**nebo **není nakonfigurováno**.
 7. Výběrem **OK** uložte změny.
@@ -82,19 +84,21 @@ Přejděte do seznamu nastavení a nakonfigurujte požadovaná nastavení v pros
 - Pomocí nastavení **Stáhnout nepodepsané ovládací prvky ActiveX** zabráníte uživatelům v Stahování nepodepsaných ovládacích prvků ActiveX z Internet Exploreru.
 - Pomocí nastavení **vypnout obnovení systému** povolíte nebo zabráníte uživatelům v zařízení spouštět obnovení systému.
 - Nastavení **povoluje Import oblíbených položek** použijte, když chcete uživatelům dovolit nebo zablokovat Import oblíbených položek z jiného prohlížeče do Microsoft Edge.
-- A mnohem víc...
+- A další funkce...
 
 ## <a name="find-some-settings"></a>Najít některá nastavení
 
 V těchto šablonách jsou k dispozici stovky nastavení. Aby bylo snazší najít konkrétní nastavení, použijte integrované funkce:
 
-- V šabloně pro řazení seznamu vyberte sloupce **Nastavení**, **stav**, **Typ nastavení**nebo **cesta** . Pokud například chcete zobrazit všechna nastavení v cestě `Microsoft Excel`, vyberte sloupec **cesta** :
+- V šabloně pro řazení seznamu vyberte sloupce **Nastavení**, **stav**, **Typ nastavení**nebo **cesta** . Vyberte například sloupec **cesta** a pomocí šipky Další zobrazte nastavení v cestě `Microsoft Excel`:
 
-  ![Kliknutím na cesta zobrazíte všechna nastavení seskupená podle zásad skupiny nebo cesty k ADMX v šablonách pro správu v Intune.](./media/administrative-templates-windows/path-filter-shows-excel-options.png)
+  > [!div class="mx-imgBorder"]
+  > ![kliknutím na cestu zobrazíte všechna nastavení seskupená podle zásad skupiny nebo cesty k ADMX v šablonách pro správu v Intune](./media/administrative-templates-windows/path-filter-shows-excel-options.png)
 
-- V šabloně vyhledejte konkrétní nastavení pomocí **vyhledávacího** pole. Můžete hledat nastavením nadpisu nebo cesty. Vyhledejte například `copy`. Zobrazí se všechna nastavení s `copy`:
+- V šabloně vyhledejte konkrétní nastavení pomocí **vyhledávacího** pole. Můžete hledat podle nastavení nebo cesty. Například vyhledejte zprávu `copy`. Zobrazí se všechna nastavení s `copy`:
 
-  ![Vyhledat kopii pro zobrazení všech nastavení systému Windows a sady Office v šablonách pro správu v Intune](./media/administrative-templates-windows/search-copy-settings.png) 
+  > [!div class="mx-imgBorder"]
+  > ![vyhledat kopii pro zobrazení všech nastavení systému Windows a sady Office v šablonách pro správu v Intune](./media/administrative-templates-windows/search-copy-settings.png) 
 
   V jiném příkladu vyhledejte `microsoft word`. Zobrazí se všechna nastavení, která můžete nastavit pro program Microsoft Word. Vyhledejte `explorer` pro zobrazení všech nastavení aplikace Internet Explorer, která můžete přidat do šablony.
 
@@ -103,3 +107,5 @@ V těchto šablonách jsou k dispozici stovky nastavení. Aby bylo snazší naj�
 Šablona se vytvoří, ale ještě nic nedělá. Dále [přiřaďte šablonu, která se označuje také jako profil](device-profile-assign.md) a [sledujte její stav](device-profile-monitor.md).
 
 [Aktualizujte Office 365 pomocí šablon pro správu](administrative-templates-update-office.md).
+
+[Kurz: použití cloudu ke konfiguraci zásad skupiny na zařízeních s Windows 10 s šablonami ADMX a Microsoft Intune](tutorial-walkthrough-administrative-templates.md)

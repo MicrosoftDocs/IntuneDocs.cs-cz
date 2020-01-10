@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 01/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42127964f72177bda1808bf4b9285af52cf32b80
-ms.sourcegitcommit: 42183c87b137710b8529049f8710d47127e99900
+ms.openlocfilehash: 60244bb268f7becadc427c397d7c2d1562bcf6b5
+ms.sourcegitcommit: ea81ad5f33f18d9fe43254e27e02de5eaef74a05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75303040"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75722602"
 ---
 # <a name="android-enterprise-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení Androidu Enterprise k označení zařízení jako kompatibilních nebo nekompatibilních s Intune
 
@@ -54,15 +54,7 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
   - **Vysoká** – Tato možnost je nejméně bezpečná, protože umožňuje všechny úrovně hrozeb. Může být užitečná, pokud toto řešení používáte jen ke generování sestav.
   
 > [!NOTE] 
-> Následující poskytovatelé ochrany před mobilními hrozbami (MTD) podporují nasazení vlastníků zařízení s Androidem Enterprise pomocí konfigurace aplikace:
-> - Lepší mobilní zařízení 
-> - Check Point SandBlast Mobile
-> - Lookout for Work
-> - Pradeo
-> - Sophos Mobile
-> - Zimperium 
->  
->  Projděte si poskytovatele MTD, kde najdete přesnou konfiguraci potřebnou k podpoře platforem pro vlastníka zařízení s Androidem Enterprise v Intune. Tento seznam se aktualizuje, protože MTD součásti podporují scénáře pro vlastníky zařízení s Androidem Enterprise. 
+> Všichni poskytovatelé ochrany před mobilními hrozbami (MTD) jsou podporováni v nasazeních vlastníků zařízení s Androidem Enterprise pomocí konfigurace aplikace. Projděte si poskytovatele MTD, kde najdete přesnou konfiguraci potřebnou k podpoře platforem pro vlastníka zařízení s Androidem Enterprise v Intune.
 
 #### <a name="google-play-protect"></a>Google Play chránit
 
@@ -145,7 +137,7 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 
 - **Zařízení s rootem**: 
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
-  - **** Zařízení s označením root (jailbreak) jako nevyhovující předpisům.  
+  - Zařízení s označením root (jailbreak) jako nevyhovující předpisům.  
 
 - **Vyžadovat, aby zařízení bylo na úrovni hrozby pro zařízení nebo pod**ní: Vyberte maximální povolenou úroveň hrozby pro zařízení vyhodnocenou [službou ochrany před mobilními hrozbami](mobile-threat-defense.md). Zařízení, která přesahují tuto úroveň hrozby, se označí jako nedodržující předpisy. Pokud chcete nastavení použít, zvolte povolenou úroveň ohrožení:
 
