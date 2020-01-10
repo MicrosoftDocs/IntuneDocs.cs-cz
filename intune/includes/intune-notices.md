@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 0c64f9a6afc054a3d22518c4305bda62a36d67c7
-ms.sourcegitcommit: 8ab98c2773f112f5cf2d817c170633b15de3dec2
+ms.openlocfilehash: e745290991da4d80c7e3839250edbfdd64ef1b7a
+ms.sourcegitcommit: 01c57ac880dcb5f474908977c89810f5bedaf326
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75323035"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75760958"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune.
 
@@ -55,19 +55,6 @@ Po 20. února 2020 tato zařízení neobdrží žádné aktualizace zabezpečen�
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
 Můžete si prohlédnout sestavy Intune a zjistit, která zařízení nebo uživatelé to mohou mít vliv. Přejděte na Zařízení > Všechna zařízení a vyfiltrujte si je podle operačního systému. Můžete přidat další sloupce, které vám pomůžou určit, kdo ve vaší organizaci má zařízení s Windows Phone 8,1. Požádejte koncové uživatele, aby svá zařízení upgradovali na podporovanou verzi operačního systému.
-
-
-### <a name="intune-plan-for-change-windows-10-version-1703-company-portal-moving-out-of-support--5026679--"></a>Naplánování změny v Intune: Windows 10, verze 1703 Portál společnosti přesun mimo podporu<!--5026679-->
-Windows 10 verze 1703 (označované také jako Windows 10, RS2) se od 8. října 2019 pro edice Enterprise a EDU přesunula mimo službu. Intune ukončí podporu pro odpovídající aplikaci Portál společnosti pro RS2/RS1 od 26. prosince 2019.
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Dál, v konkrétní verzi aplikace Portál společnosti neuvidíte nové funkce, i když budeme dál podporovat tuto verzi aplikace Portál společnosti až do 26. prosince 2019, včetně poskytování všech aktualizací zabezpečení pro Portál společnosti aplikaci jako vyžadována. Vzhledem k tomu, že Windows 10 verze 1703 po přesunu mimo obsluhu neobdrží žádné aktualizace zabezpečení, důrazně doporučujeme, abyste si aktualizovali zařízení s Windows na novější verzi Windows a zajistili, že jste na nejnovější aplikaci Portál společnosti, abyste mohli dál získat nové funkce a další funkce.
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
-Postup závisí na tom, jak je vaše prostředí nakonfigurované. Obecně byste měli určit zařízení, která mají starší verzi operačního systému, nebo Portál společnosti na svém zařízení a aktualizovat. Pokud chcete nastavit aktualizační kanály Windows 10, přihlaste se k Intune – > aktualizace softwaru – aktualizační kanály Windows 10. Nejnovější verze Portál společnosti je 10.3.5601.0 verze. Požádejte uživatele, aby si ho získali od Microsoft Store, aby se v budoucích verzích stále dosáhlo. Intune taky můžete použít k instalaci nejnovějšího prostředí do zařízení s Windows prostřednictvím [Microsoft Store pro firmy](https://docs.microsoft.com/intune/windows-store-for-business).
-
-#### <a name="additional-information"></a>Další informace
-[Ruční přidání aplikace Portál společnosti pro Windows 10 pomocí Microsoft Intune](https://docs.microsoft.com/intune/store-apps-company-portal-app)
 
 
 ### <a name="take-action-use-microsoft-edge-for-your-protected-intune-browser-experience--5728447--"></a>Provést akci: použití Microsoft Edge pro chráněné prostředí Intune Browser<!--5728447-->

@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 26013ab06cabdfd64ec3cd34254e3cfa2bb2428d
-ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
+ms.openlocfilehash: 5209ce7fba30a156de055503751104f9090d49d7
+ms.sourcegitcommit: e7052114324b80d0503b107c934bb90b8eb29704
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75654256"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755999"
 ---
 # <a name="use-device-encryption-with-intune"></a>Použití šifrování zařízení s Intune
 
@@ -38,6 +38,8 @@ Intune také obsahuje integrovanou [sestavu šifrování](encryption-monitor.md)
 ## <a name="filevault-encryption-for-macos"></a>Šifrování trezoru úložiště pro macOS
 
 Pomocí Intune můžete na zařízeních se systémem macOS nakonfigurovat šifrování disků trezoru. Pak pomocí sestavy šifrování Intune zobrazte podrobnosti o šifrování těchto zařízení a spravujte klíče pro obnovení pro zařízení zašifrovaná pomocí trezoru.
+
+Pro práci s úložištěm na zařízení se vyžaduje registrace zařízení schválená uživatelem. Uživatel musí ručně schválit profil správy ze systémového prefrences, aby se dalo považovat za schválený uživatelem. 
 
 Trezor úložišť je program pro šifrování celého disku, který je součástí macOS. Intune můžete použít ke konfiguraci trezoru úložišť na zařízeních, na kterých běží **macOS 10,13 nebo novější**.
 
@@ -72,14 +74,7 @@ Podrobnosti o nastavení trezoru klíčů, které můžete spravovat pomocí Int
 
 7. Nakonfigurujte zbývající [Nastavení trezoru úložišť](endpoint-protection-macos.md#filevault) tak, aby splňovalo vaše obchodní potřeby, a pak vyberte **OK**.
 
-   > [!IMPORTANT]
-   > K dispozici je známý problém, pokud je nastavení **Zakázat příkazový řádek při odhlášení** nastaveno na *Povolit*. Pokud je nastavena hodnota *Povolit*, nastavení pro **počet povolených pokusů o obejití** musí být nastaveno na hodnotu a nesmí být nastaven jako *není nakonfigurováno*. Pokud je nastavené na *Nenakonfigurováno*, profil se v zařízení nezdařil. V tomto scénáři zařízení hlásí **souhrn stavu profilu** jako **chybu** bez dalších podrobností.
-   >
-   > Pokud je možnost **Zakázat výzvu při odhlášení** nastavena na hodnotu *není nakonfigurováno*, **počet povolených potlačení** nemůže být *nakonfigurován* nebo mít hodnotu.
-   >
-   > Tento problém opraví budoucí aktualizace.
-
-8. Dokončete konfiguraci dalšího nastavení a potom profil uložte.  
+  8. Dokončete konfiguraci dalšího nastavení a potom profil uložte.  
 
 ### <a name="manage-filevault"></a>Správa trezoru úložišť
 

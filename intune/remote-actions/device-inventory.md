@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94c38aaf28440511720280a3c5a1ebda5b9f2ab1
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: ce3f73834ffdc2648dae345f8fa2a8233d2bb8c9
+ms.sourcegitcommit: e7052114324b80d0503b107c934bb90b8eb29704
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74819790"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75756015"
 ---
 # <a name="see-device-details-in-intune"></a>Zobrazení podrobností o zařízení v Intune
 
@@ -57,7 +57,7 @@ V závislosti na tom, jaký dopravce zařízení používá, se nemusí shromaž
 > [!Note]  
 > Inventář hardwaru a softwaru se ve službě Intune aktualizuje každých 7 dní.
 
-|Podrobnosti|Description|Platforma| 
+|Údaj|Description|Platforma| 
 |--------------|----------------------|----|  
 |Název|Název zařízení|Windows, iOS|
 |Název správy|Název zařízení používaný jenom v konzole. Změnou tohoto názvu nedojde ke změně názvu v zařízení.|Windows, iOS|
@@ -94,6 +94,9 @@ V závislosti na tom, jaký dopravce zařízení používá, se nemusí shromaž
 |Šifrované|Pokud **Ano**, jsou data uložená v zařízení šifrovaná|Windows, iOS, Android|
 
 \* není k dispozici v Androidu se správcem zásad Google, jako jsou plně spravovaná a vyhrazená zařízení.
+
+> [!Note]  
+> Telefonní číslo není v inventáři na vyhrazených nebo plně spravovaných zařízeních s Androidem Enterprise.
 
 ## <a name="next-steps"></a>Další kroky
 Podívejte se, jaké další akce [správy zařízení](device-management.md) můžete provádět pomocí Intune.
