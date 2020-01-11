@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c18f3e8fb14d8592789b39856ec420790fad286
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 8452f840fb269505656bf6594d3e5c196b4d7a06
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547549"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885784"
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
 
@@ -101,19 +101,11 @@ Při popisu současného prostředí MDM nezapomeňte zaznamenat všechny projek
 | **SharePoint** | Místní SharePoint | Plány přechodu na SharePoint Online neexistují. |  
 | **Současné řešení MDM** | Exchange ActiveSync |  |
 | **Řešení pro certifikáty** | Microsoft Server 2012 R2, AD Certificate Services | Infrastruktura veřejných klíčů se používá jen pro webové servery. |
-| **Správa systému** | Configuration Manager 1606 | Zájem o hybridní řešení Intune |
+| **Správa systému** | Configuration Manager aktuální větev | Chcete prozkoumat řešení spolusprávy |
 | **Řešení VPN** | Cisco AnyConnect |  |
 
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a použít ji k vypracování vlastního plánu návrhu Intune.
-
-## <a name="choose-an-intune-deployment-option"></a>Volba způsobu nasazení Intune
-
-Intune nabízí dvě možnosti nasazení: samostatné a hybridní. Samostatně odkazuje na službu Intune běžící v cloudu, hybrid odkazuje na integraci Intune s Configuration Manager. Tato příručka je určená primárně pro možnost samostatného nasazení. [Rozhodněte, která možnost vyhovuje požadavkům vaší firmy](https://docs.microsoft.com/configmgr/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
-
-> [!Important]
->Připojování nových zákazníků hybridních MDM se už nepoužívá. Další informace najdete v příspěvku na blogu o [přesunu z hybridní správy mobilních zařízení do Intune v Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150) .
-
 
 ## <a name="intune-tenant-location"></a>Umístění tenanta Intune
 
@@ -372,7 +364,7 @@ Protože aplikace můžete nasazovat uživatelům a zařízením, doporučujeme,
 - Jsou aplikace veřejně dostupné v obchodu s aplikacemi, nebo jde o vlastní obchodní aplikace?
 
 
-#### <a name="app-protection-policies"></a>Zásady ochrany aplikace
+#### <a name="app-protection-policies"></a>Zásady ochrany aplikací
 
 Zásady ochrany aplikace minimalizují ztrátu dat tím, že definují, jak aplikace spravuje firemní data. Intune podporuje zásady ochrany pro každou aplikaci vytvořenou tak, aby fungovala se správou mobilních aplikací. Při návrhu zásad ochrany aplikací se musíte rozhodnout, jaká omezení chcete uplatnit na firemní data v dané aplikaci. Doporučujeme vám prostudovat, jak [zásady ochrany aplikací](../apps/app-protection-policy.md) fungují. Tady je příklad, jak dokumentovat stávající aplikace a jakou ochranu potřebují.
 

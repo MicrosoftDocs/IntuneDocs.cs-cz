@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 479d88c09f48acbbfaedf1f4c69546b7f52dfbf1
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: 800193921e608a0d0c29dad5cf85b8781e715441
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75692194"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885795"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Zásady konfigurace aplikací v Microsoft Intune
 
@@ -93,7 +93,7 @@ Zásady konfigurace aplikací můžete ověřit pomocí následujících tří m
 
 ### <a name="ios-configuration-on-unmanaged-devices"></a>Konfigurace iOS na nespravovaných zařízeních
 
-Konfiguraci iOS můžete ověřit pomocí **diagnostického protokolu Intune** na nespravovaných zařízeních pro konfiguraci spravované aplikace.
+Konfiguraci iOS můžete ověřit pomocí **diagnostického protokolu Intune** na nespravovaných zařízeních pro konfiguraci spravované aplikace. Kromě následujících kroků můžete získat přístup k protokolům spravovaných aplikací pomocí Microsoft Edge. Další informace najdete v tématu [použití Microsoft Edge v iOS pro přístup k protokolům spravovaných aplikací](~/apps/manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
 
 1. Pokud na zařízení ještě není nainstalovaná, Stáhněte si a nainstalujte **Intune Managed Browser** z App Storu. Další informace najdete v tématu [Microsoft Intune Protected Apps](apps-supported-intune-apps.md).
 2. Spusťte **Intune Managed Browser** a v navigačním panelu vyberte **o** > **intunehelp** .
@@ -162,7 +162,7 @@ Pokud chcete shromažďovat protokoly ze zařízení s Androidem, musíte vy neb
     
 ## <a name="graph-api-support-for-app-configuration"></a>Podpora Graph API pro konfiguraci aplikací
 
-K provádění úloh konfigurace aplikace můžete použít Graph API. Podrobnosti najdete v [referenčních informacích o cílové konfiguraci MAM pomocí Graph API](https://graph.microsoft.io/docs/api-reference/beta/api/intune_mam_targetedmanagedappconfiguration_create).
+K provádění úloh konfigurace aplikace můžete použít Graph API. Podrobnosti najdete v tématu [Graph API cílené konfigurace mam reference](https://docs.microsoft.com/graph/api/resources/intune-shared-targetedmanagedappconfiguration?view=graph-rest-beta). Další informace o Intune a graphu najdete [v tématu práce s Intune v Microsoft Graph](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-beta).
 
 ## <a name="troubleshooting"></a>Odstraňování potíží
 

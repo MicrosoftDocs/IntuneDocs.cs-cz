@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bc9dd73a9d710b529f757ab336a2ab79e3f6888
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 4a9454d11fd1209e715cbcb1e9d2ce7aae4a003c
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547703"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886059"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novinky v Microsoft Intune – předchozí měsíce
 
@@ -2334,8 +2334,6 @@ Pro přesun uživatelů a jejich zařízení z hybridní správy MDM do Intune n
 - Přesunout podmnožinu uživatelů do Intune na portálu Azure Portal a zbytek nechat v hybridním MDM
 - Migrovat zařízení do Intune na portálu Azure Portal, aniž by bylo nutné je znovu zaregistrovat
 
-Podrobnosti najdete v článku o [migraci uživatelů a zařízení hybridního MDM do samostatného Intune](https://docs.microsoft.com/configmgr/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
-
 ### <a name="on-premises-exchange-connector-high-availability-support----676614---"></a>Podpora vysoké dostupnosti místního konektoru Exchange <!-- 676614 -->
 Když Exchange Connector vytvoří připojení k Exchangi pomocí zadaného serveru Client Access Server (CAS), konektor teď má možnost zjišťovat další servery CAS. Pokud primární server CAS přestane být dostupný, při selhání převezme služby konektoru jiný server CAS (pokud je k dispozici), dokud primární server CAS nebude znovu dostupný. Podrobnosti najdete v článku [Podpora vysoké dostupnosti místního konektoru Exchange](../protect/exchange-connector-install.md#on-premises-intune-exchange-connector-high-availability-support).
 
@@ -3003,7 +3001,7 @@ Uživatelům zařízení s iOSem se při přihlašování do Portálu společnos
 ## <a name="may-2017"></a>Květen 2017
 
 ### <a name="change-your-mdm-authority-without-unenrolling-managed-devices--1103950--"></a>Změňte autoritu MDM, aniž byste museli zrušit registraci spravovaných zařízení.<!--1103950-->
-Autoritu pro správu mobilních zařízení teď můžete změnit, aniž byste museli kontaktovat podporu Microsoftu a zrušit registraci a provést novou registraci stávajících spravovaných zařízení. V konzole Configuration Manageru můžete [změnit autoritu pro správu mobilních zařízení](/sccm/mdm/deploy-use/change-mdm-authority) z Nastavit na nástroj Configuration Manager (hybridní) na Microsoft Intune (samostatné) a naopak.
+Autoritu pro správu mobilních zařízení teď můžete změnit, aniž byste museli kontaktovat podporu Microsoftu a zrušit registraci a provést novou registraci stávajících spravovaných zařízení. V konzole nástroje Configuration Manager můžete změnit autoritu pro správu mobilních zařízení z Nastavit na nástroj Configuration Manager (hybridní) na Microsoft Intune (samostatné) a naopak.
 
 
 ### <a name="improved-notification-for-samsung-knox-startup-pins--1087143--"></a>Vylepšené oznámení pro spouštěcí PIN kódy Samsung KNOX<!--1087143-->

@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48ad9ffe32dc7493195ec161e070734776381427
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 328a578f4d2ada41bed17839f1f85b3b9add80fa
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547797"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885948"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Řešení potíží při registraci zařízení v Microsoft Intune
 
@@ -56,7 +56,7 @@ Uživatelé spravovaných zařízení můžou pro vaši potřebu shromažďovat 
 K těmto problémům může docházet na všech platformách zařízení.
 
 ### <a name="device-cap-reached"></a>Dosažení limitu zařízení
-**Problém:** Při registraci se uživateli zobrazí chyba (například **Portál společnosti není dočasně k dispozici**) a protokol DMPdownloader.log v Configuration Manageru obsahuje chybu **DeviceCapReached**.
+**Problém:** Uživatel obdrží při registraci chybu (například **portál společnosti dočasně nedostupné**).
 
 **Řešení:**
 
@@ -113,23 +113,6 @@ Pokud se chcete vyhnout dosažení limitu počtu zařízení, nezapomínejte ode
 
     4. Znovu zapněte službu DirSync a zkontrolujte, jestli je teď uživatel správně synchronizovaný.
 
-3. V případě, že používáte Configuration Manager s Intune, ověřte, jestli má uživatel platné ID uživatele cloudu:
-
-    1. Otevřete nástroj SQL Management Studio.
-
-    2. Připojte se k příslušné databázi.
-
-    3. Otevřete složku databází a vyberte a otevřete složku **CM_název_db**, kde název_db odpovídá názvu databáze zákazníka.
-
-    4. Nahoře zvolte **Nový dotaz** a spusťte tyto dotazy:
-
-        - Chcete-li zobrazit všechny uživatele: `select * from [CM_ DBName].[dbo].[User_DISC]`
-
-        - Pokud chcete zobrazit konkrétní uživatele, použijte následující dotaz, kde% TestUser1% je zástupný symbol pro username@domain.com pro uživatele, kterého chcete vyhledat: `select * from [CM_ DBName].[dbo].[User_DISC] where User_Principal_Name0 like '%testuser1%'`
-
-        Po napsání dotazu zvolte **!Execute**.
-        Když se vrátí výsledky, vyhledejte ID uživatele cloudu.  Pokud se žádné ID nenajde, nemá daný uživatel licenci pro používání služby Intune.
-
 ### <a name="unable-to-create-policy-or-enroll-devices-if-the-company-name-contains-special-characters"></a>Pokud název společnosti obsahuje speciální znaky, není možné vytvořit zásadu ani registrovat zařízení
 **Problém:** Nemůžete vytvořit zásadu nebo zaregistrovat zařízení.
 
@@ -144,7 +127,7 @@ Pokud se chcete vyhnout dosažení limitu počtu zařízení, nezapomínejte ode
 - mají pro přípony UPN uživatelů v rámci své organizace více domén nejvyšší úrovně (například @contoso.com nebo @fabrikam.com).
 
 
-[Kumulativní aktualizace pro službu AD FS 2.0](http://support.microsoft.com/kb/2607496) ve spojení s přepínačem <strong>SupportMultipleDomain</strong> umožňuje zajistit, aby server AD FS podporoval tento scénář bez vyžadování dalších serverů služby AD FS 2.0. Další informace najdete v [tomto blogu](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+[Kumulativní aktualizace pro službu AD FS 2.0](https://support.microsoft.com/kb/2607496) ve spojení s přepínačem <strong>SupportMultipleDomain</strong> umožňuje zajistit, aby server AD FS podporoval tento scénář bez vyžadování dalších serverů služby AD FS 2.0. Další informace najdete v [tomto blogu](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
 
 
 ## <a name="android-issues"></a>Problémy na zařízeních s Androidem
@@ -332,23 +315,6 @@ Další informace najdete v tématu [Doporučené postupy zabezpečení služby
 
 5. Potvrďte nastavení výchozích prohlížečů Safari (pro iOS) a povolení souborů cookie.
 
-### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-configuration-manager-with-intune"></a>Zaregistrovaná zařízení s iOS se při použití Configuration Manager s Intune nezobrazí v konzole.
-**Problém:** Uživatel registruje zařízení s iOSem, to se ale nezobrazí v konzole pro správu nástroje Configuration Manager. Zařízení neindikuje, že je zaregistrované. Možné příčiny:
-
-- Konektor služby Microsoft Intune v lokalitě nástroje Configuration Manager nekomunikuje se službou Intune.
-- Součást Data Discovery Manager (ddm) nebo State Manager (statmgr) nezpracovává zprávy ze služby Intune.
-- Mohli jste si stáhnout certifikát MDM z jednoho účtu a použít ho na jiný účet.
-
-
-**Řešení:** Vyhledejte možné chyby v následujících souborech protokolu:
-
-- dmpdownloader.log
-- ddm.log
-- statmgr.log
-
-Příklady toho, co máte v těchto souborech protokolu hledat, budou brzy přidány.
-
-
 ### <a name="users-ios-device-is-stuck-on-an-enrollment-screen-for-more-than-10-minutes"></a>Uživatelské zařízení s iOSem uvízlo na obrazovce registrace po dobu více než 10 minut
 
 **Problém**: Při registraci zařízení může dojít k uvíznutí na některé z těchto dvou obrazovek:
@@ -418,36 +384,6 @@ Po vymazání blokovaných zařízení můžete uživatelům předat pokyn, aby 
     2. Vyberte **zařízení** > **všechna zařízení**.  
     3. Najděte zařízení s problematickou registrací. Výsledky můžete upřesnit hledáním podle názvu zařízení nebo adresy MAC/hardwaru.
     4. Vyberte toto zařízení > **Odstranit**. Odstraňte všechny ostatní záznamy spojené s tímto zařízením.  
-
-## <a name="issues-when-using-configuration-manager-with-intune"></a>Problémy při použití Configuration Manager s Intune
-
-### <a name="mobile-devices-disappear"></a>Mobilní zařízení zmizí
-
-**Problém:** Po úspěšné registraci mobilního zařízení do Configuration Manageru dané zařízení zmizí z kolekce mobilních zařízení. Dané zařízení ale pořád má profil pro správu a je uvedené v bráně CSS.
-
-**Řešení:** K této situaci může dojít, protože:
-
-- máte vlastní proces, který odebírá zařízení nepřipojená k doméně, nebo
-- uživatel vyřadil zařízení z předplatného.
-Pokud chcete ověřit a zkontrolovat, který proces nebo uživatelský účet odebral zařízení z konzoly nástroje Configuration Manager, postupujte podle následujících kroků.
-
-#### <a name="check-how-device-was-removed"></a>Zjištění způsobu odebrání zařízení
-
-1. V konzole pro správu nástroje Configuration Manager vyberte **Monitorování** &gt; **Stav systému** &gt; **Dotazy stavových zpráv**.
-
-2. Klikněte pravým tlačítkem na **Manuálně odstraněné prostředky členů kolekce** a vyberte **Zobrazit zprávy**.
-
-3. Vyberte příslušný čas/datum nebo období posledních 12 hodin.
-
-4. Najděte příslušné zařízení a podívejte se, jak došlo k jeho odebrání. Následující příklad ukazuje, že zařízení odebral účet SCCMInstall prostřednictvím neznámé aplikace.
-
-    ![Snímek obrazovky pro diagnostiku odstranění zařízení](./media/troubleshoot-device-enrollment-in-intune/CM_With_Intune_Unknown_App_Deleted_Device.jpg)
-
-5. Zkontrolujte, jestli nemá Configuration Manager naplánovanou úlohu, skript nebo jiný proces, který by mohl automaticky odstraňovat zařízení nepřipojená k doméně, mobilní zařízení nebo související zařízení.
-
-### <a name="other-ios-enrollment-errors"></a>Další chyby registrace zařízení s iOSem
-
-Seznam chyb registrace zařízení s iOSem najdete v dokumentaci v části [Řešení potíží s registrací zařízení s iOSem v Microsoft Intune](https://support.microsoft.com/help/4039809/troubleshooting-ios-device-enrollment-in-intune).
 
 ## <a name="pc-issues"></a>Problémy na počítači
 

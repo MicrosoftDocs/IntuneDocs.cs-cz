@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4cfb0f69d74cc6146b2497cd53be3e123f79cc70
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: fdcf88449a4f6ec0b3b352afb87ebcb5bd0b8389
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72504362"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885728"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Audit, export a odstranění osobních dat v Intune
 
@@ -74,16 +74,6 @@ Když zařízení **vyřadíte**, Intune odebere poskytnutá data, jako jsou fir
 ### <a name="delete-a-tenant-from-microsoft-intune"></a>Odstranění tenanta z Microsoft Intune
 
 Pokud zákazník, který používá tenanta Intune, zruší svůj účet Intune, odstraní se všechna data tenanta do 180 dnů od zavření účtu Intune zákazníkem. Pokud má tenant AAD přidružené jiné podnikové předplatné Microsoftu (třeba Azure nebo Ofice 365), odstraní se jenom data zákazníka Intune. Tenant AAD se zachová, aby ho mohla využívat jiná předplatná. Pokud má tenant AAD přidružené jenom předplatné účtu Intune, bude odstraněn tenant, všechny prostředky i zákazníkova data.
-
-### <a name="delete-a-user-in-a-hybrid-mobile-device-management-mdm-environment"></a>Odstranění uživatele v hybridním prostředí správy mobilních zařízení (MDM)
-Pokud máte hybridní prostředí MDM (tzn. že služba Intune je integrovaná do Configuration Manageru), musíte provést následující akce (v uvedeném pořadí), abyste uživatele zcela odstranili a úplně je odebrali z místních služeb Active Directory, Configuration Manager a Intune.
-
-1. Odstraňte uživatele z místní služby Active Directory (AD). Tím zastavíte synchronizaci uživatele s Azure AD a také zjišťování uživatele Configuration Managerem. 
-2. Pokud chcete odebrat uživatele a s ním spojená data z Configuration Manageru, odstraňte ho z konzoly Configuration Manageru. V konzole přejděte na **Prostředky a kompatibilita** > **Uživatelé**. Pravým tlačítkem klikněte na uživatele, kterého chcete odstranit, a klikněte na **Odstranit**.
-3. Když [uživatele odstraníte z AAD](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user), odeberete uživatele a data, která se ho týkají, současně z Azure Active Directory i z Intune. Po trvalém odstranění uživatele z AAD obdrží Intune signál o odstranění z AAD. Na jeho základě začne ze služby Intune automaticky mazat všechna osobní data uživatele. Informace o uživateli budou ze služby Intune odstraněny do 30 dnů od jeho odebrání.
-
-> [!Important]
->Připojování nových zákazníků hybridních MDM se už nepoužívá. Další informace najdete v příspěvku na blogu o [přesunu z hybridní správy mobilních zařízení do Intune v Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150) .
 
 ## <a name="next-steps"></a>Další kroky
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8657b6fa8110b4ea4bbf8ec0841d69197624dd9f
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9b5f973e5ce169edcf6149b0588c905d8497cca2
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74563724"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885747"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Vytvoření a přiřazení zásad ochrany aplikací
 
@@ -93,9 +93,6 @@ Když vytvoříte zásady ochrany aplikací pro iOS/iPadOS a aplikace pro Androi
 
 9. Kliknutím na tlačítko **Další** zobrazíte stránku **přiřazení** .<br>
    Stránka **přiřazení** vám umožní přiřadit zásady ochrany aplikací skupinám uživatelů.
-   
-    >[!IMPORTANT]
-    > Pokud ke správě zařízení používáte Intune s Configuration Managerem, použijí se zásady jenom pro uživatele přímo ve skupinách, které jste vybrali. Na členy podřízených skupin vnořených ve skupině, kterou jste vybrali, tyto zásady nemají vliv.
 
 10. Klikněte na **Další: zkontrolovat + vytvořit** a zkontrolujte hodnoty a nastavení, které jste zadali pro tyto zásady ochrany aplikací.
 
@@ -104,7 +101,7 @@ Když vytvoříte zásady ochrany aplikací pro iOS/iPadOS a aplikace pro Androi
     > [!TIP]
     > Tato nastavení zásad se vynutí jenom při použití aplikace v pracovním kontextu. Když koncový uživatel použije aplikaci k provedení osobní úlohy, nebudou mít tyto zásady na ni vliv. Upozorňujeme, že když vytvoříte nový soubor, považuje se za osobní soubor. 
 
-Koncoví uživatelé můžou stahovat aplikace z App Storu nebo Google Play. Více informací najdete v následujících tématech:
+Koncoví uživatelé můžou stahovat aplikace z App Storu nebo Google Play. Více informací najdete v následujících tématech:
 * [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](../fundamentals/end-user-mam-apps-android.md)
 * [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](../fundamentals/end-user-mam-apps-ios.md)
 

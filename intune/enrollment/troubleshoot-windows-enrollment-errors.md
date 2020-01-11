@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 622c09d03507a3a47433eab5b21702a656f8bffb
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 0d5c6db598a7f64f75f6f5a8e0cf25b8e4b81465
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547511"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885890"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Řešení potíží s registrací zařízení s Windows v Microsoft Intune
 
@@ -40,7 +40,7 @@ Shromážděte následující informace o problému:
 - Jakou platformu (Android, iOS, Windows) má problém?
 - Kolika uživatelů se to týká? Ovlivnili všichni uživatelé nebo jen některé?
 - Kolik zařízení je ovlivněno? Jsou všechna zařízení ovlivněná nebo jenom některá?
-- Co je Autorita MDM? Pokud se jedná o Configuration Manager koncového bodu Microsoftu, jakou verzi Configuration Manager používáte?
+- Co je Autorita MDM?
 - Jak se provádí registrace? Přináší vaše vlastní zařízení (BYOD) nebo Apple Program registrace zařízení (DEP) pomocí profilů zápisu?
 
 ## <a name="error-messages"></a>Chybovými zprávami
@@ -107,7 +107,6 @@ Chyba 8018000a: něco se pokazilo. Zařízení je už zaregistrované.  Můžete
 
 **Příčina:** Platí jedna z následujících podmínek:
 - Jiný uživatel už zařízení zaregistroval v Intune nebo se připojil k zařízení do Azure AD. Pokud chcete zjistit, jestli se jedná o tento případ, přejděte na **nastavení** > **účty** > **pracovní přístup**. Vyhledejte zprávu podobnou následující: "jiný uživatel v systému je již připojen k práci nebo škole. Odeberte prosím toto pracovní nebo školní připojení a zkuste to znovu. "    
-- Agent Configuration Manager klienta je nainstalován v počítači.    
 
 #### <a name="resolution"></a>Řešení
 
@@ -118,9 +117,6 @@ K vyřešení tohoto problému použijte jednu z následujících metod:
 2. Přejděte na **nastavení** > **účty** > **pracovní přístup**a pak odstraňte pracovní nebo školní účet.
 3. Odhlaste se z Windows a pak se přihlaste pomocí svého účtu.    
 4. Zaregistrujte zařízení v Intune nebo ho připojte k Azure AD. 
-
-##### <a name="remove-the-configuration-manager-client"></a>Odebrání klienta Configuration Manager
-Odeberte klienta Configuration Manager a znovu zaregistrujte zařízení.
 
 
 
@@ -160,7 +156,7 @@ Chyba 80180026: něco se pokazilo. Potvrďte, že používáte správné přihla
 
 **Příčina:** K této chybě může dojít, když se pokusíte připojit počítač s Windows 10 ke službě Azure AD a platí obě následující podmínky: 
 - V Azure je povolený automatický zápis MDM.    
-- V počítači s Windows 10 je nainstalovaný klientský počítač Intune (agent pro počítače v Intune) nebo agent Configuration Manager klienta.
+- Počítačového klienta Intune pro počítače (agent Intune pro počítače) je nainstalovaný v počítači s Windows 10.
 
 #### <a name="resolution"></a>Řešení
 K vyřešení tohoto problému použijte jednu z následujících metod:
@@ -171,7 +167,7 @@ K vyřešení tohoto problému použijte jednu z následujících metod:
 3. Nastavte **obor uživatele MDM** na **žádný**a pak klikněte na **Uložit**.    
      
 ##### <a name="uninstall"></a>Odinstalovat
-Odinstalujte klientský počítač Intune nebo Configuration Manager klientského agenta z počítače.    
+Odinstalujte klientského agenta Intune pro počítače z počítače.    
 
 ### <a name="the-software-cannot-be-installed"></a>Software nelze nainstalovat.
 
@@ -208,13 +204,6 @@ Pokud chcete tento problém vyřešit v samostatném prostředí Intune, postupu
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **omezení registrace** > vyberte omezení typu zařízení.    
 2. Vyberte **vlastnosti** > **Upravit** (vedle **Nastavení platformy**) > **Povolení** pro **Windows (MDM)** .    
 3. Klikněte na tlačítko **zkontrolovat a uložit**.    
- 
-Pokud chcete tento problém vyřešit v hybridním MDM s Intune a Configuration Manager, postupujte takto: 
-1. Otevřete konzolu nástroje Configuration Manager.    
-2. Vyberte **Správa**a pak vyberte **Cloud Services**.    
-3. Klikněte pravým tlačítkem na **Microsoft Intune předplatné**a pak vyberte **Konfigurovat platformy > Windows**.    
-4. Zaškrtněte políčka **Povolit registraci zařízení se systémem Windows** > **použít** > **OK**.  
-
 
 ### <a name="a-setup-failure-has-occurred-during-bulk-enrollment"></a>Při hromadné registraci došlo k chybě instalace.
 

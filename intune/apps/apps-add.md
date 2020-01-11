@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/03/2019
+ms.date: 01/10/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef9548a77a3a745eda24b927118d1447d5afd1f0
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 3f336bdb9eca9900cc0250bb174c04d368da9eb9
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74784234"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885582"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune 
 
@@ -211,4 +211,4 @@ Informace o tom, jak přidat aplikace pro jednotlivé platformy do Intune, najde
 - [Microsoft Edge pro macOS](apps-edge-macos.md)
 - [Integrované aplikace](apps-add-built-in.md)
 - [Aplikace systému Android Enterprise](apps-ae-system.md)
-- [Aplikace Win32](app-management.md)
+- [Aplikace Win32](~/apps/apps-win32-app-management.md)

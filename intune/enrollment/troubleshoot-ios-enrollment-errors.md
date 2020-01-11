@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de0d85b7e7fbc39e7ee78c3b54da08158b02b009
-ms.sourcegitcommit: e4602481a25a5e12379f673dfe801c611f51c35b
+ms.openlocfilehash: 9bca046302b221b934d0802c0bf637aced2cec3f
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75731486"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885923"
 ---
 # <a name="troubleshoot-ios-device-enrollment-problems-in-microsoft-intune"></a>Řešení potíží s registrací zařízení s iOS v Microsoft Intune
 
@@ -40,7 +40,7 @@ Shromážděte následující informace o problému:
 - Jakou platformu (Android, iOS, Windows) má problém?
 - Kolika uživatelů se to týká? Ovlivnili všichni uživatelé nebo jen některé?
 - Kolik zařízení je ovlivněno? Jsou všechna zařízení ovlivněná nebo jenom některá?
-- Co je Autorita MDM? Pokud je Configuration Manager, jakou verzi Configuration Manager používáte?
+- Co je Autorita MDM?
 - Jak se provádí registrace? Přináší vaše vlastní zařízení (BYOD) nebo Apple Program registrace zařízení (DEP) pomocí profilů zápisu?
 
 ## <a name="error-messages"></a>Chybovými zprávami
@@ -199,7 +199,6 @@ Obnovte certifikát APNs a pak zařízení znovu zaregistrujte.
 > Ujistěte se, že jste obnovili certifikát APNs. Neměňte certifikát APNs. Pokud certifikát nahradíte, budete muset znovu zaregistrovat všechna zařízení s iOS v Intune. 
 
 - Informace o obnovení certifikátu APNs v samostatné službě Intune najdete v tématu [obnovení certifikátu Apple MDM push Certificate](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate).
-- Informace o obnovení certifikátu APNs v programu Intune Hybrid pomocí Configuration Manager najdete v tématu [nastavení hybridní správy zařízení s iOS pomocí Configuration Manager a Microsoft Intune](https://docs.microsoft.com/configmgr/mdm/deploy-use/enroll-hybrid-ios-mac).
 - Informace o obnovení certifikátu APNs v Office 365 najdete v tématu [Vytvoření certifikátu APNS pro zařízení s iOS](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
 
 ### <a name="xpc_type_error-connection-invalid"></a>Neplatné připojení XPC_TYPE_ERROR

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e45d51feb91e0e188971133185ac0f0f13e5b1f4
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9eb7ee99d69fd56707bd9dfe5453ffe0bb107bad
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74781137"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885665"
 ---
 # <a name="add-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Přidat nastavení sítě VPN na zařízení s iOS v Microsoft Intune
 
@@ -138,6 +138,10 @@ Tato nastavení se použijí, když zvolíte **Typ připojení** > **IKEv2**.
 
 - **Minimální rozsah verze TLS**: zadejte minimální verzi TLS, kterou chcete použít. Zadejte `1.0`, `1.1`nebo `1.2`. Pokud necháte pole prázdné, použije se výchozí hodnota `1.0`.
 - **Maximální hodnota rozsahu verze TLS**: zadejte maximální verzi TLS, která se má použít. Zadejte `1.0`, `1.1`nebo `1.2`. Pokud necháte pole prázdné, použije se výchozí hodnota `1.2`.
+
+> [!NOTE]
+> Při použití ověřování uživatelů a certifikátů je potřeba nastavit minimální a maximální rozsah verze TLS.
+
 - **Perfect Forward Secrecy**: výběrem **Povolit** zapněte metodu PFS (Perfect Forward Secrecy). PFS je funkce zabezpečení protokolu IP, která snižuje dopad v případě ohrožení zabezpečení klíče relace. **Disable** (default) nepoužívá metodu PFS.
 - **Ověření odvolání certifikátu**: výběrem možnosti **Povolit** zajistěte, aby se certifikáty odvolaly, než povolíte úspěšné připojení k síti VPN. Tato kontroler je nejlepší úsilí. Pokud vyprší časový limit serveru VPN před zjištěním, jestli je certifikát odvolaný, udělí se přístup. **Disable** (výchozí) nekontroluje odvolané certifikáty.
 

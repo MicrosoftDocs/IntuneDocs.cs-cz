@@ -2,27 +2,27 @@
 title: Použití importovaných certifikátů PFX v Microsoft Intune – Azure | Microsoft Docs
 description: Používejte importované certifikáty PKCS (Public Key Cryptography Standards) s Microsoft Intune, včetně importu certifikátů, konfigurace šablony certifikátu, instalace Intune Imported Certificate Connectoru a vytvoření importovaného souboru PKCS. Profil certifikátu.
 keywords: ''
-author: ralms
+author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 01/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: lacranda
+ms.reviewer: lacranda; rimarram
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d54c58523fdb44080b6c4210d639f9ad0ce476e2
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 2c33f4429c86160bbf180c8102e2dc7532bbd80e
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73801549"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886023"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurace a používání importovaných certifikátů PKCS pomocí Intune
 
@@ -46,14 +46,17 @@ K používání importovaných certifikátů PKCS s Intune budete potřebovat n�
 
   Další informace o všech síťových koncových bodech, ke kterým konektor přistupuje, najdete v tématu [požadavky na konfiguraci sítě Intune a šířku pásma](../fundamentals/network-bandwidth-use.md).
 
-- **Windows Server**:  
+- **Windows Server**:
+
   K hostování konektoru certifikátů PFX pro Microsoft Intune používáte Windows Server.  Konektor slouží ke zpracování požadavků na certifikáty importované do Intune.
 
   Intune podporuje instalaci *Microsoft Intune Certificate Connector* na stejném serveru jako *konektor certifikátu PFX pro Microsoft Intune*.
 
   Pro podporu konektoru musí na serveru běžet rozhraní .NET 4,6 nebo vyšší. Pokud není rozhraní .NET 4,6 nainstalované při spuštění instalace konektoru, instalace konektoru se automaticky nainstaluje.
 
-- **Visual studio 2015 nebo novější** (volitelné): pomocí sady Visual Studio sestavíte modul PowerShellu pomocníka s rutinami pro import certifikátů PFX do Microsoft Intune. Pokud chcete získat pomocné rutiny PowerShellu, přečtěte si téma [projekt PFXImport PowerShellu v GitHubu](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
+- **Visual Studio 2015 nebo novější** (volitelné):
+
+  Pomocí sady Visual Studio sestavíte modul PowerShellu pomocníka s rutinami pro import certifikátů PFX do Microsoft Intune. Pokud chcete získat pomocné rutiny PowerShellu, přečtěte si téma [projekt PFXImport PowerShellu v GitHubu](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 
 ## <a name="how-it-works"></a>Jak to funguje
 
@@ -143,15 +146,14 @@ K vygenerování a uložení páru veřejného a privátního klíče můžete p
 
 Následující postup používá rutiny prostředí PowerShell jako příklad importu certifikátů PFX. V závislosti na vašich požadavcích můžete vybrat různé možnosti.
 
-Vaše možnosti jsou:  
-- Zamýšlený účel (skupiny certifikátů na základě značky):  
+Vaše možnosti jsou:
+
+- Zamýšlený účel (skupiny certifikátů na základě značky):
   - nepřiřazené
   - Šifrování smimeencryption
   - smimeSigning
 
-- Schéma odsazení:  
-  - výplně PKCS1
-  - oaepSha1
+- Schéma odsazení:
   - oaepSha256
   - oaepSha384
   - oaepSha512
@@ -175,7 +177,7 @@ Vyberte poskytovatele úložiště klíčů, který odpovídá poskytovateli, kt
 
 6. Pokud chcete vytvořit objekt **UserPFXCertificate** , spusťte `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>" "<PaddingScheme>"`
 
-   Příklad: `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "C:\temp\userA.pfx" $SecureFilePassword "userA@contoso.com" "Microsoft Software Key Storage Provider" "PFXEncryptionKey" "smimeEncryption" "pkcs1"`
+   Například: `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "C:\temp\userA.pfx" $SecureFilePassword "userA@contoso.com" "Microsoft Software Key Storage Provider" "PFXEncryptionKey" "smimeEncryption" "pkcs1"`
 
    > [!NOTE]
    > Když importujete certifikát z jiného systému, než je server, na kterém je konektor nainstalovaný, použijte následující příkaz, který zahrnuje cestu k souboru klíče: `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>" "<PaddingScheme>" "<File path to public key file>"`
@@ -194,7 +196,7 @@ Po importování certifikátů do Intune vytvořte profil **importovaného certi
 
 2. Vyberte **zařízení** > **konfigurační profil** > **vytvořit profil**.
 
-3. Zadejte následující vlastnosti:
+3. Zadejte tyto vlastnosti:
 
    - Zadejte **Název** profilu.
    - Volitelně můžete nastavit popis.

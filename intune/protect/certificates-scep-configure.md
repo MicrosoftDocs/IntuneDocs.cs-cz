@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86640c831e8836a72ad5a0a7d5023ff7d836a43a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 501bfcbef0dd46f6021fc5db16cf3b9e2f2cd0c0
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73801558"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885999"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Konfigurace infrastruktury pro podporu SCEP s Intune
 
@@ -253,7 +253,7 @@ Následující postupy vám pomůžou nakonfigurovat službu zápisu síťových
 
       - **Webový server** > **Vývoj aplikací** > **ASP.NET 4.5**
 
-        Instalace technologie ASP.NET 4.5 nainstaluje rozhraní .NET Framework 4.5. Při instalaci rozhraní .NET Framework 4.5 nainstalujte základní funkci rozhraní **.NET Framework 4.5**, **ASP.NET 4.5** a funkci **Služby WCF** > **Aktivace protokolem HTTP**.
+        Instalace technologie ASP.NET 4.5 nainstaluje rozhraní .NET Framework 4.5. Při instalaci .NET Framework 4.5 nainstalujte základní rozhraní **.NET Framework 4.5**, **ASP.NET 4.5** a funkci **Služby WCF** > **Aktivace protokolem HTTP**.
 
       - **Nástroje pro správu** > **Kompatibilita správy služby IIS 6** > **Kompatibilita metabáze služby IIS 6**
       - **Nástroje pro správu** > **Kompatibilita správy služby IIS 6** > **Kompatibilita rozhraní WMI služby IIS 6**
@@ -363,7 +363,7 @@ Microsoft Intune Certificate Connector se nainstaluje na server, na kterém bě�
 
 2. Vyberte možnost **Správa tenanta** > **konektory a tokeny** > **konektory certifikátů** > **Přidat**.
 
-3. Stáhněte a uložte konektor pro soubor SCEP. Uložte ho do umístění přístupného ze serveru, na který chcete konektor nainstalovat.
+3. Stáhněte a uložte konektor pro soubor SCEP. Uložte ho do umístění přístupné ze serveru, na který chcete konektor nainstalovat.
 
    ![ConnectorDownload](./media/certificates-scep-configure/download-certificates-connector.png)
 
@@ -373,8 +373,7 @@ Microsoft Intune Certificate Connector se nainstaluje na server, na kterém bě�
 
    2. Spusťte instalační program (**NDESConnectorSetup.exe**). Instalační program nainstaluje také modul zásad pro NDES a webovou službu bodu registrace certifikátu IIS (CRP). Webová služba CRP, *CertificateRegistrationSvc*, běží jako aplikace ve službě IIS.
 
-      - Při instalaci NDES pro samostatnou službu Intune se s konektorem Certificate Connector automaticky nainstaluje služba CRP.
-      - Pokud používáte Intune s Configuration Manager, nainstalujete bod registrace certifikátu jako Configuration Manager role systému lokality.
+      Při instalaci NDES pro samostatnou službu Intune se s konektorem Certificate Connector automaticky nainstaluje služba CRP.
 
 5. Až se zobrazí výzva k zadání klientského certifikátu pro Certificate Connector, zvolte **Vybrat**a vyberte certifikát pro **ověřování klientů** , který jste nainstalovali na server NDES během kroku #3 postupu [instalace a vázání certifikátů na serveru, který hostuje NDES](#install-and-bind-certificates-on-the-server-that-hosts-ndes) z výše v tomto článku.
 
