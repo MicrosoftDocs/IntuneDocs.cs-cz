@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d843cf707cf182655d0044dde289caca730ccd6b
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: a6f57783b0878cd25e6c7eacdf4b32e462790916
+ms.sourcegitcommit: 5db0769274d788a1218dca3ad90d8649927becb4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72810312"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75925811"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Integrace řešení Zimperium do Intune
 
@@ -31,7 +31,7 @@ Při integraci řešení Zimperium Mobile Threat Defense do Intune je potřeba p
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-Následující kroky se provádějí v [konzole ZIMPERIUM MTD](https://www.zimperium.com/platform) a umožní připojení ke službě vyhledávání v zaregistrovaných zařízeních Intune (pomocí dodržování předpisů zařízením) i neregistrovaných zařízení (pomocí zásad ochrany aplikací).
+Následující kroky se provádějí v [konzole ZIMPERIUM MTD](https://www.zimperium.com/platform) a umožní připojení ke službě Zimperium pro zařízení zaregistrovaná v Intune (pomocí dodržování předpisů zařízením) i neregistrovaná zařízení (pomocí zásad ochrany aplikací).
 
 Před zahájením procesu integrace řešení Zimperium do Intune zkontrolujte, že máte následující předplatné a přihlašovací údaje:
 

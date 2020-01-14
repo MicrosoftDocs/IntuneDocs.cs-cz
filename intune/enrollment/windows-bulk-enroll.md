@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b2ce91cea1fdef211a8e6a9dc1c19086f355385
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9cbdd99dfb7b42677048b4f214e7de537db0edda
+ms.sourcegitcommit: 5db0769274d788a1218dca3ad90d8649927becb4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72585279"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75925821"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Hromadná registrace pro zařízení s Windows
 
@@ -65,7 +65,7 @@ Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a ob
 
 9. Volitelně můžete **Add applications** (Přidat aplikace) a **Add certificates** (Přidat certifikáty). Tyto aplikace a certifikáty se zřídí v zařízení.
 
-10. Volitelně můžete zřizovací balíček ochránit heslem.  Klikněte na **Vytvořit**.
+10. Volitelně můžete zřizovací balíček ochránit heslem.  Klikněte na tlačítko **Vytvořit**.
     ![Snímek obrazovky s ochranou balíčku v aplikaci Windows Configuration Designer](./media/windows-bulk-enroll/bulk-enroll-create.png)
 
 ## <a name="provision-devices"></a>Zřízení zařízení
@@ -95,7 +95,7 @@ Můžete zjistit, jestli je nastavení v balíčku úspěšné nebo neúspěšn�
 
 ### <a name="bulk-enrollment-with-wi-fi"></a>Hromadná registrace přes Wi-Fi 
 
-U hromadně registrovaných zařízení není možné použít certifikáty cílené na konkrétní uživatele ani provést nasazení přes Wi-Fi. Ke správě těchto připojení budete muset použít [certifikáty na úrovni zařízení](../protect/certificates-configure.md). 
+Pokud nepoužíváte otevřenou síť, musíte k inicializaci připojení použít [certifikáty na úrovni zařízení](../protect/certificates-configure.md) . Hromadně zaregistrovaná zařízení se nedají použít pro uživatelem cílené certifikáty pro přístup k síti. 
 
 ### <a name="conditional-access"></a>Conditional Access
 Podmíněný přístup není k dispozici pro zařízení s Windows zaregistrovaná pomocí hromadné registrace.
