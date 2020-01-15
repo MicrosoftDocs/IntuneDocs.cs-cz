@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f11ccb51e08e96595dfcb9118c1f479f1b0fc3de
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: 3f1563c092d8dd4c34e4a18caea56910267eb623
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75692129"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956338"
 ---
 # <a name="app-protection-policies-overview"></a>Přehled zásad ochrany aplikací
 
@@ -133,11 +133,11 @@ Existují však určitá omezení, o kterých byste měli vědět, například:
 
 ## <a name="apps-you-can-manage-with-app-protection-policies"></a>Aplikace, které se dají spravovat pomocí zásad ochrany aplikací
 
-Zásadami ochrany aplikací Intune se dá spravovat každá aplikace integrovaná sadou [Intune App SDK](../developer/app-sdk.md) nebo zabalená nástrojem [Intune App Wrapping](../developer/apps-prepare-mobile-application-management.md). Podívejte se na oficiální seznam [Microsoft Intune chráněných aplikací](apps-supported-intune-apps.md) , které jsou sestavené pomocí těchto nástrojů a jsou k dispozici pro veřejné použití.
+Všechny aplikace, které jsou integrované se sadou [Intune SDK](../developer/app-sdk.md) nebo zabalené pomocí [Nástroje pro zabalení aplikace Intune](../developer/apps-prepare-mobile-application-management.md) , je možné spravovat pomocí zásad ochrany aplikací Intune. Podívejte se na oficiální seznam [Microsoft Intune chráněných aplikací](apps-supported-intune-apps.md) , které jsou sestavené pomocí těchto nástrojů a jsou k dispozici pro veřejné použití.
 
 Vývojový tým sady Intune SDK aktivně testuje a udržuje podporu pro aplikace vytvořené s nativními platformami Android, iOS (obj-C, SWIFT), Xamarin, Xamarin. Forms a Cordova. I když se někteří zákazníci dokončí s integrací sady Intune SDK s jinými platformami, jako je například reakce nativních a NativeScript, neposkytujeme explicitní pokyny ani moduly plug-in pro vývojáře aplikací, kteří používají jinou než naše podporované platformy.
 
-[Sada Intune App SDK](../developer/app-sdk.md) používá některé pokročilé možnosti moderního ověřování z[knihoven Azure Active Directory Authentication](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) Library (ADAL) pro obě verze sady SDK od druhé strany. [Knihovna Microsoft Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/reference-v2-libraries) (MSAL) ale nefunguje dobře s mnoha našimi základními scénáři, jako je například ověřování do služby Intune App Protection a podmíněné spuštění. Vzhledem k tomu, že celkový návod od týmu identity společnosti Microsoft je přepnout na MSAL pro všechny systém Microsoft Office aplikace, [sada Intune App SDK](../developer/app-sdk.md) ji bude nakonec potřebovat k jejímu podpoře, ale ještě neexistují žádné plány.
+[Sada Intune SDK](../developer/app-sdk.md) používá některé pokročilé možnosti moderního ověřování z[knihoven Azure Active Directory Authentication](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) Library (ADAL) pro obě strany sady SDK a verze třetích stran. [Knihovna Microsoft Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/reference-v2-libraries) (MSAL) ale nefunguje dobře s mnoha našimi základními scénáři, jako je například ověřování do služby Intune App Protection a podmíněné spuštění. Vzhledem k tomu, že celkový návod od týmu identity společnosti Microsoft je přepnout na MSAL pro všechny systém Microsoft Office aplikace, [Intune SDK](../developer/app-sdk.md) bude nakonec potřebovat podporu, ale ještě neexistují žádné plány.
 
 ## <a name="end-user-requirements-to-use-app-protection-policies"></a>Požadavky koncových uživatelů na používání zásad ochrany aplikací
 
@@ -198,7 +198,7 @@ Implicitně smí existovat jenom jedna **globální** zásada pro tenanta. K vyt
 
 ### <a name="multi-identity"></a>Víc identit
 
-Podpora více identit umožňuje aplikaci podporovat více cílových skupin. Tyto cílové skupiny jsou "firemní" uživatelé i "osobní" uživatelé. Pracovní a školní účty používají podnikové publikum, zatímco osobní účty se použijí pro cílové skupiny uživatelů, například systém Microsoft Office uživatelé. Aplikaci, která podporuje více identit, se dá veřejně vydat, kde se zásady ochrany aplikací použijí jenom v případě, že se aplikace používá v kontextu Work a School ("Corporate"). Podpora více identit používá [sadu Intune App SDK](../developer/app-sdk.md) k nastavení zásad ochrany aplikací jenom na pracovní nebo školní účet přihlášený k aplikaci. Pokud se k aplikaci přihlásí osobní účet, zůstanou data nedotčená.
+Podpora více identit umožňuje aplikaci podporovat více cílových skupin. Tyto cílové skupiny jsou "firemní" uživatelé i "osobní" uživatelé. Pracovní a školní účty používají podnikové publikum, zatímco osobní účty se použijí pro cílové skupiny uživatelů, například systém Microsoft Office uživatelé. Aplikaci, která podporuje více identit, se dá veřejně vydat, kde se zásady ochrany aplikací použijí jenom v případě, že se aplikace používá v kontextu Work a School ("Corporate"). Podpora více identit používá [sadu Intune SDK](../developer/app-sdk.md) k nastavení zásad ochrany aplikací jenom na pracovní nebo školní účet přihlášený k aplikaci. Pokud se k aplikaci přihlásí osobní účet, zůstanou data nedotčená.
 
 Pro příklad osobního kontextu zvažte, že uživatel, který spustí nový dokument ve Wordu, se považuje za osobní, takže Intune App Protection zásady se neuplatní. Až se dokument uloží na účet "Corporate", bude se považovat za "podnikový" kontext a použijí se zásady Intune App Protection.
 
@@ -213,7 +213,7 @@ Další informace o více identitách v Intune najdete v tématu [mam a multi-id
 Osobní identifikační číslo (PIN) je heslo, kterým se ověřuje, že s daty organizace pracuje v aplikaci správný uživatel.
 
 **Výzva k zadání kódu PIN**<br>
-Intune vyzve uživatele k zadání PINu aplikace, když se uživatel chystá pracovat s podnikovými daty. V aplikacích s více identitami, jako je Word, Excel nebo PowerPoint, se uživateli zobrazí výzva k zadání PIN kódu při pokusu o otevření firemního dokumentu nebo souboru. V aplikacích s jedinou identitou, jako jsou obchodní aplikace spravované pomocí [Nástroje pro zabalení aplikace Intune](../developer/apps-prepare-mobile-application-management.md), se PIN kód zobrazí při spuštění, protože [sada Intune App SDK](../developer/app-sdk.md) ví, že se uživatelské prostředí v aplikaci vždycky zobrazuje jako "Podniková".
+Intune vyzve uživatele k zadání PINu aplikace, když se uživatel chystá pracovat s podnikovými daty. V aplikacích s více identitami, jako je Word, Excel nebo PowerPoint, se uživateli zobrazí výzva k zadání PIN kódu při pokusu o otevření firemního dokumentu nebo souboru. V aplikacích s jedinou identitou, jako jsou třeba obchodní aplikace spravované pomocí [Nástroje pro zabalení aplikace Intune](../developer/apps-prepare-mobile-application-management.md), se PIN kód zobrazí při spuštění, protože [Intune SDK](../developer/app-sdk.md) ví, že se uživatelské prostředí v aplikaci vždycky zobrazuje jako "Podniková".
 
 **Výzva k zadání kódu PIN nebo výzva k zadání podnikových přihlašovacích údajů, frekvence**<br>
 Správce IT může v konzole pro správu Intune definovat nastavení zásad ochrany aplikací Intune znovu **ověřit požadavky na přístup po (minuty)** . Toto nastavení určuje dobu, po jejímž uplynutí se v zařízení zkontrolují požadavky na přístup a zobrazí se obrazovka pro PIN kód aplikace nebo výzva k zadání podnikových přihlašovacích údajů. Četnost, s jakou se budou uživateli zobrazovat výzvy, ale ovlivňují důležité detaily týkající se kódu PIN:
@@ -231,13 +231,22 @@ Na zařízeních s iOSem platí, že i když stejný PIN používají aplikace o
 PIN kód Intune funguje na základě časovače založeného na nečinnosti (hodnota **překontrolovat požadavky na přístup po (minuty)** ). Proto se výzvy PIN kódu Intune zobrazují nezávisle na výzvách integrovaných PIN kódů aplikace pro Outlook a OneDrive, které jsou většinou ve výchozím nastavení svázané se spuštěním aplikace. Pokud se uživateli zobrazí obě výzvy PIN kódu najednou, měl by mít přednost PIN kód Intune.
 
 **Zabezpečení kódu PIN pro Intune**<br>
-PIN slouží k tomu, aby v aplikaci povolil pracovat s daty organizace jenom správnému uživateli. Proto se koncový uživatel musí přihlásit s pracovním nebo školním účtem, aby si mohl nastavit nebo resetovat PIN pro aplikaci Intune. Toto ověřování zpracovává Azure Active Directory přes zabezpečený token Exchange a není transparentní pro [Intune App SDK](../developer/app-sdk.md). Z hlediska zabezpečení je nejlepší ochranou pracovních nebo školních dat jejich šifrování. Šifrování nesouvisí s PINem aplikace, ale jde o vlastní zásadu ochrany aplikace.
+PIN slouží k tomu, aby v aplikaci povolil pracovat s daty organizace jenom správnému uživateli. Proto se koncový uživatel musí přihlásit s pracovním nebo školním účtem, aby si mohl nastavit nebo resetovat PIN pro aplikaci Intune. Toto ověřování zpracovává Azure Active Directory přes zabezpečený token Exchange a není transparentní pro [sadu Intune SDK](../developer/app-sdk.md). Z hlediska zabezpečení je nejlepší ochranou pracovních nebo školních dat jejich šifrování. Šifrování nesouvisí s PINem aplikace, ale jde o vlastní zásadu ochrany aplikace.
 
-**Intune PIN – ochrana proti útokům hrubou silou**<br>
-Jako součást zásady pro PIN aplikace může správce IT nastavit maximální počet pokusů, které uživatel má k ověření PINu před uzamčením aplikace. Po dosažení počtu pokusů může [sada Intune App SDK](../developer/app-sdk.md) vymazat podniková data v aplikaci.
-  
+**Ochrana před útoky hrubou silou a PIN kódem pro Intune**<br>
+Jako součást zásady pro PIN aplikace může správce IT nastavit maximální počet pokusů, které uživatel má k ověření PINu před uzamčením aplikace. Po dosažení počtu pokusů může [Intune SDK](../developer/app-sdk.md) vymazat podniková data v aplikaci.
+
+**PIN kód Intune a selektivní vymazání**<br>
+V systému iOS se informace o PIN kódu na úrovni aplikace ukládají do řetězce klíčů, který sdílí aplikace se stejným vydavatelem, jako jsou například všechny aplikace Microsoftu první strany. Tyto informace o PIN kódu jsou také vázané na účet koncového uživatele. Selektivní vymazání jedné aplikace by nemělo mít vliv na jinou aplikaci. 
+
+Například sada kódů PIN pro Outlook pro přihlášeného uživatele je uložená ve sdíleném řetězci klíčů. Když se uživatel přihlásí na OneDrive (publikoval (a také Microsoft)), uvidí stejný kód PIN jako Outlook, protože používá stejný sdílený řetězec klíčů. Když se odhlásíte z Outlooku nebo vymažete data uživatelů v Outlooku, Intune SDK tento řetězec neodstraní, protože tento kód PIN může stále používat OneDrive. Z tohoto důvodu selektivní vymazání nemaže sdílený řetězec klíčů, včetně kódu PIN. Toto chování zůstává stejné i v případě, že v zařízení existuje jenom jedna aplikace, kterou Vydavatel. 
+
+Vzhledem k tomu, že se kód PIN sdílí mezi aplikacemi se stejným vydavatelem, Intune SDK nezjistí, jestli na zařízení se stejným vydavatelem nejsou nějaké jiné aplikace. Proto sada Intune SDK neodstraní kód PIN, protože ho můžete dál používat pro jiné aplikace. Očekává se, že je potřeba vymazat PIN kód aplikace, když se poslední aplikace od tohoto vydavatele odstraní jako součást některých vyčištění operačního systému.
+ 
+Pokud obdržíte kód PIN, který se na některých zařízeních maže, je pravděpodobně následující: vzhledem k tomu, že se kód PIN přihlásil k identitě, je-li uživatel přihlášený pomocí jiného účtu po vymazání, zobrazí se výzva k zadání nového kódu PIN. Pokud se však přihlásí pomocí dříve existujícího účtu, je pro přihlášení již možné použít kód PIN uložený v řetězci klíčů.
+
 **Nastavujete PIN kód dvakrát u aplikací od stejného vydavatele?**<br>
-MAM (v iOS) aktuálně povoluje PIN kód na úrovni aplikace s alfanumerickými a speciálními znaky (s názvem "heslo"), které vyžadují účast aplikací (například WXP, Outlook, Managed Browser, Yammer) pro integraci [sady Intune App SDK pro iOS](../developer/app-sdk-ios.md). Bez toho se nastavení hesla pro cílové aplikace správně nevynutí. Tato funkce byla vydána v Intune SDK pro iOS verze 7.1.12.
+MAM (v iOS) aktuálně povoluje PIN kód na úrovni aplikace s alfanumerickými a speciálními znaky (s názvem "heslo"), které vyžadují účast aplikací (například WXP, Outlook, Managed Browser, Yammer) pro integraci [sady Intune SDK pro iOS](../developer/app-sdk-ios.md). Bez toho se nastavení hesla pro cílové aplikace správně nevynutí. Tato funkce byla vydána v Intune SDK pro iOS verze 7.1.12.
 
 Aby mohla být tato funkce podporována a byla zajištěna zpětná kompatibilita s předchozími verzemi sady Intune SDK pro iOS, budou se všechny kódy PIN (číselné nebo v podobě hesla) od verze 7.1.12 zpracovávat odděleně od číselných kódů PIN používaných v předchozích verzích SDK. Pokud jsou v zařízení aplikace od stejného vydavatele, které používají sadu Intune SDK pro iOS ve verzích před 7.1.12 A SOUČASNĚ po 7.1.12, bude potřeba nastavit dva kódy PIN. Tyto dva kódy PIN (pro každou aplikaci) nijak nesouvisejí (to znamená, že musí dodržovat zásady ochrany aplikací, které se pro aplikaci používají). V takovém případě může uživatel nastavit stejný kód PIN dvakrát, *pouze* Pokud aplikace a a B používají stejné zásady (s ohledem na PIN kód). 
 
@@ -261,6 +270,8 @@ Správci IT můžou nasadit zásadu ochrany aplikace, která vyžaduje šifrová
 
 U obchodních aplikací spravovaných pomocí [Nástroje pro zabalení aplikace Intune](../developer/apps-prepare-mobile-application-management.md)se všechna data aplikací považují za podniková.
 
+### <a name="selective-wipe"></a>Selektivní vymazání
+
 **Vzdáleně vymazat data**<br>
 Intune může data aplikace vymazat třemi různými způsoby: 
 - Úplné vymazání zařízení
@@ -269,10 +280,10 @@ Intune může data aplikace vymazat třemi různými způsoby:
 
 Další informace o vzdáleném vymazání pro správu mobilních zařízení (MDM) najdete v článku věnovaném [odebrání zařízení pomocí vymazání nebo vyřazení](../remote-actions/devices-wipe.md). Další informace o selektivním vymazání pomocí MAM najdete v části [Vyřazení](../remote-actions/devices-wipe.md#retire) a v článku [Jak z aplikací vymazat jenom firemní data](apps-selective-wipe.md).
 
-[Vymazání](../remote-actions/devices-wipe.md) odebere veškerá uživatelská data a nastavení ze **zařízení** obnovením jeho výchozího továrního nastavení. Zařízení se odebere ze služby Intune.
+[Úplné vymazání zařízení](../remote-actions/devices-wipe.md) odebere veškerá uživatelská data a nastavení ze **zařízení** tím, že se zařízení obnoví do výchozího továrního nastavení. Zařízení se odebere ze služby Intune.
 
   >[!NOTE]
-  > Vymazání jde dosáhnout jen na zařízeních zaregistrovaných ve správě mobilních zařízení (MDM) Intune.
+  > Úplné vymazání zařízení a selektivní vymazání pro MDM se dá dosáhnout jenom na zařízeních zaregistrovaných ve správě mobilních zařízení (MDM) Intune.
 
 **Selektivní vymazání pro MDM**<br>
 V článku [Odebrání zařízení – část Vyřazení](../remote-actions/devices-wipe.md#retire) najdete informace o odebírání firemních dat.
@@ -280,24 +291,20 @@ V článku [Odebrání zařízení – část Vyřazení](../remote-actions/devi
 **Selektivní vymazání pro MAM**<br>
 Selektivní vymazání pro MAM jednoduše odebere data aplikace společnosti z aplikace. Žádost se inicializuje pomocí portálu Intune Azure Portal. Informace o zahájení žádosti o vymazání najdete v článku [Jak z aplikací vymazat jenom firemní data](apps-selective-wipe.md).
 
-Pokud uživatel používá aplikaci při zahájení selektivního vymazání, [sada Intune App SDK](../developer/app-sdk.md) každých 30 minut zkontroluje požadavek na selektivní vymazání ze služby Intune mam. Selektivní vymazání také kontroluje tehdy, když uživatel spustí aplikaci poprvé a přihlásí se pomocí pracovního nebo školního účtu.
+Pokud uživatel aplikaci používá při zahájení selektivního vymazání, [Intune SDK](../developer/app-sdk.md) každých 30 minut vyhledá požadavek selektivního vymazání ze služby Intune mam. Selektivní vymazání také kontroluje tehdy, když uživatel spustí aplikaci poprvé a přihlásí se pomocí pracovního nebo školního účtu.
 
 **Pokud místní (on-Prem) služby nefungují s aplikacemi chráněnými přes Intune**<br>
-Ochrana aplikací Intune závisí na identitě uživatele, aby byla konzistentní mezi aplikací a [sadou Intune App SDK](../developer/app-sdk.md). Jediná cesta, která to může zaručit, je moderní ověřování. Jsou situace, kdy aplikace můžou fungovat s místní konfigurací, ale nejsou konzistentní ani nic nezaručují.
+Ochrana aplikací Intune závisí na identitě uživatele, aby byla konzistentní mezi aplikací a [sadou Intune SDK](../developer/app-sdk.md). Jediná cesta, která to může zaručit, je moderní ověřování. Jsou situace, kdy aplikace můžou fungovat s místní konfigurací, ale nejsou konzistentní ani nic nezaručují.
 
 **Zabezpečený způsob, jak otevírat webové odkazy ze spravovaných aplikací**<br>
 Správce IT může nasadit a nastavit zásadu ochrany aplikace pro [aplikaci Intune Managed Browser](app-configuration-managed-browser.md), což je webový prohlížeč vyvinutý týmem Microsoft Intune, který se dá snadno spravovat přes Intune. Správce IT může vyžadovat, aby se všechny webové odkazy v aplikacích spravovaných přes Intune otvíraly v aplikaci Managed Browser.
-
-## <a name="examples-of-app-protection-policies"></a>Příklady zásad ochrany aplikací
-
-Další informace o příkladech zásad ochrany aplikací a zobrazení podrobných informací o jednotlivých nastaveních zásad ochrany aplikací najdete v tématu nastavení [zásad ochrany aplikací pro Android](app-protection-policy-settings-android.md) a [nastavení zásad ochrany aplikací pro iOS](app-protection-policy-settings-ios.md).
 
 ## <a name="app-protection-experience-for-ios-devices"></a>Prostředí ochrany aplikací pro zařízení s iOS
 
 ### <a name="device-fingerprint-or-face-ids"></a>Otisky prstů zařízení nebo ID tváře 
 Zásady ochrany aplikací Intune umožňují řídit přístup k aplikacím jen uživatelům s licencí na Intune. Jedním ze způsobů, jak řídit přístup k aplikacím, je vyžadovat na podporovaných zařízeních Touch ID nebo Face ID od Applu. Intune se chová tak, že když se v zařízení změní databáze biometrických údajů, vyzve uživatele k zadání kódu PIN, pokud je splněna hodnota časového limitu nečinnosti. Ke změnám biometrických údajů patří přidání nebo odebrání otisku prstu nebo tváře. Pokud uživatel Intune nemá nastavený kód PIN, je nasměrován na nastavení kódu PIN pro Intune.
  
-Účelem tohoto procesu je pokračovat v zachování dat vaší organizace v rámci zabezpečení a ochrany v aplikaci na úrovni aplikace. Tato funkce je dostupná jen pro iOS a vyžaduje zapojení aplikací, které integrují sadu Intune APP SDK pro iOS verze 9.0.1 nebo novější. Integrace této sady SDK je nezbytná kvůli vynucení tohoto chování u cílových aplikací. K této integraci dochází průběžně a závisí na týmech konkrétních aplikací. Mezi zapojené aplikace patří například WXP, Outlook, Managed Browser a Yammer.
+Účelem tohoto procesu je pokračovat v zachování dat vaší organizace v rámci zabezpečení a ochrany v aplikaci na úrovni aplikace. Tato funkce je dostupná jenom pro iOS a vyžaduje zapojení aplikací, které integrují sadu Intune SDK pro iOS, verze 9.0.1 nebo novější. Integrace této sady SDK je nezbytná kvůli vynucení tohoto chování u cílových aplikací. K této integraci dochází průběžně a závisí na týmech konkrétních aplikací. Mezi zapojené aplikace patří například WXP, Outlook, Managed Browser a Yammer.
   
 ### <a name="ios-share-extension"></a>rozšíření pro sdílení iOS
 Rozšíření sdílené složky pro iOS můžete použít k otevření pracovních nebo školních dat v nespravovaných aplikacích, a to i v případě, že se zásady přenosu dat nastavily **jenom na spravované aplikace** nebo **žádné aplikace**. Zásady ochrany aplikací pro Intune nemůžou ovládat rozšíření pro sdílení v iOS, když dané zařízení nespravují. Proto Intune _**podniková data před jejich sdílením mimo příslušnou aplikaci zašifruje**_ . Toto chování šifrování můžete ověřit tak, že se pokusíte otevřít podnikový soubor mimo spravovanou aplikaci. Měl by být zašifrovaný a mimo spravovanou aplikaci by ho nemělo být možné otevřít.
@@ -305,7 +312,7 @@ Rozšíření sdílené složky pro iOS můžete použít k otevření pracovní
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>Více nastavení přístupu k ochraně aplikací Intune pro stejnou sadu aplikací a uživatelů
 Zásady ochrany aplikací Intune pro přístup se použijí v konkrétním pořadí na zařízeních koncových uživatelů, aby se pokusily o přístup k cílové aplikaci ze svého podnikového účtu. Obecně má přednost vymazání, pak blokování, a pak upozornění, které se dá zavřít. Například pokud se aplikuje na konkrétního uživatele nebo aplikaci, nastavení minimální verze operačního systému iOS, které uživatele upozorňuje, aby svou verzi iOSu aktualizoval, se použije po nastavení minimální verze operačního systému, které uživateli zablokuje přístup. Proto ve scénáři, kde správce IT nakonfiguruje minimální operační systém iOS na 11.0.0.0 a minimální operační systém iOS (pouze upozornění) na 11.1.0.0, zatímco zařízení pokoušející se o přístup k aplikaci má iOS 10, by byl koncový uživatel zablokován na základě přísnějšího nastavení pro minimální verzi operačního systému iOS, které vede k zablokování přístupu.
 
-Při zpracování různých typů nastavení by měl přednost požadavek na verzi Intune App SDK. Následoval by požadavek na verzi aplikace a pak požadavek na verzi operačního systému iOS. Pak se ve stejném pořadí kontrolují všechna upozornění pro všechny typy nastavení. Doporučujeme nakonfigurovat verzi Intune App SDK jenom po pokynu od produktového týmu Intune pro základní scénáře blokování.
+Při práci s různými typy nastavení bude mít požadavek na verzi Intune SDK přednost, pak požadavek na verzi aplikace následovaný požadavkem na verzi operačního systému iOS. Pak se ve stejném pořadí kontrolují všechna upozornění pro všechny typy nastavení. Požadavek na verzi sady Intune SDK Doporučujeme konfigurovat jenom na základě pokynů z produktového týmu Intune pro základní blokující scénáře.
 
 ## <a name="app-protection-experience-for-android-devices"></a>Prostředí ochrany aplikací pro zařízení s Androidem
 
@@ -344,6 +351,10 @@ Nastavení zásad ochrany aplikací, které využívají Google Play chránit ro
 ## <a name="next-steps"></a>Další kroky
 
 [Jak vytvořit a nasadit zásady ochrany aplikací pomocí Microsoft Intune](app-protection-policies.md)
+
+[Dostupná nastavení zásad ochrany aplikací pro Android pomocí Microsoft Intune](app-protection-policy-settings-android.md)
+
+[Dostupná nastavení zásad ochrany aplikací pro iOS pomocí Microsoft Intune](app-protection-policy-settings-ios.md)
 
 ## <a name="see-also"></a>Související témata
 Aplikace jiných firem, například mobilní aplikace Salesforce, fungují s Intune specifickým způsobem, aby chránily podniková data. Další informace o tom, jak konkrétně aplikace Salesforce funguje s Intune (včetně nastavení konfigurace aplikace MDM), najdete v článku [Aplikace Salesforce a Microsoft Intune](https://gallery.technet.microsoft.com/Salesforce-App-and-Intune-c47d44ee/file/188000/1/Salesforce%20App%20and%20Intune%20for%20external.pdf).

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 01/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad630eb34b296d7ab77081a1e3063db8dffc64f9
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: dc9dd03714e24dae4b0c7afe9206c6a8d7d36c13
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207447"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956274"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Správa aktualizací softwaru Windows 10 v Intune
 
@@ -34,7 +34,7 @@ Intune poskytuje pro správu aktualizací následující typy zásad:
 
 - **Aktualizační kanál Windows 10**: Tato zásada je kolekcí nastavení, která konfigurují, kdy se aktualizace Windows 10 instalují.
 
-- **Aktualizace funkcí Windows 10 (Public Preview)**: Tato zásada přináší zařízení do zadané verze Windows a zablokuje sadu funkcí na těchto zařízeních, dokud se nerozhodnete je aktualizovat na novější verzi Windows.  I když verze funkce zůstává statická, zařízení můžou dál instalovat aktualizace kvality a zabezpečení, které jsou k dispozici pro jejich verzi funkcí.
+- **Aktualizace funkcí Windows 10 (Public Preview)** : Tato zásada přináší zařízení do zadané verze Windows a zablokuje sadu funkcí na těchto zařízeních, dokud se nerozhodnete je aktualizovat na novější verzi Windows.  I když verze funkce zůstává statická, zařízení můžou dál instalovat aktualizace kvality a zabezpečení, které jsou k dispozici pro jejich verzi funkcí.
 
 Pro skupiny zařízení přiřadíte zásady pro aktualizační kanály Windows 10 a aktualizace funkcí Windows 10. Oba typy zásad můžete použít ve stejném prostředí Intune ke správě aktualizací softwaru pro zařízení s Windows 10 a k vytvoření strategie aktualizace, která odráží vaše obchodní požadavky.
 
@@ -63,7 +63,7 @@ Aby se pro zařízení s Windows 10 v Intune používaly aktualizace Windows, mu
   > - Windows 10 Mobile  
   > - Windows 10 Enterprise LTSC. Web Windows Update for Business (WUfB) v současné době nepodporuje *dlouhodobé vydáváníy kanálů služby* . Naplánujte použití alternativních metod oprav, jako je WSUS nebo Configuration Manager.
 
-- Na zařízeních s Windows musí být **Zpětná vazba & diagnostika** > **diagnostická data a data o použití** nastavena na hodnotu **základní**, **Rozšířená**nebo **plná**.  
+- Na zařízeních s Windows musí být **Zpětná vazba & diagnostika** > **diagnostická data a data o použití** nastavena na hodnotu **základní**, **Rozšířená**nebo **plná**.
 
   Nastavení *dat diagnostiky a použití* můžete nakonfigurovat pro zařízení s Windows 10 ručně nebo použít profil omezení zařízení Intune pro Windows 10 a novější. Pokud použijete profil omezení zařízení, nastavte [Nastavení omezení pro zařízení](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry) **sdílet data o využití** aspoň na **Basic**. Toto nastavení najdete pod kategorií **vytváření sestav a telemetrie** při konfiguraci zásad omezení pro zařízení s Windows 10 nebo novějším.
 
@@ -90,7 +90,7 @@ Aktualizační kanály Windows 10 podporují [značky oboru](../fundamentals/sco
 
    Až budete připraveni, vyberte **Další** a pokračujte v *přiřazení*.
 
-6. V části **přiřazení**zvolte **+ Vybrat skupiny, které chcete zahrnout** , a potom přiřaďte aktualizační kanál k jedné nebo více skupinám. Pomocí **+ Vyberte skupiny, které se vyloučí** , abyste mohli přiřazení vyladit. Pokračujte výběrem **Další** .
+6. V části **přiřazení**zvolte **+ Vybrat skupiny, které chcete zahrnout** , a potom přiřaďte aktualizační kanál k jedné nebo více skupinám. Pomocí **+ Vyberte skupiny, které se vyloučí** , abyste mohli přiřazení vyladit. Pokračujte výběrem tlačítka **Další**.
 
 7. V části**zkontrolovat + vytvořit**zkontrolujte nastavení a pak vyberte **vytvořit** , jakmile budete připraveni Uložit aktualizační kanál Windows 10. Nový aktualizační kanál se zobrazí v seznamu aktualizačních kanálů.
 
@@ -101,10 +101,10 @@ Na portálu přejděte na **zařízení** > **Windows** > **aktualizačních kan
 Na této stránce můžete zobrazit stav přiřazení vyzvánění a v horní části podokna přehled vybrat následující akce ke správě aktualizačního kanálu:
 
 - [Odstranit](#delete)
-- [Chvíli](#pause)
-- [Opakované](#resume)
+- [Pozastavit](#pause)
+- [Resume](#resume)
 - [Zvětšení](#extend)
-- [Uninstall](#uninstall)
+- [Odinstalace](#uninstall)
 
 ![Dostupné akce](./media/windows-update-for-business-configure/overview-actions.png)
 
@@ -179,7 +179,7 @@ Při použití nástroje Uninstall Vezměte v úvahu následující skutečnosti
 
 - Po úspěšném vrácení aktualizace kvality na zařízení s Windows 10 se uživatelům zařízení nadále zobrazuje aktualizace uvedená v **nastavení Windows** > **aktualizace** > **historii aktualizací**.
 
-- V případě aktualizací funkcí je čas, který můžete odinstalovat, omezen na 2-60 dní. Toto období se konfiguruje pomocí nastavení aktualizace aktualizačních kroužků **nastavit interval odinstalace aktualizace funkcí (2 – 60 dní)**. Aktualizaci funkcí, která je nainstalovaná na zařízení, se nedá vrátit zpátky po instalaci aktualizace delší než nakonfigurované období odinstalace.
+- V případě aktualizací funkcí je čas, který můžete odinstalovat, omezen na 2-60 dní. Toto období se konfiguruje pomocí nastavení aktualizace aktualizačních kroužků **nastavit interval odinstalace aktualizace funkcí (2 – 60 dní)** . Aktualizaci funkcí, která je nainstalovaná na zařízení, se nedá vrátit zpátky po instalaci aktualizace delší než nakonfigurované období odinstalace.
 
   Představte si například aktualizační kanál s dobou odinstalace aktualizace funkcí o 20 dní. Po 25 dnech se rozhodnete vrátit nejnovější aktualizaci funkcí a použít možnost odinstalace.  Zařízení, na která se nainstalovala aktualizace funkcí víc než 20 dní, ji nemůžou odinstalovat, protože v rámci údržby odebrala potřebné bity. Zařízení, u kterých se tato funkce nainstalovala jenom do 19 dnů, ale můžou aktualizaci odinstalovat, jenom když se úspěšně zaregistrují, aby se před tím, než je doba odinstalace odinstalovala.
 
@@ -215,6 +215,10 @@ Když zařízení obdrží zásadu aktualizace funkcí Windows 10:
 
   Toto omezení se zkoumá, aby bylo možné zjistit, jestli ho v budoucnu podporuje.
 
+> [!IMPORTANT]
+> Pokud chcete používat zásady aktualizací funkcí v Intune, musí mít zařízení zapnutou telemetrii s minimálním nastavením [*Basic*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). Telemetrie se konfiguruje v rámci *vytváření sestav a telemetrie* jako součást [zásad omezení zařízení](../configuration/device-restrictions-configure.md).
+>
+> Zařízení, která dostanou zásadu aktualizace funkcí a mají nastavenou telemetrii jako *nenakonfigurovaná*, může být vypnutá, může nainstalovat novější verzi Windows, než je definovaná v zásadách aktualizace funkcí. Předpokladem pro vyžadování telemetrie je kontrola, že tato funkce přechází k všeobecné dostupnosti.
 
 ### <a name="create-and-assign-windows-10-feature-updates"></a>Vytvoření a přiřazení aktualizací funkcí Windows 10
 
@@ -224,7 +228,7 @@ Když zařízení obdrží zásadu aktualizace funkcí Windows 10:
 
 3. V části **základy**zadejte název, popis (volitelný) a **aktualizaci funkcí k nasazení**, vyberte verzi Windows se sadou funkcí, kterou chcete použít, a pak vyberte **Další**.
 
-4. V části **přiřazení**zvolte **+ Vybrat skupiny, které se mají zahrnout** , a potom přiřaďte nasazení aktualizace funkcí do jedné nebo víc skupin. Pokračujte výběrem **Další** .
+4. V části **přiřazení**zvolte **+ Vybrat skupiny, které se mají zahrnout** , a potom přiřaďte nasazení aktualizace funkcí do jedné nebo víc skupin. Pokračujte výběrem tlačítka **Další**.
 
 5. V části **zkontrolovat + vytvořit**zkontrolujte nastavení a vyberte **vytvořit** , až budete připraveni Uložit zásady aktualizací funkcí Windows 10.  
 
@@ -245,4 +249,3 @@ V tomto podokně můžete:
 [Sestavy dodržování předpisů v Intune pro aktualizace](../windows-update-compliance-reports.md)
 
 [Řešení potíží s aktualizačními kroužkami Windows 10](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Windows-10-Update-Ring-Policies/ba-p/714046)
-

@@ -19,12 +19,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 039ec17b1a56a7339f2159d7af6ad1bd9280bf63
-ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
+ms.openlocfilehash: 6c1b6417489d1443596113a18476b9cbc8f3832e
+ms.sourcegitcommit: 8cc3eca2bce847b0c2b40d8531698e21df848878
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75855506"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75951460"
 ---
 # <a name="enroll-your-organization-provided-ios-device-in-management"></a>Registrace zařízení s iOSem poskytnutého vaší organizací do správy
 
@@ -44,11 +44,7 @@ Pokud nepoužíváte zařízení s iOSem poskytnuté organizací, ale svoje vlas
 
 1. Zapněte zařízení s iOSem.
 2. Po výběru **jazyka** připojte zařízení k Wi-Fi.
-3. Na obrazovce **Set up iOS device** (Nastavit zařízení s iOSem) zvolte, co chcete udělat:
-   - **Set Up as New device** (Nastavit jako nové zařízení)
-   - **Restore from iCloud backup** (Obnovit ze zálohy v iCloudu)
-   - **Restore from iCloud backup** (Obnovit ze zálohy v iTunes)
-
+3. Na obrazovce **nastavení zařízení s iOS** vyberte **nastavit jako nové zařízení**.  
 4. Po připojení k Wi-Fi se zobrazí obrazovka pro **konfiguraci**. Bude obsahovat informace o tom, že **[vaše společnost] automaticky nakonfiguruje vaše zařízení**.
 
    **Konfigurace umožňuje [vaší společnosti] spravovat toto zařízení v ovzduší. Správce vám může pomáhat nastavit e-mailové a síťové účty, instalovat a konfigurovat aplikace a spravovat nastavení vzdáleně. Správce může zakázat funkce, instalovat a odebírat aplikace, monitorovat a omezovat internetový provoz a vzdáleně vymazat toto zařízení.**

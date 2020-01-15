@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c4637a4f9f137e9db665d72118fd7a97d7a9f75a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: f617e85e78ac5436567790d416c988742a2abe4c
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72510131"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956227"
 ---
 # <a name="plan-communications"></a>Plán komunikace
 
@@ -62,4 +62,4 @@ Intune obsahuje další prostředky, které můžete použít ke zvýšení úro
 
 - Informace o postupu při registraci pro konkrétní platformu mobilního OS najdete v článku [Jaké informace mají dostat koncoví uživatelé o Microsoft Intune](end-user-educate.md).
 - [Registrace zařízení v Intune pro správce IT](../enrollment/device-enrollment.md) vysvětluje, jak zaregistrovat zařízení s Androidem, iOS a Mac v Intune.
-- Sdílejte [adresu URL aplikace Portál společnosti](http://go.microsoft.com/fwlink/?LinkID=396941) s uživateli Androidu, iOS a Windows. Tato adresa URL přesměruje na příslušný seznam aplikací Portál společnosti v zařízeních se systémem Android, iOS a Windows.
+- Sdílejte aplikaci Portál společnosti s uživateli Androidu, iOS a Windows.

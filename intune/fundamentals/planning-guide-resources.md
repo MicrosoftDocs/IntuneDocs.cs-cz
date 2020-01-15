@@ -17,12 +17,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a23409b03047cac8edb0a50ad5188e006d35049a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 23b7264f2b7c9be0805ae30afca5c8cb15b83482
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505159"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956251"
 ---
 # <a name="additional-resources-for-planning-your-intune-deployment"></a>Další zdroje informací pro plánování nasazení Intune
 
@@ -39,8 +39,8 @@ Tady je seznam šablon tabulek pro každý oddíl.
 | Aspekty nasazení |Podmínky a ujednání|Testování platnosti scénářů koncového uživatele|
 | Scénáře použití |Zásady konfigurace| |
 | Požadavky na scénář použití |profil certifikátu| |
-| Plán nasazení |profil Wi-Fi| |
-| Plán komunikace při nasazení|Profil VPN| |
+| Plán nasazení |Wi-Fi profil| |
+| Plán komunikace při nasazení|profil VPN| |
 | |  E-mailový profil | |
 | | Aplikací | |
 | | zásady dodržování předpisů | |
@@ -50,7 +50,7 @@ Tady je seznam šablon tabulek pro každý oddíl.
 
 Další informace, které mohou být užitečné při plánování nasazení řešení Intune, jeho návrhu a implementaci, najdete v těchto zdrojích.
 
-- [Dokumentace k Microsoft Intune](http://docs.microsoft.com/intune/) – kompletní sada dokumentace k Intune.
+- [Dokumentace k Microsoft Intune](https://docs.microsoft.com/intune/) – kompletní sada dokumentace k Intune.
 
 - [Microsoft Trust Center](https://www.microsoft.com/TrustCenter) – informace o přístupu Microsoftu k zabezpečení, ochraně osobních údajů, dodržování předpisů a transparentnosti všech cloudových produktů a služeb Microsoftu.
 

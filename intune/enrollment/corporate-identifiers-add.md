@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e1ee8ae54d81a050f3c8983269f40e8f61b5e75
-ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
+ms.openlocfilehash: 7cc67ce304dba500095c130e035a0b29322c84ef
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74955469"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956298"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifikace zařízení jako vlastněných společností
 
@@ -120,7 +120,7 @@ Podrobné specifikace o číslech IMEI najdete na stránce [3GGPP TS 23.003](ht
 
 ## <a name="change-device-ownership"></a>Změna vlastnictví zařízení
 
-U každého záznamu zařízení v Intune se ve vlastnostech zařízení zobrazuje **Vlastnictví**. Jako správce můžete zařízení označit jako **Osobní** nebo **Firemní**. Když se typ vlastnictví zařízení změní z osobní na firemní, Intune odstraní všechny informace o aplikaci dříve shromážděné z tohoto zařízení do 7 dnů. V případě potřeby bude Intune také odstraňovat telefonní číslo na záznamu. 
+U každého záznamu zařízení v Intune se ve vlastnostech zařízení zobrazuje **Vlastnictví**. Jako správce můžete zařízení označit jako **Osobní** nebo **Firemní**. Když se typ vlastnictví zařízení změní z firemní na osobní, Intune odstraní všechny informace o aplikaci dříve shromážděné z tohoto zařízení do 7 dnů. V případě potřeby bude Intune také odstraňovat telefonní číslo na záznamu. 
 
 **Vlastnictví zařízení změníte takto:**
 1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), vyberte **zařízení** > **všechna zařízení** > vyberte zařízení.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe37ac412d01d3032685a0e66827d20e13b0db64
-ms.sourcegitcommit: 42183c87b137710b8529049f8710d47127e99900
+ms.openlocfilehash: 237eca2f8e00f00fda5fa3cf401be87de9602743
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75303079"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956265"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Přidání skupin pro uspořádání uživatelů a zařízení
 
@@ -54,7 +54,7 @@ Pomocí následujícího postupu vytvořte novou skupinu.
         >
         > Pokud je vaše primární role správou zařízení, doporučujeme použít Centrum pro [správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-    - **Office 365**: tyto skupiny jsou navržené pro řízení přístupu a sdílení prostředků Office 365. Můžete například vytvořit skupinu Office 365 pro sdílení doručené pošty nebo kalendáře aplikace Outlook. Další informace najdete v tématu [informace o skupinách Office 365](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
+    - **Office 365**: poskytuje příležitosti pro spolupráci tím, že členům přidělí přístup ke sdílené poštovní schránce, kalendáři, souborům, sharepointovým webu a dalším možnostem. Tato možnost vám také umožňuje udělit přístup ke skupině lidem mimo vaši organizaci. Další informace najdete v tématu [informace o skupinách Office 365](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
 
 4. Zadejte **název skupiny** a **Popis skupiny** pro novou skupinu. Musí být specifické a zahrnovat informace, aby ostatní věděli, pro které skupiny jsou.
 

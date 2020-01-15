@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/14/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4783d24e3fc25583a61f88c2e7375d4eed673186
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 0786174ebb90352fa1a41923f9cfce305aece49f
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74563488"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956319"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Řešení problémů s instalací aplikací
 
@@ -47,7 +47,7 @@ Intune poskytuje podrobnosti o řešení potíží s aplikacemi nainstalovanými
     > Stejná aplikace může být přiřazena k více skupinám, ale s různými zamýšlenými akcemi (záměry) pro aplikaci. Zjištěný záměr pro aplikaci bude například zobrazovat **vyloučeno**, pokud byla aplikace vyloučena pro uživatele během přiřazování aplikace. Další informace najdete v tématu [Řešení konfliktů mezi záměry aplikace](apps-deploy.md#how-conflicts-between-app-intents-are-resolved).<br><br>
     > Pokud dojde k chybě instalace požadované aplikace, vy nebo váš tým technické podpory bude moci synchronizovat zařízení a zopakovat pokus o instalaci.
 
-Podrobnosti o chybě při instalaci aplikace označí problém. Tyto podrobnosti můžete použít k určení nejvhodnějších kroků pro vyřešení problému. Další informace o řešení potíží s instalací aplikací najdete v tématu [chyby při instalaci aplikací](troubleshoot-app-install.md#app-installation-errors).
+Podrobnosti o chybě při instalaci aplikace označí problém. Tyto podrobnosti můžete použít k určení nejvhodnějších kroků pro vyřešení problému. Další informace o řešení potíží s instalací aplikací najdete v tématu chyby [instalace aplikace pro Android](troubleshoot-app-install.md#android-app-installation-errors) a [chyby instalace aplikace pro iOS](troubleshoot-app-install.md#ios-app-installation-errors).
 
 > [!Note]  
 > Do podokna **řešení potíží** se dostanete také tak, že v prohlížeči přejdete na adresu: [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
@@ -105,11 +105,7 @@ Existují specifické požadavky, které je nutné dodržovat ke shromáždění
 - Uložené protokoly jsou zašifrované, aby chránily jakékoli osobní identifikovatelné informace obsažené v protokolech.
 - Při otevírání lístků podpory pro chyby aplikací Win32 připojte související protokoly selhání pomocí výše uvedených kroků.
 
-## <a name="app-installation-errors"></a>Chyby instalace aplikací
-
-V následující tabulce jsou uvedeny chybové zprávy s popisem podrobností o chybách instalace v Androidu i iOSu. 
-
-### <a name="android-errors"></a>Chyby v Androidu
+## <a name="android-app-installation-errors"></a>Chyby instalace aplikace pro Android
 
 V této části se zmiňují Správce zařízení (DA) i registrace Samsung KNOX. Další informace najdete v tématu [registrace Správce zařízení s Androidem](../enrollment/android-enroll-device-administrator.md) a [Automatická registrace zařízení s Androidem pomocí zápisu mobilních zařízení Samsung pro Samsung](../enrollment/android-samsung-knox-mobile-enroll.md). 
 
@@ -130,7 +126,9 @@ V této části se zmiňují Správce zařízení (DA) i registrace Samsung KNOX
 | Odinstalace aplikace se zrušila, protože během instalace se proces restartoval. (0xc7d14fbc) | Proces instalace aplikace byl ukončen operačním systémem nebo se zařízení restartovalo. Pokud k této chybě dojde znovu, zkuste nainstalovat a shromažďovat protokoly Portál společnosti. |
 | Instalační soubor aplikace APK nejde nainstalovat, protože nebyl podepsaný. (0xc7d14fb6) | Android OS standardně vyžaduje, aby byly aplikace podepsané. Před nasazením zajistěte, aby byla aplikace podepsaná. |
 
-### <a name="ios-errors"></a>Chyby v iOSu
+## <a name="ios-app-installation-errors"></a>chyby instalace aplikace pro iOS
+
+Následující chybové zprávy a popisy poskytují podrobné informace o chybách instalace iOS. 
 
 | Chybová zpráva/kód | Popis a tipy pro řešení potíží |
 |------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -164,11 +162,11 @@ V této části se zmiňují Správce zařízení (DA) i registrace Samsung KNOX
 | Poslední verzi aplikace se nepovedlo aktualizovat ze starší verze. (0x87D13B9D) | Tato chybová zpráva se zobrazí, pokud je aplikace nainstalovaná a spravovaná, ale má na zařízení nesprávnou verzi. Tato situace zahrnuje situaci, kdy zařízení obdrželo příkaz k aktualizaci aplikace, ale nová verze ještě není nainstalovaná a nahlášená zpět. Tato chyba bude hlášena při prvním vrácení se změnami zařízení po nasazení upgradu a provede se, dokud zařízení neoznámí, že je nainstalována nová verze, nebo dojde k chybě z důvodu jiné chyby.  |
 
 
-### <a name="other-installation-errors"></a>Další chyby instalace
+## <a name="other-installation-errors"></a>Další chyby instalace
 
 |  Chybová zpráva/kód  |  Description  |
 |-----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  0x80073CFF, 0x80CF201C (Chyba klienta)  |  Pro instalaci této aplikace musíte mít systém s podporou instalace aplikací bokem. Ujistěte se, že je balíček aplikace podepsaný důvěryhodným podpisem a nainstalovaný na zařízení připojeném k doméně, které má povolenou zásadu **AllowAllTrustedApps** , nebo zařízení, které má licenci pro zkušební načtení systému Windows s povolenou zásadou **AllowAllTrustedApps** . Další informace najdete v tématu [řešení potíží s balíčkem, nasazením a dotazy aplikací pro Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).   |
+|  0x80073CFF, 0x80CF201C (Chyba klienta)  |  Pro instalaci této aplikace musíte mít systém s podporou zkušebního načtení. Ujistěte se, že je balíček aplikace podepsaný důvěryhodným podpisem a nainstalovaný na zařízení připojeném k doméně, které má povolenou zásadu **AllowAllTrustedApps** , nebo zařízení, které má licenci pro zkušební načtení systému Windows s povolenou zásadou **AllowAllTrustedApps** . Další informace najdete v tématu [řešení potíží s balíčkem, nasazením a dotazy aplikací pro Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).   |
 |  0x80073CF0  |  Balíček se nepodařilo otevřít. Možné příčiny:<ul><li> Balíček není podepsaný.</li><li> Název vydavatele neodpovídá subjektu podpisového certifikátu.</li></ul> Informace najdete v protokolu událostí **AppxPackagingOM** . Další informace najdete v tématu [řešení potíží s balíčkem, nasazením a dotazy aplikací pro Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).  |
 |  0x80073CF3  |  Ověření aktualizace, závislostí nebo konfliktů balíčku se nezdařilo. Možné příčiny:<ul><li> Příchozí balíček je v konfliktu s nainstalovaným balíčkem.</li><li> Nebyla nalezena zadaná závislost balíčku.</li><li> Balíček nepodporuje správnou architekturu procesoru.</li></ul> Informace najdete v protokolu událostí **AppXDeployment-Server** . Další informace najdete v tématu [řešení potíží s balíčkem, nasazením a dotazy aplikací pro Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).  |
 |  0x80073CFB  |  Zadaný balíček je už nainstalovaný a přeinstalace balíčku je zablokovaná. Tato chyba se může zobrazit při instalaci balíčku, který není totožný s balíčkem, který už je nainstalovaný. Potvrďte, že součástí balíčku je i digitální podpis. Pokud se balíček znovu vytvoří nebo znovu podepíše, nebude už tento balíček při bitovém porovnání totožný s dříve nainstalovaným balíčkem. Tuto chybu můžete odstranit jedním ze dvou způsobů:<ul><li> Zvýšíte číslo verze aplikace a pak balíček znova sestavíte a podepíšete.</li><li> Než budete instalovat nový balíček, odeberte starý balíček pro každého uživatele v systému.</li></ul> Další informace najdete v tématu [řešení potíží s balíčkem, nasazením a dotazy aplikací pro Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).  |

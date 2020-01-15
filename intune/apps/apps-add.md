@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f336bdb9eca9900cc0250bb174c04d368da9eb9
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 7170f723707ef709ef464b35bc3f6d3297341cf1
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885582"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956218"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune 
 
@@ -189,7 +189,7 @@ Intune automaticky přeinstaluje, aktualizuje nebo odebere požadovanou aplikaci
 
 ## <a name="app-installation-errors"></a>Chyby instalace aplikací
 
-Podrobnosti o chybách instalace aplikací Intune najdete v tématu [Chyby instalace aplikací](troubleshoot-app-install.md#app-installation-errors).
+Podrobnosti o chybách instalace aplikací Intune najdete v tématu [Chyby instalace aplikací](troubleshoot-app-install.md).
 
 ## <a name="next-steps"></a>Další kroky
 

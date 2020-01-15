@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4661b151493eb68cc6f71a5a77bd023ac27b826
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 331d4d312541f587077c70e19634e331f9ddc21e
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72810226"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956354"
 ---
 # <a name="set-up-lookout-mobile-endpoint-security-integration-with-intune"></a>Nastavení integrace zabezpečení mobilních koncových bodů pomocí Intune
 S prostředím, které splňuje [požadavky](lookout-mobile-threat-defense-connector.md#prerequisites), můžete integrovat mobilní koncové body zabezpečení s Intune. Informace v tomto článku vás provedou nastavením integrace a konfigurací důležitých nastavení ve službě Intune pro použití s Intune.  
@@ -113,7 +113,7 @@ Následující postup předpokládá, že jste dříve vytvořili skupinu uživa
 6. Pro dokončení konfigurace konektoru vyberte **vytvořit konektor** . Později, až budete s výsledky spokojeni, můžete registraci roztáhnout na další skupiny uživatelů.
 
 ## <a name="configure-intune-to-use-lookout-as-a-mobile-threat-defense-provider"></a>Konfigurace Intune pro použití jako poskytovatele ochrany před mobilními hrozbami
-Až nakonfigurujete Intune, musíte nastavit připojení, které se bude [zobrazovat v Intune](https://docs.microsoft.com/en-us/intune/protect/mtd-connector-enable).  
+Až nakonfigurujete Intune, musíte nastavit připojení, které se bude [zobrazovat v Intune](~/protect/mtd-connector-enable.md).  
 
 ## <a name="additional-settings-in-the-lookout-mes-console"></a>Další nastavení v konzole pro hledání na netržních modulech
 Níže najdete další nastavení, která můžete konfigurovat v konzole nástroje pro vyhledávání.  
