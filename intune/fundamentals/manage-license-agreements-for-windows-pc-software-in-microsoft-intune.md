@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab5e5d3e645410b876a5d3d0be0eafed9c790780
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 831a22dfb6eebfe74b9886a1c83560f68a11c04e
+ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502654"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036593"
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Správa licenčních smluv pro software počítačů s Windows v Microsoft Intune
 
@@ -51,7 +51,7 @@ Můžete taky generovat sestavy, které u softwarových titulů zobrazují počt
 > Pracovní prostor **Licence** se v konzole správce nezobrazí, pokud nespravujete aspoň jeden počítač s Windows a klientem Intune pro počítače s Windows.
 
 ## <a name="add-microsoft-volume-licensing-agreements"></a>Přidání multilicenčních smluv uzavřených s Microsoftem
-Multilicenční smlouvy Intune poskytují informace o licenci pro software, který je zakoupený prostřednictvím multilicenčních smluv s Microsoftem. Multilicenční smlouvy s Microsoftem můžete přidat do Intune tak, že zadáte odpovídající páry čísel smluv. Čísla smluv nebo autorizační čísla musí odpovídat správným číslům licencí nebo registrací. Páry čísel smluv získáte při nákupu vašich licenčních smluv na webu [Volume Licensing Service Center (VLSC)](http://go.microsoft.com/fwlink/?LinkID=223842).
+Multilicenční smlouvy Intune poskytují informace o licenci pro software, který je zakoupený prostřednictvím multilicenčních smluv s Microsoftem. Multilicenční smlouvy s Microsoftem můžete přidat do Intune tak, že zadáte odpovídající páry čísel smluv. Čísla smluv nebo autorizační čísla musí odpovídat správným číslům licencí nebo registrací. Páry čísel smluv získáte při nákupu vašich licenčních smluv na webu [Volume Licensing Service Center (VLSC)](https://go.microsoft.com/fwlink/?LinkID=223842).
 
 1. V [konzole pro správu Microsoft Intune](https://admin.manage.microsoft.com/) vyberte **Licence**.
 
@@ -67,7 +67,7 @@ Multilicenční smlouvy Intune poskytují informace o licenci pro software, kter
 
         - Podporují se jenom znaky ASCII.
 
-        - V názvu smlouvy nejsou povolené následující znaky: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Název může obsahovat mezery.
+        - V názvu smlouvy nejsou povolené následující znaky: **~! @ # $ ^ &#42; &amp; () = + [] {} \ |;: ' "&lt; &gt; /** . Název může obsahovat mezery.
 
         - Název souboru nesmí být delší než 128 znaků.
 
@@ -77,11 +77,11 @@ Multilicenční smlouvy Intune poskytují informace o licenci pro software, kter
 
         Soubor vytvoříte tak, že do obyčejného textového dokumentu přidáte páry smluv. Soubor musí být v některém z následujících formátů podle typu organizace, který jste zaregistrovali na webu VLSC. Na řádku uveďte jednu dvojici čísel smluv.
 
-        - **Zákazníci s programem Open Value:** *číslo smlouvy*, *opakujte číslo smlouvy*, *název smlouvy*
+        - **Zákazníci typu Open Value:** *číslo smlouvy*, *číslo opakování smlouvy*, *název smlouvy*
 
-        - **Zákazníci s programem Open:** *autorizační číslo*, *číslo související licence*, *název smlouvy*
+        - **Zákazníci s otevřenými** *čísly: autorizační číslo*, *číslo související licence*, *název smlouvy*
 
-        - **Zákazníci s programy Select a Enterprise:** *číslo smlouvy*, *číslo související prováděcí smlouvy*, *název smlouvy*
+        - Podnikoví **zákazníci s Select a Enterprise:** *číslo smlouvy*, *související číslo registrace*, *název smlouvy*
 
         Při přidání nové smlouvy zobrazí formulář **Přidat smlouvy** výzvu k vyhledání tohoto souboru.
 
@@ -93,11 +93,11 @@ Multilicenční smlouvy Intune poskytují informace o licenci pro software, kter
 
         - **Název smlouvy** – zadejte jedinečný název smlouvy.
 
-            Název smlouvy může mít maximálně 256 znaků a nesmí obsahovat následující znaky: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Název může obsahovat mezery.
+            Název smlouvy může mít maximálně 256 znaků a nesmí obsahovat následující znaky: **~! @ # $ ^ &#42; &amp; () = + [] {} \ |;: ' "&lt; &gt; /** . Název může obsahovat mezery.
 
         - **Autorizační číslo nebo číslo smlouvy** – zadejte autorizační číslo nebo číslo smlouvy, které odpovídá licenčnímu páru.
 
-        - **Číslo licence, prováděcí smlouvy nebo zákazníka** – zadejte číslo licence, prováděcí smlouvy nebo zákazníka, které odpovídá páru licencí.
+        - **Číslo licence, prováděcí smlouvy nebo zákazníka** – zadejte číslo licence, prováděcí smlouvy nebo zákazníka, které odpovídá licenčnímu páru.
 
         > [!NOTE]
         > Pokud přidáte několik párů čísel smluv, Intune vytvoří jednu smlouvu s vámi určeným názvem a všechny vámi přidané páry budou součástí této smlouvy.
@@ -116,7 +116,7 @@ Multilicenční smlouvy Intune poskytují informace o licenci pro software, kter
 
 Zobrazí se seznam **Všechny smlouvy** a služba Intune se připojí k centru Microsoft VLSC, aby ověřila vámi zadané páry čísel smluv.
 
-Pokud chcete po přidání licenčních smluv v Intune aktualizovat informace o multilicencích, klikněte na stránce **Přehled licencí** na **Aktualizovat**. Tato akce načte aktuální informace o licenci z centra [Microsoft Volume Licensing Service Center (VLSC)](http://go.microsoft.com/fwlink/?LinkId=223842).
+Pokud chcete po přidání licenčních smluv v Intune aktualizovat informace o multilicencích, klikněte na stránce **Přehled licencí** na **Aktualizovat**. Tato akce načte aktuální informace o licenci z centra [Microsoft Volume Licensing Service Center (VLSC)](https://go.microsoft.com/fwlink/?LinkId=223842).
 
 > [!IMPORTANT]
 > Dokud neaktualizujete informace o multilicencích, můžou se vám v seznamu smluv a informacích o nárocích na stránce **Přehled smluv** zobrazovat rozdílné informace.
@@ -146,7 +146,7 @@ Kromě multilicenčních smluv uzavřených s Microsoftem můžete do Intune př
 
 4. V části **Přidat podrobnosti smlouvy** zadejte toto:
 
-    - **Agreement name** (povinné) Název smlouvy může mít maximálně 256 znaků a nesmí obsahovat následující znaky: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Název může obsahovat mezery.
+    - **Agreement name** (povinné) Název smlouvy může mít maximálně 256 znaků a nesmí obsahovat následující znaky: **~! @ # $ ^ &#42; &amp; () = + [] {} \ |;: ' "&lt; &gt; /** . Název může obsahovat mezery.
 
     - **Vydavatel** (povinné) Když začnete psát název vydavatele, služba načte všechny názvy vydavatelů obsahující vámi zadaná písmena. Pokud třeba zadáte „soft“, služba načte všechny vydavatele, kteří mají v názvu řetězec „soft“, například „Microsoft“ a „Microsoft Research“. Názvy vydavatelů se načítají z katalogu Software Asset Catalog. Než budete moct zadat název produktu, musíte vybrat vydavatele.
 
@@ -165,7 +165,7 @@ Kromě multilicenčních smluv uzavřených s Microsoftem můžete do Intune př
 
 5. V oblasti **Vybrat skupinu licencí** proveďte některou z těchto akcí:
 
-    - Pokud nechcete přidávat nové smlouvy do nové nebo existující skupiny licencí, vyberte **Přidat smlouvy do skupiny Nepřiřazené smlouvy**. Smlouvy můžete kdykoli přidat do uživatelem definovaných skupin licencí.
+    - Pokud nechcete přidávat nové smlouvy do nové nebo existující skupiny licencí, vyberte **Přidat smlouvy do skupiny Nepřiřazené smlouvy** . Smlouvy můžete kdykoli přidat do uživatelem definovaných skupin licencí.
 
     - Pokud chcete nové smlouvy přidávat do nové skupiny licencí, vyberte **Přidat smlouvy do nové skupiny licencí**. Zobrazí se výzva k zadání názvu nové skupiny licencí.
 

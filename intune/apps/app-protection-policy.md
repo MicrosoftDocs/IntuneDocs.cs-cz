@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f1563c092d8dd4c34e4a18caea56910267eb623
-ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
+ms.openlocfilehash: 3c340ffaacad303c4ff395c84d92e3907e42a521
+ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 01/15/2020
-ms.locfileid: "75956338"
+ms.locfileid: "76036650"
 ---
 # <a name="app-protection-policies-overview"></a>Přehled zásad ochrany aplikací
 
@@ -184,7 +184,7 @@ Existují další požadavky na používání Skypu pro firmy. Viz licenční po
 
 ## <a name="app-protection-global-policy"></a>Globální zásada ochrany aplikací
 
-Když správce OneDrivu přejde na web **admin.office.com** a vybere **Zařízení**, může nastavit ovládací prvky **správy mobilních aplikací** pro klientské aplikace OneDrivu a SharePointu. 
+Pokud správce OneDrivu přejde na **admin.OneDrive.com** a vybere přístup k **zařízení**, může nastavit ovládací prvky pro **správu mobilních aplikací** na OneDrive a na klientské aplikace SharePoint. 
 
 V tomto nastavení, které je přístupné na konzole pro správu OneDrivu, může nakonfigurovat speciální **globální** zásadu ochrany aplikací v Intune. Tato globální zásada se dá použít pro všechny uživatele v tenantovi, ale nedovoluje řídit adresování zásad. 
 

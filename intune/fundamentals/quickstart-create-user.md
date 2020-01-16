@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75a875fc3ff11eb1e3befad425c16a710544f781
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: fdd97e69c97df5a266e147381d94b3d4419bab34
+ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72509881"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036580"
 ---
 # <a name="quickstart-create-a-user-in-intune-and-assign-them-a-license"></a>Rychlý Start: vytvoření uživatele v Intune a přiřazení licence
 
@@ -50,11 +50,11 @@ Uživatelé musí mít uživatelský účet k registraci do správy zařízení 
 
 ## <a name="assign-a-license-to-the-user"></a>Přiřazení licence uživateli
 
-Po vytvoření uživatele musíte použít [Centrum pro správu Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) k přiřazení licence Intune. Pokud uživateli nepřiřazujete licenci, nebude se moct zaregistrovat do Intune. 
+Po vytvoření uživatele musíte použít [Centrum pro správu Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) k přiřazení licence Intune. Pokud uživateli nepřiřazujete licenci, nebude se moct zaregistrovat do Intune. 
 
 Přiřazení licence Intune uživateli:
 
-1. Přihlaste se k [centru pro správu Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) pomocí stejných přihlašovacích údajů, které jste použili pro přihlášení k Intune.
+1. Přihlaste se k [centru pro správu Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) pomocí stejných přihlašovacích údajů, které jste použili pro přihlášení k Intune.
 2. Vyberte možnost **Uživatelé, kteří** > **aktivní uživatelé** > a vyberte uživatele, kterého jste právě vytvořili.
 3. Vedle možnosti **Licence na produkty** vyberte **Upravit**.
 4. V části **Umístění** zvolte umístění pro daného uživatele.
@@ -68,7 +68,7 @@ Nový aktivní uživatel Intune teď zobrazí, že používá licenci **Intune**
 
 ## <a name="clean-up-resources"></a>Vyčištění prostředků
 
-Pokud tento uživatel již nepotřebujete, můžete uživatele odstranit tak, že přejdete do [centra pro správu Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) a zvolíte **možnost Uživatelé** > **aktivní uživatelé** > *Vyberte uživatele v seznamu* > **Odstranit** uživatele > **Odstranit** uživatele > **Potvrdit změny** > **Zavřít**.
+Pokud tento uživatel již nepotřebujete, můžete uživatele odstranit tak, že přejdete do [centra pro správu Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) a zvolíte **možnost Uživatelé** > **aktivní uživatelé** > *Vyberte uživatele v seznamu* > **Odstranit** uživatele > **Odstranit** uživatele > **Potvrdit změny** > **Zavřít**.
 
 ## <a name="next-steps"></a>Další kroky
 

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2019
+ms.date: 01/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 443e1e2fff2a0c4641d3446bf72e455cc92ce784
-ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
+ms.openlocfilehash: d42651b11891f3d830c0d90e70a9ecd98ea5bfb7
+ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74907283"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036609"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Odesílání vlastních oznámení v Intune  
 
@@ -89,13 +89,13 @@ Intune nesleduje vlastní oznámení, která odesíláte, a zařízení neprotok
 
 ## <a name="send-a-custom-notification-to-a-single-device"></a>Odeslání vlastního oznámení na jedno zařízení  
 
-1. Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) pomocí účtu, který má oprávnění k vytváření a odesílání oznámení, a pak na **zařízení** > **všechna zařízení**.  
+1. Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) pomocí účtu, který má oprávnění k vytváření a odesílání oznámení, a pak na **zařízení** > **všechna zařízení**.
 
-2. Vyberte zařízení, pro které chcete odeslat oznámení.  
+2. Poklikejte na název spravovaného zařízení, do kterého chcete odeslat oznámení. otevře se stránka s *přehledem* zařízení.
 
-3. Na stránce **Přehled** zařízení v pravém horním rohu stránky vyberte možnost **...** (tři tečky).  
+3. Na stránce **Přehled** zařízení otevřete akci **Odeslat vlastní oznámení** a otevřete podokno *Odeslat vlastní oznámení* . Pokud tato možnost není k dispozici, vyberte možnost **...** (tři tečky) v pravém horním rohu stránky a pak vyberte **Odeslat vlastní oznámení**.
 
-4. Vyberte akci **Odeslat vlastní oznámení** a otevřete podokno *Odeslat vlastní oznámení* , kde zadáte následující podrobnosti zprávy:  
+4. V podokně **Odeslat vlastní oznámení** zadejte následující podrobnosti zprávy:  
 
    - **Title** – zadejte název tohoto oznámení. Názvy jsou omezeny na 50 znaků.  
    - **Tělo** – zadejte zprávu. Zprávy jsou omezené na 500 znaků.  

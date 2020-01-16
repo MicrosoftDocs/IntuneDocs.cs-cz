@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc781ea72b54468b21fb70e60e334f1c8d8832ea
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9b0bb0bd1f0df3aeb4185542d424bd3ffffe42cd
+ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74547947"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036538"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Kurz: Použití Autopilotu k registraci zařízení s Windows v Intune
 
@@ -33,8 +33,8 @@ Windows Autopilot zjednodušuje registraci zařízení. S Microsoft Intune a Aut
 V tomto kurzu se naučíte:
 > [!div class="checklist"]
 > * Přidat zařízení do Intune
-> * Vytvořit skupinu zařízení Autopilot
-> * Vytvořit profil nasazení Autopilotu
+> * Vytvoření skupiny zařízení Autopilot
+> * Vytvoření profilu nasazení Autopilotu
 > * Přiřadit profil nasazení Autopilotu ke skupině zařízení
 > * Distribuovat zařízení s Windows uživatelům
 
@@ -45,7 +45,7 @@ Přehled výhod, scénáře a požadavky Autopilotu najdete v [přehledu Windows
 
 ## <a name="prerequisites"></a>Požadované součásti
 - [Nastavení automatické registrace Windows](../quickstart-setup-auto-enrollment.md)
-- [Předplatné Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](http://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
+- [Předplatné Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
 
 ## <a name="add-devices"></a>Přidání zařízení
@@ -74,7 +74,7 @@ Prvním krokem při nastavení Windows Autopilotu je přidání zařízení s Wi
 
 5. Aktualizováním zobrazení zobrazte nová zařízení.
 
-## <a name="create-an-autopilot-device-group"></a>Vytvořit skupinu zařízení Autopilot
+## <a name="create-an-autopilot-device-group"></a>Vytvoření skupiny zařízení Autopilot
 
 Dále vytvořte skupinu zařízení a přidejte do ní zařízení Autopilot, která jste právě načetli.
 
@@ -86,7 +86,7 @@ Dále vytvořte skupinu zařízení a přidejte do ní zařízení Autopilot, kt
 3. V okně **Skupina** zvolte **Členové** a do skupiny přidejte zařízení Autopilot. Zařízení Autopilot, která ještě nejsou zaregistrovaná, jsou zařízení, jejichž název se rovná sériovému číslu zařízení.
 4. Zvolte **Vytvořit**.  
 
-## <a name="create-an-autopilot-deployment-profile"></a>Vytvořit profil nasazení Autopilotu
+## <a name="create-an-autopilot-deployment-profile"></a>Vytvoření profilu nasazení Autopilotu
 
 Po vytvoření skupiny zařízení musíte vytvořit profil nasazení, abyste mohli zařízení Autopilot nakonfigurovat.
 
