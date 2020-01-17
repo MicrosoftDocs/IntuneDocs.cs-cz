@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6f5b0c8df86cf5bf1206c1cccb879e37c7944a21
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 748141dc494e28f25a09039a7a500411af76ace7
+ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71912754"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76037899"
 ---
 ## <a name="enable-windows-10-automatic-enrollment"></a>Povolení automatické registrace pro Windows 10
 
@@ -12,7 +12,7 @@ Automatická registrace umožňuje uživatelům, aby si svoje zařízení s Wind
 
 **Požadavky**
 
-- Předplatné Azure Active Directory Premium ([zkušební předplatné](http://go.microsoft.com/fwlink/?LinkID=816845))
+- Předplatné Azure Active Directory Premium ([zkušební předplatné](https://go.microsoft.com/fwlink/?LinkID=816845))
 - Odběr služby Microsoft Intune
 
 ### <a name="configure-automatic-mdm-enrollment"></a>Konfigurace automatického zápisu MDM
