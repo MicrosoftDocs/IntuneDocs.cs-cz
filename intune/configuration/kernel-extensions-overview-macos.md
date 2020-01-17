@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 01/16/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bce6b99723c5eada8f8f29e875a1df1daa02751a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 1075054f3812e8c40f38e705a440c46ba09fdd0e
+ms.sourcegitcommit: 11cbd2a9d90dea20f6dc1f54f0a6acbeec3a71d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059358"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76146765"
 ---
 # <a name="add-macos-kernel-extensions-in-intune"></a>Přidání rozšíření jádra macOS v Intune
 
@@ -55,7 +55,7 @@ V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení pomoc
 ## <a name="what-you-need-to-know"></a>Co je potřeba vědět
 
 - Je možné přidat nepodepsaná starší verze rozšíření jádra.
-- Nezapomeňte zadat správný identifikátor týmu a ID sady rozšíření jádra. Intune neověřuje hodnoty, které zadáte. Pokud zadáte chybné informace, rozšíření na zařízení nebude fungovat.
+- Nezapomeňte zadat správný identifikátor týmu a ID sady rozšíření jádra. Intune neověřuje hodnoty, které zadáte. Pokud zadáte chybné informace, rozšíření na zařízení nebude fungovat. Identifikátor týmu je přesně 10 alfanumerických znaků dlouhý. 
 
 > [!NOTE]
 > Informace společnosti Apple, které se týkají podepisování a notarization pro veškerý software. U macOS 10.14.5 a novějších rozšíření jádra nasazená přes Intune nemusí splňovat zásady notarization od společnosti Apple.
@@ -69,7 +69,7 @@ V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení pomoc
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
-3. Zadejte následující vlastnosti:
+3. Zadejte tyto vlastnosti:
 
     - **Název**: Zadejte popisný název nového profilu.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.

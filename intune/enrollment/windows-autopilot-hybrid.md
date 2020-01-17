@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc618f2502647ba33a16cff4305b9f4671e05996
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d87a4b5d46a5f0d40cebe3dbcaff211ff508d667
+ms.sourcegitcommit: 822a70c61f5d644216ccc401b8e8949bc39e8d4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74558189"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76125306"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Nasazení hybridních zařízení připojených k Azure AD pomocí Intune a automatického pilotního projektu Windows
 Pomocí Intune a Windows autopilotu můžete nastavit zařízení připojená k hybridnímu Azure Active Directory (Azure AD). Pokud to chcete provést, postupujte podle kroků v tomto článku.
@@ -209,17 +209,30 @@ Změna stavu profilu zařízení z *nepřiřazeného* *přiřazení* a nakonec t
 ## <a name="create-and-assign-a-domain-join-profile"></a>Vytvoření a přiřazení profilu připojení k doméně
 
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **konfigurační profily** > **vytvořit profil**.
-1. Zadejte následující vlastnosti:
+2. Zadejte tyto vlastnosti:
    - **Název**: Zadejte popisný název nového profilu.
    - **Popis**: Zadejte popis profilu.
    - **Platforma**: vyberte **Windows 10 a novější**.
    - **Typ profilu**: vyberte **připojení k doméně (Preview)** .
-1. Vyberte **Nastavení**a potom zadejte **předponu názvu počítače**, **název domény**a (volitelné) **organizační jednotku** ve [formátu DN](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). 
+3. Vyberte **Nastavení**a potom zadejte **předponu názvu počítače**, **název domény**.
+4. Volitelné Zadejte **organizační jednotku** (OU) ve [formátu DN](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). Vaše možnosti jsou:
+   - Poskytněte organizační jednotku, ve které jste delegovani řízení na zařízení s Windows 2016, na kterém je spuštěný konektor Intune.
+   - Poskytněte organizační jednotku, ve které jste delegovani řízení ke kořenovým počítačům ve službě Prem Active Directory.
+   - Necháte-li toto pole prázdné, bude objekt počítače vytvořen v výchozím kontejneru služby Active Directory (CN = computers, pokud jste [jej nikdy nezměnili](https://support.microsoft.com/en-us/help/324949/redirecting-the-users-and-computers-containers-in-active-directory-dom)).
+   
+   Tady jsou některé platné příklady:
+   - OU = úroveň 1, OU = Level2, DC = contoso, DC = com
+   - OU = dolu, DC = contoso, DC = com
+   
+   Tady je několik příkladů, které nejsou platné:
+   - CN = computers, DC = contoso, DC = com (kontejner nemůžete zadat, místo toho nechte tuto hodnotu prázdnou pro použití výchozí hodnoty pro doménu)
+   - OU = moje (musíte zadat doménu přes atribut DC =)
+     
    > [!NOTE]
    > Kolem hodnoty v **organizační jednotce**nepoužívejte uvozovky.
-1. Vyberte **OK** > **vytvořit**.  
+5. Vyberte **OK** > **vytvořit**.  
     Profil se vytvoří a zobrazí se v seznamu.
-1. Pokud chcete profil přiřadit, postupujte podle kroků v části [přiřazení profilu zařízení](../configuration/device-profile-assign.md#assign-a-device-profile) a přiřazení profilu ke stejné skupině, kterou používá tento krok [vytvořit skupinu zařízení](windows-autopilot-hybrid.md#create-a-device-group) .
+6. Pokud chcete profil přiřadit, postupujte podle kroků v části [přiřazení profilu zařízení](../configuration/device-profile-assign.md#assign-a-device-profile) a přiřazení profilu ke stejné skupině, kterou používá tento krok [vytvořit skupinu zařízení](windows-autopilot-hybrid.md#create-a-device-group) .
    - Nasazení více profilů připojení k doméně
    
      a. Vytvořte dynamickou skupinu, která zahrnuje všechna vaše zařízení autopilotu s určitým profilem nasazení autopilotu, zadejte (Device. enrollmentProfileName-EQ "název profilu autopilotu"). 

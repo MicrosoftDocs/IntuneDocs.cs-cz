@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38f9c9721942b4c9754d4e99e4e91d751ceedcf3
-ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
+ms.openlocfilehash: f6edf3fd8d6c6aeefeb1e34c5b390360e7215f21
+ms.sourcegitcommit: 822a70c61f5d644216ccc401b8e8949bc39e8d4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75653780"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76125289"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -133,7 +133,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 3. Povolte sdílení řetězce klíčů (pokud ještě není povolené) tak, že v každém cíli projektu kliknete na **Možnosti** a zapnete přepínač **Sdílení řetězce klíčů**. Sdílení řetězce klíčů se vyžaduje pro přechod k dalšímu kroku.
 
    > [!NOTE]
-   > Profil zřizování musí podporovat nové hodnoty sdílení řetězce klíčů. Přístupové skupiny pro řetězce klíčů by měly podporovat zástupné znaky. Můžete to zjistit tak, že otevřete soubor. mobileprovision v textovém editoru, vyhledáte klíčová slova pro **přístup do klíčů**a ověříte, že máte zástupný znak. Příklad:
+   > Profil zřizování musí podporovat nové hodnoty sdílení řetězce klíčů. Přístupové skupiny pro řetězce klíčů by měly podporovat zástupné znaky. Můžete to zjistit tak, že otevřete soubor. mobileprovision v textovém editoru, vyhledáte klíčová slova pro **přístup do klíčů**a ověříte, že máte zástupný znak. Například:
    >
    >  ```xml
    >  <key>keychain-access-groups</key>
@@ -152,7 +152,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
     
       ![Intune App SDK iOS: sdílení řetězců klíčů](./media/app-sdk-ios/intune-app-sdk-ios-keychain-sharing.png)
     
-    d. Pokud přímo upravujete soubor nároků a nepoužíváte k vytvoření přístupové skupiny pro řetězce klíčů výše popsané uživatelské rozhraní Xcode, dejte na začátek přístupové skupiny pro řetězce klíčů předponu `$(AppIdentifierPrefix)` (Xcode to dělá automaticky). Příklad:
+    d. Pokud přímo upravujete soubor nároků a nepoužíváte k vytvoření přístupové skupiny pro řetězce klíčů výše popsané uživatelské rozhraní Xcode, dejte na začátek přístupové skupiny pro řetězce klíčů předponu `$(AppIdentifierPrefix)` (Xcode to dělá automaticky). Například:
     
       - `$(AppIdentifierPrefix)com.microsoft.intune.mam`
       - `$(AppIdentifierPrefix)com.microsoft.adalcache`
@@ -465,13 +465,14 @@ IntuneMAMPolicy.h | Třída IntuneMAMPolicy zveřejňuje některá nastavení z�
 IntuneMAMFileProtectionManager.h | Třída IntuneMAMFileProtectionManager zveřejňuje rozhraní API, pomocí kterých může aplikace explicitně zabezpečit soubory a adresáře na základě zadané identity. Tato identita může být spravovaná přes Intune nebo nespravovaná a sada SDK použije příslušné zásady MAM. Použití této třídy je volitelné. |
 IntuneMAMDataProtectionManager.h | Třída IntuneMAMDataProtectionManager zveřejňuje rozhraní API, pomocí kterých může aplikace zabezpečit datové vyrovnávací paměti na základě zadané identity. Tato identita může být spravovaná přes Intune nebo nespravovaná a sada SDK podle toho použije šifrování. |
 
-## <a name="implement-save-as-controls"></a>Implementace ovládacích prvků Uložit jako
+## <a name="implement-save-as-and-open-from-controls"></a>Implementace ovládacích prvků Uložit jako a otevřít z
 
-Intune umožňuje správcům IT vybrat, do kterých spravovaných umístění úložiště může aplikace ukládat data. Aplikace se můžou sady Intune App SDK dotazovat na povolená umístění úložiště pomocí rozhraní API `isSaveToAllowedForLocation` definovaného v `IntuneMAMPolicy.h`.
+Intune umožňuje správcům IT vybrat, do kterých umístění úložiště může spravovaná aplikace ukládat data, nebo je otevírat. Aplikace mohou pomocí `isSaveToAllowedForLocation` rozhraní API definovaného v `IntuneMAMPolicy.h`dotazovat se na MAM sadu Intune, aby povolila umístění úložiště pro ukládání do úložiště. Aplikace taky můžou pomocí `isOpenFromAllowedForLocation` rozhraní API definovaného v `IntuneMAMPolicy.h`dotazovat sadu Intune MAM SDK na povolená umístění pro otevření z úložiště.
 
 Před uložením spravovaných dat do cloudového úložiště nebo místního umístění musí aplikace v rozhraní API `isSaveToAllowedForLocation` zjistit, jestli do nich správce IT povolil data ukládat.
+Před otevřením dat do aplikace z cloudového úložiště nebo z místního umístění musí aplikace pomocí rozhraní `isOpenFromAllowedForLocation` API zjistit, jestli má správce IT povolená data, která se z nich mají otevírat.
 
-Při použití rozhraní API `isSaveToAllowedForLocation` musí aplikace předat hlavní název uživatele (UPN) používaný pro umístění úložiště, pokud je k dispozici.
+Když aplikace používají rozhraní API `isSaveToAllowedForLocation` nebo `isOpenFromAllowedForLocation`, musí k umístění úložiště předat hlavní název uživatele (UPN), pokud je k dispozici.
 
 ### <a name="supported-save-locations"></a>Podporovaná umístění pro ukládání
 
@@ -481,12 +482,46 @@ Rozhraní API `isSaveToAllowedForLocation` poskytuje konstanty ke kontrole, jest
 * IntuneMAMSaveLocationOneDriveForBusiness
 * IntuneMAMSaveLocationSharePoint
 * IntuneMAMSaveLocationLocalDrive
+* IntuneMAMSaveLocationAccountDocument
 
 Aplikace by měly konstanty v `isSaveToAllowedForLocation` používat k zjištění, jestli je možné data ukládat do umístění považovaných za „spravovaná“, jako je OneDrive pro firmy, nebo za „osobní“. Kromě toho by se mělo rozhraní API použít, když aplikace není schopná zjistit, jestli je umístění „spravované“, nebo „osobní“.
 
-Umístění, o kterých se ví, že jsou „osobní“, jsou vyjádřená konstantou `IntuneMAMSaveLocationOther`.
-
 Konstanta `IntuneMAMSaveLocationLocalDrive` by se měla použít, když aplikace ukládá data do jakéhokoli umístění na místním zařízení.
+
+Pokud není účet pro cílové umístění znám, `nil` by měl být předán. `IntuneMAMSaveLocationLocalDrive` umístění by mělo být vždy spárováno s účtem `nil`.
+
+### <a name="supported-open-locations"></a>Podporovaná otevřená umístění
+
+Rozhraní `isOpenFromAllowedForLocation` API poskytuje konstanty ke kontrole, jestli správce IT povoluje otevírání dat z následujících umístění definovaných v `IntuneMAMPolicy.h`.
+
+* IntuneMAMOpenLocationOther
+* IntuneMAMOpenLocationOneDriveForBusiness
+* IntuneMAMOpenLocationSharePoint
+* IntuneMAMOpenLocationCamera
+* IntuneMAMOpenLocationLocalStorage
+* IntuneMAMOpenLocationAccountDocument
+
+Aplikace by měly používat konstanty v `isOpenFromAllowedForLocation` ke kontrole, jestli je možné data otevřít z umístění považovaných za "spravovaná", jako je OneDrive pro firmy, nebo "osobní". Kromě toho by se mělo rozhraní API použít, když aplikace nemůže zjistit, jestli je umístění "spravované", nebo "osobní".
+
+`IntuneMAMOpenLocationCamera` konstanta by se měla použít, když aplikace otevírá data z fotoaparátu nebo alba fotografií.
+
+`IntuneMAMOpenLocationLocalStorage` konstanta by se měla použít, když aplikace otevírá data z libovolného umístění na místním zařízení.
+
+`IntuneMAMOpenLocationAccountDocument` konstanta by se měla použít, když aplikace otevírá dokument, který má identitu spravovaného účtu (viz část sdílená data níže).
+
+Pokud není účet pro zdrojové umístění znám, `nil` by měl být předán. `IntuneMAMOpenLocationLocalStorage` a umístění `IntuneMAMOpenLocationCamera` by měly být vždy párovány s účtem `nil`.
+
+### <a name="unknown-or-unlisted-locations"></a>Neznámé nebo neuvedené umístění
+
+Pokud požadované umístění není uvedené ve výčtech `IntuneMAMSaveLocation` nebo `IntuneMAMOpenLocation` nebo není známo, je třeba použít jedno ze dvou umístění.
+* Pokud se k umístění pro ukládání otevíráte pomocí spravovaného účtu, mělo by se použít umístění `IntuneMAMSaveLocationAccountDocument` (`IntuneMAMOpenLocationAccountDocument` otevřené).
+* V opačném případě použijte `IntuneMAMSaveLocationOther` umístění (`IntuneMAMOpenLocationOther` otevřené).
+
+Je důležité odlišit jasné rozlišení mezi spravovaným účtem a účtem, který sdílí hlavní název uživatele spravovaného účtu. Například spravovaný účet s hlavním názvem uživatele "user@contoso.com" přihlášený k OneDrivu není stejný jako účet s hlavním názvem uživatele "user@contoso.com" přihlášený k Dropboxu. Pokud se přihlašujete k neznámé nebo neuvedené službě, přihlaste se ke spravovanému účtu (napříkladuser@contoso.compřihlášenému na OneDrive), měla by být reprezentovaná `AccountDocument`m umístěním. Pokud se neznámá nebo neuvedená služba přihlásí prostřednictvím jiného účtu (napříkladuser@contoso.com"přihlášený k Dropboxu"), nepřistupuje k umístění se spravovaným účtem a měl by být reprezentovaný `Other`m umístěním.
+
+### <a name="sharing-blocked-alert"></a>Sdílení blokované výstrahy
+
+Pomocná funkce uživatelského rozhraní se dá použít, když se zavolá `isSaveToAllowedForLocation` nebo `isOpenFromAllowedForLocation` API a najde se, aby se zablokoval akce Uložit/otevřít. Pokud aplikace chce uživateli upozornit, že se akce zablokovala, může zavolat rozhraní API `showSharingBlockedMessage` definované v `IntuneMAMUIHelper.h` a zobrazit tak zobrazení výstrah s obecnou zprávou.
 
 ## <a name="share-data-via-uiactivityviewcontroller"></a>Sdílení dat přes UIActivityViewController
 

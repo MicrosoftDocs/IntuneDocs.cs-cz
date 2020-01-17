@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 304a6a60ea8dbfa98e62eb8e52a69e14af795746
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: d1131eec2894aa8c7135b2f931a50ab85200e7e3
+ms.sourcegitcommit: 822a70c61f5d644216ccc401b8e8949bc39e8d4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75548011"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76125272"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune
 
@@ -217,6 +217,7 @@ Tady jsou některé podrobnosti:
 - Tyto záložky nemohou uživatelé odstranit ani upravit.
 - Tyto záložky se zobrazí v horní části seznamu. Všechny záložky, které vytvářejí uživatelé, se zobrazí pod těmito záložkami.
 - Pokud jste povolili přesměrování proxy aplikací, můžete přidat webové aplikace proxy aplikací pomocí své interní nebo externí adresy URL.
+- Při zadávání adres URL do seznamu se ujistěte, že jste zadali předponu všechny adresy URL pomocí **http://** nebo **https://** .
 
 Ke konfiguraci spravovaných záložek použijte následující pár klíč/hodnota:
 
@@ -243,7 +244,7 @@ Pomocí následujících párů klíč/hodnota můžete nakonfigurovat seznam po
 
 ### <a name="url-formats-for-allowed-and-blocked-site-list"></a>Formáty adres URL pro seznam povolených a blokovaných webů 
 K vytvoření seznamu povolených a blokovaných webů můžete použít různé formáty adresy URL. Tyto povolené vzory jsou podrobně popsány v následující tabulce. Některé poznámky než začnete: 
-- Při zadávání adres URL do seznamu nezapomeňte u všech uvést předponu **http** nebo **https**.
+- Při zadávání adres URL do seznamu se ujistěte, že jste zadali předponu všechny adresy URL pomocí **http://** nebo **https://** .
 - V souladu s pravidly v následujícím seznamu povolených vzorů můžete použít zástupný symbol (\*).
 - Zástupný znak může odpovídat jenom celé součásti názvu hostitele (oddělené tečkami) nebo celými částmi cesty (oddělené lomítky). Například `http://*contoso.com` **není podporován.**
 - V adrese můžete specifikovat čísla portů. Pokud nezadáte číslo portu, použijí se tyto hodnoty:

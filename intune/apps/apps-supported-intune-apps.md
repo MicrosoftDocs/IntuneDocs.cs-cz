@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67ff4f0cbe11c24c03b504968735e0a68d54f12d
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: c199964409a91aa6f5b75ae067968e37c1b1a189
+ms.sourcegitcommit: 822a70c61f5d644216ccc401b8e8949bc39e8d4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75692177"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76125327"
 ---
 # <a name="microsoft-intune-protected-apps"></a>Microsoft Intune chráněné aplikace  
 
@@ -45,6 +45,7 @@ Následující tabulky obsahují podrobné informace o podporovaných partnerech
 
 | Název aplikace | Popis a informace o aplikaci | Odkazy na obchod s aplikacemi pro podporované platformy |
 |-------------------------------------------------|-------------------------|---------------------------------------------|
+| **Mobilní služba pole**<p><img alt="Microsoft app - Field Service Mobile icon" src="./media/apps-supported-intune-apps/icon-m-field-service-mobile.png" width="100"> | Dynamics 365 for Field Service poskytuje mobilní aplikace služby pro více zařízení, která je speciálně vytvořená pro potřeby pracovního procesu polní služby. Robustní funkce offline umožňují pracovníkům služeb v terénu pokračovat v přístupu a interakci s daty, která potřebují při návštěvě vzdáleného cíle bez připojení k Internetu. Pracovníci s poli služby můžou dál informovat o práci, kterou v terénu provádějí, pravidelným synchronizací dat až na server, aby bylo možné v případě potřeby provádět nebo vykonat správné akce. Mobilní aplikace je zcela přizpůsobitelná a rozšiřitelná a umožňuje libovolné organizaci označit aplikaci jako svou vlastní, definovat, jaké typy pracovníků služeb dat mají přístup, a mnoho dalšího. | [Google Play odkaz (Android)](https://play.google.com/store/apps/details?id=com.microsoft.d365.fs.mobile), [odkaz na App Store (iOS)](https://apps.apple.com/us/app/field-service-mobile/id1414669075) |
 | **Microsoft Azure Information Protection Viewer**<p><img alt="Microsoft app - Microsoft Azure Information Protection Viewer icon" src="./media/apps-supported-intune-apps/icon-m-azure-information-protection-viewer.png" width="100"> | Aplikace AIP Viewer vám umožní bezpečně spolupracovat s ostatními. Umožňuje zobrazovat chráněné soubory (e-mailové zprávy, soubory PDF, obrázky a textové soubory s ochranou práv), které s vámi někdo sdílí. | [Google Play odkaz (Android)](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer), [odkaz na App Store (iOS)](https://itunes.apple.com/us/app/rms-sharing/id689516635?mt=8) |
 | **Microsoft Bookings**<p><img alt="Microsoft app - Microsoft Bookings icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-bookings.png" width="100"> | Microsoft Bookings je aplikace pro plánování schůzek, která vám pomůže sledovat vaše rezervace, zaměstnance a zákazníky. Nikdy nezmeškáte žádnou schůzku.<p>Pomocí aplikace Bookings můžete:<br><ul><li>Prohlížet a spravovat svůj kalendář</li><li>Vytvářet rezervace nebo provádět změny v existujících rezervacích na cestách</li><li>Sledovat dostupnost vašich zaměstnanců v reálném čase</li><li>Rychle a snadno reagovat na požadavky zákazníků</li><li>Rychle získávat navigační pokyny do místa vaší rezervace</li><li>Spravovat seznam zákazníků</li></ul> | [Google Play odkaz (Android)](https://play.google.com/store/apps/details?id=com.microsoft.exchange.bookings),<br>[Odkaz na App Store (iOS)](https://itunes.apple.com/us/app/microsoft-bookings/id1065657468?mt=8) |  
 | **Microsoft Cortana**<p><img alt="Microsoft app - Microsoft Cortana icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-cortana.png" width="100"> | Rychlá, snadná a zábava, aby zůstaly na práci & život s vaším osobním asistentem Cortana. Využijte inteligentní digitální asistenta na telefon, abyste mohli sledovat důležité věci bez ohledu na to, kde jste na svých zařízeních. | [Google Play odkaz (Android)](https://play.google.com/store/apps/details?id=com.microsoft.cortana),<br>[Odkaz na App Store (iOS)](https://apps.apple.com/us/app/cortana/id1054501703)
