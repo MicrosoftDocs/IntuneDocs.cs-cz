@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4839340ba1f3bad6f28a1120d882d0f600b1d44
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 0c58b0b02a6e4bc82295ef959c144918e82c30b6
+ms.sourcegitcommit: 665be113b593c3bc7d46b99599e720f781037dcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74563560"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76258447"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Přidejte Microsoft Edge pro Windows 10 a Microsoft Intune
 
@@ -38,7 +38,7 @@ Než budete moct nasadit, nakonfigurovat, monitorovat nebo chránit aplikace, mu
 
 ## <a name="prerequisites"></a>Požadované součásti
 - Vyžaduje se Windows 10 RS2 a vyšší.
-- Všechny předem nainstalované verze Microsoft Edge *verze 77 a novější* pro **vývojáře** a **beta** kanály v uživatelském kontextu budou přepsány s hranou nainstalovanými v kontextu systému.
+- Všechny předinstalované verze Microsoft Edge *verze 77 a novější* pro všechny kanály v uživatelském kontextu budou přepsány s hranou nainstalovanými v kontextu systému.
 
 ## <a name="configure-the-app-in-intune"></a>Konfigurace aplikace v Intune
 Microsoft Edge verze 77 a novější můžete do Intune přidat pomocí následujících kroků:
@@ -68,9 +68,10 @@ V tomto kroku zadáte informace o tomto nasazení aplikace. Tyto informace vám 
 V tomto kroku nakonfigurujte možnosti instalace aplikace.
 
 1. V podokně **Přidat aplikaci** vyberte **nastavení aplikace**.
-2. V podokně **nastavení aplikace** vyberte **beta verze** ze seznamu **kanálů** , abyste určili **, ze které** hraničního kanálu budete aplikaci nasazovat.
-    - **Beta verze** Kanál je nejstabilním prostředím Microsoft Edge Preview a nejlepší volbou pro úplný pilotní nasazení v rámci vaší organizace. V případě hlavních aktualizací každých šest týdnů zahrnuje každá verze tyto učení a vylepšení z vývojového kanálu.
-    - **Vývoj** Kanál je připravený na podnikovou zpětnou vazbu ve Windows, Windows serveru a macOS. Aktualizuje se každý týden a obsahuje nejnovější vylepšení a opravy.
+2. V podokně **nastavení aplikace** vyberte v seznamu **kanál** buď **stabilní**, **beta** nebo **vývojové** , abyste určili, ze kterého hraničního kanálu budete aplikaci nasazovat.
+    - **Stabilní** kanál je doporučeným kanálem pro široce nasazování v podnikovém prostředí. Aktualizuje se každých šest týdnů, přičemž každá verze zahrnuje vylepšení z verze beta kanálu.
+    - **Beta** kanál je nejstabilním prostředím Microsoft Edge Preview a nejlepší volbou pro úplný pilotní nasazení v rámci vaší organizace. V případě hlavních aktualizací každých šest týdnů zahrnuje každá verze tyto učení a vylepšení z vývojového kanálu.
+    - **Vývojového** kanálu je připravený na podnikovou zpětnou vazbu ve Windows, Windows serveru a MacOS. Aktualizuje se každý týden a obsahuje nejnovější vylepšení a opravy.
 
     > [!NOTE]
     > Logo prohlížeče Microsoft Edge se zobrazí spolu s aplikací, když uživatelé procházejí portál společnosti.

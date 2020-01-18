@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c33f4429c86160bbf180c8102e2dc7532bbd80e
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 1bad86e561c8695d58296c8f473815a203ef210a
+ms.sourcegitcommit: 665be113b593c3bc7d46b99599e720f781037dcf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75886023"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76258478"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurace a používání importovaných certifikátů PKCS pomocí Intune
 
@@ -134,7 +134,7 @@ Modul PowerShell poskytuje metody pro vytvoření klíče pomocí Kryptografie s
    > [!TIP]
    > Poskytovatele, kterého použijete, musí být vybrán znovu při importu certifikátů PFX. Můžete použít **poskytovatele úložiště klíčů od Microsoftu**, i když se podporuje použití jiného poskytovatele. Název klíče je také k dispozici jako příklad a můžete použít jiný název klíče podle vašeho výběru.
 
-   Pokud plánujete importovat certifikát z pracovní stanice, můžete tento klíč exportovat do souboru pomocí následujícího příkazu: `Export-IntunePublicKey -ProviderName "<ProviderName>" -KeyName "<KeyName>" -FilePath "<File path to write to>"`
+   Pokud plánujete importovat certifikát z pracovní stanice, můžete tento klíč exportovat do souboru pomocí následujícího příkazu: `Export-IntunePublicKey -ProviderName "<ProviderName>" -KeyName "<KeyName>" -FilePath "<File path\Filename.PFX>"`
 
    Privátní klíč musí být importován na serveru, který je hostitelem konektoru certifikátů PFX pro Microsoft Intune, aby bylo možné úspěšně zpracovat importované certifikáty PFX.
 
