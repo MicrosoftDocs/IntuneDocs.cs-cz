@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c58b0b02a6e4bc82295ef959c144918e82c30b6
-ms.sourcegitcommit: 665be113b593c3bc7d46b99599e720f781037dcf
+ms.openlocfilehash: 42f1c8fae156eaf08203f4a88cad8433749940ac
+ms.sourcegitcommit: b6fe084b0419b3c9d456a8b0439b00f8c784db23
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76258447"
+ms.lasthandoff: 01/21/2020
+ms.locfileid: "76294791"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Přidejte Microsoft Edge pro Windows 10 a Microsoft Intune
 
 Než budete moct nasadit, nakonfigurovat, monitorovat nebo chránit aplikace, musíte je přidat do Intune. Jedním z dostupných [typů aplikací](~/apps/apps-add.md#app-types-in-microsoft-intune) je Microsoft Edge *verze 77 a novější*. Když vyberete tento typ aplikace v Intune, můžete přiřadit a nainstalovat Microsoft Edge *verze 77 a novější* na zařízení, která spravujete, na kterých běží Windows 10.
 
 > [!IMPORTANT]
-> Tento typ aplikace je ve **verzi Public Preview** a nabízí vývojové a beta kanály pro Windows 10. Nasazení je pouze anglické (EN), ale koncoví uživatelé mohou změnit jazyk zobrazení v prohlížeči v části **nastavení** > **jazyky**. Microsoft Edge je aplikace Win32 nainstalovaná v kontextu systému a jako architektury (aplikace x86 v operačním systému x86 a x64 v operačním systému x64). Intune zjistí všechny existující instalace Microsoft Edge. Pokud je nainstalován v uživatelském kontextu, bude instalace systému přepsána. Pokud je nainstalovaný v kontextu systému, nahlásí se úspěch instalace. Automatické aktualizace Microsoft Edge jsou navíc ve výchozím nastavení **zapnuté** a Microsoft Edge nejde odinstalovat.
+> Tento typ aplikace je ve **verzi Public Preview** a nabízí stabilní, beta a vývojové kanály pro Windows 10. Nasazení je pouze anglické (EN), ale koncoví uživatelé mohou změnit jazyk zobrazení v prohlížeči v části **nastavení** > **jazyky**. Microsoft Edge je aplikace Win32 nainstalovaná v kontextu systému a jako architektury (aplikace x86 v operačním systému x86 a x64 v operačním systému x64). Intune zjistí všechny existující instalace Microsoft Edge. Pokud je nainstalován v uživatelském kontextu, bude instalace systému přepsána. Pokud je nainstalovaný v kontextu systému, nahlásí se úspěch instalace. Automatické aktualizace Microsoft Edge jsou navíc ve výchozím nastavení **zapnuté** a Microsoft Edge nejde odinstalovat.
 
 > [!NOTE]
 > Pro macOS je k dispozici také Microsoft Edge *verze 77 a novější* .
