@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce3f73834ffdc2648dae345f8fa2a8233d2bb8c9
-ms.sourcegitcommit: e7052114324b80d0503b107c934bb90b8eb29704
+ms.openlocfilehash: 0bbcad362ef2b2dcfdd170cd2e902d55cee00310
+ms.sourcegitcommit: af384c46ec8d8def6aa32c3b89947748dc6fd28f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75756015"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76517588"
 ---
 # <a name="see-device-details-in-intune"></a>Zobrazení podrobností o zařízení v Intune
 
@@ -92,8 +92,6 @@ V závislosti na tom, jaký dopravce zařízení používá, se nemusí shromaž
 |ID aktivace EAS|Identifikátor protokolu Exchange ActiveSync zařízení|Windows, iOS, Android|
 |Pod dohledem|Pokud **Ano**, mají správci nad zařízením lepší kontrolu|Windows, iOS, Android|
 |Šifrované|Pokud **Ano**, jsou data uložená v zařízení šifrovaná|Windows, iOS, Android|
-
-\* není k dispozici v Androidu se správcem zásad Google, jako jsou plně spravovaná a vyhrazená zařízení.
 
 > [!Note]  
 > Telefonní číslo není v inventáři na vyhrazených nebo plně spravovaných zařízeních s Androidem Enterprise.

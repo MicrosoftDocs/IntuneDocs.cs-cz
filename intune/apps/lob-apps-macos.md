@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81a084528fdc500bf9b6de0ca5fa847c2e0b3797
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 6b691e628b5b1b2ea2826e57fa9c4e1f2eaf7ae7
+ms.sourcegitcommit: 70b40aa4743c8396f8d6a0163893c4a337d67c48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74563931"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76540890"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Přidání obchodních aplikací pro macOS do Microsoft Intune
 
@@ -59,7 +59,9 @@ Musíte si stáhnout externí nástroj, označit stažený nástroj jako spustit
 3. Pomocí příkazu `IntuneAppUtil` v **Intune App Wrapping Tool pro Mac** zabalte soubor obchodní aplikace *.pkg* ze souboru *.intunemac*.<br>
 
     Tady jsou vzorové příkazy pro Microsoft Intune App Wrapping Tool pro macOS:
-    
+    > [!IMPORTANT]
+    > Před spuštěním příkazů `IntuneAppUtil` zajistěte, aby `<source_file>` argumentu neobsahuje mezery.
+
     - `IntuneAppUtil -h`<br>
     Tento příkaz zobrazí informace o využití nástroje.
     

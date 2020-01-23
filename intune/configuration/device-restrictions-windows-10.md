@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae7dd4a1873cd7117870c4c1408e512831ecaa4f
-ms.sourcegitcommit: 665be113b593c3bc7d46b99599e720f781037dcf
+ms.openlocfilehash: 81da5ca8e7eaa76f9a6705cc9e3c816234c461db
+ms.sourcegitcommit: af384c46ec8d8def6aa32c3b89947748dc6fd28f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76258477"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76517554"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Windows 10 (a novějším) pro povolení nebo omezení funkcí pomocí Intune
 
@@ -850,6 +850,14 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
   [Defender/PUAProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
 - **Vyjádření souhlasu s ukázkami**: v současné době toto nastavení nemá žádný vliv. Toto nastavení nepoužívejte. Může být odebráno v budoucí verzi.
+
+- **Při přístupu k ochraně**: **blok** zabraňuje kontrole souborů, ke kterým byl přístup nebo stažen. Uživatelé ji nemůžou zapnout.
+
+  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Pokud nastavení zablokujete a pak ho změníte zpátky na **není nakonfigurované**, Intune nastavení ponechá v předchozím stavu konfigurovaném pro operační systém. Ve výchozím nastavení operační systém tuto funkci povoluje a umožňuje uživatelům ji změnit.
+
+  Intune tuto funkci nezapíná. Pokud ho chcete povolit, použijte vlastní identifikátor URI.
+
+  [Defender/AllowOnAccessProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection)
 
 - **Akce zjištěných malwarových hrozeb**: vyberte, jak chcete zpracovat vlákna malwaru. **Nenakonfigurováno** (výchozí) umožňuje programu Microsoft Defender zvolit nejlepší možnost. Pokud je nastavena možnost **Povolit**, vyberte akce, které má Defender provést pro každou úroveň hrozby, kterou zjistí: nízká, střední, vysoká a závažná. Možnosti:
   

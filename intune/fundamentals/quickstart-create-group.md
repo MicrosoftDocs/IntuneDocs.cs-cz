@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 01/17/2020
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d73cc367e6c3308b34c2d2dd14c9fed94d80ba74
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d9b06043dd10f92b6176d4b2e9f90f1b7c87aac9
+ms.sourcegitcommit: 70b40aa4743c8396f8d6a0163893c4a337d67c48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72813401"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76540944"
 ---
 # <a name="quickstart-create-a-group-to-manage-users"></a>Rychlý start: Vytvoření skupiny pro správu uživatelů
 
@@ -36,22 +36,23 @@ Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební úče
 
 ## <a name="prerequisites"></a>Požadované součásti
 
+- Předplatné Microsoft Intune – [zaregistrujte si bezplatný zkušební účet](../fundamentals/free-trial-sign-up.md).
 - K dokončení tohoto rychlého startu potřebujete [vytvořit uživatele](quickstart-create-user.md).
 
-## <a name="sign-in-to-intune"></a>Přihlášení k Intune
+## <a name="sign-in-to-intune-in-the-microsoft-endpoint-manager"></a>Přihlášení k Intune ve službě Microsoft Endpoint Manager
 
-Přihlaste se k [portálu Intune](https://aka.ms/intuneportal) jako [globální správce nebo správce služby Intune](users-add.md#types-of-administrators). Pokud jste vytvořili zkušební předplatné Intune, účet, z něhož jste toto předplatné vytvořili, je globálním správcem.
+Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) jako [globální správce nebo správce služby Intune](users-add.md#types-of-administrators). Pokud jste vytvořili zkušební předplatné Intune, účet, z něhož jste toto předplatné vytvořili, je globálním správcem.
 
 ## <a name="create-a-group"></a>Vytvoření skupiny
 
 Vytvoříte skupinu, kterou použijete později v tomto seriálu rychlých startů. Vytvoření skupiny:
 
-1. Po otevření podokna **Microsoft Intune** vyberte **Skupiny** > **Nová skupina**.
+1. Po otevření **Microsoft Endpoint Manageru**vyberte **skupiny** > **Nová skupina**.
 2. V rozevíracím seznamu **Typ skupiny** vyberte **Zabezpečení**.
 3. Do pole **název skupiny** zadejte název nové skupiny (například **testery contoso**).
-4. Přidejte **Popis** skupiny.
+4. Přidejte **Popis skupiny** .
 5. **Typ členství** nastavte na **Přiřazeno**. 
-6. Klikněte na **Členové** a v seznamu vyberte jednoho nebo více členů skupiny.
+6. V části **Členové**vyberte odkaz a přidejte v seznamu jednoho nebo více členů skupiny.
 
     ![Snímek obrazovky s vytvořením skupiny v Microsoft Intune](./media/quickstart-create-group/quickstart-use-groups-01.png)
 

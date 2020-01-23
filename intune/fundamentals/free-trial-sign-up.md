@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/09/2020
+ms.date: 01/16/2020
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35dd017eaa2dd3cd6c17dc611aaa9d457b18aca2
-ms.sourcegitcommit: 637375a390b6e34f9c4415c77b99fe2980bbf554
+ms.openlocfilehash: e1baf0b4273a9074ac7172c08240a8e3c3a9d7fa
+ms.sourcegitcommit: 70b40aa4743c8396f8d6a0163893c4a337d67c48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75839248"
+ms.lasthandoff: 01/23/2020
+ms.locfileid: "76541111"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Rychlý start: Bezplatné vyzkoušení Microsoft Intune
 
 Microsoft Intune slouží ke správě zařízení a aplikací, a pomáhá tak chránit firemní data vašich pracovníků. V tomto rychlém startu vytvoříte bezplatné předplatné, abyste si mohli vyzkoušet Intune v testovacím prostředí.
 
-Intune nabízí správu mobilních zařízení (MDM) a správu mobilních aplikací (MAM) prostřednictvím cloudové služby spravované na portálu Microsoft Azure. S Intune máte jistotu, že máte firemní prostředky svých pracovníků (data, zařízení a aplikace) správně nakonfigurované, přístupné a aktualizované a že odpovídají firemním zásadám a požadavkům souvisejícím s dodržováním předpisů.
+Intune poskytuje správu mobilních zařízení (MDM) a správu mobilních aplikací (MAM) ze zabezpečené cloudové služby spravované pomocí centra pro správu Microsoft Endpoint Manageru. S Intune máte jistotu, že máte firemní prostředky svých pracovníků (data, zařízení a aplikace) správně nakonfigurované, přístupné a aktualizované a že odpovídají firemním zásadám a požadavkům souvisejícím s dodržováním předpisů.
 
 ## <a name="prerequisites"></a>Požadované součásti
 Než budete nastavovat Microsoft Intune, projděte si následující požadavky:
@@ -60,27 +60,31 @@ Intune si můžete zdarma vyzkoušet. Zkušební doba je 30 dní. Pokud už mát
 
     ![Obrázek s informacemi o účtu](./media/free-trial-sign-up/intune-end-of-sign-up-process.png) 
 
-## <a name="sign-in-to-the-azure-portal"></a>Přihlášení na webu Azure Portal
+## <a name="sign-in-to-intune-in-the-microsoft-endpoint-manager"></a>Přihlášení k Intune ve službě Microsoft Endpoint Manager
 
-1. Otevřete nové okno prohlížeče a do adresního řádku zadejte **https://portal.azure.com** . 
-2. K přihlášení použijte přihlašovací údaje, které jste získali v předchozích krocích.
+Pokud ještě nejste přihlášení k portálu, proveďte následující kroky:
 
-    ![Obrázek přihlašovací stránky webu Azure Portal](./media/free-trial-sign-up/azure-portal-signin.png)
+1. Otevřete nové okno prohlížeče a do adresního řádku zadejte **https://devicemanagement.microsoft.com** . 
+2. Přihlaste se pomocí ID uživatele, které jste provedli v krocích uvedených výše ( *yourID@yourdomain* . onmicrosoft.com).
 
-3. Chcete-li zobrazit Microsoft Intune v Azure Portal, vyberte **všechny služby** z bočního panelu na levé straně stránky.
-4. Do filtrovacího pole zadejte **Microsoft Intune** a pak tuto možnost vyberte.
-5. Když vyberete **hvězdičku**, přidá se Intune na konec seznamu oblíbených služeb a otevře se řídicí panel Intune.
+    ![Obrázek přihlašovací stránky portálu](./media/free-trial-sign-up/azure-portal-signin.png)
 
 Když si zaregistrujete zkušební verzi, přijde vám e-mailová zpráva s informacemi o vašem účtu a e-mailovou adresou, kterou jste zadali při registraci. Ta potvrzuje, že je vaše zkušební verze aktivní.
 
 > [!TIP]
-> Když v prohlížeči místo privátního režimu použijete normální režim, budete mít při práci na webu Azure Portal lepší výsledky.
+> Při práci s Microsoft Endpoint Managerem můžete mít lepší výsledky pracovat s prohlížečem v normálním režimu, nikoli v privátním režimu.
 
-## <a name="set-the-mdm-authority-to-intune"></a>Nastavení autority MDM na Intune
+## <a name="confirm-the-mdm-authority-in-intune"></a>Potvrzení autority MDM v Intune
 
-Po přihlášení na webu Azure Portal a výběru Intune se může zobrazit oranžová informační zpráva, že jste ještě nenastavili autoritu pro správu mobilních zařízení (MDM). Nastavení autority pro správu mobilních zařízení (MDM) určuje způsob správy zařízení. Napřed je potřeba nastavit autoritu pro správu mobilních zařízení, aby si uživatelé mohli zaregistrovat do správy zařízení.
+Ve výchozím nastavení se Autorita MDM nastaví při vytváření bezplatné zkušební verze. Pomocí následujících kroků můžete potvrdit, že je Autorita MDM nastavená:
 
-K nastavení autority MDM na Intune použijte následující postup:
+1. Pokud ještě nejste přihlášení, přihlaste se ke službě Microsoft Endpoint Manager.
+2. Klikněte na **Správa tenanta**.
+3. Zobrazit podrobnosti o tenantovi. **Autorita MDM** by měla být nastavená na **Microsoft Intune**.
+
+Pokud se po přihlášení ke službě Microsoft Endpoint Manager zobrazí oranžová zpráva oznamující, že jste ještě nestavili autoritu MDM, můžete ji aktivovat v tuto chvíli. Nastavení autority pro správu mobilních zařízení (MDM) určuje způsob správy zařízení. Napřed je potřeba nastavit autoritu pro správu mobilních zařízení, aby si uživatelé mohli zaregistrovat do správy zařízení.
+
+### <a name="to-set-the-mdm-authority-to-intune-follow-these-steps"></a>Pokud chcete nastavit autoritu MDM na Intune, postupujte podle těchto kroků:
 
 1. Otevřete nové okno prohlížeče a do adresního řádku zadejte **https://portal.azure.com** . 
 2. Zvolte **Všechny služby** > **Microsoft Intune**.
@@ -121,9 +125,9 @@ Jak je uvedeno výše, pokud má vaše organizace vlastní doménu, kterou chcet
 
 ## <a name="admin-experiences"></a>Prostředí pro správu
 
-Existují dva portály, které můžete použít:
-- Řídicí panel Intune v Azure ([portal.azure.com](https://portal.azure.com)), kde můžete prozkoumat [možnosti Intune](what-is-intune.md). Na řídicím panelu Intune budete obvykle pracovat.
-- Centrum pro správu Microsoft 365 ([admin.Microsoft.com](https://admin.microsoft.com)) je místo, kde můžete přidávat a spravovat uživatele, pokud pro tuto možnost nepoužíváte Azure Active Directory. Můžete také spravovat další oblasti svého účtu, včetně fakturace a podpory.
+K dispozici jsou dva portály, které budete používat nejčastěji:
+- Centrum pro správu Microsoft Endpoint Manageru ([https://devicemanagement.microsoft.com/](https://devicemanagement.microsoft.com/)) je tam, kde můžete prozkoumat [Možnosti Intune](what-is-intune.md). V takovém případě bude správce spolupracovat s Intune.
+- Pokud pro tuto možnost nepoužíváte Azure Active Directory, můžete přidat a spravovat uživatele v centru pro správu Microsoft 365 ([https://admin.microsoft.com](https://admin.microsoft.com)). Můžete také spravovat další oblasti svého účtu, včetně fakturace a podpory.
 
 ## <a name="next-steps"></a>Další kroky
 
