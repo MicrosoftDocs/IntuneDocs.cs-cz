@@ -5,13 +5,13 @@
   items:
     - name: Přehled správy aplikací
       href: app-management.md
-- name: Rychlý start
+- name: Rychlé starty
   items:
     - name: Přidání a přiřazení aplikace
       href: quickstart-add-assign-app.md
     - name: Vytvoření a přiřazení zásady ochrany aplikace
       href: quickstart-create-assign-app-policy.md
-- name: Kurzy
+- name: Výukové kurzy
   items:
     - name: Ochrana e-mailu na nespravovaných zařízeních
       href: ../protect/tutorial-protect-email-on-unmanaged-devices.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
@@ -45,7 +45,7 @@
               href: store-apps-windows-phone-8-1.md
             - name: Aplikace pro Windows
               href: store-apps-windows.md
-            - name: Aplikace pro Microsoft Store pro firmy
+            - name: Aplikace z Microsoft Storu pro firmy
               href: windows-store-for-business.md
             - name: Spravované aplikace Google Play
               href: apps-add-android-for-work.md
@@ -133,8 +133,6 @@
               href: manage-microsoft-edge.md
             - name: Konfigurace Outlooku
               href: app-configuration-policies-outlook.md
-            - name: Konfigurace S/MIME pro Outlook
-              href: app-configuration-policies-outlook-smime.md
             - name: Konfigurace Google Chromu pro Android
               href: apps-configure-chrome-android.md
         - name: hromadně zakoupené aplikace a knihy
@@ -184,12 +182,14 @@
               href: windows-information-protection-policy-create.md
             - name: Správa přenosu dat mezi aplikacemi pro iOS
               href: data-transfer-between-apps-manage-ios.md
-    - name: Řešení problémů
+    - name: Odstraňování potíží
       items:
         - name: Pomoc uživatelům s řešením problémů
           href: ../fundamentals/help-desk-operators.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
         - name: Řešení problémů s instalací aplikací
           href: troubleshoot-app-install.md
+        - name: Chyby při instalaci aplikace – referenční dokumentace
+          href: app-install-error-codes.md
         - name: Řešení potíží se správou mobilních aplikací
           href: troubleshoot-mam.md
         - name: Kontrola protokolů ochrany aplikace
