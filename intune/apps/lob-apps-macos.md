@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b691e628b5b1b2ea2826e57fa9c4e1f2eaf7ae7
-ms.sourcegitcommit: 70b40aa4743c8396f8d6a0163893c4a337d67c48
+ms.openlocfilehash: c7aa6af751e5ab3e1e3cdff6b1d2e3d6693f65df
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76540890"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755166"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Přidání obchodních aplikací pro macOS do Microsoft Intune
 
@@ -71,48 +71,63 @@ Musíte si stáhnout externí nástroj, označit stažený nástroj jako spustit
     - `IntuneAppUtil -r <filename.intunemac> [-v]`<br>
     Tento příkaz extrahuje zjištěné parametry a verze vytvořeného souboru *.intunemac*.
 
-## <a name="step-1---specify-the-software-setup-file"></a>Krok 1 – určení instalačního souboru softwaru
+## <a name="select-the-app-type"></a>Vyberte typ aplikace.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
-3. V podokně **Přidat aplikaci** vyberte jako **Typ aplikace** **obchodní aplikaci** .
+3. V podokně **Vybrat typ aplikace** v části **ostatní** typy aplikací vyberte **obchodní aplikace**.
+4. Klikněte na **Vybrat**. Zobrazí se kroky **Přidání aplikace** .
 
-## <a name="step-2---configure-the-app-package-file"></a>Krok 2 – konfigurace souboru balíčku aplikace
+## <a name="step-1---app-information"></a>Krok 1 – informace o aplikaci
 
-1. V podokně **Přidat aplikaci** zvolte **Soubor balíčku aplikace**.
-2. V podokně **Soubor balíčku aplikace** klikněte na tlačítko Procházet a vyberte instalační soubor macOS s příponou *.intunemac*.
-3. Po dokončení zvolte **OK**.
+### <a name="select-the-app-package-file"></a>Vyberte soubor balíčku aplikace.
 
+1. V podokně **Přidat aplikaci** klikněte na **Vybrat soubor balíčku aplikace**. 
+2. V podokně **Soubor balíčku aplikace** vyberte tlačítko Procházet. Pak vyberte instalační soubor macOS s příponou *. intunemac*.
+   Zobrazí se podrobnosti o aplikaci.
+3. Až budete hotovi, vyberte **OK** v podokně **soubor balíčku aplikace** a přidejte aplikaci.
 
-## <a name="step-3---configure-app-information"></a>Krok 3 – konfigurace informací o aplikaci
+### <a name="set-app-information"></a>Nastavení informací o aplikaci
 
-1. V podokně **Přidat aplikaci** zvolte **Informace o aplikaci**.
-2. V podokně **Informace o aplikaci** přidejte podrobnosti o aplikaci. V závislosti na zvolené aplikaci můžou být některé hodnoty v tomto podokně vyplněné automaticky:
-    - **Název** – zadejte název aplikace, který se zobrazí na portálu společnosti. Ověřte, že názvy všech používaných aplikací jsou jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti uživatelům jenom jedna z aplikací.
-    - **Popis** – zadejte popis aplikace, který se zobrazí uživatelům na portálu společnosti.
-    - **Vydavatel** – zadejte název vydavatele aplikace.
-    - **Minimální operační systém** – v seznamu zvolte minimální verzi operačního systému, na kterou lze aplikaci nainstalovat. Pokud aplikaci přiřadíte k zařízení se starším operačním systémem, nenainstaluje se.
-    - **Kategorie** – vyberte jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste si vytvořili sami. Uživatelé tak dokážou aplikaci při procházení portálu společnosti najít jednodušeji.
-    - **Zobrazit na Portálu společnosti jako vybranou aplikaci** – aplikace se zobrazí na význačném místě hlavní stránky portálu společnosti, když uživatelé vyhledávají aplikace.
-    - **Adresa URL informací** – volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
-    - **Adresa URL informací o ochraně osobních údajů** – volitelně zadejte adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
-    - **Vývojář** – volitelně zadejte jméno vývojáře aplikace.
-    - **Vlastník** – volitelně zadejte vlastníka aplikace, například **Personální oddělení**.
-    - **Poznámky** – zadejte jakékoli poznámky, které chcete k aplikaci přidružit.
-    - **Logo** – nahrajte ikonu, která se přidruží k aplikaci. Tato ikona se u aplikace zobrazuje, když uživatelé procházejí portál společnosti.
-3. Po dokončení zvolte **OK**.
+1. Na stránce **informace o aplikaci** přidejte podrobnosti o aplikaci. V závislosti na zvolené aplikaci můžou být některé hodnoty v tomto podokně vyplněné automaticky:
+    - **Název**: Zadejte název aplikace, který se zobrazí na portálu společnosti. Ověřte, že názvy všech používaných aplikací jsou jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti jen jedna z aplikací.
+    - **Popis**: Zadejte popis aplikace. Popis se zobrazí na portálu společnosti.
+    - **Vydavatel**: Zadejte název vydavatele aplikace.
+    - **Minimální operační systém**: V seznamu zvolte minimální verzi operačního systému, na kterou jde aplikaci nainstalovat. Pokud aplikaci přiřadíte k zařízení se starším operačním systémem, nenainstaluje se.
+    - **Kategorie**: Vyberte jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste si vytvořili sami. Díky kategoriím uživatelé aplikaci při procházení portálu společnosti snadněji najdou.
+    - **Zobrazit tuto aplikaci jako doporučenou aplikaci v portál společnosti**: když uživatelé vyhledávají aplikace, zobrazí se na hlavní stránce portálu společnosti výrazně.
+    - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí na portálu společnosti.
+    - **Adresa URL informací o ochraně osobních údajů**: Volitelně zadejte adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí na portálu společnosti.
+    - **Vývojář**: Volitelně zadejte jméno vývojáře aplikace.
+    - **Vlastník**: Volitelně zadejte jméno vlastníka aplikace. Zadat můžete například **Personální oddělení**.
+    - **Poznámky**: Zadejte jakékoli poznámky, které chcete k aplikaci přidružit.
+    - **Logo**: Nahrajte ikonu, která se k aplikaci přidruží. Tato ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
+2. Kliknutím na tlačítko **Další** zobrazíte stránku **značky oboru** .
 
-## <a name="step-4---finish-up"></a>Krok 4 – dokončení
+## <a name="step-2---select-scope-tags-optional"></a>Krok 2 – výběr značek oboru (volitelné)
+Pomocí značek Scope můžete určit, kdo může v Intune zobrazit informace o klientské aplikaci. Úplné podrobnosti o značkách oboru najdete v tématu [použití značek řízení přístupu na základě role a rozsahu pro distribuci IT](../fundamentals/scope-tags.md).
 
-1. V podokně **Přidat aplikaci** ověřte správnost podrobností o aplikaci.
-2. Zvolte **Přidat** a nahrajte aplikaci do Intune.
+1. Klikněte na **Vybrat značky oboru** a volitelně přidejte značky oboru pro aplikaci. 
+2. Kliknutím na tlačítko **Další** zobrazíte stránku **přiřazení** .
+
+## <a name="step-3---assignments"></a>Krok 3 – přiřazení
+
+1. Vyberte **požadované**, **dostupné pro zaregistrovaná zařízení**nebo **odinstalujte** přiřazení skupin pro aplikaci. Další informace najdete v tématech [Přidání skupin pro uspořádání uživatelů a zařízení](~/fundamentals/groups-add.md) a [přiřazení aplikací do skupin pomocí Microsoft Intune](apps-deploy.md).
+2. Kliknutím na **Další** zobrazte stránku **Revize + vytvořit** . 
+
+## <a name="step-4---review--create"></a>Krok 4 – přezkoumání a vytvoření
+
+1. Zkontrolujte hodnoty a nastavení, které jste zadali pro aplikaci.
+2. Po dokončení klikněte na **vytvořit** , aby se aplikace přidala do Intune.
+
+    Zobrazí se okno **Přehled** pro obchodní aplikaci.
 
 Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřadit ke zvoleným skupinám. Nápovědu najdete v článku [Přiřazení aplikací do skupin](apps-deploy.md).
 
 > [!NOTE]
 > Pokud soubor *.pkg* obsahuje více aplikací nebo instalačních programů aplikací, pak Microsoft Intune ohlásí, že je *aplikace* úspěšně nainstalovaná, jenom když se v zařízení zjistí všechny nainstalované aplikace.
 
-## <a name="step-5---update-a-line-of-business-app"></a>Krok 5 – aktualizace obchodní aplikace
+## <a name="update-a-line-of-business-app"></a>Aktualizace obchodní aplikace
 
 [!INCLUDE [shared-proc-lob-updateapp](../includes/shared-proc-lob-updateapp.md)]
 

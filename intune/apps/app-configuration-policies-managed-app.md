@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68032f47be043e8c49b6ad922392d14549293c35
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 06c1119b474d82c4d00db3276179b962ff5b5a44
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74564276"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755557"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Přidání zásad konfigurace aplikací pro spravované aplikace bez registrace zařízení
 
@@ -33,16 +33,29 @@ Zásady konfigurace aplikací můžete používat se spravovanými aplikacemi, k
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **aplikace** > **zásady konfigurace aplikací** > **Přidat** > **spravované aplikace**.
-3. Zadejte tyto podrobnosti:
-    - **Název**  
-      Název profilu, který se zobrazí na portálu Azure Portal
-    - **Popis**  
-      Popis profilu, který se zobrazí na portálu Azure Portal
+3. Na stránce **základy** nastavte následující podrobnosti:
+    - **Name (název**): název profilu, který se zobrazí v Azure Portal.
+    - **Popis**: popis profilu, který se zobrazí v Azure Portal.
+    - **Typ registrace zařízení**: je vybraná možnost spravované aplikace.
 4. Zvolte **Vybrat veřejné aplikace** nebo **zvolte vlastní aplikace** a zvolte aplikaci, kterou chcete konfigurovat. Ze seznamu vyberte některou z aplikací, kterou jste schválili a synchronizovali s Intune.
-5. Pro každé nastavení konfigurace podporované aplikací zadejte **název** a **hodnotu**.  
+5. Kliknutím na **Další** zobrazte stránku **Nastavení** .
+6. Pro každé nastavení konfigurace podporované aplikací zadejte **název** a **hodnotu**. 
+
+   Aplikace s povolenou sadou Intune App SDK podporují konfigurace v párech klíč-hodnota. Nahlédněte do dokumentace k jednotlivým aplikacím, kde zjistíte, které konfigurace klíč-hodnota se podporují. Připomínáme, že můžete používat tokeny, které se budou dynamicky plnit daty generovanými aplikací. Další informace najdete v tématu [konfigurační hodnoty pro používání tokenů](~/apps/app-configuration-policies-managed-app.md#configuration-values-for-using-tokens). Informace o nastavení zásad konfigurace aplikace Outlook pro iOS najdete v článku [Správa konfigurace aplikace Outlook pro iOS pomocí Microsoft Intune](https://technet.microsoft.com/library/mt813789(v=exchg.150).aspx).
+
     Pokud chcete konfiguraci odstranit, zvolte tři tečky ( **…** ) a vyberte **Odstranit**.  
-    
-Aplikace s povolenou sadou Intune App SDK podporují konfigurace v párech klíč-hodnota. Nahlédněte do dokumentace k jednotlivým aplikacím, kde zjistíte, které konfigurace klíč-hodnota se podporují. Připomínáme, že můžete používat tokeny, které se budou dynamicky plnit daty generovanými aplikací. Informace o nastavení zásad konfigurace aplikace Outlook pro iOS najdete v článku [Správa konfigurace aplikace Outlook pro iOS pomocí Microsoft Intune](https://technet.microsoft.com/library/mt813789(v=exchg.150).aspx).
+
+7. Kliknutím na tlačítko **Další** zobrazíte stránku **přiřazení** .
+8. Klikněte na **Vybrat skupiny, které chcete zahrnout**.
+9. V podokně **Vybrat skupiny, které se mají zahrnout** vyberte skupinu a klikněte na **Vybrat**.
+10. Klikněte na možnost **Vybrat skupiny, které se vyloučí** a zobrazte tak související podokno.
+11. Vyberte skupiny, které chcete vyloučit, a potom klikněte na **Vybrat**.
+
+    >[!NOTE]
+    >Pokud přidáváte skupinu a pro daný typ přiřazení už byla zahrnuta jakákoliv jiná skupina, je pro ostatní typy zahrnutí přiřazení předem vybraná a není ji možné změnit. Tato použitá skupina se tedy nedá použít jako vyloučená skupina.
+
+12. Kliknutím na **Další** zobrazte stránku **Revize + vytvořit** .
+13. Kliknutím na **vytvořit** přidejte zásady konfigurace aplikací do Intune.
 
 ## <a name="configuration-values-for-using-tokens"></a>Hodnoty konfigurace pro používání tokenů
 
@@ -57,7 +70,6 @@ Intune podporuje v nastavení konfigurace následující typy tokenů. Jiné vla
 - \{\{userid\}\} – například 3ec2c00f-b125-4519-acf0-302ac3761822.
 - \{\{username\}\} – například John Doe.
 - \{\{PrimarySMTPAddress\}\} – například testuser@ad.domain.com.
-
 
 > [!Note]  
 > Znaky \{\{ a \}\} se používají jenom pro typy tokenů a nesmí se používat pro jiné účely.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93570bc9dab20801ea6681f6a142de62990a1c57
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 061644a1c83b02902a6bbdaf3cfbd04815d32ea3
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73712964"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755030"
 ---
 # <a name="manually-add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Ruční přidání aplikace Portál společnosti pro Windows 10 pomocí Microsoft Intune
 
@@ -56,7 +56,7 @@ Vaši uživatelé si mohou nainstalovat aplikaci Portál společnosti sami z Mic
     Tuto akci je nutné provést pro architektury x86, x64 a ARM:<br> 
     *V případě, že při výběru 1607 použijete 1507 jako minimální verzi operačního systému, 12 balíčků při výběru 1511 a 15 balíčků, jsou k dispozici 9 požadovaných balíčků rozhraní.*
 
-8. V Microsoft Intune na portálu Azure Portal nahrajte aplikaci Portál společnosti jako novou aplikaci. Aplikaci přidáte tak, že jako **Typ aplikace** v podokně **Přidat aplikaci** vyberete obchodní aplikace. Pak vyberte soubor balíčku aplikace (přípona. AppxBundle).
+8. V Microsoft Intune na portálu Azure Portal nahrajte aplikaci Portál společnosti jako novou aplikaci. Aplikaci přidáte tak, že jako **Typ aplikace** v podokně **Vybrat typ aplikace** vyberete obchodní aplikace. Pak vyberte soubor balíčku aplikace (přípona. AppxBundle).
 
 9. V části **Vybrat soubory aplikací závislosti** vyberte všechny závislosti, které jste stáhli v kroku 7, kliknutím na tlačítko Shift a ověřte, zda se v **přidaném** sloupci zobrazí **Ano** pro architektury, které potřebujete.
 

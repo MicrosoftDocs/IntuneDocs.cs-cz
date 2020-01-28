@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68e2e768067a88b8ae58adeb38c17d90ac995a30
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 90cdff66d32ac5edb3b1867a545f2c9627ccfe39
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74781222"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754775"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Přidání webových aplikací do Microsoft Intune
 
@@ -46,9 +46,9 @@ Pokud chcete přidat aplikaci do Intune v podobě zástupce aplikace na webu, po
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
-3. V podokně **Přidat aplikaci** vyberte v rozevíracím seznamu **Typ aplikace** typ **Webový odkaz**.
-4. Vyberte **Konfigurovat**.
-5. V podokně **Informace o aplikaci** přidejte tyto údaje:
+3. V podokně **Vybrat typ aplikace** vyberte v části dostupné **jiné** typy možnost **webový odkaz**.
+4. Klikněte na **Vybrat**. Zobrazí se kroky **Přidání aplikace** .
+5. Na stránce **informace o aplikaci** přidejte následující informace:
     - **Název**: Zadejte název aplikace, který se zobrazí na Portálu společnosti. 
 
         > [!NOTE]
@@ -58,11 +58,17 @@ Pokud chcete přidat aplikaci do Intune v podobě zástupce aplikace na webu, po
     - **Vydavatel**: Zadejte název vydavatele této aplikace.
     - **Adresa URL aplikace**: Zadejte adresu URL webu hostujícího aplikaci, kterou chcete přiřadit.
     - **Kategorie**: Volitelně můžete vybrat jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste vytvořili. Uživatelé tak při procházení Portálu společnosti najdou aplikaci snadněji.
-    - **Zobrazit na Portálu společnosti jako vybranou aplikaci:** Vybráním této možnosti se sada aplikací zobrazí uživatelům, kteří hledají aplikace, na výrazném místě na hlavní stránce Portálu společnosti.
+    - **Zobrazit tuto aplikaci jako doporučenou aplikaci v portál společnosti**: tuto možnost vyberte, pokud chcete, aby se sada aplikací zobrazovala na hlavní stránce portálu společnosti, když uživatelé vyhledávají aplikace.
     - **K otevření tohoto odkazu vyžadovat spravovaný prohlížeč**: Tuto možnost vyberte, pokud chcete uživatelům webu nebo webové aplikace přiřadit odkaz, který mohou otevřít v prohlížeči spravovaném v Intune. Tento prohlížeč musí být nainstalovaný na jejich zařízení.
     - **Logo**: Nahrajte ikonu, která se přidruží k aplikaci. Tato ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
-6. Vyberte **OK**.
-7. V podokně **Přidat aplikaci** zvolte **Přidat**.
+6. Kliknutím na tlačítko **Další** zobrazíte stránku **značky oboru** .
+7. Klikněte na **Vybrat značky oboru** a volitelně přidejte značky oboru pro aplikaci. Další informace najdete v tématu [použití řízení přístupu na základě role (RBAC) a značek oboru pro distribuci](~/fundamentals/scope-tags.md).
+8. Kliknutím na tlačítko **Další** zobrazíte stránku **přiřazení** .
+9. Vyberte přiřazení skupin pro aplikaci. Další informace najdete v tématu [Přidání skupin pro uspořádání uživatelů a zařízení](~/fundamentals/groups-add.md). 
+10. Kliknutím na **Další** zobrazte stránku **Revize + vytvořit** . Zkontrolujte hodnoty a nastavení, které jste zadali pro aplikaci.
+11. Po dokončení klikněte na **vytvořit** , aby se aplikace přidala do Intune.
+
+    Zobrazí se okno **Přehled** aplikace, kterou jste vytvořili.
 
 > [!Note]
 > V současnosti jsou webové aplikace nasazené do zařízení s iOS v Intune přidružené k profilu pro správu, takže nejdou odebrat ručně. Na portálu Intune můžete typ nasazení změnit na **Odinstalovat**. V tom případě můžete webovou aplikaci odebrat automaticky. Pokud byste, ještě než změníte přiřazení aplikace na **Odinstalovat**, odebrali nasazení, zůstane webová aplikace trvale v zařízení, dokud v Intune nezrušíte jeho registraci.

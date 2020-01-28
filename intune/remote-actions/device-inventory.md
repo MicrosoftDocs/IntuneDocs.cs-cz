@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bbcad362ef2b2dcfdd170cd2e902d55cee00310
-ms.sourcegitcommit: af384c46ec8d8def6aa32c3b89947748dc6fd28f
+ms.openlocfilehash: 11e3465c583197582a545cdd6f4b71bc8d24e115
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76517588"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754197"
 ---
 # <a name="see-device-details-in-intune"></a>Zobrazení podrobností o zařízení v Intune
 
@@ -84,7 +84,7 @@ V závislosti na tom, jaký dopravce zařízení používá, se nemusí shromaž
 |ICCID|Identifikátor karty s integrovaným obvodem, což je jedinečné identifikační číslo SIM karty|Windows, iOS, Android|
 |Datum zápisu|Datum a čas, kdy se zařízení zaregistrovalo v Intune|Windows, iOS, Android|
 |Poslední kontakt|Datum a čas posledního připojení zařízení k Intune|Windows, iOS, Android|
-|Kód pro obejití zámku aktivace|Kód, který se dá použít k obejití zámku aktivace|iOS|
+|Kód pro obejití zámku aktivace|Kód, který lze použít k zakázání zámku aktivace.|iOS|
 |Registrováno v Azure AD|Pokud **Ano**, zařízení je registrované v Azure Active Directory|Windows, iOS, Android|
 |Intune je zaregistrované.|Pokud **Ano**, zařízení je zaregistrované v Intune.|Windows, iOS, Android|
 |Dodržování předpisů|Stav dodržování předpisů zařízení|Windows, iOS, Android|

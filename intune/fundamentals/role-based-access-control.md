@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a03366037f9b0eced70f0375b3f4b39401e3141
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 8441a93a34af68a680aec2f48b3a5375fa74558c
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72509805"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754299"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Řízení přístupu na základě role (RBAC) s Microsoft Intune
 
@@ -52,6 +52,7 @@ Předdefinované role můžete přiřadit skupinám bez další konfigurace. Nem
 - **Správce aplikací**: Spravuje mobilní a spravované aplikace, může číst informace o zařízeních a zobrazit konfigurační profily zařízení.
 - **Správce role Intune**: spravuje vlastní role Intune a přidává přiřazení pro předdefinované role Intune. Je to jediná role Intune, která může přiřazovat oprávnění správcům.
 - **Školní správce**: spravuje zařízení s Windows 10 v [Intune for Education](../introduction-intune-education.md).
+- **Endpoint Security Manager**: spravuje funkce zabezpečení a dodržování předpisů, jako jsou například standardní hodnoty zabezpečení, dodržování předpisů zařízením, podmíněný přístup a ATP v programu Microsoft Defender.
 
 ### <a name="custom-roles"></a>Vlastní role
 Můžete vytvořit vlastní role s vlastními oprávněními. Další informace o vlastních rolích najdete v tématu [Vytvoření vlastní role](create-custom-role.md).
@@ -59,12 +60,12 @@ Můžete vytvořit vlastní role s vlastními oprávněními. Další informace 
 ### <a name="azure-active-directory-roles-with-intune-access"></a>Azure Active Directory role s přístupem k Intune
 | Role Azure Active Directory | Všechna data Intune | Data auditu Intune |
 | --- | :---: | :---: |
-| Globální správce | Čtení/zápis | Čtení/zápis |
-| Správce služby Intune | Čtení/zápis | Čtení/zápis |
+| Globální správce | Čtení a zápis | Čtení a zápis |
+| Správce služby Intune | Čtení a zápis | Čtení a zápis |
 | Správce podmíněného přístupu | Žádné | Žádné |
-| Správce zabezpečení | Jen pro čtení | Jen pro čtení |
+| Správce zabezpečení | Jen pro čtení (úplná oprávnění správce pro uzel Security Endpoint Security) | Jen pro čtení |
 | Operátor zabezpečení | Jen pro čtení | Jen pro čtení |
-| Čtenář zabezpečení | Jen pro čtení | Jen pro čtení |
+| Čtecí modul zabezpečení | Jen pro čtení | Jen pro čtení |
 | Správce dodržování předpisů | Žádné | Jen pro čtení |
 | Správce dat dodržování předpisů | Žádné | Jen pro čtení |
 | Globální čtenář | Jen pro čtení | Jen pro čtení |

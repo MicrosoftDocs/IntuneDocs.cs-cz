@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a5381d139247424d976b6b510d62681f623203a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: ac63ef1f35e7b4730e275c6c9e566c53463c72ce
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72490505"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754792"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Používání Azure AD pro přístup k rozhraním Intune API v Microsoft Graphu
 
@@ -68,7 +68,7 @@ Postup pro registraci aplikace k používání rozhraní Microsoft Graph API:
     - Účet správce tenanta
     - Uživatelský účet tenanta se zapnutou možností **Uživatelé můžou registrovat aplikace**
 
-2. V nabídce zvolte **Azure Active Directory** &gt; **Registrace aplikací**.
+2. V nabídce vyberte **Azure Active Directory** &gt; **Registrace aplikací**.
 
     <img src="../media/azure-ad-app-reg.png" width="157" height="170" alt="The App registrations menu command" />
 
@@ -90,15 +90,15 @@ Postup pro registraci aplikace k používání rozhraní Microsoft Graph API:
 
     1. Všimněte si hodnoty **ID aplikace**.
 
-    2. Zvolte **Nastavení** &gt; **Přístup přes rozhraní API** &gt; **Požadovaná oprávnění**.
+    2. Vyberte **nastavení** &gt; **přístup k rozhraní API** &gt; **požadovaná oprávnění**.
 
     <img src="../media/azure-ad-req-perm.png" width="483" height="186" alt="The Required permissions setting" />
 
-6. V okně **Požadovaná oprávnění** zvolte **Přidat** &gt; **Přidat přístup přes rozhraní API** &gt; **Vyberte rozhraní API**.
+6. V okně **požadovaná oprávnění** zvolte **Přidat** &gt; **přidat přístup k rozhraní API** &gt; **Vyberte rozhraní API**.
 
     <img src="../media/azure-ad-add-graph.png" width="436" height="140" alt="The Microsoft Graph setting" />
 
-7. V okně **Vyberte rozhraní API** zvolte **Microsoft Graph** &gt; **Vybrat**.  Otevře se okno **Povolit přístup**, které obsahuje obory oprávnění dostupné pro aplikaci.
+7. V okně **Vybrat rozhraní API** zvolte **Microsoft Graph** &gt; **Vybrat**.  Otevře se okno **Povolit přístup**, které obsahuje obory oprávnění dostupné pro aplikaci.
 
     <img src="../media/azure-ad-perm-scopes.png" width="489" height="248" alt="Intune Graph API permission scopes" />
 
@@ -240,7 +240,7 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
 
 - Povolené jsou i tyto vzdálené akce:
   - Najít zařízení
-  - Vynechat zámek aktivace
+  - Zakázat Zámek aktivace
   - Požádat o vzdálenou pomoc
 
 ### <a name="rac-ro"></a>DeviceManagementRBAC.Read.All

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d5a3204721a0d40cfb5bf729ca17ef8e4ded1f0f
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 0d4bbd0a5b57391edad726c7e936d0072a791673
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885776"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755761"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOSem
 
@@ -51,34 +51,39 @@ Když máte vybrané zahrnuté skupiny pro zásady konfigurace aplikace, můžet
 ## <a name="create-an-app-configuration-policy"></a>Vytvoření zásad konfigurace aplikací
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Vyberte **aplikace** > **zásady konfigurace aplikací** > **Přidat** > **spravovaná zařízení**.
-3. Zadejte tyto podrobnosti:
+2. Vyberte **aplikace** > **zásady konfigurace aplikací** > **Přidat** > **spravovaná zařízení**. Všimněte si, že si můžete vybrat mezi **spravovanými zařízeními** a **spravovanými aplikacemi**. Další informace najdete v tématu [aplikace, které podporují konfiguraci aplikací](~/apps/app-configuration-policies-overview.md#apps-that-support-app-configuration).
+3. Na stránce **základy** nastavte následující podrobnosti:
     - **Název**: Název profilu, který se zobrazí na portálu Azure Portal
     - **Popis**: Popis profilu, který se zobrazí na portálu Azure Portal
     - **Typ registrace zařízení** – toto nastavení je nastavené na **spravovaná zařízení**.
-4. V poli **Platforma** vyberte **iOS**.
-5. Zvolte **Přidružená aplikace**. Pak v podokně **Přidružená aplikace** zvolte spravovanou aplikaci, u které chcete použít danou konfiguraci, a vyberte **OK**.
-6. Zvolením **Možnosti nastavení konfigurace** zobrazíte podokno **nastavení konfigurace** .
-7. Vyberte **Formát nastavení konfigurace**. Chcete-li přidat informace o konfiguraci, vyberte jednu z následujících metod:
+4. Jako **platformu**vyberte **iOS/iPadOS** .
+5. Klikněte na **Vybrat aplikaci** vedle **cílové aplikace**. Zobrazí se podokno **přidružená aplikace** . 
+6. V podokně **cílová aplikace** vyberte spravovanou aplikaci, kterou chcete přidružit k zásadám konfigurace, a klikněte na **OK**.
+7. Kliknutím na **Další** zobrazte stránku **Nastavení** .
+8. V rozevíracím seznamu vyberte **formát nastavení konfigurace**. Chcete-li přidat informace o konfiguraci, vyberte jednu z následujících metod:
     - **Použití návrháře konfigurace**
     - **Zadání XML dat**<br><br>
     Podrobnosti o používání návrháře konfigurace najdete v části [Použití návrháře konfigurace](#use-configuration-designer). Podrobnosti o zadávání XML dat najdete v části [Zadání XML dat](#enter-xml-data). 
-8. Po přidání informací o konfiguraci klikněte na **tlačítko OK**a potom přidejte zásadu konfigurace kliknutím na tlačítko **Přidat** . Zobrazí se podokno s přehledem zásad konfigurace.
-9. Po výběru možnosti **Přiřazení** se zobrazí možnosti zahrnutí a vyloučení. 
+9. Kliknutím na tlačítko **Další** zobrazíte stránku **přiřazení** .
+10. V rozevíracím seznamu vedle pole **přiřadit k**vyberte možnost **vybrané skupiny**, **Všichni uživatelé**, **všechna zařízení**nebo **Všichni uživatelé a všechny** oddálení, aby bylo možné zásadu konfigurace aplikace přiřadit k.
 
     ![Snímek obrazovky s přiřazením zásad – karta Zahrnout](./media/app-configuration-policies-use-ios/app-config-policy01.png)
-10. Na kartě **Zahrnout** vyberte **Všichni uživatelé**.
+
+11. Vyberte možnost **Všichni uživatelé** v rozevíracím seznamu.
 
     ![Snímek obrazovky s přiřazením zásad – možnost rozevírací nabídky Všichni uživatelé](./media/app-configuration-policies-use-ios/app-config-policy02.png)
-11. Vyberte kartu **Vyloučit**. 
+
 12. Klikněte na možnost **Vybrat skupiny, které se vyloučí** a zobrazte tak související podokno.
 
     ![Snímek obrazovky s přiřazením zásad – vyberte skupiny, které chcete vyloučit.](./media/app-configuration-policies-use-ios/app-config-policy03.png)
+
 13. Vyberte skupiny, které chcete vyloučit, a potom klikněte na **Vybrat**.
 
     >[!NOTE]
     >Pokud přidáváte skupinu a pro daný typ přiřazení už byla zahrnuta jakákoliv jiná skupina, je pro ostatní typy zahrnutí přiřazení předem vybraná a není ji možné změnit. Tato použitá skupina se tedy nedá použít jako vyloučená skupina.
-14. Klikněte na **Uložit**.
+
+14. Kliknutím na **Další** zobrazte stránku **Revize + vytvořit** .
+15. Kliknutím na **vytvořit** přidejte zásady konfigurace aplikací do Intune.
 
 ## <a name="use-configuration-designer"></a>Použití návrháře konfigurace
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39978043428f6ad912832007f60628815d6549a6
-ms.sourcegitcommit: fb72b19986f34907d228c856d2e6949751ec02a1
+ms.openlocfilehash: f99479200e66b080e107475f0a031c5756da6051
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75920080"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754571"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s iOS a iPadOS pro povolení nebo omezení funkcí pomocí Intune
 
@@ -223,7 +223,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
   Tato funkce platí pro:  
   - iOS 11,0 a novější
   
-<sup>1</sup> Když nakonfigurujete **maximální počet minut nečinnosti** , po kterém se zamkne obrazovka a **maximální počet minut po uzamčení obrazovky, které se budou povinně** použít, použije se v uvedeném pořadí. Pokud například nastavíte hodnotu pro obě nastavení na **5** minut, obrazovka se vypne automaticky po pěti minutách a zařízení se zamkne po dalších pět minut. Pokud ale uživatel vypne obrazovku ručně, druhé nastavení se použije okamžitě. Ve stejném příkladu potom, co uživatel vypne obrazovku, zařízení zamkne pět minut později.
+<sup>1</sup> když nakonfigurujete **maximální počet minut nečinnosti** , po kterém se zamkne obrazovka a **maximální počet minut po uzamčení obrazovky, když se bude vyžadovat nastavení hesla** , uplatní se v uvedeném pořadí. Pokud například nastavíte hodnotu pro obě nastavení na **5** minut, obrazovka se vypne automaticky po pěti minutách a zařízení se zamkne po dalších pět minut. Pokud ale uživatel vypne obrazovku ručně, druhé nastavení se použije okamžitě. Ve stejném příkladu potom, co uživatel vypne obrazovku, zařízení zamkne pět minut později.
 
 ## <a name="locked-screen-experience"></a>Prostředí zamknuté obrazovky
 
@@ -411,7 +411,7 @@ Platí pro zařízení se systémem iOS 9,3 nebo novějším.
   
   - **Viditelné aplikace**: Zadejte seznam aplikací, které uživatelé mohou zobrazit a spustit. Žádné jiné aplikace nebude možné zobrazit ani spustit.
 
-- **Adresa URL aplikace**: zadejte adresu URL aplikace pro Store aplikace, kterou chcete zobrazit nebo skrýt. Příklad:
+- **Adresa URL aplikace**: zadejte adresu URL aplikace pro Store aplikace, kterou chcete zobrazit nebo skrýt. Například:
 
   - Pokud chcete přidat aplikaci Microsoft work folders, zadejte `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` nebo `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`. 
 
@@ -636,7 +636,7 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
 
 - Zámek aplikace (režim jedné aplikace) 
 - Globální proxy server HTTP 
-- Vyřazení zámku aktivace 
+- Zakázat Zámek aktivace 
 - Autonomní režim jedné aplikace 
 - Filtr webového obsahu 
 - Nastavení pozadí a zamykací obrazovky 
@@ -676,7 +676,7 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
 > - Explicitní obsah
 > - Dokumenty a data v iCloudu
 > - Hry pro víc hráčů
-> - Přidat přátele z herního centra
+> - Přidat Game Center přátelé
 > - Siri
 
 ## <a name="next-steps"></a>Další kroky

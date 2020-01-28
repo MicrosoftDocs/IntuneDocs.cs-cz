@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c9d792bd07ae8d7d712748874d64314dd258c5e8
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 58f6c4e2c99c7e2c169014a71bb1cfd2bc85219b
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74563947"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755234"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Nasazení aplikací pro Windows 10 pomocí Microsoft Intune 
 
@@ -39,6 +39,26 @@ Obchodní aplikace (LOB) a aplikace pro Microsoft Store pro firmy jsou na zaří
 > Jenom Windows 10 1803 a novější podporují instalaci aplikací, když není přidružený žádný primární uživatel.
 >
 > Nasazení aplikace LOB se nepodporuje na zařízeních s Windows 10 Home Edition.
+
+## <a name="supported-windows-10-app-types"></a>Podporované typy aplikací pro Windows 10
+
+Konkrétní typy aplikací jsou podporované v závislosti na verzi Windows 10, kterou používají vaši uživatelé. Následující tabulka uvádí typ aplikace a podporu Windows 10.
+
+| Typ aplikace | Domů | Úrovni | Obchodní | Enterprise | Vzdělávání | S-režim | Hololense | SurfaceHub | WCOS | Mobilní telefon |
+|----------------|------|-----|----------|------------|-----------|--------|-----------|------------|------|--------|
+|  . SOUBOR | Ne | Ano | Ano | Ano | Ano | Ne | Ne | Ne | Ne | Ne |
+| . IntuneWin | Ne | Ano | Ano | Ano | Ano | 19H2 + | Ne | Ne | Ne | Ne |
+| C2R Office | Ne | Ano | Ano | Ano | Ano | Ne | Ne | Ne | Ne | Ne |
+| LOB: APPX/MSIX | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano |
+| MSFB offline | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano |
+| MSFB online | Ano | Ano | Ano | Ano | Ano | Ano | RS4 + | Ano | Ano | Ano |
+| Webové aplikace | Ano | Ano | Ano | Ano | Ano | Ano | Ano<sup>1 | Ano<sup>1 | Ano | Ano |
+| Odkaz na Store | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano |
+
+<sup>1</sup> spustit pouze z portálu společnosti.
+
+> [!NOTE]
+> Všechny typy aplikací pro Windows vyžadují registraci.
 
 ## <a name="windows-10-lob-apps"></a>Obchodní aplikace pro Windows 10
 

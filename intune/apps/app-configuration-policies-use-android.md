@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/23/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec80922cf2539fdbacb572fd96c5a5e45549b5c3
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: b30da567d1a25028c51cf8268eab9613a7c3b8af
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75205000"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755444"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem Enterprise
 
@@ -34,21 +34,43 @@ Zásady konfigurace aplikací v Microsoft Intune poskytují nastavení spravovan
 > [!NOTE]  
 > Některé aplikace konfiguraci aplikací nepodporují. Obraťte se na vývojáře aplikace a zjistěte, jestli jejich aplikace podporuje zásady konfigurace aplikací.
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace** > **zásady konfigurace aplikací** >  **Přidat** > **spravovaná zařízení**.
-2. Přidejte následující vlastnosti:
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace** > **zásady konfigurace aplikací** > **Přidat** > **spravovaná zařízení**. Všimněte si, že si můžete vybrat mezi **spravovanými zařízeními** a **spravovanými aplikacemi**. Další informace najdete v tématu [aplikace, které podporují konfiguraci aplikací](~/apps/app-configuration-policies-overview.md#apps-that-support-app-configuration).
+3. Na stránce **základy** nastavte následující podrobnosti:
+    - **Název**: Název profilu, který se zobrazí na portálu Azure Portal
+    - **Popis**: Popis profilu, který se zobrazí na portálu Azure Portal
+    - **Typ registrace zařízení** – toto nastavení je nastavené na **spravovaná zařízení**.
+4. Jako **platformu**vyberte **Android Enterprise** .
+5. Klikněte na **Vybrat aplikaci** vedle **cílové aplikace**. Zobrazí se podokno **přidružená aplikace** . 
+6. V podokně **přidružená aplikace** vyberte spravovanou aplikaci, kterou chcete přidružit k zásadám konfigurace, a klikněte na **OK**.
+7. Kliknutím na **Další** zobrazte stránku **Nastavení** .
+8. Kliknutím na tlačítko **Přidat** zobrazte podokno **Přidat oprávnění** .
+9. Klikněte na oprávnění, která chcete přepsat. Udělená oprávnění přepíšou u vybraných aplikací zásadu výchozí oprávnění aplikace.
+10. Nastavte **stav oprávnění** pro každé oprávnění. Můžete si vybrat z **příkazového řádku**, **automatického udělení**nebo **automaticky odepřít**. Další informace o oprávněních najdete v tématu [nastavení pro Android Enterprise a označení zařízení jako kompatibilních nebo nekompatibilních s Intune](~/protect/compliance-policy-create-android-for-work.md).
+11. V rozevíracím seznamu vyberte **formát nastavení konfigurace**. Chcete-li přidat informace o konfiguraci, vyberte jednu z následujících metod:
+    - **Použití návrháře konfigurace**
+    - **Zadat data JSON**<br><br>
+    Podrobnosti o používání návrháře konfigurace najdete v části [Použití návrháře konfigurace](#use-the-configuration-designer). Podrobnosti o zadávání dat XML naleznete v tématu [ENTER data JSON](#enter-json-data). 
+12. Kliknutím na tlačítko **Další** zobrazíte stránku **přiřazení** .
+13. V rozevíracím seznamu vedle pole **přiřadit k**vyberte možnost **vybrané skupiny**, **Všichni uživatelé**, **všechna zařízení**nebo **Všichni uživatelé a všechny** oddálení, aby bylo možné zásadu konfigurace aplikace přiřadit k.
 
-    - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem zásad je například **zásada pro aplikace pro Android Enterprise devět Worker pro celou firmu**.
-    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
-    - **Typ registrace zařízení**: Toto nastavení je nastavené na **spravovaná zařízení**.
-    - **Platforma**: vyberte **Android**.
+    ![Snímek obrazovky s přiřazením zásad – karta Zahrnout](./media/app-configuration-policies-use-ios/app-config-policy01.png)
 
-3. Vyberte **přidružená aplikace**. Vyberte aplikaci pro Android, ke které se budou tyto zásady konfigurace aplikace přidružit. Vyberte ze seznamu [spravovaných Google Play aplikací, které jste schválili a synchronizovali s Intune](~/apps/apps-add-android-for-work.md).
-4. Vyberte **Oprávnění**. K nastavení konfigurace můžete použít:
+14. Vyberte možnost **Všichni uživatelé** v rozevíracím seznamu.
 
-    - [Návrhář konfigurace](#use-the-configuration-designer)
-    - [Editor JSON](#enter-the-json-editor)
+    ![Snímek obrazovky s přiřazením zásad – možnost rozevírací nabídky Všichni uživatelé](./media/app-configuration-policies-use-ios/app-config-policy02.png)
 
-5. Vyberte **OK** > **Přidat**.
+15. Klikněte na možnost **Vybrat skupiny, které se vyloučí** a zobrazte tak související podokno.
+
+    ![Snímek obrazovky s přiřazením zásad – vyberte skupiny, které chcete vyloučit.](./media/app-configuration-policies-use-ios/app-config-policy03.png)
+
+16. Vyberte skupiny, které chcete vyloučit, a potom klikněte na **Vybrat**.
+
+    >[!NOTE]
+    >Pokud přidáváte skupinu a pro daný typ přiřazení už byla zahrnuta jakákoliv jiná skupina, je pro ostatní typy zahrnutí přiřazení předem vybraná a není ji možné změnit. Tato použitá skupina se tedy nedá použít jako vyloučená skupina.
+
+17. Kliknutím na **Další** zobrazte stránku **Revize + vytvořit** .
+18. Kliknutím na **vytvořit** přidejte zásady konfigurace aplikací do Intune.
 
 ## <a name="use-the-configuration-designer"></a>Použití návrháře konfigurace
 
@@ -90,9 +112,9 @@ Pro zařízení s Androidem použijte následující dvojice klíč/hodnota:
 
    > [!NOTE]
    > Pokud chcete povolit jenom nakonfigurované účty organizace s více identitami, musíte použít Outlook pro Android 2.2.222 a novější, Word, Excel, PowerPoint pro Android 16.0.9327.1000 a novější nebo OneDrive pro Android 5,28 a novější.<p></p>
-   > Jako správce Microsoft Intune můžete určit, které uživatelské účty se přidají do systém Microsoft Office aplikací na spravovaných zařízeních. Můžete omezit přístup jenom na povolené uživatelské účty organizace a zablokovat osobní účty zaregistrovaných zařízení. Podpůrné aplikace zpracují konfiguraci aplikace a odeberou a zablokují neschválené účty.<p></p>
+   > Jako správce Microsoft Intune můžete určit, které uživatelské účty se přidají do systém Microsoft Office aplikací na spravovaných zařízeních. Můžete omezit přístup jenom na povolené uživatelské účty organizace a zablokovat osobní účty na zaregistrovaných zařízeních. Podpůrné aplikace zpracují konfiguraci aplikace a odeberou a zablokují neschválené účty.<p></p>
 
-## <a name="enter-the-json-editor"></a>Použití editoru JSON
+## <a name="enter-json-data"></a>Zadat data JSON
 
 Některá nastavení konfigurace aplikací (jako jsou aplikace s typy sad) se nedají konfigurovat pomocí návrháře konfigurace. Pro tyto hodnoty použijte Editor JSON. Nastavení se aplikaci poskytne automaticky při její instalaci.
 
@@ -114,7 +136,7 @@ Aplikace například používá mikrofon zařízení. Uživatel je vyzván, aby 
 2. Přidejte následující vlastnosti:
 
     - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem zásad je třeba, aby se **pro celou firmu zobrazila zásada aplikace s oprávněním pro Android Enterprise**.
-    - **Popis:** Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
+    - **Popis**. Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
     - **Typ registrace zařízení**: Toto nastavení je nastavené na **spravovaná zařízení**.
     - **Platforma**: vyberte **Android**.
 

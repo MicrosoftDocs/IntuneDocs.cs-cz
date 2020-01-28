@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7170f723707ef709ef464b35bc3f6d3297341cf1
-ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
+ms.openlocfilehash: 099d68568cd920c9ae3f328b4e9fba95424e46fd
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75956218"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755268"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune 
 
@@ -74,10 +74,10 @@ Následující tabulka obsahuje konkrétní typy aplikací a popis, jak je můž
 
 <sup>1</sup> Další informace o pracovních profilech Androidu a Enterprise a Android najdete v části [Principy licencovaných aplikací](apps-add.md#understanding-licensed-apps) níže.
 
-Aplikaci můžete do Microsoft Intune přidat tak, že vyberete **aplikace** > **všechny aplikace** > **Přidat**. Zobrazí se podokno **Přidat aplikaci**, které vám umožní vybrat **Typ aplikace**. 
+Aplikaci můžete do Microsoft Intune přidat tak, že vyberete **aplikace** > **všechny aplikace** > **Přidat**. Zobrazí se podokno **Vybrat typ aplikace** a můžete vybrat **Typ aplikace**. 
 
 >[!TIP]
-> Obchodní aplikace je aplikace, kterou přidáte z instalačního souboru aplikace. Když například chcete nainstalovat obchodní aplikaci pro iOS, přidáte aplikaci tak, že jako **Typ aplikace** v podokně **Přidat aplikaci** vyberete **Obchodní aplikace**. Potom vyberete soubor balíčku aplikace (má příponu .ipa). Tyto typy aplikací obvykle vznikají interně.
+> Obchodní aplikace je aplikace, kterou přidáte z instalačního souboru aplikace. Pokud například chcete nainstalovat obchodní aplikaci pro iOS, přidáte aplikaci tak, že jako **Typ aplikace** v podokně **Vybrat typ aplikace** vyberete **obchodní aplikace** . Potom vyberete soubor balíčku aplikace (má příponu .ipa). Tyto typy aplikací obvykle vznikají interně.
 
 ## <a name="assess-app-requirements"></a>Vyhodnocení požadavků na aplikaci
 Jako správce IT určujete nejen to, které aplikace vaše skupina musí používat, ale i funkce potřebné pro jednotlivé skupiny a podskupiny. U každé aplikace určujete vhodnou platformu, skupiny uživatelů, které aplikaci potřebují, zásady konfigurace, které se mají použít u těchto skupin uživatelů, a zásady ochrany, které se mají použít.  

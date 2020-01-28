@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d09857c4e5b63947a6e3b3140f673f0887f7f920
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 40337b3c45885dacf486173814044a27b7f3f6cc
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74563418"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755064"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Rychlý start: Přidání a přiřazení klientské aplikace
 
@@ -45,20 +45,18 @@ Při zahrnutí aplikace může Intune spravovat aspekty této aplikace.
 
 Aplikaci přidáte do Intune následujícím postupem:
 1. V [Intune](https://aka.ms/intuneportal)vyberte **aplikace** > **všechny aplikace** > **Přidat**. 
-2. V oddílu **Sada Office 365** rozevíracího seznamu **Typ aplikace** vyberte **Windows 10**.
-3. Vyberte **Nakonfigurovat sadu aplikací** a vyberte aplikace Office, které se mají přiřadit uživateli Intune.
-4. Kliknutím na **OK** přijměte výchozí vybrané aplikace.
-5. Vyberte **Informace o sadě aplikací**.
-6. Jako **Název sady** zadejte **Sada aplikací Microsoft Office 365**.
-7. Jako **Popis sady**zadejte **sadu aplikací systém Microsoft Office 365** .
-8. Klikněte na **Ano** vedle možnosti **Zobrazit na Portálu společnosti jako vybranou aplikaci**.
-9. Klikněte na **OK**.
-
-    ![Snímek obrazovky s přidáním informací o aplikaci](./media/quickstart-add-assign-app/quickstart-add-assign-app-01.png)
-
-10. Vyberte **Nastavení sady aplikací**.
-11. V rozevíracím seznamu **Aktualizační kanál** vyberte **Měsíčně**.
-12. Klikněte na **OK** > **Přidat**.
+2. V části **Sada Office 365** v podokně **Vybrat typ aplikace** vyberte **Windows 10** .
+3. Klikněte na **Vybrat**. Zobrazí se kroky **Přidání aplikace** .
+4. Potvrďte výchozí údaje na stránce s **informacemi o sadě aplikací** .
+5. Kliknutím na **Další** zobrazte stránku **Konfigurovat sadu aplikací** .
+6. Vedle pole **aktualizace kanálu** vyberte **měsíčně** z rozevíracího seznamu.
+7. Potvrďte zbývající výchozí údaje na stránce ***Konfigurovat sadu aplikací** .
+8. Kliknutím na tlačítko **Další** zobrazíte stránku **značky oboru** .
+9. Klikněte na **Vybrat značky oboru** a volitelně přidejte značky oboru pro aplikaci. Další informace najdete v tématu [použití řízení přístupu na základě role (RBAC) a značek oboru pro distribuci](~/fundamentals/scope-tags.md).
+10. Kliknutím na tlačítko **Další** zobrazíte stránku **přiřazení** .
+11. Vyberte přiřazení skupin pro aplikaci. Další informace najdete v tématu [Přidání skupin pro uspořádání uživatelů a zařízení](~/fundamentals/groups-add.md). 
+12. Kliknutím na **Další** zobrazte stránku **Revize + vytvořit** . Zkontrolujte hodnoty a nastavení, které jste zadali pro aplikaci.
+13. Po dokončení klikněte na **vytvořit** , aby se aplikace přidala do Intune.
 
 ## <a name="assign-the-app-to-a-group"></a>Přiřazení aplikace ke skupině
 

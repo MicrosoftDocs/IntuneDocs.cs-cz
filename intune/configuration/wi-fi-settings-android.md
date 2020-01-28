@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/08/2019
+ms.date: 01/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a9bd1691b7943f02c9577e962fb1bcd5d9cf40a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 2ea0a60537bb488d3280990747d3e337e73fddc0
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72585337"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754554"
 ---
 # <a name="add-wi-fi-settings-for-devices-running-android-in-microsoft-intune"></a>Přidání nastavení Wi-Fi pro zařízení s Androidem v Microsoft Intune
 
@@ -47,7 +47,7 @@ Těmito nastaveními se zabývá tento článek.
 - **Typ Wi-Fi**: Zvolte **Enterprise**.
 - **SSID**: zadejte **identifikátor sady služeb**, což je skutečný název bezdrátové sítě, ke které se zařízení připojují. **Název sítě**, který jste nakonfigurovali, ale uživatelé uvidí jen při zvolení připojení.
 - **Skrytá síť**: Zvolte **Povolit**, pokud chcete tuto síť skrýt v seznamu dostupných sítí na zařízení. Identifikátor SSID se všesměrově nevysílá. Zvolte **Zakázat**, pokud tuto síť chcete v seznamu dostupných sítí na zařízení zobrazit.
-- **Typ EAP**: Zvolte typ protokolu EAP (Extensible Authentication Protocol) pro ověřování zabezpečených bezdrátových připojení. Možnosti: 
+- **Typ EAP**: Zvolte typ protokolu EAP (Extensible Authentication Protocol) pro ověřování zabezpečených bezdrátových připojení. Možnosti:
 
   - **EAP-TLS**: Dále zadejte:
 
@@ -56,6 +56,19 @@ Těmito nastaveními se zabývá tento článek.
     - **Ověřování klientů** – **Klientský certifikát pro ověření klienta (certifikát identity)** : Zvolte profil klientského certifikátu SCEP nebo PKCS, který je také nasazený na zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
     - **Ochrana identity (vnější identita)** : Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
+
+    - **Nastavení proxy serveru**: zadejte konfiguraci proxy serveru, kterou používá vaše organizace. Možnosti:
+
+      - **Žádné** – nepoužíváte proxy server.
+      - **Automaticky** – tuto možnost vyberte, pokud má být k dispozici nastavení *adresy URL proxy serveru* , které můžete použít k určení proxy server nebo souboru automatické konfigurace proxy serveru (PAC), který obsahuje seznam proxy serverů.
+
+    - **Adresa URL proxy serveru**: Toto nastavení je dostupné, když nastavíte *nastavení proxy* serveru na *Automatické*. Zadejte jednu z následujících možností, jak zařízení nasměrovat na proxy server:
+
+      - IP adresa. Například `10.0.0.11`.
+      - ADRESA URL. Například `http://proxyserver.contoso.com`.
+      - Adresa URL souboru automatické konfigurace proxy serveru (PAC). Příklad: `http://proxy.contoso.com/proxy.pac`.
+
+      Další informace o souborech PAC najdete v tématu [soubor automatické konfigurace proxy serveru](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (otevře se na webu, který není Microsoft).
 
   - **EAP-TTLS**: Dále zadejte:
 
@@ -75,6 +88,19 @@ Těmito nastaveními se zabývá tento článek.
 
       - **Ochrana identity (vnější identita)** : Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
+    - **Nastavení proxy serveru**: zadejte konfiguraci proxy serveru, kterou používá vaše organizace. Možnosti:
+
+      - **Žádné** – nepoužíváte proxy server.
+      - **Automaticky** – tuto možnost vyberte, pokud má být k dispozici nastavení *adresy URL proxy serveru* , které můžete použít k určení proxy server nebo souboru automatické konfigurace proxy serveru (PAC), který obsahuje seznam proxy serverů.
+
+    - **Adresa URL proxy serveru**: Toto nastavení je dostupné, když nastavíte *nastavení proxy* serveru na *Automatické*. Zadejte jednu z následujících možností, jak zařízení nasměrovat na proxy server:
+
+      - IP adresa. Například `10.0.0.11`.
+      - ADRESA URL. Například `http://proxyserver.contoso.com`.
+      - Adresa URL souboru automatické konfigurace proxy serveru (PAC). Příklad: `http://proxy.contoso.com/proxy.pac`.
+
+      Další informace o souborech PAC najdete v tématu [soubor automatické konfigurace proxy serveru](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (otevře se na webu, který není Microsoft).
+
   - **PEAP**: Dále zadejte:
 
     - **Vztah důvěryhodnosti serveru** – **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Tento certifikát je prezentován serveru, když se klient připojí k síti. Ověřuje připojení.
@@ -91,11 +117,24 @@ Těmito nastaveními se zabývá tento článek.
 
       - **Ochrana identity (vnější identita)** : Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
+      - **Nastavení proxy serveru**: zadejte konfiguraci proxy serveru, kterou používá vaše organizace. Možnosti:
+
+        - **Žádné** – nepoužíváte proxy server.
+        - **Automaticky** – tuto možnost vyberte, pokud má být k dispozici nastavení *adresy URL proxy serveru* , které můžete použít k určení proxy server nebo souboru automatické konfigurace proxy serveru (PAC), který obsahuje seznam proxy serverů.
+
+      - **Adresa URL proxy serveru**: Toto nastavení je dostupné, když nastavíte *nastavení proxy* serveru na *Automatické*. Zadejte jednu z následujících možností, jak zařízení nasměrovat na proxy server:
+
+        - IP adresa. Například `10.0.0.11`.
+        - ADRESA URL. Například `http://proxyserver.contoso.com`.
+        - Adresa URL souboru automatické konfigurace proxy serveru (PAC). Příklad: `http://proxy.contoso.com/proxy.pac`.
+
+        Další informace o souborech PAC najdete v tématu [soubor automatické konfigurace proxy serveru](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (otevře se na webu, který není Microsoft).
+
 ## <a name="next-steps"></a>Další kroky
 
 Profil se vytvoří, ale nic nedělá. Dále [tento profil přiřaďte](device-profile-assign.md).
 
-## <a name="more-resources"></a>Další materiály
+## <a name="more-resources"></a>Další zdroje
 
 - [Přehled nastavení Wi-Fi](wi-fi-settings-configure.md), včetně dalších platforem
 

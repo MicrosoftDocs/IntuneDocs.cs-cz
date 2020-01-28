@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d77a275e3a48845f56b22ecc21b75f664ea619c5
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 0872eef38e3ea5a70ebb64d3ae3c62069045fa97
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74691758"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754612"
 ---
 # <a name="set-up-ios-and-ipados-user-enrollment-preview"></a>Nastavení registrace uživatele pro iOS a iPadOS (Preview)
 
@@ -54,23 +54,14 @@ Registrační profil definuje nastavení použité pro skupinu zařízení běhe
 
 3. Vyberte **Další**.
 
-4. Na stránce **Nastavení** se můžete rozhodnout, že uživatelům dáte možnost výběru typu zápisu, který budou používat. Alternativně můžete nastavit výchozí nastavení.
+4. Na stránce **Nastavení** vyberte jednu z následujících možností pro **typ registrace**:
 
     ![Stránka Nastavení](./media/ios-user-enrollment/settings-page.png)
 
-    - Pokud chcete, aby všichni uživatelé v tomto profilu používali zápis uživatele, postupujte takto:
-        1. Pokud **chcete, aby uživatel vybral typ zařízení**, vyberte **nenakonfigurované**.
-        2. **Jako výchozí typ registrace**vyberte **registrace uživatele**.
-    - Pokud chcete, aby všichni uživatelé v tomto profilu používali registraci zařízení, postupujte podle následujících kroků:
-        1. Pokud **chcete, aby uživatel vybral typ zařízení**, vyberte **nenakonfigurované**.
-        2. Jako **výchozí typ registrace**vyberte **registrace zařízení**.
-    - Pokud chcete všem uživatelům v této skupině dát možnost zvolit typ registrace, který se má použít, vyberte možnost **požadováno** , aby **uživatel vybral typ zařízení**. Když uživatelé registrují svá zařízení, budou mít možnost zvolit si **vlastní nastavení tohoto zařízení** a **(společnost) Toto zařízení vlastní**. Pokud zvolí předchozí, zařízení se zaregistruje pomocí registrace uživatele. Pokud si tyto možnosti zvolí, zařízení se zaregistruje pomocí registrace zařízení. Pokud uživatel zvolí **Toto zařízení jako vlastní**, získá další možnost zabezpečení celého zařízení nebo pouze zabezpečené aplikace a data související s prací. Výběr koncového uživatele, který vlastní zařízení, určuje, který typ registrace se na zařízení implementuje. Tato volba uživatele se neprojeví v atributu vlastnictví zařízení v Intune. Další informace o uživatelském prostředí najdete v tématu [nastavení přístupu zařízení s iOS k prostředkům společnosti](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios).
+    - **Registrace zařízení**: všichni uživatelé v tomto profilu budou používat registraci zařízení.
+    - **Zápis uživatele**: všichni uživatelé v tomto profilu použijí zápis uživatele.
+    - **Určení podle výběru uživatele**: všichni uživatelé v této skupině budou mít možnost zvolit typ registrace, který se má použít. Když si uživatelé zaregistrují svá zařízení, uvidí možnost vybrat si **vlastní** zařízení a zařízení **(společnosti)** , které je vlastníkem tohoto zařízení. Pokud si tyto možnosti zvolí, zařízení se zaregistruje pomocí registrace zařízení. Pokud uživatel zvolí **Toto zařízení jako vlastní**, získá další možnost zabezpečení celého zařízení nebo pouze zabezpečené aplikace a data související s prací. Výběr, který typ registrace je implementován na zařízení, určí koncový uživatel, který vlastní zařízení. Tato volba uživatele se taky odráží v atributu vlastnictví zařízení v Intune. Další informace o uživatelském prostředí najdete v tématu [nastavení přístupu zařízení s iOS k prostředkům společnosti](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios).
     
-    > [!NOTE]
-    > Následující upozornění je nepřesné a bude odebráno z uživatelského rozhraní.
-    > "Pokud chcete mít podmíněný přístup k práci na zařízeních, která cílí na registraci uživatelů, budete muset aplikaci Azure Authenticator nainstalovat jako požadovanou aplikaci pro tuto skupinu uživatelů, aby se povolilo jednotné přihlašování a Workplace Join."
-    > Jako správce není nutné provádět žádnou akci, abyste mohli aplikaci ověřovatele nabízet vašim uživatelům. Vaši uživatelé budou mít pokyn v rámci Portál společnosti k instalaci ověřovací aplikace k dokončení procesu registrace uživatele, aby tyto scénáře správně fungovaly.
-
 5. Vyberte **Další**.
 
 6. Na stránce **přiřazení** vyberte skupiny uživatelů obsahující uživatele, kterým chcete tento profil přiřadit. Můžete se rozhodnout přiřadit profil všem uživatelům nebo konkrétním skupinám. Všichni uživatelé ve vybraných skupinách použijí vybraný typ registrace. Skupiny zařízení nejsou podporované pro scénáře registrace uživatelů, protože tato funkce je založená na identitách uživatelů, nikoli na zařízeních. Můžete se rozhodnout přiřadit profil všem uživatelům nebo konkrétním skupinám.

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e57aa0546950a12cdb2d4a2e3c8ed721bfc24b8
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 138bf192f5244eb6e44a6be96af3cc15c47bdc76
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74564143"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755387"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Přidání spravovaných aplikací Google Play do zařízení s Androidem Enterprise pomocí Intune
 
@@ -59,19 +59,41 @@ Existují dva způsoby procházení a schvalování spravovaných aplikací pro 
 1. Přímo v konzole Intune – procházení a schvalování aplikací ze Storu v zobrazení hostovaném v Intune. Otevře se přímo v konzole Intune a nevyžaduje opětovné ověření pomocí jiného účtu.
 1. V konzole spravovaného Google Play – můžete volitelně otevřít konzolu spravované Google Play přímo a schválit aplikace. Další informace najdete v tématu [synchronizace spravované aplikace Google Play s Intune](apps-add-android-for-work.md#sync-a-managed-google-play-app-with-intune) .  K tomu je potřeba samostatné přihlášení pomocí účtu, který jste použili k připojení tenanta Intune ke spravovaným Google Play.
 
-
 ### <a name="add-a-managed-google-play-store-app-directly-in-the-intune-console"></a>Přidání spravované aplikace Google Play Storu přímo do konzoly Intune
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
-3. V rozevíracím seznamu **Typ aplikace** vyberte možnost **spravovaná Google Play**.
-4. Vyberte **spravovaný Google Play-otevřeno** a otevřete tak spravovaný katalog Google Play.
-5. V katalogu Google Play vyberte **Search obchod Play** .
-6. Pomocí vyhledávacího pole vyhledejte aplikace, které chcete spravovat.
-7. Kliknutím na **schválit** schválíte aplikaci ve spravovaném Google Play a kliknutím na **schválit** přijměte oprávnění aplikace.
-8. Vyberte **zachovat schválené, pokud aplikace požaduje nová oprávnění** v okně Nastavení schvalování a pak klikněte na **Uložit**. Pokud tuto možnost nevyberete, budete muset ručně schválit všechna nová oprávnění, pokud vývojář aplikace publikuje aktualizaci. To způsobí, že se instalace a aktualizace aplikace zastaví, dokud nebudou oprávnění schválena. Z tohoto důvodu se doporučuje vybrat možnost pro automatické schválení nových oprávnění. 
-9. Kliknutím na **OK** zahrňte aplikace, které jste schválili.
-10. V podokně **aplikace aplikace** klikněte na **synchronizovat** a synchronizujte se se službou Managed Google Play Service.
+3. V podokně **Vybrat typ aplikace** v části dostupné typy **aplikací pro Store** vyberte **Managed Google Play App**.
+4. Klikněte na **Vybrat**. Zobrazí se **spravované Google Play** App Store.
+
+    > [!NOTE]
+    > Aby bylo možné procházet spravované aplikace Google Play Storu, musí být váš účet tenanta Intune připojený k vašemu účtu Android Enterprise. Další informace najdete v tématu [připojení účtu Intune ke spravovanému účtu Google Play](../enrollment/connect-intune-android-enterprise.md).
+
+5. Výběrem aplikace zobrazíte podrobnosti o aplikaci.
+6. Na stránce, na které se aplikace zobrazuje, klikněte na **schválit**. Otevře se okno s žádostí, abyste této aplikaci udělili oprávnění k provádění různých operací.
+7. Pokud chcete přijmout oprávnění aplikace a pokračovat, vyberte **Schválit**.
+8. Vyberte **zachovat schválené, když aplikace požaduje nová oprávnění** na kartě **Nastavení schvalování** a pak klikněte na **Hotovo**. 
+
+    > [!IMPORTANT]
+    > Pokud tuto možnost nevyberete, budete muset ručně schválit všechna nová oprávnění, pokud vývojář aplikace publikuje aktualizaci. To způsobí, že se instalace a aktualizace aplikace zastaví, dokud nebudou oprávnění schválena. Z tohoto důvodu se doporučuje vybrat možnost pro automatické schválení nových oprávnění. 
+
+9. Klikněte na **Vybrat** a vyberte aplikaci.
+10. V horní části okna klikněte na **synchronizovat** , aby se aplikace synchronizoval se službou Managed Google Play Service.
+11. Kliknutím na **aktualizovat** můžete seznam aplikací aktualizovat a zobrazit nově přidanou aplikaci.
+
+### <a name="add-additional-app-settings-to-a-managed-google-play-store-app"></a>Přidání dalšího nastavení aplikace do spravované aplikace Google Play Storu
+1. Pokud potřebujete přidat další podrobnosti o aplikaci, vyberte aplikaci ze seznamu aplikací.
+2. Klikněte na **vlastnosti** > **Upravit** vedle možnosti **informace o aplikaci**. Zobrazí se stránka **informace o aplikaci** .
+3. Na stránce **informace o aplikaci** přidejte podrobnosti o aplikaci:
+    - **Kategorie**: Volitelně můžete vybrat jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste vytvořili. Uživatelé tak při procházení Portálu společnosti najdou aplikaci snadněji.
+    - **Zobrazit tuto aplikaci jako doporučenou aplikaci v portál společnosti**: tuto možnost vyberte, pokud chcete, aby se sada aplikací zobrazovala na hlavní stránce portálu společnosti, když uživatelé vyhledávají aplikace.
+    - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
+    - **Adresa URL informací o ochraně osobních údajů**: Volitelně zadejte adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
+    - **Vývojář**: Volitelně zadejte jméno vývojáře aplikace.
+    - **Vlastník**: Volitelně zadejte vlastníka aplikace, například *Personální oddělení*.
+    - **Poznámky**: Volitelně zadejte jakékoli poznámky, které chcete k aplikaci přidružit.
+4. Kliknutím na tlačítko **Revize + Uložit** zobrazte stránku **Revize + Uložit** . 
+5. Po dokončení klikněte na **Uložit** a aktualizujte aplikaci v Intune.
 
 ### <a name="add-a-managed-google-play-store-app-in-the-managed-google-play-console-alternative"></a>Přidání spravované aplikace Google Play Storu v konzole spravovaného Google Play (alternativně)
 Pokud dáváte přednost synchronizaci spravované aplikace Google Play s Intune místo přímého přidávání pomocí Intune, použijte následující postup.
@@ -81,7 +103,7 @@ Pokud dáváte přednost synchronizaci spravované aplikace Google Play s Intune
 
 1. Přejděte na [spravovaný obchod Google Play](https://play.google.com/work). Přihlaste se pomocí stejného účtu, který jste použili ke konfiguraci připojení mezi Intune a Androidem Enterprise.
 2. Vyhledejte a vyberte v obchodě aplikaci, kterou chcete přiřadit pomocí Intune.
-3. Na stránce s aplikací vyberte **Schválit**.  
+3. Na stránce, na které se aplikace zobrazuje, klikněte na **schválit**.  
     Na tomto příkladu jsme zvolili Microsoft Excel.
 
     ![Tlačítko Schválit ve spravovaném obchodu Google Play](./media/apps-add-android-for-work/approve.png)
@@ -109,20 +131,22 @@ Existují dva způsoby, jak přidat obchodní aplikace do spravovaných Google P
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
-3. V rozevíracím seznamu **Typ aplikace** vyberte možnost **spravovaná Google Play**.
-4. Vyberte **spravovaný Google Play-otevřeno** a otevřete tak spravovaný katalog Google Play.
-5. V katalogu Google Play vyberte **soukromé aplikace** .
-6. Kliknutím na tlačítko **"+"** přidejte novou aplikaci.
-7. Odeslání názvu aplikace a balíčku APK pro aplikaci
-8. Klikněte na **Vytvořit**.
+3. V podokně **Vybrat typ aplikace** v části dostupné typy **aplikací pro Store** vyberte **Managed Google Play App**.
+4. Klikněte na **Vybrat**. V Intune se zobrazuje **spravované Google Play** App Store.
+5. V okně Google Play vyberte **soukromé aplikace** (vedle ikony *zámku* ). 
+6. Kliknutím na tlačítko **"+"** v pravém dolním rohu přidejte novou aplikaci.
+7. Přidejte **název** aplikace a klikněte na **nahrát APK** přidat balíček aplikace APK.
+8. Klikněte na tlačítko **Vytvořit**.
 9. Pokud jste dokončili přidávání aplikací, zavřete podokno spravované Google Play.
-10. V podokně **aplikace aplikace** klikněte na **synchronizovat** a synchronizujte se se službou Managed Google Play Service. Všimněte si, že privátní aplikace můžou trvat několik minut, než se bude synchronizovat. Pokud se nezobrazí při prvním provedení synchronizace, počkejte pár minut a zahajte novou synchronizaci.
+10. V podokně **aplikace aplikace** klikněte na **synchronizovat** a synchronizujte se se službou Managed Google Play Service. 
+
+    > [!NOTE]
+    > Synchronizace privátních aplikací může trvat několik minut, než se synchronizuje. Pokud se aplikace při prvním provedení synchronizace nezobrazí, počkejte pár minut a zahajte novou synchronizaci.
 
 Další informace o spravovaných Google Play privátních aplikacích včetně nejčastějších dotazů najdete v článku podpora Google: https://support.google.com/googleplay/work/answer/9146439
 
->[!NOTE]
+>[!IMPORTANT]
 >Privátní aplikace přidané pomocí této metody se nikdy nedají zveřejnit. Tuto možnost publikování použijte jenom v případě, že jste si jisti, že tato aplikace bude vždycky soukromá pro vaši organizaci.
-  
 
 ### <a name="managed-google-play-private-lob-app-publishing-using-the-google-developer-console"></a>Spravované Google Play privátních aplikací (LOB) pro publikování pomocí vývojářské konzoly Google
 
@@ -151,13 +175,17 @@ Webové odkazy se otevřou pomocí Microsoft Edge nebo jakékoli jiné aplikace 
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
-3. V rozevíracím seznamu **Typ aplikace** vyberte možnost **spravovaná Google Play**.
-4. Vyberte **spravovaný Google Play-otevřeno** a otevřete tak spravovaný katalog Google Play.
-5. V katalogu Google Play vyberte **Web Apps** .
-6. Kliknutím na tlačítko **"+"** přidejte novou aplikaci.
-7. Zadejte požadované informace a pak klikněte na **vytvořit** .
-8. Pokud jste dokončili přidávání aplikací, zavřete podokno spravované Google Play.
-9. V podokně **aplikace aplikace** klikněte na **synchronizovat** a synchronizujte se se službou Managed Google Play Service. Všimněte si, že privátní aplikace můžou trvat několik minut, než se bude synchronizovat. Pokud se nezobrazí při prvním provedení synchronizace, počkejte pár minut a zahajte novou synchronizaci.
+3. V podokně **Vybrat typ aplikace** v části dostupné typy **aplikací pro Store** vyberte **Managed Google Play App**.
+4. Klikněte na **Vybrat**. V Intune se zobrazuje **spravované Google Play** App Store.
+5. V okně Google Play vyberte **Web Apps** (vedle ikony *zeměkoule* ).
+6. Kliknutím na tlačítko **"+"** v pravém dolním rohu přidejte novou aplikaci.
+7. Přidejte **název**aplikace, **adresu URL**webové aplikace, vyberte, jak se má aplikace zobrazit, a vyberte ikonu aplikace.
+8. Klikněte na tlačítko **Vytvořit**.
+9. Pokud jste dokončili přidávání aplikací, zavřete podokno spravované Google Play.
+10. V podokně **aplikace aplikace** klikněte na **synchronizovat** a synchronizujte se se službou Managed Google Play Service. 
+
+    > [!NOTE]
+    > Aby bylo možné synchronizovat webové aplikace, může trvat několik minut. Pokud se aplikace při prvním provedení synchronizace nezobrazí, počkejte pár minut a zahajte novou synchronizaci.
 
 ## <a name="sync-a-managed-google-play-app-with-intune"></a>Synchronizace aplikace ze spravovaného obchodu Google Play s Intune
 

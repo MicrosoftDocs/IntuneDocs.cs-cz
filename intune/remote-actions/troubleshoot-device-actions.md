@@ -18,23 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 239dd8630eb361da8609e3a34eb2c9346a64dab0
-ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
+ms.openlocfilehash: 7d4517d89e3b7365834e904c815b30a362540906
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74907181"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755591"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Řešení potíží s akcemi zařízení v Intune
 
 Microsoft Intune má mnoho akcí, které vám pomůžou se spravovanými zařízeními. Tento článek obsahuje odpovědi na některé běžné dotazy, které vám můžou pomoct při řešení potíží se zařízením.
 
-## <a name="bypass-activation-lock-action"></a>Akce obejít Zámek aktivace
+## <a name="disable-activation-lock-action"></a>Zakázat Zámek aktivace akci
 
-### <a name="i-clicked-the-bypass-activation-lock-action-in-the-portal-but-nothing-happened-on-the-device"></a>Na portálu jsem kliknul na akci vynechat Zámek aktivace, ale na zařízení nic neproběhlo.
-Toto chování se očekává. Po zahájení akce obejití Zámek aktivace se službě Intune požádalo o aktualizovaný kód od společnosti Apple. Po zobrazení zařízení na obrazovce Zámek aktivace ručně zadáte kód do pole heslo. Tento kód je platný jenom po dobu 15 dnů, takže nezapomeňte kliknout na akci a zkopírovat kód před tím, než vydáte vymazání.
+### <a name="i-clicked-the-disable-activation-lock-action-in-the-portal-but-nothing-happened-on-the-device"></a>Na portálu jsem kliknul na akci zakázat Zámek aktivace, ale na zařízení nic neproběhlo.
+Toto je očekávané. Po zahájení akce zakázat Zámek aktivace se službě Intune požádalo o aktualizovaný kód od společnosti Apple. Po zobrazení zařízení na obrazovce Zámek aktivace ručně zadáte kód do pole heslo. Tento kód je platný jenom po dobu 15 dnů, takže nezapomeňte kliknout na akci a zkopírovat kód před tím, než vydáte vymazání.
 
-### <a name="why-dont-i-see-the-bypass-activation-lock-code-in-the-hardware-overview-blade-of-my-ios-device"></a>Proč se mi nezobrazuje kód pro obejití Zámek aktivace v okně Přehled hardwaru zařízení s iOS?
+### <a name="why-dont-i-see-the-disable-activation-lock-code-in-the-hardware-overview-blade-of-my-ios-device"></a>Proč se nezobrazuje kód zakázat Zámek aktivace v okně Přehled hardwaru zařízení s iOS?
 K nejpravděpodobnějším důvodům patří:
 - Platnost kódu vypršela a byla odstraněna ze služby.
 - Zařízení není pod dohledem zásad omezení zařízení, aby bylo možné Zámek aktivace.
@@ -43,12 +43,12 @@ Můžete kontrolovat kód v aplikaci Graph Explorer s následujícím dotazem:
 
 ```GET - https://graph.microsoft.com/beta/deviceManagement/manageddevices('deviceId')?$select=activationLockBypassCode.```
 
-### <a name="why-is-the-bypass-activation-lock-action-greyed-out-for-my-ios-device"></a>Proč je akce obejití Zámek aktivace pro zařízení s iOS šedá?
+### <a name="why-is-the-disable-activation-lock-action-greyed-out-for-my-ios-device"></a>Proč je akce zakázat Zámek aktivace pro zařízení s iOS šedá?
 K nejpravděpodobnějším důvodům patří: 
 - Platnost kódu vypršela a byla odstraněna ze služby.
 - Zařízení není pod dohledem zásad omezení zařízení, aby bylo možné Zámek aktivace.
 
-### <a name="is-the-bypass-activation-lock-code-case-sensitive"></a>Rozlišuje velká a malá písmena Zámek aktivace kódu?
+### <a name="is-the-disable-activation-lock-code-case-sensitive"></a>Rozlišuje velká a malá písmena Zámek aktivace kódu?
 Ne. A nemusíte zadávat pomlčky.
 
 ## <a name="remove-devices-action"></a>Akce odebrání zařízení
@@ -63,7 +63,7 @@ Protože není považována za spravovanou aplikaci. V tomto kontextu je spravov
 - Aplikace byla nasazená jako dostupná a pak koncovým uživatelem nainstalovaná v aplikaci Portál společnosti.
 
 ### <a name="why-is-wipe-grayed-out-for-android-enterprise-work-profile-devices"></a>Proč je pro zařízení se systémem Android Enterprise Work profilování vymazáno šedé?
-Toto je očekávané chování. Google neumožňuje obnovení továrního nastavení zařízení pracovního profilu od poskytovatele MDM.
+Toto chování je očekávané. Google neumožňuje obnovení továrního nastavení zařízení pracovního profilu od poskytovatele MDM.
 
 ### <a name="why-can-i-sign-back-into-my-office-apps-after-my-device-was-retired"></a>Proč se můžu po vyřazení zařízení do aplikací Office přihlásit zpátky?
 Protože vyřazení zařízení z provozu neodvolává přístupové tokeny. Pomocí zásad podmíněného přístupu můžete zmírnit tuto podmínku.

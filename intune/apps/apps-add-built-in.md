@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a92699ccce4f0b2590e526b3442cd45bfda6407c
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: e299601f69a7052ea52f9da2537306cb8556982b
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74563604"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755370"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Přidání integrovaných aplikací do Microsoft Intune
 
@@ -39,32 +39,43 @@ Ve starších verzích konzoly Intune bylo v Intune několik výchozích spravov
 Postup přidání integrované aplikace k aplikacím dostupným v Microsoft Intune je následující:
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
-3. V podokně **Přidat aplikace** vyberte v seznamu **Typ aplikace** možnost **Integrovaná aplikace**.
-4. Zvolte **Vybrat aplikaci**.
-5. V podokně **Integrovaná aplikace** vyberte aplikace, které chcete zahrnout.
-6. V podokně **Přidat aplikaci** zvolte **Přidat**.
+3. V podokně **Vybrat typ aplikace** v části dostupné typy **aplikací pro Store** vyberte **Vestavěná aplikace**.
+4. Klikněte na **Vybrat**. Zobrazí se kroky **Přidání aplikace** .
+5. Na stránce **Vybrat vestavěné aplikace** klikněte na **Vybrat aplikaci** a vyberte aplikace, které chcete zahrnout.
+6. Vyberte integrované aplikace, které chcete zahrnout. 
+7. Po výběru aplikací klikněte v podokně **Vybrat vestavěné aplikace** na **Vybrat** .
+8. Kliknutím na tlačítko **Další** zobrazíte stránku **značky oboru** .
+9. Klikněte na **Vybrat značky oboru** a volitelně přidejte značky oboru pro aplikaci. Další informace najdete v tématu [použití řízení přístupu na základě role (RBAC) a značek oboru pro distribuci](~/fundamentals/scope-tags.md).
+10. Kliknutím na tlačítko **Další** zobrazíte stránku **přiřazení** .
+11. Vyberte přiřazení skupin pro aplikaci. Další informace najdete v tématu [Přidání skupin pro uspořádání uživatelů a zařízení](~/fundamentals/groups-add.md). 
+12. Kliknutím na **Další** zobrazte stránku **Revize + vytvořit** . Zkontrolujte hodnoty a nastavení, které jste zadali pro aplikaci.
+13. Po dokončení klikněte na **vytvořit** , aby se aplikace přidala do Intune.
 
+    Zobrazí se okno **Přehled** aplikace, kterou jste vytvořili.
 
 ## <a name="configure-app-information"></a>Konfigurace informací o aplikaci
 
 Informace o integrované aplikaci můžete upravit. Tyto informace vám pomůžou identifikovat aplikaci v Intune a také pomůžou uživatelům, aby ji našli na portálu společnosti.
 1. Vyberte **aplikace** > **všechny aplikace** a vyberte vestavěnou aplikaci, kterou chcete upravit.  
    Zobrazí se podokno pro integrovanou aplikaci.
-2. Vyberte **vlastnosti** > **nakonfigurovat**.
+2. Vyberte **vlastnosti**.
+3. V poli **informace o aplikaci**vyberte **Upravit** .
 4. V podokně **Informace o aplikaci** je možné upravit následující údaje:
     - **Název**: Zadejte název integrované aplikace, který se zobrazí na portálu společnosti. Všechny používané názvy musí být jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti uživatelům jenom jedna z aplikací.
     - **Popis**: Zadejte popis aplikace. 
     - **Vydavatel**: Zadejte název vydavatele aplikace.
     - **Kategorie**: Volitelně vyberte jednu nebo více kategorií integrovaných aplikací. Nastavením této možnosti uživatelům usnadníte vyhledání aplikace při procházení portálu společnosti.
-    - **Zobrazit na Portálu společnosti jako vybranou aplikaci**: Když uživatelé vyhledávají aplikace, zobrazí se daná aplikace na význačném místě hlavní stránky portálu společnosti.
+    - **Zobrazit tuto aplikaci jako doporučenou aplikaci na portálu společnosti**: když uživatelé vyhledávají aplikace, zobrazí se na hlavní stránce portálu společnosti výrazně.
     - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
     - **Adresa URL informací o ochraně osobních údajů**: Volitelně zadejte adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
     - **Vývojář**: Volitelně zadejte jméno vývojáře aplikace.
     - **Vlastník**: Volitelně zadejte vlastníka aplikace, například *Personální oddělení*.
     - **Poznámky**: Zadejte jakékoli poznámky, které chcete k aplikaci přidružit.
     - **Nahrát ikonu**: Nahrajte ikonu, která se zobrazí u aplikace, když uživatelé procházejí portál společnosti.
-4. Vyberte **OK**.
-5. V podokně **Vlastnosti** vyberte **Uložit**.
+5. Kliknutím na tlačítko **Revize + Uložit** zobrazte stránku **Revize + vytvořit** . Zkontrolujte hodnoty a nastavení, které jste zadali pro aplikaci.
+13. Po dokončení klikněte na **Uložit** a aktualizujte aplikaci v Intune.
+
+    Zobrazí se okno **Přehled** aplikace, kterou jste vytvořili.
 
 ## <a name="next-steps"></a>Další kroky
 

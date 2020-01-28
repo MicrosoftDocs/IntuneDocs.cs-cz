@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d45455a97f8016527dce49839b5493f16b173d43
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 613369070d847265f371a7b228a2b6d81bf813fe
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74563646"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755251"
 ---
 # <a name="add-android-enterprise-system-apps-to-microsoft-intune"></a>Přidání aplikací pro Android Enterprise System do Microsoft Intune
 
@@ -35,13 +35,20 @@ Aplikaci pro Android Enterprise System můžete do Intune přidat z Azure Portal
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
-3. V podokně **Přidat aplikaci** vyberte v části dostupné **jiné** typy možnost aplikace pro **Android Enterprise System**.
-4. Pokud chcete nakonfigurovat informace o aplikaci, vyberte **Konfigurovat**a potom zadejte následující informace:
+3. V podokně **Vybrat typ aplikace** v části dostupné **jiné** typy vyberte **aplikace pro Android Enterprise System**.
+4. Klikněte na **Vybrat**. Zobrazí se kroky **Přidání aplikace** .
+Na stránce **informace o aplikaci** přidejte podrobnosti o aplikaci:
     - **Název aplikace**: zadejte název aplikace.
     - **Vydavatel**: Zadejte název vydavatele aplikace.  
     - **Název balíčku**: zadejte název balíčku. Intune ověří, jestli je název balíčku platný.
-5. Vyberte **OK**.
-6. Vyberte **Přidat**.
+5. Kliknutím na tlačítko **Další** zobrazíte stránku **značky oboru** .
+8. Klikněte na **Vybrat značky oboru** a volitelně přidejte značky oboru pro aplikaci. Další informace najdete v tématu [použití řízení přístupu na základě role (RBAC) a značek oboru pro distribuci](~/fundamentals/scope-tags.md).
+9. Kliknutím na tlačítko **Další** zobrazíte stránku **přiřazení** .
+10. Vyberte přiřazení skupin pro aplikaci. Další informace najdete v tématu [Přidání skupin pro uspořádání uživatelů a zařízení](~/fundamentals/groups-add.md). 
+11. Kliknutím na **Další** zobrazte stránku **Revize + vytvořit** . Zkontrolujte hodnoty a nastavení, které jste zadali pro aplikaci.
+12. Po dokončení klikněte na **vytvořit** , aby se aplikace přidala do Intune.
+
+Zobrazí se okno **Přehled** aplikace, kterou jste vytvořili.
 
 > [!NOTE]
 > Abyste mohli najít název balíčku aplikace, kterou chcete povolit nebo zakázat, budete muset pracovat s výrobcem OEM vašeho zařízení.

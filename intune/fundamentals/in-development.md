@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 01ea2f75d166e5cc6aef4b890dba5722a74c1f61
-ms.sourcegitcommit: 8f56220e7cafc5bc43135940575a9acb5afde730
+ms.openlocfilehash: 78022dc4bdfa108bcd04e180ab413cbf04d2c728
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75827815"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755608"
 ---
 # <a name="in-development-for-microsoft-intune---january-2020"></a>Ve vývoji Microsoft Intune – leden 2020
 
@@ -65,27 +65,12 @@ Aplikaci Portál společnosti na zařízeních s Windows aktualizujeme tak, aby 
 Aplikace Portál společnosti zobrazí koncovým uživatelům další zprávy o stavu instalace aplikace. Následující podmínky se vztahují na nové funkce závislosti Win32:
 - Aplikaci se nepovedlo nainstalovat. Nevyhověly závislosti definované správcem.
 
-### <a name="retarget-web-clips-to-microsoft-edge-on-ios-devices---5455276-idready---"></a>Změna cílení webových klipů na zařízení s iOS na Microsoft Edge<!-- 5455276 idready -->
+### <a name="retarget-web-clips-to-microsoft-edge-on-ios-devices---5455276---"></a>Změna cílení webových klipů na zařízení s iOS na Microsoft Edge<!-- 5455276 -->
 Webové klipy, které fungují jako připnuté webové aplikace na zařízeních s iOS, bude nutné aktualizovat. Nově nasazené webové klipy se otevřou v Microsoft Edge místo Intune Managed Browser, pokud je to potřeba pro otevření v chráněném prohlížeči. Aby bylo zajištěno, že budou otevřeny v Microsoft Edge místo Managed Browser, je třeba změnit cílení na stávající webové klipy. 
 
-### <a name="user-experience-change-when-adding-apps-to-intune---4705829-idready---"></a>Změna uživatelského prostředí při přidávání aplikací do Intune<!-- 4705829 idready -->
-Při přidávání aplikací přes Intune se zobrazí nové uživatelské prostředí. Toto prostředí obsahuje stejné nastavení a podrobnosti, které jste použili dříve, ale nové prostředí se před přidáním aplikace do Intune řídí procesem podobným průvodci. Toto nové prostředí poskytuje před přidáním aplikace také stránku s přehledem. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace** > **všechny aplikace** > **Přidat**. Další informace najdete v článku [Přidání aplikací do Microsoft Intune](~/apps/apps-add.md).
-
-#### <a name="require-win32-apps-to-restart----3136567--"></a>Vyžadovat restartování aplikací Win32 <!-- 3136567-->
-Můžete vyžadovat, aby se aplikace Win32 po úspěšné instalaci restartovala. Můžete také zvolit dobu (dobu odkladu), než se musí vykonat restart.
 
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>Konfigurace zařízení
-
-### <a name="add-automatic-proxy-settings-to-wi-fi-profiles-for-android-enterprise-work-profiles---4490822-idready---"></a>Přidání automatických nastavení proxy do profilů sítě Wi-Fi pro pracovní profily Android Enterprise<!-- 4490822 idready -->
-Na zařízeních se systémem Android Enterprise Work Profiles můžete vytvořit profily sítě Wi-Fi. Když vyberete typ sítě Wi-Fi, můžete také zadat typ protokolu EAP (Extensible Authentication Protocol), který se používá ve vaší síti Wi-Fi.
-
-Když v budoucí aktualizaci zvolíte typ podniku, budete moct zadat automatické nastavení proxy serveru, včetně proxy server URL, jako je například `proxy.contoso.com`.
-
-Pokud chcete zobrazit aktuální nastavení Wi-Fi, která můžete nakonfigurovat, přejděte na [Přidat nastavení Wi-Fi pro zařízení s Androidem Enterprise a Androidem v Microsoft Intune](../configuration/wi-fi-settings-android-enterprise.md).
-
-Platí pro:
-- Pracovní profil Android Enterprise
 
 ### <a name="wired-network-device-configuration-profiles-for-macos-devices---3508686----"></a>Profily konfigurace síťových zařízení s drátovou sítí pro zařízení macOS<!-- 3508686  -->
 Bude k dispozici nový profil konfigurace zařízení macOS, který konfiguruje drátové sítě (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **MacOS** pro typ profilu > platformed **Network** pro typ profilu). Pomocí této funkce můžete vytvořit profily 802.1 x ke správě drátových sítí a tyto drátové sítě nasadit do zařízení macOS.
@@ -120,10 +105,7 @@ Tato funkce platí pro:
 - Android Enterprise 
 
 <!-- ***********************************************-->
-## <a name="device-enrollment"></a>Registrace zařízení
-
-### <a name="block-android-enrollments-by-device-manufacturer--5197392-idready--"></a>Blokovat registraci Androidu podle výrobce zařízení<!--5197392 idready-->
-Budete moct blokovat registraci zařízení na základě výrobce zařízení. To platí pro správce zařízení s Androidem a zařízení s Androidem Enterprise Work Profile. Omezení registrace zobrazíte tak, že přejdete do [centra pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)> **zařízení** > **omezení registrace**.
+<!--## Device enrollment-->
 
 
 
@@ -151,9 +133,6 @@ Na stránku **Přehled** pro zařízení se přidají tyto informace:
 
 <!-- ***********************************************-->
 ## <a name="role-based-access-control"></a>Řízení přístupu na základě role
-
-### <a name="new-intune-built-in-role-endpoint-security-manager--4253397-idready--"></a>Nová integrovaná role Endpoint Manageru pro Intune<!--4253397 idready-->
-K dispozici je nová integrovaná role Intune: Správce zabezpečení koncového bodu. Tato nová role poskytuje správcům úplný přístup k uzlu Správce koncových bodů v Intune a jenom k ostatním oblastem. Role je rozšířením role správce zabezpečení ze služby Azure AD. Pokud aktuálně máte jenom globální správce jako role, pak se nevyžadují žádné změny. Pokud používáte role a chcete členitost, kterou poskytuje Endpoint Security Manager, pak tuto roli přiřaďte, až bude k dispozici. Další informace o předdefinovaných rolích najdete v tématu [řízení přístupu na základě role](role-based-access-control.md).
 
 ### <a name="intune-roles-user-interface-changes-coming--5801612-idready--"></a>Připravujeme změny uživatelských rozhraní rolí Intune<!--5801612 idready-->
 Uživatelské rozhraní pro centrum pro správu [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **správu tenanta** > **role** se změní na uživatelsky přívětivější a intuitivní návrh. Toto prostředí nabízí stejné nastavení a podrobnosti, které teď použijete, ale nové prostředí využívá proces podobný průvodci.

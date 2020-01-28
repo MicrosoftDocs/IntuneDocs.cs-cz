@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4246dab0cf22053d76fdd50f99de53e827332a23
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 699065a19087ec3cdf3d8fcbee765f968a1cbaee
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547827"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754693"
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 
@@ -82,12 +82,13 @@ Pro omezení registrace typu i limitu počtu zařízení se automaticky poskytno
    > Windows 10 neposkytuje během registrace číslo rev, takže pokud zadáte v 10.0.17134.100 a zařízení bude 10.0.17134.174, bude během registrace zablokované.
 
 6. V části **osobní vlastnictví**vyberte **Povolit** pro platformy, které chcete povolit jako zařízení v osobním vlastnictví.
-7. Kliknutím na tlačítko **Další** přejdete na stránku **přiřazení** .
-8. Zvolte **Vybrat skupiny, které chcete zahrnout** , a potom pomocí vyhledávacího pole vyhledejte skupiny, které chcete zahrnout do tohoto omezení. Omezení platí jenom u skupin, ke kterým je přiřazené. Pokud omezení nepřiřadíte alespoň k jedné skupině, nebude mít žádný efekt. Pak zvolte **Vybrat**. 
+7. V části **výrobce zařízení**Zadejte čárkami oddělený seznam výrobců, které chcete blokovat.
+8. Kliknutím na tlačítko **Další** přejdete na stránku **přiřazení** .
+9. Zvolte **Vybrat skupiny, které chcete zahrnout** , a potom pomocí vyhledávacího pole vyhledejte skupiny, které chcete zahrnout do tohoto omezení. Omezení platí jenom u skupin, ke kterým je přiřazené. Pokud omezení nepřiřadíte alespoň k jedné skupině, nebude mít žádný efekt. Pak zvolte **Vybrat**. 
     ![zakončení obrazovky pro výběr nastavení platformy](./media/enrollment-restrictions-set/select-groups.png)
-9. Kliknutím na tlačítko **Další** přejdete na stránku **Revize + vytvořit** .
-10. Vyberte **vytvořit** a vytvořte tak omezení.
-11. Priorita nově vytvořeného omezení bude o jeden stupeň vyšší než výchozí omezení. [Prioritu můžete změnit](#change-enrollment-restriction-priority).
+10. Kliknutím na tlačítko **Další** přejdete na stránku **Revize + vytvořit** .
+11. Vyberte **vytvořit** a vytvořte tak omezení.
+12. Priorita nově vytvořeného omezení bude o jeden stupeň vyšší než výchozí omezení. [Prioritu můžete změnit](#change-enrollment-restriction-priority).
 
 
 ## <a name="create-a-device-limit-restriction"></a>Vytvoření omezení limitu počtu zařízení
@@ -142,7 +143,7 @@ K registraci zařízení s Windows ve společnosti jsou povoleny následující 
 - Uživatel se registruje pomocí [účtu správce registrace zařízení]( device-enrollment-manager-enroll.md).
 - Zařízení se registruje prostřednictvím programu [Windows AutoPilot](enrollment-autopilot.md).
 - Zařízení se zaregistruje u automatického pilotního nasazení Windows, ale v nastavení Windows se nejedná o možnost jenom registrace MDM.
-- Číslo IMEI zařízení je uvedené v seznamu **Registrace zařízení** > **[Identifikátory podnikových zařízení](corporate-identifiers-add.md)**. (Nepodporuje se ve Windows Phone 8.1.)
+- Číslo IMEI zařízení je uvedené v seznamu **Registrace zařízení** >  **[Identifikátory podnikových zařízení](corporate-identifiers-add.md)** . (Nepodporuje se ve Windows Phone 8.1.)
 - Zařízení se registruje v rámci [balíčku hromadného zřizování](windows-bulk-enroll.md).
 - Zařízení se registruje prostřednictvím objektu zásad skupiny nebo [automatického zápisu z Configuration Manager pro spolusprávu](https://docs.microsoft.com/configmgr/comanage/quickstart-paths#bkmk_path1).
  

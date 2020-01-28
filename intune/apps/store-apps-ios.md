@@ -6,7 +6,7 @@ keywords: Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5616b27b97d5623958ec872390e2a6de79db3c5
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 2daa7428cf8677f9e1a2b11db2b3ce65e2df8bc4
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74563452"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754996"
 ---
 # <a name="add-ios-store-apps-to-microsoft-intune"></a>Přidání aplikací pro App Store (iOS) do Microsoft Intune
 
@@ -43,14 +43,18 @@ Pomocí této metody můžete aplikace přiřazovat jen v případě, že jsou v
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
-3. V seznamu **Typ aplikace** vyberte z typů **Aplikace pro Store** možnost **iOS**.
-4. Vyberte **Hledat v App Storu**.
-5. V podokně **Hledat v App Storu** vyberte národní prostředí pro zemi nebo oblast obchodu App Store.
-6. Do **vyhledávacího** pole zadejte název (nebo část názvu) aplikace.  
+3. V podokně **Vybrat typ aplikace** v části dostupné typy **aplikací pro Store** vyberte aplikace pro **iOS Store**.
+4. Klikněte na **Vybrat**.<br>
+   Zobrazí se kroky **Přidání aplikace** .
+5. Vyberte **Hledat v App Storu**.
+6. V podokně **Hledat v App Storu** vyberte národní prostředí pro zemi nebo oblast obchodu App Store.
+7. Do **vyhledávacího** pole zadejte název (nebo část názvu) aplikace.  
     Intune prohledá Store a vrátí seznam relevantních výsledků.
-7. V seznamu výsledků vyberte požadovanou aplikaci a pak vyberte **Vybrat**.
-8. V podokně **Přidat aplikaci** zvolte **Informace o aplikaci** a nakonfigurujte aplikaci.
-9. V podokně **Informace o aplikaci** přidejte informace o aplikaci. V závislosti na zvolené aplikaci můžou být některé hodnoty v tomto podokně vyplněné automaticky:
+8. V seznamu výsledků vyberte požadovanou aplikaci a pak vyberte **Vybrat**.<br>
+
+   Stránka **informace o aplikaci** se zobrazí v podokně **Přidat aplikaci** . Pokud je to možné, budou informace o aplikaci přidány na základě aplikace, kterou jste vybrali ze Storu.
+
+9. Na stránce **informace o aplikaci** přidejte podrobnosti o aplikaci. V závislosti na zvolené aplikaci můžou být některé hodnoty v tomto podokně vyplněné automaticky:
     - **Název**: Zadejte název aplikace, který se zobrazí na Portálu společnosti. Ujistěte se, že používaný název aplikace je jedinečný. Pokud je název aplikace duplicitní, zobrazí se uživatelům na Portálu společnosti pouze jeden název.
     - **Popis**: Zadejte popis aplikace. Tento popis se uživatelům zobrazí na Portálu společnosti.
     - **Vydavatel**: Zadejte název vydavatele aplikace.
@@ -58,17 +62,21 @@ Pomocí této metody můžete aplikace přiřazovat jen v případě, že jsou v
     - **Minimální operační systém**: V seznamu vyberte nejstarší verzi operačního systému, na kterou je možné aplikaci nainstalovat. Pokud aplikaci přiřadíte k zařízení se starším operačním systémem, nenainstaluje se.
     - **Použitelný typ zařízení**: V seznamu vyberte zařízení, která aplikace používá.
     - **Kategorie**: Volitelně můžete vybrat jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste vytvořili. Uživatelé tak při procházení Portálu společnosti najdou aplikaci snadněji.
-    - **Zobrazit na Portálu společnosti jako vybranou aplikaci:** Vybráním této možnosti se sada aplikací zobrazí uživatelům, kteří hledají aplikace, na výrazném místě na hlavní stránce Portálu společnosti.
+    - **Zobrazit tuto aplikaci jako doporučenou aplikaci v portál společnosti**: tuto možnost vyberte, pokud chcete, aby se sada aplikací zobrazovala na hlavní stránce portálu společnosti, když uživatelé vyhledávají aplikace.
     - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
     - **Adresa URL informací o ochraně osobních údajů**: Volitelně zadejte adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
     - **Vývojář**: Volitelně zadejte jméno vývojáře aplikace. Toto pole je viditelné jen pro správce, uživatelé ho nevidí.
     - **Vlastník**: Volitelně zadejte vlastníka aplikace, například *Personální oddělení*. Toto pole je viditelné jen pro správce, uživatelé ho nevidí.
     - **Poznámky**: Volitelně zadejte jakékoli poznámky, které chcete k aplikaci přidružit. Toto pole vidí jenom správce a koncoví uživatelé je neuvidí.
     - **Logo**: Volitelně nahrajte ikonu, která se přidruží k aplikaci. Tato ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
-10. Vyberte **OK**.
-11. Vyberte **Přidat**.
+10. Kliknutím na tlačítko **Další** zobrazíte stránku **značky oboru** .
+11. Klikněte na **Vybrat značky oboru** a volitelně přidejte značky oboru pro aplikaci. Další informace najdete v tématu [použití řízení přístupu na základě role (RBAC) a značek oboru pro distribuci](~/fundamentals/scope-tags.md).
+12. Kliknutím na tlačítko **Další** zobrazíte stránku **přiřazení** .
+13. Vyberte přiřazení skupin pro aplikaci. Další informace najdete v tématu [Přidání skupin pro uspořádání uživatelů a zařízení](~/fundamentals/groups-add.md). 
+14. Kliknutím na **Další** zobrazte stránku **Revize + vytvořit** . Zkontrolujte hodnoty a nastavení, které jste zadali pro aplikaci.
+15. Po dokončení klikněte na **vytvořit** , aby se aplikace přidala do Intune.
 
-Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřazovat vybraným skupinám.
+Zobrazí se okno **Přehled** aplikace, kterou jste vytvořili.
 
 ## <a name="next-steps"></a>Další kroky
 
