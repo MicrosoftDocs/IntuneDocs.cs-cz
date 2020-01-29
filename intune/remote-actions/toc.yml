@@ -33,13 +33,13 @@
           href: device-supervised-mode.md
         - name: Vymazání zařízení s macOS
           href: device-erase.md
-        - name: Vynechat zámek aktivace
-          href: device-activation-lock-bypass.md
+        - name: Zakázání zámku aktivace
+          href: device-activation-lock-disable.md
     - name: Akce uživatele
       items:
         - name: Odhlášení aktuálního uživatele
           href: device-logout-user.md
-        - name: Odebrat uživatele
+        - name: Odebrání uživatele
           href: device-remove-user.md
         - name: Vyhledání primárního uživatele
           href: find-primary-user.md
