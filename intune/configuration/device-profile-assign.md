@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 01/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 252af3c7447b59ee6aaeb4cb05bed0579ae8af4c
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 5b61c333f41054194b44c7517e508fe1ef6d28d4
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206699"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812374"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Přiřazení profilů uživatelů a zařízení v Microsoft Intune
 
@@ -31,7 +31,11 @@ Vytvoříte profil a zahrnete do něj všechna nastavení, která jste zadali. V
 V tomto článku se dozvíte, jak přiřadit profil, a obsahuje některé informace o použití značek oboru v profilech.
 
 > [!NOTE]  
-> Když je profil odebraný nebo už není přiřazený k zařízení, může nastavení zachovat stávající hodnotu. Nastavení se nevrátí na výchozí hodnotu. Chcete-li změnit nastavení na jinou hodnotu, vytvořte nový profil a přiřaďte ho.
+> Když je profil odebraný nebo už není přiřazený k zařízení, může dojít k různým akcím v závislosti na nastavení v profilu. Nastavení jsou založená na zprostředkovatelích CSP a každý CSP může docházet k odstranění profilu odlišně. Nastavení může například zachovat existující hodnotu a nevracet se zpět na výchozí hodnotu. Chování řídí každý CSP v operačním systému. Seznam zprostředkovatelů kryptografických služeb systému Windows najdete v [referenčních informacích k poskytovateli CSP (Configuration Service Provider)](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+>
+> Pokud chcete změnit nastavení na jinou hodnotu, vytvořte nový profil, nakonfigurujte nastavení na **Nenakonfigurováno**a přiřaďte profil. Po použití na zařízení by uživatelé měli mít kontrolu nad tím, aby nastavení změnili na upřednostňovanou hodnotu.
+>
+> Při konfiguraci těchto nastavení doporučujeme nasazení do pilotní skupiny. Další Rady k zavedení Intune najdete v tématu [Vytvoření plánu zavedení](../fundamentals/planning-guide-rollout-plan.md).
 
 ## <a name="before-you-begin"></a>Před zahájením
 
@@ -69,11 +73,11 @@ Na zařízeních s Windows 10 můžete přidat **pravidla použitelnosti** , aby
 
 Mnoho uživatelů požaduje používání skupin uživatelů a kdy používat skupiny zařízení. Odpověď závisí na vašem cíli. Tady jsou některé doprovodné materiály, které vám pomohou začít.
 
-### <a name="device-groups"></a>Skupiny zařízení
+### <a name="device-groups"></a>skupiny zařízení.
 
 Pokud chcete použít nastavení na zařízení bez ohledu na to, kdo je přihlášený, přiřaďte své profily ke skupině zařízení. Nastavení použitá pro skupiny zařízení vždy přecházejí na zařízení, nikoli na uživatele.
 
-Například:
+Příklad:
 
 - Skupiny zařízení jsou užitečné ke správě zařízení, která nemají vyhrazeného uživatele. Máte například zařízení, která tisknou lístky, prohledává inventář, sdílí pracovní procesy, jsou přiřazeny k určitému skladu atd. Vložte tato zařízení do skupiny zařízení a přiřaďte své profily k této skupině zařízení.
 
@@ -87,7 +91,7 @@ Pokud si nejste vědomi, kdo se k zařízení přihlásil, nebo pokud je někdo 
 
 Nastavení profilu použité pro skupiny uživatelů vždycky přejdou na uživatele a při přihlášení ke svému množství zařízení se dostanete k uživateli. Pro uživatele je běžné mít mnoho zařízení, jako je například Surface pro práci, a osobní zařízení s iOS. A je normální pro uživatele, kteří mají přístup k e-mailu a jiným prostředkům organizace z těchto zařízení.
 
-Například:
+Příklad:
 
 - Chcete umístit ikonu helpdesku pro všechny uživatele na všech svých zařízeních. V tomto scénáři vložte tyto uživatele do skupiny uživatelů a přiřaďte k této skupině uživatelů profil ikony helpdesku.
 - Uživatel dostane nové zařízení vlastněné organizací. Uživatel se k zařízení přihlásí pomocí svého doménového účtu. Zařízení se automaticky zaregistruje ve službě Azure AD a automaticky se spravuje přes Intune. Tento profil je dobrým scénářem, který se přiřadí skupině uživatelů.

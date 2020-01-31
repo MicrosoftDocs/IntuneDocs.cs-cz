@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d9fbbbb80cf25861b2e0afbf3d01cfca3ece5fd
-ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
+ms.openlocfilehash: 7cda7404d24ccb9bb1c42d6bb66d77f29ac925ac
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991767"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812463"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Odebrání zařízení vymazáním, vyřazením nebo ručním zrušením registrace
 
@@ -88,7 +88,7 @@ Následující tabulky popisují, jaká data se odeberou a jaký vliv má akce *
 
 |Datový typ|iOS|
 |-------------|-------|
-|Firemní aplikace a související data instalovaná službou Intune|**Aplikace nainstalované pomocí portál společnosti:** Pro aplikace, které jsou připnuté na profil správy, se odeberou všechna data aplikací a aplikace. Mezi tyto aplikace patří aplikace původně nainstalované z App Storu a novější spravované jako aplikace společnosti. <br /><br /> **Aplikace Microsoftu, které používají správu mobilních aplikací a které se nainstalovaly z App Storu:** Pro aplikace, které nejsou spravované Portál společnosti, se odeberou data firemní aplikace chráněná šifrováním pomocí správy mobilních aplikací (MAM) v rámci aplikace v místním úložišti. Data chráněná šifrováním MAM mimo aplikaci zůstávají šifrovaná a nepoužitelná, ale neodstraňují se. Data osobní aplikace a aplikace se neodeberou.|
+|Firemní aplikace a související data instalovaná službou Intune|**Aplikace nainstalované pomocí portál společnosti:** Pro aplikace, které jsou připnuté na profil správy, se odeberou všechna data aplikací a aplikace. Tyto aplikace zahrnují aplikace původně nainstalované z App Storu a později spravované jako firemní aplikace, pokud není aplikace nakonfigurovaná tak, aby se odinstalovala při odebírání zařízení. <br /><br /> **Aplikace Microsoftu, které používají správu mobilních aplikací a které se nainstalovaly z App Storu:** Pro aplikace, které nejsou spravované Portál společnosti, se odeberou data firemní aplikace chráněná šifrováním pomocí správy mobilních aplikací (MAM) v rámci aplikace v místním úložišti. Data chráněná šifrováním MAM mimo aplikaci zůstávají šifrovaná a nepoužitelná, ale neodstraňují se. Data osobní aplikace a aplikace se neodeberou.|
 |Nastavení|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|
 |Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|
 |Nastavení profilu certifikátu|Certifikáty jsou odebrané a odvolané.|
@@ -116,7 +116,7 @@ Následující tabulky popisují, jaká data se odeberou a jaký vliv má akce *
 
 Při odebrání firemních dat ze zařízení s pracovním profilem Androidu se odeberou všechna data, aplikace a nastavení v pracovním profilu na tomto zařízení. Zařízení se vyřadí ze správy pomocí Intune. Pracovní profily Androidu nepodporují vymazání.
 
-### <a name="android-enterprise-kiosk-devices"></a>Zařízení s Androidem Enterprise v beznabídkovém režimu
+### <a name="android-enterprise-kiosk-devices"></a>Zařízení s beznabídkovým režimem Androidu Enterprise
 
 Zařízení s Androidem v beznabídkovém režimu můžete jen vymazat. Vyřazení u nich není možné.
 
@@ -197,7 +197,7 @@ Pokud chcete zařízení Apple DEP zcela odebrat ze systému správy Intune, pos
 
     ![Snímek obrazovky opětovného přiřazení Apple](./media/devices-wipe/apple-reassign.png)
 
-## <a name="fresh-start"></a>Začít od začátku
+## <a name="fresh-start"></a>Nový Start
 
 Platí pro zařízení s Windows 10. Přečtěte si další informace o [čerstvém startu](device-fresh-start.md).
 

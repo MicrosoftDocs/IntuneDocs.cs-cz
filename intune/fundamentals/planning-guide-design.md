@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8452f840fb269505656bf6594d3e5c196b4d7a06
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 9fa02a61148a03a64b88b38dcdc1799b30bc45db
+ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885784"
+ms.lasthandoff: 01/30/2020
+ms.locfileid: "76886729"
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
 
@@ -194,7 +194,7 @@ Při vytváření návrhu potřebujete vědět, jaká zařízení budou v prost�
 
 ### <a name="devices"></a>Zařízení
 
-Intune slouží ke správě mobilních zařízení. Zabezpečuje firemní data a umožňuje koncovým uživatelům pracovat z více míst. Intune podporuje množství platforem zařízení, proto doporučujeme, abyste zdokumentovali zařízení, platformy operačních systémů a verze, které budou v návrhu vaší organizace podporované. Příklad:
+Intune slouží ke správě mobilních zařízení. Zabezpečuje firemní data a umožňuje koncovým uživatelům pracovat z více míst. Intune podporuje množství platforem zařízení, proto doporučujeme, abyste zdokumentovali zařízení, platformy operačních systémů a verze, které budou v návrhu vaší organizace podporované. Například:
 
 | **Platforma zařízení** | **Verze OS** |
 |:---:|:---:|
@@ -308,7 +308,10 @@ Profily Wi-Fi se používají k automatickému připojení mobilního zařízen�
 
 Tady je příklad návrhu profilu Wi-Fi:
 
-**typ** |  | **název profilu** | **platforma zařízení** | **případy použití** | | Wi-Fi | Profil Wi-Fi Asie | Android | Corporate, oblast BYOD Asie | | Wi-Fi | Severní Amerika profil sítě Wi-Fi | Android, iOS, Windows 10 Mobile | Corporate, BYOD Severní Amerika Region |
+| **Typ** | **Název profilu** | **Platforma zařízení** | **Případy použití** |
+|:---:|:---:|:---:|:---:|
+| Wi-Fi | Profil Wi-Fi pro Asii | Android | Firemní zařízení, vlastní zařízení uživatelů, oblast Asie|
+| Wi-Fi | Profil Wi-Fi pro Severní Ameriku | Android, iOS, Windows 10 Mobile | Firemní zařízení, vlastní zařízení uživatelů, oblast Severní Amerika |
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní profily Wi-Fi.
 
@@ -364,7 +367,7 @@ Protože aplikace můžete nasazovat uživatelům a zařízením, doporučujeme,
 - Jsou aplikace veřejně dostupné v obchodu s aplikacemi, nebo jde o vlastní obchodní aplikace?
 
 
-#### <a name="app-protection-policies"></a>Zásady ochrany aplikací
+#### <a name="app-protection-policies"></a>Zásady ochrany aplikace
 
 Zásady ochrany aplikace minimalizují ztrátu dat tím, že definují, jak aplikace spravuje firemní data. Intune podporuje zásady ochrany pro každou aplikaci vytvořenou tak, aby fungovala se správou mobilních aplikací. Při návrhu zásad ochrany aplikací se musíte rozhodnout, jaká omezení chcete uplatnit na firemní data v dané aplikaci. Doporučujeme vám prostudovat, jak [zásady ochrany aplikací](../apps/app-protection-policy.md) fungují. Tady je příklad, jak dokumentovat stávající aplikace a jakou ochranu potřebují.
 

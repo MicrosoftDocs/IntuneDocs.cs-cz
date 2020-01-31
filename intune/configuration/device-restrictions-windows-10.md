@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 01/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81da5ca8e7eaa76f9a6705cc9e3c816234c461db
-ms.sourcegitcommit: af384c46ec8d8def6aa32c3b89947748dc6fd28f
+ms.openlocfilehash: 0dd1ecb5666b8bbb8b26a001be56372d86839f31
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76517554"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812316"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Windows 10 (a novějším) pro povolení nebo omezení funkcí pomocí Intune
 
@@ -39,8 +39,11 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 Tato nastavení používají [zprostředkovatele CSP zásad ApplicationManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement), který obsahuje také podporované edice Windows.
 
-- **App Store** (jenom mobilní): **Nenakonfigurováno** (výchozí) umožňuje koncovým uživatelům přístup k obchodu s aplikacemi na mobilních zařízeních. **Blok** zabraňuje použití App Storu.
-- **Automatické aktualizace aplikací ze Storu**: **Nenakonfigurováno** (výchozí) povolí automatickou aktualizaci aplikací nainstalovaných z Microsoft Store. **Blok** zabraňuje automatické instalaci aktualizací.
+- **App Store** (jenom mobilní): **blok** brání koncovým uživatelům v přístupu k obchodu s aplikacemi na mobilních zařízeních. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení operační systém může koncovým uživatelům povolit přístup k obchodu s aplikacemi.
+- **Automatické aktualizace aplikací ze Storu**: **blok** zabraňuje automatické instalaci aktualizací z Microsoft Store. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat automatickou aktualizaci aplikací nainstalovaných z Microsoft Store.
+
+  [CSP ApplicationManagement/AllowAppStoreAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowappstoreautoupdate)
+
 - **Instalace důvěryhodných aplikací**: vyberte, jestli se můžou instalovat aplikace, které nejsou Microsoft Store, označované taky jako zkušební načtení. Probíhá instalace zkušebního načtení a následné spuštění nebo otestování aplikace, která není certifikována Microsoft Store. Například aplikace, která je interní pro vaši společnost. Možnosti:
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje.
   - **Blok**: zabraňuje zkušebnímu načtení. NeMicrosoft Store aplikace se nedají nainstalovat.
@@ -51,16 +54,36 @@ Tato nastavení používají [zprostředkovatele CSP zásad ApplicationManagemen
   - **Povolit**: povolí vývojářský režim a aplikace pro zkušební načtení.
 
   [Povolit pro vývoj zařízení](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development) Další informace o této funkci.
+  
+  [CSP ApplicationManagement/AllowAllTrustedApps](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowalltrustedapps)
 
-- **Sdílená data aplikací uživatele**: vyberte možnost **umožňuje** sdílet data aplikací mezi různými uživateli na stejném zařízení a dalšími instancemi této aplikace. **Nenakonfigurováno** (výchozí) zabraňuje sdílení dat s ostatními uživateli a dalšími instancemi stejné aplikace.
-- **Použít pouze privátní úložiště**: **povolí** možnost stahovat aplikace pouze z privátního úložiště a nestahovat z veřejného úložiště, včetně maloobchodního katalogu. **Nenakonfigurováno** (výchozí) umožňuje stahovat aplikace z privátního úložiště a veřejného úložiště.
-- **Spuštění aplikace pocházející ze Storu**: **blokování** zakáže všechny aplikace, které byly v zařízení předem nainstalovány, nebo stažené z Microsoft Store. **Nenakonfigurováno** (výchozí) umožňuje, aby se tyto aplikace otevíraly.
-- **Nainstalovat data aplikací na systémový svazek**: **blok** zastaví aplikacím ukládat data na systémový svazek zařízení. **Nenakonfigurováno** (výchozí) umožňuje aplikacím ukládat data na svazek systémového disku.
-- **Nainstalovat aplikace na systémovou jednotku**: **blokovat** znemožní aplikacím instalovat na systémovou jednotku na zařízení. **Nenakonfigurováno** (výchozí) umožňuje aplikacím instalaci na systémovou jednotku.
-- Záznam ze **hry** (jenom Desktop): **blokování** zakáže zaznamenávání a vysílání her ve Windows. **Nenakonfigurováno** (výchozí) umožňuje zaznamenávání a vysílání her.
+- **Sdílená data aplikací uživatele**: vyberte možnost **umožňuje** sdílet data aplikací mezi různými uživateli na stejném zařízení a dalšími instancemi této aplikace. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém zabránit sdílení dat s ostatními uživateli a dalšími instancemi stejné aplikace.
+
+  [CSP ApplicationManagement/AllowSharedUserAppData](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowshareduserappdata)
+
+- **Použít pouze privátní úložiště**: **povolí** možnost stahovat aplikace pouze z privátního úložiště a nestahovat z veřejného úložiště, včetně maloobchodního katalogu. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém stahovat aplikace z privátního úložiště a z veřejného úložiště.
+
+  [CSP ApplicationManagement/RequirePrivateStoreOnly](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-requireprivatestoreonly)
+
+- **Spuštění aplikace pocházející ze Storu**: **blokování** zakáže všechny aplikace, které byly v zařízení předem nainstalovány, nebo stažené z Microsoft Store. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém tyto aplikace otevřít.
+
+  [CSP ApplicationManagement/DisableStoreOriginatedApps](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-disablestoreoriginatedapps)
+
+- **Nainstalovat data aplikací na systémový svazek**: **blok** zastaví aplikacím ukládat data na systémový svazek zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat aplikacím ukládat data na diskový svazek.
+
+  [CSP ApplicationManagement/RestrictAppDataToSystemVolume](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-restrictappdatatosystemvolume)
+
+- **Nainstalovat aplikace na systémovou jednotku**: **blokovat** znemožní aplikacím instalovat na systémovou jednotku na zařízení. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat instalaci aplikací na systémovou jednotku.
+
+  [CSP ApplicationManagement/RestrictAppToSystemVolume](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-restrictapptosystemvolume)
+
+- Záznam ze **hry** (jenom Desktop): **blokování** zakáže zaznamenávání a vysílání her ve Windows. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může operační systém umožňovat zaznamenávání a vysílání her.
+
+  [CSP ApplicationManagement/AllowGameDVR](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
+
 - **Jenom aplikace ze Storu**: Toto nastavení určuje uživatelské prostředí, když uživatelé nainstalují aplikace z jiných míst než z Microsoft Store. Možnosti:
 
-  - **Nenakonfigurováno** (výchozí): umožňuje koncovým uživatelům instalovat aplikace z jiných míst než z Microsoft Store, včetně aplikací definovaných v jiných nastaveních zásad.  
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nemění ani neaktualizuje. Ve výchozím nastavení může operační systém koncovým uživatelům dovolit instalovat aplikace z jiných míst než z Microsoft Store, včetně aplikací definovaných v jiných nastaveních zásad.  
   - **Odkudkoli**: vypne doporučení pro aplikace a umožní uživatelům instalovat aplikace z libovolného místa.  
   - **Pouze úložiště**: vynutí koncové uživatele instalovat pouze aplikace z Microsoft Store.
   - **Doporučení**: při instalaci aplikace z webu, který je k dispozici v Microsoft Store, se uživatelům zobrazí zpráva doporučující si ji stáhnout ze Storu.  
@@ -68,11 +91,11 @@ Tato nastavení používají [zprostředkovatele CSP zásad ApplicationManagemen
 
   [Zprostředkovatel SmartScreen/EnableAppInstallControl CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
 
-- **Uživatelský ovládací prvek při instalacích**: Pokud je nastavené na **Nenakonfigurováno** (výchozí), instalační služba systému Windows zabránit uživatelům v změně možností instalace, které jsou obvykle rezervované pro správce systému, jako je například zadání adresáře pro instalaci souborů. **Blok** umožňuje uživatelům změnit tyto možnosti instalace a některé z instalační služba systému Windows funkcí zabezpečení jsou vynechány.
+- **Uživatelský ovládací prvek pro instalace**: **blok** znemožní uživatelům měnit možnosti instalace, které jsou obvykle rezervované pro správce systému, jako je například zadání adresáře pro instalaci souborů. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení Instalační služba systému Windows může zabránit uživatelům v změně těchto možností instalace a některé z funkcí zabezpečení Instalační služba systému Windows se přeskočí.
 
   [ApplicationManagement/MSIAllowUserControlOverInstall CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msiallowusercontroloverinstall)
 
-- **Instalovat aplikace se zvýšenými oprávněními**: Pokud je nastavené na **Nenakonfigurováno** (výchozí), systém použije oprávnění aktuálního uživatele při instalaci programů, které správce systému neimplementuje nebo nenabídne. **Zablokuje** Instalační služba systému Windows, aby při instalaci jakéhokoli programu do systému používal zvýšené oprávnění. Tato oprávnění se rozšiřují na všechny programy.
+- **Instalace aplikací se zvýšenými oprávněními**: **zablokování** Instalační služba systému Windows, aby při instalaci jakéhokoli programu do systému používaly zvýšená oprávnění. Tato oprávnění se rozšiřují na všechny programy. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neaktualizuje toto nastavení. Ve výchozím nastavení může systém použít oprávnění aktuálního uživatele při instalaci programů, které správce systému neinstaluje nebo nenabízí. 
 
   [CSP ApplicationManagement/MSIAlwaysInstallWithElevatedPrivileges](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msialwaysinstallwithelevatedprivileges)
 
@@ -232,7 +255,7 @@ Tato nastavení používají [poskytovatele cloudových zásad](https://docs.mic
 
 - **Adresa URL obrázku pro zamknutou obrazovku (jenom desktopové aplikace)** : zadejte adresu URL obrázku ve formátu jpg, JPEG nebo PNG, který se používá jako tapeta zamykací obrazovky Windows. Zadejte například `https://contoso.com/image.png`. Toto nastavení zamkne obrázek a nedá se změnit.
 
-  [Přizpůsobení/LockScreenImageUrl CSP](https://docs.microsoft.com/en-us/windows/client-management/mdm/personalization-csp)
+  [Přizpůsobení/LockScreenImageUrl CSP](https://docs.microsoft.com/windows/client-management/mdm/personalization-csp)
 
 - **Uživatelem konfigurovatelný časový limit obrazovky (jenom mobilní)** : **Povolení** umožňuje uživatelům nakonfigurovat časový limit obrazovky. **Nenakonfigurováno** (výchozí) neuděluje uživatelům tuto možnost.
 
@@ -250,7 +273,7 @@ Tato nastavení používají [poskytovatele cloudových zásad](https://docs.mic
 
   [CSP DeviceLock/ScreenTimeoutWhileLocked](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#DeviceLock_ScreenTimeoutWhileLocked)
 
-## <a name="messaging"></a>Zasílání zpráv
+## <a name="messaging"></a>Omezován
 
 Tato nastavení používají [zásady zasílání zpráv CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-messaging); Zobrazuje se taky podporované edice Windows.
 
@@ -338,7 +361,7 @@ Tento profil omezení zařízení přímo souvisí s profilem veřejného termin
 - **Synchronizovat oblíbené položky mezi prohlížeči Microsoft** (jenom desktopové aplikace): **Ano** vynutí, aby Windows synchronizoval oblíbené položky mezi Internet Explorerem a Microsoft Edgem. Přidání, odstranění, úpravy a změna pořadí oblíbených položek jsou sdíleny mezi prohlížeči.  **Ne** (výchozí) používá výchozí nastavení operačního systému, které může uživatelům umožnit synchronizaci oblíbených položek mezi prohlížeči.
 - **Výchozí vyhledávací modul**: Vyberte výchozí vyhledávací web na zařízení. Koncoví uživatelé mohou tuto hodnotu kdykoli změnit. Možnosti:
   - Vyhledávací modul v nastavení klienta Microsoft Edge
-  - Bing
+  - Zjišťuje
   - Google
   - Yahoo
   - Vlastní hodnota: v **adrese URL XML OpenSearch**zadejte adresu URL protokolu HTTPS se souborem XML, který obsahuje krátký název a adresu URL vyhledávacího stroje. Zadejte například `https://www.contoso.com/opensearch.xml`.
@@ -370,7 +393,7 @@ Když je vybraná možnost blokovat a povolit uživatele, může přepsat označ
 - **Povolit shromažďování dat živé dlaždice**: **Ano** (výchozí) umožňuje Microsoft Edge shromažďovat informace z živých dlaždic připnuté do nabídky Start. **Žádné** nebrání shromažďování těchto informací, což může uživatelům poskytnout omezené prostředí.
 - **Uživatel může přepsat chyby certifikátu**: **Ano** (výchozí) umožňuje uživatelům přístup k webům s chybami protokolu SSL/TLS (SSL (Secure Sockets Layer)/Transport Layer Security). **Ne** (doporučeno pro zvýšené zabezpečení) znemožní uživatelům přístup k webům s chybami SSL nebo TLS.
 
-### <a name="additional"></a>Další informace
+### <a name="additional"></a>Přídavn
 
 - **Povolit prohlížeč Microsoft Edge** (jenom mobilní zařízení): **Ano** (výchozí) umožňuje používat na mobilním zařízení webový prohlížeč Microsoft Edge. Na zařízení **nebrání použití** Microsoft Edge. Pokud zvolíte **ne**, ostatní individuální nastavení platí pouze pro plochu.
 - Možnost **Povolit panel Adresa**: **Ano** (výchozí) umožňuje, aby Microsoft Edge zobrazoval rozevírací seznam s panelem Adresa se seznamem návrhů. V takovém případě se v rozevíracím seznamu při psaní **nezastaví zobrazení** seznamu návrhů v Microsoft Edge. Pokud je nastavena na **ne**, můžete:
@@ -481,7 +504,7 @@ Tato nastavení používají [zprostředkovatele kryptografických služeb v zá
 
 - **Adresa URL obrázku na pozadí plochy (jenom desktopové aplikace)** : zadejte adresu URL obrázku ve formátu. jpg,. jpeg nebo. png, který chcete použít jako tapetu plochy Windows. Uživatelé nemohou tento obrázek změnit. Zadejte například `https://contoso.com/logo.png`.
 
-## <a name="printer"></a>Tiskárna
+## <a name="printer"></a>Tiskárně
 
 - **Tiskárny**: seznam místních tiskáren, které byly přidány.
 - **Výchozí tiskárna**: Nastavte výchozí tiskárnu.
@@ -880,7 +903,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
 ## <a name="power-settings"></a>Nastavení napájení
 
-### <a name="battery"></a>Baterie
+### <a name="battery"></a>Bije
 
 - **Úroveň baterie**: Pokud zařízení používá napájení z baterie, zadejte úroveň nabití baterie, abyste zapnuli úsporu energie z 0-100. Zadejte procentuální hodnotu, která označuje úroveň nabití baterie. Výchozí hodnota je 70%. Když je nastavená na 70%, úspora energie se zapne, když má baterie za 70% nebo méně dostupného.
 

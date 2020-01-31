@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 01/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a65000d46941876b95e0b110d21f2dfb900ca33
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: c9b56ba1515608afb6c2a0d151f5412711d49e57
+ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206223"
+ms.lasthandoff: 01/30/2020
+ms.locfileid: "76886714"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Vytvoření profilu Wi-Fi s předsdíleným klíčem pomocí vlastního profilu zařízení v Intune
 
@@ -32,7 +32,7 @@ Předsdílený klíč (PSK) se obvykle používá k ověřování uživatelů v 
 
 Tato funkce podporuje:
 
-- Android
+- Správce zařízení s Androidem
 - Windows
 - Wi-Fi založený na protokolu EAP
 
@@ -51,7 +51,7 @@ Tato funkce podporuje:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
-3. Zadejte následující vlastnosti:
+3. Zadejte tyto vlastnosti:
 
     - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem zásad je například **vlastní nastavení profilu Wi-Fi OMA-URI pro zařízení s Androidem**.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
@@ -227,7 +227,7 @@ Následující příklad obsahuje kód XML pro profil Wi-Fi založený na protok
 
 Můžete také vytvořit soubor XML z existujícího připojení Wi-Fi. V počítači se systémem Windows použijte následující postup:
 
-1. Vytvořte místní složku pro exportované profily W-Fi, například c:\WiFi..
+1. Vytvořte místní složku pro exportované profily W-Fi, například c:\WiFi.
 2. Otevřete příkazový řádek jako správce (klikněte pravým tlačítkem na `cmd` > **Spustit jako správce**).
 3. Spusťte `netsh wlan show profiles`. Zobrazí se názvy všech profilů.
 4. Spusťte `netsh wlan export profile name="YourProfileName" folder=c:\Wifi`. Tento příkaz vytvoří soubor s názvem `Wi-Fi-YourProfileName.xml` v c:\Wifi.

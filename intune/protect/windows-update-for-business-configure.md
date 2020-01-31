@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 01/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: beafee4eb22d641748ca41f8f4c01c48ead87741
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: e478402f826809bda4f81315d5a1a4ff6e1a8b88
+ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76754333"
+ms.lasthandoff: 01/30/2020
+ms.locfileid: "76886794"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Správa aktualizací softwaru Windows 10 v Intune
 
@@ -92,7 +92,7 @@ Aktualizační kanály Windows 10 podporují [značky oboru](../fundamentals/sco
 
 6. V části **přiřazení**zvolte **+ Vybrat skupiny, které chcete zahrnout** , a potom přiřaďte aktualizační kanál k jedné nebo více skupinám. Pomocí **+ Vyberte skupiny, které se vyloučí** , abyste mohli přiřazení vyladit. Pokračujte výběrem **Další** .
 
-7. V nabídce**Revize + vytvořit**zkontrolujte nastavení a potom vyberte **vytvořit** , jakmile budete připraveni Uložit aktualizační kanál Windows 10. Nový aktualizační kanál se zobrazí v seznamu aktualizačních kanálů.
+7. V nabídce **Revize + vytvořit**zkontrolujte nastavení a potom vyberte **vytvořit** , jakmile budete připraveni Uložit aktualizační kanál Windows 10. Nový aktualizační kanál se zobrazí v seznamu aktualizačních kanálů.
 
 ### <a name="manage-your-windows-10-update-rings"></a>Správa aktualizačních kanálů Windows 10
 
@@ -244,10 +244,12 @@ V tomto podokně můžete:
 - Vyberte **vlastnosti** a upravte nasazení.  V podokně *vlastnosti* vyberte **Upravit** a otevřete *nastavení nasazení nebo přiřazení*, kde pak můžete nasazení upravit.
 - Chcete-li zobrazit informace o zásadě, vyberte možnost **stav aktualizace koncového uživatele** .
 
+## <a name="validation-and-reporting-for-windows-10-updates"></a>Ověřování a vytváření sestav pro aktualizace Windows 10
+
+Pro aktualizační kanály Windows 10 a aktualizace funkcí Windows 10 použijte [zprávy o dodržování předpisů Intune](../windows-update-compliance-reports.md) k monitorování stavu aktualizace zařízení. Toto řešení používá [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-monitor) s vaším předplatným Azure.
+
 ## <a name="next-steps"></a>Další kroky
 
 [Nastavení služby Windows Update podporovaná službou Intune](../windows-update-settings.md)
-
-[Sestavy dodržování předpisů v Intune pro aktualizace](../windows-update-compliance-reports.md)
 
 [Řešení potíží s aktualizačními kroužkami Windows 10](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Windows-10-Update-Ring-Policies/ba-p/714046)

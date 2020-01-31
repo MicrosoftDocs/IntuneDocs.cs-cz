@@ -5,7 +5,7 @@ description: Popisuje, jak povolit šifrování BitLockeru na zařízení pomoc�
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 01/29/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 744277b0e49a4e3ca8b0fa3bac43c666110bb8a3
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 61b703837598ddbe2c0c44874928b4444466c811
+ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74410354"
+ms.lasthandoff: 01/30/2020
+ms.locfileid: "76886780"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Řešení potíží se zásadami BitLockeru v Microsoft Intune
 
@@ -183,7 +183,7 @@ Teď byste měli mít dobrý nápad, jak ověřit, že zásady BitLockeru se ús
 
 - Vzhledem k tomu, že nástroj BitLocker spoléhá na čip TPM, může dojít k tomu, že nástroj BitLocker neselže kvůli potížím se službou Intune nebo zásadou, ale místo toho, aby samotné zařízení nemá čip TPM nebo čip TPM není v systému BIOS zakázán.
 
-  Jako další tip můžete potvrdit stejné v Prohlížeč událostí Windows v části **protokoly aplikací a služeb** > **Windows** > **BitLocker API**. V protokolu událostí **rozhraní API BitLockeru** najdete ID události 853, což znamená, že čip TPM není k dispozici:
+  Jako další tip můžete potvrdit stejné v Prohlížeč událostí Windows v části **protokoly aplikací a služeb** > **Microsoft** > **Windows** > **BitLocker API**. V protokolu událostí **rozhraní API BitLockeru** najdete ID události 853, což znamená, že čip TPM není k dispozici:
 
   ![ID události 853](./media/troubleshooting-bitlocker-policies/event-error.png)
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be6a254360d8e8e9ef1396515d261b6ff9077b87
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d2a5629e6a318836e23c6a2f7fceb59363a0ed72
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73713120"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812493"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Resetování nebo odebrání hesla zařízení v Intune
 
@@ -34,8 +34,8 @@ Tento dokument popisuje jak resetování hesla na úrovni zařízení, tak reset
 | Platforma | Podporovaná |
 | ---- | ---- |
 | Zařízení s Androidem verze 6.x nebo starší | Ano |
-| Zařízení s Androidem Enterprise v beznabídkovém režimu | Ano |
-| Zařízení se systémem iOS | Ano |
+| Zařízení s Androidem Enterprise zaregistrovaná jako vlastník zařízení | Ano |
+| zařízení s iOS | Ano |
 | zařízení s iOS zaregistrovaná pomocí zápisu uživatelů | Ne |
 | Zařízení s Androidem zaregistrovaná s pracovním profilem | Ne |
 | Zařízení s Androidem, verze 7.0 nebo novější | Ne |

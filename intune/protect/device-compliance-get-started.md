@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83b8c48d2bb594ca8b9c527d78922332e582363f
-ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
+ms.openlocfilehash: a56d8f7aface3628ba5bc8985128ebb49c9cf404
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74860291"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812174"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Nastavení pravidel na zařízeních pro povolení přístupu k prostředkům ve vaší organizaci pomocí Intune
 
@@ -93,6 +93,10 @@ Intune také obsahuje sadu předdefinovaných nastavení zásad dodržování p�
 
   Pokud zařízení nemá přiřazené zásady dodržování předpisů, považuje se toto zařízení za vyhovující ve výchozím nastavení. Pokud používáte podmíněný přístup se zásadami dodržování předpisů, doporučujeme změnit výchozí nastavení na **nekompatibilní**. Pokud koncový uživatel nedodržuje předpisy, protože zásada není přiřazená, zobrazí se `No compliance policies have been assigned`[aplikace Portál společnosti](../apps/company-portal-app.md) .
 
+
+> [!NOTE]
+> Vylepšené zjišťování jailbreaků pro zařízení s iOS bylo v Intune dočasně zakázané.
+
 - **Vylepšené zjišťování jailbreaků**: Pokud je toto nastavení povolené, zařízení s iOS se budou v Intune kontrolovat častěji. Pokud je povolena, používá tato vlastnost funkce zjišťování polohy zařízení a má vliv na výdrž baterie. Data o umístění uživatele neukládá Intune.
 
   Povolení tohoto nastavení vyžaduje, aby zařízení:
@@ -136,7 +140,7 @@ Následující tabulka popisuje, jak se spravují nevyhovující nastavení při
 - [Vytvořte zásadu](create-compliance-policy.md) a zobrazte požadované součásti.
 - Podívejte se na nastavení dodržování předpisů pro různé platformy zařízení:
 
-  - [Androidemem](compliance-policy-create-android.md)
+  - [Androidem](compliance-policy-create-android.md)
   - [Android Enterprise](compliance-policy-create-android-for-work.md)
   - [iOS](compliance-policy-create-ios.md)
   - [macOS](compliance-policy-create-mac-os.md)

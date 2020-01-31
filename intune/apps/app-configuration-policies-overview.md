@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 800193921e608a0d0c29dad5cf85b8781e715441
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 8c9dc1d95806bcddf423bb4d92dbdf4961c15809
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885795"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812480"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Zásady konfigurace aplikací v Microsoft Intune
 
@@ -95,9 +95,9 @@ Zásady konfigurace aplikací můžete ověřit pomocí následujících tří m
 
 Konfiguraci iOS můžete ověřit pomocí **diagnostického protokolu Intune** na nespravovaných zařízeních pro konfiguraci spravované aplikace. Kromě následujících kroků můžete získat přístup k protokolům spravovaných aplikací pomocí Microsoft Edge. Další informace najdete v tématu [použití Microsoft Edge v iOS pro přístup k protokolům spravovaných aplikací](~/apps/manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
 
-1. Pokud na zařízení ještě není nainstalovaná, Stáhněte si a nainstalujte **Intune Managed Browser** z App Storu. Další informace najdete v tématu [Microsoft Intune Protected Apps](apps-supported-intune-apps.md).
-2. Spusťte **Intune Managed Browser** a v navigačním panelu vyberte **o** > **intunehelp** .
-3. Klikněte na **Začít**.
+1. Pokud na zařízení ještě není nainstalovaná, Stáhněte si a nainstalujte **Microsoft Edge** z App Storu. Další informace najdete v tématu [Microsoft Intune Protected Apps](apps-supported-intune-apps.md).
+2. Spusťte **Microsoft Edge** a na navigačním panelu vyberte **o** > **intunehelp** .
+3. Klikněte **na Začínáme.**
 4. Klikněte na **sdílet protokoly**.
 5. Pomocí e-mailové aplikace dle vašeho výběru můžete protokol odeslat sami sobě, aby se mohl zobrazit v počítači. 
 6. Zkontrolujte soubor **IntuneMAMDiagnostics. txt** v prohlížeči textových souborů.
@@ -139,9 +139,9 @@ Podrobnosti konfigurace aplikace by měly odpovídat zásadám konfigurace aplik
 
 Konfiguraci iOS můžete ověřit pomocí **diagnostického protokolu Intune** na spravovaných zařízeních pro konfiguraci spravované aplikace.
 
-1. Pokud na zařízení ještě není nainstalovaná, Stáhněte si a nainstalujte **Intune Managed Browser** z App Storu. Další informace najdete v tématu [Microsoft Intune Protected Apps](apps-supported-intune-apps.md).
-2. Spusťte **Intune Managed Browser** a v navigačním panelu vyberte **o** > **intunehelp** .
-3. Klikněte na **Začít**.
+1. Pokud na zařízení ještě není nainstalovaná, Stáhněte si a nainstalujte **Microsoft Edge** z App Storu. Další informace najdete v tématu [Microsoft Intune Protected Apps](apps-supported-intune-apps.md).
+2. Spusťte **Microsoft Edge** a na navigačním panelu vyberte **o** > **intunehelp** .
+3. Klikněte **na Začínáme.**
 4. Klikněte na **sdílet protokoly**.
 5. Pomocí e-mailové aplikace dle vašeho výběru můžete protokol odeslat sami sobě, aby se mohl zobrazit v počítači. 
 6. Zkontrolujte soubor **IntuneMAMDiagnostics. txt** v prohlížeči textových souborů.

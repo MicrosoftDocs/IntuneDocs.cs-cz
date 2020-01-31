@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 01/27/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8ade7676cb8f6265dd63eb1ba7847c50f526a9a
-ms.sourcegitcommit: 70b40aa4743c8396f8d6a0163893c4a337d67c48
+ms.openlocfilehash: 3502b1c1a73a9e98ed2901fc24dc69ab09136427
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76549337"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812439"
 ---
 # <a name="intune-app-installation-error-reference"></a>Reference k chybě instalace aplikace Intune
 
@@ -90,9 +90,7 @@ Následující chybové zprávy a popisy poskytují podrobné informace o chybá
 | 0x87D13B72 | -2016330894 | Ztratili jste připojení k Internetu.  | Ověření manifestu aplikace se nezdařilo z důvodu připojení k síti (ztráta připojení). |
 | 0x87D13B73 | -2016330893 | Ztratili jste připojení k Internetu.  | Ověření manifestu aplikace se nezdařilo z důvodu síťového připojení (nepřipojeného k Internetu). |
 | 0x87D13B77 | -2016330889 | Zabezpečené připojení selhalo.  | Ověření manifestu aplikace se nezdařilo z důvodu připojení k síti (zabezpečené připojení selhalo). |
-| 0x87D13B6F | -2016330897 |  |   |
 | 0x87D13B80 | -2016330880 | CannotConnectToITunesStoreError | Instalace aplikace se nezdařila z důvodu neúspěšného připojení k obchodu ITunes |
-| 0x87D13B6E | -2016330898 |   | Nepovedlo se ověřit manifest aplikace kvůli připojení k síti (neznámé). |
 | 0x87D13B9F  | -2016330849 | Aplikace VPP má k dispozici aktualizaci. | Tento kód se vrátí, když je nainstalována aplikace VPP, ale je k dispozici novější verze. |
 
 ## <a name="other-installation-errors"></a>Další chyby instalace
@@ -102,7 +100,7 @@ Následující chybové zprávy a popisy poskytují podrobné informace o chybá
 | 0x80073CFF | -2147009281 | (Chyba klienta) | Pro instalaci této aplikace musíte mít systém s podporou zkušebního načtení. Ujistěte se, že je balíček aplikace podepsaný důvěryhodným podpisem a nainstalovaný na zařízení připojeném k doméně, které má povolenou zásadu AllowAllTrustedApps, nebo zařízení, které má licenci pro zkušební načtení systému Windows s povolenou zásadou AllowAllTrustedApps. Další informace najdete v tématu řešení potíží s balíčkem, nasazením a dotazy aplikací pro Windows Store. |
 | 0x80CF201C  | -2133909476 | (Chyba klienta) | Pro instalaci této aplikace musíte mít systém s podporou zkušebního načtení. Ujistěte se, že je balíček aplikace podepsaný důvěryhodným podpisem a nainstalovaný na zařízení připojeném k doméně, které má povolenou zásadu AllowAllTrustedApps, nebo zařízení, které má licenci pro zkušební načtení systému Windows s povolenou zásadou AllowAllTrustedApps. Další informace najdete v tématu řešení potíží s balíčkem, nasazením a dotazy aplikací pro Windows Store. |
 | 0x80073CF0 | -2147009296 | Balíček je nepodepsaný.     Název vydavatele neodpovídá subjektu podpisového certifikátu.     Informace najdete v protokolu událostí AppxPackagingOM. Další informace najdete v tématu řešení potíží s balíčkem, nasazením a dotazy aplikací pro Windows Store. | Balíček se nepovedlo otevřít. Možné příčiny: |
-| 0x80073CF3 | -2147009296 | Příchozí balíček je v konfliktu s nainstalovaným balíčkem.     Nebyla nalezena zadaná závislost balíčku.     Balíček nepodporuje správnou architekturu procesoru.     Informace najdete v protokolu událostí AppXDeployment-Server. Další informace najdete v tématu řešení potíží s balíčkem, nasazením a dotazy aplikací pro Windows Store. | Ověření aktualizace, závislostí nebo konfliktů balíčku se nezdařilo. Možné příčiny: |
+| 0x80073CF3 | -2147009296 | Příchozí balíček je v konfliktu s nainstalovaným balíčkem.     Zadaná závislost balíčku nebyla nalezena.     Balíček nepodporuje správnou architekturu procesoru.     Informace najdete v protokolu událostí AppXDeployment-Server. Další informace najdete v tématu řešení potíží s balíčkem, nasazením a dotazy aplikací pro Windows Store. | Ověření aktualizace, závislostí nebo konfliktů balíčku se nezdařilo. Možné příčiny: |
 | 0x80073CFB | -2147009285 | Zvyšte číslo verze aplikace a pak znovu sestavte a znovu podepište balíček.     Před instalací nového balíčku Odeberte starý balíček pro každého uživatele v systému.     Další informace najdete v tématu řešení potíží s balíčkem, nasazením a dotazy aplikací pro Windows Store.      | Zadaný balíček je už nainstalovaný a přeinstalace balíčku je zablokovaná. Tato chyba se může zobrazit při instalaci balíčku, který není totožný s balíčkem, který už je nainstalovaný. Potvrďte, že digitální podpis je také součástí balíčku. Pokud se balíček znovu vytvoří nebo znovu podepíše, tento balíček už není stejný jako bitový totožný s dřív nainstalovaným balíčkem. Tuto chybu můžete odstranit jedním ze dvou způsobů: |
 | 0x87D1041C | -2016345060 | Koncový uživatel tuto aplikaci neodinstaluje.     Informace o identitě v balíčku se neshodují se zprávami o zařízení pro špatné aplikace.     V případě automatických aktualizací MSIs verze produktu neodpovídá informacím aplikace po aktualizaci mimo Intune.     Dejte uživateli pokyn, aby aplikaci znovu nainstaloval z portálu společnosti. Všimněte si, že požadované aplikace se znovu nainstalují automaticky při příštím ověření zařízení. | Instalace aplikace byla úspěšná, ale aplikace se nerozpoznala. Aplikace byla úspěšně nasazena službou Intune a následně odinstalována. Mezi důvody pro odinstalování aplikace patří: |
 | 0x8000FFFF | -2147418113 |   | Během instalace došlo k neočekávané chybě. Další informace najdete v protokolech instalace. |

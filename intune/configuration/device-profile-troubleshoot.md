@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 01/28/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95186e4d1e54737ffeaa5e4c9728d188c2f867d6
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 881d0f095d2144ae42db4825336275980a19f419
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206631"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812359"
 ---
 # <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Běžné otázky, problémy a řešení se zásadami a profily zařízení v Microsoft Intune
-
-
 
 Získejte odpovědi na běžné otázky při práci s profily a zásadami zařízení v Intune. Tento článek také uvádí časové intervaly vrácení se změnami, zajišťuje více zadržených konfliktů a další.
 
@@ -84,6 +82,8 @@ Zařízení se zaregistrují v Intune, když dostanou oznámení pro vrácení s
 
 Další změny, jako je třeba úprava kontaktních informací v aplikaci Portál společnosti, nezpůsobí okamžité oznámení na zařízení.
 
+Nastavení v zásadách nebo profilu se aplikují při každém vrácení se změnami. [Blogový příspěvek pro obnovení zásad Windows 10 MDM](https://www.petervanderwoude.nl/post/windows-10-mdm-policy-refresh/) může být dobrým prostředkem.
+
 ## <a name="if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied"></a>Pokud se stejnému zařízení nebo uživateli přiřadí několik zásad, jak poznám, které nastavení se použije?
 
 Pokud se stejnému uživateli nebo zařízení přiřadí dvě nebo více zásad, pak se nastavení, které platí, stane na úrovni jednotlivých nastavení:
@@ -122,7 +122,7 @@ Když odstraníte profil nebo odeberete zařízení ze skupiny, která má profi
     - Povolit jednoduchá hesla
     - Minimální délka hesla
     - Vyžadovaný typ hesla
-    - Vypršení platnosti hesla (dny)
+    - Omezená platnost hesla (ve dnech)
     - Pamatovat si historii hesel
     - Počet povolených opakovaných neúspěšných přihlášení, než bude zařízení vymazáno
     - Počet minut nečinnosti před vyžadováním hesla
