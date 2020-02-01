@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: e745290991da4d80c7e3839250edbfdd64ef1b7a
-ms.sourcegitcommit: 01c57ac880dcb5f474908977c89810f5bedaf326
+ms.openlocfilehash: 9aa82268fb02f5124e48eb303f19cf32be02c284
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75760958"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912624"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune.
 
@@ -23,7 +23,7 @@ V lednu aktualizace služby Intune plánujeme v Intune uvolnit novou roli zabezp
 V současné době jsou ve službě Azure AD k dispozici tři role pro odborníky na zabezpečení:
 - Role čtenář zabezpečení ve službě Azure AD, která poskytuje přístup jen pro čtení k Intune.
 - Role operátora zabezpečení ve službě Azure AD, která poskytuje přístup jen pro čtení k Intune.
-- Správce zabezpečení v Azure AD. Když Intune dokončí aktualizaci z ledna, společně s oprávněním jen pro čtení Intune, jsou nová oprávnění poskytovaná rolí služby Endpoint Security Manager následující:
+- Správce zabezpečení v Azure AD. Když Intune doprovází aktualizaci z ledna, spolu s oprávněním jen pro čtení Intune, jsou nová oprávnění poskytovaná rolí služby Endpoint Security Manager následující:
     - Čtení, vytváření, aktualizace, odstraňování a přiřazování zásad dodržování předpisů pro zařízení
     - Čtení, odstraňování a aktualizace spravovaných zařízení
     - Čtení, vytváření, aktualizace, odstranění a přiřazování standardních hodnot zabezpečení
@@ -51,7 +51,7 @@ https://helpx.adobe.com/acrobat/kb/intune-app-end-of-life.html
 Hlavní podpora Microsoftu pro Windows Phone 8,1 skončila v červenci 2017 a rozšířená podpora skončila v červnu 2019. Aplikace Portál společnosti pro Windows Phone 8,1 byla v režimu Sustained od října 2017. Microsoft Intune bude nyní ukončena 20. února 2020 pro Windows Phone 8,1.
 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Po 20. února 2020 tato zařízení neobdrží žádné aktualizace zabezpečení a nebudete moct zaregistrovat žádná nová zařízení. Stávající zařízení Windows Phone 8,1 zůstanou zaregistrovaná (zásady, aplikace, vytváření sestav), ale Všimněte si, že po tomto datu se nebude podporovat jakékoli řešení potíží s existující registrací, protože celá řada komponent, jako třeba certifikáty třetích stran, už ukončila podporu pro platformy. Intune ukončí testování kompatibility s Intune a Windows Phone 8,1.
+Po 20. února 2020 tato zařízení neobdrží žádné aktualizace zabezpečení a nebudete moct zaregistrovat žádná nová zařízení. Stávající zařízení Windows Phone 8,1 zůstanou zaregistrovaná (zásady, aplikace, vytváření sestav), ale Všimněte si, že po tomto datu se nebude podporovat jakékoli řešení potíží s existující registrací, protože celá řada komponent, jako jsou certifikáty třetích stran, už ukončila podporu pro platformy. Intune ukončí testování kompatibility s Intune a Windows Phone 8,1.
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
 Můžete si prohlédnout sestavy Intune a zjistit, která zařízení nebo uživatelé to mohou mít vliv. Přejděte na Zařízení > Všechna zařízení a vyfiltrujte si je podle operačního systému. Můžete přidat další sloupce, které vám pomůžou určit, kdo ve vaší organizaci má zařízení s Windows Phone 8,1. Požádejte koncové uživatele, aby svá zařízení upgradovali na podporovanou verzi operačního systému.
@@ -72,25 +72,11 @@ K zajištění hladkého přechodu z Intune Managed Browser na Microsoft Edge do
 2. Zajistěte, aby všechny aplikace chráněné MAM ve vašem prostředí měly zásadu ochrany aplikací s nastavením omezit přenos webového obsahu s ostatními aplikacemi nastavenou na prohlížeče spravované zásadami. 
 3. Zaměřte se na všechna MAM chráněná nastavením konfigurace spravované aplikace "com. Microsoft. Intune. useEdge" nastavenou na hodnotu true. Počínaje dalším měsícem s vydáním 1911 budete moct provádět kroky 2 a 3 jednoduše tak, že v části Ochrana dat v zásadách ochrany aplikací nastavíte možnost omezit přenos webových obsahu na jiné aplikace. . 
 
-Připravujeme podporu pro webové klipy v iOS a Androidu. Až se tato podpora uvolní, budete muset změnit cílení na existující webové klipy, abyste se ujistili, že jsou otevřené v Microsoft Edge místo Managed Browser. 
+Připravujeme podporu pro webové klipy v iOS a Androidu. Až se tato podpora uvolní, budete muset změnit cílení na existující webové klipy, abyste se ujistili, že se otevřou na Microsoft Edge místo Managed Browser. 
 
 #### <a name="additional-information"></a>Další informace
 Další informace najdete v našich dokumentech o [používání Microsoft Edge se zásadami ochrany aplikací](../apps/manage-microsoft-edge.md) , nebo si prohlédněte náš [příspěvek blogu o podpoře](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Use-Microsoft-Edge-for-your-Protected-Intune-Browser-Experience/ba-p/1004269).
 
-### <a name="plan-for-change-updated-experience-when-enrolling-android-enterprise-dedicated-devices-in-intune--5198878--"></a>Plánování změn: aktualizované prostředí při registraci vyhrazených zařízení s Androidem Enterprise v Intune<!--5198878-->
-Od verze listopadu nebo 1911 do Intune přidáváme podporu nasazení certifikátu zařízení SCEP pro zařízení s Androidem Enterprise vyhrazená pro povolení přístupu k profilům Wi-Fi pomocí certifikátů. Tato změna zahrnuje také některé menší změny toku při registraci vyhrazených zařízení s Androidem Enterprise.
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Pokud ve svém prostředí spravujete vyhrazená zařízení s Androidem Enterprise, začnete v listopadu zobrazovat některé změny.
-
-- Pro nové registrace zařízení se systémem Android Enterprise: koncoví uživatelé uvidí během registrace jinou sadu kroků na zařízeních. Registrace pořád spustí způsob, jakým v současné době funguje (se QR, NFC, nulou nebo identifikátorem zařízení), ale po vydání služby bude povinný krok instalace aplikace.
-- Stávající zařízení s Androidem zaregistrovaná jako vyhrazená zařízení: Intune začne automaticky instalovat aplikaci Microsoft Intune do zařízení počínaje začátkem listopadu. Nemusíte provádět žádnou akci. Aplikace se automaticky stáhne a nainstaluje na zařízení. 
-
-#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
-Měli byste naplánovat, abyste si aktualizovali pokyny pro koncové uživatele a věděli, že vám tato změna poznala helpdesk. Kliknutím na Další informace zobrazíte další podrobnosti a snímky obrazovky. Až se tato změna začne zavádět, aktualizujeme naši stránku co je nového.
-
-#### <a name="additional-information"></a>Další informace
-[https://aka.ms/Dedicated_devices_enrollment](https://aka.ms/Dedicated_devices_enrollment)
 
 ### <a name="end-of-support-for-legacy-pc-management"></a>Konec podpory pro správu starších počítačů
 
@@ -156,8 +142,8 @@ Doporučujeme, aby vaše organizace okamžitě zvážila tento akční plán:
 - Naplánujte a upgradujte loďstev Windows 7 na Windows 10 do 14. ledna 2020.
 - V článku [Podpora nasazení Windows 10](https://docs.microsoft.com/windows/deployment/) najdete další informace o tom, jak upgradovat stávající loďstvo počítačů s Windows 7 na Windows 10.
 - Seznamte se s tím, jak [desktopová aplikace](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure?rtc=1) nabízí nabídku inFastTrack, která vám pomůže s příslibem kompatibility aplikací Microsoftu.
-- Převeďte stávající starší verze spravovaných softwarových klientů Intune do řešení doporučeného společností Microsoft pro správu Windows 10 pomocí správy MDM. Zaregistrujte všechny nové počítače s Windows 10 pomocí správy MDM pro Intune v Azure Portal.
+- Převeďte stávající starší verze zařízení spravovaná klientským softwarem Intune do řešení doporučeného společností Microsoft pro správu Windows 10 pomocí správy MDM. Zaregistrujte všechny nové počítače s Windows 10 pomocí správy MDM pro Intune v Azure Portal.
 
-Další informace najdete v tomto [blogovém příspěvku](https://aka.ms/Windows7_Intune) .
+Další informace najdete v [blogovém příspěvku](https://aka.ms/Windows7_Intune).
 
 

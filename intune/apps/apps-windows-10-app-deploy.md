@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 01/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58f6c4e2c99c7e2c169014a71bb1cfd2bc85219b
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: fa4510b95e1e84d9f94158833dac555daa33c690
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755234"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912552"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Nasazení aplikací pro Windows 10 pomocí Microsoft Intune 
 
@@ -80,22 +80,28 @@ Kategorizace Microsoft Store pro obchodní aplikace:
 V závislosti na typu aplikace můžete aplikaci nainstalovat na zařízení s Windows 10 jedním ze dvou způsobů:
 
 - **Kontext uživatele**: když se aplikace nasadí v uživatelském kontextu, nainstaluje se tato spravovaná aplikace pro daného uživatele na zařízení, když se uživatel přihlásí k zařízení. Všimněte si, že instalace aplikace neproběhne úspěšně, dokud se uživatel přihlásí k zařízení. 
-  - Moderní obchodní aplikace a Microsoft Store pro obchodní aplikace (online i offline) se dají nasadit v kontextu uživatele. Aplikace podporují požadovaný i dostupný záměr.
+  - Moderní obchodní aplikace a aplikace Microsoft Store pro firmy (online i offline) se dají nasadit v kontextu uživatele. Aplikace podporují požadovaný i dostupný záměr.
   - Aplikace Win32 sestavené jako uživatelský režim nebo duální režim lze nasadit v kontextu uživatele a podporují jak požadované, tak i dostupné záměry. 
 - **Kontext zařízení**: při nasazení aplikace v kontextu zařízení se spravovaná aplikace nainstalují přímo do zařízení pomocí Intune.
-  - V kontextu zařízení je možné nasadit jenom moderní obchodní aplikace a offline licencované Microsoft Store pro obchodní aplikace. Tyto aplikace podporují jenom požadovaný záměr.
+  - V kontextu zařízení se dají nasadit jenom moderní obchodní aplikace a offline licencované Microsoft Store pro podnikové aplikace. Tyto aplikace podporují jenom požadovaný záměr.
   - Aplikace Win32 sestavené jako režim počítače nebo duální režim mohou být nasazeny v kontextu zařízení a podporují pouze požadovaný záměr.
 
 > [!NOTE]
 > Pro aplikace Win32 sestavené jako aplikace v duálním režimu musí správce zvolit, jestli bude aplikace fungovat jako uživatelský režim nebo aplikace v režimu počítače pro všechna přiřazení přidružená k této instanci. Kontext nasazení nejde změnit na přiřazení.  
 
-Když se aplikace nasadí v kontextu zařízení, instalace bude úspěšná jenom při cílení na zařízení, které podporuje kontext zařízení. Kromě toho nasazení v kontextu zařízení obsahuje následující podmínky:
-- Pokud je aplikace nasazená v kontextu zařízení a cílí na uživatele, instalace se nepovede. V konzole pro správu se zobrazí následující stav a chyba:
+Aplikace se dají instalovat jenom v kontextu zařízení, když je podporuje zařízení a typ aplikace Intune. V kontextu zařízení můžete nainstalovat následující typy aplikací a přiřadit tyto aplikace ke skupině zařízení:
+
+- Aplikace Win32
+- Offline licencované Microsoft Store pro obchodní aplikace
+- Obchodní aplikace (MSI, APPX a MSIX)
+- Office 365 ProPlus
+
+Aplikace LOB pro Windows (konkrétně APPX a MSIX) a Microsoft Store pro firmy (offline aplikace), které jste vybrali k instalaci v kontextu zařízení, musí být přiřazené ke skupině zařízení. Instalace se nezdařila, pokud je jedna z těchto aplikací nasazena v uživatelském kontextu. V konzole pro správu se zobrazí následující stav a chyba:
   - Stav: Neúspěšné.
   - Chyba: uživatel se nemůže zaměřit na instalaci kontextu zařízení.
-- Pokud je aplikace nasazená v kontextu zařízení, ale je zaměřená na zařízení, které nepodporuje kontext zařízení, instalace se nezdařila. V konzole pro správu se zobrazí následující stav a chyba:
-  - Stav: Neúspěšné.
-  - Chyba: Tato platforma nepodporuje instalaci v kontextu zařízení. 
+
+> [!IMPORTANT]
+> Při použití v kombinaci s prázdným scénářem pro šetrnější zřizování autopilotu neexistuje žádný požadavek na obchodní aplikace a Microsoft Store pro podnikové aplikace nasazené v kontextu zařízení pro účely cílení na skupinu zařízení. Další informace najdete v tématu [nasazení White šetrnější (Windows autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove)) pro Windows.
 
 > [!Note]
 > Po uložení přiřazení aplikace pomocí konkrétního nasazení nemůžete změnit kontext tohoto přiřazení, s výjimkou moderních aplikací. Pro moderní aplikace můžete změnit kontext z kontextu uživatele na kontext zařízení. 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8b5b323c4bb80cd15bf9c6c8f0f7a8be577d6bf
-ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
+ms.openlocfilehash: 842af9c8fffcb3755c81260739f4949768e75bac
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75653933"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912671"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Příprava obchodních aplikací na zásady ochrany aplikací
 
@@ -41,7 +41,6 @@ Další informace o nástroji App Wrapping Tool pro zásady ochrany aplikací na
 ### <a name="reasons-to-use-the-app-wrapping-tool"></a>Důvody pro použití nástroje App Wrapping Tool
 
 * Aplikace nemá předdefinované funkce ochrany dat.
-* Aplikace je jednoduchá.
 * Aplikace je nasazená interně.
 * Nemáte přístup ke zdrojovému kódu aplikace.
 * Aplikaci jste nevyvinuli.
@@ -63,7 +62,6 @@ Další informace o sadě SDK najdete v tématu [Přehled](app-sdk.md). Pokud ch
 ### <a name="reasons-to-use-the-sdk"></a>Důvody pro použití sady SDK
 
 * Aplikace nemá předdefinované funkce ochrany dat.
-* Aplikace je složitá a obsahuje mnoho funkcí.
 * Aplikace je nasazená prostřednictvím veřejného obchodu s aplikacemi, jako je Google Play nebo App Store společnosti Apple.
 * Jste vývojář aplikací a máte technické znalosti potřebné k použití sady SDK.
 * Aplikace zahrnuje další integrace pomocí sady SDK.
@@ -76,15 +74,15 @@ Další informace o sadě SDK najdete v tématu [Přehled](app-sdk.md). Pokud ch
 |**iOS**|Ano – Použijte [xamarinové vazby sady Intune App SDK](app-sdk-xamarin.md).|Ne|
 |**Androidem**| Ano – Použijte [xamarinové vazby sady Intune App SDK](app-sdk-xamarin.md).|Ne|
 
-### <a name="not-using-an-app-development-platform-listed-above"></a>Nepoužíváte platformu pro vývoj aplikací uvedenou výše?
+## <a name="not-using-an-app-development-platform-listed-above"></a>Nepoužíváte platformu pro vývoj aplikací uvedenou výše?
 
 Vývojový tým sady Intune SDK aktivně testuje a udržuje podporu pro aplikace vytvořené s nativními platformami Android, iOS (obj-C, SWIFT), Xamarin, Xamarin. Forms a Cordova. I když se někteří zákazníci dokončí s integrací sady Intune SDK s jinými platformami, jako je například reakce nativních a NativeScript, neposkytujeme explicitní pokyny ani moduly plug-in pro vývojáře aplikací, kteří používají jinou než naše podporované platformy. 
 
 ## <a name="feature-comparison"></a>Porovnání funkcí
 
-Tato tabulka obsahuje seznam nastavení, která můžete použít v sadě SDK a nástroji App Wrapping.
+Tato tabulka obsahuje seznam nastavení, která jsou povolená, pokud aplikace používá sadu App SDK nebo nástroj pro zabalení aplikace. Některé funkce vyžadují, aby vývojáři aplikací použili určitou logiku mimo základní integraci se sadou Intune SDK a jako takové nejsou povolené, pokud aplikace používá nástroj pro zabalení aplikace. 
 
-|Funkce|Sada App SDK|Nástroj App Wrapping|
+|Funkce|App SDK (sada)|Nástroj App Wrapping|
 |-----------|---------------------|-----------|
 |Omezit zobrazování obsahu webu jenom na podnikový spravovaný prohlížeč|X|X|
 |Zabránit zálohování Androidu, iTunes a iCloudu|X|X|
@@ -107,7 +105,7 @@ Tato tabulka obsahuje seznam nastavení, která můžete použít v sadě SDK a 
 |Úplné vymazání dat aplikací|X|X|
 |Selektivní vymazání pracovních a školních dat ve scénářích s více identitami <br><br>**Poznámka:** V iOSu platí, že při odebrání profilu pro správu se odebere taky příslušná aplikace.|X||
 |Zabránit možnosti Uložit jako|X||
-|Cílová konfigurace aplikace (nebo konfigurace aplikace prostřednictvím kanálu MAM)|X||
+|Cílová konfigurace aplikace (nebo konfigurace aplikace prostřednictvím kanálu MAM)|X|X|
 |Podpora víc identit|X||
 |Přizpůsobitelný styl |X|||
 |Připojení VPN aplikace na vyžádání pomocí Citrix mVPN|X|X| 
@@ -119,6 +117,11 @@ Tato tabulka obsahuje seznam nastavení, která můžete použít v sadě SDK a 
 |Vyžadovat minimální sadu Intune SDK pro iOS (pouze iOS)|X|X|
 |Ověření zařízení SafetyNet (jenom Android)|X|X|
 |Kontrola hrozeb u aplikací (jenom Android)|X|X|
+|Vyžadovat úroveň rizika zařízení u dodavatele ochrany před mobilními hrozbami maxmimum|X||
+|Konfigurace obsahu oznámení aplikace pro účty organizace|X|X|
+|Vyžadovat použití schválených klávesnic (jenom Android)|X|X|
+|Vyžadovat zásady ochrany aplikací (podmíněný přístup)|X||
+|Vyžadovat aplikaci schválenou klienta (podmíněný přístup)|X||
 
 ## <a name="next-steps"></a>Další kroky
 

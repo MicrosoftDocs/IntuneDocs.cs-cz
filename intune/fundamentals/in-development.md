@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78022dc4bdfa108bcd04e180ab413cbf04d2c728
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: d71ae3c15dddedd5d9ebfaf06fcae25af89f6b82
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755608"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912623"
 ---
 # <a name="in-development-for-microsoft-intune---january-2020"></a>Ve vývoji Microsoft Intune – leden 2020
 
@@ -110,15 +110,9 @@ Tato funkce platí pro:
 
 
 <!-- ***********************************************-->
-## <a name="device-management"></a>Správa zařízení
+<!--## Device management-->
 
 
-### <a name="new-information-in-device-details---4471759-5604099----"></a>Podrobnosti o nových informacích o zařízení<!-- 4471759 5604099  -->
-Na stránku **Přehled** pro zařízení se přidají tyto informace:
-- Kapacita paměti (množství fyzické paměti v zařízení)
-- Kapacita úložiště (množství fyzického úložiště v zařízení) 
-- Typ a rychlost procesoru procesoru
-- Data paměti RAM a procesoru
 
 <!-- ***********************************************-->
 <!--## Intune apps-->

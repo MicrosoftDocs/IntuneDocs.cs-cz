@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa8d4fd8dabd862899cab116c61d4ae4584d398c
-ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
+ms.openlocfilehash: 10f3d4c54d9a8fcb797ae3359b1a833ac9080548
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899380"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912695"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Xamarinové vazby sady Microsoft Intune App SDK
 
@@ -54,12 +54,23 @@ Xamarinové aplikace vytvořené xamarinovými vazbami sady Intune App SDK přij
 
 ## <a name="prerequisites"></a>Požadované součásti
 
-Přečtěte si [licenční podmínky](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf). Vytisknout a uchovat pro své záznamy kopii licenčních podmínek. Stažením a použitím xamarinových vazeb sady Intune App SDK přijímáte tyto licenční podmínky. Pokud je nepřijímáte, software nepoužívejte.
+Přečtěte si [licenční podmínky](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf). Licenční podmínky si vytiskněte a uchovejte pro své záznamy. Stažením a použitím xamarinových vazeb sady Intune App SDK přijímáte tyto licenční podmínky. Pokud je nepřijímáte, software nepoužívejte.
 
 Intune SDK se spoléhá na [Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) pro své scénáře [ověřování](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) a podmíněného spuštění, které vyžadují konfiguraci aplikací pomocí [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). 
 
 Pokud je vaše aplikace už nakonfigurovaná tak, aby používala ADAL nebo MSAL, a má vlastní ID klienta, které se používá k ověření pomocí Azure Active Directory, zajistěte, aby vaše oprávnění aplikace Xamarin poskytovala službě Intune Mobile Application Management (MAM). uplatnil. Postupujte podle pokynů v části "[poskytnutí přístupu aplikace ke službě Intune App Protection](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)" v tématu [Začínáme s Intune SDK](app-sdk-get-started.md).
 
+## <a name="security-considerations"></a>Otázky zabezpečení
+
+Pro zabránění potenciálnímu falšování identity, zpřístupnění informací a zvýšení oprávnění pro útoky zajistěte toto:
+
+* Ujistěte se, že vývoj aplikací Xamarin se provádí na zabezpečené pracovní stanici.
+* Zajistěte, aby vazby byly z platného zdroje společnosti Microsoft:
+  * [Profil NuGet sady Microsoft Intune App SDK](https://www.nuget.org/profiles/msintuneappsdk)
+  * [Úložiště GitHub sady Intune App SDK Xamarin](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
+* Nakonfigurujte konfiguraci NuGet pro váš projekt tak, aby důvěřovala podepsaným, nezměněným balíčkům NuGet.
+Další informace najdete v tématu [instalace podepsaných balíčků](https://docs.microsoft.com/nuget/consume-packages/installing-signed-packages) .
+* Zabezpečte výstupní adresář, který obsahuje aplikaci Xamarin. Zvažte použití adresáře na úrovni uživatele pro výstup.
 
 
 ## <a name="enabling-intune-app-protection-polices-in-your-ios-mobile-app"></a>Povolení zásad ochrany aplikací Intune v mobilní aplikaci pro iOS
@@ -120,7 +131,7 @@ Chcete-li vyloučit třídu z MAM sjednocení přemapováním, lze do projektů 
 ```
 
 > [!NOTE]
-> V tuto chvíli problém s opětovným zamapováním brání ladění v aplikacích Xamarin. Android. Ruční integrace je doporučena pro ladění aplikace, dokud tento problém nebude vyřešen.
+> Remapovače aktuálně brání ladění v aplikacích Xamarin. Android. Pro ladění aplikace se doporučuje ruční integrace.
 
 #### <a name="renamed-methodsapp-sdk-androidmdrenamed-methods"></a>[Přejmenované metody](app-sdk-android.md#renamed-methods)
 V mnoha případech je metoda dostupná ve třídě Androidu označená v náhradní třídě MAM jako finální. Náhradní třída MAM pak poskytuje metodu s podobným názvem (s příponou `MAM`), kterou byste měli přepsat místo toho. Třeba při odvozování od třídy `MAMActivity` musí `Activity` místo přepsání `OnCreate()` a volání `base.OnCreate()` přepsat `OnMAMCreate()` a volat `base.OnMAMCreate()`.
@@ -185,7 +196,7 @@ IMAMEnrollmentManager mgr = MAMComponents.Get<IMAMEnrollmentManager>();
 Pro `Xamarin.Forms` aplikace `Microsoft.Intune.MAM.Remapper` balíček provádí nahrazení třídy MAM automaticky vložením `MAM` tříd do hierarchie tříd běžně používaných tříd `Xamarin.Forms`. 
 
 > [!NOTE]
-> Integraci Xamarin. Forms je třeba provést společně s výše podrobnější integrací Xamarin. Android. Remapovače se chová jinak pro aplikace Xamarin. Forms, takže ruční MAM nahrazení bude stále potřeba provést.
+> Integraci Xamarin. Forms je třeba provést společně s výše podrobnější integrací Xamarin. Android. Remapovače se chová jinak než u aplikací Xamarin. Forms, takže je nutné ruční MAM náhrady provést.
 
 Po přidání remapovače do projektu budete muset provést přemístění ekvivalenty MAM. Například `FormsAppCompatActivity` a `FormsApplicationActivity` mohou být ve vaší aplikaci nadále použity pro přepsání `OnCreate` a `OnResume` jsou nahrazeny MAM ekvivalenty `OnMAMCreate` a `OnMAMResume` v uvedeném pořadí.
 
@@ -209,7 +220,7 @@ To je očekáváno, protože když přemapování mění dědění tříd Xamari
 > Remapper znovu zapíše závislost, kterou Visual Studio používá pro automatické dokončování IntelliSense. Proto může být nutné znovu načíst a znovu sestavit projekt při přidání nového mapování pro technologii IntelliSense, aby byly změny správně rozpoznány.
 
 #### <a name="troubleshooting"></a>Odstraňování potíží
-* Pokud při spuštění aplikace narazíte na prázdnou bílou obrazovku, možná budete muset vynutit, aby se volání navigace spouštěla v hlavním vlákně.
+* Pokud narazíte na prázdnou, bílou obrazovku aplikace při spuštění, může být nutné vynutit, aby bylo volání navigace spuštěno v hlavním vlákně.
 * Vazby Xamarin sady Intune SDK nepodporují aplikace, které používají architekturu pro víc platforem, jako je například MvvmCross, z důvodu konfliktů mezi MvvmCross a třídami MAM Intune. I když někteří zákazníci mohou mít po přesunu svých aplikací do jednoduchých Xamarin. Forms úspěch s integrací, neposkytujeme pro vývojáře aplikací explicitní pokyny a moduly plug-in, které používají MvvmCross.
 
 ### <a name="company-portal-app"></a>Aplikace Portál společnosti

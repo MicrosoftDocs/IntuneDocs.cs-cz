@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e990cd94c0f8622d07e59b4130566a1dc2953a1c
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 15d6a67cb41455a1e3c0830e9ed242bfa52b0269
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74564000"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912654"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Přiřazení aplikací do skupin pomocí Microsoft Intune
 
@@ -132,7 +132,7 @@ Postup přiřazení spravované aplikace Google Play k nespravovaným zařízen�
 Po vydání selektivního vymazání aplikace v konzole Intune se pracovní účet automaticky odebere z aplikace Obchod Play a koncový uživatel z tohoto bodu už nebude zobrazovat pracovní aplikace v katalogu aplikací Obchod Play. Když se pracovní účet odebere ze zařízení, aplikace nainstalované z Obchod Play zůstanou nainstalované na zařízení a neodinstaluje se. 
 
 ## <a name="app-uninstall-setting-for-ios-managed-apps"></a>Nastavení odinstalace aplikace pro aplikace spravované v iOS
-V případě zařízení se systémem iOS si můžete vybrat, co se stane se spravovanými aplikacemi při zrušení registrace zařízení v Intune nebo odebrání profilu správy pomocí nastavení **odinstalovat při odebrání zařízení** . Toto nastavení platí jenom pro aplikace po zaregistrování zařízení a aplikace se nainstalují jako spravované. Nastavení nelze konfigurovat pro webové aplikace ani pro webové odkazy. 
+V případě zařízení se systémem iOS si můžete vybrat, co se stane se spravovanými aplikacemi při zrušení registrace zařízení v Intune nebo odebrání profilu správy pomocí nastavení **odinstalovat při odebrání zařízení** . Toto nastavení platí jenom pro aplikace po zaregistrování zařízení a aplikace se nainstalují jako spravované. Nastavení nelze konfigurovat pro webové aplikace ani pro webové odkazy. Po vyřazení z selektivního vymazání aplikace se odebere jenom data chráněná správou mobilních aplikací (MAM).
 
 Výchozí hodnoty pro nastavení jsou předem vyplněné pro nová přiřazení následujícím způsobem:
 

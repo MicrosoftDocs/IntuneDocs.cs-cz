@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c31dd652022ae0d394ab2229a0c25b362ad8574d
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 6ebcb81cd0f186a3fd23e0701d12ea871eab129a
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74563585"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912565"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>Přidání Microsoft Edge do zařízení macOS pomocí Microsoft Intune
 
@@ -65,11 +65,15 @@ V tomto kroku zadáte informace o tomto nasazení aplikace. Tyto informace vám 
 V tomto kroku nakonfigurujte možnosti instalace aplikace.
 
 1. V podokně **Přidat aplikaci** vyberte **nastavení aplikace**.
-2. V podokně **nastavení aplikace** se automaticky vybere kanál **beta** a nedá se změnit.
-    - **Beta** kanál je nejstabilním prostředím Microsoft Edge Preview a nejlepší volbou pro úplný pilotní nasazení v rámci vaší organizace. S hlavními aktualizacemi každých šest týdnů.
+2. V podokně **nastavení aplikace** vyberte v seznamu **kanál** buď **stabilní**, **beta** nebo **vývojové** , abyste určili, ze kterého hraničního kanálu budete aplikaci nasazovat.
+
+    - **Stabilní** kanál je doporučeným kanálem pro široce nasazování v podnikovém prostředí. Aktualizuje se každých šest týdnů, přičemž každá verze zahrnuje vylepšení z verze beta kanálu.
+    - **Beta** kanál je nejstabilním prostředím Microsoft Edge Preview a nejlepší volbou pro úplný pilotní nasazení v rámci vaší organizace. V případě hlavních aktualizací každých šest týdnů zahrnuje každá verze tyto učení a vylepšení z vývojového kanálu.
+    - **Vývojového** kanálu je připravený na podnikovou zpětnou vazbu ve Windows, Windows serveru a MacOS. Aktualizuje se každý týden a obsahuje nejnovější vylepšení a opravy.
 
     > [!NOTE]
     > Logo prohlížeče Microsoft Edge se zobrazí spolu s aplikací, když uživatelé procházejí portál společnosti.
+
 3.  Vyberte **OK**.
 
 ## <a name="select-scope-tags-optional"></a>Vybrat značky oboru (volitelné)
