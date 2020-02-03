@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 501bfcbef0dd46f6021fc5db16cf3b9e2f2cd0c0
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 24d0a8160d852a5a44f5df688b7e0bc230d56704
+ms.sourcegitcommit: c7c6be3833d9a63d43f31d598b555b49b33cf5cb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885999"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76966381"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Konfigurace infrastruktury pro podporu SCEP s Intune
 
@@ -152,7 +152,7 @@ Následující části vyžadují znalost systému Windows Server 2012 R2 nebo n
 
      ![Šablona, karta Rozšíření](./media/certificates-scep-configure/scep-ndes-extensions.jpg)  
 
-   - **Zabezpečení:**
+   - **Zabezpečení**:
 
      - Přidejte **účet služby NDES**. Tento účet vyžaduje pro tuto šablonu oprávnění **ke čtení** a **zápisu** .
 
@@ -378,6 +378,32 @@ Microsoft Intune Certificate Connector se nainstaluje na server, na kterém bě�
 5. Až se zobrazí výzva k zadání klientského certifikátu pro Certificate Connector, zvolte **Vybrat**a vyberte certifikát pro **ověřování klientů** , který jste nainstalovali na server NDES během kroku #3 postupu [instalace a vázání certifikátů na serveru, který hostuje NDES](#install-and-bind-certificates-on-the-server-that-hosts-ndes) z výše v tomto článku.
 
    Po vybrání certifikátu pro ověřování klientů se vrátíte do **klientského certifikátu pro Microsoft Intune Certificate Connector** Surface. I když vybraný certifikát není zobrazený, kliknutím na **Další** zobrazte vlastnosti certifikátu. Vyberte **Další** a potom **Nainstalovat**.
+
+> [!NOTE]
+> Před spuštěním Intune Certificate Connectoru je potřeba provést následující změny pro klienty RSZ s vysokou úrovní.
+> 
+> Proveďte úpravy dvou konfiguračních souborů uvedených níže, které aktualizují koncové body služby pro vysoké prostředí RSZ. Všimněte si, že tyto aktualizace mění identifikátory URI z **. com** na příponu **. us** . K dispozici je celkem tři aktualizace identifikátorů URI, dvě aktualizace v rámci konfiguračního souboru NDESConnectorUI. exe. config a jedna aktualizace v souboru NDESConnector. exe. config.
+> 
+> - Název souboru: < install_Path > \Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.config
+> 
+>   Příklad: (%programfiles%\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.config)
+>   ```
+>    <appSettings>
+>        <add key="SignInURL" value="https://portal.manage.microsoft.us/Home/ClientLogon"/>
+>        <add key="LocationServiceEndpoint" value="RestUserAuthLocationService/RestUserAuthLocationService/ServiceAddresses"/>
+>        <add key="AccountPortalURL" value="https://manage.microsoft.us"/>
+>    </appSettings>
+>   ```
+> 
+> - Název souboru: < install_Path > \Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config
+>
+>   Příklad: (%programfiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config)
+>    ```
+>    <appSettings>
+>        <add key="BaseServiceAddress" value="https://manage.microsoft.us/" />
+>    ```
+>
+> Pokud tyto úpravy nejsou dokončené, budou se vám v případě vysokého tenanta RSZ zobrazovat tyto chyby: "přístup byl odepřen", nemáte oprávnění k zobrazení této stránky "
 
 6. Po dokončení průvodce klikněte před jeho zavřením na **Spustit uživatelské rozhraní konektoru Certificate Connector**.
 

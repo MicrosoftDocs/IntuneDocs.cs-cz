@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02c1508dd3eb9c8a8932c1504c6f4d0a53c5a0d5
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: dfa93bb758447c872d172ded7706fd7507a42f11
+ms.sourcegitcommit: c7c6be3833d9a63d43f31d598b555b49b33cf5cb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207379"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76966279"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Koncové body pro státní správu USA pro Microsoft Intune
 
@@ -61,7 +61,7 @@ Následující tabulky obsahují seznam portů a služeb, ke kterým přistupuje
 - PRAVIDLA automatického nasazení: https:\//enterpriseregistration.microsoftonline.us
 
 ## <a name="windows-push-notification-services"></a>Služba nabízených oznámení Windows
-V zařízeních spravovaných pomocí Intune, která spravuje použití správy mobilních zařízení (MDM), se vyžaduje služba Windows PUsh Notification Services (WNS) pro akce zařízení a další okamžité aktivity. Další informace najdete v tématu [Konfigurace podnikových bran firewall a proxy serverů pro podporu provozu WNS](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config) .
+V zařízeních spravovaných pomocí Intune, která spravuje použití správy mobilních zařízení (MDM), se vyžaduje služba Windows Push Notification Services (WNS) pro akce zařízení a další okamžité aktivity. Další informace najdete v tématu [Konfigurace podnikových bran firewall a proxy serverů pro podporu provozu WNS](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config) .
 
 ## <a name="apple-device-network-information"></a>Informace o síti pro zařízení Apple
 
@@ -71,7 +71,7 @@ V zařízeních spravovaných pomocí Intune, která spravuje použití správy 
 |Komunikace se servery APNS|#-courier.push.apple.com<br>' # ' je náhodné číslo od 0 do 50.|TCP|5223 a 443|
 |Různé funkce, včetně přístupu k Internetu, obchodu iTunes, macOS App Storu, iCloud, zasílání zpráv atd.|phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net|HTTP/HTTPS|80 nebo 443|
 
-Více informací najdete v následujících tématech:
+Více informací najdete v následujících tématech:
 
 - [Porty TCP a UDP používané softwarovými produkty společnosti Apple](https://support.apple.com/HT202944)
 - [O připojeních hostitele serveru macOS, iOS a iTunes a procesech na pozadí iTunes](https://support.apple.com/HT201999)
