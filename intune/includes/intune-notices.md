@@ -7,30 +7,14 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 9aa82268fb02f5124e48eb303f19cf32be02c284
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
+ms.openlocfilehash: 6064fb657454106a8a7213e0bbbcecdcef765857
+ms.sourcegitcommit: c7c6be3833d9a63d43f31d598b555b49b33cf5cb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912624"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76966350"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune.
-
-### <a name="updated-feature-new-rbac-role-coming-to-intune--4253397--"></a>Aktualizovaná funkce: nová role RBAC přicházející do Intune<!--4253397-->
-V lednu aktualizace služby Intune plánujeme v Intune uvolnit novou roli zabezpečení. Tato role se zobrazí jako "Endpoint Security Manager" v Intune a tato role je rozšířením role správce zabezpečení z Azure AD.
- 
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-V současné době jsou ve službě Azure AD k dispozici tři role pro odborníky na zabezpečení:
-- Role čtenář zabezpečení ve službě Azure AD, která poskytuje přístup jen pro čtení k Intune.
-- Role operátora zabezpečení ve službě Azure AD, která poskytuje přístup jen pro čtení k Intune.
-- Správce zabezpečení v Azure AD. Když Intune doprovází aktualizaci z ledna, spolu s oprávněním jen pro čtení Intune, jsou nová oprávnění poskytovaná rolí služby Endpoint Security Manager následující:
-    - Čtení, vytváření, aktualizace, odstraňování a přiřazování zásad dodržování předpisů pro zařízení
-    - Čtení, odstraňování a aktualizace spravovaných zařízení
-    - Čtení, vytváření, aktualizace, odstranění a přiřazování standardních hodnot zabezpečení
-    - Čtení a aktualizace úloh zabezpečení
- 
-### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
-Zkontrolujte své role RBAC v Intune ještě dnes. Pokud aktuálně máte jenom globální správce jako role, pak se nevyžadují žádné změny. Pokud používáte role a chcete členitost, kterou poskytuje Endpoint Security Manager, pak tuto roli přiřaďte, až bude k dispozici. Aktuální informace o verzi Intune najdete na stránce [co je nového](../fundamentals/whats-new.md) v Intune. 
 
 ### <a name="updated-support-statement-for-adobe-acrobat-reader-for-intune-mobile-app--5746776--"></a>Aktualizovaný příkaz Support pro mobilní aplikaci Adobe Acrobat Reader pro Intune<!--5746776-->
 V MC188653 jsme na konci srpna sdíleli, že mobilní aplikace Adobe Acrobat Reader pro Intune dosáhla konce životnosti 1. prosince 2019 a že Adobe plánuje v rámci své hlavní aplikace Acrobat Readeru podporovat zásady ochrany aplikací v Intune. Od té doby jsme dostali zpětnou vazbu od zákazníků, kterou jsme potřebovali k tomu, aby bylo možné pokračovat ve povolování IT správců, a koncovým uživatelům začít používat aplikaci Adobe Acrobat Reader pro Intune. Vzhledem k vysokému využití aplikace Adobe Acrobat Reader pro Intune na zařízeních koncových uživatelů a jejich důležitosti v podnikových scénářích chceme zajistit, aby všechny zkušenosti splňovaly požadavky vaší organizace na ochranu aplikací. 
