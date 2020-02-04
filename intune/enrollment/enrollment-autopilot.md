@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4ece1fd1d47213ff9da8b8fcc2e53155ad76628
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: e9da7acfc34dbd25902fc6fb9617ba395216a9b3
+ms.sourcegitcommit: 24487f078349795922dc497c952e8358cf767a1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76754537"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76977797"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows v Intune pomocí Windows Autopilot  
 Windows Autopilot usnadňuje registraci zařízení v Intune. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -163,6 +163,8 @@ Pokud chcete zobrazit výstrahy pro Nepřiřazená zařízení, [v centru pro sp
 Můžete si Zobrazit podrobnosti o každém zařízení nasazeném pomocí Windows autopilotu.
 Sestavu zobrazíte tak, že přejdete do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), zvolíte **zařízení** > **monitorovat** > **nasazení autopilotu**.
 Data jsou k dispozici po dobu 30 dnů od nasazení.
+
+Tato sestava je ve verzi Preview. Záznamy nasazení zařízení se aktuálně spouštějí jenom novými událostmi registrace v Intune. To znamená, že tato sestava neodebere jakékoli nasazení, které neaktivuje nový zápis Intune. To zahrnuje jakýkoliv typ resetování, který zachovává registraci, a uživatelskou část s bílým šetrnějšíem autopilotu.
 
 ## <a name="assign-a-user-to-a-specific-autopilot-device"></a>Přiřazení uživatele ke konkrétnímu zařízení Autopilot
 

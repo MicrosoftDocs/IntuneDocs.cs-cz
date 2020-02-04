@@ -14,12 +14,12 @@ ms.service: ''
 ms.technology: ''
 ms.assetid:
 - GET ONE FROM guidgenerator.com
-ms.openlocfilehash: 0a5e90c6bc6b352f4d7a0fc0ae22c65110563461
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: ed2d00541c2d89efd0f8cd6aa60f29c527656fc0
+ms.sourcegitcommit: 5178aec0244e023e73546f3d10f1a76eaf1f4a3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68354402"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971827"
 ---
 # <a name="metadata-and-markdown-template"></a>Šablona metadat a Markdownu
 
@@ -82,7 +82,7 @@ Pokud budete chtít markdown propojit s hlavičkou ve stejném souboru s markdow
 
 Pokud budete chtít vytvořit odkaz na hlavičku v souboru markdownu ve stejném úložišti, použijte relativní odkaz + hashtag odkaz.
 
-- Příklad: [technický přehled procesu registrace](./understand-explore/rms-for-individuals-user-signup.md#technical-overview-of-the-sign-up-process)
+- Příklad: [Technický přehled procesu registrace](./understand-explore/rms-for-individuals-user-signup.md#technical-overview-of-the-sign-up-process)
 
 Pokud budete chtít vytvořit odkaz na externí soubor, použijte jako odkaz úplnou adresu URL.
 
@@ -96,11 +96,11 @@ Pokud bude v souboru markdownu adresa URL, transformuje se na prokliknutelný od
 
 ### <a name="ordered-lists"></a>Seřazené seznamy
 
-1. Tento 
+1. Toto 
 1. Seznam
 1. Je
 1. Seřazený
-1. Seznam  
+1. List  
 
 
 #### <a name="ordered-list-with-an-embedded-list"></a>Seřazený seznam s vloženým seznamem
@@ -108,31 +108,31 @@ Pokud bude v souboru markdownu adresa URL, transformuje se na prokliknutelný od
 1. Tady
 1. je
 1. vložený
-1. seznam
+1. vložený
     1. Miss Scarlett
     1. Professor Plum
 1. seřazeného
-1. s odrážkami
+1. seznam
 
 
 ### <a name="unordered-lists"></a>Neuspořádané seznamy
 
-- Tento
+- Toto
 - je
 - seznam
 - seznam
-- s odrážkami
+- seznam
 
 
 #### <a name="unordered-list-with-an-embedded-lists"></a>Neseřazený seznam s vloženými seznamy
 
-- Tento 
+- Toto 
 - seznam 
-- s odrážkami
+- seznam
   - Mrs. Peacock
   - Mr. Green
 - obsahuje  
-- jiné seznamy
+- jiného
     1. Colonel Mustard
     1. Mrs. White
 - .
@@ -216,7 +216,7 @@ Toto je příklad pro: `in-line code`.
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/R6_eWWfNB54" frameborder="0" allowfullscreen></iframe>
 
-## <a name="docsms-extentions"></a>rozšíření docs.ms
+## <a name="docsms-extensions"></a>rozšíření docs.ms
 
 ### <a name="button"></a>Tlačítko
 

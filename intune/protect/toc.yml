@@ -12,7 +12,7 @@
       href: quickstart-set-password-length-android.md
     - name: Odesílání oznámení do zařízení nesplňujících požadavky
       href: quickstart-send-notification.md
-- name: Kurzy
+- name: Výukové kurzy
   items:
     - name: Ochrana e-mailu na spravovaných zařízeních
       href: tutorial-protect-email-on-enrolled-devices.md
@@ -225,6 +225,20 @@
           href: troubleshoot-conditional-access.md
         - name: Řešení potíží s Certificate Connectorem
           href: troubleshoot-certificate-connector-events.md
+        - name: Řešení potíží s profily certifikátů SCEP
+          items:
+            - name: Řešení potíží s profily certifikátů SCEP
+              href: troubleshoot-scep-certificate-profiles.md
+            - name: Nasazení profilu do zařízení
+              href: troubleshoot-scep-certificate-profile-deployment.md
+            - name: Komunikace zařízení s NDES
+              href: troubleshoot-scep-certificate-device-to-ndes.md
+            - name: Operace NDES
+              href: troubleshoot-scep-certificate-ndes-policy-module.md
+            - name: Doručování certifikátů do zařízení
+              href: troubleshoot-scep-certificate-delivery.md
+            - name: Vytváření sestav pro nasazování certifikátů
+              href: troubleshoot-scep-certificate-reporting.md
         - name: Řešení problémů s konektorem Exchange
           items:
             - name: Řešení problémů s konektorem Exchange
@@ -237,7 +251,7 @@
           href: troubleshoot-bitlocker-policies.md
         - name: Řešení potíží s integrací aplikace Jamf Pro
           href: troubleshoot-jamf.md
-- name: Referenční informace
+- name: Reference
   items:
     - name: Rozhraní API pro přidání certifikační autority třetí strany
       href: scep-libraries-apis.md
@@ -267,7 +281,7 @@
           href: compliance-policy-create-windows-8-1.md
         - name: Nastavení zásad dodržování předpisů – Windows Phone 8.1
           href: compliance-policy-create-windows-8-1.md
-    - name: "Kódy a\_popisy chyb"
+    - name: Kódy a popisy chyb
       items:
         - name: Chyby aktualizace softwaru
           href: software-update-agent-error-codes.md

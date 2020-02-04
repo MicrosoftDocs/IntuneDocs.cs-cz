@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 56b8ab9507acda8fc1145bd65c4438da838dd806
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: f5599e7ea8c9a26c4624f98133db566fb07c89af
+ms.sourcegitcommit: 5178aec0244e023e73546f3d10f1a76eaf1f4a3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74558174"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971785"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-ios-devices-in-intune"></a>Kurz: použití funkcí registrace podnikových zařízení společnosti Apple v Apple Business Manageru (ABM) k registraci zařízení s iOS v Intune
 Funkce registrace zařízení v Apple Business Manageru zjednodušují registraci zařízení. Intune podporuje také portál starší verze Program registrace zařízení (DEP) společnosti Apple, ale doporučujeme, abyste začali začít s Apple Business Managerem. Pomocí Microsoft Intune a registrace podnikových zařízení Apple se zařízení automaticky zaregistrují při prvním zapnutí zařízení uživatelem. Zařízení je proto možné dodávat mnoha uživatelům, aniž byste museli každé zařízení nastavovat samostatně. 
@@ -62,7 +62,7 @@ Pomocí portálu ABM nebo DEP vytvoříte token pro zápis zařízení. Portály
 
 6. Otevře se dialogové okno pro **přidání&lt;názvu serveru&gt;** , ve kterém se zobrazí výzva, abyste **nahráli svůj veřejný klíč**. Vyberte **zvolit soubor...** abyste mohli nahrát soubor .pem, a pak zvolte **Další**.
 
-6. Přejít na **programy pro nasazení** > **program registrace zařízení** > **spravovat zařízení**.
+6. Přejděte na **Deployment Programs** (Programy nasazení)  > **Device Enrollment Program** (Program registrace zařízení)  > **Manage Devices** (Spravovat zařízení).
 7. V části **zvolit zařízení podle**vyberte **sériové číslo**. <!--ask Tiffany about this-->
 
 8. V možnosti **Vybrat akci** vyberte **Přiřadit k serveru**, vyberte &lt;název_serveru&gt; zadaný pro Microsoft Intune a pak zvolte **OK**. Portál Apple přiřadí daná zařízení k serveru Intune, aby bylo možné je spravovat, a pak zobrazí zprávu o **dokončení přiřazení**.
@@ -90,7 +90,7 @@ Teď, když máte nainstalovaný token, můžete vytvořit registrační profil 
 
 5. Určete, jestli chcete, aby se vaše zařízení zaregistrovala s **přidružením uživatele**nebo bez. Přidružení uživatele je určené pro zařízení, která budou používat konkrétní uživatelé. Pokud budou uživatelé chtít použít Portál společnosti pro služby, jako je instalace aplikací, vyberte možnost **registrovat s přidružením uživatele**. Pokud vaši uživatelé nepotřebují Portál společnosti nebo chcete zařízení zřídit pro mnoho uživatelů, vyberte možnost **zaregistrovat bez přidružení uživatele**.
 
-6. Pokud se rozhodnete zaregistrovat s přidružením uživatele, určete, jestli se má ověřit pomocí Portál společnosti nebo pomocníka s nastavením Apple. Pokud chcete použít Multi-Factor Authentication, umožníte uživatelům měnit hesla při prvním přihlášení, nebo vyzvat uživatele k resetování hesel po jejich vypršení platnosti během registrace, v části **ověřování pomocí portál společnosti namísto pomocníka s nastavením Apple**vyberte **Ano** . Pokud jste obeznámeni s používáním základního ověřování protokolu HTTP od společnosti Apple prostřednictvím pomocníka s nastavením společnosti Apple, vyberte možnost **ne**. Pokud zvolíte **Ano** a chcete, aby se aplikace Portál společnosti automaticky aktualizovala na zařízeních koncových uživatelů, nasaďte portál společnosti jako požadovanou aplikaci pro tyto uživatele prostřednictvím programu Volume purchase program (VPP) společnosti Apple.
+6. Pokud se rozhodnete zaregistrovat s přidružením uživatele, určete, jestli se má ověřit pomocí Portál společnosti nebo pomocníka s nastavením Apple. Pokud chcete použít Multi-Factor Authentication, umožníte uživatelům měnit hesla při prvním přihlášení, nebo vyzvat uživatele k resetování hesel po jejich vypršení platnosti během registrace, v části **ověřování pomocí portál společnosti namísto pomocníka s nastavením Apple**vyberte **Ano** . Pokud jste obeznámeni s používáním základního ověřování protokolu HTTP od společnosti Apple prostřednictvím pomocníka s nastavením společnosti Apple, vyberte možnost **ne**. Pokud zvolíte **Ano** a chcete, aby se aplikace Portál společnosti automaticky aktualizovala na zařízeních koncových uživatelů, samostatně nasaďte portál společnosti jako požadovanou aplikaci pro tyto uživatele prostřednictvím programu Volume purchase program (VPP) společnosti Apple.
 
 7. Pokud se rozhodnete zaregistrovat s přidružením uživatele a ověřit pomocí Portál společnosti, určete, jestli chcete Portál společnosti nainstalovat pomocí programu Volume purchase program (VPP) společnosti Apple. Pokud nainstalujete Portál společnosti s tokenem VPP, uživatel nebude muset při registraci stáhnout Portál společnosti z App Storu a heslo. Zvolte **použít token:** v části **instalovat portál společnosti s VPP** vyberte token VPP, který má dostupné bezplatné licence portál společnosti. Pokud nechcete použít nástroj VPP k nasazení Portál společnosti, vyberte **Nepoužívat VPP** v části **instalovat portál společnosti pomocí programu VPP**. 
 
