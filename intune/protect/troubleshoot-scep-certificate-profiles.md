@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae7ffe5a8c20aa7edd67853ff86ef9e28cf2d175
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
+ms.openlocfilehash: 38bc86b1b9ba85eb7885a0e00673e551821063c1
+ms.sourcegitcommit: 459b0ee01eb6e69cc0ce66d4c4b81d73f510f96d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76913179"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034239"
 ---
 # <a name="overview-for-troubleshooting-scep-certificate-profiles-with-microsoft-intune"></a>Přehled řešení potíží s profily certifikátů SCEP pomocí Microsoft Intune
 
@@ -67,7 +67,7 @@ Pokud chcete identifikovat problémy pro pracovní postup pro komunikaci a zřiz
 Protokoly zařízení závisí na platformě zařízení:  
 
 - [iOS a iPadOS](#logs-for-ios-and-ipados-devices)
-- [Androidem](#logs-for-android-devices)
+- [Androidemem](#logs-for-android-devices)
 - [Windows](#logs-for-windows-devices)
 
 ### <a name="logs-for-on-premises-infrastructure"></a>Protokoly pro místní infrastrukturu
@@ -115,11 +115,11 @@ Následující seznam obsahuje protokoly nebo konzoly, na které se odkazuje v n
 
 ### <a name="logs-for-android-devices"></a>Protokoly pro zařízení s Androidem
 
-U zařízení se systémem Android použijte soubor protokolu aplikace pro **Android portál společnosti** **OMADM. log**. Než shromáždíte a zkontrolujete protokoly, povolte zajistěte, aby bylo zapnuté [podrobné protokolování](/intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md) , a pak problém reprodukovánte.
+U zařízení se systémem Android použijte soubor protokolu aplikace pro **Android portál společnosti** **OMADM. log**. Než shromáždíte a zkontrolujete protokoly, povolte zajistěte, aby bylo zapnuté [podrobné protokolování](/intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android) , a pak problém reprodukovánte.
 
-Postup shromáždění protokolu OMADM. log ze zařízení najdete v tématu [nahrání a e-mailové protokoly pomocí kabelu USB](/intune-user-help/send-logs-to-your-it-admin-using-cable-android.md).
+Postup shromáždění protokolu OMADM. log ze zařízení najdete v tématu [nahrání a e-mailové protokoly pomocí kabelu USB](/intune-user-help/send-logs-to-your-it-admin-using-cable-android).
 
-Můžete také [nahrávat a e-mailem protokoly](/intune-user-help/send-logs-to-your-it-admin-by-email-android.md#upload-and-email-logs-from-microsoft-intune-app) pro podporu.
+Můžete také [nahrávat a e-mailem protokoly](/intune-user-help/send-logs-to-your-it-admin-by-email-android#upload-and-email-logs-from-microsoft-intune-app) pro podporu.
 
 ### <a name="logs-for-ios-and-ipados-devices"></a>Protokoly pro zařízení s iOS a iPadOS
 
