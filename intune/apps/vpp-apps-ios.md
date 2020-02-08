@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bc511669ec8a88523581b3afbcca161d5208934
-ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
+ms.openlocfilehash: d965ac35719d809ab922d28f76dec1754e9a4c6b
+ms.sourcegitcommit: 9b29478f815e10c46c8030abe0146d601ce0e28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75956204"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77051622"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Jak spravovat aplikace pro iOS a macOS zakoupené prostřednictvím Apple Volume Purchase Program s využitím Microsoft Intune
 
@@ -51,8 +51,8 @@ Zakoupené aplikace je možné přiřadit ke skupinám pomocí dvou typů licenc
 | **Přihlášení do App Storu** | Není nutné. | Každý koncový uživatel musí při zobrazení výzvy k přihlášení do App Storu použít jedinečné Apple ID. |
 | **Konfigurace zařízení blokující přístup k obchodu s aplikacemi** | Aplikace se dají nainstalovat a aktualizovat pomocí Portál společnosti. | Pozvánka k připojení k programu Apple VPP vyžaduje přístup k App Storu. Pokud jste nastavili zásadu pro zakázání App Storu, Licencování uživatelů pro aplikace VPP nebude fungovat. |
 | **Automatická aktualizace aplikace** | Jak je nakonfigurované správcem Intune v nastavení tokenu Apple VPP, kde se **vyžaduje** **Typ přiřazení** aplikace. <br> <br> Pokud je **pro zaregistrovaná zařízení dostupný** **Typ přiřazení** , můžou se dostupné aktualizace aplikace nainstalovat z portál společnosti. | Jak je nakonfigurované koncovým uživatelem v nastavení osobního obchodu s aplikacemi. Tuto funkci nemůže spravovat správce Intune. |
-| **Zápis uživatele** | Not supported. | Podporováno pomocí spravovaných Apple ID. |
-| **Příruček** | Not supported. | Podporováno. |
+| **Zápis uživatele** | Není podporováno. | Podporováno pomocí spravovaných Apple ID. |
+| **Příruček** | Není podporováno. | Podporováno. |
 | **Používané licence** | 1 licence na zařízení Licence je přidružená k zařízení. | 1 licence pro až 5 zařízení, která používají stejné osobní Apple ID. Licence je přidružena k uživateli. <br> <br> Koncový uživatel přidružený k osobnímu Apple ID a spravovanému Apple ID v Intune spotřebovává 2 licence aplikací.|
 | **Migrace licencí** | Aplikace se můžou v tichém režimu migrovat z licencí uživatelů na zařízení. | Aplikace nemůžou migrovat ze zařízení na uživatelské licence. |
 
@@ -64,7 +64,7 @@ Můžete zakoupit a distribuovat veřejné i soukromé aplikace pomocí nástroj
 - **Aplikace pro Store:** Pomocí Apple Business Manageru můžou správci obsahu koupit bezplatné i placené aplikace, které jsou k dispozici v obchodě s aplikacemi.
 - **Vlastní aplikace:** Pomocí Apple Business Manageru můžou správci obsahu taky koupit vlastní aplikace, které jsou pro vaši organizaci k dispozici soukromě. Tyto aplikace jsou přizpůsobené konkrétním potřebám vaší organizace vývojářům, se kterými přímo pracujete. Přečtěte si další informace o [tom, jak distribuovat vlastní aplikace](https://developer.apple.com/business/custom-apps/).
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Požadavky
 - Účet [Apple Business Manager](https://business.apple.com/) nebo [Apple School Manager](https://school.apple.com/) pro vaši organizaci. 
 - Zakoupené licence aplikace přiřazené k jedné nebo více tokenům umístění. 
 - Byly staženy tokeny umístění. 
@@ -131,19 +131,24 @@ Můžete synchronizovat názvy aplikací, metadata a informace o licencích pro 
 >[!NOTE]
 >Dostupný záměr nasazení není pro skupiny zařízení podporován, jsou podporovány pouze skupiny uživatelů. V seznamu zobrazené aplikace jsou přidružené k tokenu. Pokud máte aplikaci, která je spojená s více tokeny VPP, zobrazí se stejná aplikace několikrát – jednou u každého tokenu.
 
+> [!NOTE]  
+> Intune (nebo jakákoli jiná MDM) pro tuto skutečnost neinstaluje aplikace VPP. Místo toho se Intune připojí k účtu VPP a sdělí Apple, které licence k aplikacím přiřadí k těmto zařízením. Odtud se veškerá vlastní instalace zpracuje mezi společností Apple a zařízením.
+> 
+> [Referenční informace o protokolu Apple MDM, stránka 135](https://developer.apple.com/business/documentation/MDM-Protocol-Reference.pdf)
+
 ## <a name="end-user-prompts-for-vpp"></a>Výzvy k VPP pro koncové uživatele
 
 Koncový uživatel obdrží výzvu k instalaci aplikace v rámci VPP v řadě scénářů. Jednotlivé podmínky jsou vysvětlené v tabulce:
 
 | # | Scénář                                | Pozvánka do programu Apple VPP                              | Výzva při instalaci aplikace | Výzva k zadání Apple ID |
 |---|--------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------|-----------------------------------|
-| 1 | BYOD – uživatel licencovaný (nejedná se o zařízení pro zápis uživatelů)                             | A                                                                                               | A                                           | A                                 |
-| 2 | Zařízení společnosti – licencovaný uživatel (zařízení není pod dohledem)     | A                                                                                               | A                                           | A                                 |
-| 3 | Zařízení společnosti – licencovaný uživatel (zařízení pod dohledem)         | A                                                                                               | N                                           | A                                 |
-| 4 | Vlastní zařízení – licencované zařízení                           | N                                                                                               | A                                           | N                                 |
-| 5 | Zařízení společnosti – licencované zařízení (zařízení není pod dohledem)                           | N                                                                                               | A                                           | N                                 |
-| 6 | Zařízení společnosti – licencované zařízení (zařízení pod dohledem)                           | N                                                                                               | N                                           | N                                 |
-| 7 | Beznabídkový režim (zařízení pod dohledem) – licencované zařízení | N                                                                                               | N                                           | N                                 |
+| 1 | BYOD – uživatel licencovaný (nejedná se o zařízení pro zápis uživatelů)                             | Ano                                                                                               | Ano                                           | Ano                                 |
+| 2 | Zařízení společnosti – licencovaný uživatel (zařízení není pod dohledem)     | Ano                                                                                               | Ano                                           | Ano                                 |
+| 3 | Zařízení společnosti – licencovaný uživatel (zařízení pod dohledem)         | Ano                                                                                               | Ne                                           | Ano                                 |
+| 4 | Vlastní zařízení – licencované zařízení                           | Ne                                                                                               | Ano                                           | Ne                                 |
+| 5 | Zařízení společnosti – licencované zařízení (zařízení není pod dohledem)                           | Ne                                                                                               | Ano                                           | Ne                                 |
+| 6 | Zařízení společnosti – licencované zařízení (zařízení pod dohledem)                           | Ne                                                                                               | Ne                                           | Ne                                 |
+| 7 | Beznabídkový režim (zařízení pod dohledem) – licencované zařízení | Ne                                                                                               | Ne                                           | Ne                                 |
 | 8 | Beznabídkový režim (zařízení pod dohledem) – licencovaný uživatel   | --- | ---                                          | ---                                |
 
 > [!Note]  

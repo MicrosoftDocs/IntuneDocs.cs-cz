@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f46b8c7f0f57ab7831d6487495946aa9326b2d5
-ms.sourcegitcommit: 24487f078349795922dc497c952e8358cf767a1a
-ms.translationtype: MT
+ms.openlocfilehash: 6db39fc2ac3b162a7728aacd8d255d65516dcbd2
+ms.sourcegitcommit: 9b29478f815e10c46c8030abe0146d601ce0e28c
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76977780"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77051554"
 ---
-# <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
+# <a name="whats-new-in-microsoft-intune"></a>Co je nového ve Microsoft Intune
 
 Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete také najít [důležitá oznámení](#notices), [Minulá vydání](whats-new-archive.md)a informace o [tom, jak jsou aktualizace služby Intune vydané](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728). 
 
@@ -68,24 +68,6 @@ Aplikace Portál společnosti se aktualizovala tak, aby podporovala Vylepšený 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Správa aplikací
-
-#### <a name="new-setting-to-remove-specific-windows-built-in-apps---6184390---"></a>Nové nastavení pro odebrání určitých integrovaných aplikací pro Windows<!-- 6184390 -->
-Pomocí nového nastavení zásad konfigurace zařízení s Windows 10 můžete odebrat tyto integrované aplikace pro Windows:
-
-- Prohlížeč Mixed reality
-- MSN počasí
-- Instalační program aplikace
-- Tipy Microsoftu
-- Moje kancelář
-- Kolekce Microsoft Solitaire 
-- Mobilní plány
-- Centrum Feedback 
-- Xbox 
-- Hudba Groove
-- Mail
-- Kalendář
-
-V centru pro správu Microsoft Endpoint Manageru vyberte **zařízení** > **konfigurační profily** > **vytvořit profil**. Pak jako **platformu**vyberte **Windows 10 a novější** . Jako **typ profilu**vyberte **omezení zařízení** . V podokně **omezení zařízení** vyberte **App Store** . V dolní části podokna vedle **Odebrat vestavěné aplikace**vyberte **Odebrat**. Další informace o integrovaných aplikacích najdete v tématu [Přidání integrovaných aplikací do Microsoft Intune](~/apps/apps-add-built-in.md).
 
 #### <a name="intune-support-for-additional-microsoft-edge-version-77-deployment-channel-for-macos---5983950----"></a>Podpora Intune pro další kanál nasazení Microsoft Edge verze 77 pro macOS<!-- 5983950  -->
 Microsoft Intune teď podporuje dodatečný **stabilní** kanál nasazení pro aplikaci Microsoft Edge pro MacOS. **Stabilní** kanál je doporučeným kanálem pro nasazení Microsoft Edge v rozlehlých sítích v podnikovém prostředí. Aktualizuje se každých šest týdnů, přičemž každá verze zahrnuje vylepšení z **verze beta** kanálu. Kromě **stabilních** a **beta** kanálů podporuje Intune kanál pro **vývoj** . Verze Public Preview nabízí stabilní a vývojářské kanály pro Microsoft Edge verze 77 a novější pro macOS. Automatické aktualizace prohlížeče jsou ve výchozím nastavení zapnuté. Další informace najdete v tématu [Přidání Microsoft Edge pro zařízení MacOS pomocí Microsoft Intune](~/apps/apps-edge-macos.md).

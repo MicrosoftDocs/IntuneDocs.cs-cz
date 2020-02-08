@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/13/2020
+ms.date: 02/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f99479200e66b080e107475f0a031c5756da6051
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: dc252068d963d75bf6ade79852d6ba01bda8800b
+ms.sourcegitcommit: 9b29478f815e10c46c8030abe0146d601ce0e28c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76754571"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77051605"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s iOS a iPadOS pro povolení nebo omezení funkcí pomocí Intune
 
@@ -45,7 +45,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 - **Sdílet data o využití**: vyberte možnost **blokovat** , pokud chcete zabránit tomu, aby zařízení odesílalo data o diagnostice a využití do Applu. **Nenakonfigurováno** (výchozí) umožňuje odesílat tato data.
 
-- **Snímek obrazovky**: Zvolte **bloku** k zabránění snímky obrazovky nebo na zařízení snímky obrazovky. V iOS 9,0 a novějších blokují také nahrávky obrazovky. **Nenakonfigurováno** (výchozí) umožňuje uživateli zachytit obsah obrazovky jako obrázek nebo jako video.
+- **Snímek obrazovky**: vyberte možnost **blokovat** , pokud chcete zabránit snímekům obrazovky nebo snímku obrazovky na zařízení. V iOS 9,0 a novějších blokují také nahrávky obrazovky. **Nenakonfigurováno** (výchozí) umožňuje uživateli zachytit obsah obrazovky jako obrázek nebo jako video.
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
@@ -312,7 +312,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 - **Vyhledávání Spotlightu, které vrátí výsledky z Internetu**: **blok** přestane vracet žádné výsledky z internetu hledání. **Nenakonfigurováno** (výchozí) umožňuje vyhledávání Spotlightu připojit se k Internetu a poskytnout tak výsledky hledání.
 
 - **Soubory cookie prohlížeče Safari**: Vyberte způsob zpracování souborů cookie v zařízení. Možnosti:
-  - Povolit
+  - Allow
   - Blokovat všechny soubory cookie
   - Povolení souborů cookie z navštívených webů
   - Povoluje soubory cookie z aktuálního webu
@@ -323,7 +323,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
-- **Fotoaparát**: Zvolte **bloku** zabránit přístupu k fotoaparátu v zařízení. **Nenakonfigurováno** (výchozí) umožňuje přístup k kameře zařízení.
+- **Kamera**: vyberte možnost **blokovat** , pokud chcete zabránit přístupu k fotoaparátu na zařízení. **Nenakonfigurováno** (výchozí) umožňuje přístup k kameře zařízení.
 
   Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
@@ -411,7 +411,7 @@ Platí pro zařízení se systémem iOS 9,3 nebo novějším.
   
   - **Viditelné aplikace**: Zadejte seznam aplikací, které uživatelé mohou zobrazit a spustit. Žádné jiné aplikace nebude možné zobrazit ani spustit.
 
-- **Adresa URL aplikace**: zadejte adresu URL aplikace pro Store aplikace, kterou chcete zobrazit nebo skrýt. Například:
+- **Adresa URL aplikace**: zadejte adresu URL aplikace pro Store aplikace, kterou chcete zobrazit nebo skrýt. Příklad:
 
   - Pokud chcete přidat aplikaci Microsoft work folders, zadejte `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` nebo `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`. 
 
@@ -420,8 +420,6 @@ Platí pro zařízení se systémem iOS 9,3 nebo novějším.
   Pokud chcete najít adresu URL aplikace, otevřete aplikaci iTunes App Store a vyhledejte aplikaci. Vyhledejte například `Microsoft Remote Desktop` nebo `Microsoft Word`. Vyberte aplikaci a zkopírujte adresu URL.
 
   K vyhledání aplikace můžete také použít iTunes a potom pomocí úlohy **Kopírovat odkaz** získat adresu URL aplikace.
-  
-  Další informace o vyhledání ID sady prostředků najdete v tématu [Jak najít ID sady prostředků pro aplikaci pro iOS](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app).
 
 - **ID sady prostředků aplikace**: zadejte [ID sady prostředků](bundle-ids-built-in-ios-apps.md) aplikace, kterou chcete. Můžete zobrazit nebo skrýt integrované aplikace a obchodní aplikace. Na webu společnosti Apple je seznam [integrovaných aplikací Apple](https://support.apple.com/HT208094).
 - **Název aplikace**: zadejte název aplikace, kterou chcete. Můžete zobrazit nebo skrýt integrované aplikace a obchodní aplikace. Na webu společnosti Apple je seznam [integrovaných aplikací Apple](https://support.apple.com/HT208094).
@@ -559,7 +557,9 @@ Poznámka potřeba pro datový roaming (Tip nebo důležitá Poznámka pro usnad
 
 ## <a name="autonomous-single-app-mode"></a>Autonomní režim jedné aplikace
 
-Pomocí těchto nastavení můžete nakonfigurovat zařízení s iOS tak, aby spouštěla konkrétní aplikace v autonomním režimu jedné aplikace. Když je tento režim nakonfigurovaný a aplikace se spustí, zařízení je uzamčené. Tuto aplikaci může spustit pouze. Přidejte například aplikaci, která umožní uživatelům provést test na zařízení. Když se akce aplikace dokončí nebo tuto zásadu odeberete, zařízení se vrátí do normálního stavu.
+Pomocí těchto nastavení můžete nakonfigurovat zařízení s iOS/iPadOS, aby spouštěla konkrétní aplikace v autonomním režimu jedné aplikace. Když je tento režim nakonfigurovaný a uživatel spustí jednu z nakonfigurovaných aplikací, zařízení se zamkne do této aplikace. Přepínání aplikace nebo úlohy je zakázané, dokud uživatel neukončí povolenou aplikaci.
+
+Například ve škole nebo univerzitním prostředí přidejte aplikaci, která umožní uživatelům provést test na zařízení. Nebo zařízení uzamkněte do aplikace Portál společnosti, dokud se koncový uživatel neověří. Když uživatel akce aplikace dokončí nebo tuto zásadu odeberete, zařízení se vrátí do normálního stavu.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
@@ -569,7 +569,7 @@ Pomocí těchto nastavení můžete nakonfigurovat zařízení s iOS tak, aby sp
 
 Soubor CSV můžete také **naimportovat** se seznamem názvů aplikací a jejich ID sady. Případně **exportujte** existující seznam obsahující aplikace.
 
-## <a name="kiosk"></a>Kiosk
+## <a name="kiosk"></a>Veřejný terminál
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
@@ -615,7 +615,7 @@ Soubor CSV můžete také **naimportovat** se seznamem názvů aplikací a jejic
 > Než budete moct nakonfigurovat nastavení zařízení s iOSem pro celoobrazovkový (beznabídkový) režim, musíte převést zařízení do režimu dohledu pomocí nástroje Apple Configurator nebo Programu registrace zařízení Apple. Podívejte se na téma Příručka Apple na používání nástroje Apple Configuratoru.
 > Pokud je aplikace pro iOS, kterou zadáte, nainstalovaná po přiřazení profilu, zařízení nepřejde do celoobrazovkového režimu, dokud se zařízení nerestartuje.
 
-## <a name="domains"></a>Domains
+## <a name="domains"></a>Domény
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
@@ -636,7 +636,7 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
 
 - Zámek aplikace (režim jedné aplikace) 
 - Globální proxy server HTTP 
-- Zakázat Zámek aktivace 
+- Zakázání zámku aktivace 
 - Autonomní režim jedné aplikace 
 - Filtr webového obsahu 
 - Nastavení pozadí a zamykací obrazovky 
@@ -676,7 +676,7 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
 > - Explicitní obsah
 > - Dokumenty a data v iCloudu
 > - Hry pro víc hráčů
-> - Přidat Game Center přátelé
+> - Přidat přátele z herního centra
 > - Siri
 
 ## <a name="next-steps"></a>Další kroky
