@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c120fab1da43230888866cba9d818d7b433b711e
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: dbefd797fead7113045ee7e7655b715a0b4961fd
+ms.sourcegitcommit: 32391f74241ee3289a76ccd5319fe700b800d427
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755285"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77075820"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatná verze Intune – Správa aplikací Win32
 
@@ -35,7 +35,7 @@ ms.locfileid: "76755285"
 > [!IMPORTANT]
 > Při nasazování aplikací Win32 zvažte použití [rozšíření pro správu Intune](../apps/intune-management-extension.md) , zejména pokud máte k dispozici instalační program aplikace pro více souborů Win32. Pokud během registrace automatického pilotního nasazení kombinujete instalaci aplikací Win32 a obchodních aplikací, může instalace aplikace selhat.  
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Požadavky
 
 Pokud chcete používat správu aplikací Win32, ujistěte se, že splňujete následující kritéria:
 
@@ -80,10 +80,10 @@ Pokud spustíte `IntuneWinAppUtil.exe` z příkazového okna bez parametrů, ná
 |    `IntuneWinAppUtil -h`    |    Tento příkaz zobrazí informace o využití nástroje.    |
 |    `IntuneWinAppUtil -c c:\testapp\v1.0 -s c:\testapp\v1.0\setup.exe -o c:\testappoutput\v1.0 -q`    |    Tento příkaz vygeneruje soubor `.intunewin` ze zadané zdrojové složky a instalačního souboru. U instalačního souboru MSI tento nástroj načte požadované informace pro Intune. Pokud zadáte parametr `-q`, příkaz se spustí v tichém režimu a pokud už výstupní soubor existuje, přepíše se. Pokud výstupní složka ještě neexistuje, automaticky se vytvoří.    |
 
-Při generování souboru *. intunewin* uložte všechny soubory, které potřebujete odkazovat do podsložky složky nastavení. Pak použijte relativní cestu k odkazování na konkrétní soubor, který potřebujete. Například:
+Při generování souboru *. intunewin* uložte všechny soubory, které potřebujete odkazovat do podsložky složky nastavení. Pak použijte relativní cestu k odkazování na konkrétní soubor, který potřebujete. Příklad:
 
 **Zdrojová složka instalačního programu:** *c:\testapp\v1.0*<br>
-**License file:** *c:\testapp\v1.0\licenses\license.txt*
+**Soubor s licencí:** *c:\testapp\v1.0\licenses\license.txt*
 
 Informace o souboru *License. txt* najdete pomocí relativní cesty *licenses\license.txt*.
 
@@ -140,7 +140,7 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
 
         Například pokud je název vaší aplikace **MyApp123**, přidejte následující:<br>
         `msiexec /p “MyApp123.msp”`<p>
-        A pokud je aplikace `ApplicationName.exe`, příkaz by představoval název aplikace následovaný argumenty příkazu (přepínači) podporovanými balíčkem. <br>Například:<br>
+        A pokud je aplikace `ApplicationName.exe`, příkaz by představoval název aplikace následovaný argumenty příkazu (přepínači) podporovanými balíčkem. <br>Příklad:<br>
         `ApplicationName.exe /quiet`<br>
         Ve výše uvedeném příkazu balíček `ApplicationName.exe` podporuje argument příkazu `/quiet`.<p> 
         Pro konkrétní argumenty podporované balíčkem aplikace se obraťte na dodavatele aplikace.
@@ -204,7 +204,7 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
         2. Až budete s nastavením pravidel požadavků hotovi, vyberte **OK**.
 2. Kliknutím na **Další** zobrazte stránku **pravidla detekce** .   
 
-### <a name="step-4-detection-rules"></a>Krok 4: pravidla detekce
+## <a name="step-4-detection-rules"></a>Krok 4: pravidla detekce
 
 1. Na stránce **pravidla detekce** nakonfigurujte pravidla pro detekci přítomnosti aplikace:
     
@@ -268,7 +268,7 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
 
 2. Po přidání pravidel vyberte **Další** pro zobrazení stránky **závislosti** .
 
-### <a name="step-5-dependencies"></a>Krok 5: závislosti
+## <a name="step-5-dependencies"></a>Krok 5: závislosti
 
 Závislosti aplikací jsou aplikace, které je třeba nainstalovat, než bude možné nainstalovat aplikaci Win32. Můžete vyžadovat, aby byly další aplikace nainstalovány jako závislosti. Konkrétně musí zařízení před instalací aplikace Win32 nainstalovat závislé aplikace. Existuje maximálně 100 závislostí, které zahrnují závislosti všech zahrnutých závislostí a také samotnou aplikaci. Závislosti aplikace Win32 můžete přidat až po přidání a nahrání aplikace Win32 do Intune. Po přidání aplikace Win32 se zobrazí možnost **závislosti** v podokně aplikace Win32. 
 
@@ -388,7 +388,7 @@ Protokoly agenta na klientském počítači se obvykle nachází ve složce `C:\
 > [!IMPORTANT]
 > Aby bylo možné správně nainstalovat a spustit aplikace pro obchodní prostředí Win32, nastavení antimalwarového programu by mělo vyloučit následující adresáře, aby byly prohledávány:<p>
 > **Na klientských počítačích x64**:<br>
-> *C:\Program Files (x86)\Microsoft Intune Management Extension\Content*<br>
+> *C:\Program Files (x86) \Microsoft Intune Management Extension\Content*<br>
 > *C:\windows\IMECache*
 >  
 > **Na klientských počítačích x86**:<br>

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7cc873079d9a139edfa2217d97806afe0c5bbf28
-ms.sourcegitcommit: 06dce5c8111592ad774247e86e539dd3128117e5
+ms.openlocfilehash: 7279921719677fce0845517aefc5958f57ce13cb
+ms.sourcegitcommit: 32391f74241ee3289a76ccd5319fe700b800d427
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75545952"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77075701"
 ---
 # <a name="create-mobile-threat-defense-app-protection-policy-with-intune"></a>Vytvoření zásad ochrany aplikací ochrany před mobilními hrozbami v Intune
 
@@ -49,7 +49,7 @@ Předpoklady pro zásady ochrany aplikací pomocí MTD:
 
 Pomocí postupu [Vytvořte zásady ochrany aplikací pro iOS/iPadOS nebo Android](../apps/app-protection-policies.md#app-protection-policies-for-iosipados-and-android-apps)a na stránkách *aplikace*, *podmíněné spouštění*a *přiřazení* použijte následující informace:
 
-- **Aplikace**: vyberte aplikaci pro partnera ochrany před mobilními hrozbami, který používáte.
+- **Aplikace**: Vyberte aplikace, na které chcete cílit zásady ochrany aplikací. Pro tuto sadu funkcí se tyto aplikace zablokují nebo selektivně vymažou na základě posouzení rizik zařízení od zvoleného dodavatele ochrany před mobilními hrozbami. 
 - **Podmíněné spuštění**: pod *podmínkami zařízení*, v rozevíracím seznamu vyberte **maximální povolenou úroveň hrozby zařízení**.
 
   Možnosti pro **hodnotu**úrovně hrozby:

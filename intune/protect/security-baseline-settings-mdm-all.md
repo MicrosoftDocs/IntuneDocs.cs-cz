@@ -5,7 +5,7 @@ description: Zkontrolujte výchozí a dostupná nastavení pro různé verze sta
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/05/2019
+ms.date: 02/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b2cb1b277f78ed81dea8c2d82eff6860182ea5d
-ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
+ms.openlocfilehash: abf23bff0d8889b57ab05c55b7e1464d0a9d2436
+ms.sourcegitcommit: 32391f74241ee3289a76ccd5319fe700b800d427
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899256"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77075786"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Nastavení standardních hodnot zabezpečení Windows MDM pro Intune
 
@@ -208,7 +208,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – pro
   
   **Výchozí**: Ano
   
-- **Zabránit přepsání chyb certifikátu**:  
+- **Zabránit uživateli v přepsání chyb certifikátu**:  
   Nastavení této zásady brání uživateli ignorovat SSL (Secure Sockets Layer)/TLS (Transport Layer Security), které přeruší procházení (například vypršela platnost, odvolaná zpráva nebo "Neshoda názvů") v aplikaci Internet Explorer. Pokud nastavení této zásady povolíte, uživatel nebude moci pokračovat v procházení. Pokud nastavení této zásady zakážete nebo nenakonfigurujete, uživatel se může rozhodnout ignorovat chyby certifikátů a pokračovat v procházení.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067126)
   
@@ -277,7 +277,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dat
 
   **Výchozí**: Ano
 
-## <a name="device-guard"></a>Device Guard
+## <a name="device-guard"></a>Ochrana zařízení
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard) .
 
@@ -486,7 +486,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady pro poskyto
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – ExploitGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-exploitguard) .
 
-- **XML ochrany před zneužitím**:  
+- **Nahrát XML**:  
   Umožňuje správci IT doručovat konfiguraci, která představuje požadované možnosti pro zmírnění rizika systému a aplikace pro všechna zařízení v organizaci. Konfigurace je reprezentovaná kódem XML. Ochrana před zneužitím pomáhá chránit zařízení před malwarem, který využívá zneužití k rozšíření a nakazit. Pomocí aplikace zabezpečení systému Windows nebo PowerShellu vytvoříte sadu zmírnění hrozeb (označované jako konfigurace). Tuto konfiguraci pak můžete exportovat jako soubor XML a sdílet ho s více počítači ve vaší síti, aby všichni měli stejnou sadu nastavení pro zmírnění rizik. Existující konfigurační soubor XML nástroje EMET můžete také převést a importovat do konfiguračního souboru XML ochrany před zneužitím.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067035)
 
@@ -507,6 +507,64 @@ Další informace najdete v dokumentaci k systému Windows v tématu [zásady CS
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067107)
 
   **Výchozí**: zakázáno
+
+## <a name="firewall"></a>Brána firewall
+
+Další informace najdete v tématu [2.2.2 FW_PROFILE_TYPE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) v dokumentaci k Windows Protocols.
+
+- **Doména profilu brány firewall**:  
+  Určuje profily, do kterých pravidlo patří: doména, soukromá, veřejná. Tato hodnota představuje profil pro sítě, které jsou připojené k doménám.  
+  [Další informace](https://go.microsoft.com/fwlink/?linkid=2066796)
+
+  - **Blokovaná příchozí připojení**:  
+    **Výchozí**: Ano
+
+  - **Požadovaná odchozí připojení**:  
+    **Výchozí**: Ano
+
+  - **Blokovaná příchozí oznámení**:  
+    **Výchozí**: Ano
+
+  - **Povolená brána firewall**:  
+    **Výchozí**: povoleno
+
+- **Veřejný profil brány firewall**:  
+  Určuje profily, do kterých pravidlo patří: doména, soukromá, veřejná. Tato hodnota představuje profil pro veřejné sítě. Tyto sítě jsou klasifikovány jako veřejné správci v hostiteli serveru. Klasifikace proběhne při prvním připojení hostitele k síti. Tyto sítě jsou obvykle na letištích, v kavárnách a na jiných veřejných místech, kde nejsou důvěryhodní partneři v síti nebo správci sítě.  
+  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067143)
+
+  - **Blokovaná příchozí připojení**:  
+    **Výchozí**: Ano
+
+  - **Požadovaná odchozí připojení**:  
+    **Výchozí**: Ano
+
+  - **Blokovaná příchozí oznámení**:  
+    **Výchozí**: Ano
+
+  - **Povolená brána firewall**:  
+    **Výchozí**: povoleno
+
+  - **Pravidla zabezpečení připojení ze zásad skupiny nejsou Sloučená**:  
+    **Výchozí**: Ano
+
+  - **Pravidla zásad ze zásad skupiny nejsou Sloučená**:  
+    **Výchozí**: Ano
+
+- **Profil brány firewall Private**:  
+  Určuje profily, do kterých pravidlo patří: doména, soukromá, veřejná. Tato hodnota představuje profil privátních sítí.  
+  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067041)
+
+  - **Blokovaná příchozí připojení**:  
+    **Výchozí**: Ano
+
+  - **Požadovaná odchozí připojení**:  
+    **Výchozí**: Ano
+
+  - **Blokovaná příchozí oznámení**:  
+    **Výchozí**: Ano
+
+  - **Povolená brána firewall**:  
+    **Výchozí**: povoleno
 
 ## <a name="internet-explorer"></a>Internet Explorer
 
@@ -1286,7 +1344,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: vyžadování protokolu NTLM V2 a 128 bitového šifrování
 
 - Počet **minut nečinnosti uzamčené obrazovky, po které se spořič obrazovky aktivuje**:  
-  Systém Windows zaznamená nečinnost relace přihlášení, a pokud neaktivní doba překračuje limit nečinnosti, pak se spustí šetřič obrazovky, který relaci uzamkne.  
+  Systém Windows zaznamená nečinnost relace přihlášení, a pokud doba neaktivního času překročí limit nečinnosti, spustí se spořič obrazovky a zamkne relaci.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067210)
 
   **Výchozí**: 15
@@ -1477,6 +1535,153 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
 
   **Výchozí**: Ano
 
+## <a name="microsoft-defender"></a>Microsoft Defender
+
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) .
+
+- **Kontrolovat příchozí e-mailové zprávy**:  
+  Povolí nebo zakáže kontrolu e-mailu.  
+  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067116)
+
+  **Výchozí**: Ano
+
+- **Typ podřízeného procesu spuštění aplikací Office**:  
+  Aplikace Office nemůžou vytvářet podřízené procesy. K tomu patří Word, Excel, PowerPoint, OneNote a Access. Toto je typické chování malwaru, zejména u útoků založených na makrech, které se pokoušejí použít aplikace Office ke spouštění nebo stahování škodlivých spustitelných souborů.  
+  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067121)
+
+  **Výchozí**: blok
+
+- **Typ souhlasu pro odeslání ukázky**v programu Defender:  
+  Kontroluje, jestli se na úrovni souhlasu uživatele v programu Microsoft Defender odesílají data. Pokud je požadovaný souhlas již udělen, Microsoft Defender je odešle. Pokud ne (a pokud si uživatel není nikdy požádán), uživatelské rozhraní se spustí, aby požádalo o souhlas uživatele (když je povolený Defender/AllowCloudProtection) před odesláním dat.  
+  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067131)
+
+  **Výchozí**: automaticky odesílat bezpečné vzorky
+
+- **Interval aktualizace podpisu (v hodinách)** :  
+  Interval aktualizace signatury Defenderu v hodinách
+
+  **Výchozí**: 4
+
+- **Typ spuštění datové části staženého skriptu**:  
+  Skript programu Defender stáhl typ spuštění datové části.
+
+  **Výchozí**: blok
+  
+- **Zabránit krádeži pověření typu**:  
+  Ochrana přihlašovacích údajů v programu Microsoft Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným klíčům může vést k útokům krádeže přihlašovacích údajů, jako je například pass-the-hash nebo Pass-The-Ticket. Ochrana přihlašovacích údajů v programu Microsoft Defender brání těmto útokům ochranou hodnot hash hesla NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
+  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067065)
+  
+  **Výchozí**: Povolit
+
+- **Typ spuštění obsahu e-mailu**:  
+  Toto pravidlo blokuje spuštění nebo spuštění následujících typů souborů z e-mailu, který se zobrazuje v aplikaci Microsoft Outlook nebo webové pošty (například Gmail.com nebo Outlook.com): spustitelné soubory (například. exe,. dll nebo. scr) soubory skriptu (například PowerShell. PS, VisualBasic. vbs, nebo soubor JavaScript. js). soubory archivu skriptu.  
+  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067063)
+
+  **Výchozí**: blok
+
+::: zone-end
+::: zone pivot="mdm-may-2019"
+
+- **Spuštění aplikace Adobe Reader v podřízeném procesu**:  
+  **Výchozí**: Povolit
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
+
+- **Ochrana sítě**:  
+  Tato zásada umožňuje zapnout ochranu sítě (blokovat/audit) nebo vypnout v programu Microsoft Defender zneužití Guard. Ochrana sítě je funkcí ochrany před zneužitím v programu Microsoft Defender, která chrání zaměstnance pomocí libovolné aplikace v přístupu k podvodným podvodům, webům pro zneužití a škodlivému obsahu na internetu. To zahrnuje prevenci prohlížeče třetích stran v připojení k nebezpečným webům. Typ hodnoty je celé číslo. Pokud povolíte toto nastavení, bude zapnutá ochrana sítě a zaměstnanci ji nebudou moct vypnout. Jeho chování se dá řídit následujícími možnostmi: blokování a audit. Pokud povolíte tuto zásadu s možností blokovat, uživatelé a aplikace budou mít zablokovaný připojení k nebezpečným doménám. Tuto aktivitu vidíte v programu Microsoft Defender Security Center. Pokud povolíte tuto zásadu s možností audit, uživatelé nebo aplikace nebudou mít možnost se připojit k nebezpečným doménám. Tato aktivita se ale pořád zobrazuje v programu Microsoft Defender Security Center. Pokud tuto zásadu zakážete, nebudou se uživatelé nebo aplikace zablokovat z připojení k nebezpečným doménám. V programu Microsoft Defender Security Center neuvidíte žádné síťové aktivity. Pokud tuto zásadu nenakonfigurujete, blokování sítě je ve výchozím nastavení zakázané.  
+  [Další informace](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-network-protection)
+
+  **Výchozí**: Povolit
+
+- **Den kontroly plánu Defenderu**:  
+  Den kontroly plánu Defenderu
+
+  **Výchozí**: každý den
+
+- **Ochrana Doručená v cloudu**:  
+  Aby se Váš počítač mohl nejlépe chránit, Microsoft Defender pošle Microsoftu informace o všech zjištěných problémech. Microsoft bude tyto informace analyzovat, získat další informace o problémech, které mají vliv na vás a jiné zákazníky, a nabízí Vylepšená řešení.  
+  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067039)
+
+  **Výchozí**: Ano  
+
+- **Akce potenciálně nežádoucí aplikace v Defenderu**:  
+  Funkce ochrany potenciálně nežádoucí aplikace (PUA) v antivirové ochraně v programu Microsoft Defender může identifikovat a blokovat PUAs ze stahování a instalace do koncových bodů ve vaší síti. Tyto aplikace nejsou považovány za viry, malware nebo jiné typy hrozeb, ale mohou provádět akce s koncovými body, které nepříznivě ovlivňují jejich výkon nebo použití. PUA může také odkazovat na aplikace, které se považují za nekvalitní pověst. Typické chování PUA zahrnuje různé typy softwaru, které se provedou vypsáním do ovladačů pro webové prohlížeče a optimalizace registru, které zjišťují problémy, vyžádají si platbu, aby opravila chyby, ale zůstaly na koncovém bodu a neobsahují žádné změny ani optimalizace (označované taky jako). programy neautorizovaných antivirových programů). Tyto aplikace můžou zvýšit riziko napadení vaší sítě malwarem, způsobit obtížnější nákazu malwaru a může obcházet prostředky IT při čištění aplikací.  
+  [Další informace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+
+  **Výchozí**: blok  
+
+- **Typ kódu makra zakódováného skriptu**:  
+  Malware a další hrozby se mohou pokusit dekódovat nebo skrýt škodlivý kód v některých souborech skriptu. Toto pravidlo zabrání spuštění skriptů, které se jeví jako nepoužívané.  
+  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067026)
+
+  **Výchozí**: blok
+
+- **Kontrolovat vyměnitelné jednotky během úplného prohledávání**:  
+  Umožňuje, aby Microsoft Defender během úplného prohledávání kontroloval škodlivý a nežádoucí software v vyměnitelných jednotkách (například jednotky Flash). Antivirová ochrana v programu Microsoft Defender před spuštěním kontroluje všechny soubory na zařízeních USB.  
+  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067036)
+
+  **Výchozí**: Ano  
+
+- **Kontrolovat archivní soubory**:  
+  Defender prohledává archivní soubory.
+
+  **Výchozí**: Ano
+
+- **Monitorování chování**:  
+  Povolí nebo zakáže funkci monitorování chování programu Microsoft Defender. V systému Windows 10 tyto senzory shromažďují a zpracovávají signály chování z operačního systému a odesílají tato data ze senzorů do vaší privátní, izolované a cloudové instance ATP programu Microsoft Defender.  
+  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067111)
+
+  **Výchozí**: Ano
+
+- **Kontrolovat soubory otevřené ze síťových složek**:  
+  Pokud jsou soubory jen pro čtení, uživatel nebude moct odebrat zjištěný malware.
+
+  **Výchozí**: Ano
+
+- **Nedůvěryhodný typ procesu USB**:  
+  Pomocí tohoto pravidla můžou správci zabránit spuštění nepodepsaných nebo nedůvěryhodných spustitelných souborů z vyměnitelných jednotek USB, včetně karet SD.  
+  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067100)
+
+  **Výchozí**: blok
+
+- **Typ injektáže jiného procesu pro aplikace Office**:  
+  Aplikace Office, včetně Wordu, Excelu, PowerPointu a OneNotu, nemůžou vkládat kód do jiných procesů. Většinou ho malware používá ke spouštění škodlivého kódu při pokusu o skrytí aktivity z skenovacích modulů antivirového programu.  
+  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067019)
+
+  **Výchozí**: blok
+
+- **Kód makra Office umožňuje typ importů Win32**:  
+  Malware může v souborech Office použít kód makra pro import a načtení knihoven DLL Win32, které slouží k tomu, aby volání rozhraní API umožňovala v celém systému další infekce. Toto pravidlo se pokusí zablokovat soubory Office obsahující kód makra, který může importovat knihovny DLL Win32. K tomu patří Word, Excel, PowerPoint a OneNote.  
+  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067130)
+
+  **Výchozí**: blok
+
+- **Úroveň blokování cloudu Defenderu**:  
+  Úroveň bloku cloudu Defenderu
+
+  **Výchozí**: Nenakonfigurováno
+
+- **Sledování v reálném čase**:  
+  Defender vyžaduje sledování v reálném čase.
+
+  **Výchozí**: Ano
+
+::: zone-end
+::: zone pivot="mdm-may-2019"
+
+- **Aplikace Office Communications se spouští v podřízeném procesu**:  
+  **Výchozí**: Povolit
+
+::: zone-end
+::: zone pivot="mdm-preview,mdm-may-2019"
+
+- **Typ při vytváření nebo spouštění obsahu aplikací Office**:  
+  Toto pravidlo cílí na typické chování používané podezřelými a zlomyslnými doplňky a skripty (rozšíření), které vytvářejí nebo spouštějí spustitelné soubory. Toto je typická antimalwarová technika. Používání rozšíření je pro aplikace Office blokované. Tato rozšíření obvykle používají skriptování Windows Scripting Host (. Soubory WSH) pro spouštění skriptů, které automatizují určité úkoly nebo poskytují uživatelsky vytvořené funkce doplňků.  
+  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067108)
+
+  **Výchozí**: blok
+
 ## <a name="ms-security-guide"></a>Průvodce zabezpečením MS
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – MSSecurityGuide](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-mssecurityguide) .
@@ -1596,7 +1801,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
 
-## <a name="remote-desktop-services"></a>Vzdálená plocha
+## <a name="remote-desktop-services"></a>Služba Vzdálená plocha
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – RemoteDesktopServices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices) .
 
@@ -1726,7 +1931,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
 
   **Výchozí**: Ano
 
-## <a name="system"></a>Systému
+## <a name="system"></a>Systém
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – systém](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system) .
 
@@ -1778,217 +1983,12 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
 
   **Výchozí**: povoleno
 
-## <a name="microsoft-defender"></a>Microsoft Defender
-
-Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) .
-
-- **Kontrolovat příchozí e-mailové zprávy**:  
-  Povolí nebo zakáže kontrolu e-mailu.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067116)
-
-  **Výchozí**: Ano
-
-- **Typ podřízeného procesu spuštění aplikací Office**:  
-  Aplikace Office nemůžou vytvářet podřízené procesy. K tomu patří Word, Excel, PowerPoint, OneNote a Access. Toto je typické chování malwaru, zejména u útoků založených na makrech, které se pokoušejí použít aplikace Office ke spouštění nebo stahování škodlivých spustitelných souborů.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067121)
-
-  **Výchozí**: blok
-
-- **Typ souhlasu pro odeslání ukázky**v programu Defender:  
-  Kontroluje, jestli se na úrovni souhlasu uživatele v programu Microsoft Defender odesílají data. Pokud je požadovaný souhlas již udělen, Microsoft Defender je odešle. Pokud ne (a pokud si uživatel není nikdy požádán), uživatelské rozhraní se spustí, aby požádalo o souhlas uživatele (když je povolený Defender/AllowCloudProtection) před odesláním dat.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067131)
-
-  **Výchozí**: automaticky odesílat bezpečné vzorky
-
-- **Interval aktualizace podpisu (v hodinách)** :  
-  Interval aktualizace signatury Defenderu v hodinách
-
-  **Výchozí**: 4
-
-- **Typ spuštění datové části staženého skriptu**:  
-  Skript programu Defender stáhl typ spuštění datové části.
-
-  **Výchozí**: blok
-  
-- **Zabránit krádeži pověření typu**:  
-  Ochrana přihlašovacích údajů v programu Microsoft Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto důvěrným informacím může vést k útokům zahrnujícím krádeže přihlašovacích údajů, jako je například Pass-the-Hash nebo Pass-The-Ticket. Ochrana přihlašovacích údajů v programu Microsoft Defender brání těmto útokům ochranou hodnot hash hesla NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067065)
-  
-  **Výchozí**: Povolit
-
-- **Typ spuštění obsahu e-mailu**:  
-  Toto pravidlo blokuje spuštění nebo spuštění následujících typů souborů z e-mailu, který se zobrazuje v aplikaci Microsoft Outlook nebo webové pošty (například Gmail.com nebo Outlook.com): spustitelné soubory (například. exe,. dll nebo. scr) soubory skriptu (například PowerShell. PS, VisualBasic. vbs, nebo soubor JavaScript. js). soubory archivu skriptu.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067063)
-
-  **Výchozí**: blok
-
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
-
-- **Spuštění aplikace Adobe Reader v podřízeném procesu**:  
-  **Výchozí**: Povolit
-
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **Ochrana sítě**:  
-  Tato zásada umožňuje zapnout ochranu sítě (blokovat/audit) nebo vypnout v programu Microsoft Defender zneužití Guard. Ochrana sítě je funkcí ochrany před zneužitím v programu Microsoft Defender, která chrání zaměstnance pomocí libovolné aplikace v přístupu k podvodným podvodům, webům pro zneužití a škodlivému obsahu na internetu. To zahrnuje prevenci prohlížeče třetích stran v připojení k nebezpečným webům. Typ hodnoty je celé číslo. Pokud povolíte toto nastavení, bude zapnutá ochrana sítě a zaměstnanci ji nebudou moct vypnout. Jeho chování se dá řídit následujícími možnostmi: blokování a audit. Pokud povolíte tuto zásadu s možností blokovat, uživatelé a aplikace budou mít zablokovaný připojení k nebezpečným doménám. Tuto aktivitu vidíte v programu Microsoft Defender Security Center. Pokud povolíte tuto zásadu s možností audit, uživatelé nebo aplikace nebudou mít možnost se připojit k nebezpečným doménám. Tato aktivita se ale pořád zobrazuje v programu Microsoft Defender Security Center. Pokud tuto zásadu zakážete, nebudou se uživatelé nebo aplikace zablokovat z připojení k nebezpečným doménám. V programu Microsoft Defender Security Center neuvidíte žádné síťové aktivity. Pokud tuto zásadu nenakonfigurujete, blokování sítě je ve výchozím nastavení zakázané.  
-  [Další informace](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-network-protection)
-
-  **Výchozí**: Povolit
-
-- **Den kontroly plánu Defenderu**:  
-  Den kontroly plánu Defenderu
-
-  **Výchozí**: každý den
-
-- **Ochrana Doručená v cloudu**:  
-  Aby se Váš počítač mohl nejlépe chránit, Microsoft Defender pošle Microsoftu informace o všech zjištěných problémech. Microsoft bude tyto informace analyzovat, získat další informace o problémech, které mají vliv na vás a jiné zákazníky, a nabízí Vylepšená řešení.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067039)
-
-  **Výchozí**: Ano  
-
-- **Akce potenciálně nežádoucí aplikace v Defenderu**:  
-  Funkce ochrany potenciálně nežádoucí aplikace (PUA) v antivirové ochraně v programu Microsoft Defender může identifikovat a blokovat PUAs ze stahování a instalace do koncových bodů ve vaší síti. Tyto aplikace nejsou považovány za viry, malware nebo jiné typy hrozeb, ale mohou provádět akce s koncovými body, které nepříznivě ovlivňují jejich výkon nebo použití. PUA může také odkazovat na aplikace, které se považují za nekvalitní pověst. Typické chování PUA zahrnuje různé typy softwaru, které se provedou vypsáním do ovladačů pro webové prohlížeče a optimalizace registru, které zjišťují problémy, vyžádají si platbu, aby opravila chyby, ale zůstaly na koncovém bodu a neobsahují žádné změny ani optimalizace (označované taky jako). programy neautorizovaných antivirových programů). Tyto aplikace můžou zvýšit riziko napadení vaší sítě malwarem, způsobit obtížnější nákazu malwaru a může obcházet prostředky IT při čištění aplikací.  
-  [Další informace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
-
-  **Výchozí**: blok  
-
-- **Typ kódu makra zakódováného skriptu**:  
-  Malware a další hrozby se mohou pokusit dekódovat nebo skrýt škodlivý kód v některých souborech skriptu. Toto pravidlo zabrání spuštění skriptů, které se jeví jako nepoužívané.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067026)
-
-  **Výchozí**: blok
-
-- **Kontrolovat vyměnitelné jednotky během úplného prohledávání**:  
-  Umožňuje, aby Microsoft Defender během úplného prohledávání kontroloval škodlivý a nežádoucí software v vyměnitelných jednotkách (například jednotky Flash). Antivirová ochrana v programu Microsoft Defender před spuštěním kontroluje všechny soubory na zařízeních USB.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067036)
-
-  **Výchozí**: Ano  
-
-- **Kontrolovat archivní soubory**:  
-  Defender prohledává archivní soubory.
-
-  **Výchozí**: Ano
-
-- **Monitorování chování**:  
-  Povolí nebo zakáže funkci monitorování chování programu Microsoft Defender. V systému Windows 10 tyto senzory shromažďují a zpracovávají signály chování z operačního systému a odesílají tato data ze senzorů do vaší privátní, izolované a cloudové instance ATP programu Microsoft Defender.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067111)
-
-  **Výchozí**: Ano
-
-- **Kontrolovat soubory otevřené ze síťových složek**:  
-  Pokud jsou soubory jen pro čtení, uživatel nebude moct odebrat zjištěný malware.
-
-  **Výchozí**: Ano
-
-- **Nedůvěryhodný typ procesu USB**:  
-  Pomocí tohoto pravidla můžou správci zabránit spuštění nepodepsaných nebo nedůvěryhodných spustitelných souborů z vyměnitelných jednotek USB, včetně karet SD.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067100)
-
-  **Výchozí**: blok
-
-- **Typ injektáže jiného procesu pro aplikace Office**:  
-  Aplikace Office, včetně Wordu, Excelu, PowerPointu a OneNotu, nemůžou vkládat kód do jiných procesů. Většinou ho malware používá ke spouštění škodlivého kódu při pokusu o skrytí aktivity z skenovacích modulů antivirového programu.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067019)
-
-  **Výchozí**: blok
-
-- **Kód makra Office umožňuje typ importů Win32**:  
-  Malware může v souborech Office použít kód makra pro import a načtení knihoven DLL Win32, které slouží k tomu, aby volání rozhraní API umožňovala v celém systému další infekce. Toto pravidlo se pokusí zablokovat soubory Office obsahující kód makra, který může importovat knihovny DLL Win32. K tomu patří Word, Excel, PowerPoint a OneNote.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067130)
-
-  **Výchozí**: blok
-
-- **Úroveň blokování cloudu Defenderu**:  
-  Úroveň bloku cloudu Defenderu
-
-  **Výchozí**: Nenakonfigurováno
-
-- **Sledování v reálném čase**:  
-  Defender vyžaduje sledování v reálném čase.
-
-  **Výchozí**: Ano
-
-::: zone-end
-::: zone pivot="mdm-may-2019"
-
-- **Aplikace Office Communications se spouští v podřízeném procesu**:  
-  **Výchozí**: Povolit
-
-::: zone-end
-::: zone pivot="mdm-preview,mdm-may-2019"
-
-- **Typ při vytváření nebo spouštění obsahu aplikací Office**:  
-  Toto pravidlo cílí na typické chování používané podezřelými a zlomyslnými doplňky a skripty (rozšíření), které vytvářejí nebo spouštějí spustitelné soubory. Toto je typická antimalwarová technika. Používání rozšíření je pro aplikace Office blokované. Tato rozšíření obvykle používají skriptování Windows Scripting Host (. Soubory WSH) pro spouštění skriptů, které automatizují určité úkoly nebo poskytují uživatelsky vytvořené funkce doplňků.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067108)
-
-  **Výchozí**: blok
-
-::: zone-end
-::: zone pivot="mdm-may-2019"
-
-## <a name="microsoft-defender-firewall"></a>Firewall v programu Microsoft Defender
-
-Další informace najdete v tématu [2.2.2 FW_PROFILE_TYPE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) v dokumentaci k Windows Protocols.
-
-- **Doména profilu brány firewall**:  
-  Určuje profily, do kterých pravidlo patří: doména, soukromá, veřejná. Tato hodnota představuje profil pro sítě, které jsou připojené k doménám.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2066796)
-
-  - **Blokovaná příchozí připojení**:  
-    **Výchozí**: Ano
-
-  - **Požadovaná odchozí připojení**:  
-    **Výchozí**: Ano
-
-  - **Blokovaná příchozí oznámení**:  
-    **Výchozí**: Ano
-
-  - **Povolená brána firewall**:  
-    **Výchozí**: povoleno
-
-- **Veřejný profil brány firewall**:  
-  Určuje profily, do kterých pravidlo patří: doména, soukromá, veřejná. Tato hodnota představuje profil pro veřejné sítě. Tyto sítě jsou klasifikovány jako veřejné správci v hostiteli serveru. Klasifikace proběhne při prvním připojení hostitele k síti. Tyto sítě jsou obvykle na letištích, v kavárnách a na jiných veřejných místech, kde nejsou důvěryhodní partneři v síti nebo správci sítě.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067143)
-
-  - **Blokovaná příchozí připojení**:  
-    **Výchozí**: Ano
-
-  - **Požadovaná odchozí připojení**:  
-    **Výchozí**: Ano
-
-  - **Blokovaná příchozí oznámení**:  
-    **Výchozí**: Ano
-
-  - **Povolená brána firewall**:  
-    **Výchozí**: povoleno
-
-  - **Pravidla zabezpečení připojení ze zásad skupiny nejsou Sloučená**:  
-    **Výchozí**: Ano
-
-  - **Pravidla zásad ze zásad skupiny nejsou Sloučená**:  
-    **Výchozí**: Ano
-
-- **Profil brány firewall Private**:  
-  Určuje profily, do kterých pravidlo patří: doména, soukromá, veřejná. Tato hodnota představuje profil privátních sítí.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067041)
-
-  - **Blokovaná příchozí připojení**:  
-    **Výchozí**: Ano
-
-  - **Požadovaná odchozí připojení**:  
-    **Výchozí**: Ano
-
-  - **Blokovaná příchozí oznámení**:  
-    **Výchozí**: Ano
-
-  - **Povolená brána firewall**:  
-    **Výchozí**: povoleno
 
 ## <a name="windows-hello-for-business"></a>Windows Hello pro firmy
 
-- **Vyžadovat rozšířenou ochranu proti falšování identity, pokud je dostupná**
+- **Povolit používání rozšířené ochrany proti falšování identity, pokud je dostupná**
 
   Pokud ano, zařízení budou používat rozšířenou ochranu proti falšování identity, pokud jsou k dispozici. V případě ne se zablokuje ochrana proti falšování identity. Nenakonfigurované budou respektovat konfigurace provedené na klientovi.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067192)
@@ -2132,7 +2132,7 @@ Následující nastavení:
 - **Spuštění aplikace Adobe Reader v podřízeném procesu**
 - **Aplikace Office Communications se spouští v podřízeném procesu**
 
-*[Novinka]* [ **firewall v programu Microsoft Defender**](#microsoft-defender-firewall)
+*[New]* [ **Brána firewall**](#firewall)
 
 - **Doména profilu brány firewall**
   - **Blokovaná příchozí připojení**

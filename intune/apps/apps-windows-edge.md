@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,26 +17,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa0156d059513a2586eb7d8866d23508be0af10c
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
+ms.openlocfilehash: 8d5082376c42ff3b92e3979a53b6deac3e59c88e
+ms.sourcegitcommit: 32391f74241ee3289a76ccd5319fe700b800d427
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886677"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77075803"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Přidejte Microsoft Edge pro Windows 10 a Microsoft Intune
 
 Než budete moct nasadit, nakonfigurovat, monitorovat nebo chránit aplikace, musíte je přidat do Intune. Jedním z dostupných [typů aplikací](~/apps/apps-add.md#app-types-in-microsoft-intune) je Microsoft Edge *verze 77 a novější*. Když vyberete tento typ aplikace v Intune, můžete přiřadit a nainstalovat Microsoft Edge *verze 77 a novější* na zařízení, která spravujete, na kterých běží Windows 10.
 
 > [!IMPORTANT]
-> Tento typ aplikace je ve **verzi Public Preview** a nabízí stabilní, beta a vývojové kanály pro Windows 10. Nasazení je pouze anglické (EN), ale koncoví uživatelé mohou změnit jazyk zobrazení v prohlížeči v části **nastavení** > **jazyky**. Microsoft Edge je aplikace Win32 nainstalovaná v kontextu systému a jako architektury (aplikace x86 v operačním systému x86 a x64 v operačním systému x64). Intune zjistí všechny existující instalace Microsoft Edge. Pokud je nainstalován v uživatelském kontextu, bude instalace systému přepsána. Pokud je nainstalovaný v kontextu systému, nahlásí se úspěch instalace. Automatické aktualizace Microsoft Edge jsou navíc ve výchozím nastavení **zapnuté** a Microsoft Edge nejde odinstalovat.
+> Tento typ aplikace je ve **verzi Public Preview** a nabízí stabilní, beta a vývojové kanály pro Windows 10. Nasazení je pouze anglické (EN), ale koncoví uživatelé mohou změnit jazyk zobrazení v prohlížeči v části **nastavení** > **jazyky**. Microsoft Edge je aplikace Win32 nainstalovaná v kontextu systému a jako architektury (aplikace x86 v operačním systému x86 a x64 v operačním systému x64). Intune zjistí všechny existující instalace Microsoft Edge. Pokud je nainstalován v uživatelském kontextu, bude instalace systému přepsána. Pokud je nainstalovaný v kontextu systému, nahlásí se úspěch instalace. Automatické aktualizace Microsoft Edge jsou navíc ve výchozím nastavení **zapnuté** .
 
 > [!NOTE]
 > Pro macOS je k dispozici také Microsoft Edge *verze 77 a novější* .
 > 
 > Nemůžete použít integrované nasazení aplikace Microsoft Edge pro počítače připojení k síti na pracovišti. Integrované nasazení aplikací vyžaduje rozšíření pro správu Intune, které existuje jenom pro zařízení připojená k AAD. Verzi Microsoft Edge *77 a novější* můžete nasadit pomocí souboru *. msi* nahraného do **aplikací**. Přečtěte si téma [Přidání obchodní aplikace pro Windows do Microsoft Intune](~/apps/lob-apps-windows.md).
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Požadavky
 - Vyžaduje se Windows 10 RS2 a vyšší.
 - Všechny předinstalované verze Microsoft Edge *verze 77 a novější* pro všechny kanály v uživatelském kontextu budou přepsány s hranou nainstalovanými v kontextu systému.
 
@@ -92,6 +92,28 @@ Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřazov
 
 > [!NOTE]
 > Pokud zrušíte přiřazení Microsoft Edge, v tuto chvíli zůstane v zařízení.
+
+## <a name="uninstall-the-app"></a>Odinstalace aplikace
+
+Pokud potřebujete odinstalovat Microsoft Edge ze zařízení uživatele, použijte následující postup.
+
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **aplikace** > **všechny aplikace** > **přiřazení** > aplikace *Microsoft Edge* > **Přidat skupinu**.
+3. V podokně **Přidat skupinu** vyberte **odinstalovat**.
+
+    > [!NOTE]
+    > Aplikace se odinstaluje ze zařízení ve vybraných skupinách, pokud Intune předtím instaloval aplikaci do zařízení prostřednictvím **dostupného pro zaregistrovaná zařízení** nebo **požadované** přiřazení pomocí stejného nasazení.
+4. Vyberte možnost **zahrnuté skupiny** a vyberte skupiny uživatelů, na které se vztahuje přiřazení této aplikace.
+5. Vyberte skupiny, u kterých chcete použít přiřazení odinstalace.
+6. V podokně **Vybrat skupiny** klikněte na **Vybrat** .
+7. Nastavte přiřazení kliknutím na **OK** v podokně **přiřazení** .
+8. Pokud se rozhodnete některé skupiny uživatelů vyloučit, aby nebyly přiřazením aplikace ovlivněné, klikněte na **Vyloučit skupiny**.
+9. Pokud jste se rozhodli některé skupiny vyloučit, ve **Vybrat skupiny** zvolte **Vybrat**.
+10. V podokně **Přidat skupinu** vyberte **OK** .
+11. V podokně **přiřazení** aplikace vyberte **Uložit** .
+
+> [!IMPORTANT]
+> Aby se aplikace úspěšně odinstalovala, nezapomeňte odebrat členy nebo přiřazení skupiny pro instalaci, než je přiřadíte k odinstalování. Pokud je skupina přiřazena k instalaci aplikace i k odinstalaci aplikace, aplikace zůstane a nebude odebrána.
 
 ## <a name="troubleshooting"></a>Odstraňování potíží
 **Microsoft Edge verze 77 a novější pro Windows 10:**<br>

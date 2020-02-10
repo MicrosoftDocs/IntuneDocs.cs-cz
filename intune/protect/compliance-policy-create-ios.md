@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 02/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b83b764af415349b287df2a09f9b4c355734c28
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: e9bcfed67eda96bb4d79317bcc69d21a5f8197bc
+ms.sourcegitcommit: 2b905913840d4133a7964fe4f54a58ea6e421e12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72810232"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074627"
 ---
 # <a name="ios-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>nastavení iOS k označení zařízení jako kompatibilních nebo nekompatibilních s Intune
 
@@ -39,7 +39,7 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 
 [Vytvořte zásadu dodržování předpisů](create-compliance-policy.md#create-the-policy). V případě **platformy**vyberte **iOS/iPadOS**.
 
-## <a name="email"></a>E-mailu
+## <a name="email"></a>E-mail
 
 - **Vyžadovat, aby mobilní zařízení měla spravovaný e-mailový profil**:  
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
@@ -69,10 +69,10 @@ Podrobnosti o e-mailových profilech najdete v tématu [Konfigurace přístupu k
 
 ### <a name="operating-system-version"></a>Verze operačního systému  
 
-- **Minimální požadovaný operační systém** *(iOS 8,0 a novější)* :  
+- **Minimální verze operačního systému** *(iOS 8,0 a novější)* :  
   Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, nahlásí se jako nevyhovující. Zobrazí se odkaz s informacemi, jak upgradovat. Koncový uživatel si může upgradovat svoje zařízení. Pak mají přístup k prostředkům organizace.
 
-- **Maximální povolená verze operačního systému** *(iOS 8,0 a novější)* :  
+- **Maximální verze operačního systému** *(iOS 8,0 a novější)* :  
   Pokud zařízení používá verzi operačního systému, která je novější než verze v pravidle, bude přístup k prostředkům organizace blokovaný. Koncovému uživateli se zobrazí výzva, aby kontaktoval správce IT. Zařízení nemá přístup k prostředkům organizace, dokud se nezmění pravidlo, které povoluje verzi operačního systému.
 
 - **Minimální verze buildu operačního systému** *(iOS 8,0 a novější)* :  
