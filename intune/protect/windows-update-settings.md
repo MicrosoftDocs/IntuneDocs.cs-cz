@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f3359bc5544b3a353271ea17083c8c3acb49742
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 06982bdf0aff1870f1a759f68bc6cdd48227a3cf
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72584472"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124992"
 ---
 # <a name="windows-update-settings-for-intune"></a>Nastavení služby Windows Update pro Intune  
 
@@ -28,7 +28,7 @@ Prohlédněte si nastavení aktualizace Windows 10, která můžete [Konfigurova
 
 Když konfigurujete nastavení pro aktualizační kanály Windows 10 v Intune, konfigurujete nastavení web Windows Update. Pokud má nastavení Windows Update závislost na verzi Windows 10, zaznamená se závislost na verzi v podrobnostech nastavení.  
 
-## <a name="update-settings"></a>Aktualizace nastavení  
+## <a name="update-settings"></a>Aktualizovat nastavení  
 
 Nastavení aktualizace řídí, co se bude stahovat a kdy se zařízení stáhne. Další informace o chování jednotlivých nastaveních najdete v referenční dokumentaci k systému Windows.  
 
@@ -186,7 +186,7 @@ Nastavení uživatelského prostředí řídí činnost koncového uživatele p�
   **Výchozí**: Nenakonfigurováno  
   Web Windows Update CSP: [Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
   
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Požadováno** – vyžaduje, aby uživatel schválil restart zařízení mimo pracovní dobu.  
    
 - **Připomenout uživatele před vyžadováním automatického restartování s připomenutím přeskočit (hodiny)**  
@@ -212,7 +212,7 @@ Nastavení uživatelského prostředí řídí činnost koncového uživatele p�
   Určete, jakou úroveň oznámení web Windows Update uživatelé uvidí. Toto nastavení neurčuje, jak a kdy se aktualizace stahují a instalují.  
 
   Podporované možnosti:
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Použít výchozí oznámení web Windows Update**
   - **Vypnout všechna oznámení s výjimkou upozornění na restartování**
   - **Vypnout všechna oznámení, včetně upozornění na restartování**  
@@ -222,7 +222,7 @@ Nastavení uživatelského prostředí řídí činnost koncového uživatele p�
  
   Umožňuje uživateli použít nastavení termínu.  
 
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
   Pokud je nastaveno na hodnotu *povoleno*, můžete pro termíny nakonfigurovat následující nastavení:
@@ -255,4 +255,4 @@ Nastavení uživatelského prostředí řídí činnost koncového uživatele p�
 
 Optimalizace doručení již není konfigurována jako součást aktualizačního kanálu Windows 10 v části aktualizace softwaru. Optimalizace doručování se teď nastavuje prostřednictvím konfigurace zařízení. Předchozí konfigurace ale zůstanou v konzole k dispozici. Tyto předchozí konfigurace můžete odebrat tak, že je upravíte, aby *nebyly nakonfigurované*, ale nelze je jinak upravovat. 
 
-Aby nedocházelo ke konfliktům mezi novou a starou zásadou, přečtěte si téma [Přesun z existujících aktualizačních kanálů na optimalizaci doručování](../configuration/delivery-optimization-windows.md#move-existing-update-rings-to-delivery-optimization) a přesunutí nastavení do profilu Optimalizace doručení.
+Aby nedocházelo ke konfliktům mezi novou a starou zásadou, přečtěte si téma [Odebrání optimalizace doručování z aktualizačních kanálů Windows 10](../configuration/delivery-optimization-windows.md#remove-delivery-optimization-from-windows-10-update-rings) a přesunutí nastavení do profilu Optimalizace doručení.

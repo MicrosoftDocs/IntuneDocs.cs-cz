@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 02/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,25 +15,22 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: 44078f61e4f1939b1f0b15b3dde5ac54938ffbc3
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9fb4aab6b02c6ad6a5d2f18ca9d15beafc12d58a
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059965"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124805"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Nastavení Optimalizace doručení v Microsoft Intune
 
-S Intune můžete použít nastavení optimalizace doručování pro zařízení s Windows 10 a snížit tak spotřebu šířky pásma, když tato zařízení stahují aplikace a aktualizace. Optimalizace doručování se konfiguruje jako součást vašich profilů konfigurace zařízení.  
+S Intune můžete použít nastavení optimalizace doručování pro zařízení s Windows 10 a snížit tak spotřebu šířky pásma, když tato zařízení stahují aplikace a aktualizace. Nakonfigurujte optimalizace doručování jako součást vašich profilů konfigurace zařízení.  
 
 Tento článek popisuje, jak nakonfigurovat nastavení Optimalizace doručení v rámci profilu konfigurace zařízení. Po vytvoření profilu ho přiřadíte nebo nasadíte do zařízení s Windows 10. 
 
 Seznam nastavení Optimalizace doručení, která Intune podporuje, najdete v tématu [nastavení Optimalizace doručení pro Intune](../delivery-optimization-settings.md).  
 
 Další informace o optimalizaci doručení ve Windows 10 najdete v tématu [aktualizace pro optimalizaci doručení](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) v dokumentaci k Windows.  
-
-> [!NOTE]
-> **Aktualizace softwaru – aktualizační kanály pro Windows 10** se nahrazují nastavením **Optimalizace doručení** . Existující aktualizační kanály můžete změnit tak, aby používaly nastavení **Optimalizace doručení** . [Přesunout existující aktualizační kanály do Optimalizace doručení](#move-existing-update-rings-to-delivery-optimization) (v tomto článku)
 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
@@ -54,11 +51,16 @@ Další informace o optimalizaci doručení ve Windows 10 najdete v tématu [akt
 
 Profil se vytvoří a zobrazí se v seznamu. Dále [Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).
 
-## <a name="move-existing-update-rings-to-delivery-optimization"></a>Přesunout existující aktualizační kanály do Optimalizace doručení
+<!-- ## Move existing update rings to delivery optimization
 
-Nastavení **Optimalizace doručení** nahrazuje **aktualizace softwaru – aktualizační kanály Windows 10**. Vaše existující aktualizační kanály můžete snadno změnit tak, aby používaly nastavení **optimalizace doručování** . Pokud chcete zachovat stejné nastavení při vytváření profilu optimalizace doručování, použijte stejný *režim stahování Optimalizace doručení* a pak nastavte stejné nastavení, jako jste už používali. Můžete ale zvolit překonfigurování nastavení Optimalizace doručení, aby bylo možné využít celé spektrum nastavení, které může profil Optimalizace doručení spravovat.
+**Delivery optimization** settings replace **Software updates – Windows 10 Update Rings**. Your existing update rings can be easily changed to use the **Delivery optimization** settings. To maintain the same settings when you create a delivery optimization profile, use the same *Delivery optimization download mode* and then set the same settings as you already use. However, you can choose to reconfigure delivery optimization settings to take advantage of the full range of addition settings that the Delivery Optimization profile can manage. 
+-->
 
-1. Vytvořit konfigurační profil Optimalizace doručení:
+## <a name="remove-delivery-optimization-from-windows-10-update-rings"></a>Odebrat optimalizaci doručování z aktualizačních kanálů Windows 10
+
+Optimalizace doručení byla dříve nakonfigurována jako součást přenosů aktualizací softwaru. Od února 2019 se nastavení Optimalizace doručení nakonfigurují jako součást profilu konfigurace zařízení s optimalizací doručení, což zahrnuje další nastavení, která mají vliv na více než doručování aktualizací softwaru do zařízení. Pokud jste to ještě neudělali, odeberte nastavení optimalizace doručování z aktualizačních kanálů, a to tak, že ho nastavíte na *není nakonfigurované*, a pak pomocí profilu optimalizace doručování spravujte větší rozsah dostupných možností.
+
+1. Vytvořit konfigurační profil zařízení pro optimalizaci doručení:
 
     1. V centru pro správu Microsoft Endpoint Manageru vyberte **zařízení** > **konfigurační profily** > **vytvořit profil**.
     2. Zadejte následující vlastnosti:
@@ -68,7 +70,7 @@ Nastavení **Optimalizace doručení** nahrazuje **aktualizace softwaru – aktu
         - **Platforma**: vyberte **Windows 10 a novější**.
         - **Typ profilu**: vyberte **Optimalizace doručení**.
         - **Nastavení**: **režim stahování pro optimalizaci doručení**vyberte stejný režim, který je používán existujícím kanálem aktualizace softwaru, pokud nechcete změnit nastavení, která se vztahují na vaše zařízení. Možnosti:
-            - **Není nakonfigurováno**
+            - **Nenakonfigurované**
             - **Jenom HTTP bez partnerských vztahů**
             - **HTTP se provedlo při vytváření partnerských vztahů za stejným NAT.**
             - **HTTP Blend s partnerským vztahem přes soukromou skupinu**

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 957e2b8065662af1b0f1a28108a740ef253a3b3e
-ms.sourcegitcommit: 2b905913840d4133a7964fe4f54a58ea6e421e12
+ms.openlocfilehash: 3ae5a7508f27dbf15a58ba3386e744bb63bf102b
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074644"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125009"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune
 
@@ -293,7 +293,19 @@ Můžete nakonfigurovat, jestli mají být odkazy s omezeným přístupem otevř
 
 |    Klíč    |    Hodnota    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **True** umožňuje, aby Microsoft Edge přešl uživatele do svého osobního kontextu a otevřel Blokované weby.<p>**Blok** zabraňuje uživatelům, kteří přecházejí z přechodu na Microsoft Edge. Uživatelům se zobrazí zpráva s informacemi o tom, že lokalita, ke které se pokouší získat přístup, je blokovaná.    |
+
+## <a name="disable-microsoft-edge-prompt-to-save-passwords"></a>Vypnutí výzvy Microsoft Edge k uložení hesel
+
+|    Klíč    |    Hodnota    |
+|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlock`    |    **Hodnota true** způsobí, že se odkazy na přímé otevření přímo v procházení InPrivate.<p>**Hodnota false** (výchozí) zobrazí uživatelům možnost otevření omezeného odkazu s možností procházení InPrivate nebo se svým osobním účtem (MSA).    |
+
+Ve výchozím nastavení nabízí Microsoft Edge na iOS k ukládání hesel uživatelů do řetězce klíčů. Pokud chcete zakázat tuto výzvu pro vaši organizaci, nakonfigurujte následující nastavení:
+
+|    Klíč    |    Hodnota    |
+|-----------|-------------|
+|     ' com. Microsoft. Intune. mam. managedbrowser. disableFeatures '    |    **heslo** zakáže výzvu pro uložení hesel.    |
 
 ## <a name="use-microsoft-edge-on-ios-to-access-managed-app-logs"></a>Přístup k protokolům spravovaných aplikací pomocí Microsoft Edge v iOS 
 

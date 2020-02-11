@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 02/07/2020
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: ced722fd671826e828b4dd79956a7dad1010bd84
-ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
+ms.openlocfilehash: 003141402c1d068775caee6ca4405efc5ca7552f
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75856747"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124856"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Registrace zařízení pomocí pracovního profilu Androidu
 
@@ -45,15 +45,12 @@ Přečtěte si o tom, [co se stane, když si vytvoříte pracovní profil](what-
 3. Projděte si informace o tom, co vaše organizace uvidí nebo neuvidí. Pak klepněte na **pokračovat**. 
 
     ![Příklad obrázku Portál společnosti, záleží na obrazovce ochrany osobních údajů a zvýrazníme tlačítko pokračovat.](./media/android-privacy-screen-1911.png)  
-4. Přečtěte si, co můžete očekávat v nadcházejících krocích. Pak klepněte na **Další**.  
 
-    ![Příklad obrázku Portál společnosti, co je další obrazovka a zvýrazní se tlačítko Další.](./media/android-wp-04-1908.png)  
-
-5. Přečtěte si Google terms for the Work Profile. Pak klepněte na **přijmout & pokračovat**. Vzhled této obrazovky se bude lišit v závislosti na verzi Androidu vašeho zařízení. 
+4. Přečtěte si Google terms for the Work Profile. Pak klepněte na **přijmout &AMP; pokračovat**. Vzhled této obrazovky se bude lišit v závislosti na verzi Androidu vašeho zařízení. 
 
     ![Snímek obrazovky s podmínkami pracovního profilu Google](./media/android-wp-05-1908.png)  
 
-6. Počkejte, než bude váš pracovní profil nastaven.  
+5. Počkejte, než bude váš pracovní profil nastaven.  
 
     ![Snímek obrazovky s nastavením pracovního profilu](./media/android-wp-05a-1908.png)  
 
@@ -61,20 +58,20 @@ Přečtěte si o tom, [co se stane, když si vytvoříte pracovní profil](what-
 
     ![Snímek obrazovky s příznakem "máte v polovině" obrazovku se zprávou o přesměrování.](./media/android-wp-05b-1908.png)  
 
-7. Na obrazovce **nastavení firemního přístupu** ověřte, že je váš pracovní profil vytvořený. Pak klepněte na **pokračovat**.  
+6. Na obrazovce **nastavení firemního přístupu** ověřte, že je váš pracovní profil vytvořený. Pak klepněte na **pokračovat**.  
 
     ![Snímek obrazovky nastavení přístupu společnosti zobrazující pracovní profil](./media/work-profile-complete-1911.png)  
 
-8. Ověřte, že je váš pracovní profil aktivní. Pak klepněte na **pokračovat**. 
+7. Ověřte, že je váš pracovní profil aktivní. Pak klepněte na **pokračovat**. 
 
     ![Snímek obrazovky nastavení přístupu společnosti zobrazující pracovní profil je aktivní.](./media/work-profile-active-1911.png)  
 
-9. Vaše organizace může vyžadovat, abyste aktualizovali nastavení zařízení. Klepnutím na **vyřešit** upravte nastavení. Po dokončení aktualizace nastavení klepněte na **pokračovat**.    
+8. Vaše organizace může vyžadovat, abyste aktualizovali nastavení zařízení. Klepnutím na **vyřešit** upravte nastavení. Po dokončení aktualizace nastavení klepněte na **pokračovat**.    
 
     ![Příklad obrázku Portál společnosti, aktualizace obrazovky nastavení zařízení, zvýraznění tlačítek vyřešit a pokračovat.](./media/resolve-settings-1911.png) 
 
 
-10. Po dokončení instalace klepněte na **Hotovo**.  
+9. Po dokončení instalace klepněte na **Hotovo**.  
 
     ![Příklad obrázku Portál společnosti, obrazovka nastavení firemního přístupu, zobrazení dokončeného nastavení a zvýraznění tlačítka Hotovo.](./media/work-profile-done-1911.png)  
 

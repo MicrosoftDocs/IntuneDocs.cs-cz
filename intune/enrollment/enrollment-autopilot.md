@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9da7acfc34dbd25902fc6fb9617ba395216a9b3
-ms.sourcegitcommit: 24487f078349795922dc497c952e8358cf767a1a
+ms.openlocfilehash: 4f97c4c56073044e79b5251dc83c54decb5c9c55
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76977797"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124839"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows v Intune pomocí Windows Autopilot  
 Windows Autopilot usnadňuje registraci zařízení v Intune. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -34,7 +34,7 @@ Existují čtyři typy nasazení autopilotu:
 - [Režim řízený uživatelem](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) pro tradiční uživatele. 
 
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Požadavky
 - [Předplatné Intune](../fundamentals/licenses.md)
 - [Povolená automatická registrace pro Windows](windows-enroll.md#enable-windows-10-automatic-enrollment)
 - [Předplatné Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
@@ -69,7 +69,7 @@ Zařízení Windows Autopilot můžete přidat importováním souboru CSV s jeji
 
 5. Aktualizováním zobrazení zobrazte nová zařízení.
 
-## <a name="create-an-autopilot-device-group"></a>Vytvoření skupiny zařízení Autopilot
+## <a name="create-an-autopilot-device-group"></a>Vytvořit skupinu zařízení Autopilot
 
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **skupiny** > **Nová skupina**.
 2. V okně **Skupina**:
@@ -86,7 +86,7 @@ Zařízení Windows Autopilot můžete přidat importováním souboru CSV s jeji
     Po přidání kódu do pole **Pokročilé pravidlo** zvolte **Uložit**.
 5. Zvolte **Vytvořit**.  
 
-## <a name="create-an-autopilot-deployment-profile"></a>Vytvoření profilu nasazení Autopilotu
+## <a name="create-an-autopilot-deployment-profile"></a>Vytvořit profil nasazení Autopilotu
 Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem. Můžete vytvořit až 350 profilů na každého tenanta.
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **Windows** > **profily nasazení profily** > **vytvořit profil**.
 2. Na stránce **základy** zadejte **název** a volitelný **Popis**.
@@ -101,6 +101,9 @@ Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem. 
 
     ![Snímek obrazovky se stránkou OOBE](./media/enrollment-autopilot/create-profile-outofbox.png)
 
+   > [!NOTE]
+   > Vybrané režimy nasazení aktuálně nepodporují možnosti, které se zobrazují šedě nebo jsou vystínované.
+
 6. V poli **Připojit k Azure AD jako** zvolte **Připojeno k Azure AD**.
 7. Nakonfigurujte tyhle možnosti:
     - **Licenční smlouva s koncovým uživatelem (EULA)** : (Windows 10 verze 1709 nebo novější) Vyberte, jestli se má uživatelům zobrazit EULA.
@@ -113,7 +116,7 @@ Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem. 
     - **Povolit White šetrnější OOBE** (vyžaduje Windows 10 verze 1903 nebo novější; [další fyzické požadavky](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove#prerequisites)): Pokud chcete povolit podporu bílé šetrnější, vyberte **Ano** .
     - **Použít šablonu názvu zařízení** (vyžaduje Windows 10, verze 1809 nebo novější a typ připojení Azure AD): Pokud chcete vytvořit šablonu, která se použije při pojmenování zařízení během registrace, klikněte na **Ano** . Názvy musí být maximálně 15 znaků dlouhé a mohou obsahovat písmena, číslice a pomlčky. Nemohou být ale tvořené jen číslicemi. Pomocí [makra %SERIAL%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) můžete přidat sériové číslo specifické pro určitý hardware. Nebo můžete použít [makro %RAND:x%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp), které přidá náhodný řetězec číslic (x značí počet přidaných číslic). V [profilu připojení k doméně](windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile)můžete zadat jenom předběžnou opravu pro hybridní zařízení. 
     - **Jazyk (oblast)** \*: Zvolte jazyk, který chcete použít pro dané zařízení. Tato možnost je k dispozici, jen pokud jste si pro **Režim nasazení** zvolili **Nasazení sebou samým**.
-    - **Automaticky nakonfigurovat klávesnici**\*: Pokud **jazyk (oblast)** je vybraná, zvolte **Ano** přeskočit stránka pro výběr klávesnice. Tato možnost je k dispozici, jen pokud jste si pro **Režim nasazení** zvolili **Nasazení sebou samým**.
+    - **Automaticky konfigurovat\*klávesnice** : Pokud je vybraná možnost **jazyk (oblast)** , můžete stránku výběr klávesnice přeskočit kliknutím na **tlačítko Ano** . Tato možnost je k dispozici, jen pokud jste si pro **Režim nasazení** zvolili **Nasazení sebou samým**.
 8. Vyberte **Další**.
 9. Na stránce **značky oboru** můžete volitelně přidat značky oboru, které chcete použít pro tento profil. Další informace o značkách oboru najdete v tématu [použití značek řízení přístupu na základě role a rozsahu pro distribuci IT](../fundamentals/scope-tags.md).
 10. Vyberte **Další**.

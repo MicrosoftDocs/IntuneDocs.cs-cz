@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2c6463ddce7d04168e1929414faf441ae415837
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 581d88e49391bc874625e9c84318c039706b0c1b
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74563843"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124822"
 ---
 # <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>Připojte svůj účet Intune k vašemu spravovanému účtu Google Play
 
@@ -69,4 +69,4 @@ Můžete vypnout registraci a správu Androidu Enterprise. Abyste to mohli uděl
 
 ## <a name="next-steps"></a>Další kroky
 
-Po připojení ke spravovanému účtu Google Play můžete [nastavit zařízení s pracovním profilem Android Enterprise](android-work-profile-enroll.md), [nastavit vyhrazená zařízení](android-kiosk-enroll.md) s Androidem Enterprise a [nastavit zařízení s plnou správou pro Android Enterprise](android-kiosk-enroll.md) .
+Po připojení ke spravovanému účtu Google Play můžete [nastavit zařízení s pracovním profilem Android Enterprise](android-work-profile-enroll.md), [nastavit vyhrazená zařízení](android-kiosk-enroll.md) s Androidem Enterprise a [nastavit zařízení s plnou správou pro Android Enterprise](android-fully-managed-enroll.md) .
