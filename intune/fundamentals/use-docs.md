@@ -11,12 +11,12 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42e16be44dba539007967dd921da4c8d4f095ec4
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 607e1136fd3ab5661a2b054410d6fc7fce94994d
+ms.sourcegitcommit: 1aaff35fddb3d06458d739968d28971fed0bb2ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72504821"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77155339"
 ---
 # <a name="using-the-intune-docs"></a>Používání dokumentace Intune
 
@@ -82,11 +82,11 @@ Dokumentace ke službě Intune, jako je většina obsahu v docs.microsoft.com, j
 
 2. Chcete-li upravit zdrojový soubor, klikněte na ikonu tužky.  
 
-3. Proveďte změny ve zdroji Markdownu. Další informace najdete v tématu [použití Markdownu pro psaní dokumentů](https://docs.microsoft.com/contribute/how-to-write-use-markdown).  
+3. Proveďte změny ve zdroji Markdownu. Další informace najdete v tématu [použití Markdownu pro psaní dokumentů](https://docs.microsoft.com/contribute/contribute-how-to-write-use-markdown).  
 
 4. V části navrhnout změnu souboru zadejte komentář veřejné potvrzení popisující, *co* jste změnili. Pak klikněte na **navrhnout změnu souboru**.  
 
-5. Posuňte se dolů a ověřte změny, které jste provedli. Kliknutím na **vytvořit žádost o získání dat** otevřete formulář. Popište, *Proč* jste tuto změnu provedli. Klikněte na **Create pull request** (Vytvořit žádost o přijetí změn).
+5. Posuňte se dolů a ověřte změny, které jste provedli. Kliknutím na **vytvořit žádost o získání dat** otevřete formulář. Popište, *Proč* jste tuto změnu provedli. Klikněte na **vytvořit žádost o získání dat**.
 
 Tým pro psaní obdrží vaši žádost o přijetí změn, přiřadí položku příslušnému zapisovači, zkontroluje text a provede v něm rychlé úpravy a schválí a sloučí změny, nebo vám poskytne další informace o této aktualizaci.  
 
