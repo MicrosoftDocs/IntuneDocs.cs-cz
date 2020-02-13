@@ -7,14 +7,29 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 6064fb657454106a8a7213e0bbbcecdcef765857
-ms.sourcegitcommit: c7c6be3833d9a63d43f31d598b555b49b33cf5cb
+ms.openlocfilehash: 4e93cb7f2d503704251b16d1af03924358020d4e
+ms.sourcegitcommit: 1aaff35fddb3d06458d739968d28971fed0bb2ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76966350"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77156095"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune.
+
+### <a name="plan-for-change-change-in-experience-when-enrolling-android-enterprise-dedicated-devices-in-intune--6114580--"></a>Plánování změn: Změna prostředí při registraci vyhrazených zařízení s Androidem Enterprise v Intune<!--6114580-->
+Sdíleli jsme se v listopadu vydané verzi, kterou přidáváme podporu pro nasazení certifikátu SCEP na vyhrazená zařízení s Androidem Enterprise, aby bylo možné povolit přístup k profilům Wi-Fi pomocí certifikátů. Tato změna se týká některých drobných změn toků registrace pro vyhrazená podniková zařízení s Androidem. S nadcházející aktualizací Service Update nebo 2003 jsou k dispozici několik dalších změn, o kterých bychom rádi vědomi.
+
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+Pokud ve svém prostředí spravujete vyhrazená zařízení s Androidem Enterprise, začnete v březnu zobrazovat některé změny.
+- Stávající zařízení s Androidem zaregistrovaná před vydáním 22. listopadu 2019 nebo aktualizace služby 1911: na těchto zařízeních je nainstalovaná aplikace Microsoft Intune. Až se změny back-endu zavádějí do služby Intune v březnu, začnou se používat certifikáty SCEP nasazené do zařízení a přidružená k profilům sítě Wi-Fi.
+- Pro zařízení, která byla zaregistrována po 22. listopadu 2019 a před tím, než se tato změna vrátí do března: na těchto zařízeních je nainstalovaná aplikace Microsoft Intune. Certifikáty SCEP nasazené do zařízení a přidružených k profilům sítě Wi-Fi budou nadále platit.
+- Nové registrace vyhrazených zařízení s Androidem Enterprise po provedení změny v březnu: koncovým uživatelům se během registrace zobrazí jiná sada kroků na zařízeních. Registrace pořád spustí způsob, jakým v současnosti funguje (s identifikátorem QR, NFC, nulovým dotykem nebo identifikátorem zařízení), ale neproběhne žádný povinný krok instalace aplikace. Místo toho se aplikace Microsoft Intune automaticky nainstaluje na zařízení. Kromě toho nebudou muset koncoví uživatelé v průběhu tohoto toku používat možnost Povolit agenta Intune. Certifikáty SCEP přidružené k profilům Wi-Fi můžou být nasazené na tato zařízení.
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
+Můžete si aktualizovat pokyny pro koncové uživatele a dát vaší technickému pracovníkovi informace o této změně. Naši stránku novinky aktualizujeme a upozorníme vás centrem zpráv, když se tato změna začne zavádět.
+
+#### <a name="additional-information"></a>Další informace
+[Podpora certifikátů SCEP na vyhrazených zařízeních s Androidem Enterprise](https://aka.ms/Dedicated_devices_enrollment)
 
 ### <a name="updated-support-statement-for-adobe-acrobat-reader-for-intune-mobile-app--5746776--"></a>Aktualizovaný příkaz Support pro mobilní aplikaci Adobe Acrobat Reader pro Intune<!--5746776-->
 V MC188653 jsme na konci srpna sdíleli, že mobilní aplikace Adobe Acrobat Reader pro Intune dosáhla konce životnosti 1. prosince 2019 a že Adobe plánuje v rámci své hlavní aplikace Acrobat Readeru podporovat zásady ochrany aplikací v Intune. Od té doby jsme dostali zpětnou vazbu od zákazníků, kterou jsme potřebovali k tomu, aby bylo možné pokračovat ve povolování IT správců, a koncovým uživatelům začít používat aplikaci Adobe Acrobat Reader pro Intune. Vzhledem k vysokému využití aplikace Adobe Acrobat Reader pro Intune na zařízeních koncových uživatelů a jejich důležitosti v podnikových scénářích chceme zajistit, aby všechny zkušenosti splňovaly požadavky vaší organizace na ochranu aplikací. 
