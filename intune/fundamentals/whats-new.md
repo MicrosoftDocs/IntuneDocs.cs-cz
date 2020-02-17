@@ -20,7 +20,7 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: cd2efc759f4edf2a2ae62c98cb04af61ff20088c
 ms.sourcegitcommit: 576b9528629981e87e775fac146932e502f07a74
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 02/14/2020
 ms.locfileid: "77258109"
@@ -483,6 +483,6 @@ Instance Intune, které jsou hostované na *Microsoft Azure Government* , teď m
 ## <a name="whats-new-archive"></a>Archiv co je nového
 V předchozích měsících se podívejte do [archivu co je nového](whats-new-archive.md).
 
-## <a name="notices"></a>Oznámení
+## <a name="notices"></a>Sdělení
 
 [!INCLUDE [Intune notices](../includes/intune-notices.md)]
