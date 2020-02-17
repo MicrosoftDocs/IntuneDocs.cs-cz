@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9142ea3f7728fd24883a311bbf967a7a59dbf457
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 6d35d7470508b610f850ca7f9f394e0d26bec677
+ms.sourcegitcommit: 576b9528629981e87e775fac146932e502f07a74
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207243"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258092"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
@@ -33,7 +33,7 @@ Microsoft Intune zahrnuje vestavěná nastavení pro používání certifikátů
 Informace o použití importovaných certifikátů PKCS najdete v tématu [importované certifikáty PFX](certificates-imported-pfx-configure.md).
 
 
-## <a name="requirements"></a>požadavky
+## <a name="requirements"></a>Požadavky
 
 Pokud chcete používat certifikáty PKCS s Intune, musíte mít následující infrastrukturu:
 
@@ -76,7 +76,7 @@ Pokud chcete používat certifikáty PKCS s Intune, musíte mít následující 
   - Nainstalujte na server konektor PFX Certificate Connector pro Microsoft Intune.  
   - Chcete-li automaticky přijímat důležité aktualizace, zajistěte, aby byly brány firewall otevřené, aby konektor mohl kontaktovat **AutoUpdate.msappproxy.NET** na portu **443**.   
 
-  Další informace o koncových bodech sítě, které Intune a přístup k konektoru získáte, najdete v tématu [koncové body sítě pro Microsoft Intune](../fundamentals/intune-endpoints.md).
+  Další informace najdete v tématu [koncové body sítě pro Microsoft Intune](../fundamentals/intune-endpoints.md)a [požadavky na konfiguraci sítě a šířku pásma Intune](../fundamentals/network-bandwidth-use.md).
 
 - **Windows Server**:  
   Používáte Windows Server k hostování:
@@ -144,7 +144,7 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte možnost **Správa tenanta** > **konektory a tokeny** > **konektory certifikátů** > **+ Přidat**.
+2. Vyberte možnost **Správa tenanta** > **konektory a tokeny** > **konektory certifikátů** >  **+ Přidat**.
 
 3. Klikněte na *Stáhnout software Certificate Connector* pro konektor pro PKCS #12 a uložte soubor do umístění, ke kterému máte přístup ze serveru, na který budete konektor instalovat.
 
@@ -157,7 +157,7 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
     3. Ve výchozím nastavení služba konektoru běží pod místním systémovým účtem. Pokud pro přístup k internetu vyžaduje proxy, ověřte, že účet místní služby má na serveru přístup k nastavení proxy serveru.
 
 5. Microsoft Intune Certificate Connector otevře kartu **registrace** . Pokud chcete povolit připojení k Intune, **přihlaste**se a zadejte účet s globálním oprávněním správce.
-6. Na kartě **Rozšířené** doporučujeme ponechat vybranou možnost **Použít účet SYSTEM tohoto počítače (výchozí)**.
+6. Na kartě **Rozšířené** doporučujeme ponechat vybranou možnost **Použít účet SYSTEM tohoto počítače (výchozí)** .
 7. **Použít** > **Zavřít**
 8. Vraťte se na portál Intune ( **Konfigurace zařízení** >  > **certifikačních konektorů**pro**Intune** ). Po chvíli se zobrazí zelená značka zaškrtnutí a **stav připojení** je **aktivní**. Váš server konektoru teď může komunikovat s Intune.
 9. Pokud máte webový proxy server ve vašem síťovém prostředí, možná budete potřebovat další konfigurace, aby konektor mohl fungovat. Další informace najdete v tématu [práce se stávajícími místními proxy servery](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) v dokumentaci k Azure Active Directory.
@@ -204,16 +204,16 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
 
 4. Vyberte **Nastavení**a nakonfigurujte vlastnosti, které se vztahují na vybranou platformu:
    
-   |Nastavení     | Platforma     | Details   |
+   |Nastavení     | Platforma     | Podrobnosti   |
    |------------|------------|------------|
-   |**Prahová hodnota obnovení (%)**        |<ul><li>Vše         |Doporučuje se 20%  | 
-   |**Období platnosti certifikátu**  |<ul><li>Vše         |Pokud jste šablonu certifikátu nezměnili, může být tato možnost nastavená na jeden rok. |
+   |**Prahová hodnota obnovení (%)**        |<ul><li>Všechny         |Doporučuje se 20%  | 
+   |**Období platnosti certifikátu**  |<ul><li>Všechny         |Pokud jste šablonu certifikátu nezměnili, může být tato možnost nastavená na jeden rok. |
    |**Zprostředkovatel úložiště klíčů (KSP)**   |<ul><li>Windows 10  | V případě systému Windows vyberte místo, kam chcete uložit klíče na zařízení. |
-   |**Certifikační autorita**      |<ul><li>Vše         |Zobrazuje interní plně kvalifikovaný název domény (FQDN) vaší certifikační autority organizace.  |
-   |**Název certifikační autority** |<ul><li>Vše         |Zobrazuje název vaší certifikační autority organizace, například "certifikační autorita společnosti Contoso". |
+   |**Certifikační autorita**      |<ul><li>Všechny         |Zobrazuje interní plně kvalifikovaný název domény (FQDN) vaší certifikační autority organizace.  |
+   |**Název certifikační autority** |<ul><li>Všechny         |Zobrazuje název vaší certifikační autority organizace, například "certifikační autorita společnosti Contoso". |
    |**Typ certifikátu**             |<ul><li>Android Enterprise (*pracovní profil*)</li><li>iOS</li><li>macOS</li><li>Windows 10 a novější|Vyberte typ: <ul><li> Certifikáty **uživatelů** můžou v předmětu a síti SAN certifikátu obsahovat atributy uživatele i zařízení. </il><li>Certifikáty **zařízení** mohou obsahovat pouze atributy zařízení v předmětu a San certifikátu. Použijte zařízení pro scénáře, jako jsou například zařízení bez uživatele, jako jsou veřejné terminály nebo jiná sdílená zařízení.  <br><br> Tento výběr má vliv na formát názvu subjektu. |
-   |**Formát názvu subjektu**          |<ul><li>Vše         |U většiny platforem nastavte tuto možnost na **běžný název** , pokud není vyžadováno jinak.<br><br>U následujících platforem se formát názvu subjektu určuje podle typu certifikátu: <ul><li>Android Enterprise (*pracovní profil*)</li><li>iOS</li><li>macOS</li><li>Windows 10 a novější</li></ul>  <p> Další informace najdete v části [Formát názvu subjektu](#subject-name-format) dále v tomto článku. |
-   |**Alternativní název subjektu**     |<ul><li>Vše         |Pokud není vyžadováno jinak, nastavte tuto možnost na **hlavní název uživatele (UPN)** . |
+   |**Formát názvu subjektu**          |<ul><li>Všechny         |U většiny platforem nastavte tuto možnost na **běžný název** , pokud není vyžadováno jinak.<br><br>U následujících platforem se formát názvu subjektu určuje podle typu certifikátu: <ul><li>Android Enterprise (*pracovní profil*)</li><li>iOS</li><li>macOS</li><li>Windows 10 a novější</li></ul>  <p> Další informace najdete v části [Formát názvu subjektu](#subject-name-format) dále v tomto článku. |
+   |**Alternativní název subjektu**     |<ul><li>Všechny         |Pokud není vyžadováno jinak, nastavte tuto možnost na **hlavní název uživatele (UPN)** . |
    |**Rozšířené použití klíče**           |<ul><li> Správce zařízení s Androidem </li><li>Android Enterprise (*vlastník zařízení*, *pracovní profil*) </li><li>Windows 10 |Certifikáty obvykle vyžadují *ověření klienta* , aby se mohl uživatel nebo zařízení ověřit na serveru. |
    |**Povolí všem aplikacím přístup k privátnímu klíči.** |<ul><li>macOS  |Nastavením této vlastnosti **povolíte** aplikacím, které jsou nakonfigurované pro přidružené zařízení Mac, přístup k privátnímu klíči certifikátů PKCS. <br><br> Další informace o tomto nastavení najdete v tématu *AllowAllAppsAccess* v části referenční část certifikátu [konfiguračního profilu](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) v dokumentaci pro vývojáře Apple. |
    |**Kořenový certifikát**             |<ul><li>Správce zařízení s Androidem </li><li>Android Enterprise (*vlastník zařízení*, *pracovní profil*) |Vyberte profil certifikátu od kořenové certifikační autority, který byl dříve přiřazen. |
@@ -229,7 +229,7 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
 
 Když vytváříte profil certifikátu PKCS pro následující platformy, možnosti pro formát názvu subjektu závisí na zvoleném typu certifikátu. buď na **uživatele** , nebo na **zařízení**.  
 
-Platformu
+Platformy:
 
 - Android Enterprise (*pracovní profil*)
 - iOS
@@ -244,17 +244,17 @@ Platformu
 > - =
 
 - **Typ uživatelského certifikátu**  
-  Možnosti formátu pro *Formát názvu subjektu* zahrnují dvě proměnné: **běžný název (CN)** a **e-mail (e)**. **Běžný název (CN)** můžete nastavit na některou z těchto proměnných:
+  Možnosti formátu pro *Formát názvu subjektu* zahrnují dvě proměnné: **běžný název (CN)** a **e-mail (e)** . **Běžný název (CN)** můžete nastavit na některou z těchto proměnných:
 
-  - **CN = {{username}}**: hlavní název uživatele (UPN), například janedoe@contoso.com.
-  - **CN={{AAD_Device_ID}}**: ID přiřazené při registraci zařízení ve službě AD (Azure Active Directory). Toto ID se obvykle používá k ověření ve službě Azure AD.
-  - **CN = {{sériové}}**: jedinečné sériové číslo (SN) obvykle používané výrobcem k identifikaci zařízení.
-  - **CN = {{IMEINumber}}**: jedinečné číslo IMEI (International Mobile Equipment Identity), které se používá k identifikaci mobilního telefonu.
-  - **CN = {{OnPrem_Distinguished_Name}}**: sekvence relativních rozlišujících názvů oddělená čárkou, například *CN = Jana Karásek, OU = UserAccounts, DC = Corp, DC = contoso, DC = com*.
+  - **CN = {{username}}** : hlavní název uživatele (UPN), například janedoe@contoso.com.
+  - **CN={{AAD_Device_ID}}** : ID přiřazené při registraci zařízení ve službě AD (Azure Active Directory). Toto ID se obvykle používá k ověření ve službě Azure AD.
+  - **CN = {{sériové}}** : jedinečné sériové číslo (SN) obvykle používané výrobcem k identifikaci zařízení.
+  - **CN = {{IMEINumber}}** : jedinečné číslo IMEI (International Mobile Equipment Identity), které se používá k identifikaci mobilního telefonu.
+  - **CN = {{OnPrem_Distinguished_Name}}** : sekvence relativních rozlišujících názvů oddělená čárkou, například *CN = Jana Karásek, OU = UserAccounts, DC = Corp, DC = contoso, DC = com*.
 
     Pokud chcete použít proměnnou *{{OnPrem_Distinguished_Name}}* , proveďte synchronizaci atributu uživatele *onpremisesdistinguishedname* pomocí [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) do služby Azure AD.
 
-  - **CN = {{onPremisesSamAccountName}}**: Správci můžou synchronizovat atribut sAMAccountName ze služby Active Directory do Azure AD pomocí služby Azure AD Connect do atributu s názvem *onPremisesSamAccountName*. Intune může tuto proměnnou nahradit jako součást žádosti o vystavení certifikátu v předmětu certifikátu. Atribut samAccountName je přihlašovací jméno uživatele používané k podpoře klientů a serverů z předchozí verze Windows (Pre-Windows 2000). Formát přihlašovacího jména uživatele je: *DomainName\testUser*nebo pouze *testUser*.
+  - **CN = {{onPremisesSamAccountName}}** : Správci můžou synchronizovat atribut sAMAccountName ze služby Active Directory do Azure AD pomocí služby Azure AD Connect do atributu s názvem *onPremisesSamAccountName*. Intune může tuto proměnnou nahradit jako součást žádosti o vystavení certifikátu v předmětu certifikátu. Atribut samAccountName je přihlašovací jméno uživatele používané k podpoře klientů a serverů z předchozí verze Windows (Pre-Windows 2000). Formát přihlašovacího jména uživatele je: *DomainName\testUser*nebo pouze *testUser*.
 
     Pokud chcete použít proměnnou *{{onPremisesSamAccountName}}* , nezapomeňte synchronizovat atribut uživatele *onPremisesSamAccountName* pomocí [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) do Azure AD.
 
@@ -298,13 +298,13 @@ Aktualizace pro dvě konektory certifikátů jsou vydávány pravidelně. Když 
   Změny v této verzi:  
   - Opravili jsme problém, kdy se stávající certifikáty PFX budou dál zpracovávat, což způsobí, že konektor přestane zpracovávat nové požadavky. 
 
-### <a name="may-6-2019"></a>6. května 2019
+### <a name="may-6-2019"></a>6\. května 2019
 
 - **Konektor certifikátů PFX pro Microsoft Intune verze 6.1905.0.402**  
   Změny v této verzi:  
   - Interval dotazování konektoru se zkracuje z 5 minut na 30 sekund.
  
-### <a name="april-2-2019"></a>2. dubna 2019
+### <a name="april-2-2019"></a>2\. dubna 2019
 
 - **Intune Certificate Connector – verze 6.1904.1.0**  
   Změny v této verzi:  

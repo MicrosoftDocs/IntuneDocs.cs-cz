@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 469ee615cd9a9f1d3a7aee40ce764b8d8100fe69
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
+ms.openlocfilehash: 4db1a1a74c1a19f310aba0f1c10ed5d01869073f
+ms.sourcegitcommit: 576b9528629981e87e775fac146932e502f07a74
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912898"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258126"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurace a používání importovaných certifikátů PKCS pomocí Intune
 
@@ -32,7 +32,7 @@ Microsoft Intune podporuje použití importovaných certifikátů PKCS (Public K
 
 Další informace o použití S/MIME s Intune získáte [pomocí s/MIME k šifrování e-mailu](certificates-s-mime-encryption-sign.md).
 
-## <a name="requirements"></a>požadavky
+## <a name="requirements"></a>Požadavky
 
 K používání importovaných certifikátů PKCS s Intune budete potřebovat následující infrastrukturu:
 
@@ -44,7 +44,7 @@ K používání importovaných certifikátů PKCS s Intune budete potřebovat n�
 
   Tento konektor se může automaticky aktualizovat, jakmile budou k dispozici nové verze. Chcete-li použít možnost aktualizace, je nutné zajistit, aby byly brány firewall otevřené, aby konektor mohl kontaktovat **AutoUpdate.msappproxy.NET** na portu **443**.
 
-  Další informace o všech síťových koncových bodech, ke kterým konektor přistupuje, najdete v tématu [požadavky na konfiguraci sítě Intune a šířku pásma](../fundamentals/network-bandwidth-use.md).
+  Další informace najdete v tématu [koncové body sítě pro Microsoft Intune](../fundamentals/intune-endpoints.md)a [požadavky na konfiguraci sítě a šířku pásma Intune](../fundamentals/network-bandwidth-use.md).
 
 - **Windows Server**:
 
@@ -149,7 +149,7 @@ Následující postup používá rutiny prostředí PowerShell jako příklad im
 Vaše možnosti jsou:
 
 - Zamýšlený účel (skupiny certifikátů na základě značky):
-  - nepřiřazené
+  - nepřiřazeno
   - Šifrování smimeencryption
   - smimeSigning
 
@@ -196,7 +196,7 @@ Po importování certifikátů do Intune vytvořte profil **importovaného certi
 
 2. Vyberte **zařízení** > **konfigurační profil** > **vytvořit profil**.
 
-3. Zadejte tyto vlastnosti:
+3. Zadejte následující vlastnosti:
 
    - Zadejte **Název** profilu.
    - Volitelně můžete nastavit popis.
