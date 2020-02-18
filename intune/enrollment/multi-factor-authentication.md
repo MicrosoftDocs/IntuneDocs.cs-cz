@@ -17,12 +17,12 @@ ROBOTS: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db04b93deffd2476a97b952fd1c6942fa79e1f05
-ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
+ms.openlocfilehash: 14347d12888ff5ef61d4543409a08fbdeb371c89
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74955384"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415206"
 ---
 # <a name="require-multi-factor-authentication-for-intune-device-enrollments"></a>Vyžadování vícefaktorového ověřování pro registraci zařízení v Intune
 
@@ -36,7 +36,7 @@ Vícefaktorové ověřování funguje tak, že vyžaduje jakékoliv dvě nebo v�
 - Něco, co máte (důvěryhodné zařízení, které není lehké duplikovat, jako je telefon).
 - Něco, co je vaše (biometrika, třeba otisk prstu)
 
-Vícefaktorové ověřování se podporuje u zařízení se systémem iOS, Android, Windows 8.1 nebo novějším, Windows Phone 8.1 nebo novějším a Windows 10 Mobile nebo novějším.
+Vícefaktorové ověřování se podporuje pro zařízení s iOS/iPadOS, Androidem, Windows 8.1 nebo novějším, Windows Phone 8,1 nebo Windows 10 Mobile nebo novějším.
 
 Když je povolené, musí koncoví uživatelé při registraci zařízení zadat dvě formy přihlašovacích údajů.
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae3c2380aa27096be2490d2404858179ea9d222e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: b7861d26650aaf74ea9c58608c33e72495244575
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503177"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414230"
 ---
 # <a name="incomplete-user-enrollments-report"></a>Sestava nekompletních zápisů uživatelů
 
@@ -44,7 +44,7 @@ Pokud se uživatel rozhodne zastavit registraci a restartovat několikrát, zobr
 
 ## <a name="what-does-the-report-show"></a>Co tato sestava zobrazuje?
 
-Sestavy obsahují data pro zařízení s iOS a Androidem.
+Sestavy obsahují data pro zařízení s iOS/iPadOS a Androidem.
 
 Sestavy zobrazují data za poslední dva týdny, ale můžete nastavit filtr sestavy tak, aby zobrazovala libovolné období do 30 dnů v minulosti.
 
@@ -86,10 +86,10 @@ Následující tabulky obsahují seznam akcí uživatele, které se dotáže na 
 
 | Název akce | Obrazovka nebo tok | Platforma | Akce |
 | ---- |---- |---- |---- |
-| iOSProfileLaunch | Výzva k zobrazení konfiguračního profilu | iOS | **Ignorovat** |
-| iOSProfileLaunch | Obrazovka instalace profilu | iOS | **Zrušit** |
-| iOSProfileLaunch | Výzva k určení důvěryhodnosti zdroje profilu pro registraci zařízení | iOS | **Zrušit** |
-| iOSProfileLaunch | Obrazovka instalace profilu až do dokončení instalace profilu | iOS | Trvalo > 30 minut |
+| iOSProfileLaunch | Výzva k zobrazení konfiguračního profilu | iOS/iPadOS | **Ignorovat** |
+| iOSProfileLaunch | Obrazovka instalace profilu | iOS/iPadOS | **Zrušit** |
+| iOSProfileLaunch | Výzva k určení důvěryhodnosti zdroje profilu pro registraci zařízení | iOS/iPadOS | **Zrušit** |
+| iOSProfileLaunch | Obrazovka instalace profilu až do dokončení instalace profilu | iOS/iPadOS | Trvalo > 30 minut |
 | AndroidPermissions | Obrazovka aktivace správce zařízení | Android | **Zrušit** |
 | AndroidPermissions | Od výzvy ke schválení uskutečňování telefonních hovorů a jejich správy až do **aktivace** správce zařízení | Android | Trvalo > 30 minut |
 | KnoxActivation | Aktivace agenta KLMS (pouze Samsung) | Android| **Zrušit** |

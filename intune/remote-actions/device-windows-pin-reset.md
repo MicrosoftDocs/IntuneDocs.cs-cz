@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b643ed41d01b70376dac32c26a66dcf9f9735ceb
-ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
+ms.openlocfilehash: c4b3313d5ec7fe81944431276a63bfafb7a1b3dc
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74907215"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413631"
 ---
 # <a name="reset-the-passcode-on-windows-devices-using-intune"></a>Resetování hesla na zařízeních s Windows pomocí Intune
 
@@ -60,14 +60,14 @@ Místo *tenant ID* použijte své ID adresáře Azure, které je uvedené ve **V
 Nastavte hodnotu pro tohoto poskytovatele konfiguračních služeb na **True**.
 
 > [!TIP]
-> Po vytvoření zásady ji přiřadíte (nebo nasadíte) ke skupině. Zásada se dá přiřadit ke skupině uživatelů nebo skupině zařízení. Pokud ji přiřadíte ke skupině uživatelů, může skupina obsahovat uživatele, kteří mají jiná zařízení, třeba s iOSem. Technicky se na ně zásada neaplikuje, ale tato zařízení jsou zahrnutá do podrobností o stavu.
+> Po vytvoření zásady ji přiřadíte (nebo nasadíte) ke skupině. Zásada se dá přiřadit ke skupině uživatelů nebo skupině zařízení. Pokud ho přiřadíte ke skupině uživatelů, může skupina obsahovat uživatele, kteří mají jiná zařízení, jako je například iOS/iPadOS. Technicky se na ně zásada neaplikuje, ale tato zařízení jsou zahrnutá do podrobností o stavu.
 
 ## <a name="reset-the-passcode"></a>Resetování hesla
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). 
 2. Vyberte **Zařízení** a potom **Všechna zařízení**.
 3. Vyberte zařízení, jehož heslo chcete resetovat. Ve vlastnostech zařízení vyberte **resetovat heslo**.
-4. Odstranění potvrďte výběrem **Ano**. Vygeneruje se heslo, které zůstane na portálu zobrazeno dalších sedm dní.
+4. Vyberte **Ano**. Tím akci potvrdíte. Vygeneruje se heslo, které zůstane na portálu zobrazeno dalších sedm dní.
 
 ## <a name="next-step"></a>Další krok
 

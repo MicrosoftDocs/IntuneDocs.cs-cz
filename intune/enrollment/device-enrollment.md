@@ -1,7 +1,7 @@
 ---
 title: Co je registrace zařízení v Microsoft Intune?
 titleSuffix: Microsoft Intune
-description: Přečtěte si o registraci zařízení s iOSem, Androidem a Windows.
+description: Přečtěte si o registraci pro zařízení s iOS/iPadOS, Androidem a Windows.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: feee58d926a25e9132204798ba93d10a7c90f41e
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 7955c91a33edef37b86f5bd8f29dfb681d28030e
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547830"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415348"
 ---
 # <a name="what-is-device-enrollment"></a>Co je registrace zařízení?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -33,7 +33,7 @@ Jak ukazují následující tabulky, registrují se zařízení zaměstnanců n�
 
 Standardně se do Intune můžou registrovat zařízení pro všechny platformy. Můžete však [omezit zařízení podle platformy](enrollment-restrictions-set.md#create-a-device-type-restriction).
 
-## <a name="ios-enrollment-methods"></a>Metody registrace zařízení s iOS
+## <a name="iosipados-enrollment-methods"></a>metody registrace pro iOS/iPadOS
 
 | **Metoda** | **Vyžadováno resetování** | [**Přidružení uživatele**](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) | **Uzamčeno** | **Podrobnosti** |
 |:---:|:---:|:---:|:---:|:---:|
@@ -65,13 +65,13 @@ Standardně se do Intune můžou registrovat zařízení pro všechny platformy.
 
 ## <a name="android-enrollment-methods"></a>Metody registrace zařízení s Androidem
 
-| **Individuální** | **Metody registrace** | **Vyžadováno resetování** | **Přidružení uživatele** | **Uzamčeno** | **Podrobnosti**|
+| **Osobní** | **Metody registrace** | **Vyžadováno resetování** | **Přidružení uživatele** | **Uzamčeno** | **Podrobnosti**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Správce zařízení s Androidem**|**Uživatel inicioval prostřednictvím Portál společnosti** | Ne | Ano | Ne | [Další informace](https://docs.microsoft.com/intune-user-help/enroll-device-android-company-portal)|
 |**Pracovní profil Android Enterprise**|**Uživatel inicioval prostřednictvím Portál společnosti**| Ne | Ano | Ne | [Další informace](android-work-profile-enroll.md)|
 
 
-| **Firmy** | **Metody registrace** | **Vyžadováno resetování** | **Přidružení uživatele** | **Uzamčeno** | **Podrobnosti**|
+| **Firemní** | **Metody registrace** | **Vyžadováno resetování** | **Přidružení uživatele** | **Uzamčeno** | **Podrobnosti**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**Správce zařízení s Androidem**|**[DEM](#device-enrollment-manager) iniciované prostřednictvím portál společnosti**| Ne | Ne | Ne |[Další informace](device-enrollment-manager-enroll.md)|
 |**Správce zařízení s Androidem**|**(Předem deklarované IMEI nebo SN) Uživatel inicioval prostřednictvím Portál společnosti**| Ne | Ano | Ne | [Další informace](./../corporate-identifiers-add.md)|
@@ -84,36 +84,36 @@ Standardně se do Intune můžou registrovat zařízení pro všechny platformy.
 Přineste si vlastní zařízení (BYOD), včetně telefonů, tabletů a počítačů vlastněných osobně. Kvůli registraci vlastního zařízení uživatelé nainstalují a používají aplikaci Portál společnosti. Tento program umožňuje uživatelům přístup k firemním prostředkům, jako je třeba e-mail.
 
 ## <a name="corporate-owned-device"></a>Zařízení vlastněná společností
-[Mezi zařízení vlastněná společností](corporate-identifiers-add.md) patří telefony, tablety a počítače ve vlastnictví organizace, které se přidělují zaměstnancům. Registrace zařízení vlastněných společností umožňuje různé způsoby správy, například v podobě automatické registrace, sdílených zařízení nebo předem autorizovaných požadavků na registraci. Správce nebo manažer používá k registraci takových zařízení nejčastěji Správce registrace zařízení (DEM). Zařízení iOS lze zaregistrovat přímo prostřednictvím nástrojů DEP (Device Enrollment Program), které poskytuje Apple. Zařízení s číslem IMEI se také dají identifikovat a označit jako vlastněné firmou.
+[Mezi zařízení vlastněná společností](corporate-identifiers-add.md) patří telefony, tablety a počítače ve vlastnictví organizace, které se přidělují zaměstnancům. Registrace zařízení vlastněných společností umožňuje různé způsoby správy, například v podobě automatické registrace, sdílených zařízení nebo předem autorizovaných požadavků na registraci. Správce nebo manažer používá k registraci takových zařízení nejčastěji Správce registrace zařízení (DEM). zařízení s iOS/iPadOS se dají registrovat přímo prostřednictvím nástrojů Program registrace zařízení (DEP), které poskytuje společnost Apple. Zařízení s číslem IMEI se také dají identifikovat a označit jako vlastněné firmou.
 
-### <a name="device-enrollment-manager"></a>správce registrace zařízení
+### <a name="device-enrollment-manager"></a>Správce registrace zařízení
 Správce registrace zařízení (DEM) je zvláštní uživatelský účet, který se používá k registraci a správě více zařízení vlastněných společností. Správci pak mohou nainstalovat aplikaci Portál společnosti a zaregistrovat velký počet zařízení bez uživatele. Tyto typy zařízení se hodí například pro aplikace POS a jednoúčelové aplikace, ale nehodí se pro uživatele, kteří potřebují přístup k e-mailu nebo k prostředkům společnosti. Přečtěte si další informace o [DEM](device-enrollment-manager-enroll.md).
 
 ### <a name="apple-device-enrollment-program"></a>Program Apple Device Enrollment Program
-Správa Apple Program registrace zařízení (DEP) umožňuje vytvářet a nasazovat zásady "prostřednictvím Air" na zařízení s iOS a macOS, která jsou zakoupená a spravovaná pomocí programu DEP. Zařízení se zaregistruje při prvním zapnutí zařízení uživatelem a spustí se Pomocník s nastavením. Tato metoda podporuje režim iOSu pod dohledem, který umožňuje v zařízení nakonfigurovat konkrétní funkce.
+Správa pomocí Apple Program registrace zařízení (DEP) umožňuje vytvářet a nasazovat zásady "přes Air" na zařízení s iOS/iPadOS a macOS, která jsou zakoupená a spravovaná pomocí programu DEP. Zařízení se zaregistruje při prvním zapnutí zařízení uživatelem a spustí se Pomocník s nastavením. Tato metoda podporuje režim iOS/iPadOS pod dohledem, který umožňuje konfigurovat zařízení s konkrétními funkcemi.
 
-Registrace DEP pro iOS je podrobněji popsaná zde:
+Další informace o registraci zařízení se systémem iOS/iPadOS DEP:
 
-- [Volba způsobu registrace zařízení s iOSem](ios-enroll.md)
-- [Registrace zařízení s iOSem pomocí Programu registrace zařízení (DEP)](device-enrollment-program-enroll-ios.md)
+- [Volba způsobu registrace zařízení se systémem iOS/iPadOS](ios-enroll.md)
+- [Registrace zařízení s iOS/iPadOS pomocí Program registrace zařízení](device-enrollment-program-enroll-ios.md)
 
-### <a name="usb-sa"></a>USB (SA)
+### <a name="usb-sa"></a>USB (pomocník pro instalaci)
 Správci IT používají k ruční přípravě každého zařízení vlastněného společností pro registraci Apple Configurator (přes USB) a Pomocníka s nastavením. Správce IT vytvoří registrační profil a vyexportuje ho do Apple Configuratoru. Když uživatelé dostanou svá zařízení, zobrazí se jim výzva ke spuštění pomocníka s nastavením pro registraci zařízení. Tato metoda podporuje režim **iOS – Pod dohledem**, který umožňuje následující funkce:
 - Registrace uzamčeného zařízení
 - Beznabídkový režim a další pokročilé konfigurace a omezení
 
-Další informace o registraci pro iOS prostřednictvím Apple Configuratoru a Pomocníka s nastavením:
+Další informace o registraci zařízení Apple Configuratoru v iOS/iPadOS pomocí Pomocníka s nastavením:
 
-- [Rozhodnutí o způsobu registrace zařízení s iOSem](ios-enroll.md)
-- [Registrace zařízení s iOSem pomocí nástroje Configurator a Průvodce nastavením](apple-configurator-enroll-ios.md)
+- [Rozhodnutí, jak registrovat zařízení s iOS/iPadOS](ios-enroll.md)
+- [Registrace zařízení s iOS/iPadOS pomocí konfigurátoru a pomocníka s nastavením](apple-configurator-enroll-ios.md)
 
 ### <a name="usb-direct"></a>USB (přímo)
 U přímé registrace musí správce každé zařízení zaregistrovat ručně vytvořením zásady registrace, kterou vyexportuje do Apple Configuratoru. Zařízení vlastněná společností, která jsou připojena přes USB, se zaregistrují přímo a nevyžadují vymazání. Zařízení se spravují jako zařízení bez uživatele. Nejsou uzamčeny nebo pod dohledem a nemohou podporovat podmíněný přístup, zjišťování jailbreaků nebo správu mobilních aplikací.
 
-Registrace iOS je podrobněji popsaná zde:
+Další informace o registraci zařízení se systémem iOS/iPadOS najdete v těchto tématech:
 
-- [Rozhodnutí o způsobu registrace zařízení s iOSem](ios-enroll.md)
-- [Registrace zařízení s iOSem pomocí nástroje Configurator a přímé registrace](apple-configurator-enroll-ios.md)
+- [Rozhodnutí, jak registrovat zařízení s iOS/iPadOS](ios-enroll.md)
+- [Registrace zařízení s iOS/iPadOS pomocí konfigurátoru a přímé registrace](apple-configurator-enroll-ios.md)
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Vyčištění mobilních zařízení po vypršení platnosti certifikátu MDM
 

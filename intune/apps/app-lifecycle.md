@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: apps; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ce23d77d9b9d89ce51738a9c4e244dfca9a1c59
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: 569906cea8467d568d302f4e44b26c3394213b62
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812411"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414968"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Přehled životního cyklu aplikace v Microsoft Intune
 
@@ -30,7 +30,7 @@ ms.locfileid: "76812411"
 
 ![Životní cyklus aplikace – přidání, nasazení, konfigurace, ochrana a vyřazení z provozu.](./media/app-lifecycle/app-lifecycle.png "životní cyklus aplikace Intune")
 
-## <a name="add"></a>Přidání
+## <a name="add"></a>Přidat
 
 Prvním krokem při nasazení aplikací je přidání aplikací, které chcete spravovat a přiřazovat, do Intune. Můžete pracovat s mnoha různými typy aplikací, ale základní postupy jsou stejné. Pomocí Intune můžete přidat různé typy aplikací, včetně aplikací, které jsou zapsané interně (obchodní), aplikací ze Storu, aplikací, které jsou integrované, a aplikací na webu. Další informace o těchto typech aplikací najdete v článku [Přidání aplikací do Microsoft Intune](apps-add.md).
 
@@ -42,17 +42,17 @@ Po přidání aplikace do Intune ji pak můžete [přiřadit uživatelům a zař
 
 Jako součást životního cyklu aplikace jsou pravidelně vydávány nové verze aplikace. Intune poskytuje nástroje ke snadné [aktualizaci aplikací](apps-add.md), které jste nasadili, na novější verzi. Kromě toho můžete pro některé aplikace konfigurovat další funkce, například:
 
-- [Zásady konfigurace aplikací pro iOS](app-configuration-policies-use-ios.md) určují nastavení pro aplikace kompatibilní s iOS, které se používají při spuštění aplikace. Aplikace může například vyžadovat konkrétní nastavení brandingu nebo název serveru, ke kterému se musí připojit.
+- [zásady konfigurace aplikací pro iOS](app-configuration-policies-use-ios.md) poskytují nastavení pro kompatibilní aplikace pro iOS/iPadOS, které se používají při spuštění aplikace. Aplikace může například vyžadovat konkrétní nastavení brandingu nebo název serveru, ke kterému se musí připojit.
 - [Zásady spravovaného prohlížeče](app-configuration-managed-browser.md) vám pomůžou nakonfigurovat nastavení pro [Microsoft Edge](~/apps/apps-supported-intune-apps.md#microsoft-apps), které nahradí výchozí prohlížeč zařízení a umožní vám omezit weby, které můžou uživatelé navštěvovat.
 
-## <a name="protect"></a>Ochrana
+## <a name="protect"></a>Chránit
 
 Intune poskytuje mnoho způsobů, jak pomoci chránit data ve vašich aplikacích. Hlavní metody jsou následující:
 
 - [Podmíněný přístup](../protect/conditional-access.md), který řídí přístup k e-mailu a dalším službám na základě podmínek, které zadáte. Příkladem podmínek může být typ zařízení nebo shoda se [zásadami dodržování předpisů zařízení](../protect/device-compliance-get-started.md), které jste nasadili.
 - [Zásady ochrany aplikací](app-protection-policy.md) spolupracují s jednotlivými aplikacemi a pomáhají chránit firemní data, která používají. Například můžete omezit kopírování dat mezi nespravovanými a spravovanými aplikacemi, nebo můžete zabránit aplikacím ve spuštění v zařízeních s jailbreakem nebo rootem.
 
-## <a name="retire"></a>Vyřazení
+## <a name="retire"></a>Vyřadit
 
 Nakonec pravděpodobně dojde k tomu, že nasazené aplikace začnou být zastaralé a bude třeba je odebrat. Intune umožňuje snadno [vyřazovat aplikace z provozu](../remote-actions/device-management.md).
 

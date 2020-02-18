@@ -18,18 +18,18 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dce6d71a4bc056146b581458d5c39325adad1584
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: cd0a4b0c5e0b4cbaa7ef43ec40cddb3ab30d3070
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206903"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415482"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Kurz: Konfigurace časové rezervy pro používání služby Intune pro modul EMM a konfiguraci aplikací
 
 Časová rezerva je aplikace pro spolupráci, kterou můžete použít s Microsoft Intune.   
 
-V tomto kurzu provedete následující:
+V tomto kurzu se naučíte:
 > [!div class="checklist"]
 > - Nastavte Intune jako poskytovatele podnikové mobility (EMM) v podnikové mřížce s časovou rezervou. V zařízeních spravovaných přes Intune budete moct omezit přístup k pracovním prostorům plánu vaší mřížky.
 > - Vytvořte zásady konfigurace aplikací pro správu časové rezervy pro aplikaci EMM v iOS a aplikaci časové rezervy pro zařízení s pracovním profilem Androidu.
@@ -37,7 +37,7 @@ V tomto kurzu provedete následující:
 
 Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební účet](../fundamentals/free-trial-sign-up.md).
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Požadavky
 Pro účely tohoto kurzu budete potřebovat testovacího tenanta s následujícími předplatnými:
 - Azure Active Directory Premium ([bezplatná zkušební verze](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
 - Předplatné Intune ([bezplatná zkušební verze](../fundamentals/free-trial-sign-up.md))
@@ -59,7 +59,7 @@ Přidejte časovou rezervu pro modul EMM jako spravovanou aplikaci pro iOS v Int
 2. V části **Typ aplikace**vyberte aplikace pro **iOS** Store.
 3. Vyberte **Hledat v App Storu**. Zadejte hledaný termín "časová rezerva pro modul EMM" a vyberte aplikaci. V podokně Hledat v **App Storu** klikněte na **Vybrat** .
 4. Vyberte **informace o aplikaci** a podle potřeby nakonfigurujte libovolné změny. Vyberte **OK** a nastavte informace o aplikaci.
-5. Klikněte na tlačítko **Add** (Přidat).
+5. Klikněte na **Přidat**.
 6. Zvolte **Přiřazení**.
 7. Klikněte na **Přidat skupinu**. V závislosti na tom, na koho jste se zapnuli, když zapnete modul EMM pro časovou rezervu, vyberte v části **Typ přiřazení** , který chcete vybrat:
     - **K dispozici pro zaregistrovaná zařízení** , pokud jste zvolili "Všichni členové (včetně hostů)" nebo
@@ -69,7 +69,7 @@ Přidejte časovou rezervu pro modul EMM jako spravovanou aplikaci pro iOS v Int
 10. Klikněte na **Uložit**.
 
 ### <a name="add-an-app-configuration-policy-for-slack-for-emm"></a>Přidání zásad konfigurace aplikace pro časovou rezervu pro modul EMM
-Přidejte zásady konfigurace aplikace pro časovou rezervu pro modul EMM iOS. Zásady konfigurace aplikací pro spravovaná zařízení jsou specifické pro konkrétní platformu, takže musíte přidat samostatnou zásadu pro uživatele časové rezervy na zařízeních s Androidem.
+Přidejte zásady konfigurace aplikace pro tuto časovou rezervu pro modul EMM iOS/iPadOS. Zásady konfigurace aplikací pro spravovaná zařízení jsou specifické pro konkrétní platformu, takže musíte přidat samostatnou zásadu pro uživatele časové rezervy na zařízeních s Androidem.
 1. V centru pro správu vyberte **aplikace** > **zásady konfigurace aplikací** > **Přidat** > **spravovaná zařízení**.
 2. Do název zadejte ' test zásad konfigurace aplikace pro časovou rezervu '.
 3. V části typ registrace zařízení potvrďte, že je nastavená **spravovaná zařízení** .

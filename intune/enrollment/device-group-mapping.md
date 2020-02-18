@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ee8bc3cdee9f61a901854e08000e9e2cbbb2864
-ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
+ms.openlocfilehash: f0976ff8e6ec45f1f861fd4a4e0474255d701ae4
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74955367"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414262"
 ---
 # <a name="categorize-devices-into-groups"></a>Kategorizace zařízení do skupin
 
@@ -32,15 +32,15 @@ Abychom usnadnili správu zařízení, můžete použít kategorií zařízení 
 
 Pro kategorie zařízení se používá následující pracovní postup:
 1. Vytvořte kategorie, z kterých si uživatelé při registraci svého zařízení můžou vybrat.
-2. Když uživatelé zařízení s iOSem a Androidem registrují svá zařízení, musí zvolit některou kategorii ze seznamu, který jste nakonfigurovali. K přiřazení kategorie zařízení s Windows musí uživatelé použít web Portálu společnosti.
+2. Když uživatelé zařízení se systémem iOS/iPadOS a Androidem registrují zařízení, musí zvolit kategorii ze seznamu nakonfigurovaných kategorií. K přiřazení kategorie zařízení s Windows musí uživatelé použít web Portálu společnosti.
 3. Do těchto skupin pak můžete nasadit zásady a aplikace.
 
-Kategorie zařízení můžete vytvořit zcela podle svých potřeb. Například:
+Kategorie zařízení můžete vytvořit zcela podle svých potřeb. Příklad:
 - Zařízení POS
 - Předváděcí zařízení
 - Prodej
 - Účtárna
-- Správce
+- Manažer
 
 ## <a name="how-to-configure-device-categories"></a>Jak konfigurovat kategorie zařízení
 
@@ -76,13 +76,13 @@ Pokud sloupec **kategorie zařízení** není zobrazený, vyberte **sloupce** > 
 
 ## <a name="after-you-configure-device-groups"></a>Po konfiguraci skupin zařízení
 
-Když uživatelé zařízení s iOSem a Androidem registrují svá zařízení, musí zvolit některou kategorii ze seznamu, který jste nakonfigurovali. Jakmile zvolí kategorii a dokončí registraci, jejich zařízení se přidá do skupiny zařízení Intune nebo do skupiny zabezpečení Active Directory, která odpovídá zvolené kategorii.
+Když uživatelé zařízení se systémem iOS/iPadOS a Androidem registrují svá zařízení, musí zvolit kategorii ze seznamu nakonfigurovaných kategorií. Jakmile zvolí kategorii a dokončí registraci, jejich zařízení se přidá do skupiny zařízení Intune nebo do skupiny zabezpečení Active Directory, která odpovídá zvolené kategorii.
 
 Uživatelé s Windows musí k výběru kategorie použít web Portál společnosti.
 
 Bez ohledu na platformu můžou uživatelé po registraci zařízení vždycky použít stránku portal.manage.microsoft.com. Požádejte uživatele, ať přejdou na web Portál společnosti a na něm do části **Moje zařízení**. Na této stránce můžou zvolit zaregistrované zařízení a pak vybrat kategorii.
 
-Když vyberete kategorii, přidá se zařízení automaticky k příslušné vámi vytvořené skupině. Pokud se zařízení už zaregistrovalo předtím, než jste nakonfigurovali kategorie, uživateli se oznámení o něm zobrazí na webu Portál společnosti. Uživatel se tak dozví, že má při příštím přístupu k aplikaci Portál společnosti v iOSu nebo Androidu vybrat kategorii.
+Když vyberete kategorii, přidá se zařízení automaticky k příslušné vámi vytvořené skupině. Pokud se zařízení už zaregistrovalo předtím, než jste nakonfigurovali kategorie, uživateli se oznámení o něm zobrazí na webu Portál společnosti. To umožňuje uživateli, aby při příštím přístupu k aplikaci Portál společnosti v systému iOS/iPadOS nebo Android vybrala kategorii.
 
 ## <a name="further-information"></a>Další informace
 - Kategorii zařízení můžete upravit na portálu Azure Portal, ale musíte ručně aktualizovat všechny skupiny zabezpečení Azure AD, které na tuto kategorii odkazují.

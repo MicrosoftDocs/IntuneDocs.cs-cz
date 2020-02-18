@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64df7ccad203109c201b0e18c3d20023690e31aa
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 3bb0dd0fa4402421db83d41e4731ca144be24133
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503241"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415333"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Možnosti správy zaregistrovaných zařízení v Microsoft Intune
 
@@ -39,29 +39,29 @@ Uživatelé získají přístup k portálu společnosti, odkud můžou instalova
 
 ## <a name="device-security-and-configuration"></a>Konfigurace a zabezpečení zařízení
 
-|Funkce|Details|Další informace|
+|Funkce|Podrobnosti|Další informace|
 |--------------|-----------|--------------------|
-|Zásady konfigurace<br><br>Vlastní zásady| Umožňují spravovat množství nastavení a funkcí na mobilních zařízeních ve vaší organizaci. Můžete třeba vyžadovat heslo, omezit počet neúspěšných pokusů o přihlášení, určit dobu, po které se uzamkne obrazovka zařízení, nastavit dobu platnosti hesla a zabránit nastavení už použitých hesel. Můžete také řídit použití funkcí hardwaru a softwaru, jako je třeba fotoaparát zařízení nebo webový prohlížeč.<br><br>Vlastní zásady použijte v případě, že zásady konfigurace neobsahují nastavení, které požadujete. Pro zařízení s iOSem můžete importovat nastavení, které jste vyexportovali z nástroje Apple Configurator. Pro další zařízení můžete pomocí nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier) nakonfigurovat nastavení a funkce v zařízení.|[Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](../protect/device-compliance-get-started.md)|
+|Zásady konfigurace<br><br>Vlastní zásady| Umožňují spravovat množství nastavení a funkcí na mobilních zařízeních ve vaší organizaci. Můžete třeba vyžadovat heslo, omezit počet neúspěšných pokusů o přihlášení, určit dobu, po které se uzamkne obrazovka zařízení, nastavit dobu platnosti hesla a zabránit nastavení už použitých hesel. Můžete také řídit použití funkcí hardwaru a softwaru, jako je třeba fotoaparát zařízení nebo webový prohlížeč.<br><br>Vlastní zásady použijte v případě, že zásady konfigurace neobsahují nastavení, které požadujete. Pro zařízení s iOS/iPadOS můžete importovat nastavení, která jste exportovali z nástroje Apple Configuratoru. Pro další zařízení můžete pomocí nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier) nakonfigurovat nastavení a funkce v zařízení.|[Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](../protect/device-compliance-get-started.md)|
 |Vzdálené vymazání, Vzdálené uzamčení a Resetování hesla|V případě ztráty nebo odcizení zařízení je možné vymazat citlivá data. Zařízení můžete třeba vzdáleně uzamknout, obnovit do továrního nastavení nebo vymazat jenom firemní data.<br><br>Můžete resetovat hesla, když uživatelé ztratí přístup ke svým zařízením, uzamknout ztracená nebo odcizená zařízení nebo z takových zařízení dokonce vymazat data.|Chraňte svá zařízení pomocí [vzdáleného zámku](../remote-actions/device-remote-lock.md) a [resetování hesla](../remote-actions/device-passcode-reset.md) .|
-|celoobrazovkový režim|Umožňuje uzamknout určité funkce mobilních zařízení, třeba snímek obrazovky a vypínač. Umožňuje taky omezit zařízení tak, aby v nich mohla běžet jenom jedna vámi určená aplikace. |[Nastavení zásad konfigurace pro iOS v Microsoft Intune](../configuration/device-restrictions-ios.md)|
+|Celoobrazovkový režim|Umožňuje uzamknout určité funkce mobilních zařízení, třeba snímek obrazovky a vypínač. Umožňuje taky omezit zařízení tak, aby v nich mohla běžet jenom jedna vámi určená aplikace. |[Nastavení zásad konfigurace pro iOS v Microsoft Intune](../configuration/device-restrictions-ios.md)|
 |Resetování autopilotu|Odešle úlohu na zařízení, aby se proces resetování spouštěl vzdáleně, aby nemuseli pracovníci IT nebo jiní správci navštěvovat jednotlivé počítače, aby mohli tento proces spustit. Když se na zařízení používá resetování autopilotního projektu, primární uživatel zařízení se odebere. Další uživatel, který se přihlásí po obnovení, se nastaví jako primární uživatel.|[Resetování vzdáleného Windows autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)|
 
 ## <a name="app-management"></a>Správa aplikací
 
-|Funkce|Details|Další informace|
+|Funkce|Podrobnosti|Další informace|
 |--------------|-----------|--------------------|
 |Správa a nasazení aplikací|Poskytuje řadu nástrojů, které vám pomůžou spravovat mobilní aplikace v průběhu jejich životního cyklu, včetně nasazení aplikací z instalačních souborů a obchodů s aplikacemi, podrobného sledování stavu aplikací a jejich odebrání.|[Nasazení aplikací v Microsoft Intune](../apps/apps-deploy.md)|
 |Kompatibilní a nekompatibilní aplikace|Umožňuje určit seznam kompatibilních aplikací (které uživatelé můžou nainstalovat) a nekompatibilních aplikací (které uživatelé nainstalovat nesmí).|[Nastavení zásad pro iOS v Microsoft Intune](../configuration/device-restrictions-ios.md)|
 |správa mobilních aplikací|Konfiguruje omezení pro aplikace pomocí správy mobilních aplikací jak pro zařízení, která spravujete v Intune, tak pro zařízení, která Intune nespravuje. Můžete zvýšit zabezpečení firemních dat omezením operací, jako je kopírování a vkládání, externí zálohování dat a přenos dat mezi aplikacemi.|[Konfigurace a nasazení zásad správy mobilních aplikací v konzole Microsoft Intune](../developer/app-wrapper-prepare-android.md)|
-|Konfigurace mobilních aplikací pro iOS|Využívá zásady konfigurace mobilních aplikací k poskytování nastavení, která se můžou požadovat, když uživatel spustí aplikaci pro iOS. Aplikace může například vyžadovat, aby uživatel zadal číslo portu nebo přihlašovací informace. Můžete zjednodušit konfiguraci aplikace a snížit počet volání podpory.|[Konfigurace aplikací pro iOS pomocí zásad konfigurace mobilních aplikací v Microsoft Intune](../apps/app-configuration-policies-use-ios.md)|
-|Profily zřizování mobilních aplikací pro iOS|Pomáhá při nasazování zřizovacích profilů pro aplikace iOS, u kterých se blíží vypršení platnosti. |[Použití zásad pro mobilní zřizovací profil pro iOS k zabránění vypršení platnosti aplikací](../apps/app-provisioning-profile-ios.md)|
+|Konfigurace mobilních aplikací pro iOS|Pomocí zásad konfigurace mobilních aplikací poskytuje nastavení pro aplikace pro iOS/iPadOS, které se můžou požadovat, když uživatel spustí aplikaci. Aplikace může například vyžadovat, aby uživatel zadal číslo portu nebo přihlašovací informace. Můžete zjednodušit konfiguraci aplikace a snížit počet volání podpory.|[Konfigurace aplikací pro iOS/iPadOS pomocí zásad konfigurace mobilních aplikací v Microsoft Intune](../apps/app-configuration-policies-use-ios.md)|
+|profily zřizování mobilních aplikací pro iOS/iPadOS|Pomůže vám nasadit zřizovací profily pro aplikace iOS/iPadOS, které se blíží vypršení platnosti. |[Použití mobilních zásad zřizovacích profilů pro iOS/iPadOS k zabránění vypršení platnosti vašich aplikací](../apps/app-provisioning-profile-ios.md)|
 |Spravovaný prohlížeč|Konfiguruje zásady spravovaného prohlížeče pro kontrolu nad weby, které uživatelé můžou navštěvovat. Pro spravovaný prohlížeč můžete taky použít zásady správy mobilních aplikací.|[Správa přístupu k internetu pomocí zásad spravovaného prohlížeče v Microsoft Intune](../apps/app-configuration-managed-browser.md)|
 |Windows Hello pro firmy|Umožňuje integraci se službou Microsoft Hello pro firmy. Tato alternativní metoda pro přihlašování do Windows 10 pomocí místní služby Active Directory nebo Azure Active Directory může nahradit hesla, čipové karty a virtuální čipové karty.|[Řízení nastavení Windows Hello pro firmy na zařízeních pomocí Microsoft Intune](../protect/windows-hello.md)|
 |Hromadně zakoupené aplikace|Pomůže spravovat aplikace, které jste koupili prostřednictvím programu hromadného nákupu, importováním licenčních informací z App Storu, sledováním, kolik licencí jste už použili, a zabráněním instalace více aplikací, než na kolik máte licence.|[Správa hromadně koupených aplikací v Microsoft Intune](../apps/vpp-apps.md)|
 
 ## <a name="company-resource-access"></a>Přístup k prostředkům společnosti
 
-|Funkce|Details|Další informace|
+|Funkce|Podrobnosti|Další informace|
 |--------------|-----------|--------------------|
 |Profily certifikátů|Vytvoří a nasadí profily důvěryhodných certifikátů a certifikáty protokolu SCEP (Simple Certificate Enrollment Protocol), které se dají použít k zabezpečení a ověření profilů sítí Wi-Fi, VPN a e-mailu.|[Zabezpečení přístupu k prostředkům pomocí profilů certifikátů v Microsoft Intune](../protect/certificates-configure.md)|
 |Profily sítě Wi-Fi|Nasadí uživatelům nastavení bezdrátových sítí. Nasazením těchto nastavení minimalizujete úsilí uživatelů potřebné k připojení k firemní síti.|[Připojení Wi-Fi v Microsoft Intune](../configuration/wi-fi-settings-configure.md)|

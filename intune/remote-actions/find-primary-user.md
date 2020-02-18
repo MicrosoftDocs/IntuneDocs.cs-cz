@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d8aadbd876ea03da0f16acea82b71ebd85cf9be
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: fbafca746c43dada6281ffbfe1e34f01afa8ab91
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73712250"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413677"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Vyhledání primárního uživatele zařízení v Intune
 
@@ -65,10 +65,10 @@ Intune automaticky přidá primárního uživatele do zařízení během nebo po
 | Windows | Spoluspráva | První uživatel, který se přihlásí k Windows | Když se první uživatel přihlásí k Windows | 
 | Windows | Připojení k Azure AD (token hromadného zápisu) | Žádné | Není k dispozici | 
 | Windows | Připojení k Azure AD (režim automatického nasazení autopilotu) | Žádné | Není k dispozici | 
-| Napříč platformami | Registrace řízená uživatelem v aplikaci Portál společnosti | Registrace uživatele | Během registrace |
-| Napříč platformami | Správce registrace zařízení (DEM) | Registrace uživatele DEM | Během registrace |
-| iOS, macOS | Apple automatizované registrace zařízení (DEP s přidružením uživatele) | Registrace uživatele | Během registrace |
-| iOS, macOS | Apple automatizované registrace zařízení (DEP bez přidružení uživatele) | Žádné | Není k dispozici |
+| Pro různé platformy | Registrace řízená uživatelem v aplikaci Portál společnosti | Registrace uživatele | Během registrace |
+| Pro různé platformy | Správce registrace zařízení (DEM) | Registrace uživatele DEM | Během registrace |
+| iOS/iPadOS, macOS | Apple automatizované registrace zařízení (DEP s přidružením uživatele) | Registrace uživatele | Během registrace |
+| iOS/iPadOS, macOS | Apple automatizované registrace zařízení (DEP bez přidružení uživatele) | Žádné | Není k dispozici |
 | Android | Zařízení se systémem Android, která jsou ve vlastnictví společnosti, vyhrazena | Žádné | Není k dispozici |
 
 ## <a name="primary-user-and-azure-ad-device-owner"></a>Vlastník zařízení s primárním uživatelem a Azure AD

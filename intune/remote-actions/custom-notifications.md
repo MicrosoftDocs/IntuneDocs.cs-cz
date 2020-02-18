@@ -1,7 +1,7 @@
 ---
 title: Odesílání vlastních oznámení uživatelům pomocí Microsoft Intune
 titleSuffix: Microsoft Intune
-description: Použití Intune k vytváření a odesílání vlastních nabízených oznámení uživatelům zařízení s iOS a Androidem
+description: Použití Intune k vytváření a odesílání vlastních nabízených oznámení uživatelům zařízení se systémem iOS/iPadOS a Androidem
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -18,30 +18,30 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73b7617ad6a2d9aa756ddf9a8a4833289e5710ff
-ms.sourcegitcommit: af384c46ec8d8def6aa32c3b89947748dc6fd28f
+ms.openlocfilehash: 412dc631f2092d1eb7d9a7332b903a4742472202
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76517478"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413891"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Odesílání vlastních oznámení v Intune  
 
-Pomocí Microsoft Intune můžete odesílat vlastní oznámení uživatelům spravovaných zařízení s iOS a Androidem. Tyto zprávy se zobrazí jako standardní nabízená oznámení z aplikace Portál společnosti a z aplikace Microsoft Intune na zařízení uživatele, stejně jako oznámení z jiných aplikací na zařízení. Zařízení macOS a Windows nepodporují vlastní oznámení Intune.   
+Pomocí Microsoft Intune můžete odesílat vlastní oznámení uživatelům spravovaných zařízení se systémem iOS/iPadOS a Androidem. Tyto zprávy se zobrazí jako standardní nabízená oznámení z aplikace Portál společnosti a z aplikace Microsoft Intune na zařízení uživatele, stejně jako oznámení z jiných aplikací na zařízení. Zařízení macOS a Windows nepodporují vlastní oznámení Intune.   
 
 Vlastní zprávy s oznámením obsahují krátký nadpis a tělo zprávy o 500 nebo méně znaků. Tyto zprávy lze přizpůsobit pro jakýkoli obecný účel komunikace.
 
-### <a name="what-the-notification-looks-like-on-an-ios-device"></a>Jak oznámení vypadá na zařízení s iOS
+### <a name="what-the-notification-looks-like-on-an-iosipados-device"></a>Jak oznámení vypadá na zařízení se systémem iOS/iPadOS
 
-Pokud máte aplikaci Portál společnosti otevřenou v zařízení se systémem iOS, oznámení se podobá následujícímu snímku obrazovky:
+Pokud máte aplikaci Portál společnosti otevřenou v zařízení se systémem iOS/iPadOS, oznámení se podobá následujícímu snímku obrazovky:
 
 > [!div class="mx-imgBorder"]
-> ![Portál společnosti testovací oznámení pro iOS](./media/custom-notifications/105046-1.png)
+> ![Portál společnosti testovací oznámení pro iOS/iPadOS](./media/custom-notifications/105046-1.png)
 
 Pokud je zařízení uzamčené, oznámení se podobá následujícímu snímku obrazovky:
 
 > [!div class="mx-imgBorder"]
-> ![uzamčené oznámení testu iOS zařízení](./media/custom-notifications/105046-2.png)
+> ![uzamčené zařízení iOS/iPadOS test Notification](./media/custom-notifications/105046-2.png)
 
 ### <a name="what-the-notification-looks-like-on-an-android-device"></a>Jak oznámení vypadá na zařízení s Androidem
 
@@ -75,14 +75,14 @@ Pokud máte aplikaci Portál společnosti otevřenou na zařízení s Androidem,
 - Když odesíláte zprávy do jednotlivých zařízení, můžete do stejného zařízení poslat až 10 zpráv za hodinu. 
 - Oznámení můžete odesílat více uživatelům nebo zařízením přiřazením oznámení do skupin. Při použití skupin se může každé oznámení směrovat přímo na 25 skupin. Vnořené skupiny se do tohoto součtu nepočítají.  
 
-  Skupiny můžou obsahovat uživatele nebo zařízení, ale zprávy se odesílají jenom uživatelům a každému zařízení s iOS nebo Androidem, které uživatel zaregistroval.  
+  Skupiny můžou obsahovat uživatele nebo zařízení, ale zprávy se odesílají jenom uživatelům a každému zařízení s iOS/iPadOS nebo Androidem, které uživatel zaregistroval.  
 - Oznámení můžete odesílat do jediného zařízení. Místo používání skupin vyberte zařízení a pak použijte [akci vzdáleného zařízení](device-management.md#available-device-actions) k odeslání vlastního oznámení.  
 
 **Doručení**:  
 - Intune pošle zprávy do aplikace Portál společnosti uživatelů nebo do aplikace Microsoft Intune, která pak vytvoří nabízené oznámení. Aby bylo možné oznámení na zařízení přidat, nemusí být uživatelé přihlášeni do aplikace.  
 - Intune i aplikace Portál společnosti a aplikace Microsoft Intune nemůžou zaručit doručení vlastního oznámení. Vlastní oznámení se můžou zobrazovat i po několika hodinách, pokud je to u všech, takže by se nemuseli používat pro naléhavé zprávy.  
-- Vlastní oznamovací zprávy z Intune se na zařízeních zobrazují jako standardní nabízená oznámení. Pokud je aplikace Portál společnosti v zařízení se systémem iOS otevřená při přijetí oznámení, zobrazí se v aplikaci oznámení místo nabízeného oznámení.  
-- Vlastní oznámení můžete zobrazit na zamykací obrazovce na zařízeních s iOS i Androidem v závislosti na nastavení zařízení.  
+- Vlastní oznamovací zprávy z Intune se na zařízeních zobrazují jako standardní nabízená oznámení. Pokud je aplikace Portál společnosti v zařízení se systémem iOS nebo iPadOS otevřená při přijetí oznámení, zobrazí se v aplikaci oznámení místo nabízeného oznámení.  
+- Vlastní oznámení můžete zobrazit na zamykací obrazovce na zařízeních s iOS/iPadOS a Androidem v závislosti na nastavení zařízení.  
 - V zařízeních s Androidem můžou mít další aplikace přístup k datům ve vlastních oznámeních. Nepoužívejte je pro citlivou komunikaci.  
 - Uživatelé zařízení, kteří se nedávno zaregistrovali, nebo uživatelé, kteří byli odebráni ze skupiny, můžou dál dostávat vlastní oznámení, které se později pošle do této skupiny.  Podobně platí, že pokud přidáte uživatele do skupiny po odeslání vlastního oznámení do skupiny, je možné, že nově přidaná zpráva byla přijata k přijetí dříve odeslané zprávy s oznámením.  
 
@@ -127,7 +127,7 @@ Intune zpracovává zprávu hned. Jediným potvrzením, že zpráva byla odeslá
 
 Na zařízení uživatelé uvidí vlastní oznamovací zprávy, které Intune odesílají jako standardní nabízené oznámení z aplikace Portál společnosti nebo z aplikace Microsoft Intune. Tato oznámení jsou podobná nabízeným oznámením, která uživatelé dostanou z jiných aplikací na zařízení.  
 
-Pokud je v zařízeních se systémem iOS po přijetí oznámení otevřená aplikace Portál společnosti, zobrazí se v aplikaci oznámení místo nabízeného oznámení.  
+Pokud je v zařízeních se systémem iOS/iPadOS po přijetí oznámení otevřená aplikace Portál společnosti, zobrazí se v aplikaci oznámení místo nabízeného oznámení.  
 
 Oznámení zůstane, dokud ho uživatel nezavře.  
 

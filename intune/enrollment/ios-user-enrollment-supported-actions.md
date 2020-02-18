@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/2/2019
+ms.date: 2/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,19 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e23e582a853f0b424296d8fb42f6c7d8fdd2984c
-ms.sourcegitcommit: 0d9e1452fcf5f15a80230838f80a427b9951cdb1
+ms.openlocfilehash: 9c6fb7da3a791d369fc3005367ee7670af8bc63e
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2019
-ms.locfileid: "75324861"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414131"
 ---
 # <a name="intune-actions-and-options-supported-with-apple-user-enrollment"></a>Akce a možnosti Intune podporované při registraci uživatele Apple
 
 Zápis uživatele podporuje podmnožinu možností správy zařízení. Pokud se pro zařízení registrace uživatele použije už existující konfigurační profil, na toto zařízení se použijí jenom nastavení podporovaná zápisem uživatele.
 
 > [!NOTE]
-> Podpora registrace uživatelů společnosti Apple v Intune je momentálně ve verzi Preview.
+> Podpora registrace uživatelů společnosti Apple v Intune je momentálně ve verzi Preview pro iOS a iPadOS.
 
 ## <a name="password-settings"></a>Nastavení hesla
 
@@ -43,10 +43,10 @@ Například nakonfigurujete nastavení **vypršení platnosti hesla** a tuto zá
 
 ## <a name="administrator-remote-device-actions-and-options"></a>Akce a možnosti vzdáleného zařízení pro správu
 Správci můžou na zařízeních pro zápis uživatelů provádět následující akce a možnosti:
-- Vyřazení
+- Vyřadit
 - Odstranit
 - Vzdálené uzamčení
-- Synchronizace
+- Synchronizovat
 
 Všechny ostatní akce nejsou podporovány.
 
@@ -107,19 +107,15 @@ V zařízeních zaregistrovaných pomocí zápisu uživatelů nejsou podporován
 - Zásady ochrany aplikací se pro tyto aplikace stále použijí. Nebudete ale moct převzít správu ani nasadit spravované verze těchto aplikací, pokud je uživatel ze zařízení neodstraní.
 - Akce, konfigurace, nastavení a příkazy vyžadující dohled. 
 
-## <a name="options-not-supported-in-preview"></a>Možnosti nejsou ve verzi Preview podporované.
-- Omezení typu zařízení registrace pro povolení nebo blokování zařízení v osobním vlastnictví 
 
 ## <a name="known-issues-in-preview"></a>Známé problémy ve verzi Preview
 - Odvolání licence VPP: oznámení, že licence byla odvolána, se nezobrazí. Aktuální chování je, že odvolání je úspěšné, ale koncový uživatel není upozorněn. 
 - Vytváření sestav aplikací VPP: v sestavě umístěné v klientských aplikacích > aplikace > [název aplikace] > stav instalace zařízení, aplikace VPP nasazené do zařízení zaregistrovaných uživateli se hlásí jako neúspěšná, i když se aplikace úspěšně nasadila do zařízení. 
 - Vytváření sestav aplikací: u typů aplikací nepodporovaných při zápisu uživatelů mohou sestavy poskytnout nepodstatné chybové zprávy. 
 - Portál společnosti App Experience: uživatelům se zobrazí všechny aplikace, které jsou jí cílené, bez ohledu na to, jestli jsou tyto typy aplikací podporované pro zařízení zaregistrovaná uživatelem. 
-- Portál společnosti App Experience: uživatelům se zobrazí stejný text, který indikuje, co organizace uvidí a nevidí pro registraci uživatelů a zařízení.
-- Pokud uživatel během registrace vybere možnost Moje organizace vlastní toto zařízení, zařízení se v rámci Intune i nadále identifikuje jako osobní, pokud není v konzole pro správu nebo v grafu jinak změněno. 
-- Cílení na registraci: iPadOS není uvedeno v selektoru platformy. iPadOS je podporován ve verzi Preview, ale není výslovně uvedeno v konzole pro správu. 
+- Portál společnosti App Experience: uživatelům se zobrazí stejný text, který označuje, co můžou organizace zobrazit pro registraci uživatelů a zařízení, pokud správce přizpůsobil text, který indikuje, co organizace neuvidí.
 
 
 ## <a name="next-steps"></a>Další kroky
 
-[Nastavení registrace uživatele pro iOS a iPadOS](ios-user-enrollment.md)
+[Nastavení registrace uživatelů pro iOS/iPadOS a iPadOS](ios-user-enrollment.md)

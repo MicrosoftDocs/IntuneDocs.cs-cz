@@ -1,7 +1,7 @@
 ---
-title: Zapnutí režimu iOSu Pod dohledem v Microsoft Intune
+title: Zapnutí režimu iOS/iPadOS pod dohledem s využitím Microsoft Intune
 titleSuffix: ''
-description: Přečtěte si, jak lze zapnout režim iOSu Pod dohledem v Intune.
+description: Naučte se, jak v Intune zapnout režim pod dohledem pro iOS/iPadOS.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e995dbc89321bf844151accd654a2d17d35afd9
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 0d266dbc9fa72b1579e05e7798315e2e718a9797
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73713406"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413666"
 ---
-# <a name="turn-on-ios-supervised-mode"></a>Zapnutí režimu iOSu Pod dohledem
+# <a name="turn-on-iosipados-supervised-mode"></a>Zapnout režim pod dohledem pro iOS/iPadOS
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Režim Apple iOSu Pod dohledem poskytuje správcům při správě zařízení Apple další možnosti, které jsou užitečné u větších nasazení firemních zařízení. Můžete například omezit AirDrop nebo můžete uživatelům znemožnit změny názvu zařízení. Seznam nastavení vyžadujících režim Pod dohledem najdete v tématu [Nastavení omezení pro zařízení s iOSem v Intune](../configuration/device-restrictions-ios.md).
+Apple iOS/iPadOS pod dohledem poskytuje správcům více možností při správě zařízení Apple. to je užitečné pro zařízení vlastněná společností, která jsou nasazená ve velkém měřítku. Můžete například omezit AirDrop nebo můžete uživatelům znemožnit změny názvu zařízení. Seznam nastavení vyžadujících režim Pod dohledem najdete v tématu [Nastavení omezení pro zařízení s iOSem v Intune](../configuration/device-restrictions-ios.md).
 
 Intune podporuje režim Pod dohledem v rámci [Programu registrace zařízení Apple (DEP)](../enrollment/device-enrollment-program-enroll-ios.md).
 
@@ -41,7 +41,7 @@ V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwli
 
 ## <a name="turn-on-supervised-mode-after-enrollment"></a>Zapnutí režimu Pod dohledem po registraci
 
-Jediným způsobem, jak zapnout režim Pod dohledem po registraci, je připojit zařízení s iOSem k Macu a [použít Apple Configurator](../enrollment/apple-configurator-enroll-ios.md) (zařízení se tímto postupem resetuje). Po registraci není možné nakonfigurovat režim Pod dohledem pro zařízení v Intune.
+Jediným způsobem, jak zapnout režim pod dohledem, je připojit zařízení s iOS/iPadOS k počítači Mac a [použít Apple Configuratoru](../enrollment/apple-configurator-enroll-ios.md) (při kterém se zařízení resetuje). Po registraci není možné nakonfigurovat režim Pod dohledem pro zařízení v Intune.
 
 ## <a name="identify-a-supervised-device"></a>Zjištění, jestli je zařízení pod dohledem
 

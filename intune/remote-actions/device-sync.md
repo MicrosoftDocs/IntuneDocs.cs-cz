@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1001a7a3fde9c203fdad3d146ace57736ae7128d
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 21167b226556100e7e9920f31f859d6d6ce2a7bb
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73713451"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415533"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Synchronizace zařízení s cílem načíst nejnovější zásady a akce pomocí Intune
 
@@ -49,7 +49,7 @@ Standardní frekvence vrácení se změnami zásad služby Intune najdete v [ča
 
 ## <a name="retryable-error-codes"></a>Kódy chyb umožňujících opakovaný pokus
 
-Když správce spustí akci zařízení **Synchronizovat**, aplikace pro iOS a Android, které selhaly, ale vyvolaly kód chyby umožňující opakovaný pokus, budou pro zařízení stále dostupné. Aplikace, které vyvolaly kód chyby neumožňující opakovaný pokus, ale musí počkat sedm dní, než budou pro zařízení znovu dostupné.
+Když správce spustí akci zařízení **synchronizovat** , aplikace pro iOS/IPadOS a Android, které selhaly a zvýšily kód chyby umožňující Opakovaný pokus, jsou pořád k dispozici pro zařízení. Aplikace, které vyvolaly kód chyby neumožňující opakovaný pokus, ale musí počkat sedm dní, než budou pro zařízení znovu dostupné.
 
 
 | Kód chyby  | Navrhovaný popis | Možnost opakovaného pokusu |

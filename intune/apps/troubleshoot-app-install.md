@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be66f99006b06dce9f9bfe21eafa9f2be302e7b9
-ms.sourcegitcommit: 70b40aa4743c8396f8d6a0163893c4a337d67c48
+ms.openlocfilehash: 0a7216dedf67f6ee9fc8d899756f789d1c0dccc6
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76540975"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415497"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Řešení problémů s instalací aplikací
 
@@ -65,7 +65,7 @@ Pokud máte problémy s instalací aplikací, je třeba vzít v úvahu následuj
   3. Přejděte na [Azure Active Directory uživatelé](https://portal.azure.com/#pane/Microsoft_AAD_IAM/UsersManagementMenupane/AllUsers).
   4. Vyberte ovlivněného uživatele a klikněte na **zařízení**.
   5. Pokud uživatel překročí nastavený limit, pak odstraňte všechny zastaralé záznamy, které už nepotřebujete.
-- V případě zařízení se systémem iOS DEP se ujistěte, že je uživatel v podokně Přehled zařízení Intune uveden jako **zapsaný uživatelem** . Pokud se zobrazuje NA, pak Nasaďte zásadu konfigurace pro Portál společnosti Intune. Další informace najdete v tématu [Konfigurace aplikace Portál společnosti](app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-dep-devices).
+- V případě zařízení se systémem iOS/iPadOS DEP se ujistěte, že je uživatel v podokně Přehled zařízení Intune uveden jako **zapsaný uživatelem** . Pokud se zobrazuje NA, pak Nasaďte zásadu konfigurace pro Portál společnosti Intune. Další informace najdete v tématu [Konfigurace aplikace Portál společnosti](app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-dep-devices).
 
 ## <a name="win32-app-installation-troubleshooting"></a>Řešení potíží s instalací aplikace Win32
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0dac0607fcaa92ebe65a7ddacc3cd91c63bf246e
-ms.sourcegitcommit: 5178aec0244e023e73546f3d10f1a76eaf1f4a3e
+ms.openlocfilehash: 1263df126b371780b3c5c14ae619f0cb7c83d475
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76971861"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415306"
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 
@@ -44,11 +44,11 @@ Mezi konkrétní omezení registrace, která můžete vytvořit, patří:
 - Platformy zařízení, které se mohou zaregistrovat:
   - Správce zařízení s Androidem
   - Pracovní profil Android Enterprise
-  - iOS
+  - iOS/iPadOS
   - macOS
   - Windows
   - Windows Mobile
-- Verze operačního systému platformy pro iOS, Správce zařízení s Androidem, pracovní profil Android Enterprise, Windows a Windows Mobile. (Je možné použít jenom verze Windows 10. Pokud jsou povolená Windows 8.1., nechejte prázdné.)
+- Verze operačního systému platformy pro iOS/iPadOS, Správce zařízení s Androidem, pracovní profil Android Enterprise, Windows a Windows Mobile. (Je možné použít jenom verze Windows 10. Pokud jsou povolená Windows 8.1., nechejte prázdné.)
   - Minimální verze
   - Maximální verze
 - Omezte [zařízení v osobním vlastnictví](device-enrollment.md#bring-your-own-device) (jenom iOS, Správce zařízení s Androidem, pracovní profil Android Enterprise, MacOS, Windows a Windows Mobile).
@@ -67,7 +67,7 @@ Pro omezení registrace typu i limitu počtu zařízení se automaticky poskytno
 5. V části **verze**vyberte minimální a maximální verze, které mají povolené platformy podporovat. Omezení verze se vztahují jenom na zařízení zaregistrovaná ve Portál společnosti.
      Podporované formáty verzí:
     - Správce zařízení s Androidem a pracovní profil Android Enterprise podporují hlavní. podverze. rev. Build.
-    - iOS podporuje hlavní_verze. podverze. rev. Verze operačního systému se nevztahují na zařízení Apple, která se registrují pomocí Program registrace zařízení, Apple School Manageru nebo aplikace Apple Configuratoru.
+    - iOS/iPadOS podporuje hlavní_verze. podverze. rev. Verze operačního systému se nevztahují na zařízení Apple, která se registrují pomocí Program registrace zařízení, Apple School Manageru nebo aplikace Apple Configuratoru.
     - Windows podporuje jenom hlavní_verze. podverze. Build. rev jenom pro Windows 10.
     
     > [!IMPORTANT]
@@ -158,8 +158,8 @@ Zablokují se také následující metody osobní registrace:
 \*Nezablokují se, pokud se k registraci použije Autopilot.
 
 
-## <a name="blocking-personal-ios-devices"></a>Blokování osobních zařízení s iOS
-Ve výchozím nastavení Intune klasifikuje zařízení s iOS jako osobně vlastněná. Aby bylo zařízení s iOS klasifikované jako vlastněné firmou, musí splňovat jednu z následujících podmínek:
+## <a name="blocking-personal-iosipados-devices"></a>Blokování osobních zařízení s iOS/iPadOS
+Ve výchozím nastavení Intune klasifikuje zařízení s iOS/iPadOS jako osobně vlastněná. Aby bylo možné klasifikovat zařízení se systémem iOS nebo iPadOS ve vlastnictví firmy, musí splňovat jednu z následujících podmínek:
 - Registrováno se sériovým číslem nebo IMEI.
 - Zaregistrováno pomocí automatického zápisu zařízení (dříve Program registrace zařízení)
 

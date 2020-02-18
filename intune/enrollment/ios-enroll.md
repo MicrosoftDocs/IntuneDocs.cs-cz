@@ -1,7 +1,7 @@
 ---
-title: Registrace zařízení s iOSem v Intune
+title: Registrace zařízení s iOS/iPadOS v Intune
 titleSuffix: Microsoft Intune
-description: Nastavení registrace zařízení s iOSem v Microsoft Intune
+description: Nastavení registrace zařízení se systémem iOS/iPadOS v Microsoft Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,53 +18,53 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2fb5208cd7df6dc68bcd20455ae9e06a9dbd7ff5
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 8d5aeb17084ea0bb76429b1fa15c9de5855220ab
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503147"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415298"
 ---
-# <a name="enroll-ios-devices-in-intune"></a>Registrace zařízení s iOSem v Intune
+# <a name="enroll-iosipados-devices-in-intune"></a>Registrace zařízení s iOS/iPadOS v Intune
 
 Intune umožňuje správu mobilních zařízení (MDM) pro iPady a iPhone, aby uživatelé měli zabezpečený přístup k firemním e-mailům, datům a aplikacím.
 
-Jako správce Intune můžete nastavit registraci pro zařízení s iOS a iPadOS, abyste měli přístup k prostředkům společnosti. Uživatelům můžete umožnit registraci zařízení vlastněných osobně, označované jako registrace vlastního zařízení (BYOD). Můžete také nastavit registraci zařízení vlastněných společností.
+Jako správce Intune můžete nastavit registraci pro zařízení s iOS/iPadOS a iPadOS, abyste měli přístup k prostředkům společnosti. Uživatelům můžete umožnit registraci zařízení vlastněných osobně, označované jako registrace vlastního zařízení (BYOD). Můžete také nastavit registraci zařízení vlastněných společností.
 
-## <a name="prerequisites-for-ios-enrollment"></a>Předpoklady pro registraci zařízení s iOSem
+## <a name="prerequisites-for-iosipados-enrollment"></a>Předpoklady pro registraci zařízení se systémem iOS/iPadOS
 
-Před povolením zařízení s iOSem proveďte následující kroky:
+Předtím, než budete moci povolit zařízení se systémem iOS/iPadOS, proveďte následující kroky:
 
 - Ujistěte [se, že vaše zařízení má nárok na registraci zařízení Apple](https://support.apple.com/en-us/HT204142#eligibility).
 - [Nastavení Intune](../fundamentals/setup-steps.md) – tento postup slouží k nastavení infrastruktury Intune. Registrace zařízení vyžaduje zejména [nastavení autority MDM](../fundamentals/mdm-authority-set.md).
-- [Získání certifikátu Apple MDM Push Certificate](apple-mdm-push-certificate-get.md) – Apple vyžaduje k povolení správy zařízení s iOSem a macOS certifikát.
+- [Získání certifikátu Apple MDM push Certificate](apple-mdm-push-certificate-get.md) – Apple vyžaduje certifikát, aby bylo možné povolit správu zařízení IOiOS/IPadOS a MacOS.
 
-## <a name="user-owned-ios-and-ipados-devices-byod"></a>Zařízení s iOS a iPadOS vlastněná uživateli (BYOD)
+## <a name="user-owned-iosipados-and-ipados-devices-byod"></a>Zařízení s iOS/iPadOS a iPadOS vlastněná uživatelem (BYOD)
 
 Uživatelům můžete umožnit, aby si zaregistrovali svoje osobní zařízení pro správu Intune. Tato možnost se označuje jako Přineste si vlastní zařízení neboli BYOD. Pro registraci uživatelů existují tři možnosti:
 - Zásady ochrany aplikací poskytují nejsvětlejší možnosti BYOD a poskytují správu jenom na úrovni aplikace. Pokud ale chcete zařízení zabezpečit i pomocí šestého složeného kódu PIN, můžete tyto zásady použít spolu s zápisem uživatele.
 - Registrace zařízení je to, co si můžete představit jako typické registraci BYOD. Poskytuje správcům široké spektrum možností správy.
 - Registrace uživatele je efektivnější proces registrace, který poskytuje správcům podmnožinu možností správy zařízení. Tato funkce je aktuálně ve verzi Preview. 
 
-Po dokončení požadavků a přiřazení uživatelských licencí si uživatelé můžou aplikaci Portál společnosti Intune stáhnout z App Storu a podle pokynů v aplikaci. Portál společnosti prohlášení o zásadách ochrany osobních údajů na zařízeních s iOS můžete přizpůsobit, jak je popsáno v [tématu přizpůsobení prohlášení o ochraně osobních údajů](../apps/company-portal-app.md#privacy-statement-customization)
+Po dokončení požadavků a přiřazení uživatelských licencí si uživatelé můžou aplikaci Portál společnosti Intune stáhnout z App Storu a podle pokynů v aplikaci. Portál společnosti prohlášení o zásadách ochrany osobních údajů na zařízeních s iOS/iPadOS můžete přizpůsobit, jak je popsáno v [tématu přizpůsobení prohlášení o ochraně osobních údajů](../apps/company-portal-app.md#privacy-statement-customization).
 
-## <a name="company-owned-ios-devices"></a>Zařízení s iOSem patřící společnosti
+## <a name="company-owned-iosipados-devices"></a>Zařízení s iOS/iPadOS vlastněná společností
 
-U organizací, které svým uživatelům zařízení nakupují, Intune podporuje následující způsoby registrace zařízení s iOSem patřících společnosti:
+V organizacích, které si kupují zařízení pro své uživatele, podporuje Intune následující metody registrace zařízení, které vlastní společnost pro iOS/iPadOS:
 
 - Program registrace zařízení (DEP) společnosti Apple
 - Apple School Manager
 - Registrace Průvodce nastavením s Apple Configuratorem
 - Přímá registrace pomocí Apple Configuratoru
 
-Zařízení s iOSem, která patří společnosti, můžete také zaregistrovat pomocí účtu [správce registrace zařízení](device-enrollment-manager-enroll.md).
+Zařízení s iOS/iPadOS vlastněná společností můžete také zaregistrovat pomocí účtu [správce registrace zařízení](device-enrollment-manager-enroll.md) .
 
 ## <a name="device-enrollment-program"></a>Program DEP (Device Enrollment Program)
 
-Organizace můžou nakupovat zařízení s iOSem prostřednictvím Programu registrace zařízení (DEP) společnosti Apple. Program DEP umožňuje vzdáleně (bezdrátově) nasadit registrační profil, který umožní správu těchto zařízení. Další informace najdete v tématu [program registrace zařízení](device-enrollment-program-enroll-ios.md).
+Organizace si můžou zařízení s iOS/iPadOS koupit prostřednictvím programu Apple Program registrace zařízení (DEP). Program DEP umožňuje vzdáleně (bezdrátově) nasadit registrační profil, který umožní správu těchto zařízení. Další informace najdete v tématu [program registrace zařízení](device-enrollment-program-enroll-ios.md).
 
 ## <a name="user-enrollment"></a>Registrace uživatele
-Registrace uživatele umožňuje správcům podmnožinu možností správy ve srovnání s jinými metodami registrace. Další informace najdete v tématech [podporované akce při registraci uživatelů, hesla a další možnosti](ios-user-enrollment-supported-actions.md) a [Nastavení registrace uživatele pro iOS a iPadOS](ios-user-enrollment.md).
+Registrace uživatele umožňuje správcům podmnožinu možností správy ve srovnání s jinými metodami registrace. Další informace najdete v tématech [podporované akce při registraci uživatelů, hesla a další možnosti](ios-user-enrollment-supported-actions.md) a [Nastavení registrace uživatelů pro iOS/iPadOS a iPadOS](ios-user-enrollment.md).
 
 ## <a name="apple-school-manager"></a>Apple School Manager
 
@@ -72,7 +72,7 @@ Apple School Manager je program nákupu a registrace zařízení pro školy. Ste
 
 ## <a name="apple-configurator"></a>Apple Configurator
 
-Zařízení s iOSem můžete zaregistrovat pomocí nástroje Apple Configurator spuštěného na počítači Mac. Zařízení připravíte tak, že je připojíte přes USB a nainstalujete registrační profil. Zařízení můžete pomocí Apple Configuratoru registrovat dvěma způsoby:
+Můžete zaregistrovat zařízení s iOS/iPadOS pomocí Apple Configuratoru spuštěného na počítači Mac. Zařízení připravíte tak, že je připojíte přes USB a nainstalujete registrační profil. Zařízení můžete pomocí Apple Configuratoru registrovat dvěma způsoby:
 
 - Registrace pomocí Pomocníka s nastavením – Vymaže zařízení, připraví ho ke spuštění Pomocníka s nastavením a nainstaluje zásady společnosti pro nového uživatele zařízení.
 - Přímá registrace – Nevymaže zařízení a zaregistruje ho s předdefinovanými zásadami. Tato metoda je vhodná pro zařízení bez přidružení uživatele.
@@ -89,11 +89,11 @@ Přidružení uživatele je nezbytné pro podporu následujících funkcí:
 - Podmíněný přístup k e-mailu a datům společnosti
 - Aplikace Portál společnosti
 
-### <a name="how-users-enroll-corporate-owned-ios-devices-with-user-affinity"></a>Postup registrace zařízení s iOSem vlastněných společností s přidružením uživatele
+### <a name="how-users-enroll-corporate-owned-iosipados-devices-with-user-affinity"></a>Jak uživatelé registrují zařízení s iOS/iPadOS vlastněná společností s přidružením uživatele
 
 1. Když uživatel zapne své zařízení, zobrazí se výzva k dokončení postupu Pomocníka s nastavením.
 2. Po dokončení nastavení se uživateli zobrazí výzva k zadání Apple ID. Aby mohlo zařízení nainstalovat aplikaci Portál společnosti, musí uživatel zadat Apple ID.
-3. Zařízení s iOSem automaticky nainstaluje aplikaci Portál společnosti z App Storu.
+3. Zařízení se systémem iOS/iPadOS automaticky nainstaluje aplikaci Portál společnosti z App Storu.
 4. Uživatelé by měli aplikaci Portál společnosti spustit a přihlásit se pomocí přihlašovacích údajů (jako je jedinečné osobní jméno nebo hlavní název uživatele), které jsou přidružené k jejich předplatnému v Intune.
 5. Po přihlášení se registrace dokončí. Uživatelé teď můžou na zařízení používat kompletní sadu funkcí.
 
@@ -103,6 +103,6 @@ Zařízení nakonfigurovaná bez přidružení uživatele nepodporují aplikaci 
 
 Pokud je požadováno přidružení uživatele, před registrací zařízení zkontrolujte, jestli je u registračního profilu daného zařízení vybraná možnost **Přidružení uživatele**. Pokud chcete stav přidružení zařízení změnit, musíte zařízení nejdřív vyřadit a potom ho znovu zaregistrovat.
 
-## <a name="see-also"></a>Související témata
+## <a name="see-also"></a>Viz také
 
-[Řešení potíží s registrací zařízení s iOS v Microsoft Intune](https://support.microsoft.com/help/4039809)
+[Řešení potíží s registrací zařízení s iOS nebo iPadOS v Microsoft Intune](https://support.microsoft.com/help/4039809)

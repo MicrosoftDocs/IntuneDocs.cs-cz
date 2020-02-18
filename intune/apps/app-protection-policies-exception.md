@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ea66458060417fc828b2b7735b384e8cd3e25a9
-ms.sourcegitcommit: 637375a390b6e34f9c4415c77b99fe2980bbf554
+ms.openlocfilehash: b52a914e1577fe13f0bec970a9c3ebe38aa2cdc8
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75839397"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414948"
 ---
 # <a name="how-to-create-exceptions-to-the-intune-app-protection-policy-app-data-transfer-policy"></a>Jak vytvořit výjimky zásad pro přenos dat zásad Intune App Protection (APP)
 
@@ -38,7 +38,7 @@ V rámci zásad ochrany aplikací Intune nastavení **Allow aplikace pro přenos
 > Změna nebo přidání aplikací do výjimek zásad přenosu dat nemá vliv na jiné zásady ochrany aplikací, jako jsou omezení vyjmutí, kopírování a vložení. 
 
 ## <a name="ios-data-transfer-exceptions"></a>Výjimky přenosu dat pro iOS
-U zásad cílících na iOS můžete nakonfigurovat výjimky přenosu dat pomocí protokolu URL. Pokud chcete přidat výjimku, vyhledejte informace o podporovaných protokolech URL v dokumentaci od vývojáře příslušné aplikace. Další informace o výjimkách přenosu dat pro iOS najdete v tématu [nastavení zásad ochrany aplikací pro iOS – výjimky přenosu dat](app-protection-policy-settings-ios.md#data-transfer-exemptions).
+U zásad cílících na iOS/iPadOS můžete nakonfigurovat výjimky přenosu dat pomocí protokolu URL. Pokud chcete přidat výjimku, vyhledejte informace o podporovaných protokolech URL v dokumentaci od vývojáře příslušné aplikace. Další informace o výjimkách přenosu dat pro iOS/iPadOS najdete v tématu [nastavení zásad ochrany aplikací pro iOS – výjimky přenosu dat](app-protection-policy-settings-ios.md#data-transfer-exemptions).
 
 > [!NOTE]
 > U aplikací jiných výrobců Microsoft nenabízí metodu ručního vyhledání protokolu adresy URL pro vytváření výjimek aplikací. 
@@ -53,9 +53,9 @@ U zásad cílících na Android můžete nakonfigurovat výjimky přenosu dat po
 ### <a name="example"></a>Příklad
 Po přidání balíčku **Webex** jako výjimky k zásadám přenosu dat MAM se budou moct odkazy Webex v e-mailové zprávě spravovaného Outlooku otevírat přímo v aplikaci Webex. V ostatních nespravovaných aplikacích bude přenos dat i nadále omezený.
 
-- Příklad **WebEx** pro iOS: Pokud chcete určit výjimku pro aplikaci **WebEx** , aby ji mohly vyvolávat spravované aplikace Intune, je nutné přidat výjimku přenosu dat pro následující řetězec: <code>wbx</code>
+- Příklad **WebEx** pro iOS/iPadOS: Pokud chcete aplikaci **WebEx** vyloučit, aby ji mohly vyvolávat spravované aplikace Intune, musíte přidat výjimku přenosu dat pro tento řetězec: <code>wbx</code>
     
-- Příklad **map** iOS: Pokud chcete určit výjimku pro nativní aplikaci **Maps** , aby ji mohly vyvolávat spravované aplikace Intune, je nutné přidat výjimku přenosu dat pro následující řetězec: <code>maps</code>
+- Příklad **mapování** pro iOS/iPadOS: Pokud chcete určit výjimku pro nativní aplikaci **Maps** , aby ji mohly vyvolávat spravované aplikace Intune, je nutné přidat výjimku přenosu dat pro následující řetězec: <code>maps</code>
 
 - Příklad **WebEx** pro Android: Pokud chcete určit výjimku pro aplikaci **WebEx** , aby ji mohly vyvolávat spravované aplikace Intune, je nutné přidat výjimku přenosu dat pro následující řetězec: <code>com.cisco.webex.meetings</code>
     

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a5c980b3f9ababaf94aa7b279e533679ed74b0e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 6941b3b79dd690c9861c8efead7f525e56e2b350
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503377"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415416"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Správa zařízení s pracovním profilem Androidu v Intune
 
@@ -55,13 +55,13 @@ Android Enterprise poskytuje infrastrukturu pro nasazení hodnot konfigurace apl
 
 ## <a name="email-configuration"></a>Konfigurace e-mailu
 
-Android Enterprise neposkytuje výchozí e-mailovou aplikaci ani objekt nativního e-mailového profilu, jako jsou ty, které poskytuje iOS. Místo toho je možné nastavit konfigurace e-mailu s použitím nastavení konfigurací aplikací u e-mailových aplikací, které je podporují. Gmail a devět práce jsou dvě klientské aplikace Exchange ActiveSync (EAS) v Obchod Play, které podporují konfiguraci s konfigurací aplikací pro Android Enterprise.
+Android Enterprise neposkytuje výchozí e-mailovou aplikaci ani objekt nativního e-mailového profilu, jako jsou ty, které poskytuje iOS/iPadOS. Místo toho je možné nastavit konfigurace e-mailu s použitím nastavení konfigurací aplikací u e-mailových aplikací, které je podporují. Gmail a devět práce jsou dvě klientské aplikace Exchange ActiveSync (EAS) v Obchod Play, které podporují konfiguraci s konfigurací aplikací pro Android Enterprise.
 
 Když jsou aplikace Gmail a Nine Work spravované jako pracovní aplikace, služba Intune pro ně poskytuje šablony konfigurace. Jiné e-mailové aplikace, které podporují konfigurační profily aplikací, je možné nakonfigurovat pomocí zásad konfigurace mobilních aplikací.
 
 Pokud používáte podmíněný přístup protokolu Exchange ActiveSync pro zařízení se systémem Android Enterprise Work Profile, zvažte použití aplikace Gmail nebo devět pracovních e-mailů. Podporuje se také aplikace Microsoft Outlook pro Android nebo kterákoliv jiná e-mailová aplikace, která používá moderní ověřování prostřednictvím ADAL. Další informace najdete v tématu [Jak nakonfigurovat nastavení e-mailu v Microsoft Intune](../configuration/email-settings-configure.md).
 
-## <a name="app-protection-policies"></a>Zásady ochrany aplikací
+## <a name="app-protection-policies"></a>Zásady ochrany aplikace
 
 Používané zásady ochrany aplikace jsou plně podporované v pracovním i osobním profilu. Obchodní aplikace je možné publikovat na konzole pro publikování aplikací pro Android na adrese https://play.google.com/apps/publish. Tato konzola zahrnuje možnost nastavit pro vaši organizaci aplikace jako soukromé. Další informace najdete v tématu [Přidání zásad dodržování předpisů pro zařízení v systému Android Enterprise Work Profiles v Intune](../protect/compliance-policy-create-android-for-work.md). Obecné informace o zásadách ochrany aplikací najdete v tématu [Co jsou zásady ochrany aplikací](../apps/app-protection-policy.md).
 

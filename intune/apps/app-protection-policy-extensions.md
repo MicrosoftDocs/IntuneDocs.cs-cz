@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ff4fcd7d1b2115c4fbe0bc00759ef3d60482904
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: e568bb5520b4f8cc242cb58a1ee48e8729f4e387
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75692104"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414598"
 ---
 # <a name="protecting-application-extensions"></a>Ochrana rozšíření aplikace
 
@@ -31,7 +31,7 @@ Tento článek popisuje zásady ochrany aplikací pro rozšíření v Microsoft 
 
 ## <a name="add-ins-for-outlook-app"></a>Doplňky pro aplikaci Outlook
 
-Doplňky Outlooku umožňují integrovat oblíbené aplikace s e-mailovým klientem. Doplňky pro Outlook jsou k dispozici na webu, ve Windows, na Macu a v Outlooku pro Android a iOS. Zásady ochrany aplikací Intune APP SDK a Intune nezahrnují podporu pro správu doplňků pro Outlook, ale existují i jiné způsoby, jak omezit jejich používání. Vzhledem k tomu, že se doplňky spravují přes Microsoft Exchange, budou uživatelé moct sdílet data a zprávy v rámci Outlooku a nespravovaných aplikací doplňků (pokud nemají doplňky vypnuté na Exchangi).
+Doplňky Outlooku umožňují integrovat oblíbené aplikace s e-mailovým klientem. Doplňky pro Outlook jsou k dispozici na webu, ve Windows, na Macu a v Outlooku pro Android a iOS/iPadOS. Zásady ochrany aplikací Intune APP SDK a Intune nezahrnují podporu pro správu doplňků pro Outlook, ale existují i jiné způsoby, jak omezit jejich používání. Vzhledem k tomu, že se doplňky spravují přes Microsoft Exchange, budou uživatelé moct sdílet data a zprávy v rámci Outlooku a nespravovaných aplikací doplňků (pokud nemají doplňky vypnuté na Exchangi).
 
 Pokud chcete svým koncovým uživatelům používání a instalaci doplňků Outlooku zakázat (bude to mít vliv na všechny klienty Outlooku), musíte v rolích v Centru pro správu Exchange provést následující změny:
 
@@ -51,7 +51,7 @@ Připojení účtů LinkedIn umožňuje uživatelům zobrazit informace veřejn�
 > [!NOTE]
 > Integrace LinkedIn je momentálně nedostupná pro zákazníky ze státní správy USA a pro organizace s poštovními schránkami Exchange Online v Austrálii, Číně, Francii, Indii, Japonsku, Jižní Koreji, Jihoafrické republice, Kanadě, Německu a Spojeném království.
 
-Sada Intune SDK ani zásady služby Intune App Protection nepodporují správu připojených účtů LinkedIn, ale existují jiné způsoby, jak tyto účty spravovat. Připojení účtů LinkedIn můžete zakázat pro celou organizaci, nebo je můžete povolit pro vybrané skupiny uživatelů ve vaší organizaci. Tato nastavení ovlivňují připojení LinkedIn ve všech aplikacích Office 365 na všech platformách (webové, mobilní a desktopové). Můžete postupovat následovně:
+Sada Intune SDK ani zásady služby Intune App Protection nepodporují správu připojených účtů LinkedIn, ale existují jiné způsoby, jak tyto účty spravovat. Připojení účtů LinkedIn můžete zakázat pro celou organizaci, nebo je můžete povolit pro vybrané skupiny uživatelů ve vaší organizaci. Tato nastavení ovlivňují připojení LinkedIn ve všech aplikacích Office 365 na všech platformách (webové, mobilní a desktopové). Můžete:
 
 - Povolte nebo zakažte připojení účtů LinkedIn pro tenanta na portálu Azure Portal. 
 - Povolte nebo zakažte připojení účtů LinkedIn pro aplikace Office 2016 ve vaší organizaci pomocí zásad skupiny.
@@ -64,13 +64,13 @@ Pokud je integrace LinkedIn pro vašeho tenanta povolena, mají uživatelé ve v
 Pokud uživatel souhlasí se sdílením dat mezi účty stejně jako u doplňků Office, integrace LinkedIn používá existující rozhraní Microsoft Graph API. Integrace LinkedIn používá pouze podmnožinu rozhraní API dostupných pro doplňky Office a podporuje různá vyloučení.
 
 
-|Oprávnění Microsoft Graph  |Description  |
+|Oprávnění Microsoft Graph  |Popis  |
 |---------|---------|
 |Oprávnění ke čtení pro možnost [Lidé](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#people-permissions)     |Umožňuje aplikaci přístup k seznamu osob se skóre, které jsou pro přihlášeného uživatele relevantní. Seznam může obsahovat místní kontakty, kontakty ze sociálních sítí nebo adresáře vaší organizace a osoby z posledních komunikací (například z e-mailu nebo Skypu).         |
 |Oprávnění ke čtení pro možnost [Kalendáře](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#calendars-permissions)     |Umožňuje aplikaci přístup k událostem v uživatelských kalendářích. Zahrnuje schůzky v kalendářích přihlášených uživatelů, jejich časy, umístění a účastníky.         |
 |Oprávnění ke čtení pro možnost [Profil uživatele](https://developer.microsoft.com/graph/docs/concepts/permissions_reference#user-permissions)     |Umožňuje uživatelům přihlásit se k aplikaci a aplikaci umožňuje přístup k profilu přihlášených uživatelů. Také aplikaci umožňuje přístup k základním informacím o společnosti u přihlášených uživatelů.         |
-|Subscriptions     |Tento rozsah se zatím nepoužívá a není proto dostupný. Zahrnuje předplatná, která organizace uživatele poskytuje aplikacím a službám Microsoft, například Office 365.         |
-|Insights     |Tento rozsah se zatím nepoužívá a není proto dostupný. Zahrnuje zájmy přidružené k účtu přihlášeného uživatele podle toho, jak uživatel používá služby Microsoft.         |
+|Předplatná     |Tento rozsah se zatím nepoužívá a není proto dostupný. Zahrnuje předplatná, která organizace uživatele poskytuje aplikacím a službám Microsoft, například Office 365.         |
+|Přehledy     |Tento rozsah se zatím nepoužívá a není proto dostupný. Zahrnuje zájmy přidružené k účtu přihlášeného uživatele podle toho, jak uživatel používá služby Microsoft.         |
 
 ### <a name="learn-more"></a>Další informace
 

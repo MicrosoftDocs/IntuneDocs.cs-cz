@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80ae9b3b1ab274e236ad43c52569574718d3eec4
-ms.sourcegitcommit: 637375a390b6e34f9c4415c77b99fe2980bbf554
+ms.openlocfilehash: ef9810f9414af4d1f57fa71189a6960b491800c0
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75839311"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414886"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Správa přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune
 
@@ -45,7 +45,7 @@ Pomocí zásad ochrany aplikací se službou pro **správu** systému iOS může
 ## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>Konfigurace nastavení hlavního názvu uživatele (UPN) pro Microsoft Intune nebo řešení EMM (Enterprise Mobility Management) jiného výrobce
 Konfigurace nastavení hlavního názvu uživatele (UPN) se **vyžaduje** pro zařízení spravovaná pomocí Intune nebo řešení EMM jiného výrobce k identifikaci zaregistrovaného uživatelského účtu. Konfigurace hlavního názvu uživatele (UPN) spolupracuje se zásadami ochrany aplikací, které nasazujete z Intune. Následující postup představuje obecné informace o tom, jak nakonfigurovat nastavení hlavního názvu uživatele (UPN) a výsledné prostředí uživatele:
 
-1. Na portálu [Azure Portal](https://portal.azure.com)[vytvořte a přiřaďte zásady ochrany aplikací](app-protection-policies.md) pro platformu iOS. Nakonfigurujte nastavení zásad podle požadavků vaší společnosti a vyberte aplikace iOS, které by tyto zásady měly používat.
+1. V [Azure Portal](https://portal.azure.com) [vytvořte a přiřaďte zásady ochrany aplikací](app-protection-policies.md) pro iOS/iPadOS. Nakonfigurujte nastavení zásad podle požadavků vaší společnosti a vyberte aplikace iOS, které by tyto zásady měly používat.
 
 2. Nasaďte aplikace a e-mailový profil, který chcete spravovat prostřednictvím Intune nebo řešení MDM jiného výrobce, pomocí následujících obecných kroků. Na toto prostředí se vztahuje také *Příklad 1*.
 
@@ -74,11 +74,11 @@ Konfigurace nastavení hlavního názvu uživatele (UPN) se **vyžaduje** pro za
 
    |Jiný poskytovatel řešení MDM| Konfigurační klíč | Typ hodnoty | Konfigurační hodnota|
    | ------- | ---- | ---- | ---- |
-   |Microsoft Intune| IntuneMAMUPN | Řetězec | {{UserPrincipalName}}|
-   |VMware AirWatch| IntuneMAMUPN | Řetězec | {UserPrincipalName}|
-   |MobileIron | IntuneMAMUPN | Řetězec | ${userUPN} **nebo** ${userEmailAddress} |
-   |Správa koncových bodů Citrix | IntuneMAMUPN | Řetězec | $ {User. userPrincipalName} |
-   |Správce mobilních zařízení ManageEngine | IntuneMAMUPN | Řetězec | %upn% |
+   |Microsoft Intune| IntuneMAMUPN | String | {{UserPrincipalName}}|
+   |VMware AirWatch| IntuneMAMUPN | String | {UserPrincipalName}|
+   |MobileIron | IntuneMAMUPN | String | ${userUPN} **nebo** ${userEmailAddress} |
+   |Správa koncových bodů Citrix | IntuneMAMUPN | String | $ {User. userPrincipalName} |
+   |Správce mobilních zařízení ManageEngine | IntuneMAMUPN | String | %upn% |
 
 > [!NOTE]  
 > Pokud v případě Outlooku pro iOS nasadíte zásadu konfigurace aplikace spravovaná zařízení s možností "použití návrháře konfigurace" a povolíte možnost **Povolit pouze pracovní nebo školní účty**, konfigurační klíč IntuneMAMUPN se automaticky nakonfiguruje na pozadí zásady. Další podrobnosti najdete v části Nejčastější dotazy v [nové aplikaci Outlook pro zásady konfigurace aplikací pro iOS a Android – konfigurace obecné aplikace](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481). 
@@ -90,7 +90,7 @@ Konfigurace nastavení hlavního názvu uživatele (UPN) se **vyžaduje** pro za
 
 1. Uživatel otevře aplikaci Microsoft OneDrive na zaregistrovaném zařízení s iOS a přihlásí se ke svému pracovnímu účtu.  Účet, který uživatel zadá, musí odpovídat hlavnímu názvu uživatele (UPN) účtu, který jste zadali v nastavení konfigurace aplikace pro aplikaci Microsoft OneDrive.
 
-2. Po přihlášení se u správce nakonfigurovala nastavení aplikace na uživatelský účet na Microsoft OneDrive.  To zahrnuje konfiguraci nastavení **Odeslat organizační data ostatním aplikacím** do **aplikací spravovaných zásadou s hodnotou sdílení operačního systému** .
+2. Po přihlášení správce nakonfiguroval nastavení aplikace na uživatelský účet na Microsoft OneDrive.  To zahrnuje konfiguraci nastavení **Odeslat organizační data ostatním aplikacím** do **aplikací spravovaných zásadou s hodnotou sdílení operačního systému** .
 
 3. Uživatel zobrazí pracovní soubor a pokusí se o sdílení prostřednictvím aplikace Open-in se spravovaným systémem iOS.  
 
@@ -105,7 +105,7 @@ Konfigurace nastavení hlavního názvu uživatele (UPN) se **vyžaduje** pro za
 1. Při spuštění aplikace Word se objeví jedna ze dvou situací:
    1. Data jsou chráněná aplikací Intune, když:
       - Uživatel je přihlášený ke svému pracovnímu účtu, který odpovídá hlavnímu názvu uživatele (UPN) účtu, který jste zadali v nastavení konfigurace aplikace pro aplikaci Microsoft Word. 
-      - Správce nakonfiguroval nastavení aplikace na uživatelský účet v aplikaci Microsoft Word.  To zahrnuje konfiguraci nastavení **přijímat data z jiných aplikací** na **všechny aplikace s hodnotou příchozích dat organizace** .
+      - Nastavení aplikace nakonfigurované správcem se vztahuje na uživatelský účet v aplikaci Microsoft Word.  To zahrnuje konfiguraci nastavení **přijímat data z jiných aplikací** na **všechny aplikace s hodnotou příchozích dat organizace** .
       - Přenos dat je úspěšný a dokument je označený pracovní identitou v aplikaci.  APLIKACE Intune chrání akce uživatelů pro dokument.
    1. Tato data **nejsou** CHRÁNĚNá aplikací Intune, když:
       - Uživatel **není přihlášený** ke svému pracovnímu účtu.
@@ -124,5 +124,5 @@ Například nastavení zásad **vyžadovat kód PIN aplikace** se snadno otestuj
 Nejdřív pro aplikaci pro iOS [vytvořte a přiřaďte zásady ochrany aplikací](app-protection-policies.md). Další informace o tom, jak testovat zásady ochrany aplikací, najdete v tématu [ověření zásad ochrany aplikací](app-protection-policies-validate.md).
 
 
-## <a name="see-also"></a>Související témata
+## <a name="see-also"></a>Viz také
 [Co jsou zásady ochrany aplikací Intune](app-protection-policy.md)

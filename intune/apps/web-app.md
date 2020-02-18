@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90cdff66d32ac5edb3b1867a545f2c9627ccfe39
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: e018fb9888db19995556a6671d93a1db5fa78c2a
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76754775"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415450"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Přidání webových aplikací do Microsoft Intune
 
@@ -33,7 +33,7 @@ Intune podporuje různé typy aplikací, včetně webových. Webová aplikace p�
 
 Abyste mohli aplikaci spravovat a přiřazovat ji uživatelům, přidejte ji do Intune. 
 
-Intune vytvoří zástupce webové aplikace na zařízení uživatele. V případě zařízení se systémem iOS se na domovskou obrazovku přidá zástupce webové aplikace. Pro zařízení s Androidem pro správu zařízení je zástupce webové aplikace přidaný do widgetu portálu společnosti Intune a pomůcka musí být připnuté ručně uživatelem. V případě zařízení s Windows je zástupce webové aplikace umístěný v nabídce Start.
+Intune vytvoří zástupce webové aplikace na zařízení uživatele. Pro zařízení s iOS/iPadOS se na domovskou obrazovku přidá zástupce webové aplikace. Pro zařízení s Androidem pro správu zařízení je zástupce webové aplikace přidaný do widgetu portálu společnosti Intune a pomůcka musí být připnuté ručně uživatelem. V případě zařízení s Windows je zástupce webové aplikace umístěný v nabídce Start.
 
 > [!Note]
 > Aby bylo možné spouštět webové aplikace, musí být na zařízení uživatele nainstalován prohlížeč. 
@@ -71,7 +71,7 @@ Pokud chcete přidat aplikaci do Intune v podobě zástupce aplikace na webu, po
     Zobrazí se okno **Přehled** aplikace, kterou jste vytvořili.
 
 > [!Note]
-> V současnosti jsou webové aplikace nasazené do zařízení s iOS v Intune přidružené k profilu pro správu, takže nejdou odebrat ručně. Na portálu Intune můžete typ nasazení změnit na **Odinstalovat**. V tom případě můžete webovou aplikaci odebrat automaticky. Pokud byste, ještě než změníte přiřazení aplikace na **Odinstalovat**, odebrali nasazení, zůstane webová aplikace trvale v zařízení, dokud v Intune nezrušíte jeho registraci.
+> V současné době je nasazení webových aplikací Intune do zařízení se systémem iOS/iPadOS přidruženo k profilu správy a nelze je odebrat ručně. Na portálu Intune můžete typ nasazení změnit na **Odinstalovat**. V tom případě můžete webovou aplikaci odebrat automaticky. Pokud byste, ještě než změníte přiřazení aplikace na **Odinstalovat**, odebrali nasazení, zůstane webová aplikace trvale v zařízení, dokud v Intune nezrušíte jeho registraci.
 
 Koncoví uživatelé mohou spouštět webové aplikace přímo z aplikace Portál společnosti Windows výběrem webové aplikace a výběrem možnosti **otevřít v prohlížeči**. Publikovaná webová adresa URL se otevře přímo ve webovém prohlížeči. 
 

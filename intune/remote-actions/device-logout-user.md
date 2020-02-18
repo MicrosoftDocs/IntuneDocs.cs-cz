@@ -1,7 +1,7 @@
 ---
-title: Odhlášení uživatele zařízení s iOSem
+title: Odhlášení uživatele zařízení se systémem iOS/iPadOS
 titleSuffix: Microsoft Intune
-description: Zjistěte, jak v Intune odhlásit aktuálního uživatele zařízení s iOSem.
+description: Přečtěte si, jak odhlásit aktuálního uživatele zařízení s iOS/iPadOS pomocí Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdb23916319b06fb4d85b913209d1ac9e007d551
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 6e23f95d169a95244abc8669eb9a19150cff8138
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73713168"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413692"
 ---
-# <a name="logout-the-current-user-on-intune-managed-ios-devices"></a>Odhlášení aktuálního uživatele na zařízení s iOSem spravovaných pomocí Intune
+# <a name="logout-the-current-user-on-intune-managed-iosipados-devices"></a>Odhlášení aktuálního uživatele na zařízeních s iOS nebo iPadOS spravovaných přes Intune
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -35,7 +35,7 @@ Akce **Odhlásit aktuálního uživatele** odhlásí aktuálního uživatele na 
 
 - Windows – nepodporováno
 - Windows Phone – nepodporováno
-- iOS – podporováno v iOSu 9.3 a novějších verzích (jen sdílené iPady)
+- iOS/iPadOS – podporováno v systémech iOS/iPadOS 9,3 a novějších (pouze sdílená zařízení iPad)
 - macOS – nepodporováno
 - Android – nepodporováno
 
@@ -43,7 +43,7 @@ Akce **Odhlásit aktuálního uživatele** odhlásí aktuálního uživatele na 
 
 1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a vyberte **zařízení**.
 4. V okně **Zařízení a skupiny** zvolte **Všechna zařízení**.
-5. V seznamu zařízení, která spravujete, zvolte zařízení s iOSem a potom zvolte vzdálenou akci zařízení **Odhlásit aktuálního uživatele**.
+5. V seznamu zařízení, která spravujete, zvolte zařízení s iOS/iPadOS a pak zvolte akci **Odhlásit aktuálního uživatele** zařízení.
 
 ## <a name="next-steps"></a>Další kroky
 

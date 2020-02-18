@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb67cf2cb17b78c4034c3b73e229e160723d975e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: a4fdbf7ca252af9eb8513d437e3275692a1f8d13
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414395"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415243"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Správa počítačů s Windows jako počítačů prostřednictvím softwarového klienta Intune
 
@@ -30,7 +30,7 @@ ms.locfileid: "73414395"
 > [!WARNING]
 > Microsoft oznámil, že [podpora Windows 7 končí 14 ledna 2020](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020). K tomuto datu přestane také Intune podporovat zařízení s Windows 7. Microsoft důrazně doporučuje přechod na Windows 10, abyste zabránili přerušení služeb a podpory.
 > 
-> Další informace najdete v tématu [plán pro změny v Intune: blíží se konec podpory pro Windows 7](../fundamentals/whats-new.md#intune-plan-for-change-nearing-end-of-support-for-windows-7).
+> Další informace najdete v [příspěvku na blogu o plánu změn](https://aka.ms/Windows7_Intune).
 
 > [!NOTE]
 > V Microsoft Intune můžete spravovat počítače s Windows buď [jako mobilní zařízení prostřednictvím správy mobilních zařízení (MDM)](../enrollment/windows-enroll.md), nebo jako počítače se softwarovým klientem Intune, jak je popsáno níže. Microsoft však zákazníkům doporučuje, aby pokud možno [používali řešení pro správu MDM](../enrollment/windows-enroll.md). Další informace najdete v tématu [porovnání správy počítačů s Windows jako počítačů nebo mobilních zařízení](pc-management-comparison.md) . 
@@ -115,7 +115,7 @@ Další informace o výše uvedených úkolech najdete v části, která se týk
 Některé možnosti správy, které je možné použít ke správě počítačů PC jako mobilních zařízení, není možné použít u počítačů PC, které se spravují pomocí klientského softwaru Intune:
 
 - Úplné vymazání (selektivní vymazání je k dispozici)
-- Conditional Access
+- Podmíněný přístup
 
 Uvědomte si také, že v konzole správce Intune se některé části, jako například **Aktualizace**, **Ochrana** a **Licence**, zobrazí jen v případě, že jsou vaše zařízení zaregistrovaná pomocí klientského softwaru Intune.
 

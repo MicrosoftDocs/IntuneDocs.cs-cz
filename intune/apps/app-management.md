@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09b4cfad0490f35a85e4c72b937b2ba5c0472030
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 84d33e0ff6bbe407d9838f97214f37d042a2e261
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74564373"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414699"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
 
@@ -51,7 +51,7 @@ Intune MAM podporuje dvě konfigurace:
 
 Intune nabízí celou řadu funkcí, které vám pomůžou dostat požadované aplikace na zařízení, na kterých je chcete spouštět. Následující tabulka nabízí souhrn funkcí správy aplikací.
 
-|  | Android/Android Enterprise | iOS | macOS | Windows 10 | Wvdows Phone 8.1 |
+|  | Android/Android Enterprise | iOS/iPadOS | macOS | Windows 10 | Wvdows Phone 8.1 |
 |-------------------------------------------------------------------------------------|---------|-----|-------|------------|-------------------|
 | Přidání a přiřazení aplikací k zařízením a uživatelům | Ano | Ano | Ano | Ano | Ano |
 | Přiřazení aplikací k zařízením nezaregistrovaným v Intune | Ano | Ano | Ne | Ne | Ne |
@@ -85,7 +85,7 @@ Většinu informací týkajících se aplikací najdete v úloze **aplikace** , 
 
 Následující čtyři části popisují možnosti, které jsou k dispozici v podokně **aplikace** .
 
-### <a name="manage"></a>Správa služby Endpoint Protection
+### <a name="manage"></a>Spravovat
 - **Aplikace**: Tuto možnost vyberte pro přidávání, zobrazení, přiřazování a monitorování aplikací používaných vašimi pracovníky. Více informací najdete v následujících tématech:
   - [Přidání aplikací](apps-add.md)
   - [Přiřazení aplikací](apps-deploy.md)
@@ -98,7 +98,7 @@ Následující čtyři části popisují možnosti, které jsou k dispozici v po
   - [Zásady ochrany aplikací](app-protection-policies.md)
 - **Selektivní vymazání aplikace**: Tuto možnost vyberte, pokud chcete odebrat pouze firemní data z vybraného zařízení uživatele. Více informací najdete v následujících tématech:
   - [Selektivní vymazání aplikace](apps-selective-wipe.md)
-- **Zřizovací profily aplikací pro iOS**: Aplikace pro iOS obsahují zřizovací profil a kód, který je podepsaný certifikátem. Když tomuto certifikátu vyprší platnost, není možné aplikaci spustit. Intune poskytuje nástroje pro proaktivní přiřazení nových zásad zřizovacího profilu k zařízením s aplikacemi, kterým brzy vyprší platnost. Více informací najdete v následujících tématech:
+- **zřizovací profily aplikací pro iOS**: aplikace pro iOS/iPadOS obsahují zřizovací profil a kód, který je podepsaný certifikátem. Když tomuto certifikátu vyprší platnost, není možné aplikaci spustit. Intune poskytuje nástroje pro proaktivní přiřazení nových zásad zřizovacího profilu k zařízením s aplikacemi, kterým brzy vyprší platnost. Více informací najdete v následujících tématech:
   - [Zřizovací profily aplikací pro iOS](app-provisioning-profile-ios.md)
 
 Další informace o této části najdete v tématu [Správa aplikací](app-management.md).
@@ -115,7 +115,7 @@ Další informace o této části najdete v tématu [Správa aplikací](app-mana
 Další informace o této části najdete v tématu [Monitorování aplikací](apps-monitor.md).
 
 ### <a name="set-up"></a>Nastavení
-- **Tokeny VPP pro iOS**: Tady můžete použít a zobrazit licence programu VPP (Volume Purchase Program) pro iOS. Více informací najdete v následujících tématech:
+- **tokeny VPP pro iOS**: použijte a zobrazte licence pro iOS/IPadOS Volume purchase program (VPP). Více informací najdete v následujících tématech:
   - [Multilicenční aplikace pro iOS](vpp-apps-ios.md)
 - **Certifikát Windows Enterprise**: Tady můžete použít nebo zobrazit stav certifikátu pro podepisování kódu, který se používá k distribuci obchodních aplikací do spravovaných zařízení s Windows.
 - **Certifikát Windows Symantec**: Tady můžete použít nebo zobrazit stav certifikátu Symantec pro podepisování kódu, který je nutný k distribuci souborů appx pro XAP a WP8.x na zařízení s Windows 10 Mobile.

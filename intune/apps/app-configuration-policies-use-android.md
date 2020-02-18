@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b30da567d1a25028c51cf8268eab9613a7c3b8af
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: 52c8d10f0b8d06d68d75450c3d708f910bc5ddd4
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755444"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415044"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem Enterprise
 
@@ -95,10 +95,10 @@ Pokud jako typ hodnoty zvolíte proměnnou, můžete vybírat z následujících
 | ID účtu | fc0dc142-71d8-4b12-bbea-bae2a8514c81 |
 | ID zařízení Intune | b9841cd9-9843-405f-be28-b2265c59ef97 |
 | Doména | contoso.com |
-| Mail | john@contoso.com |
+| Pošta | john@contoso.com |
 | Částečný hlavní název uživatele | Jan |
 | ID uživatele | 3ec2c00f-b125-4519-acf0-302ac3761822 |
-| Uživatelské jméno | Jan Karásek |
+| Uživatelské jméno | Jan Novák |
 | Hlavní název uživatele | john@contoso.com |
 
 
@@ -112,7 +112,7 @@ Pro zařízení s Androidem použijte následující dvojice klíč/hodnota:
 
    > [!NOTE]
    > Pokud chcete povolit jenom nakonfigurované účty organizace s více identitami, musíte použít Outlook pro Android 2.2.222 a novější, Word, Excel, PowerPoint pro Android 16.0.9327.1000 a novější nebo OneDrive pro Android 5,28 a novější.<p></p>
-   > Jako správce Microsoft Intune můžete určit, které uživatelské účty se přidají do systém Microsoft Office aplikací na spravovaných zařízeních. Můžete omezit přístup jenom na povolené uživatelské účty organizace a zablokovat osobní účty na zaregistrovaných zařízeních. Podpůrné aplikace zpracují konfiguraci aplikace a odeberou a zablokují neschválené účty.<p></p>
+   > Jako správce Microsoft Intune můžete určit, které uživatelské účty se přidají do systém Microsoft Office aplikací na spravovaných zařízeních. Můžete omezit přístup jenom na povolené uživatelské účty organizace a zablokovat osobní účty zaregistrovaných zařízení. Podpůrné aplikace zpracují konfiguraci aplikace a odeberou a zablokují neschválené účty.<p></p>
 
 ## <a name="enter-json-data"></a>Zadat data JSON
 
@@ -152,7 +152,7 @@ Aplikace například používá mikrofon zařízení. Uživatel je vyzván, aby 
 ## <a name="additional-information"></a>Další informace
 
 - [Přiřazení spravované aplikace Google Play k zařízením s Androidem Enterprise](apps-add-android-for-work.md#assigning-a-managed-google-play-app-to-android-enterprise-work-profile-devices)
-- [Nasazení Outlooku pro iOS a nastavení konfigurace aplikací pro Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
+- [Nasazení Outlooku pro iOS/iPadOS a nastavení konfigurace aplikací pro Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 ## <a name="next-steps"></a>Další kroky
 

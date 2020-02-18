@@ -1,6 +1,6 @@
 ---
-title: Vyhledání ztracených zařízení s iOSem pomocí Microsoft Intune – Azure | Microsoft Docs
-description: Vyhledejte ztracené nebo odcizené zařízení s iOSem pomocí funkce Najít zařízení v Microsoft Intune. Získejte podrobnosti o zabezpečení a ochraně osobních údajů při používání akce Najít zařízení.
+title: Vyhledání ztracených zařízení s iOS/iPadOS pomocí Microsoft Intune – Azure | Microsoft Docs
+description: Pomocí funkce najít zařízení v Microsoft Intune Najděte ztracená nebo odcizená zařízení s iOS/iPadOS. Získejte podrobnosti o zabezpečení a ochraně osobních údajů při používání akce Najít zařízení.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -16,22 +16,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 817f46558932c074abc37b45d2885496419a0db0
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: dc276a6235fb4951c83b62e3c488145062814728
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73712424"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415583"
 ---
-# <a name="locate-lost-or-stolen-ios-devices-with-intune"></a>Vyhledání ztracených nebo odcizených zařízení s iOSem přes Intune
+# <a name="locate-lost-or-stolen-iosipados-devices-with-intune"></a>Vyhledání ztracených nebo odcizených zařízení s iOS/iPadOS pomocí Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Pokud chcete zjistit polohu ztraceného nebo odcizeného zařízení s iOSem na mapě, použijte akci **Najít zařízení**. Zařízení musí být v režimu dohledu. Než použijete tuto akci, zkontrolujte, že je zařízení v [režimu ztráty](device-lost-mode.md).
+Pokud chcete zjistit umístění ztraceného nebo odcizeného zařízení s iOS/iPadOS na mapě, použijte akci **Najít zařízení** . Zařízení musí být v režimu dohledu. Než použijete tuto akci, zkontrolujte, že je zařízení v [režimu ztráty](device-lost-mode.md).
 
 ## <a name="supported-platforms"></a>Podporované platformy
 
-- iOS 9.3 nebo novější
+- iOS/iPadOS 9,3 a novější
 
 Tato funkce není podporovaná pro tyto systémy: 
 - Windows
@@ -43,16 +43,16 @@ Tato funkce není podporovaná pro tyto systémy:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Vyberte **Zařízení** a potom **Všechna zařízení**.
-4. Ze seznamu zařízení, která spravujete, vyberte zařízení s iOSem a vyberte **...Další**. Pak zvolte vzdálenou akci **Najít zařízení**.
+4. V seznamu zařízení, která spravujete, vyberte zařízení s iOS/iPadOS a vyberte **... Další**. Pak zvolte vzdálenou akci **Najít zařízení**.
 5. Po nalezení zařízení se jeho poloha zobrazí v části **Najít zařízení**.
     ![Snímek obrazovky z funkcí Najít zařízení pomocí Intune v Azure](./media/device-locate/locate-device.png)
 
 
 ## <a name="activate-lost-mode-sound-alert-on-an-ios-device"></a>Aktivace zvukového upozornění v režimu ztráty na zařízení s iOSem
 
-Pokud někdo ztratil zařízení s iOSem 9.3 nebo novějším, můžete na zařízení vzdáleně aktivovat přehrání zvuku upozornění, aby ho uživatel mohl najít. Zařízení musí být v [režimu ztráty](device-lost-mode.md).
+Pokud někdo ztratil zařízení se systémem iOS/iPadOS 9,3 nebo novějším, můžete zařízení vzdáleně aktivovat a přehrát zvuk, aby ho uživatel mohl najít. Zařízení musí být v [režimu ztráty](device-lost-mode.md).
 
-V [Intune na portálu Azure Portal](https://aka.ms/intuneportal), zvolte **Zařízení** > **Všechna zařízení** > vyberte zařízení s iOSem > **Přehled** > **Více** > **Přehrát zvuk režimu ztráty (jenom pod dohledem)** .
+V [Intune v Azure Portal](https://aka.ms/intuneportal)zvolte **zařízení** > **všechna zařízení** > vyberte zařízení s iOS/IPadOS > **Přehled** > **více** > **Přehrát zvuk režimu ztráty (jenom pod dohledem)** .
 
 Zvuk se bude přehrávat, dokud ho uživatel na zařízení nedeaktivuje nebo se zařízení neodebere z režimu ztráty.
 

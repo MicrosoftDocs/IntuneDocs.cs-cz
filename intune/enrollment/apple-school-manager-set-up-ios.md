@@ -1,7 +1,7 @@
 ---
-title: Registrace programu Apple School Manager pro zařízení s Iosem
+title: Registrace programu Apple School Manager pro zařízení s iOS/iPadOS
 titleSuffix: Microsoft Intune
-description: Přečtěte si, jak pomocí Intune nastavit registraci programu Apple School Manager pro zařízení s iOSem vlastněná společností.
+description: Naučte se, jak pomocí Intune nastavit registraci programu Apple School Manager pro zařízení s iOS a iPadOS vlastněná společností.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c574714b4bd4f748c2dbe898555de35b0e03190
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 3336ed09c414538e2879a7c50d1e3a0111f58b11
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74691828"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415382"
 ---
-# <a name="set-up-ios-device-enrollment-with-apple-school-manager"></a>Nastavení registrace zařízení s iOSem pomocí Apple School Manageru
+# <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Nastavení registrace zařízení s iOS/iPadOS pomocí Apple School Manageru
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Můžete nastavit Intune pro registraci zařízení s Iosem zakoupená prostřednictvím [Apple School Manageru](https://school.apple.com/) programu. Pomocí Intune s Apple School Managerem můžete registrovat velký počet zařízení s iOSem, aniž byste je museli uchopit do ruky. Když student nebo učitel zařízení zapne, Pomocník s nastavením provede předem nakonfigurovaná nastavení a zařízení se zaregistruje ke správě.
+Můžete nastavit Intune pro registraci zařízení se systémem iOS/iPadOS zakoupených prostřednictvím programu [Apple School Manager](https://school.apple.com/) . Pomocí Intune s Apple School Managerem můžete registrovat velké počty zařízení s iOS/iPadOS, aniž byste je museli dotýkat. Když student nebo učitel zařízení zapne, Pomocník s nastavením provede předem nakonfigurovaná nastavení a zařízení se zaregistruje ke správě.
 
 Při povolení registrace přes Apple School Manager budete používat portál Intune i portál Apple School Manager. Abyste mohli zařízení přiřadit do Intune ke správě, potřebujete seznam sériových čísel nebo čísla nákupních objednávek. Vytvoříte registrační profily DEP obsahující nastavení aplikovaná na zařízení během registrace.
 
@@ -44,7 +44,7 @@ Registraci přes Apple School Manager nejde používat s [programem registrace z
 
 ## <a name="get-an-apple-token-and-assign-devices"></a>Získání tokenu Apple a přiřazení zařízení
 
-Než budete moct registrovat zařízení s iOSem vlastněná společností pomocí Apple School Manageru, potřebujete získat soubor tokenu (.p7m) od společnosti Apple. Tento token umožňuje Intune synchronizovat informace o zařízeních v Apple School Manageru. Token také umožňuje Intune odesílat společnosti Apple registrační profily a přiřazovat k těmto profilům zařízení. Na portálu společnosti Apple můžete také přiřadit sériová čísla zařízení pro správu.
+Než budete moct pomocí Apple School Manageru registrovat zařízení s iOS a iPadOS vlastněná společností, potřebujete od společnosti Apple soubor tokenu (. p7m). Tento token umožňuje Intune synchronizovat informace o zařízeních v Apple School Manageru. Token také umožňuje Intune odesílat společnosti Apple registrační profily a přiřazovat k těmto profilům zařízení. Na portálu společnosti Apple můžete také přiřadit sériová čísla zařízení pro správu.
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-an-apple-token"></a>Krok 1: Stáhněte si certifikát veřejného klíče Intune, který je potřebný k vytvoření tokenu Apple.
 
@@ -75,8 +75,8 @@ V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwli
 
 ![Snímek obrazovky s Apple ID použitým k vytvoření tokenu programu registrace a přechodem na token programu registrace](./media/apple-school-manager-set-up-ios/image03.png)
 
-### <a name="step-4-upload-your-token"></a>Krok 4: Nahrajte token.
-V poli **Token Apple** přejděte k souboru certifikátu (.pem), zvolte **Otevřít** a pak zvolte **Vytvořit**. S certifikátem Push Certificate může Intune registrovat a spravovat zařízení s iOSem a vynucovat zásady na zaregistrovaných mobilních zařízeních. Intune automaticky synchronizuje vaše zařízení Apple School Manageru z portálu společnosti Apple.
+### <a name="step-4-upload-your-token"></a>Krok 4. Nahrajte token.
+V poli **Token Apple** přejděte k souboru certifikátu (.pem), zvolte **Otevřít** a pak zvolte **Vytvořit**. Pomocí nabízeného certifikátu může Intune registrovat a spravovat zařízení s iOS/iPadOS tím, že zapisuje zásady do zaregistrovaných mobilních zařízení. Intune automaticky synchronizuje vaše zařízení Apple School Manageru z portálu společnosti Apple.
 
 ## <a name="create-an-apple-enrollment-profile"></a>Vytvoření registračního profilu Apple
 Po nainstalování tokenu můžete vytvořit registrační profil pro zařízení Apple School. Registrační profil zařízení definuje nastavení, která se během registrace použijí pro skupinu zařízení.
@@ -84,7 +84,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **iOS** > **Registrace iOS** > **tokeny programu registrace**.
 2. Vyberte token, zvolte **Profily** a potom zvolte **Vytvořit profil**.
 
-3. V části **Vytvořit profil** zadejte **Název** a **Popis** profilu pro účely správy. Uživatelé tyto podrobnosti nevidí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [dynamických skupinách Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
+3. V části **Vytvořit profil** zadejte **Název** a **Popis** profilu pro účely správy. Uživatelé tyto podrobnosti nevidí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName, který slouží k přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [dynamických skupinách Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
 
     ![Název a popis profilu](./media/apple-school-manager-set-up-ios/image05.png)
 
@@ -106,7 +106,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
     > Ty nejsou podporované při ověřování pomocí Pomocníka s nastavením Apple.
 
 6. Vyberte **Nastavení správy zařízení** a vyberte, jestli chcete, aby byla zařízení, která používají tento profil, pod dohledem.
-    U zařízení **pod dohledem** je ve výchozím nastavení víc možností správy a je zakázaný zámek aktivace. Microsoft doporučuje program DEP používat jako mechanismus pro povolení režimu Pod dohledem zejména organizacím, které nasazují velké množství zařízení s iOSem.
+    U zařízení **pod dohledem** je ve výchozím nastavení víc možností správy a je zakázaný zámek aktivace. Microsoft doporučuje používat DEP jako mechanismus pro povolení režimu pod dohledem, zejména pro organizace, které nasazují velký počet zařízení s iOS/iPadOS.
 
     Uživatelé se dozvědí, že jejich zařízení jsou pod dohledem, dvěma způsoby:
 
@@ -114,9 +114,9 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
    - Na obrazovce **Nastavení** > **Obecné** > **O produktu** je uvedeno: „Tento iPhone je pod dohledem. Společnost Contoso může monitorovat internetové přenosy a zařízení vyhledat.“
 
      > [!NOTE]
-     > Zařízení zaregistrované bez dohledu se dá resetovat do stavu pod dohledem jenom pomocí Apple Configuratoru. Resetování zařízení tímto způsobem vyžaduje připojení zařízení s iOSem k Macu pomocí kabelu USB. Další informace na toto téma získáte v [dokumentaci Apple Configuratoru](http://help.apple.com/configurator/mac/2.3).
+     > Zařízení zaregistrované bez dohledu se dá resetovat do stavu pod dohledem jenom pomocí Apple Configuratoru. Resetování zařízení tímto způsobem vyžaduje připojení zařízení s iOS/iPadOS k počítači Mac pomocí kabelu USB. Další informace na toto téma získáte v [dokumentaci Apple Configuratoru](http://help.apple.com/configurator/mac/2.3).
 
-7. Vyberte, jestli chcete pro zařízení, která používají tento profil, uzamčenou registraci. **Uzamčená registrace** zakáže nastavení iOSu, která umožňují odebrání profilu správy z nabídky **Nastavení**. Po registraci zařízení toto nastavení nemůžete změnit bez vymazání zařízení. Taková zařízení musí mít režim správy **Pod dohledem** nastavený na *Ano*. 
+7. Vyberte, jestli chcete pro zařízení, která používají tento profil, uzamčenou registraci. **Uzamčená registrace** zakáže nastavení pro iOS/iPadOS, která umožňují odebrání profilu správy z nabídky **Nastavení** . Po registraci zařízení toto nastavení nemůžete změnit bez vymazání zařízení. Taková zařízení musí mít režim správy **Pod dohledem** nastavený na *Ano*. 
 
 8. Přihlášení k zaregistrovaným iPady pomocí spravovaného Apple ID se dá dát více uživatelům. Uděláte to tak, že v části **sdílený iPad** kliknete na **Ano** (Tato možnost vyžaduje **zápis bez přidružení uživatele** a režim **pod dohledem** nastavený na **Ano**). Spravovaná Apple ID se vytvářejí na portálu Apple School Manager. Další informace o [sdíleném iPadu](../fundamentals/education-settings-configure-ios-shared.md) a [požadavcích Applu na sdílený iPad](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56)
 
@@ -131,11 +131,11 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
 13. Zvolte **Nastavení Průvodce nastavením** a nakonfigurujte následující nastavení profilu: ![Přizpůsobení Průvodce nastavením](./media/apple-school-manager-set-up-ios/setupassistantcustom.png).
 
 
-    |                 Nastavení                  |                                                                                               Description                                                                                               |
+    |                 Nastavení                  |                                                                                               Popis                                                                                               |
     |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     |     <strong>Název oddělení</strong>     |                                                             Zobrazí se, když uživatelé klepnou při aktivaci na <strong>O konfiguraci</strong>.                                                              |
     |    <strong>Telefon na oddělení</strong>     |                                                          Zobrazí se, když uživatel při aktivaci klikne na tlačítko <strong>Potřebuji nápovědu</strong>.                                                          |
-    | <strong>Možnosti Průvodce nastavením</strong> |                                                     Následující nastavení jsou volitelná a dají se nastavit později v nabídce <strong>Nastavení</strong> systému iOS.                                                      |
+    | <strong>Možnosti Průvodce nastavením</strong> |                                                     Následující volitelná nastavení se dají nastavit později v nabídce <strong>Nastavení</strong> pro iOS/iPadOS.                                                      |
     |        <strong>Heslo</strong>         | Při aktivaci se zobrazí výzva k zadání hesla. Vždy vyžadovat heslo pro nezabezpečená zařízení, pokud není přístup kontrolován jiným způsobem (například celoobrazovkový režim, který zařízení omezuje na jednu aplikaci). |
     |    <strong>Zjišťování polohy</strong>    |                                                                 V případě povolení Průvodce nastavením zobrazí během aktivace výzvu pro tuto službu.                                                                  |
     |         <strong>Obnovení</strong>         |                                                                Pokud je toto nastavení povolené, Průvodce nastavením zobrazí při aktivaci výzvu k zálohování na iCloud.                                                                 |
@@ -184,4 +184,4 @@ Zařízení Apple School Manageru spravovaná přes Intune musí mít před regi
 
 ## <a name="distribute-devices-to-users"></a>Distribuce zařízení uživatelům
 
-Povolili jste správu a synchronizaci mezi společností Apple a Intune a přiřadili jste profil, který umožní registraci zařízení Apple School. Teď můžete zařízení rozdělit mezi uživatele. Když je zařízení Apple School Manageru v iOS zapnuté, zaregistruje se pro správu službou Intune. Profily nelze použít na aktivované zařízení, která jsou aktuálně používána, dokud nebude vymazáno zařízení.
+Povolili jste správu a synchronizaci mezi společností Apple a Intune a přiřadili jste profil, který umožní registraci zařízení Apple School. Teď můžete zařízení rozdělit mezi uživatele. Když je zařízení Apple School Manageru pro iOS/iPadOS zapnuté, zaregistruje se pro správu službou Intune. Profily nelze použít na aktivované zařízení, která jsou aktuálně používána, dokud nebude vymazáno zařízení.

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/05/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a56d8f7aface3628ba5bc8985128ebb49c9cf404
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: 867873c78b34d5573084a3a6e44d7d4d67846423
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812174"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413650"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Nastavení pravidel na zařízeních pro povolení přístupu k prostředkům ve vaší organizaci pomocí Intune
 
@@ -104,7 +104,9 @@ Intune také obsahuje sadu předdefinovaných nastavení zásad dodržování p�
   - Povolí portálu společnosti používat služby zjišťování polohy.
   - vyhodnocovat a hlásit do Intune stav jailbreaku minimálně každých 72 hodin. V opačném případě je zařízení označeno jako nedodržující předpisy. Vyhodnocování se aktivuje otevřením aplikace Portál společnosti nebo fyzicky přesunutím měřičů zařízení 500 nebo dalších. Pokud zařízení nepřesouvá 500 metrů za 72 hodin, musí uživatel otevřít aplikaci Portál společnosti pro vylepšené vyhodnocování přerušení jailbreak.
 
-- **Doba platnosti stavu dodržování předpisů (dny)** : Zadejte časové období, během kterého zařízení nahlásí stav všech přijatých zásad dodržování předpisů. Zařízení, která během tohoto období nevrátí stav, se považují za nedodržující předpisy. Výchozí hodnota je 30 dní.
+- **Doba platnosti stavu dodržování předpisů (dny)** : Zadejte časové období, během kterého zařízení nahlásí stav všech přijatých zásad dodržování předpisů. Zařízení, která během tohoto období nevrátí stav, se považují za nedodržující předpisy. Výchozí hodnota je 30 dní. Minimální hodnota je 1 den.
+
+  Toto nastavení ukazuje, že **je aktivní** výchozí zásada dodržování předpisů (**zařízení** > **monitorování** > **Nastavení dodržování předpisů**). Úloha na pozadí pro tyto zásady se spouští jednou denně.
 
 Pomocí těchto integrovaných zásad můžete tato nastavení monitorovat. Intune také aktualizuje [nebo zjišťuje aktualizace](create-compliance-policy.md#refresh-cycle-times) v různých intervalech v závislosti na platformě zařízení. [Běžné otázky, problémy a řešení se zásadami a profily zařízení v Microsoft Intune](../configuration/device-profile-troubleshoot.md) jsou dobrým prostředkem.
 
@@ -140,7 +142,7 @@ Následující tabulka popisuje, jak se spravují nevyhovující nastavení při
 - [Vytvořte zásadu](create-compliance-policy.md) a zobrazte požadované součásti.
 - Podívejte se na nastavení dodržování předpisů pro různé platformy zařízení:
 
-  - [Androidem](compliance-policy-create-android.md)
+  - [Androidemem](compliance-policy-create-android.md)
   - [Android Enterprise](compliance-policy-create-android-for-work.md)
   - [iOS](compliance-policy-create-ios.md)
   - [macOS](compliance-policy-create-mac-os.md)

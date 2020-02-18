@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b58cbd0aa07babd36c7a7e5aa3dcc5b8d32d58a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 7c27debc75ac02ab86eb93ce4e5af8c81464d0d4
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73415039"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415232"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Podporované operační systémy a prohlížeče v Intune
 
 Před nastavením Microsoft Intune zkontrolujte podporované operační systémy a prohlížeče.
 
-Nápovědu k instalaci Intune na zařízení, najdete v článku [práce pomocí spravovaných zařízení](https://docs.microsoft.com/intune-user-help/company-portal-frequently-asked-questions) a [využití šířky pásma sítě Intune](network-bandwidth-use.md).
+Nápovědu k instalaci Intune na zařízení najdete v tématu [použití spravovaných zařízení k tomu, abyste mohli provádět práce](https://docs.microsoft.com/intune-user-help/company-portal-frequently-asked-questions) a [využití šířky pásma Intune](network-bandwidth-use.md).
 
 Další informace o podpoře poskytovatele konfigurační služby najdete v referenčních informacích o [poskytovateli služby konfigurace](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
 
@@ -87,7 +87,7 @@ Modely zařízení Samsung v následujícím seznamu nepodporují Knox. Aplikace
 
 ### <a name="windows-pc-software-client"></a>Softwarový klient pro počítače s Windows
 
-Jako alternativní metodu registrace jde na počítače s Windows nasadit a nainstalovat [softwarového klienta Intune](manage-windows-pcs-with-microsoft-intune.md). Tato funkce je dostupná jen při používání klasického portálu Intune. Softwarového klienta Intune můžete použít ke správě počítačů s Windows 7 a novějšími s výjimkou Windows 10 Home.
+Jako alternativní metodu registrace jde na počítače s Windows nasadit a nainstalovat [softwarového klienta Intune](manage-windows-pcs-with-microsoft-intune.md). Tato funkce je dostupná jen při používání klasického portálu Intune. Softwarového klienta Intune můžete použít ke správě 10 a novějších počítačů s výjimkou Windows 10 Home Edition.
 
 > [!Note]
 > Společnost Microsoft oznámila, že podpora Windows 7 končí od ledna 14 2020. K tomuto datu přestane také Intune podporovat zařízení s Windows 7.
@@ -106,7 +106,7 @@ You can manage [Exchange ActiveSync devices](../enrollment/device-enrollment.md#
 
 Různé úlohy správy vyžadují, abyste použili některý z následujících webů pro správu.
 
-- [Centrum pro správu Microsoftu 365](https://go.microsoft.com/fwlink/p/?LinkId=698854)
+- [Centrum pro správu Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Azure Portal](https://portal.azure.com/)
 
 Portály podporují následující prohlížeče:

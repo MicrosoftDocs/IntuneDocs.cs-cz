@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11e3465c583197582a545cdd6f4b71bc8d24e115
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: af4270587ab5894d52a7d12b1c2082b7b3298e51
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76754197"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413747"
 ---
 # <a name="see-device-details-in-intune"></a>Zobrazení podrobností o zařízení v Intune
 
@@ -57,7 +57,7 @@ V závislosti na tom, jaký dopravce zařízení používá, se nemusí shromaž
 > [!Note]  
 > Inventář hardwaru a softwaru se ve službě Intune aktualizuje každých 7 dní.
 
-|Údaj|Description|Platforma| 
+|Údaj|Popis|Platforma| 
 |--------------|----------------------|----|  
 |Název|Název zařízení|Windows, iOS|
 |Název správy|Název zařízení používaný jenom v konzole. Změnou tohoto názvu nedojde ke změně názvu v zařízení.|Windows, iOS|
@@ -73,25 +73,25 @@ V závislosti na tom, jaký dopravce zařízení používá, se nemusí shromaž
 |Úroveň opravy zabezpečení|Úroveň opravy zabezpečení pro zařízení.|Android|
 |Celkové místo v úložišti|Celkové místo úložiště v zařízení (v gigabajtech)|Windows, iOS|
 |Volné místo úložiště|Nevyužité místo úložiště v zařízení (v gigabajtech)|Windows, iOS|
-|IMEI|Mezinárodní identita mobilního zařízení|Windows, iOS, Android|
-|MEID|Identifikátor mobilního zařízení|Windows, iOS, Android|
-|Výrobce|Výrobce zařízení|Windows, iOS, Android|
-|Model|Model zařízení|Windows, iOS, Android|
-|Telefonní číslo|Telefonní číslo přidružené k zařízení|Windows, iOS, Android *|
-|Poskytovatel služeb pro odběratele|Bezdrátový operátor zařízení|Windows, iOS, Android|
-|Mobilní technologie|Rádiový systém používaný zařízením|Windows, iOS, Android|
-|Wi-Fi MAC|Adresa MAC zařízení|Windows, iOS, Android|
-|ICCID|Identifikátor karty s integrovaným obvodem, což je jedinečné identifikační číslo SIM karty|Windows, iOS, Android|
-|Datum zápisu|Datum a čas, kdy se zařízení zaregistrovalo v Intune|Windows, iOS, Android|
-|Poslední kontakt|Datum a čas posledního připojení zařízení k Intune|Windows, iOS, Android|
+|IMEI|Mezinárodní identita mobilního zařízení|Windows, iOS/iPadOS, Android|
+|MEID|Identifikátor mobilního zařízení|Windows, iOS/iPadOS, Android|
+|Výrobce|Výrobce zařízení|Windows, iOS/iPadOS, Android|
+|Model|Model zařízení|Windows, iOS/iPadOS, Android|
+|Telefonní číslo|Telefonní číslo přidružené k zařízení|Windows, iOS/iPadOS, Android *|
+|Poskytovatel služeb pro odběratele|Bezdrátový operátor zařízení|Windows, iOS/iPadOS, Android|
+|Mobilní technologie|Rádiový systém používaný zařízením|Windows, iOS/iPadOS, Android|
+|Wi-Fi MAC|Adresa MAC zařízení|Windows, iOS/iPadOS, Android|
+|ICCID|Identifikátor karty s integrovaným obvodem, což je jedinečné identifikační číslo SIM karty|Windows, iOS/iPadOS, Android|
+|Datum zápisu|Datum a čas, kdy se zařízení zaregistrovalo v Intune|Windows, iOS/iPadOS, Android|
+|Poslední kontakt|Datum a čas posledního připojení zařízení k Intune|Windows, iOS/iPadOS, Android|
 |Kód pro obejití zámku aktivace|Kód, který lze použít k zakázání zámku aktivace.|iOS|
-|Registrováno v Azure AD|Pokud **Ano**, zařízení je registrované v Azure Active Directory|Windows, iOS, Android|
-|Intune je zaregistrované.|Pokud **Ano**, zařízení je zaregistrované v Intune.|Windows, iOS, Android|
-|Dodržování předpisů|Stav dodržování předpisů zařízení|Windows, iOS, Android|
-|EAS aktivované|Pokud **Ano**, pak je zařízení synchronizované s poštovní schránkou Exchange|Windows, iOS, Android|
-|ID aktivace EAS|Identifikátor protokolu Exchange ActiveSync zařízení|Windows, iOS, Android|
-|Pod dohledem|Pokud **Ano**, mají správci nad zařízením lepší kontrolu|Windows, iOS, Android|
-|Šifrované|Pokud **Ano**, jsou data uložená v zařízení šifrovaná|Windows, iOS, Android|
+|Registrované v Azure AD|Pokud **Ano**, zařízení je registrované v Azure Active Directory|Windows, iOS/iPadOS, Android|
+|Intune je zaregistrované.|Pokud **Ano**, zařízení je zaregistrované v Intune.|Windows, iOS/iPadOS, Android|
+|Dodržování předpisů|Stav dodržování předpisů zařízení|Windows, iOS/iPadOS, Android|
+|EAS aktivované|Pokud **Ano**, pak je zařízení synchronizované s poštovní schránkou Exchange|Windows, iOS/iPadOS, Android|
+|ID aktivace EAS|Identifikátor protokolu Exchange ActiveSync zařízení|Windows, iOS/iPadOS, Android|
+|Pod dohledem|Pokud **Ano**, mají správci nad zařízením lepší kontrolu|Windows, iOS/iPadOS, Android|
+|Šifrované|Pokud **Ano**, jsou data uložená v zařízení šifrovaná|Windows, iOS/iPadOS, Android|
 
 > [!Note]  
 > Telefonní číslo není v inventáři na vyhrazených nebo plně spravovaných zařízeních s Androidem Enterprise.

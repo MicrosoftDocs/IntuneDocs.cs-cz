@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dde69fc70522684193f9cf6712a2192f77110dab
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: b780f22fd6823499128a3975f1812a1d1f7c032b
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76754248"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413778"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Co je správa zařízení v Microsoft Intune?
 
@@ -36,7 +36,7 @@ Jako správce IT musíte zajistit, aby spravovaná zařízení poskytovala prost
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Vyberte **Zařízení**. Toto zobrazení obsahuje podrobné informace o jednotlivých zařízeních a o tom, co s nimi můžete dělat, mimo jiné:
 
-   - **Přehled** zobrazuje grafický snímek zaregistrovaných zařízení včetně informací, kolik zařízení používá jednotlivé platformy (Android, iOS a další).
+   - **Přehled** ukazuje vizuální snímek zaregistrovaných zařízení a také ukazuje, kolik zařízení používá různé platformy, včetně Androidu, iOS/iPadOS a dalších.
    - Část **Všechna zařízení** obsahuje seznam zaregistrovaných zařízení, která spravujete.
 
      Pomocí funkce **Export** vytvoříte seznam všech zařízení ve formátu .csv, a to v přírůstcích po 10 000 (Internet Explorer) nebo 30 000 (Microsoft Edge, Chrome).
@@ -66,11 +66,11 @@ Dostupné akce se liší podle platformy zařízení a jeho konfigurace.
   - [Režim ztráty](device-lost-mode.md) (jenom iOS)
   - [Najít zařízení](device-locate.md) (jenom iOS)
   - [Restartovat](device-restart.md) (jenom Windows)
-  - [Resetování PIN kódu ve Windows 10](device-windows-pin-reset.md)
+  - [Resetovat PIN kód ve Windows 10](device-windows-pin-reset.md)
   - [Vzdálené řízení pro Android](teamviewer-support.md)
   - [Synchronizace zařízení](device-sync.md)
   - [Přejmenování zařízení](device-rename.md)
-  - [Poslat vlastní oznámení](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS)
+  - [Poslat vlastní oznámení](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS/iPadOS)
   - [Střídání klíčů BitLockeru](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (jenom Windows)
 
 ## <a name="next-steps"></a>Další kroky

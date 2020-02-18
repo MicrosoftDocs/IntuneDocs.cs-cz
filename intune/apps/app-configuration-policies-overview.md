@@ -1,7 +1,7 @@
 ---
 title: Zásady konfigurace aplikací v Microsoft Intune
 titleSuffix: ''
-description: Zjistěte, jak v Microsoft Intune používat zásady konfigurace aplikací pro zařízení s iOSem nebo Androidem.
+description: Naučte se používat zásady konfigurace aplikací na zařízeních s iOS/iPadOS nebo Androidem v Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c9dc1d95806bcddf423bb4d92dbdf4961c15809
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: a2cf53b26c1617ca7fc493c837e57823c23781bc
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812480"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414857"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Zásady konfigurace aplikací v Microsoft Intune
 
 Zásady konfigurace aplikací vám pomůžou eliminovat problémy s instalací aplikací tím, že vám umožní přiřadit nastavení konfigurace k zásadě, která je přiřazená koncovým uživatelům před spuštěním aplikace. Nastavení se pak doplní automaticky, když je aplikace nakonfigurovaná na zařízeních koncových uživatelů a koncoví uživatelé nepotřebují provádět žádné akce. Nastavení konfigurace jsou pro každou aplikaci jedinečná. 
 
-Zásady konfigurace aplikací můžete vytvářet a používat k poskytování nastavení konfigurace pro aplikace pro iOS i Android. Tato nastavení konfigurace umožňují přizpůsobit aplikaci pomocí konfigurace a správy aplikací. Nastavení zásad konfigurace se používají, když aplikace kontroluje tato nastavení, obvykle při prvním spuštění aplikace. 
+Zásady konfigurace aplikací můžete vytvářet a používat k poskytování konfiguračních nastavení pro iOS/iPadOS nebo pro aplikace pro Android. Tato nastavení konfigurace umožňují přizpůsobit aplikaci pomocí konfigurace a správy aplikací. Nastavení zásad konfigurace se používají, když aplikace kontroluje tato nastavení, obvykle při prvním spuštění aplikace. 
 
 Nastavení konfigurace aplikace může například vyžadovat, abyste zadali některé z následujících údajů:
 
@@ -71,7 +71,7 @@ Výběr **spravovaných aplikací** jako **typ registrace zařízení** konkrét
 ![Typ registrace zařízení](./media/app-configuration-policies-overview/device-enrollment-type.png)
 
 > [!NOTE]
-> Pro aplikace s více identitami, jako je Microsoft Outlook, se můžou zvážit uživatelské předvolby. Prioritní Doručená pošta, například, bude respektovat nastavení uživatele a nemění konfiguraci. Další parametry umožňují řídit, jestli uživatel může nebo nemůže změnit nastavení. Další informace najdete v tématu [nasazení aplikace Outlook pro iOS a nastavení konfigurace aplikací pro Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+> Pro aplikace s více identitami, jako je Microsoft Outlook, se můžou zvážit uživatelské předvolby. Prioritní Doručená pošta, například, bude respektovat nastavení uživatele a nemění konfiguraci. Další parametry umožňují řídit, jestli uživatel může nebo nemůže změnit nastavení. Další informace najdete v tématu [nasazení aplikace Outlook pro iOS/iPadOS a nastavení konfigurace aplikací pro Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 ## <a name="validate-the-applied-app-configuration-policy"></a>Ověření použitých zásad konfigurace aplikace
 
@@ -93,7 +93,7 @@ Zásady konfigurace aplikací můžete ověřit pomocí následujících tří m
 
 ### <a name="ios-configuration-on-unmanaged-devices"></a>Konfigurace iOS na nespravovaných zařízeních
 
-Konfiguraci iOS můžete ověřit pomocí **diagnostického protokolu Intune** na nespravovaných zařízeních pro konfiguraci spravované aplikace. Kromě následujících kroků můžete získat přístup k protokolům spravovaných aplikací pomocí Microsoft Edge. Další informace najdete v tématu [použití Microsoft Edge v iOS pro přístup k protokolům spravovaných aplikací](~/apps/manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
+Konfiguraci iOS/iPadOS můžete ověřit pomocí **diagnostického protokolu Intune** na nespravovaných zařízeních pro konfiguraci spravované aplikace. Kromě následujících kroků můžete získat přístup k protokolům spravovaných aplikací pomocí Microsoft Edge. Další informace najdete v tématu [použití Microsoft Edge v systému iOS/iPadOS pro přístup k protokolům spravovaných aplikací](~/apps/manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
 
 1. Pokud na zařízení ještě není nainstalovaná, Stáhněte si a nainstalujte **Microsoft Edge** z App Storu. Další informace najdete v tématu [Microsoft Intune Protected Apps](apps-supported-intune-apps.md).
 2. Spusťte **Microsoft Edge** a na navigačním panelu vyberte **o** > **intunehelp** .
@@ -137,7 +137,7 @@ Podrobnosti konfigurace aplikace by měly odpovídat zásadám konfigurace aplik
 
 ### <a name="ios-configuration-on-managed-devices"></a>Konfigurace iOS na spravovaných zařízeních
 
-Konfiguraci iOS můžete ověřit pomocí **diagnostického protokolu Intune** na spravovaných zařízeních pro konfiguraci spravované aplikace.
+Konfiguraci iOS/iPadOS můžete ověřit pomocí **diagnostického protokolu Intune** na spravovaných zařízeních pro konfiguraci spravované aplikace.
 
 1. Pokud na zařízení ještě není nainstalovaná, Stáhněte si a nainstalujte **Microsoft Edge** z App Storu. Další informace najdete v tématu [Microsoft Intune Protected Apps](apps-supported-intune-apps.md).
 2. Spusťte **Microsoft Edge** a na navigačním panelu vyberte **o** > **intunehelp** .
@@ -149,7 +149,7 @@ Konfiguraci iOS můžete ověřit pomocí **diagnostického protokolu Intune** n
 
 ### <a name="android-configuration-on-managed-devices"></a>Konfigurace Androidu na spravovaných zařízeních
 
-Konfiguraci iOS můžete ověřit pomocí **diagnostického protokolu Intune** na spravovaných zařízeních pro konfiguraci spravované aplikace.
+Konfiguraci iOS/iPadOS můžete ověřit pomocí **diagnostického protokolu Intune** na spravovaných zařízeních pro konfiguraci spravované aplikace.
 
 Pokud chcete shromažďovat protokoly ze zařízení s Androidem, musíte vy nebo koncový uživatel stáhnout protokoly ze zařízení přes připojení USB (nebo v **Průzkumníku souborů** ekvivalentní na zařízení). Postup je následující:
 
@@ -173,7 +173,7 @@ Když se v protokolech zobrazí parametr konfigurace, u kterého se potvrdí, ž
 
 ### <a name="managed-devices"></a>Spravovaná zařízení
 
-- Přečtěte si, jak používat konfiguraci aplikací u zařízení s iOSem.  Viz [Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOS](app-configuration-policies-use-ios.md).
+- Naučte se používat konfiguraci aplikací u zařízení s iOS/iPadOS.  Viz [Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOS/iPadOS](app-configuration-policies-use-ios.md).
 - Přečtěte si, jak používat konfiguraci aplikací u zařízení s Androidem.  Viz [Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem](app-configuration-policies-use-android.md).
 
 ### <a name="managed-apps"></a>Spravované aplikace

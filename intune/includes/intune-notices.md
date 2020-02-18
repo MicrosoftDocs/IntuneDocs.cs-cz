@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 4e93cb7f2d503704251b16d1af03924358020d4e
-ms.sourcegitcommit: 1aaff35fddb3d06458d739968d28971fed0bb2ba
+ms.openlocfilehash: d360fa5efe2deba2d19cd67e6ed9f8cbb7f864d9
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "77156095"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415080"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune.
 
@@ -126,23 +126,5 @@ Níže najdete seznam běžných zařízení zaregistrovaných v Intune, na kter
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
 Zabalte své aplikace pomocí nejnovější sady Intune App SDK. Můžete také nastavit podmíněné nastavení "vyžadovat minimální verzi operačního systému (pouze upozornění)", které upozorní koncové uživatele na osobní zařízení k upgradu.
-
-### <a name="intune-plan-for-change-nearing-end-of-support-for-windows-7---3042987---"></a>Plán změny v Intune: blíží se konec podpory pro Windows 7.<!-- 3042987 -->
-Stejně jako v MC148476, který jsme odeslali v, od poslední září 2018 a znovu v MC176794 zpátky v březnu 2019, Windows 7 dosáhne konce rozšířené podpory 14. ledna 2020. V tuto chvíli Intune vyřadí podporu pro zařízení s Windows 7, takže můžeme soustředit na naši investici do podpory novějších technologií a zajistit Skvělé nové prostředí pro koncové uživatele. Po tomto datu se v Intune už nebude k dispozici technická pomoc a automatické aktualizace, které vám pomůžou chránit počítač s Windows 7. Společnost Microsoft důrazně doporučuje přejít na Windows 10 před lednem 2020, aby nedocházelo k situaci, kdy potřebujete službu nebo podporu, která už není dostupná. Další informace o životním cyklu podpory pro Windows [najdete tady](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Tuto zprávu dostáváte, protože aktuálně spravujete počítače se systémem Windows 7 pomocí starší verze softwarového agenta Intune pro počítače. Vzhledem k tomu, že zbývá méně než rok, než je prodloužená podpora Windows 7, důrazně doporučujeme vaší organizaci začít upgradovat na Windows 10, jakmile to bude možné.  
-
-Možnosti správy počítačů se vytvářejí přímo v operačním systému Windows 10 a už nemusíte instalovat klientského agenta, jako je softwarový klient Intune pro Windows 7. Od Windows 8.1 používá společnost Microsoft architekturu správy mobilních zařízení (MDM) ke zřízení, konfiguraci, aktualizaci a správě počítačů s Windows. Když nastavíte Intune, můžete zjednodušit registraci zařízení s Windows 10 tak, že [do Intune zaregistrujete počítače s Windows 10](..\windows-enroll.md) prostřednictvím kanálu MDM. Pro správu počítačů s Windows 10 doporučujeme použít toto řešení správy MDM bez agenta.
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
-Doporučujeme, aby vaše organizace okamžitě zvážila tento akční plán:
-
-- Naplánujte a upgradujte loďstev Windows 7 na Windows 10 do 14. ledna 2020.
-- V článku [Podpora nasazení Windows 10](https://docs.microsoft.com/windows/deployment/) najdete další informace o tom, jak upgradovat stávající loďstvo počítačů s Windows 7 na Windows 10.
-- Seznamte se s tím, jak [desktopová aplikace](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure?rtc=1) nabízí nabídku inFastTrack, která vám pomůže s příslibem kompatibility aplikací Microsoftu.
-- Převeďte stávající starší verze zařízení spravovaná klientským softwarem Intune do řešení doporučeného společností Microsoft pro správu Windows 10 pomocí správy MDM. Zaregistrujte všechny nové počítače s Windows 10 pomocí správy MDM pro Intune v Azure Portal.
-
-Další informace najdete v [blogovém příspěvku](https://aka.ms/Windows7_Intune).
 
 

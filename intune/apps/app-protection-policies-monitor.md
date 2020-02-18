@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36a84296aabd2d78cbc3cdc14ffb8f696afa5c22
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 5d2902c876fab12c1ba1e45783327f1ea08ab4d8
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75205254"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414660"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Jak monitorovat zásady ochrany aplikací
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -51,8 +51,8 @@ Doba uchování dat ochrany aplikací je 90 dní. Všechny instance aplikace, kt
 - **Uživatelé označení příznakem**: počet uživatelů, u kterých dochází k problémům s jejich zařízeními. Zařízení s jailbreakem (iOS) a rootem (Android) se hlásí v části **Uživatelé označení příznakem**. Uživatelé se zařízeními, která jsou označená kontrolou ověření identity zařízení Google SafetyNet (Pokud je zapnutá správcem IT), jsou také uvedena zde. 
 - **Uživatelé s potenciálně škodlivými aplikacemi**: počet uživatelů, kteří můžou mít v zařízení s Androidem zjištěnou škodlivou aplikaci Google Play chránit. 
 - **Stav uživatele pro iOS** a **stav uživatele pro Android**: počet uživatelů, kteří použili aplikaci, která má přiřazenou zásadu v pracovním kontextu pro související platformu. Tyto informace zobrazují počet uživatelů spravovaných zásadou a také počet uživatelů, kteří používají aplikaci, na kterou necílí žádné zásady v pracovním kontextu. Tyto uživatele případně můžete k zásadě přidat.
-- **Nejvyšší chráněné aplikace pro iOS** a **nejvyšší chráněné aplikace pro Android**: založené na nejpoužívanějších aplikacích pro iOS a Android zobrazuje tyto informace počet chráněných a nechráněných aplikací podle platformy.
-- **Hlavní nakonfigurované aplikace pro iOS bez registrace** a **shora nakonfigurovaných aplikací pro Android bez registrace**: na základě nejpoužívanějších aplikací pro iOS a Android pro neregistrovaná zařízení se v těchto informacích zobrazuje počet nakonfigurovaných aplikací podle platformy (jako v systému, pomocí zásad konfigurace aplikací).
+- **Nejvyšší chráněné aplikace pro iOS/iPadOS** a **špičkové**aplikace pro Android: založené na nejpoužívanějších aplikacích pro iOS/iPadOS a Android zobrazuje tyto informace počet chráněných a nechráněných aplikací podle platformy.
+- **Hlavní nakonfigurované aplikace pro iOS/IPadOS bez registrace** a **shora nakonfigurovaných aplikací pro Android bez registrace**: na základě nejpoužívanějších aplikací pro iOS/iPadOS a Android pro neregistrovaná zařízení se v těchto informacích zobrazuje počet nakonfigurovaných aplikací podle platformy (jako v systému, pomocí zásad konfigurace aplikace).
 
     > [!NOTE]
     > Pokud máte pro každou platformu více zásad, bude se uživatel považovat za spravovaného zásadou, pokud má přiřazenou minimálně jednu zásadu.
@@ -170,9 +170,9 @@ Pomocí těchto kroků vygenerujte soubor. CSV aplikace App Protection nebo soub
     ![Snímek obrazovky pole pro potvrzení uložení sestavy](./media/app-protection-policies-monitor/app-protection-report-csv-1.png)
    
 > [!NOTE]
-> Intune poskytuje další pole pro vytváření sestav zařízení, včetně ID registrace aplikace, výrobce Androidu, modelu a verze opravy zabezpečení i modelu iOS. V Intune získáte přístup k těmto polím výběrem možnosti **aplikace** > **stav ochrany aplikace** > **Sestava ochrany aplikací: iOS, Android**. Kromě toho tyto parametry pomůžou nakonfigurovat seznam **povolených** pro výrobce zařízení (Android), seznam **povolených** nastavení pro model zařízení (Android a iOS) a **minimální verzi opravy zabezpečení Androidu** .   
+> Intune poskytuje další pole pro vytváření sestav zařízení, včetně ID registrace aplikace, výrobce Androidu, modelu a verze opravy zabezpečení i modelu iOS. V Intune získáte přístup k těmto polím výběrem možnosti **aplikace** > **stav ochrany aplikace** > **Sestava ochrany aplikací: iOS/iPadOS, Android**. Kromě toho tyto parametry pomůžou nakonfigurovat seznam **povolených** pro výrobce zařízení (Android), seznam **povolených** nastavení pro model zařízení (Android a iOS) a **minimální verzi opravy zabezpečení Androidu** .   
  
-## <a name="see-also"></a>Související témata
-- [Správa přenosu dat mezi aplikacemi pro iOS](data-transfer-between-apps-manage-ios.md)
+## <a name="see-also"></a>Viz také
+- [Správa přenosu dat mezi aplikacemi pro iOS/iPadOS](data-transfer-between-apps-manage-ios.md)
 - [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](../fundamentals/end-user-mam-apps-android.md)
-- [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](../fundamentals/end-user-mam-apps-ios.md)
+- [Co očekávat, když je vaše aplikace pro iOS/iPadOS spravovaná zásadami ochrany aplikací](../fundamentals/end-user-mam-apps-ios.md)

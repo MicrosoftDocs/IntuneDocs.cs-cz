@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7cc67ce304dba500095c130e035a0b29322c84ef
-ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
+ms.openlocfilehash: 51538f8994557bba718f0e8344b1da8d3c7193fa
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75956298"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414413"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifikace zařízení jako vlastněných společností
 
@@ -50,11 +50,11 @@ Tato funkce je podporovaná pro následující platformy:
 | Platforma | Čísla IMEI | Sériová čísla |
 |---|---|---|
 | Windows | Podporováno (Windows Phone) | Není podporované |
-| iOS/macOS | Není podporované | Podporováno |
+| iOS/macOS | Není podporované | Podporuje se |
 | V10 za účelem spravovaného operačního systému Android pro správu zařízení | Není podporované | Není podporované |
-| Ostatní systémy Android | Není podporované | Podporováno |
+| Ostatní systémy Android | Není podporované | Podporuje se |
 
-<!-- When you upload serial numbers for corporate-owned iOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple’s device enrollment program (DEP) or Apple Configurator to have them appear as corporate-owned. -->
+<!-- When you upload serial numbers for corporate-owned iOS/iPadOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple’s device enrollment program (DEP) or Apple Configurator to have them appear as corporate-owned. -->
 
 [Přečtete si, jak zjistit sériové číslo zařízení Apple](https://support.apple.com/HT204308).<br>
 [Přečtete si, jak zjistit sériové číslo zařízení s Androidem](https://support.google.com/store/answer/3333000).
@@ -77,8 +77,8 @@ V textovém editoru vypadá soubor .csv takhle:
 ```
 
 > [!IMPORTANT]
-> Některá zařízení s Androidem a iOS mají několik čísel IMEI. Intune dokáže přečíst jen jeden kód IMEI na každé zaregistrované zařízení. Pokud importujete číslo IMEI, ale nejedná se o IMEI v inventáři pomocí Intune, zařízení se klasifikuje jako osobní zařízení místo zařízení vlastněné společností. Pokud importujete více kódů IMEI pro jedno zařízení, zobrazí se u kódů, které nejsou v inventáři, stav registrace **Neznámý**.<br>
->Všimněte si také, že sériová čísla jsou doporučená forma identifikace pro zařízení s iOS.
+> Některá zařízení s Androidem a iOS/iPadOS mají několik čísel IMEI. Intune dokáže přečíst jen jeden kód IMEI na každé zaregistrované zařízení. Pokud importujete číslo IMEI, ale nejedná se o IMEI v inventáři pomocí Intune, zařízení se klasifikuje jako osobní zařízení místo zařízení vlastněné společností. Pokud importujete více kódů IMEI pro jedno zařízení, zobrazí se u kódů, které nejsou v inventáři, stav registrace **Neznámý**.<br>
+>Všimněte si také: sériová čísla jsou doporučeným formulářem identifikace pro zařízení iiOS/iPadOSOS.
 >Sériová čísla Androidu nejsou zaručená jako jedinečná nebo současná. Pokud chcete zjistit, jestli je sériové číslo spolehlivým identifikátorem zařízení, obraťte se na dodavatele zařízení.
 >Sériová čísla, která službě Intune oznámí zařízení, se nemusí shodovat se zobrazenými identifikátory v nabídkách zařízení Nastavení/ O zařízení. Ověřte si typ sériového čísla oznámeného výrobcem zařízení.
 >Pokus o nahrání souborů se sériovými čísly, které obsahují tečky (.), způsobí selhání nahrávání. Sériová čísla s tečkami nejsou podporovaná.

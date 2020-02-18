@@ -16,18 +16,18 @@ ms.assetid: cf4ad6d4-423f-4826-ab8d-6eb7a7cfb559
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8c502bd42d3290bd03c0ce954d55de3073c3f2d
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 7c1ff18a7923d7502e12a9bdb33931089fada6e3
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503215"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414243"
 ---
 # <a name="enrollment-options-for-devices-managed-by-intune"></a>Možnosti registrace pro zařízení spravovaná pomocí Intune
 
 Jako správce služby Intune můžete pomoct uživatelům tím, že nakonfigurujete registraci zařízení a povolíte funkce Intune.  V Intune jsou následující možnosti registrace:
 
-## <a name="terms-and-conditions"></a>podmínky a ujednání
+## <a name="terms-and-conditions"></a>Podmínky a ujednání
 
 Můžete od uživatelů vyžadovat, aby před použitím Portálu společnosti k registraci svých zařízení a přístupu k prostředkům společnosti, jako jsou aplikace a e-mail, přijali podmínky společnosti. Konfigurace podmínek a ujednání je volitelná. Další informace o [podmínkách a ujednáních](terms-and-conditions-create.md).
 
@@ -42,7 +42,7 @@ Přečtěte si další informace o [omezení registrace](enrollment-restrictions
 
 ## <a name="enable-apple-device-enrollment"></a>Povolení registrace zařízení Apple
 
-Pro registraci zařízení s iOSem a macOS je nutný MDM Push Certificate. Přečtěte si [další informace o certifikátech MDM Push Certificate](apple-mdm-push-certificate-get.md).
+Pro registraci zařízení s iOS/iPadOS a macOS se vyžaduje certifikát MDM push Certificate. Přečtěte si [další informace o certifikátech MDM Push Certificate](apple-mdm-push-certificate-get.md).
 
 ## <a name="corporate-identifiers"></a>Podnikové identifikátory
 
@@ -51,7 +51,7 @@ Pro účely identifikace zařízení, která vlastní firma, můžete vytvořit 
 
 Při registraci zařízení můžete uživatele požádat, aby použili dodatečnou metodu ověření, například telefon, PIN kód nebo biometrické údaje. Přečtěte si další informace o [vícefaktorovém ověřování](multi-factor-authentication.md).
 
-## <a name="device-enrollment-manager"></a>správce registrace zařízení
+## <a name="device-enrollment-manager"></a>Správce registrace zařízení
 Můžete nastavit uživatele jako správce registrace zařízení.  Uživatelé – správci registrace zařízení můžou registrovat velké počty mobilních zařízení s jediným uživatelským účtem. Účet správce registrace zařízení (DEM – Device Enrollment Manager) může zaregistrovat až 1 000 zařízení. Přečtěte si další informace o [správcích registrace zařízení](device-enrollment-manager-enroll.md).
 
 ## <a name="device-categories"></a>Kategorie zařízení

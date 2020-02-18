@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f368f5f15f71246a2899f2acb7a791d65df26c99
-ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
+ms.openlocfilehash: a727cf03f53ee003c27708a04ad475f0b370c487
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75857039"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415006"
 ---
 # <a name="intune-discovered-apps"></a>Zjištěné aplikace Intune
 
@@ -56,10 +56,10 @@ Následující seznam poskytuje typ aplikační platformy, aplikace, které jsou
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
 | Windows 10 (aplikace Win32) Poznámka: [vyžaduje rozšíření správy Intune](intune-management-extension.md) na zařízení. | Nepoužitelné | Pouze spravované aplikace | Každých 24 hodin od registrace zařízení |
 | Windows 10 (moderní aplikace) | Jenom spravované moderní aplikace | Všechny moderní aplikace nainstalované v zařízení | Každých 7 dnů od registrace zařízení |
-| Windows 8.1 | Pouze spravované aplikace | Pouze spravované aplikace | Každých 7 dnů od registrace zařízení |
+| Windows 8.1 | Pouze spravované aplikace | Pouze spravované aplikace | Každých 7 dnů od registrace zařízení |
 | Windows Phone 8 | Pouze spravované aplikace | Pouze spravované aplikace | Každých 7 dnů od registrace zařízení |
 | Windows RT | Pouze spravované aplikace | Pouze spravované aplikace | Každých 7 dnů od registrace zařízení |
-| iOS | Pouze spravované aplikace | Všechny aplikace instalované na zařízení | Každých 7 dnů od registrace zařízení |
+| iOS/iPadOS | Pouze spravované aplikace | Všechny aplikace instalované na zařízení | Každých 7 dnů od registrace zařízení |
 | macOS | Pouze spravované aplikace | Všechny aplikace instalované na zařízení | Každých 7 dnů od registrace zařízení |
 | Android | Pouze spravované aplikace | Všechny aplikace instalované na zařízení | Každých 7 dnů od registrace zařízení |
 | Android Enterprise | Pouze spravované aplikace | Jenom aplikace nainstalované v pracovním profilu | Každých 7 dnů od registrace zařízení |
