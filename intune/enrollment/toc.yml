@@ -10,17 +10,17 @@
       href: device-management-capabilities.md
     - name: Možnosti registrace
       href: enrollment-options.md
-- name: Rychlý start
+- name: Rychlé starty
   items:
     - name: Nastavení automatické registrace
       href: quickstart-setup-auto-enrollment.md
     - name: Registrace zařízení s Windows 10
       href: quickstart-enroll-windows-device.md
-- name: Kurzy
+- name: Výukové kurzy
   items:
     - name: Registrace zařízení s Windows pomocí Autopilotu
       href: tutorial-use-autopilot-enroll-devices.md
-    - name: Registrace zařízení se systémem iOS pomocí Programu registrace zařízení
+    - name: Registrace zařízení se systémem iOS/iPadOS pomocí Programu registrace zařízení
       href: tutorial-use-device-enrollment-program-enroll-ios.md
 - name: Koncepty
   items:
@@ -36,7 +36,7 @@
     - name: Vícefaktorové ověřování
       href: multi-factor-authentication.md
       displayName: mfa; multifactor
-    - name: správce registrace zařízení
+    - name: Správce registrace zařízení
       href: device-enrollment-manager-enroll.md
     - name: Mapování zařízení na skupiny
       href: device-group-mapping.md
@@ -84,12 +84,12 @@
         - name: Registrace mobilního zařízení Samsung Knox
           href: android-samsung-knox-mobile-enroll.md
           displayName: kda; kme
-    - name: Nastavení registrace zařízení s iOSem
+    - name: Nastavení registrace zařízení se systémem iOS/iPadOS
       href: ios-enroll.md
       items:
         - name: Program DEP (Device Enrollment Program)
           href: device-enrollment-program-enroll-ios.md
-        - name: Nastavení registrace uživatele pro iOS a iPadOS
+        - name: Nastavení registrace uživatele pro iOS/iPadOS a iPadOS
           href: ios-user-enrollment.md
         - name: Podporované akce a možnosti u registrace uživatele
           href: ios-user-enrollment-supported-actions.md
@@ -109,7 +109,7 @@
         - name: Řešení potíží při registraci zařízení
           href: troubleshoot-device-enrollment-in-intune.md
           displayName: sso
-        - name: Řešení potíží s registrací zařízení s iOSem
+        - name: Řešení potíží s registrací zařízení se systémem iOS/iPadOS
           href: troubleshoot-ios-enrollment-errors.md
         - name: Řešení potíží s registrací zařízení s Windows
           href: troubleshoot-windows-enrollment-errors.md
