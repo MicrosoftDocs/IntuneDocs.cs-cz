@@ -25,11 +25,11 @@
           href: device-restart.md
     - name: Akce zařízení Apple
       items:
-        - name: Vyhledání ztracených zařízení s iOSem
+        - name: Vyhledání ztracených zařízení se systémem iOS/iPadOS
           href: device-locate.md
-        - name: Povolení režimu ztráty zařízení s iOSem
+        - name: Povolení režimu ztráty zařízení systému iOS/iPadOS
           href: device-lost-mode.md
-        - name: Zapnutí režimu iOSu Pod dohledem
+        - name: Zapnutí dohledového režimu systému iOS/iPadOS
           href: device-supervised-mode.md
         - name: Vymazání zařízení s macOS
           href: device-erase.md
