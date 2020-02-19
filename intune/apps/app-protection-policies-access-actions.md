@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c6383b19943b8c501f86894a8c49b2130cb582a
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 64faf797c69302e2a5cdbdde090330ab99fcc2e4
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77414980"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77437881"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Selektivní vymazání dat pomocí zásad ochrany aplikací s podmíněnými spouštěcími akcemi v Intune
 
@@ -59,7 +59,7 @@ Pro iOS/iPadOS budete moct nakonfigurovat akce pro následující nastavení pom
 - Modely zařízení
 - Maximální povolená úroveň hrozby pro zařízení
 
-Pokud chcete použít nastavení **Modely zařízení**, zadejte seznam identifikátorů modelů iOS a oddělte je středníkem. U těchto hodnot se nerozlišují velká a malá písmena. Kromě sestav v Intune pro vstup modelů zařízení můžete najít identifikátor modelu iOS ve sloupci Typ zařízení v [dokumentaci podpory HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types) nebo v tomto [úložišti GitHub třetí strany](https://gist.github.com/adamawolf/3048717).<br>
+Pokud chcete použít nastavení **modelů zařízení** , zadejte středníkem oddělený seznam identifikátorů modelů iOS/iPadOS. U těchto hodnot se nerozlišují velká a malá písmena. Kromě v Intune vytváření sestav pro vstup modelů zařízení můžete najít identifikátor modelu iOS/iPadOS ve sloupci Typ zařízení v [dokumentaci podpory HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types) nebo v tomto [úložišti GitHub třetí strany](https://gist.github.com/adamawolf/3048717).<br>
 Příklad zadání: *iPhone5,2;iPhone5,3*
 
 Na zařízeních koncových uživatelů by klient Intune provedl akci založenou na jednoduché shodě řetězců modelu zařízení zadaných v okně Intune pro zásady ochrany aplikací. Párování zcela závisí na tom, co zařízení ohlásí. Jako správci IT vám doporučujeme toto nastavení otestovat na zařízeních od různých výrobcích a na různých modelech zařízení u malé skupiny uživatelů, abyste si ověřili, že se nastavení chová, jak má. Výchozí hodnotou je **Nenakonfigurováno**.<br>
@@ -67,8 +67,8 @@ Nastavte jednu z následujících akcí:
 - Povolit zadané (blokovat nezadané)
 - Povolit zadané (vymazat nezadané)
 
-**Co se stane, když správce zadá seznam identifikátorů modelů iOS, který se v různých zásadách pro stejné aplikace pro stejného uživatele Intune liší?**<br>
-Pokud mezi dvěma zásadami ochrany aplikací dojde ke konfliktu nakonfigurovaných hodnot, Intune obvykle zvolí nejvíce omezující přístup. Výsledná zásada odeslaná do cílové aplikace, kterou otevírá cílový uživatel Intune, by tedy byla průsečík identifikátorů modelů iOS uvedených v seznamu v *Zásadě A* a *Zásadě B*, které cílí na stejnou kombinaci aplikace a uživatele. *Zásada A* například určuje iPhone5,2;iPhone5,3 a *Zásada B* určuje iPhone5,3. Výsledná zásada, která se uplatní u příslušného uživatele, na kterého cílí současně *Zásada A* i *Zásada B*, bude iPhone5,3. 
+**Co se stane, když správce IT zapíše jiný seznam identifikátorů modelů pro iOS/iPadOS mezi zásadami, které jsou určené pro stejné aplikace pro stejného uživatele Intune?**<br>
+Pokud mezi dvěma zásadami ochrany aplikací dojde ke konfliktu nakonfigurovaných hodnot, Intune obvykle zvolí nejvíce omezující přístup. Proto bude výsledná zásada odesílaná do cílové aplikace otevřené cílovým uživatelem Intune průsečík identifikátorů modelů iOS/iPadOS v *zásadách a* a *zásadě B* , které cílí na kombinaci stejné aplikace/uživatele. *Zásada A* například určuje iPhone5,2;iPhone5,3 a *Zásada B* určuje iPhone5,3. Výsledná zásada, která se uplatní u příslušného uživatele, na kterého cílí současně *Zásada A* i *Zásada B*, bude iPhone5,3. 
 
 ### <a name="android-policy-settings"></a>Nastavení zásad pro Android
 

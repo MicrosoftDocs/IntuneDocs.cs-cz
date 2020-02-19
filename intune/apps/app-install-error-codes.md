@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f79a9bc845cb87c0536552b4d214cb82280b041
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 1a9ce1a881e9a30d0f18cb676e7f7f11c4b5c8b1
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77414682"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77437830"
 ---
 # <a name="intune-app-installation-error-reference"></a>Reference k chybě instalace aplikace Intune
 
@@ -62,7 +62,7 @@ Následující chybové zprávy a popisy poskytují podrobné informace o chybá
 | 0x87D11388 | -2016341112 | zařízení s iOS/iPadOS je momentálně zaneprázdněné.  | Zařízení s iOS/iPadOS bylo zaneprázdněné, což vedlo k chybě. Zařízení bylo uzamčené. Uživatel musí zařízení odemknout, aby se nainstalovala aplikace. |
 | 0x87D13B64 | -2016330908 | Instalace aplikace se nezdařila.  | Došlo k chybě instalace aplikace. k odstranění této chyby je potřeba protokol konzoly iOS/iPadOS. |
 | 0x87D13B66 | -2016330906 | Aplikace je spravovaná, ale její platnost vypršela nebo odebrala uživatel.  | Buď uživatel explicitně odinstaloval aplikaci, nebo vypršela platnost aplikace, ale stahování se nepovedlo, nebo se detekce aplikace neshoduje s odpovědí ze zařízení.   K této chybě může dojít také v závislosti na chybě platformy iOS/iPadOS 9.2.2. |
-| 0x87D13B60 | -2016330912 | Aplikace má naplánovanou instalaci, ale k dokončení transakce potřebuje kód pro uplatnění.  | K této chybě obvykle dochází s aplikacemi pro iOS/iPadOS Store, které jsou placené aplikace. |
+| 0x87D13B60 | -2016330912 | Aplikace má naplánovanou instalaci, ale k dokončení transakce potřebuje kód pro uplatnění.  | K této chybě obvykle dochází u aplikací pro iOS Store, které jsou placené. |
 | 0x87D1041C | -2016345060 | Aplikace nebyla po úspěšném dokončení instalace zjištěna.  | Proces detekce aplikace se neshodoval s odpovědí ze zařízení. |
 | 0x87D13B62 | -2016330910 | Uživatel odmítl nabídku na instalaci aplikace.  | Uživatel během úvodní instalace aplikace klikl na tlačítko Zrušit. Požádejte uživatele, aby požadavek na instalaci přijal příště. |
 | 0x87D13B63 | -2016330909 | Uživatel odmítl nabídku na aktualizaci aplikace.  | Koncový uživatel kliknul na zrušit během procesu aktualizace. Nasaďte podle potřeby nebo dodáte uživateli souhlas s výzvou k upgradu. |
@@ -83,7 +83,7 @@ Následující chybové zprávy a popisy poskytují podrobné informace o chybá
 | 0x87d13b69 | -2016330903 | Licencování VPP zařízení se vztahuje jenom na zařízení se systémem iOS/iPadOS 9.0 +.  | Upgrade ovlivněných zařízení se systémem iOS/iPadOS na iOS/iPadOS 9.0 +. |
 | 0x87d13b8f | -2016330865 | Aplikace je nainstalována na zařízení, ale není spravována.  | K této chybě dochází pouze v obchodních aplikacích. Aplikace se nainstalovala mimo Intune. Pokud chcete tuto chybu vyřešit, odinstalujte aplikaci ze zařízení. Až dojde k dalšímu synchronizaci zařízení, zařízení by mělo aplikaci nainstalovat z Intune. |
 | 0x87d13b68 | -2016330904 | Uživatel odmítl správu aplikací.  | Požádejte uživatele, aby přijal správu aplikací. |
-| 0x87d1279d | -2016335971 | Neznámá chyba.  | K této chybě dochází v aplikacích pro iOS/iPadOS Store, ale scénář chyby je neznámý. |
+| 0x87d1279d | -2016335971 | Neznámá chyba.  | K této chybě dochází v aplikacích pro iOS Store, ale scénář chyby je neznámý. |
 | 0x87D13B9D | -2016330851 | Poslední verzi aplikace se nepovedlo aktualizovat ze starší verze.  | Tato chybová zpráva se zobrazí, pokud je aplikace nainstalovaná a spravovaná, ale má na zařízení nesprávnou verzi. Tato situace zahrnuje situaci, kdy zařízení obdrželo příkaz k aktualizaci aplikace, ale nová verze ještě není nainstalovaná a nahlášená zpět. Tato chyba bude hlášena při prvním vrácení se změnami zařízení po nasazení upgradu a provede se, dokud zařízení neoznámí, že je nainstalována nová verze, nebo dojde k chybě z důvodu jiné chyby. |
 | 0x87D13B6F | -2016330897 | Vypršel časový limit vašeho připojení k Intune.  | Chyba ověření manifestu aplikace z důvodu připojení k síti (časový limit) |
 | 0x87D13B70 | -2016330896 | Ztratili jste připojení k Internetu.  | Nepovedlo se ověřit manifest aplikace kvůli připojení k síti (nedá se najít hostitel). |

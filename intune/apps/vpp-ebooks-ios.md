@@ -1,5 +1,5 @@
 ---
-title: Správa e-knih pro iOS zakoupených v rámci multilicenčního programu
+title: Správa hromadně zakoupených e-knih pro iOS/iPadOS
 titleSuffix: Microsoft Intune
 description: Zjistěte, jak synchronizovat s Intune knihy zakoupené v rámci multilicenčního programu z obchodu pro iOS a jak následně spravovat a sledovat jejich používání.
 keywords: ''
@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08275e2573fe8aae8c59ea25c85cdd8f7a3246ee
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: f7c2bd0603961b9d618b3f743ecb323fb7fc9823
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74563751"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77437864"
 ---
-# <a name="how-to-manage-ios-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Správa e-knih pro iOS zakoupených v rámci multilicenčního programu pomocí Microsoft Intune
+# <a name="how-to-manage-iosipados-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Jak spravovat e-knihy pro iOS/iPadOS, které jste koupili prostřednictvím programu hromadného nákupu, pomocí Microsoft Intune
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -37,16 +37,16 @@ Microsoft Intune pomáhá synchronizovat, spravovat a přiřazovat knihy, které
 Postupy při správě knih jsou podobné jako u [správy aplikací VPP](../vpp-apps-ios.md).
 
 ## <a name="manage-volume-purchased-books-for-ios-devices"></a>Správa knih zakoupených v rámci multilicenčního programu pro zařízení s iOSem
-Více licencí ke knihám pro iOS můžete zakoupit prostřednictvím programu [Apple Volume Purchase Program for Business](https://www.apple.com/business/vpp/) nebo [Apple Volume Purchase Program for Education](https://volume.itunes.apple.com/us/store). Součástí tohoto procesu je vytvoření účtu Apple VPP na webu Apple a odeslání tokenu Apple VPP do Intune.  Potom je možné synchronizovat informace o nákupu v rámci multilicenčního programu s Intune a sledovat využití knih, které jste tímto způsobem koupili.
+Koupíte si více licencí pro knihy iOS/iPadOS prostřednictvím [Apple Volume purchase program pro firmy](https://www.apple.com/business/vpp/) nebo [Apple Volume purchase program pro vzdělávání](https://volume.itunes.apple.com/us/store). Součástí tohoto procesu je vytvoření účtu Apple VPP na webu Apple a odeslání tokenu Apple VPP do Intune.  Potom je možné synchronizovat informace o nákupu v rámci multilicenčního programu s Intune a sledovat využití knih, které jste tímto způsobem koupili.
 
 ## <a name="before-you-start"></a>Než začnete
-Než začnete, musíte od společnosti Apple získat token VPP a nahrát ho do svého účtu Intune. Navíc platí:
+Než začnete, musíte od společnosti Apple získat token VPP a nahrát ho do svého účtu Intune. A dále:
 
 * Pokud jste už dřív použili token VPP s jiným produktem, musíte pro Intune vygenerovat nový token.
 * Tokeny mají platnost jeden rok.
 * Ve výchozím nastavení se Intune synchronizuje se službou Apple VPP dvakrát denně. Ruční synchronizaci můžete spustit kdykoli.
 * Po naimportování tokenu VPP do Intune neimportujte stejný token do žádného jiného řešení správy zařízení. Pokud byste to udělali, mohli byste ztratit přiřazení licence a uživatelských záznamů.
-* Než začnete používat knihy pro iOS s Intune, odeberte všechny existující uživatelské účty VPP vytvořené pomocí jiných řešení správy mobilních zařízení (MDM). V rámci bezpečnostních opatření Intune nesynchronizuje tyto uživatelské účty do Intune. Intune synchronizuje jenom ta data ze služby Apple VPP, která jsou vytvořená pomocí Intune.
+* Než začnete používat iOS/iPadOS Books s Intune, odeberte všechny existující uživatelské účty VPP vytvořené pomocí jiných dodavatelů správy mobilních zařízení (MDM). V rámci bezpečnostních opatření Intune nesynchronizuje tyto uživatelské účty do Intune. Intune synchronizuje jenom ta data ze služby Apple VPP, která jsou vytvořená pomocí Intune.
 * Když přiřadíte knihu k zařízení, musí být v daném zařízení nainstalovaná integrovaná aplikace iBooks. Pokud není, musí koncový uživatel aplikaci přeinstalovat, aby si mohl knihu přečíst. V současné době není možné prostřednictvím Intune obnovit odebrané integrované aplikace.
 * Přiřadit je možné jenom knihy z webu Apple Volume Purchase Program. Není možné nahrát a potom přiřadit knihy, které jste vytvořili interně.
 * V současné době není možné přiřazovat ke kategoriím koncových uživatelů knihy stejně jako aplikace.

@@ -1,7 +1,7 @@
 ---
-title: Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOSem
+title: Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOS nebo iPadOS
 titleSuffix: Microsoft Intune
-description: Přečtěte si, jak používat zásady konfigurace aplikací pro účely předání konfiguračních dat do aplikace pro iOS při jejím spuštění.
+description: Naučte se používat zásady konfigurace aplikací k poskytování konfiguračních dat do aplikace pro iOS/iPadOS při jejím spuštění.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,20 +18,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d4bbd0a5b57391edad726c7e936d0072a791673
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: 6044ff5f8d169e36a11f9289f1772c809723b7fc
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755761"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77438000"
 ---
-# <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOSem
+# <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOS nebo iPadOS
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Zásady konfigurace aplikací se v Microsoft Intune používají k nastavení vlastní konfigurace u aplikací pro iOS. Tato nastavení konfigurace umožňují přizpůsobit aplikaci na základě směru dodavatele aplikace. Tato nastavení (klíče a hodnoty) vám poskytne dodavatel aplikace. Při konfiguraci aplikace je zadáváte jako klíče a hodnoty, nebo jako XML, které je obsahuje.
+Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování vlastních nastavení konfigurace pro aplikaci pro iOS/iPadOS. Tato nastavení konfigurace umožňují přizpůsobit aplikaci na základě směru dodavatele aplikace. Tato nastavení (klíče a hodnoty) vám poskytne dodavatel aplikace. Při konfiguraci aplikace je zadáváte jako klíče a hodnoty, nebo jako XML, které je obsahuje.
 
-Jako správce Microsoft Intune můžete řídit, které uživatelské účty se přidají do aplikací Microsoft Office na spravovaných zařízeních. Můžete omezit přístup jenom na povolené uživatelské účty organizace a zablokovat osobní účty na zaregistrovaných zařízeních. Podpůrné aplikace zpracují konfiguraci aplikace a odeberou a zablokují neschválené účty. Nastavení zásad konfigurace se použije, když ho aplikace zjistí (obvykle při prvním spuštění aplikace).
+Jako správce Microsoft Intune můžete řídit, které uživatelské účty se přidají do aplikací Microsoft Office na spravovaných zařízeních. Můžete omezit přístup jenom na povolené uživatelské účty organizace a zablokovat osobní účty zaregistrovaných zařízení. Podpůrné aplikace zpracují konfiguraci aplikace a odeberou a zablokují neschválené účty. Nastavení zásad konfigurace se použije, když ho aplikace zjistí (obvykle při prvním spuštění aplikace).
 
 Jakmile přidáte zásady konfigurace aplikace, můžete u těchto zásad konfigurace aplikací nastavit přiřazení. Když nastavíte přiřazení zásad, můžete zahrnout a vyloučit skupiny uživatelů, na které se zásady vztahují. Když zvolíte možnost zahrnout jednu nebo více skupin, můžete zahrnout konkrétní nebo integrované skupiny. Mezi integrované skupiny patří **Všichni uživatelé**, **Všechna zařízení** a **Všichni uživatelé a všechna zařízení**. 
 
@@ -41,7 +41,7 @@ Jakmile přidáte zásady konfigurace aplikace, můžete u těchto zásad konfig
 Když máte vybrané zahrnuté skupiny pro zásady konfigurace aplikace, můžete také konkrétní skupiny vyloučit. Podrobnosti najdete v tématu [Zahrnutí a vyloučení přiřazení aplikací v Microsoft Intune](apps-inc-exl-assignments.md).
 
 > [!TIP]
-> Tento typ zásad je nyní k dispozici pouze pro zařízení se systémem iOS 8.0 a novějším. Podporuje následující typy instalací aplikací:
+> Tento typ zásad je nyní k dispozici pouze pro zařízení se systémem iOS/iPadOS 8,0 a novějším. Podporuje následující typy instalací aplikací:
 >
 > - **Spravované aplikace pro iOS z obchodu s aplikacemi**
 > - **Balíček aplikace pro iOS**
@@ -106,7 +106,7 @@ Znaky \{\{ a \}\} se používají jenom pro typy tokenů a nesmí se používat 
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Povolte jenom nakonfigurované účty organizace v aplikacích s více identitami 
 
-U zařízení se systémem iOS použijte následující páry klíč/hodnota:
+Pro zařízení s iOS/iPadOS použijte následující páry klíč/hodnota:
 
 | **Klíč** | IntuneMAMAllowedAccountsOnly |
 |--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -177,17 +177,17 @@ Intune dál v seznamu vlastností podporuje následující typy tokenů:
 - \{\{deviceid\}\} – například **b9841cd9-9843-405f-be28-b2265c59ef97**
 - \{\{userid\}\} – například **3ec2c00f-b125-4519-acf0-302ac3761822**
 - \{\{username\}\} – například **John Doe**
-- \{\{serialnumber\}\} – například **F4KN99ZUG5V2** (pro zařízení s iOSem)
-- \{\{serialnumberlast4digits\}\} – například **G5V2** (pro zařízení s iOSem)
+- \{\{sériové\}\}– například **F4KN99ZUG5V2** (pro zařízení s iOS/iPadOS)
+- \{\{serialnumberlast4digits\}\}– například **G5V2** (pro zařízení se systémem iOS/iPadOS)
 - \{\{aaddeviceid\}\} – například **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
 
 ## <a name="configure-the-company-portal-app-to-support-ios-dep-devices"></a>Konfigurace aplikace Portál společnosti pro podporu zařízení se systémem iOS DEP
 
-Registrace programu DEP (Apple Program registrace zařízení) nejsou kompatibilní s verzí Portál společnosti aplikace App Storu. Aplikaci Portál společnosti můžete ale nakonfigurovat tak, aby podporovala zařízení DEP pro iOS pomocí následujících kroků.
+Registrace programu DEP (Apple Program registrace zařízení) nejsou kompatibilní s verzí Portál společnosti aplikace App Storu. Aplikaci Portál společnosti můžete ale nakonfigurovat tak, aby podporovala zařízení se systémem iOS/iPadOS DEP pomocí následujících kroků.
 
 1. V Intune v případě potřeby přidejte aplikaci Portál společnosti Intune, a to tak, že na > **aplikace** **Intune** > **všechny aplikace** > **Přidat**.
 2. Pokud chcete vytvořit zásady konfigurace aplikace pro Portál společnosti aplikaci, můžete přejít na **aplikace** > **zásady konfigurace aplikací**.
-3. V níže uvedeném XML vytvořte zásadu konfigurace aplikace. Další informace o tom, jak vytvořit zásadu konfigurace aplikace a zadat data XML, najdete v tématu [Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOS](app-configuration-policies-use-ios.md).
+3. V níže uvedeném XML vytvořte zásadu konfigurace aplikace. Další informace o tom, jak vytvořit zásadu konfigurace aplikace a zadat data XML, najdete v tématu [Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOS/iPadOS](app-configuration-policies-use-ios.md).
 
     ``` xml
     <dict>
@@ -205,11 +205,11 @@ Registrace programu DEP (Apple Program registrace zařízení) nejsou kompatibil
 4. Sdělte koncovým uživatelům, aby se k aplikaci Portál společnosti přihlásili při automatické instalaci.
 
 ## <a name="monitor-ios--app-configuration-status-per-device"></a>Monitorování stavu konfigurace aplikací pro iOS podle zařízení 
-Po přiřazení zásad konfigurace můžete monitorovat stav konfigurace aplikací pro iOS pro každé spravované zařízení. V části **Microsoft Intune** na portálu Azure Portal vyberte **Zařízení** > **Všechna zařízení**. V seznamu spravovaných zařízení vyberte konkrétní zařízení, ve kterém se má zobrazit podokno pro zařízení. V podokně zařízení vyberte **Konfigurace aplikace**.  
+Po přiřazení zásady konfigurace můžete monitorovat stav konfigurace aplikace pro iOS/iPadOS pro každé spravované zařízení. V části **Microsoft Intune** na portálu Azure Portal vyberte **Zařízení** > **Všechna zařízení**. V seznamu spravovaných zařízení vyberte konkrétní zařízení, ve kterém se má zobrazit podokno pro zařízení. V podokně zařízení vyberte **Konfigurace aplikace**.  
 
 ## <a name="additional-information"></a>Další informace
 
-- [Nasazení Outlooku pro iOS a nastavení konfigurace aplikací pro Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
+- [Nasazení Outlooku pro iOS/iPadOS a nastavení konfigurace aplikací pro Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 ## <a name="next-steps"></a>Další kroky
 

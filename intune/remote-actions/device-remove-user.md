@@ -1,7 +1,7 @@
 ---
-title: Odebrání uživatele ze zařízení s iOSem pomocí Microsoft Intune
+title: Odebrání uživatele ze zařízení s iOS/iPadOS pomocí Microsoft Intune
 titleSuffix: ''
-description: Zjistěte, jak odebrat uživatele ze sdíleného zařízení s iOSem pomocí Intune.
+description: Naučte se, jak odebrat uživatele ze sdíleného zařízení s iOS nebo iPadOS v Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,25 +17,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 772cdbe203b0489a9b2312a1cc10ea1b3182b35d
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 8b6b2b3492b9edece6b69e4b302741c0443c0a3e
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73713163"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415564"
 ---
-# <a name="remove-a-user-from-a-shared-ios-device"></a>Odebrání uživatele ze sdíleného zařízení s iOSem
+# <a name="remove-a-user-from-a-shared-iosipados-device"></a>Odebrání uživatele ze sdíleného zařízení s iOS/iPadOS
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Akce **Odebrat uživatele** odstraní vybraného uživatele z místní mezipaměti sdíleného zařízení iPad. Zařízení iPad musí být nastavené ke správě aplikace Classroom pro iOS pomocí [vzdělávacího profilu iOS](../fundamentals/education-settings-configure-ios.md). 
+Akce **Odebrat uživatele** odstraní vybraného uživatele z místní mezipaměti sdíleného zařízení iPad. Zařízení iPad musí být nastavené pro správu aplikace pro iOS/iPadOS pomocí [vzdělávacího profilu iOS/iPadOS](../fundamentals/education-settings-configure-ios.md). 
 
 ## <a name="supported-platforms"></a>Podporované platformy
 
 - Windows – nepodporováno
 - Windows Phone – nepodporováno
-- iOS – podporováno v iOSu 9.3 a novějších verzích (jen sdílené iPady)
+- iOS/iPadOS – podporováno v systémech iOS/iPadOS 9,3 a novějších (pouze sdílená zařízení iPad)
 - macOS – nepodporováno
 - Android – nepodporováno
 
@@ -43,7 +43,7 @@ Akce **Odebrat uživatele** odstraní vybraného uživatele z místní mezipamě
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **Zařízení** > **Všechna zařízení**.
-3. Ze seznamu zařízení, která spravujete, vyberte zařízení s iOSem.
+3. V seznamu zařízení, která spravujete, vyberte zařízení s iOS/iPadOS.
 4. V podokně pro zařízení vyberte **Uživatelé**.
 5. V seznamu klikněte pravým tlačítkem na uživatele, kterého chcete odebrat, a pak zvolte **Odebrat uživatele**.
 

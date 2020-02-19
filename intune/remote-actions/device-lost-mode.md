@@ -1,6 +1,6 @@
 ---
-title: Aktivace režimu ztráty u zařízení s iOSem pomocí Microsoft Intune – Azure | Microsoft Docs
-description: Pomocí Microsoft Intune můžete zapnout nebo spustit režim ztráty a přizpůsobit zprávu, která se zobrazí na zamykací obrazovce ztraceného nebo odcizeného zařízení s iOSem. Při použití akce Režim ztráty získáte také podrobnosti o zabezpečení a ochraně osobních údajů.
+title: Aktivace režimu ztráty zařízení s iOS/iPadOS pomocí Microsoft Intune – Azure | Microsoft Docs
+description: Zapněte nebo spusťte režim ztráty a upravte zprávu, která se zobrazí na zamykací obrazovce ztraceného nebo odcizeného zařízení s iOS/iPadOS, pomocí Microsoft Intune. Při použití akce Režim ztráty získáte také podrobnosti o zabezpečení a ochraně osobních údajů.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -16,22 +16,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2956be9e32587c3bf86ce009a6927269c11ffced
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9a4103c819c0d4bd377b9c6ab2359cb7465cdd9c
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73712236"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415597"
 ---
-# <a name="enable-lost-mode-on-ios-devices-with-intune"></a>Zapnutí režimu ztráty u zařízení s iOSem pomocí Intune
+# <a name="enable-lost-mode-on-iosipados-devices-with-intune"></a>Povolení režimu ztráty na zařízeních s iOS/iPadOS pomocí Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Akce zařízení **Režim ztráty** usnadňuje aktivaci režimu ztráty u ztracených nebo odcizených zařízení s iOSem. Tento režim vám umožňuje zadat zprávu a telefonní číslo, které se zobrazuje na zamykací obrazovce zařízení. Abyste mohli režim ztráty použít, musí se jednat o zařízení s iOS ve vlastnictví firmy, které je v režimu dohledu.
+Akce zařízení v **režimu ztráty** vám pomůže zapnout režim ztráty u ztracených nebo odcizených zařízení s iOS/iPadOS. Tento režim vám umožňuje zadat zprávu a telefonní číslo, které se zobrazuje na zamykací obrazovce zařízení. Pokud chcete použít režim ztráty, musí být zařízení ve vlastnictví firmy iOS/iPadOS, které je v režimu pod dohledem.
 
 ## <a name="supported-platforms"></a>Podporované platformy
 
-- iOS 9.3 nebo novější
+- iOS/iPadOS 9,3 a novější
 
 Tato funkce není podporovaná pro: 
 - Windows
@@ -43,7 +43,7 @@ Tato funkce není podporovaná pro:
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Vyberte **Zařízení** a potom **Všechna zařízení**.
-4. V seznamu zařízení, která spravujete, zvolte zařízení s iOS a pak zvolte **režim ztráty (jenom pod dohledem)** .
+4. V seznamu zařízení, která spravujete, zvolte zařízení s iOS/iPadOS a pak zvolte **režim ztráty (jenom pod dohledem)** .
 5. V části **režim ztráty**vyberte **Povolit**.
 6. Ve **zprávě, která se má zobrazit na zamykací obrazovce**zadejte zprávu, která se zobrazí na zamykací obrazovce zařízení.
 7. Volitelně můžete zadat telefonní číslo do pole **telefonní číslo, které se má zobrazit** .

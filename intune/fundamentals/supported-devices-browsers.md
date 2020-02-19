@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c27debc75ac02ab86eb93ce4e5af8c81464d0d4
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: e28f8a2cc43e4ca210a391151383633da457c056
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415232"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77437915"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Podporované operační systémy a prohlížeče v Intune
 
@@ -92,11 +92,11 @@ Jako alternativní metodu registrace jde na počítače s Windows nasadit a nain
 > [!Note]
 > Společnost Microsoft oznámila, že podpora Windows 7 končí od ledna 14 2020. K tomuto datu přestane také Intune podporovat zařízení s Windows 7.
 >
-> Další informace najdete v tématu [plán pro změny v Intune: blíží se konec podpory pro Windows 7.](https://docs.microsoft.com/intune/fundamentals/whats-new#intune-plan-for-change-nearing-end-of-support-for-windows-7)
+> Další informace najdete v tématu [plán pro změny v Intune: konec podpory pro Windows 7](https://docs.microsoft.com/intune/fundamentals/whats-new#windows-7-ends-extended-support-).
 >
 > Microsoft Intune vyřadí podporu pro konzolu Intune založenou na Silverlightu 15. října 2020. Toto vyřazení zahrnuje koncovou podporu konzoly Silverlight nakonfigurovaného POČÍTAČového softwaru klienta (označuje se také jako agent pro počítače).
 >
-> Další informace najdete v tématu [Microsoft Intune ukončení podpory pro konzolu správce na bázi Silverlight](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Take-Action-Microsoft-Intune-ending-support-for-the-Silverlight/ba-p/916249) .
+> Další informace najdete v tématu [Microsoft Intune ukončení podpory pro konzolu pro správu na bázi Silverlight](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Take-Action-Microsoft-Intune-ending-support-for-the-Silverlight/ba-p/916249).
 
 <!--  ### Exchange ActiveSync management
 

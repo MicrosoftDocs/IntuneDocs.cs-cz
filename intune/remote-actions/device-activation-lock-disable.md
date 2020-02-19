@@ -1,7 +1,7 @@
 ---
-title: Vyřazení zámku aktivace v iOSu přes Intune
+title: Obejít Zámek aktivace pro iOS/iPadOS s Intune
 titleSuffix: Microsoft Intune
-description: Přečtěte si, jak se dá přes Intune vyřadit zámek aktivace v iOSu, aby bylo možné přistupovat k uzamčeným zařízením.
+description: Přečtěte si, jak pomocí Intune obejít iOS/iPadOS Zámek aktivace pro přístup k uzamčeným zařízením.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,19 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c3847890a4871b784764a5beca46f6776d52d3f
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: 3f67a08ef3cbfae4a801333e5f8ffb5469e723ed
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76761277"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77438051"
 ---
-# <a name="disable-activation-lock-on-supervised-ios-devices-with-intune"></a>Zakázání Zámek aktivace na zařízeních s iOS pod dohledem v Intune
+# <a name="disable-activation-lock-on-supervised-iosipados-devices-with-intune"></a>Zakázání Zámek aktivace na zařízeních s iOS/iPadOS pod dohledem v Intune
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Microsoft Intune vám může pomoci spravovat zámek aktivace v iOSu – funkci aplikace Najít iPhone pro zařízení s iOSem 8.0 a novějším. Zámek aktivace je automaticky zapnutý, když uživatel na zařízení otevře aplikaci Najít iPhone. Když je tato funkce povolená, musí se zadat Apple ID a heslo uživatele, aby bylo možné:
+Microsoft Intune vám může pomáhat spravovat Zámek aktivace pro iOS/iPadOS, což je funkce aplikace Najít iPhone pro zařízení s iOS/iPadOS 8,0 a novějším. Zámek aktivace je automaticky zapnutý, když uživatel na zařízení otevře aplikaci Najít iPhone. Když je tato funkce povolená, musí se zadat Apple ID a heslo uživatele, aby bylo možné:
 
 - Vypnout aplikaci Můj iPhone
 - Vymazat zařízení
@@ -38,21 +38,21 @@ Microsoft Intune vám může pomoci spravovat zámek aktivace v iOSu – funkci 
 
 ## <a name="how-activation-lock-affects-you"></a>Jaký vliv má funkce Zámek aktivace na práci se zařízením
 
-Funkce Zámek aktivace sice pomáhá zabezpečit zařízení se systémem iOS a zvyšuje šance na obnovení zařízení v případě, že dojde k jeho ztrátě nebo odcizení, ale pro vás, jakožto správce IT, může představovat určité problémy. Například:
+I když Zámek aktivace pomáhá zabezpečit zařízení s iOS/iPadOS a vylepšuje pravděpodobnost obnovování ztraceného nebo odcizeného zařízení, může vám jako správce IT předcházet několik problémů. Příklad:
 
 - Uživatel si na zařízení nastaví zámek aktivace. Tento uživatel pak společnost opustí a zařízení vrátí. Bez Apple ID a hesla uživatele neexistuje způsob, jak zařízení znovu aktivovat.
 - Potřebujete sestavu všech zařízení, která mají povolený zámek aktivace.
 - Při obnovování zařízení v organizaci chcete některá zařízení přiřadit jinému oddělení. Můžete to provést jedině se zařízeními, ve kterých není zámek aktivace povolený.
 
-Aby bylo možné tyto problémy vyřešit, společnost Apple zavedla Zámek aktivace zakázat v iOS 7,1. Disable Zámek aktivace umožňuje odebrat Zámek aktivace ze zařízení pod dohledem bez Apple ID a hesla uživatele. Dozorovaná zařízení mohou generovat kód pro vyřazení zámku aktivace, který je uložený na aktivačním serveru společnosti Apple.
+Aby bylo možné tyto problémy vyřešit, společnost Apple zavedla Zámek aktivace zakázat v systému iOS/iPadOS 7,1. Disable Zámek aktivace umožňuje odebrat Zámek aktivace ze zařízení pod dohledem bez Apple ID a hesla uživatele. Dozorovaná zařízení mohou generovat kód pro vyřazení zámku aktivace, který je uložený na aktivačním serveru společnosti Apple.
 
 >[!TIP]
->Režim Pod dohledem pro zařízení s iOSem vám umožňuje pomocí Apple Configuratoru zařízení zamknout a omezit tak jeho funkčnost jenom na konkrétní firemní účely. Režim dohledu se používá jenom u zařízení v majetku podniků.
+>Režim pod dohledem pro zařízení s iOS/iPadOS umožňuje pomocí Apple Configuratoru zamknout zařízení a omezit funkčnost jenom na konkrétní obchodní účely. Režim dohledu se používá jenom u zařízení v majetku podniků.
 
 Další informace o zámku aktivace najdete na [webu společnosti Apple](https://support.apple.com/HT201365).
 
 ## <a name="how-intune-helps-you-manage-activation-lock"></a>Jak Intune pomáhá se správou zámku aktivace
-Intune může požádat o stav zámku aktivace u dozorovaných zařízení, na kterých běží iOS 8.0 a novější. V případě zařízení pod dohledem může Intune získat kód pro zákaz Zámek aktivace a přímo ho vydat do zařízení. Pokud bylo zařízení vymazáno, můžete k němu získat přístup přímo tak, že uživatelské jméno necháte prázdné a jako heslo zadáte tento kód.
+Intune může požádat o stav Zámek aktivace zařízení pod dohledem, na kterých běží iOS/iPadOS 8,0 a novější. V případě zařízení pod dohledem může Intune získat kód pro zákaz Zámek aktivace a přímo ho vydat do zařízení. Pokud bylo zařízení vymazáno, můžete k němu získat přístup přímo tak, že uživatelské jméno necháte prázdné a jako heslo zadáte tento kód.
 
 **Správy zámku aktivace pomocí Intune přináší firmám následující výhody:**
 
@@ -62,7 +62,7 @@ Intune může požádat o stav zámku aktivace u dozorovaných zařízení, na k
 ## <a name="before-you-start"></a>Než začnete
 Než budete moct Zámek aktivace na zařízeních zakázat, je potřeba, abyste je povolili pomocí následujících pokynů:
 
-1. Nakonfigurujte profil omezení zařízení Intune pro iOS pomocí informací uvedených v [postupu pro konfiguraci nastavení omezení zařízení](/intune-azure/configure-devices/how-to-configure-device-restrictions).
+1. Nakonfigurujte profil omezení zařízení Intune pro iOS/iPadOS s použitím informací v tématu [jak nakonfigurovat nastavení omezení zařízení](/intune-azure/configure-devices/how-to-configure-device-restrictions).
 2. V [nastavení omezení pro zařízení s iOS](../configuration/device-restrictions-ios.md) v části **Obecné** povolte možnost **Zámek aktivace**.
 3. Uložte profil a [přiřaďte ho](../configuration/device-profile-assign.md) k zařízením, na kterých chcete spravovat zámek aktivace zakázat.
 
@@ -72,7 +72,7 @@ Než budete moct Zámek aktivace na zařízeních zakázat, je potřeba, abyste 
 >[!IMPORTANT]
 >Když Zámek aktivace v zařízení zakážete, je při spuštění aplikace Najít iPhone automaticky použita nová Zámek aktivace. Z tohoto důvodu **byste měli mít před provedením tohoto postupu zařízení fyzicky u sebe**.
 
-Akce **zakázat zámek aktivace** vzdáleného zařízení v Intune odebere zámek aktivace ze zařízení s iOS bez nutnosti Apple ID a hesla uživatele. Když Zámek aktivace zakážete, zařízení se znovu zapne Zámek aktivace při spuštění aplikace Najít iPhone. Zakažte Zámek aktivace jenom v případě, že máte fyzický přístup k zařízení.
+Akce **zakázat zámek aktivace** vzdálené zařízení v Intune odebere zámek aktivace ze zařízení se systémem iOS/iPadOS, aniž by bylo nutné použít Apple ID a heslo uživatele. Když Zámek aktivace zakážete, zařízení se znovu zapne Zámek aktivace při spuštění aplikace Najít iPhone. Zakažte Zámek aktivace jenom v případě, že máte fyzický přístup k zařízení.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. V okně **Intune** vyberte **Zařízení**.
@@ -84,7 +84,7 @@ Akce **zakázat zámek aktivace** vzdáleného zařízení v Intune odebere zám
     >Před vymazáním zařízení si kód zkopírujte. Když nastavení zařízení obnovíte před zkopírováním kódu, kód se z Azure odebere.
 
 7. Přejděte do okna zařízení **Přehled** a pak vyberte **Vymazat**.
-8. Jakmile se zařízení obnoví, zobrazí se výzva k zadání *Apple ID* a *hesla*. Pole *ID* nechte prázdné a jako *heslo* zadejte **kód pro překonání zámku**. Tímto se účet odebere ze zařízení. 
+8. Jakmile se zařízení obnoví, zobrazí se výzva k zadání *Apple ID* a *hesla*. Pole *ID* nechte prázdné a jako **heslo** zadejte *kód pro překonání zámku*. Tímto se účet odebere ze zařízení. 
 
 
 ## <a name="next-steps"></a>Další kroky

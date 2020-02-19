@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b52a914e1577fe13f0bec970a9c3ebe38aa2cdc8
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 09c8a8819c288663936174e9317267c39eac63bc
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77414948"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77437847"
 ---
 # <a name="how-to-create-exceptions-to-the-intune-app-protection-policy-app-data-transfer-policy"></a>Jak vytvořit výjimky zásad pro přenos dat zásad Intune App Protection (APP)
 
@@ -66,7 +66,7 @@ Po přidání balíčku **Webex** jako výjimky k zásadám přenosu dat MAM se 
     
     <code>com.samsung.android.messaging</code>
 
-- Příklad **instalačního programu certifikátů** pro Android: Pokud chcete určit výjimku pro nativní aplikaci **instalátoru certifikátů** , aby Outlook pro Android mohl nainstalovat certifikát S/MIME (doručený jako příloha e-mailu) do úložiště klíčů Androidu, musíte přidat výjimku přenosu dat pro následující řetězec: <code>com.android.certinstaller</code>. Další informace najdete v tématu [citlivostní označování a ochrana v Outlooku pro iOS a Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android).
+- Příklad **instalačního programu certifikátů** pro Android: Pokud chcete určit výjimku pro nativní aplikaci **instalátoru certifikátů** , aby Outlook pro Android mohl nainstalovat certifikát S/MIME (doručený jako příloha e-mailu) do úložiště klíčů Androidu, musíte přidat výjimku přenosu dat pro následující řetězec: <code>com.android.certinstaller</code>. Další informace najdete v tématu [citlivostní označování a ochrana v Outlooku pro iOS/iPadOS a Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android).
 
 ## <a name="next-steps"></a>Další kroky
 

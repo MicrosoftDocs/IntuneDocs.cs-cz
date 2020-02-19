@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2a5629e6a318836e23c6a2f7fceb59363a0ed72
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: cd6e58efa096c006780c17d991a9ea5da26099d4
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812493"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415552"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Resetování nebo odebrání hesla zařízení v Intune
 
@@ -35,8 +35,8 @@ Tento dokument popisuje jak resetování hesla na úrovni zařízení, tak reset
 | ---- | ---- |
 | Zařízení s Androidem verze 6.x nebo starší | Ano |
 | Zařízení s Androidem Enterprise zaregistrovaná jako vlastník zařízení | Ano |
-| zařízení s iOS | Ano |
-| zařízení s iOS zaregistrovaná pomocí zápisu uživatelů | Ne |
+| zařízení s iOS/iPadOS | Ano |
+| zařízení se systémem iOS/iPadOS zaregistrovaná pomocí zápisu uživatelů | Ne |
 | Zařízení s Androidem zaregistrovaná s pracovním profilem | Ne |
 | Zařízení s Androidem, verze 7.0 nebo novější | Ne |
 | macOS | Ne |
@@ -68,9 +68,9 @@ Podporovaná zařízení s Androidem Enterprise zaregistrovaná s pracovním pro
 U zařízení s Androidem Enterprise, na kterých běží verze 8.x nebo novější a mají zaregistrovaný pracovní profil, se koncovým uživatelům ihned po registraci zobrazí výzva k aktivaci resetovaného hesla. Oznámení se zobrazí, pokud je nastavené povinné heslo pracovního profilu. Po zadání hesla se oznámení zavře.
 
 
-## <a name="remove-ios-passcodes"></a>Odebrání hesel z iOS
+## <a name="remove-iosipados-passcodes"></a>Odebrat hesla pro iOS/iPadOS
 
-Místo resetování stačí hesla ze zařízení s iOS jenom odebrat. Pokud jsou nastavené zásady dodržování předpisů vyžadující heslo, zobrazí se uživateli zařízení výzva, aby v Nastavení zadal nové heslo.
+Místo obnovování se hesla odeberou ze zařízení se systémem iOS/iPadOS. Pokud jsou nastavené zásady dodržování předpisů vyžadující heslo, zobrazí se uživateli zařízení výzva, aby v Nastavení zadal nové heslo.
 
 ## <a name="next-steps"></a>Další kroky
 

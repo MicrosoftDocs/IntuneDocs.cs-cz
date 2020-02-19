@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d4517d89e3b7365834e904c815b30a362540906
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: f4fca28329a5cd0adc7269929c4b2c2807bebf5e
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755591"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77437949"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Řešení potíží s akcemi zařízení v Intune
 
@@ -34,7 +34,7 @@ Microsoft Intune má mnoho akcí, které vám pomůžou se spravovanými zaříz
 ### <a name="i-clicked-the-disable-activation-lock-action-in-the-portal-but-nothing-happened-on-the-device"></a>Na portálu jsem kliknul na akci zakázat Zámek aktivace, ale na zařízení nic neproběhlo.
 Toto je očekávané. Po zahájení akce zakázat Zámek aktivace se službě Intune požádalo o aktualizovaný kód od společnosti Apple. Po zobrazení zařízení na obrazovce Zámek aktivace ručně zadáte kód do pole heslo. Tento kód je platný jenom po dobu 15 dnů, takže nezapomeňte kliknout na akci a zkopírovat kód před tím, než vydáte vymazání.
 
-### <a name="why-dont-i-see-the-disable-activation-lock-code-in-the-hardware-overview-blade-of-my-ios-device"></a>Proč se nezobrazuje kód zakázat Zámek aktivace v okně Přehled hardwaru zařízení s iOS?
+### <a name="why-dont-i-see-the-disable-activation-lock-code-in-the-hardware-overview-blade-of-my-iosipados-device"></a>Proč se nezobrazuje kód zakázat Zámek aktivace v okně s přehledem hardwaru zařízení s iOS/iPadOS?
 K nejpravděpodobnějším důvodům patří:
 - Platnost kódu vypršela a byla odstraněna ze služby.
 - Zařízení není pod dohledem zásad omezení zařízení, aby bylo možné Zámek aktivace.
@@ -43,7 +43,7 @@ Můžete kontrolovat kód v aplikaci Graph Explorer s následujícím dotazem:
 
 ```GET - https://graph.microsoft.com/beta/deviceManagement/manageddevices('deviceId')?$select=activationLockBypassCode.```
 
-### <a name="why-is-the-disable-activation-lock-action-greyed-out-for-my-ios-device"></a>Proč je akce zakázat Zámek aktivace pro zařízení s iOS šedá?
+### <a name="why-is-the-disable-activation-lock-action-greyed-out-for-my-iosipados-device"></a>Proč je akce zakázat Zámek aktivace pro zařízení s iOS/iPadOS šedá?
 K nejpravděpodobnějším důvodům patří: 
 - Platnost kódu vypršela a byla odstraněna ze služby.
 - Zařízení není pod dohledem zásad omezení zařízení, aby bylo možné Zámek aktivace.
@@ -90,7 +90,7 @@ Protože token resetování nebyl v zařízení aktivován. Aktivace tokenu rese
 3. Koncový uživatel musí přijmout sekundární výzvu, aby bylo možné resetování hesla.
 Po dokončení těchto kroků už tuto odpověď nebudete dostávat.
 
-### <a name="why-am-i-prompted-to-set-a-new-passcode-on-my-ios-device-when-i-issue-the-remove-passcode-action"></a>Proč se mi při vystavování akce odebrat heslo zobrazí výzva k nastavení nového hesla na zařízení s iOS?
+### <a name="why-am-i-prompted-to-set-a-new-passcode-on-my-iosipados-device-when-i-issue-the-remove-passcode-action"></a>Proč se mi při vystavování akce odebrat heslo zobrazí výzva k nastavení nového hesla na zařízení se systémem iOS/iPadOS?
 Vzhledem k tomu, že jedna ze zásad dodržování předpisů vyžaduje heslo.
 
 ## <a name="next-steps"></a>Další kroky

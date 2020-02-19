@@ -1,6 +1,6 @@
 ---
 title: Restartování zařízení pomocí Microsoft Intune – Azure | Microsoft Docs
-description: Restartujte zařízení s Windows a iOSem pomocí Microsoft Intune na portálu Azure Portal pomocí vzdálené akce Restartovat.
+description: Restartujte zařízení s Windows a iOS/iPadOS pomocí Microsoft Intune v Azure Portal pomocí vzdálené akce restartovat.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82ebf35d0eb435f2df4e6cf55274808e6fa690f4
-ms.sourcegitcommit: af384c46ec8d8def6aa32c3b89947748dc6fd28f
+ms.openlocfilehash: 54fa0f796e96a2487793197cbbbe548fd8490856
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76517537"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415622"
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Vzdálené restartování zařízení přes Intune
 
@@ -35,10 +35,10 @@ Akce **restartovat** zařízení způsobí, že se zařízení, které se rozhod
 - Windows – podporováno ve Windows 8.1 a novějších verzích
 - Windows Phone – podporováno ve Windows Phone 8.1 a novějších verzích
 - Veřejná zařízení s Androidem – podpora v Androidu 7,0 a novějších verzích
-- iOS – podporováno
+- iOS/iPadOS – podporováno
 
     > [!Note]  
-    > Tento příkaz vyžaduje, aby bylo zařízení v režimu pod dohledem, a přístupová práva k **zámku zařízení**. Zařízení se restartuje okamžitě. Zařízení s iOSem uzamčená heslem se po restartování znovu nepřipojí k síti Wi-Fi. Po restartování zařízení nemusí být schopné komunikovat se serverem.
+    > Tento příkaz vyžaduje, aby bylo zařízení v režimu pod dohledem, a přístupová práva k **zámku zařízení**. Zařízení se restartuje okamžitě. Zařízení s iOS/iPadOS uzamčená heslem se po restartování znovu nepřipojí k síti Wi-Fi. Po restartování zařízení nemusí být schopné komunikovat se serverem.
 - macOS – nepodporováno
 - Zařízení s Androidem a pracovním profilem Androidu – nepodporováno
 
