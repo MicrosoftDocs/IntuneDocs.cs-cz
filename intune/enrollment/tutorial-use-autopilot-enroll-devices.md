@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b0bb0bd1f0df3aeb4185542d424bd3ffffe42cd
-ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
+ms.openlocfilehash: 257b15879f6df5763c407904a2c2b46319d64fb7
+ms.sourcegitcommit: cd90650c339795d44702e9dcd0b9679a7b438bb2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76036538"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473736"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Kurz: Použití Autopilotu k registraci zařízení s Windows v Intune
 
@@ -33,8 +33,8 @@ Windows Autopilot zjednodušuje registraci zařízení. S Microsoft Intune a Aut
 V tomto kurzu se naučíte:
 > [!div class="checklist"]
 > * Přidat zařízení do Intune
-> * Vytvoření skupiny zařízení Autopilot
-> * Vytvoření profilu nasazení Autopilotu
+> * Vytvořit skupinu zařízení Autopilot
+> * Vytvořit profil nasazení Autopilotu
 > * Přiřadit profil nasazení Autopilotu ke skupině zařízení
 > * Distribuovat zařízení s Windows uživatelům
 
@@ -43,7 +43,7 @@ Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební úče
 Přehled výhod, scénáře a požadavky Autopilotu najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
 
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 - [Nastavení automatické registrace Windows](../quickstart-setup-auto-enrollment.md)
 - [Předplatné Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
@@ -54,7 +54,7 @@ Prvním krokem při nastavení Windows Autopilotu je přidání zařízení s Wi
 
 1. V libovolném textovém editoru vytvořte seznam hodnot oddělených čárkami (CSV), které identifikují zařízení s Windows. Použijte tento formát:
     
-    *serial-number*, *windows-product-id*, *hardware-hash*, *optional-Group-Tag*
+    *sériové číslo*, *Windows-ID produktu*, *hardware-hash*, *volitelná-Group-tag*
     
     První tři položky jsou povinné, ale značka skupiny (dříve známé "ID objednávky") je volitelná.
 
@@ -74,7 +74,7 @@ Prvním krokem při nastavení Windows Autopilotu je přidání zařízení s Wi
 
 5. Aktualizováním zobrazení zobrazte nová zařízení.
 
-## <a name="create-an-autopilot-device-group"></a>Vytvoření skupiny zařízení Autopilot
+## <a name="create-an-autopilot-device-group"></a>Vytvořit skupinu zařízení Autopilot
 
 Dále vytvořte skupinu zařízení a přidejte do ní zařízení Autopilot, která jste právě načetli.
 
@@ -86,12 +86,12 @@ Dále vytvořte skupinu zařízení a přidejte do ní zařízení Autopilot, kt
 3. V okně **Skupina** zvolte **Členové** a do skupiny přidejte zařízení Autopilot. Zařízení Autopilot, která ještě nejsou zaregistrovaná, jsou zařízení, jejichž název se rovná sériovému číslu zařízení.
 4. Zvolte **Vytvořit**.  
 
-## <a name="create-an-autopilot-deployment-profile"></a>Vytvoření profilu nasazení Autopilotu
+## <a name="create-an-autopilot-deployment-profile"></a>Vytvořit profil nasazení Autopilotu
 
 Po vytvoření skupiny zařízení musíte vytvořit profil nasazení, abyste mohli zařízení Autopilot nakonfigurovat.
 
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **Windows** > **profily nasazení profily** > **vytvořit profil**.
-2. Na stránce **základy** zadejte **název**systému do pole *autopilot Profile*. Jako **Popis skupiny** zadejte *Testovací profil pro zařízení Autopilot*.
+2. Na stránce **základy** zadejte do pole **název** *profil autopilotu*. Jako **Popis skupiny** zadejte *Testovací profil pro zařízení Autopilot*.
 3. Nastavte možnost **Převést všechna cílová zařízení na Autopilot** na **Ano**. Toto nastavení zajistí, že všechna zařízení v seznamu se zaregistrují pomocí služby nasazení Autopilot. Vyřízení registrace trvá 48 hodin.
 4. Vyberte **Další**.
 5. Na stránce spouštěné při **prvním spuštění počítače (OOBE)** pro **režim nasazení**vyberte možnost **řízeno uživatelem**. Zařízení s tímto profilem se přidruží k uživateli, který zařízení registruje. Při registraci zařízení se musí zadat přihlašovací údaje uživatele.

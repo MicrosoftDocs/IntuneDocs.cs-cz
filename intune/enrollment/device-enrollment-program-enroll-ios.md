@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6167c48dcfd6b29749dca8d0378ff31ca239b154
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: adca40b558a75d2c080fe453218f232a37b21daa
+ms.sourcegitcommit: cd90650c339795d44702e9dcd0b9679a7b438bb2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415365"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473761"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>Automatická registrace zařízení s iOS/iPadOS pomocí Program registrace zařízení společnosti Apple
 
@@ -56,7 +56,7 @@ Podpora zařízení DEP, která nejsou pod dohledem, se v iOS/iPadOS 11 nepouž�
 4. [Assign DEP profile to devices](#assign-an-enrollment-profile-to-devices)
 5. [Distribute devices to users](#end-user-experience-with-managed-devices)
 -->
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 - Zařízení zakoupená v [Programu registrace zařízení společnosti Apple](http://deploy.apple.com)
 - [Autorita pro správu mobilních zařízení (MDM)](../fundamentals/mdm-authority-set.md)
 - [Certifikát Apple MDM Push Certificate](apple-mdm-push-certificate-get.md)
@@ -77,6 +77,9 @@ K vytvoření tokenu použijete portál Apple Business Manager nebo Apple School
     ![Stažení tokenu programu registrace zařízení](./media/device-enrollment-program-enroll-ios/image01.png)
 
 2. Výběrem možnosti **Souhlasím** udělte Microsoftu oprávnění k odesílání informací o uživatelích a zařízeních do společnosti Apple.
+
+> [!NOTE]
+> Až budete postupovat od kroku 2 ke stažení certifikátu veřejného klíče Intune, nezavírejte průvodce ani nevybírejte z této stránky. Tím dojde k zrušení platnosti certifikátu, který jste stáhli, a budete muset tento proces opakovat. Pokud k této situaci dojde, obvykle si všimněte, že tlačítko vytvořit na kartě Revize + vytvořit je šedé a nemůžete tento proces dokončit.
 
    ![Snímek obrazovky s podoknem Token Programu registrace v pracovním prostoru Certifikáty Apple pro stažení veřejného klíče](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
@@ -105,7 +108,7 @@ K vytvoření tokenu použijete portál Apple Business Manager nebo Apple School
 
    Na portálu Apple přejděte do části **programy pro nasazení** &gt; **program registrace zařízení** &gt; **Zobrazit historii přiřazení** a zobrazte tak seznam zařízení a jejich přiřazení k serveru MDM.
 
-### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Krok 3: Uložte si Apple ID, které jste použili k vytvoření tohoto tokenu.
+### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Krok 3. Uložte si Apple ID, které jste použili k vytvoření tohoto tokenu.
 
 V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)zadejte Apple ID pro budoucí referenci.
 
