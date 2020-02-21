@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e88741609dc1a351d1971c907cd2e442cfd4b905
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 94ff28cf36457d2d8b20e173508b7c9894a7d5bc
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72999509"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77510533"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Co je nového na klasickém portálu Intune – předchozí měsíce
 
@@ -126,7 +126,7 @@ Pokud jste partnerským správcem, nebude už moct stránku Intune Partner zobra
 
 #### <a name="apple-to-require-updates-for-application-transport-security---748318--"></a>Apple pro vyžadování aktualizací pro zabezpečení přenosu aplikací <!--748318-->
 
-Apple oznámil, že začne vynucovat specifické požadavky na ATS (Application Transport Security). ATS se používá k vynucení vyššího zabezpečení veškeré komunikace aplikací přes protokol HTTPS. Tato změna ovlivní zákazníky Intune, kteří používají aplikace Portál společnosti pro iOS.
+Apple oznámil, že začne vynucovat specifické požadavky na ATS (Application Transport Security). ATS slouží k vynucení vyššího zabezpečení veškeré komunikace aplikací přes protokol HTTPS. Tato změna ovlivní zákazníky Intune, kteří používají aplikace Portál společnosti pro iOS.
 
 Prostřednictvím programu Apple TestFlight, který vynucuje nové požadavky na ATS, jsme zpřístupnili verzi aplikace Portál společnosti pro iOS. Pokud si ji chcete vyzkoušet a otestovat, jestli ATS dodržujete, napište nám na adresu <a href="mailto:CompanyPortalBeta@microsoft.com?subject=Register to TestFlight ATS Company Portal app">CompanyPortalBeta@microsoft.com</a> zprávu s vaším jménem a příjmením, e-mailovou adresou a názvem společnosti. Další podrobnosti najdete v [blogu podpory služby Intune](https://aka.ms/compportalats).
 
@@ -143,7 +143,7 @@ Přístup mobilních zařízení k podnikovým prostředkům teď můžete říd
 - Ochrana aplikací
 - Ochrana chyb zabezpečení
 
-Pomocí zásad dodržování předpisů zařízením v Intune můžete nakonfigurovat zásady podmíněného přístupu EMS na základě posouzení rizik v rámci Symantec Endpoint Protection Mobile (Skycure). Tyto zásady můžete použít k povolení nebo blokování přístupu zařízení nesplňujících požadavky k podnikovým prostředkům na základě zjištěných hrozeb. Další informace najdete v tématu [Symantec Endpoint Protection Mobile konektor](../protect/skycure-mobile-threat-defense-connector.md).
+Pomocí zásad dodržování předpisů zařízením v Intune můžete nakonfigurovat zásady podmíněného přístupu EMS na základě posouzení rizik v rámci Symantec Endpoint Protection Mobile (Skycure). Tyto zásady můžete použít k povolení nebo blokování přístupu zařízení nesplňujících požadavky k podnikovým prostředkům na základě zjištěných hrozeb. Další informace najdete v tématu [Symantec Endpoint Protection Mobile Connector](../protect/skycure-mobile-threat-defense-connector.md).
 
 #### <a name="new-user-experience-for-the-company-portal-app-for-android---621622--"></a>Nové uživatelské prostředí pro aplikaci Portál společnosti pro Android <!--621622-->
 
@@ -253,13 +253,13 @@ Novinky ve verzi Intune v Azure najdete [zde](whats-new.md).
 ### <a name="new-capabilities"></a>Nové funkce
 
 #### <a name="in-console-reports-for-mam-without-enrollment---677961--"></a>Sestavy v konzole pro MAM bez registrace <!--677961-->
-Pro registrovaná i nezaregistrovaná zařízení se přidaly nové sestavy pro ochranu aplikací. Další informace o tom, jak [monitorovat zásady správy mobilních aplikací v Intune](../apps/app-protection-policies-monitor.md).
+Pro registrovaná i nezaregistrovaná zařízení se přidaly nové sestavy pro ochranu aplikací. Přečtěte si o tom, jak můžete [pomocí Intune monitorovat zásady správy mobilních aplikací](../apps/app-protection-policies-monitor.md).
 
 #### <a name="android-711-support---694397--"></a>Podpora Androidu 7.1.1 <!--694397-->
 Intune teď plně podporuje a spravuje Android 7.1.1.
 
-#### <a name="resolve-issue-where-ios-devices-are-inactive-or-the-admin-console-cannot-communicate-with-them---unknown--"></a>Řešení problému, kdy zařízení s iOSem nejsou aktivní nebo s nimi nemůže konzola pro správu komunikovat <!--unknown-->
-Když zařízení uživatele ztratí kontakt s Intune, můžete uživateli poskytnout nový postup řešení potíží a pomoct mu tak znovu získat přístup k prostředkům společnosti. Viz [Zařízení nejsou aktivní nebo s nimi nemůže konzola pro správu komunikovat](../enrollment/troubleshoot-device-enrollment-in-intune.md#devices-are-inactive-or-the-admin-console-cant-communicate-with-them).
+#### <a name="resolve-issue-where-ios-devices-are-inactive-or-the-admin-console-cannot-communicate-with-them---unknown--"></a>Řešení problému, kdy zařízení s iOSem nejsou aktivní nebo s nimi nemůže konzola správce komunikovat <!--unknown-->
+Když zařízení uživatele ztratí kontakt s Intune, můžete uživateli poskytnout nový postup řešení potíží a pomoct mu tak znovu získat přístup k prostředkům společnosti. Viz [Zařízení nejsou aktivní nebo s nimi nemůže konzola správce komunikovat](../enrollment/troubleshoot-device-enrollment-in-intune.md#devices-are-inactive-or-the-admin-console-cant-communicate-with-them).
 
 ### <a name="notices"></a>Sdělení
 
@@ -282,7 +282,7 @@ Aktualizovali jsme naši dokumentaci pro správce a vývojáře aplikací, kteř
 
 Aktualizovaly se tyto články:
 
-* [Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune](../developer/apps-prepare-mobile-application-management.md)
+* [Rozhodování o způsobu přípravy aplikací na jejich správu v Microsoft Intune](../developer/apps-prepare-mobile-application-management.md)
 * [Příprava aplikací pro iOS na správu mobilních aplikací přes nástroj Intune App Wrapping](../developer/app-wrapper-prepare-ios.md)
 * [Začínáme s Microsoft Intune App SDK](../developer/app-sdk-get-started.md)
 * [Intune App SDK pro iOS – Příručka pro vývojáře](../developer/app-sdk-ios.md)
@@ -303,7 +303,7 @@ Na začátku kalendářního roku 2017 provedeme migraci celého našeho prostř
 Prostředí pro správu na webu Azure Portal bude využívat nové funkce seskupování a cílení, které už byly oznámeny. Při migraci vašeho stávajícího tenanta do nového prostředí seskupování se provede také vaše migrace do verze Preview nového prostředí pro správu vašeho tenanta. Zatím můžete zjistit další informace o tom, co pro Microsoft Intune na portálu Azure Portal chystáme, v naší [nové dokumentaci](what-is-intune.md).
 
 __Integrace se správou telekomunikačních výdajů ve verzi Public Preview Azure Portal__ <!--747605-->
-Ve verzi Preview teď začínáme na webu Azure Portal zavádět integraci se službami TEM (Telecom Expense Management) třetích stran. Pomocí Intune můžete uplatňovat limity na využívání domácích a roamingových dat. Tyto integrace začínáme zavádět s řešením [Saaswedo](http://www.saaswedo.com/). Jestli chcete povolit tuto funkci ve zkušební verzi tenanta, [kontaktujte prosím podporu Microsoftu](get-support.md).
+Ve verzi Preview teď začínáme na webu Azure Portal zavádět integraci se službami TEM (Telecom Expense Management) třetích stran. Pomocí Intune můžete uplatňovat limity na využívání domácích a roamingových dat. Tyto integrace začínáme zavádět s řešením [Saaswedo](http://www.saaswedo.com/). Pokud chcete povolit tuto funkci ve zkušební verzi tenanta, [obraťte se prosím na podporu Microsoftu](get-support.md).
 
 ### <a name="new-capabilities"></a>Nové funkce
 
@@ -361,9 +361,9 @@ Tato nová aplikace také uživatelům umožní využít v zařízeních s Windo
 > [!IMPORTANT]
 > __Aktualizace v Intune a Androidu for Work__Aplikace Android for Work můžete nasazovat s akcí __Požadované__, ale pokud byly vaše skupiny Intune migrovány do nového prostředí Azure AD, můžete aplikace nasazovat jenom jako __Dostupné__.
 
-__Intune App SDK pro modul plug-in Cordova teď podporuje MAM bez registrace__ Vývojáři aplikací můžou teď pomocí modulu plug-in Cordova sady Intune App SDK povolit funkce MAM bez registrace zařízení ve svých aplikacích založených na Cordově pro Android a iOS. Modul plug-in Cordova sady Intune App SDK najdete [tady](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam).
+__Modul plug-in Cordova sady Intune App SDK teď podporuje mam bez registrace__ . Vývojáři aplikací teď můžou použít modul plug-in Cordova sady Intune App SDK k povolení funkcí MAM bez registrace zařízení ve svých aplikacích založených na Cordova pro Android a iOS/iPadOS. Modul plug-in Cordova sady Intune App SDK najdete [tady](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam).
 
-__Komponenta Xamarin sady Intune App SDK teď podporuje MAM bez registrace__ Vývojáři aplikací teď můžou pomocí komponenty Xamarin sady Intune App SDK povolit funkce MAM bez registrace zařízení ve svých aplikacích založených na Xamarinu pro Android a iOS. Komponentu Xamarin sady Intune App SDK najdete [tady](https://github.com/msintuneappsdk/intune-app-sdk-xamarin).
+__Komponenta Xamarin sady Intune App SDK teď podporuje mam bez registrace__ . Vývojáři aplikací teď můžou pomocí komponenty Xamarin sady Intune App SDK povolit funkce MAM bez registrace zařízení ve svých aplikacích založených na Xamarin pro Android a iOS/iPadOS. Komponentu Xamarin sady Intune App SDK najdete [tady](https://github.com/msintuneappsdk/intune-app-sdk-xamarin).
 
 ### <a name="notices"></a>Sdělení
 
@@ -374,5 +374,5 @@ __Podpisový certifikát Symantec už k nahrání nevyžaduje podepsanou aplikac
 __Podpora Portálu společnosti ve Windows Phonu 8__ Podpora Portálu společnosti ve Windows Phonu 8 se přestane nabízet. Podpora pro platformy Windows Phone 8 a WinRT se přestala nabízet v říjnu 2016. Podpora pro Portál společnosti ve Windows Phonu 8 se také přestala nabízet v říjnu 2016.
 
 
-## <a name="see-also"></a>Související témata
+## <a name="see-also"></a>Viz také
 Podrobnosti o posledním vývoji najdete v tématu [Co je nového v Microsoft Intune](whats-new.md).

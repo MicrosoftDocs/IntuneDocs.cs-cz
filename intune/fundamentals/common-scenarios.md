@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f0e2e2101706b9b9afa77553244a438a2299903b
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 67d9b5df39311d58571f875b8d41c16088010fad
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414026"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514298"
 ---
 # <a name="common-ways-to-use-microsoft-intune"></a>Běžné způsoby použití Microsoft Intune
 
@@ -35,7 +35,7 @@ Níže najdete krátký přehled šesti nejběžnějších scénářů, pro kter
 >Chcete vědět, jak IT oddělení Microsoftu využívá Intune k tomu, aby měli zaměstnanci Microsoftu přístup k podnikovým prostředkům na mobilních zařízeních a současně podniková data zůstala chráněná? [Přečtěte si tuto technickou případovou studii](https://www.microsoft.com/itshowcase/Article/Content/588), kde najdete podrobné informace o tom, jak IT oddělení společnosti Microsoft používá Intune a další služby ke správě identit, zařízení, aplikací a dat.  
 
 >[!IMPORTANT]
->Vzhledem k nedávným malwarovým útokům typu „Trident“ na zařízení s iOSem chceme zajistit, aby mobilní zařízení byla aktuální. Proto jsme publikovali blogový příspěvek o [aktualizaci mobilních zařízení pomocí Microsoft Intune](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/26/ensuring-mobile-devices-are-up-to-date-using-microsoft-intune/). Najdete v něm informace o různých způsobech, jak vám může Intune pomoct s tím, aby vaše zařízení byla stále zabezpečená a aktuální.
+>Chceme zajistit, aby mobilní zařízení byla aktuální na základě nedávných malwarových útoků "Trident" na zařízeních s iOS/iPadOS. Proto jsme publikovali blogový příspěvek o [aktualizaci mobilních zařízení pomocí Microsoft Intune](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/26/ensuring-mobile-devices-are-up-to-date-using-microsoft-intune/). Najdete v něm informace o různých způsobech, jak vám může Intune pomoct s tím, aby vaše zařízení byla stále zabezpečená a aktuální.
 
 ## <a name="protecting-your-on-premises-email-and-data-so-it-can-be-safely-accessed-by-mobile-devices"></a>Ochrana místních e-mailů a dat, aby je mohli uživatelé bezpečně používat na mobilních zařízeních
 

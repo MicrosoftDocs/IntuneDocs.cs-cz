@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 791e2a1313480bdf1ad95988d48664d6620ba0b3
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: df5b53be159fd082090e61fd736e4c9329644c85
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206342"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512734"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>nastavení funkcí zařízení macOS v Intune
 
@@ -29,7 +29,7 @@ Intune obsahuje některá vestavěná nastavení pro přizpůsobení funkcí na 
 
 Pomocí těchto funkcí můžete řídit zařízení macOS jako součást řešení správy mobilních zařízení (MDM).
 
-Tento článek uvádí tato nastavení a popisuje, co jednotlivé nastavení dělá. V této části najdete taky postup pro získání IP adresy, cesty a portu pro tiskárny pro práci na tiskárně pomocí Terminálové aplikace (emulátor). Další informace o funkcích zařízení najdete v pro [Přidání nastavení funkcí zařízení se systémem iOS nebo MacOS](device-features-configure.md).
+Tento článek uvádí tato nastavení a popisuje, co jednotlivé nastavení dělá. V této části najdete taky postup pro získání IP adresy, cesty a portu pro tiskárny pro práci na tiskárně pomocí Terminálové aplikace (emulátor). Další informace o funkcích zařízení najdete v pro [Přidání nastavení funkcí zařízení s iOS/iPadOS nebo MacOS](device-features-configure.md).
 
 ## <a name="before-you-begin"></a>Před zahájením
 
@@ -44,8 +44,8 @@ Tento článek uvádí tato nastavení a popisuje, co jednotlivé nastavení dě
 
 - **IP adresa**: zadejte adresu IPv4 nebo IPv6 tiskárny. Pokud k identifikaci tiskáren používáte názvy hostitelů, můžete získat IP adresu pomocí příkazového testu tiskárny v aplikaci Terminal. Další podrobnosti najdete v článku [získání IP adresy a cesty](#get-the-ip-address-and-path) (v tomto článku).
 - **Cesta**: zadejte cestu k tiskárně. Cesta je obvykle `ipp/print` pro tiskárny v síti. Další podrobnosti najdete v článku [získání IP adresy a cesty](#get-the-ip-address-and-path) (v tomto článku).
-- **Port** (iOS 11,0 a novější): zadejte port naslouchání cíle přenosu. Pokud necháte tuto vlastnost prázdnou, použije se při tisku výchozí port.
-- **TLS** (iOS 11,0 a novější): Pokud chcete zabezpečit připojení přes tisk přes protokol TLS (Transport Layer Security), vyberte **Povolit** .
+- **Port** (iOS 11.0 +, iPadOS 13.0 +): zadejte port naslouchání cíle přenosu. Pokud necháte tuto vlastnost prázdnou, použije se při tisku výchozí port.
+- **TLS** (iOS 11.0 +, iPadOS 13.0 +): Pokud chcete zabezpečit připojení přes tisk přes TLS (Transport Layer Security), vyberte **Povolit** .
 
 - **Přidat** Server pro Protisk. Můžete přidat spoustu tiskových serverů.
 
@@ -105,7 +105,7 @@ Chcete-li přidat servery s modulem pro tisk, budete potřebovat IP adresu tisk�
 - **Tlačítko restartovat**: **Skrýt** na přihlašovací obrazovce nezobrazuje tlačítko restartovat. **Nenakonfigurováno** (výchozí) zobrazí tlačítko restartovat.
 - **Tlačítko režimu spánku**: **Skrýt** nezobrazuje na přihlašovací obrazovce tlačítko režimu spánku. **Nenakonfigurováno** (výchozí) zobrazí tlačítko režimu spánku.
 
-#### <a name="other"></a>Ostatní
+#### <a name="other"></a>Další
 
 - **Zakázat přihlášení uživatele z konzoly**: **Disable zakáže** a skryje příkaz MacOS, který se používá pro přihlášení. V případě typických uživatelů toto nastavení **zakažte** . **Nenakonfigurováno** (výchozí) umožňuje pokročilým uživatelům přihlašovat se pomocí příkazového řádku MacOS. Chcete-li přejít do režimu konzoly, uživatelé zadají `>console` do pole uživatelské jméno a musí se ověřit v okně konzoly.
 
@@ -219,7 +219,7 @@ Tato funkce platí pro:
 
   `osascript -e 'id of app "ExampleApp"'`
 
-- **Doména**: zadejte doménu webu, kterou chcete přidružit k aplikaci. Doména zahrnuje typ služby a plně kvalifikovaný název hostitele, například `webcredentials:www.contoso.com`.
+- **Doména**: zadejte doménu webu, kterou chcete přidružit k aplikaci. Doména zahrnuje typ služby a plně kvalifikovaný název hostitele, například `webcredentials: www.contoso.com`.
 
   Všechny subdomény přidružené domény můžete vyhledat zadáním `*.` (zástupný znak hvězdička a tečka) před začátkem domény. Období je povinné. Přesné domény mají vyšší prioritu než u domén se zástupnými znaky. Modely z nadřazených domén se tedy shodují, *Pokud* se shoda nenajde v plně kvalifikované subdoméně.
 
@@ -238,4 +238,4 @@ Tato funkce platí pro:
 
 [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
 
-Můžete taky nakonfigurovat funkce zařízení v [iOS](ios-device-features-settings.md).
+Funkce zařízení můžete nakonfigurovat také v systému [iOS/iPadOS](ios-device-features-settings.md).

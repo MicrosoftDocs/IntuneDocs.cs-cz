@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fa02a61148a03a64b88b38dcdc1799b30bc45db
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
+ms.openlocfilehash: f676a0e39bb5dae32d3032d1703dbb44f6b2e54a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886729"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514961"
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
 
@@ -182,19 +182,19 @@ Seznamte se blíže s následujícími aspekty svých zařízení, abyste vědě
 
 - Vlastnictví zařízení
 
-- Hromadný zápis
+- Hromadná registrace
 
 Pojďme se na tyto oblasti podívat podrobněji.
 
 ### <a name="determine-supported-device-platforms"></a>Určení podporovaných platforem zařízení
 
-Při vytváření návrhu potřebujete vědět, jaká zařízení budou v prostředí, a musíte ověřit, jestli je Intune podporuje nebo ne. Intune podporuje platformy iOS, Android a Windows.
+Při vytváření návrhu potřebujete vědět, jaká zařízení budou v prostředí, a musíte ověřit, jestli je Intune podporuje nebo ne. Intune podporuje platformy iOS/iPadOS, Androidem a Windows.
 
 [Vytvořte seznam zařízení podporovaných službou Intune](supported-devices-browsers.md).
 
 ### <a name="devices"></a>Zařízení
 
-Intune slouží ke správě mobilních zařízení. Zabezpečuje firemní data a umožňuje koncovým uživatelům pracovat z více míst. Intune podporuje množství platforem zařízení, proto doporučujeme, abyste zdokumentovali zařízení, platformy operačních systémů a verze, které budou v návrhu vaší organizace podporované. Například:
+Intune slouží ke správě mobilních zařízení. Zabezpečuje firemní data a umožňuje koncovým uživatelům pracovat z více míst. Intune podporuje množství platforem zařízení, proto doporučujeme, abyste zdokumentovali zařízení, platformy operačních systémů a verze, které budou v návrhu vaší organizace podporované. Příklad:
 
 | **Platforma zařízení** | **Verze OS** |
 |:---:|:---:|
@@ -211,7 +211,7 @@ Intune podporuje jak zařízení vlastněná firmou, tak osobní zařízení. Za
 
 Další informace o případech použití zařízení vlastněných firmou a zařízení BYOD najdete v [oddílu 3: Určení požadavků scénářů pro případy použití](planning-guide-requirements.md).
 
-### <a name="bulk-enrollment"></a>Hromadný zápis
+### <a name="bulk-enrollment"></a>Hromadná registrace
 
  V závislosti na platformě můžete zařízení různými způsoby hromadně zaregistrovat. Pokud požadujete hromadnou registraci, napřed [určete, jakým způsobem bude probíhat](../enrollment/device-enrollment.md), a potom tento způsob zapracujte do svého návrhu.
 
@@ -225,11 +225,11 @@ V těchto oddílech si probereme následující funkce a možnosti, které odpov
 
 - Profily prostředků
 
-- Apps
+- Aplikace
 
 - zásady dodržování předpisů
 
-- Conditional Access
+- Podmíněný přístup
 
 Pojďme se na každou z těchto oblastí podívat podrobněji.
 
@@ -242,7 +242,7 @@ Musíte určit, jestli jsou zásady pro podmínky a ujednání potřeba. Pokud t
 | **Název podmínek a ujednání** | **Případ použití** | **Cílová skupina** |
 |:---:|:---:|:---:|
 | Firemní podmínky a ujednání | Firemní | Firemní uživatelé |                 
-| Podmínky a ujednání pro uživatele s vlastním zařízením | Uživatelé s vlastním zařízením | Uživatelé s vlastním zařízením |                
+| Podmínky a ujednání pro uživatele s vlastním zařízením | uživatelé s vlastním zařízením (BYOD) | Uživatelé s vlastním zařízením |                
 
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a namapovat podmínky a ujednání na své skupiny uživatelů.
@@ -269,11 +269,11 @@ Profily pomáhají koncovému uživateli připojit se k firemním datům. Intune
 
 - Profily certifikátů
 
-- Wi-Fi profil
+- Profil Wi-Fi
 
-- profil VPN
+- Profil VPN
 
-- e-mailový profil
+- E-mailový profil
 
 Pojďme se podrobněji podívat na každý typ profilu.
 
@@ -296,13 +296,13 @@ Tady je příklad, jak při návrhu dokumentovat certifikáty:
 
 | **Typ** | **Název profilu** | **Platforma zařízení** | **Případy použití** |   
 |:---:|:---:|:---:|:---:|
-| Kořenová CA | Firemní kořenová CA | Android, iOS, Windows Mobile | Firemní zařízení, vlastní zařízení uživatelů  |                                                           
-| SCEP | Uživatelský certifikát | Android, iOS, Windows Mobile | Firemní zařízení, vlastní zařízení uživatelů |                                                           
+| Kořenová CA | Firemní kořenová CA | Android, iOS/iPadOS, Windows Mobile | Firemní zařízení, vlastní zařízení uživatelů  |                                                           
+| SCEP | Uživatelský certifikát | Android, iOS/iPadOS, Windows Mobile | Firemní zařízení, vlastní zařízení uživatelů |                                                           
 
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní profily certifikátů.
 
-#### <a name="wi-fi-profile"></a>Wi-Fi profil
+#### <a name="wi-fi-profile"></a>Profil Wi-Fi
 
 Profily Wi-Fi se používají k automatickému připojení mobilního zařízení k bezdrátové síti. Intune podporuje nasazení profilů Wi-Fi pro všechny podporované platformy. Přečtěte si další informace o tom, [jak Intune podporuje profily Wi-Fi.](../configuration/wi-fi-settings-configure.md)
 
@@ -311,11 +311,11 @@ Tady je příklad návrhu profilu Wi-Fi:
 | **Typ** | **Název profilu** | **Platforma zařízení** | **Případy použití** |
 |:---:|:---:|:---:|:---:|
 | Wi-Fi | Profil Wi-Fi pro Asii | Android | Firemní zařízení, vlastní zařízení uživatelů, oblast Asie|
-| Wi-Fi | Profil Wi-Fi pro Severní Ameriku | Android, iOS, Windows 10 Mobile | Firemní zařízení, vlastní zařízení uživatelů, oblast Severní Amerika |
+| Wi-Fi | Profil Wi-Fi pro Severní Ameriku | Android, iOS/iPadOS, Windows 10 Mobile | Firemní zařízení, vlastní zařízení uživatelů, oblast Severní Amerika |
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní profily Wi-Fi.
 
-#### <a name="vpn-profile"></a>profil VPN
+#### <a name="vpn-profile"></a>Profil VPN
 
 Profily VPN nabízejí uživatelům bezpečný přístup k síti ze vzdálených míst. Intune podporuje profily VPN nativních mobilních připojení VPN a externích dodavatelů. Další informace o [profilech VPN a dodavatelích podporovaných službou Intune](../configuration/vpn-settings-configure.md).
 
@@ -323,12 +323,12 @@ Tady je příklad, jak dokumentovat návrh profilu VPN.
 
 | **Typ** | **Název profilu** | **Platforma zařízení** | **Případy použití** |
 |:---:|:---:|:---:|:---:|
-| Síť VPN | Profil VPN Cisco pro jakékoli připojení | Android, iOS, Windows 10 Mobile | Firemní zařízení, vlastní zařízení uživatelů, oblast Severní Amerika a Německo|
+| Síť VPN | Profil VPN Cisco pro jakékoli připojení | Android, iOS/iPadOS, Windows 10 Mobile | Firemní zařízení, vlastní zařízení uživatelů, oblast Severní Amerika a Německo|
 | Síť VPN | Pulse Secure | Android | Firemní zařízení, vlastní zařízení uživatelů, oblast Asie |
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní profily VPN.
 
-#### <a name="email-profile"></a>e-mailový profil
+#### <a name="email-profile"></a>E-mailový profil
 
 E-mailové profily umožňují automatické nastavení e-mailového klienta pomocí informací o připojení a konfigurace e-mailu. Intune podporuje e-mailové profily jen na některých zařízeních. Přečtěte si další informace o [e-mailových profilech a podporovaných platformách](../configuration/email-settings-configure.md).
 
@@ -336,11 +336,11 @@ Tady je příklad, jak dokumentovat návrh e-mailových profilů:
 
 | **Typ** | **Název profilu** | **Platforma zařízení** | **Případy použití** |
 |:---:|:---:|:---:|:---:|
-| e-mailový profil | E-mailový profil pro iOS | iOS | Firemní – informatik (uživatel s vlastním zařízením) |
-| e-mailový profil | E-mailový profil pro Android Knox | Android Knox | Uživatelé s vlastním zařízením |
+| E-mailový profil | E-mailový profil pro iOS | iOS | Firemní – informatik (uživatel s vlastním zařízením) |
+| E-mailový profil | E-mailový profil pro Android Knox | Android Knox | uživatelé s vlastním zařízením (BYOD) |
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní e-mailové profily.
-### <a name="apps"></a>Apps
+### <a name="apps"></a>Aplikace
 
 Intune můžete použít k několika způsobům doručování aplikací uživatelům nebo zařízením. Mezi typy aplikací patří instalační aplikace softwaru, aplikace z veřejného obchodu s aplikacemi, externí odkazy nebo spravované aplikace pro iOS. Kromě nasazení individuálních aplikací můžete spravovat a nasazovat také hromadně nakoupené aplikace pořízené prostřednictvím programů hromadného nákupu pro iOS a Windows. Další informace pro:
 
@@ -374,11 +374,11 @@ Zásady ochrany aplikace minimalizují ztrátu dat tím, že definují, jak apli
 | **Aplikace** | **Účel** | **Platformy** | **Případ použití** | **Zásada ochrany aplikace** |
 |:---:|:---:|:---:|:---:|:---:|
 | Outlook Mobile  | K dispozici | iOS | Firemní – vedení | Nelze provést jailbreak, šifrování souborů |                                                         
-| Word | K dispozici | iOS, Android – Samsung Knox, jiný systém než Knox, Windows 10 Mobile | Firemní zařízení, vlastní zařízení uživatelů | Nelze provést jailbreak, šifrování souborů |                                                         
+| Word | K dispozici | iOS/iPadOS, Android – Samsung KNOX, non-KNOX, Windows 10 Mobile | Firemní zařízení, vlastní zařízení uživatelů | Nelze provést jailbreak, šifrování souborů |                                                         
 
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní zásady ochrany aplikací.
-#### <a name="compliance-policies"></a>Compliance zásady
+#### <a name="compliance-policies"></a>Zásady slučitelnosti
 
 Zásady dodržování předpisů určují, zda zařízení vyhovuje určitým požadavkům. Služba Intune používá zásady dodržování předpisů k tomu, aby zjistila, jestli zařízení vyhovuje nebo nevyhovuje. Stav dodržování předpisů je pak možné použít k zakázání nebo povolení přístupu k firemním prostředkům. Pokud se vyžaduje podmíněný přístup, doporučujeme navrhnout [zásadu dodržování předpisů pro zařízení](../protect/device-compliance-get-started.md).
 
@@ -388,7 +388,7 @@ Tady je příklad návrhu zásad dodržování předpisů:
 
 | **Název zásady** | **Platforma zařízení** | **Nastavení** | **Cílová skupina** |
 |:---:|:---:|:---:|:---:|
-| zásady dodržování předpisů | iOS, Android – Samsung Knox, jiný systém než Knox, Windows 10 Mobile | PIN – povinný, nelze provést jailbreak | Firemní zařízení, vlastní zařízení uživatelů |
+| zásady dodržování předpisů | iOS/iPadOS, Android – Samsung KNOX, non-KNOX, Windows 10 Mobile | PIN – povinný, nelze provést jailbreak | Firemní zařízení, vlastní zařízení uživatelů |
 
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní zásady dodržování předpisů.
@@ -404,8 +404,8 @@ Tady je příklad, jak dokumentovat zásady podmíněného přístupu:
 
 | **Služba** | **Platformy moderního ověřování** | **Základní ověřování** | **Případy použití** |
 |:---:|:---:|:---:|:---:|
-| Exchange Online | iOS, Android | Blokování nevyhovujících zařízení na platformách podporovaných službou Intune | Firemní zařízení, vlastní zařízení uživatelů |
-| SharePoint Online | iOS, Android |  | Firemní zařízení, vlastní zařízení uživatelů |
+| Exchange Online | iOS/iPadOS, Android | Blokování nevyhovujících zařízení na platformách podporovaných službou Intune | Firemní zařízení, vlastní zařízení uživatelů |
+| SharePoint Online | iOS/iPadOS, Android |  | Firemní zařízení, vlastní zařízení uživatelů |
 
 Můžete [si stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby zásad podmíněného přístupu.
 

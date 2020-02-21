@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72e1f95e2bd81d974d900acbcb0f785bb7966eaa
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 2bd5b26073611d9ff974d4a53f7794919e8672c7
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74563705"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513533"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Monitorování informací a přiřazení aplikace pomocí Microsoft Intune
 
@@ -44,13 +44,13 @@ Intune poskytuje několik způsobů, jak monitorovat vlastnosti spravovaných ap
 
 V podokně aplikace si můžete zkontrolovat podrobnosti o stavu aplikace ve vašem prostředí.
 
-### <a name="essentials"></a>Základní údaje
+### <a name="essentials"></a>Essentials
 Část **Základy** obsahuje následující informace o aplikaci:
 
  | **Podrobnosti aplikace**            | **Popis**                                                      |
 |------------------------|------------------------------------------------------------------|
 | **Vydavatel**          | Vydavatel aplikace                                            |
-| **Operační systém**   | Operační systém aplikace (Windows, iOS, Android atd.) |
+| **Operační systém**   | Operační systém aplikace (Windows, iOS/iPadOS, Android atd.). |
 | **Vytvořeno**             | Datum a čas vytvoření této revize <b>**Poznámka**: Tato hodnota data se aktualizuje, když správce IT změní metadata aplikace, jako je například změna kategorie aplikace nebo popisu aplikace.                        |
 | **Přiřazeno**           | Jestli byla aplikace přiřazena (**Ano** nebo **Ne**)                  |
 
@@ -59,9 +59,9 @@ Grafy zobrazují počet aplikací pro následující stav:
 
 | **Stav zařízení**       | **Popis**                                       |
 |-----------------------|-------------------------------------------------------|
-| **Nainstalovat**         | Počet nainstalovaných aplikací                         |
+| **Instalováno**         | Počet nainstalovaných aplikací                         |
 | **Nenainstalováno**     | Počet nenainstalovaných aplikací                     |
-| **Se nezdařilo**            | Počet neúspěšných instalací                   |
+| **Neúspěch**            | Počet neúspěšných instalací                   |
 | **Instalace čeká**   | Počet aplikací, které se právě instalují |
 | **Není k dispozici**           | Počet aplikací, u nichž není stav k dispozici            |
 
@@ -76,7 +76,7 @@ Seznam stavů zařízení se zobrazí, když v části nabídky **Monitorovat** 
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Název zařízení**      | Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut není k dispozici žádnému jinému zařízení.                                                                       |
 | **Uživatelské jméno**        | Jméno uživatele                                                                                                                                                                                                                                      |
-| **Platforma**         | Operační systém zařízení (Windows, iOS, Android atd.)                                                                                                                                                                                           |
+| **Platforma**         | Operační systém zařízení (Windows, iOS/iPadOS, Android atd.).                                                                                                                                                                                           |
 | **Verze**          | Číslo verze aplikace. V případě obchodních aplikací a Microsoft Store pro obchodní aplikace se zobrazí úplné číslo verze aplikace. Celé číslo verze identifikuje konkrétní vydanou verzi aplikace. Číslo se zobrazí jako _Verze_(_build_). Příklad: 2.2(2.2.17560800) V případě aplikací pro standardní úložiště nejsou zobrazeny žádné verze. |
 | **Stav**           | Stav aplikace                                                                                                                                                                                                                                     |
 | **Podrobnosti stavu**   | Podrobnosti o stavu                                                                                                                                                                                                                                     |

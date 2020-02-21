@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5092fa37f0bf6bd1320fa06fa58ac5e36f55aa3c
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 62031fd42a0067b206d6804fd0c3939db3fd8e3b
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74410187"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514111"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Použití certifikátů pro ověřování v Microsoft Intune
 
@@ -83,10 +83,10 @@ Používáte-li certifikační autoritu (CA) třetí strany (od společnosti Mic
 | Android Enterprise <br> – Plně spravované (vlastník zařízení)   | ![Podporováno](./media/certificates-configure/green-check.png) |   | ![Podporováno](./media/certificates-configure/green-check.png) |   |
 | Android Enterprise <br> -Vyhrazené (vlastník zařízení)   | ![Podporováno](./media/certificates-configure/green-check.png)  |   | ![Podporováno](./media/certificates-configure/green-check.png)  |   |
 | Android Enterprise <br> – Pracovní profil    | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
-| iOS                   | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
+| iOS/iPadOS                   | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
 | macOS                 | ![Podporováno](./media/certificates-configure/green-check.png) |  ![Podporováno](./media/certificates-configure/green-check.png) |![Podporováno](./media/certificates-configure/green-check.png)|![Podporováno](./media/certificates-configure/green-check.png)|
 | Wvdows Phone 8.1     |![Podporováno](./media/certificates-configure/green-check.png)  |  | ![Podporováno](./media/certificates-configure/green-check.png)| ![Podporováno](./media/certificates-configure/green-check.png) |
-| Windows 8.1 a vyšší |![Podporováno](./media/certificates-configure/green-check.png)  |  |![Podporováno](./media/certificates-configure/green-check.png) |   |
+| Windows 8.1 a novější |![Podporováno](./media/certificates-configure/green-check.png)  |  |![Podporováno](./media/certificates-configure/green-check.png) |   |
 | Windows 10 a novější  | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
 
 ## <a name="export-the-trusted-root-ca-certificate"></a>Exportujte certifikát důvěryhodné kořenové certifikační autority.

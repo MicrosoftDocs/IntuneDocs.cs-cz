@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04436c38fc6c4100a8232ea1ad23585f350d6aae
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: f468518130b1a3a98fd31fb235679ece574c3029
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75548142"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514281"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurace zařízení s Windows 10 v Intune pomocí směrných plánů zabezpečení
 
@@ -95,7 +95,7 @@ Mezi běžné úlohy při práci se standardními hodnotami zabezpečení patř�
 - [Odebrání přiřazení standardních hodnot](#remove-a-security-baseline-assignment) – Zjistěte, co se stane, když zastavíte správu nastavení se směrným plánem zabezpečení.
 
 
-### <a name="prerequisites"></a>Požadované součásti
+### <a name="prerequisites"></a>Předpoklady
 
 - Aby bylo možné spravovat směrné plány v Intune, musí mít váš účet předdefinovanou roli [správce zásad a profilů](../fundamentals/role-based-access-control.md#built-in-roles) .
 
@@ -172,7 +172,7 @@ Po uložení se po dokončení převodu směrný plán okamžitě znovu nasadí 
 
 4. V podokně **změnit verzi** použijte **možnost vybrat standardní hodnotu zabezpečení pro aktualizaci na** rozevírací seznam a vyberte instanci verze, kterou chcete použít.
 
-   ![vybrat verzi](./media/security-baselines/select-instance.png)
+   ![Vybrat verzi](./media/security-baselines/select-instance.png)
 
 5. Pokud chcete stáhnout soubor CSV, který zobrazuje rozdíl mezi verzí aktuální instance a novou verzí, kterou jste vybrali, vyberte **zkontrolovat aktualizaci** . Zkontrolujte tento soubor, abyste pochopili, která nastavení jsou nová nebo odebraná, a jaké jsou výchozí hodnoty těchto nastavení v aktualizovaném profilu.
 
@@ -182,7 +182,7 @@ Po uložení se po dokončení převodu směrný plán okamžitě znovu nasadí 
    - **Přijmout změny směrného plánu, ale zachovat existující přizpůsobení nastavení** – Tato možnost zachovává vlastní nastavení, které jste provedli v profilu standardních hodnot, a aplikuje je na novou verzi, kterou jste vybrali k použití.
    - **Přijmout změny směrného plánu a zahodit existující přizpůsobení nastavení** – Tato možnost přepíše původní profil úplně. Aktualizovaný profil bude používat výchozí hodnoty pro všechna nastavení.
 
-7. Vyberte **odeslat**. Profil se aktualizuje na vybranou základní verzi a po dokončení převodu se směrný plán hned znovu nasadí do přiřazených skupin.
+7. Vyberte **Odeslat**. Profil se aktualizuje na vybranou základní verzi a po dokončení převodu se směrný plán hned znovu nasadí do přiřazených skupin.
 
 ### <a name="remove-a-security-baseline-assignment"></a>Odebrání přiřazení standardních hodnot zabezpečení
 
@@ -214,7 +214,7 @@ Striktně řečeno, ne. Tým Microsoft Security konzultuje organizace, jako je n
 
 - Společnost Microsoft nadále zveřejňuje standardní hodnoty zabezpečení pro zásady skupiny (GPO) a [sadu nástrojů dodržování předpisů zabezpečení](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10), protože to trvá mnoho let. Tyto směrné plány používá mnoho organizací. Doporučení v těchto směrných plánech vycházejí ze závazku týmu zabezpečení společnosti Microsoft s podnikovými zákazníky a externími úřady, včetně ministerstva obrany, National Institute of Standards and Technology (NIST) a dalších. Naše doporučení a směrné plány sdílíme s těmito organizacemi. Tyto organizace mají také svá vlastní doporučení, která pečlivě zrcadlí doporučení Microsoftu. Protože správa mobilních zařízení (MDM) se stále rozrůstá do cloudu, společnost Microsoft vytvořila ekvivalentní doporučení MDM těchto směrných plánů zásad skupiny. Tyto další směrné plány jsou integrované pro Microsoft Intune a zahrnují zprávy o dodržování předpisů pro uživatele, skupiny a zařízení, která následují (nebo nesleduje) na základě směrného plánu.
 
-- Spousta zákazníků používá jako výchozí bod doporučení základní úrovně Intune a pak je přizpůsobuje tak, aby splňovala požadavky na IT a zabezpečení. **Směrný plán zabezpečení MDM** pro Windows 10 RS5 je první základ pro vydání. Tato standardní hodnota je sestavená jako obecná infrastruktura, která zákazníkům umožňuje nakonec importovat další standardní hodnoty zabezpečení založené na CIS, NIST a dalších standardech. V současné době je k dispozici pro Windows a nakonec bude zahrnovat iOS a Android.
+- Spousta zákazníků používá jako výchozí bod doporučení základní úrovně Intune a pak je přizpůsobuje tak, aby splňovala požadavky na IT a zabezpečení. **Směrný plán zabezpečení MDM** pro Windows 10 RS5 je první základ pro vydání. Tato standardní hodnota je sestavená jako obecná infrastruktura, která zákazníkům umožňuje nakonec importovat další standardní hodnoty zabezpečení založené na CIS, NIST a dalších standardech. V současné době je k dispozici pro Windows a nakonec bude zahrnovat iOS/iPadOS a Android.
 
 - Migrace z místních zásad skupiny služby Active Directory do čistě cloudového řešení pomocí Azure Active Directory (AD) s Microsoft Intune je cesta. V sadě [nástrojů pro zabezpečení dodržování předpisů](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10) , které vám pomůžou při správě hybridních AD a zařízení připojených k Azure AD, je potřeba, aby byly k dispozici šablony zásad skupiny. Tato zařízení můžou podle potřeby získat nastavení MDM z cloudu (Intune) a nastavení zásad skupiny z místních řadičů domény.
 

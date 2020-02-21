@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0bb2cb757e944369642807f117683dad3a9805a
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: b20a7eca6f71d46380f9fcdb1674226cc54a104f
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206257"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77510775"
 ---
 # <a name="add-vpn-settings-on-macos-devices-in-microsoft-intune"></a>Přidat nastavení sítě VPN na zařízení macOS v Microsoft Intune
 
@@ -32,7 +32,7 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím sezna
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořit profil konfigurace zařízení](vpn-settings-configure.md).
+[Vytvořte profil konfigurace zařízení](vpn-settings-configure.md).
 
 > [!NOTE]
 > Tato nastavení jsou k dispozici pro všechny typy registrace. Další informace o typech registrace najdete v tématu [registrace MacOS](../enrollment/macos-enroll.md).
@@ -53,7 +53,7 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím sezna
   - **Vlastní VPN**
 - **Dělené tunelové propojení**: **povolí** nebo **zakáže** tuto možnost, která umožňuje zařízením rozhodnout, které připojení se má použít v závislosti na provozu. Uživatel v hotelu například pro přístup k pracovním souborům použije připojení VPN, ale pro běžné procházení webu bude používat standardní síť hotelu.
 
-<!--- **Per-app VPN** - Select this option if you want to associate this VPN connection with an iOS or macOS app so that the connection will be opened when the app is run. You can associate the VPN profile with an app when you assign the software. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md). --->
+<!--- **Per-app VPN** - Select this option if you want to associate this VPN connection with an iOS/iPadOS or macOS app so that the connection will be opened when the app is run. You can associate the VPN profile with an app when you assign the software. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md). --->
 
 ## <a name="custom-vpn-settings"></a>Vlastní nastavení sítě VPN
 
@@ -72,4 +72,4 @@ Pokud jste vybrali **Vlastní VPN**, nakonfigurujte tato další nastavení:
 
 Profil je vytvořený, ale zatím se nepoužívá. Dále [Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).
 
-Nakonfigurujte nastavení sítě VPN na zařízeních se systémem [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [iOS](vpn-settings-ios.md)a [Windows 10](vpn-settings-windows-10.md) .
+Nakonfigurujte nastavení sítě VPN na zařízeních se systémem [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [iOS/iPadOS](vpn-settings-ios.md)a [Windows 10](vpn-settings-windows-10.md) .

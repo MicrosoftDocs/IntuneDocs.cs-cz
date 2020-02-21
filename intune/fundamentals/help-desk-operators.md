@@ -17,12 +17,12 @@ ms.reviewer: sumitp
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0094cdd12b2594cb60260d768daec8c5bed04c9c
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 3812d19122cf4dd85edf00a6fa12d9f2b89529aa
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72510252"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514587"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Použití portálu pro řešení potíží k poskytování pomoci uživatelům ve vaší společnosti
 
@@ -61,12 +61,12 @@ V podokně **Řešení potíží** můžete zkontrolovat informace o uživateli.
 
 ![Řídicí panel pro řešení potíží s očíslovanými oblastmi popsanými v následující tabulce](./media/help-desk-operators/troubleshooting-dash.png)
 
-| Oblast | Název | Description |
+| Oblast | Název | Popis |
 | ---  | ---  | ---         |
 | 1.   | Stav účtu  | Zobrazuje stav aktuálního tenanta Intune, například **Aktivní** nebo **Neaktivní**.       |
 | 2.   | Výběr uživatele  | Jméno aktuálně vybraného uživatele. Kliknutím na **Změnit uživatele** zvolíte nového uživatele.       |
 | 3.   | Stav uživatele  | Zobrazí stav uživatelovy licence Intune, počet zařízení, dodržování předpisů u každého zařízení, počet aplikací a dodržování předpisů u aplikací.       |
-| 4.   | Údaje uživatele  | Pomocí seznamu můžete vybrat podrobnosti, které chcete v podokně zkontrolovat. <br>Můžete vybrat: <ul><li>Klientské aplikace<li>Zásady dodržování předpisů<li> Zásady konfigurace<li>Zásady ochrany aplikací <li>Omezení registrace</ul>      |
+| 4.   | Informace o uživateli  | Pomocí seznamu můžete vybrat podrobnosti, které chcete v podokně zkontrolovat. <br>Můžete vybrat: <ul><li>Klientské aplikace<li>Zásady slučitelnosti<li> Zásady konfigurace<li>Zásady ochrany aplikace <li>Omezení registrace</ul>      |
 | 5.   | Členství ve skupině  | Zobrazí aktuální skupiny, ve kterých je vybraný uživatel členem.       |
 
 <!-- this section needs to be updated
@@ -248,18 +248,18 @@ An app protection policy is available to mobile apps that integrate with EMS tec
 
 Tabulka Neúspěšné registrace obsahuje neúspěšné pokusy o registraci. Zařízení uvedená v níže uvedené tabulce se mohla následně během dalšího pokusu úspěšně zaregistrovat. Některé neúspěšné pokusy nemusí být uvedené. Informace o zmírnění dopadů nejsou k dispozici pro všechny chyby.
 
-| Sloupec tabulky | Description |
+| Sloupec tabulky | Popis |
 |-------------|----------|
 | Stav registrace | Počáteční čas, kdy uživatel poprvé zahájil registraci |
 | Operační systém | Operační systém zařízení |
 | Verze operačního systému | Verze operačního systému zařízení |
-| Chyba | Důvod chyby |
+| Nezdařilo se | Důvod chyby |
 
 ### <a name="failure-details"></a>Podrobnosti chyby
 
 Po výběru řádku chyby se zobrazí další podrobnosti.
 
-| Section | Description |
+| Section | Popis |
 |-------------|----------|
 | Podrobnosti chyby | Podrobnější vysvětlení chyby |
 | Možná náprava | Navrhovaný postup k vyřešení chyby. Pro některé chyby nemusí být náprava uvedená. |
@@ -267,9 +267,9 @@ Po výběru řádku chyby se zobrazí další podrobnosti.
 
 ### <a name="enrollment-errors"></a>Chyby registrace
 
-| Chyba | Details |
+| Chyba | Podrobnosti |
 |-------------|----------|
-| Časový limit nebo chyba iOSu | Došlo k vypršení časového limitu relace mezi zařízením a Intune, protože uživateli trvala registrace moc dlouho. |
+| Časový limit pro iOS/iPadOS nebo selhání | Došlo k vypršení časového limitu relace mezi zařízením a Intune, protože uživateli trvala registrace moc dlouho. |
 | Uživatel se nenašel nebo nemá licenci | Uživatel nemá licenci nebo je ze služby odebraný. |
 | Zařízení je už zaregistrované | Někdo se pokusil o registraci zařízení pomocí Portálu společnosti na zařízení, které má zaregistrované jiný uživatel. |
 | Nepřipojeno k Intune | Došlo k pokusu o registraci, když nebyla nakonfigurovaná autorita správy mobilních zařízení (MDM) Intune. |
@@ -286,14 +286,14 @@ Po výběru řádku chyby se zobrazí další podrobnosti.
 | Neočekávaná metoda registrace autopilotu | Zařízení se pokusilo o registraci pomocí nepovolené metody. |
 | Zařízení Autopilot se odebralo. | Zařízení, které se pokouší zaregistrovat, se odebralo z autopilotního projektu pro tento účet. |
 | Dosažení limitu zařízení | Tato registrace se zablokovala kvůli omezení počtu zařízení, které nakonfiguroval správce. |
-| Onboarding Apple | Registrace všech zařízení s iOSem se v tuto chvíli zablokovala kvůli chybějícímu nebo prošlému certifikátu Apple MDM Push Certificate v Intune. |
+| Onboarding Apple | V tuto chvíli se zablokovala registrace všech zařízení s iOS/iPadOS z důvodu chybějícího nebo neplatného certifikátu Apple MDM push Certificate v Intune. |
 | Zařízení se nezaregistrovalo předem | Zařízení se nezaregistrovalo předem jako podnikové a správce zablokoval všechny osobní registrace. |
 | Funkce se nepodporuje | Uživatel se zřejmě pokusil o registraci prostřednictvím metody, která není kompatibilní s konfigurací Intune. |
 
 ## <a name="collect-available-data-from-mobile-device"></a>Shromažďování dostupných dat z mobilních zařízení
 
 Pokud chcete shromažďovat data ze zařízení při řešení potíží se zařízením uživatele, použijte následující zdroje informací:
-- [Odeslání chyb registrace zařízení s iOSem správci IT](/intune-user-help/send-errors-to-your-it-admin-ios)
+- [Odeslání chyb registrace iOS/iPadOS správci IT](/intune-user-help/send-errors-to-your-it-admin-ios)
 - [Pomoc firemní podpoře s řešením problémů zařízení pomocí podrobného protokolování](/intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android)
 - [Odeslání protokolů Androidu firemní podpoře pomocí kabelu USB](/intune-user-help/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
 - [Odeslání protokolů s diagnostickými daty ze zařízení s Androidem správci IT e-mailem](/intune-user-help/send-logs-to-your-it-admin-by-email-android)

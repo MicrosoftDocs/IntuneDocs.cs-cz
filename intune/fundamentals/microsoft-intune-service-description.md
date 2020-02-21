@@ -1,6 +1,6 @@
 ---
 title: Popis služby Microsoft Intune
-description: Microsoft Intune je cloudová služba, která pomáhá spravovat zařízení s Windows, iOS, Mac OS X, Androidem a Windows Mobile.
+description: Microsoft Intune je cloudová služba, která pomáhá spravovat zařízení s Windows, iOS/iPadOS, Mac OS X, Androidem a Windows Mobile.
 keywords: ''
 author: dougeby
 ms.author: dougeby
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7744fe217f39436e91f90fdf567f469c01986da4
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 2b65276ed2da827017406c67838afd89a766b2dc
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885668"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515063"
 ---
 # <a name="microsoft-intune-service-description"></a>Popis služby Microsoft Intune
 
@@ -56,7 +56,7 @@ Ekosystém správy mobilních zařízení se často mění. Důvodem jsou aktual
 
 - [Co je nového v Microsoft Intune](whats-new.md) Toto téma se aktualizuje nejen při měsíčních aktualizacích služeb, ale také týdně, například při vydání aplikací, jako je Portál společnosti.
 
-- Důležité aktualizace služby se také oznamují v centru pro [správu Microsoft 365](https://admin.microsoft.com/) centra zpráv. Pokud si nainstalujete doprovodnou [mobilní aplikaci pro správu Office 365](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), můžete přijímat oznámení na svém mobilním zařízení. Tady si můžete přečíst, jak pracovat s [centrem zpráv Office 365](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
+- Důležité aktualizace služby se také oznamují v centru pro [správu Microsoft 365](https://admin.microsoft.com/) centra zpráv. Pokud si nainstalujete doprovodnou [mobilní aplikaci pro správu Office 365](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), můžete dostat oznámení na svém mobilním zařízení. Tady si můžete přečíst, jak pracovat s [centrem zpráv Office 365](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
 
   Několik užitečných tipů:
 

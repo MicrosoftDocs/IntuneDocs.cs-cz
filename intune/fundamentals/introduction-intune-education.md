@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71ccea34694bde8ea80a779b36ef612fcefb1add
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 97177f91edea1205f6e8349ee1a7194d0f5300e5
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72510211"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514536"
 ---
 # <a name="how-is-intune-for-education-different-from-the-full-device-management-experience-in-intune"></a>Jak se Intune for Education liší od plnohodnotného prostředí pro správu zařízení v Intune?
 
@@ -29,7 +29,7 @@ Intune for Education umožňuje učitelům a studentům dosáhnout produktivní 
 
 ![Porovnání konzoly Intune for Education a konzoly Intune](./media/introduction-intune-education/intune-azure-vs-intuneEDU.png)
 
-Intune for Education umožňuje spravovat zařízení s Windows 10 a iOSem pomocí kompletní sady funkcí MDM dostupné v Intune. Plnohodnotné prostředí pro správu zařízení umožňuje spravovat zařízení s Windows, iOSem a Androidem.  
+Intune for Education vám umožní spravovat zařízení s Windows 10 a iOS/iPadOS pomocí úplných možností MDM dostupných v Intune. Úplné možnosti správy zařízení vám umožní spravovat zařízení s Windows, iOS/iPadOS a Androidem.  
 
 Intune for Education je možné používat samostatně nebo v kombinaci s [kompletním prostředím pro správu zařízení dostupným v Intune](what-is-intune.md). Dá se používat také společně s ostatními nástroji dostupnými v sadě [Microsoft Education](https://microsoft.com/education), což usnadňuje použití Intune for Education s jinými užitečnými vzdělávacími nástroji od Microsoftu.  
 

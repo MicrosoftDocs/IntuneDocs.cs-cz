@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 191be009f8d9e6fc448126834ef48f0bc6e2edc4
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: c8e4671790b72583219f1df64a0ef3491d707ea7
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505341"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515029"
 ---
 # <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>Konfigurace zásad dodržování předpisů zařízením a správy aplikací během migrace do Microsoft Intune
 
@@ -60,11 +60,11 @@ Profily přístupu k prostředkům dodají pro registrovaná zařízení certifi
 
 Je potřeba vytvořit profil konfigurace zařízení k vynucení nastavení na úrovni zařízení, například: zakázání fotoaparátu nebo obchodu s aplikacemi, konfigurace režimu jedné aplikace, nastavení domovské obrazovky apod. Přečtěte si další informace o [profilech zařízení](../configuration/device-profiles.md).
 
-#### <a name="directly-import-ios-configuration-profiles-optional"></a>Přímý import profilů konfigurace iOSu (volitelné)
+#### <a name="directly-import-iosipados-configuration-profiles-optional"></a>Přímo importovat konfigurační profily pro iOS/iPadOS (volitelné)
 
 - **Profily Apple Configuratoru pro iOS (7.1 a novější):** Pokud vaše existující řešení MDM používá profily Apple Configuratoru (soubory .mobileconfig), Intune je může přímo importovat jako vlastní zásady konfigurace.
 
-- **Zásady konfigurace mobilních aplikací pro iOS:** Pokud vaše existující řešení MDM používá zásady konfigurace mobilních aplikací pro iOS, Intune je může přímo importovat za předpokladu, že odpovídají formátu XML, který Apple používá pro seznamy vlastností.
+- **zásady konfigurace mobilních aplikací pro iOS:** Pokud vaše existující řešení MDM používá zásady konfigurace mobilních aplikací pro iOS/iPadOS, Intune je může přímo importovat, pokud odpovídají formátu XML určenému společností Apple pro seznamy vlastností.
 
 - Zjistěte, jak přidat vlastní zásady pro [iOS](../configuration/custom-settings-ios.md).
 

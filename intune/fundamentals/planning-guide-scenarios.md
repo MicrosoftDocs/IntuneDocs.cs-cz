@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96ebae46fd4935c3070319f16d35d5b53888e94c
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 3f432ab20170dc702d2014bbac68ced06e51082e
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505170"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514893"
 ---
 # <a name="identify-mobile-device-management-use-case-scenarios"></a>Identifikace scénářů použití při správě mobilních zařízení
 
@@ -64,12 +64,12 @@ Pokud chcete zadat scénáře použití a dílčí scénáře použití ve vaš�
 
 ## <a name="organizational-groups-for-your-scenarios"></a>Organizační skupiny pro scénáře
 
-Teď potřebujete určit organizační skupiny přidružené ke každému hlavnímu a dílčímu scénáři použití. Například:
+Teď potřebujete určit organizační skupiny přidružené ke každému hlavnímu a dílčímu scénáři použití. Příklad:
 
 | **Případy použití** | **Dílčí případy použití** | **Organizační skupiny** |
 |:---:|:---:|:---:|
-| Firemní | Informatik | Personalistika, finance |               
-| Firemní | Vedení | Personalistika, finance |            
+| Firemní | Informatik | Personální, finanční oddělení |               
+| Firemní | Vedení | Personální, finanční oddělení |            
 | Firemní | Kiosk | Maloobchod |
 | uživatelé s vlastním zařízením (BYOD) | Informatik | Marketing, prodej |            
 | uživatelé s vlastním zařízením (BYOD) | Vedení | Marketing, prodej |
@@ -79,15 +79,15 @@ Teď potřebujete určit organizační skupiny přidružené ke každému hlavn�
 
 V dalším kroku budete identifikovat platformy mobilních zařízení přidružené ke každému scénáři použití. Může jich být více.
 
-Scénář firemního použití může například podporovat platformy zařízení s iOSem a Android Samsung Knox. Zásady pro uživatele s vlastním zařízením (BYOD) ale mohou zahrnovat podporu dalších platforem pro mobilní zařízení, jako je Android (bez zabezpečení Samsung KNOX) a Windows 10 Mobile. Pokud budeme vycházet z předchozích příkladů, přidružíme každému scénáři použití následující platformy mobilních zařízení.
+Scénář firemního použití může například podporovat platformy zařízení iOS/iPadOS a Android Samsung KNOX. Zásady pro uživatele s vlastním zařízením (BYOD) ale mohou zahrnovat podporu dalších platforem pro mobilní zařízení, jako je Android (bez zabezpečení Samsung KNOX) a Windows 10 Mobile. Pokud budeme vycházet z předchozích příkladů, přidružíme každému scénáři použití následující platformy mobilních zařízení.
 
-| **Případy použití** | **Dílčí případy použití** | **SKUPINY** | **Platformy zařízení** |   
+| **Případy použití** | **Dílčí případy použití** | **Skupiny** | **Platformy zařízení** |   
 |:---:|:---:|:---:|:---:|
-| Firemní | Informatik | Personalistika, finance | iOS |                                                           
-| Firemní | Vedení | Personalistika, finance | iOS |                                                           
+| Firemní | Informatik | Personální, finanční oddělení | iOS/iPadOS |                                                           
+| Firemní | Vedení | Personální, finanční oddělení | iOS/iPadOS |                                                           
 | Firemní | Kiosk | Maloobchod | Android |
-| uživatelé s vlastním zařízením (BYOD) | Informatik | Marketing, prodej | iOS |                                                           
-| uživatelé s vlastním zařízením (BYOD) | Vedení | Marketing, prodej | iOS |
+| uživatelé s vlastním zařízením (BYOD) | Informatik | Marketing, prodej | iOS/iPadOS |                                                           
+| uživatelé s vlastním zařízením (BYOD) | Vedení | Marketing, prodej | iOS/iPadOS |
 
 ## <a name="next-steps"></a>Další kroky
 

@@ -1,6 +1,6 @@
 ---
-title: Jak uživatelé systému iOS získávají svoje aplikace
-description: Metody zpřístupnění aplikací pro iOS koncovým uživatelům
+title: Jak uživatelé iOS/iPadOS získávají své aplikace
+description: Metody zpřístupnění aplikací pro iOS/iPadOS koncovým uživatelům
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 06cc977ce8b0b892e1020436f89ada4a40bac3f2
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 344c2e3f3ed53852aa6b749c9ebf6d451dd313ff
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73413979"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514383"
 ---
-# <a name="how-your-ios-users-get-their-apps"></a>Jak uživatelé systému iOS získávají svoje aplikace
+# <a name="how-your-iosipados-users-get-their-apps"></a>Jak uživatelé iOS/iPadOS získávají své aplikace
 
 Tyto informace slouží k pochopení toho, jak a kde koncoví uživatelé získávají aplikace, které distribuujete pomocí Microsoft Intune.
 
@@ -34,9 +34,9 @@ Tyto informace slouží k pochopení toho, jak a kde koncoví uživatelé získ�
 
 **Spravované aplikace** – aplikace, které jde spravovat pomocí zásad a které jsou „zabalené“ službou Intune nebo sestavené pomocí sady Intune App SDK. Tyto aplikace je možné spravovat pomocí služby Intune a je na ně možné aplikovat zásady ochrany aplikací.
 
-**Nespravované aplikace**– aplikace, které uživatelé můžou stahovat z App Storu pro iOS, které nejsou integrované se sadou Intune App SDK. Intune nemá žádnou kontrolu nad distribucí, správou nebo selektivním vymazáním těchto aplikací.  
+**Nespravované aplikace**– aplikace, které uživatelé můžou stahovat z App Storu pro iOS/iPadOS, které nejsou integrované se sadou Intune App SDK. Intune nemá žádnou kontrolu nad distribucí, správou nebo selektivním vymazáním těchto aplikací.  
 
-Omezení společnosti Apple zakazují, aby se firemní a spravované aplikace z App Storu zobrazovaly v aplikaci Portál společnosti. Tento problém jsme obešli tak, že dlaždice v aplikaci Portál společnosti pro iOS odkazují uživatele u všech aplikací na různá zobrazení v jednom umístění (na webu Portál společnosti).
+Omezení společnosti Apple zakazují, aby se firemní a spravované aplikace z App Storu zobrazovaly v aplikaci Portál společnosti. Chcete-li se tomuto problému vyhnout, dlaždice v aplikaci Portál společnosti pro iOS/iPadOS ukazují uživatele do různých zobrazení v jednom umístění (Portál společnosti webu) pro všechny své aplikace.
 
 Zaregistrovaní uživatelé můžou používat aplikace po klepnutí na následující dlaždice na obrazovce Aplikace v aplikaci Portál společnosti:
 
@@ -50,7 +50,7 @@ Zaregistrovaní uživatelé můžou používat aplikace po klepnutí na následu
 
 Další informace o přidávání aplikací najdete v článku [Přidání aplikací do Microsoft Intune](../apps/apps-add.md).
 
-## <a name="see-also"></a>Související témata
+## <a name="see-also"></a>Viz také
 
 [Jak uživatelé s Androidem získávají svoje aplikace](end-user-apps-android.md)
 

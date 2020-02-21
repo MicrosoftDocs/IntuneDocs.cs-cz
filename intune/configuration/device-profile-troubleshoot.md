@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/28/2020
+ms.date: 02/18/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 881d0f095d2144ae42db4825336275980a19f419
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: 21497716f17ced83bdcc1952cb952151f993bb7b
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812359"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511323"
 ---
 # <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Běžné otázky, problémy a řešení se zásadami a profily zařízení v Microsoft Intune
 
@@ -36,11 +36,11 @@ Abyste zmírnili následky tohoto problému, nastavte Wi-Fi pro hosty. Když sel
 
 Další doporučení:  
 
-- Pokud síť Wi-Fi, ke které se připojujete, používá heslo nebo přístupové heslo, ujistěte se, že se můžete připojit k směrovači sítě Wi-Fi přímo. Můžete to vyzkoušet na zařízení s iOSem.
+- Pokud síť Wi-Fi, ke které se připojujete, používá heslo nebo přístupové heslo, ujistěte se, že se můžete připojit k směrovači sítě Wi-Fi přímo. Můžete testovat pomocí zařízení s iOS/iPadOS.
 - Až se úspěšně připojíte ke koncovému bodu sítě Wi-Fi (směrovači sítě Wi-Fi), zapište si identifikátor SSID a použité přihlašovací údaje (heslo).
 - Zadejte identifikátor SSID a přihlašovací údaje (heslo) do pole Předsdílený klíč. 
 - Nasaďte profil u testovací skupiny, která má omezený počet uživatelů, nejlépe jenom u IT týmu. 
-- Synchronizujte vaše zařízení s iOSem do Intune. Zaregistrujte se (pokud jste to ještě neudělali). 
+- Synchronizujte zařízení s iOS/iPadOS s Intune. Zaregistrujte se (pokud jste to ještě neudělali). 
 - Vyzkoušejte připojení ke stejnému koncovému bodu sítě Wi-Fi (jak je uvedeno v prvním kroku).
 - Zaveďte profil u větších skupin a nakonec u všech předpokládaných uživatelů ve vaší organizaci. 
 
@@ -54,23 +54,23 @@ Pokud se zařízení po prvním oznámení nevrátí se změnami, zobrazí se v 
 
 | Platforma | Aktualizovat cyklus|
 | --- | --- |
-| iOS | Přibližně každých 8 hodin |
+| iOS/iPadOS | Přibližně každých 8 hodin |
 | macOS | Přibližně každých 8 hodin |
 | Android | Přibližně každých 8 hodin |
 | Počítače s Windows 10 zaregistrované jako zařízení | Přibližně každých 8 hodin |
 | Windows Phone | Přibližně každých 8 hodin |
-| Windows 8.1 | Přibližně každých 8 hodin |
+| Windows 8.1 | Přibližně každých 8 hodin |
 
 Pokud se zařízení nedávno zaregistrovalo, spouští se ověření dodržování předpisů, nedodržování předpisů a konfigurace častěji, což je **Odhadované** na:
 
 | Platforma | Četnost |
 | --- | --- |
-| iOS | Každých 15 minut po dobu 1 hodiny a pak přibližně každých 8 hodin |  
+| iOS/iPadOS | Každých 15 minut po dobu 1 hodiny a pak přibližně každých 8 hodin |  
 | macOS | Každých 15 minut po dobu 1 hodiny a pak přibližně každých 8 hodin | 
 | Android | Každé 3 minuty každé 3 minuty, potom každých 15 minut, 2 hodiny a pak každých 8 hodin. | 
 | Počítače s Windows 10 zaregistrované jako zařízení | Každé 3 minuty každé 3 minuty, potom každých 15 minut, 2 hodiny a pak každých 8 hodin. | 
 | Windows Phone | Každých 15 minut každých 5 minut, potom každých 15 minut a pak přibližně každých 8 hodin | 
-| Windows 8.1 | Každých 15 minut každých 5 minut, potom každých 15 minut a pak přibližně každých 8 hodin | 
+| Windows 8.1 | Každých 15 minut každých 5 minut, potom každých 15 minut a pak přibližně každých 8 hodin | 
 
 Uživatel může kdykoli otevřít aplikaci Portál společnosti, **nastavení** > **synchronizaci** , aby okamžitě kontrolovala aktualizace zásad nebo profilů.
 
@@ -102,7 +102,7 @@ Ke konfliktům dochází, když jsou dvě nastavení profilu stejná. Představt
 
 Zásada se nasadí do aplikace a projeví se. Je nasazená druhá zásada. V tomto scénáři má přednost první zásada a zůstane u nich použito. Druhá zásada ukazuje konflikt. Pokud jsou obě aplikovány současně, což znamená, že nejsou předchozí zásady, dojde ke konfliktu obou. Všechna konfliktní nastavení se nastaví na nejvíce omezující hodnoty.
 
-## <a name="what-happens-when-ios-custom-policies-conflict"></a>Co se stane při konfliktu vlastních zásad iOS?
+## <a name="what-happens-when-iosipados-custom-policies-conflict"></a>Co se stane, když dojde ke konfliktu vlastních zásad pro iOS/iPadOS?
 
 Intune nevyhodnocuje datovou část konfiguračních souborů Apple nebo vlastní zásady OMA-URI (Open Mobile Alliance Uniform Resource Identifier). Slouží jenom jako mechanismus doručování.
 
@@ -122,7 +122,7 @@ Když odstraníte profil nebo odeberete zařízení ze skupiny, která má profi
     - Povolit jednoduchá hesla
     - Minimální délka hesla
     - Vyžadovaný typ hesla
-    - Omezená platnost hesla (ve dnech)
+    - Vypršení platnosti hesla (dny)
     - Pamatovat si historii hesel
     - Počet povolených opakovaných neúspěšných přihlášení, než bude zařízení vymazáno
     - Počet minut nečinnosti před vyžadováním hesla
@@ -144,7 +144,7 @@ Když odstraníte profil nebo odeberete zařízení ze skupiny, která má profi
     - Povolit komunikaci NFC
     - Povolit Wi-Fi
 
-  - **iOS**: Odeberou se všechna nastavení s těmito výjimkami:
+  - **iOS/iPadOS**: odeberou se všechna nastavení, s výjimkou:
   
     - Povolit hlasový roaming
     - Povolit datový roaming
@@ -156,7 +156,7 @@ Po nastavení zařízení Windows Phone nedovolí, aby se v zabezpečení sníž
 
 Pokud chcete profil změnit na méně bezpečnou hodnotu, resetujte zásady zabezpečení. Například v Windows 8.1 na ploše potáhnutím prstem vpravo > vyberte **nastavení** > **Ovládací panely**. Vyberte aplet **Uživatelské účty** . V navigační nabídce vlevo najdete odkaz **resetovat zásady zabezpečení** (směrem k dolnímu). Vyberte ho a potom zvolte **Resetovat zásady**.
 
-Jiná zařízení MDM, například Android, Windows Phone 8,1 a novější, iOS a Windows 10, může být potřeba vyřadit a znovu zaregistrovat do Intune a použít tak méně omezující profil.
+Jiná zařízení MDM, například Android, Windows Phone 8,1 a novější, iOS/iPadOS a Windows 10, může být potřeba vyřadit a znovu zaregistrovat do Intune a použít tak méně omezující profil.
 
 ## <a name="some-settings-in-a-windows-10-profile-return-not-applicable"></a>Některá nastavení v profilu Windows 10 vrátí "nepoužitelné".
 

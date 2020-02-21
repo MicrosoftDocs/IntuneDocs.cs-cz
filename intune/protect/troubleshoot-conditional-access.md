@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c662de98ffa497c5fbc89ac1b78ed8537ff0d80c
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 0d6dc10eca80a7d403d0ff44c25d3cfaed85fafa
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71729230"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514196"
 ---
 # <a name="troubleshoot-conditional-access"></a>Řešení potíží s podmíněným přístupem
 Tento článek popisuje, co dělat, když se vašim uživatelům nedaří získat přístup k prostředkům chráněným pomocí podmíněného přístupu, nebo když uživatelé mají přístup k chráněným prostředkům, ale měli byste je zablokovat.
@@ -60,7 +60,7 @@ Tyto podmínky si můžete prohlédnout u každého zařízení na webu Azure Po
 
 - Když se zařízení registruje poprvé, může registrace jeho informací o dodržování předpisů trvat nějakou dobu. Počkejte několik minut a zkuste akci zopakovat.
 
-- V případě zařízení se systémem iOS může stávající e-mailový profil blokovat nasazení e-mailového profilu vytvořeného správcem Intune přiřazeného tomuto uživateli, takže zařízení nedodržuje předpisy. V tomto scénáři aplikace Portál společnosti upozorní uživatele, že nedodržují předpisy z důvodu ručního nakonfigurovaného e-mailového profilu, a vyzve uživatele k odebrání tohoto profilu. Jakmile uživatel odebere stávající e-mailový profil, může se e-mailový profil Intune úspěšně nasadit. Pokud chcete tomuto problému zabránit, upozorněte uživatele, aby na svém zařízení před registrací odebrali všechny stávající e-mailové profily.
+- V případě zařízení se systémem iOS/iPadOS může stávající e-mailový profil blokovat nasazení e-mailového profilu vytvořeného správcem Intune přiřazeného tomuto uživateli, takže zařízení nedodržuje předpisy. V tomto scénáři aplikace Portál společnosti upozorní uživatele, že nedodržují předpisy z důvodu ručního nakonfigurovaného e-mailového profilu, a vyzve uživatele k odebrání tohoto profilu. Jakmile uživatel odebere stávající e-mailový profil, může se e-mailový profil Intune úspěšně nasadit. Pokud chcete tomuto problému zabránit, upozorněte uživatele, aby na svém zařízení před registrací odebrali všechny stávající e-mailové profily.
 
 - Zařízení se může zablokovat ve stavu dodržování předpisů, takže uživatel nebude muset spustit jiné vrácení se změnami. Pokud máte zařízení v tomto stavu:
   - Ujistěte se, že zařízení používá nejnovější verzi aplikace Portál společnosti.

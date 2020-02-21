@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2503013e6ca0d907a05c81f895b44878784dbbd4
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 817f68d7082674145d482dc4c0bd1527fe0edb0b
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502722"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514502"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Koncové body sítě pro Microsoft Intune  
 
@@ -145,8 +145,8 @@ Pro metadata Optimalizace doručení:
 
 |Používáno pro|Název hostitele (IP adresa/podsíť)|Protokol|Port|
 |-----|--------|------|-------|
-|Načítání a zobrazování obsahu ze serverů Apple|itunes.apple.com<br>\*.itunes.apple.com<br>\*.mzstatic.com<br>\*.phobos.apple.com<br> \*.phobos.itunes-apple.com.akadns.net |    HTTP    |      80      |
+|Načítání a zobrazování obsahu ze serverů Apple|itunes.apple.com<br>\*. itunes.apple.com<br>\*. mzstatic.com<br>\*. phobos.apple.com<br> \*. phobos.itunes-apple.com.akadns.net |    HTTP    |      80      |
 |Komunikace se servery APNS|#-courier.push.apple.com<br>' # ' je náhodné číslo od 0 do 50.|    TCP     |  5223 a 443  |
 |Různé funkce, včetně přístupu k webu, obchodu iTunes, macOS App Storu, iCloud, zasílání zpráv atd. |phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net| HTTP/HTTPS |  80 nebo 443   |
 
-Další informace najdete v tématu [porty TCP a UDP společnosti Apple používané softwarovými produkty společnosti Apple](https://support.apple.com/en-us/HT202944), [připojení hostitelů serveru MacOS, iOS a iTunes a procesy na pozadí iTunes](https://support.apple.com/en-us/HT201999)a [Pokud klienti MacOS a iOS nezískávají nabízená oznámení Apple](https://support.apple.com/en-us/HT203609).  
+Další informace najdete v tématu [porty TCP a UDP společnosti Apple používané softwarovými produkty společnosti Apple](https://support.apple.com/HT202944), [informace o připojeních hostitele MacOS, iOS/iPadOS a iTunes serveru iTunes a o procesech na pozadí iTunes](https://support.apple.com/HT201999)a [v případě, že klienti MacOS a iOS/iPadOS nezískávají nabízená oznámení Apple](https://support.apple.com/HT203609).  

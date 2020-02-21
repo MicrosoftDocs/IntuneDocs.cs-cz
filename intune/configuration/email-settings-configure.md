@@ -1,12 +1,12 @@
 ---
 title: Konfigurace nastavení e-mailu v Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Vytvořte v Microsoft Intune e-mailový profil a nasaďte ho do zařízení s Androidem Enterprise, iOSem a Windows. Pomocí e-mailového profilu můžete na spravovaných zařízeních nakonfigurovat běžná nastavení e-mailu, například e-mailový server a metodu ověřování při připojení k firemnímu e-mailu.
+description: Vytvořte e-mailový profil v Microsoft Intune a nasaďte tento profil na zařízení s Androidem Enterprise, iOS, iPadOS a Windows. Pomocí e-mailového profilu můžete na spravovaných zařízeních nakonfigurovat běžná nastavení e-mailu, například e-mailový server a metodu ověřování při připojení k firemnímu e-mailu.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 110db564dce5ad68d3c2a26b85e60ecbe99e7335
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 908a20098917540e6f823d94c6643d15f13ecf68
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059426"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511081"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Přidání nastavení e-mailu do zařízení pomocí Intune
 
@@ -29,10 +29,11 @@ Microsoft Intune obsahuje různá nastavení e-mailu, která můžete nasadit do
 
 E-mailové profily umožňují nakonfigurovat nastavení integrovaného e-mailu na následujících zařízeních:
 
-- Android Samsung Knox Standard 4.0 a novější
+- Android Samsung KNOX Standard 4,0 a novější
 - Android Enterprise
-- iOS 8.0 a novější
-- Windows Phone 8.1 a novější
+- iOS 8,0 a novější
+- iPadOS 13,0 a novější
+- Windows Phone 8,1 a novější
 - Windows 10 (pro stolní počítače) a Windows 10 Mobile
 
 V tomto článku se dozvíte, jak vytvořit e-mailový profil v Microsoft Intune. Obsahuje také odkazy na různé platformy s podrobnějším nastavením.
@@ -89,7 +90,7 @@ E-mailové profily můžete zabezpečit pomocí následujících možností:
 
 Pokud si už uživatel e-mailový účet nakonfiguroval, přiřadí se e-mailový profil jinak, a to v závislosti na platformě.
 
-- **iOS**: Je detekován existující duplicitní profil e-mailu na základě názvu hostitele a e-mailové adresy. Duplicitní e-mailový profil zablokuje přiřazení profilu Intune. V takovém případě aplikace Portál společnosti upozorní uživatele, že nedodržují předpisy, a vyzve koncového uživatele k ručnímu odebrání nakonfigurovaného profilu. Aby se zabránilo tomuto scénáři, řekněte koncovým uživatelům, aby se zaregistrovali *před* instalací e-mailového profilu, který umožňuje službě Intune nastavit profil.
+- **iOS/iPadOS**: na základě názvu hostitele a e-mailové adresy se detekuje existující duplicitní e-mailový profil. Duplicitní e-mailový profil zablokuje přiřazení profilu Intune. V takovém případě aplikace Portál společnosti upozorní uživatele, že nedodržují předpisy, a vyzve koncového uživatele k ručnímu odebrání nakonfigurovaného profilu. Aby se zabránilo tomuto scénáři, řekněte koncovým uživatelům, aby se zaregistrovali *před* instalací e-mailového profilu, který umožňuje službě Intune nastavit profil.
 
 - **Windows:** Na základě názvu hostitele a e-mailové adresy se detekuje existující duplicitní e-mailový profil. Intune přepíše existující e-mailový profil vytvořený koncovým uživatelem.
 

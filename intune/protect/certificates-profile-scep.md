@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad363785888a92d1e8be4f2d28690278a2efaae9
-ms.sourcegitcommit: c7c6be3833d9a63d43f31d598b555b49b33cf5cb
+ms.openlocfilehash: 03775716763125d61a8d31ef8d73bfca44f1d4d8
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76966296"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514060"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Vytvoření a přiřazení profilů certifikátů SCEP v Intune
 
@@ -37,7 +37,7 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
 2. Vyberte **zařízení** > **konfigurační profil** > **vytvořit profil**.
 
-3. Zadejte tyto vlastnosti:
+3. Zadejte následující vlastnosti:
 
 4. Zadejte **název** a **popis** profilu certifikátu SCEP.
 
@@ -84,23 +84,23 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
        Mezi možnosti formátu pro *Formát názvu subjektu* patří:
 
-       - **Není nakonfigurováno**
+       - **Nenakonfigurované**
        - **Běžný název**
        - **Běžný název včetně e-mailové adresy**
        - **Běžný název jako e-mail**
        - **IMEI (International Mobile Equipment Identity)**
        - **Sériové číslo**
-       - **Vlastní**: Když vyberete tuto možnost, zobrazí se také textové pole **Vlastní**. V tomto poli můžete zadat vlastní formát názvu subjektu, včetně proměnných. Vlastní formát podporuje dvě proměnné: **Běžný název (CN)** a **E-mail (E)**. **Běžný název (CN)** můžete nastavit na některou z těchto proměnných:
+       - **Vlastní**: Když vyberete tuto možnost, zobrazí se také textové pole **Vlastní**. V tomto poli můžete zadat vlastní formát názvu subjektu, včetně proměnných. Vlastní formát podporuje dvě proměnné: **Běžný název (CN)** a **E-mail (E)** . **Běžný název (CN)** můžete nastavit na některou z těchto proměnných:
 
-         - **CN = {{username}}**: hlavní název uživatele (UPN), například janedoe@contoso.com.
-         - **CN={{AAD_Device_ID}}**: ID přiřazené při registraci zařízení ve službě AD (Azure Active Directory). Toto ID se obvykle používá k ověření ve službě Azure AD.
-         - **CN = {{sériové}}**: jedinečné sériové číslo (SN) obvykle používané výrobcem k identifikaci zařízení.
-         - **CN = {{IMEINumber}}**: jedinečné číslo IMEI (International Mobile Equipment Identity), které se používá k identifikaci mobilního telefonu.
-         - **CN = {{OnPrem_Distinguished_Name}}**: sekvence relativních rozlišujících názvů oddělená čárkou, například *CN = Jana Karásek, OU = UserAccounts, DC = Corp, DC = contoso, DC = com*.
+         - **CN = {{username}}** : hlavní název uživatele (UPN), například janedoe@contoso.com.
+         - **CN={{AAD_Device_ID}}** : ID přiřazené při registraci zařízení ve službě AD (Azure Active Directory). Toto ID se obvykle používá k ověření ve službě Azure AD.
+         - **CN = {{sériové}}** : jedinečné sériové číslo (SN) obvykle používané výrobcem k identifikaci zařízení.
+         - **CN = {{IMEINumber}}** : jedinečné číslo IMEI (International Mobile Equipment Identity), které se používá k identifikaci mobilního telefonu.
+         - **CN = {{OnPrem_Distinguished_Name}}** : sekvence relativních rozlišujících názvů oddělená čárkou, například *CN = Jana Karásek, OU = UserAccounts, DC = Corp, DC = contoso, DC = com*.
 
            Pokud chcete použít proměnnou *{{OnPrem_Distinguished_Name}}* , proveďte synchronizaci atributu uživatele *onpremisesdistinguishedname* pomocí [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) do služby Azure AD.
 
-         - **CN = {{onPremisesSamAccountName}}**: Správci můžou synchronizovat atribut sAMAccountName ze služby Active Directory do Azure AD pomocí služby Azure AD Connect do atributu s názvem *onPremisesSamAccountName*. Intune může tuto proměnnou nahradit jako součást žádosti o vystavení certifikátu v předmětu certifikátu. Atribut samAccountName je přihlašovací jméno uživatele používané k podpoře klientů a serverů z předchozí verze Windows (Pre-Windows 2000). Formát přihlašovacího jména uživatele je: *DomainName\testUser*nebo pouze *testUser*.
+         - **CN = {{onPremisesSamAccountName}}** : Správci můžou synchronizovat atribut sAMAccountName ze služby Active Directory do Azure AD pomocí služby Azure AD Connect do atributu s názvem *onPremisesSamAccountName*. Intune může tuto proměnnou nahradit jako součást žádosti o vystavení certifikátu v předmětu certifikátu. Atribut samAccountName je přihlašovací jméno uživatele používané k podpoře klientů a serverů z předchozí verze Windows (Pre-Windows 2000). Formát přihlašovacího jména uživatele je: *DomainName\testUser*nebo pouze *testUser*.
 
             Pokud chcete použít proměnnou *{{onPremisesSamAccountName}}* , nezapomeňte synchronizovat atribut uživatele *onPremisesSamAccountName* pomocí [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) do Azure AD.
 
@@ -169,7 +169,7 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
         > [!IMPORTANT]
         > - Při použití proměnné certifikátu zařízení uveďte název proměnné v složených závorkách {}.
-        > - Nepoužívejte složené závorky **{}**, symboly kanálu **|** a středníky **;** v textu, který následuje za proměnnou.
+        > - Nepoužívejte složené závorky **{}** , symboly kanálu **|** a středníky **;** v textu, který následuje za proměnnou.
         > - Vlastnosti zařízení používané v *předmětu* nebo *síti SAN* certifikátu zařízení, jako jsou **IMEI**, **sériové**a **FullyQualifiedDomainName**, jsou vlastnosti, které by mohly být falešné osobou, která by mohla mít přístup k zařízení.
         > - Zařízení musí podporovat všechny proměnné určené v profilu certifikátu pro daný profil k instalaci na toto zařízení.  Pokud se například používá **{{IMEI}}** v síti SAN profilu SCEP a je přiřazeno k zařízení, které nemá číslo IMEI, nepodaří se mu nainstalovat profil.
 
@@ -179,7 +179,7 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
      Pokud je třeba období platnosti certifikátu v šabloně certifikátu dva roky, můžete zadat hodnotu jeden rok, ale ne pět let. Hodnota musí být zároveň nižší než zbývající doba platnosti certifikátu vydávající CA.
 
-   - **Zprostředkovatel úložiště klíčů (KSP)**:
+   - **Zprostředkovatel úložiště klíčů (KSP)** :
 
      *(Platí pro: Windows 8.1 a novější a Windows 10 a novější)*
 
@@ -197,7 +197,7 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
      - **Digitální podpis**: Umožňuje výměnu klíče jenom v případě, že se k ochraně klíče využívá digitální podpis.
      - **Šifrování klíče**: Umožňuje výměnu klíče jenom v případě, že je klíč zašifrovaný.
 
-   - **Velikost klíče (bity)**:
+   - **Velikost klíče (bity)** :
 
      Vyberte počet bitů obsažených v klíči.
 
@@ -215,13 +215,13 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
      Přidejte hodnoty pro zamýšlený účel certifikátu. Ve většině případů certifikát vyžaduje *ověření klienta* , aby se mohl uživatel nebo zařízení ověřit na serveru. Podle potřeby můžete přidat další použití klíče.
 
-   - **Prahová hodnota obnovení (%)**:
+   - **Prahová hodnota obnovení (%)** :
 
      Zadejte procento doby životnosti certifikátu zbývající v době, kdy zařízení požádá o obnovení certifikátu. Pokud například zadáte 20, bude proveden pokus o obnovení certifikátu, pokud vypršela platnost certifikátu 80%. Pokusy o obnovení budou pokračovat, dokud nebude obnovení úspěšné. Obnovení vygeneruje nový certifikát, který má za následek novou dvojici veřejného a privátního klíče.
 
    - **Adresy URL serveru SCEP**:
 
-     Zadejte jednu nebo více adres URL pro servery NDES, které vystavují certifikáty prostřednictvím SCEP. Zadejte například něco jako *https://ndes.contoso.com/certsrv/mscep/mscep.dll*. V případě potřeby můžete přidat další adresy URL SCEP pro vyrovnávání zatížení, protože adresy URL se v profilu náhodně přidávají do zařízení. Pokud jeden ze serverů SCEP není dostupný, požadavek SCEP selže a je možné, že u pozdějších vrácení se změnami zařízení může být žádost o certifikát vytvořená na stejném serveru, který je mimo provoz.
+     Zadejte jednu nebo více adres URL pro servery NDES, které vystavují certifikáty prostřednictvím SCEP. Zadejte například něco jako *https://ndes.contoso.com/certsrv/mscep/mscep.dll* . V případě potřeby můžete přidat další adresy URL SCEP pro vyrovnávání zatížení, protože adresy URL se v profilu náhodně přidávají do zařízení. Pokud jeden ze serverů SCEP není dostupný, požadavek SCEP selže a je možné, že u pozdějších vrácení se změnami zařízení může být žádost o certifikát vytvořená na stejném serveru, který je mimo provoz.
 
 8. Vyberte **OK**a pak vyberte **vytvořit**. Profil se vytvoří a zobrazí se v seznamu *Konfigurace zařízení – profily* .
 
@@ -240,9 +240,9 @@ Pokud název předmětu obsahuje jeden ze speciálních znaků, použijte k vyř
 - Zapouzdří hodnotu CN, která obsahuje speciální znak, s uvozovkami.  
 - Odeberte speciální znak z hodnoty CN.
 
-Máte **například**název subjektu, který se zobrazí jako *testovací uživatel (TestCompany, LLC)*.  ZÁSTUPCE, který obsahuje CN s čárkou mezi *TestCompany* a *LLC* , představuje problém.  Problém se může vyhnout vložením nabídek kolem celé propojené sítě nebo odebráním čárky z *TestCompany* a *LLC*:
+Máte **například**název subjektu, který se zobrazí jako *testovací uživatel (TestCompany, LLC)* .  ZÁSTUPCE, který obsahuje CN s čárkou mezi *TestCompany* a *LLC* , představuje problém.  Problém se může vyhnout vložením nabídek kolem celé propojené sítě nebo odebráním čárky z *TestCompany* a *LLC*:
 
-- **Přidat uvozovky**: *CN =*"testovací uživatel (TestCompany, LLC)", OU = UserAccounts, DC = Corp, DC = contoso, DC = com *
+- **Přidat uvozovky**: *CN =* "testovací uživatel (TestCompany, LLC)", OU = UserAccounts, DC = Corp, DC = contoso, DC = com *
 - **Odebrat čárku**: *CN = testovací uživatel (TestCompany LLC), OU = UserAccounts, DC = Corp, DC = contoso, DC = com*
 
  Pokusy o odložení čárky pomocí zpětného lomítka se však nezdaří s chybou v protokolech CRP:
@@ -280,7 +280,7 @@ Přiřaďte profily certifikátů SCEP stejným způsobem jako [profily zaříze
 - I když vytvoříte a přiřadíte profil důvěryhodného certifikátu a profil certifikátu SCEP samostatně, musí být přiřazeni obě. Bez nainstalovaného na zařízení se zásada certifikátu SCEP nezdařila. Zajistěte, aby všechny profily důvěryhodných kořenových certifikátů byly nasazeny taky do stejných skupin jako profil SCEP.
 
 > [!NOTE]
-> Když je v zařízeních se systémem iOS přidružený profil certifikátu SCEP k dalšímu profilu, jako je například profil sítě Wi-Fi nebo VPN, zařízení obdrží certifikát pro každý z těchto dalších profilů. Výsledkem je, že zařízení s iOS má víc certifikátů dodaných žádostí o certifikát SCEP.  Pokud se požaduje jeden certifikát, musíte místo certifikátů SCEP použít certifikáty PKCS.  Je to kvůli rozdílům ve způsobu doručování certifikátů SCEP a PKCS do zařízení.
+> Pokud je v zařízeních se systémem iOS/iPadOS přidružený profil certifikátu SCEP k dalšímu profilu, jako je například profil sítě Wi-Fi nebo VPN, zařízení obdrží certifikát pro každý z těchto dalších profilů. Výsledkem je, že zařízení se systémem iOS/iPadOS má několik certifikátů dodaných žádostí o certifikát SCEP.  Pokud se požaduje jeden certifikát, musíte místo certifikátů SCEP použít certifikáty PKCS.  Je to kvůli rozdílům ve způsobu doručování certifikátů SCEP a PKCS do zařízení.
 
 ## <a name="next-steps"></a>Další kroky
 

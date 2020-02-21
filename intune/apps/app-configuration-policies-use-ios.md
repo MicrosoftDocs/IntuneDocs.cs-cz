@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 02/11/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6044ff5f8d169e36a11f9289f1772c809723b7fc
-ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
+ms.openlocfilehash: af3c4e05a47e015384716588a28a6074898e2f6a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77438000"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513958"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOS nebo iPadOS
 
@@ -43,7 +43,7 @@ Když máte vybrané zahrnuté skupiny pro zásady konfigurace aplikace, můžet
 > [!TIP]
 > Tento typ zásad je nyní k dispozici pouze pro zařízení se systémem iOS/iPadOS 8,0 a novějším. Podporuje následující typy instalací aplikací:
 >
-> - **Spravované aplikace pro iOS z obchodu s aplikacemi**
+> - **Spravovaná aplikace pro iOS/iPadOS z App Storu**
 > - **Balíček aplikace pro iOS**
 >
 > Další informace o typech instalace aplikací najdete v tématu [Přidání aplikace do Microsoft Intune](apps-add.md). Další informace o zahrnutí konfigurace aplikace do balíčku aplikace. IPA pro spravovaná zařízení najdete v tématu Konfigurace spravované aplikace v [dokumentaci pro vývojáře pro iOS](https://developer.apple.com/library/archive/samplecode/sc2279/Introduction/Intro.html).
@@ -108,9 +108,10 @@ Znaky \{\{ a \}\} se používají jenom pro typy tokenů a nesmí se používat 
 
 Pro zařízení s iOS/iPadOS použijte následující páry klíč/hodnota:
 
-| **Klíč** | IntuneMAMAllowedAccountsOnly |
-|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Hodnoty** | <ul><li>**Povolené**: Jediný povolený účet je spravovaný uživatelský účet definovaný klíčem [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Zakázané** (nebo libovolná hodnota, která se neshoduje malými a velkými písmeny s **Povolené**): Je povolený libovolný účet.</li></ul> |.
+| **Klíč** | **Hodnoty** |
+|----|----|
+| IntuneMAMAllowedAccountsOnly | <ul><li>**Povolené**: Jediný povolený účet je spravovaný uživatelský účet definovaný klíčem [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Zakázané** (nebo libovolná hodnota, která se neshoduje malými a velkými písmeny s **Povolené**): Je povolený libovolný účet.</li></ul> |
+| IntuneMAMUPN | <ul><li>Hlavní název uživatele (UPN) účtu, kterému se povoluje přihlašovat k aplikaci</li><li> Pro zařízení zaregistrovaná v Intune se může použít token <code>{{userprincipalname}}</code>, aby představoval účet zaregistrovaného uživatele.</li></ul>  |
 
    > [!NOTE]
    > Je nutné použít OneDrive pro iOS 10,34 nebo novější, Outlook pro iOS 2.99.0 nebo novější nebo Edge pro iOS 44.8.7 nebo novější a aplikace musí být cílem [zásad ochrany aplikací Intune](app-protection-policy.md) , když se povolují jenom nakonfigurované účty organizace s více identitami.
@@ -181,7 +182,7 @@ Intune dál v seznamu vlastností podporuje následující typy tokenů:
 - \{\{serialnumberlast4digits\}\}– například **G5V2** (pro zařízení se systémem iOS/iPadOS)
 - \{\{aaddeviceid\}\} – například **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
 
-## <a name="configure-the-company-portal-app-to-support-ios-dep-devices"></a>Konfigurace aplikace Portál společnosti pro podporu zařízení se systémem iOS DEP
+## <a name="configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices"></a>Konfigurace aplikace Portál společnosti pro podporu zařízení s iOS a iPadOS DEP
 
 Registrace programu DEP (Apple Program registrace zařízení) nejsou kompatibilní s verzí Portál společnosti aplikace App Storu. Aplikaci Portál společnosti můžete ale nakonfigurovat tak, aby podporovala zařízení se systémem iOS/iPadOS DEP pomocí následujících kroků.
 
@@ -204,7 +205,7 @@ Registrace programu DEP (Apple Program registrace zařízení) nejsou kompatibil
 3. Nasaďte Portál společnosti do zařízení se zásadami konfigurace aplikace, které cílí na požadované skupiny. Nezapomeňte zásadu nasadit jenom do skupin zařízení, která jsou už zaregistrovaná v DEP.
 4. Sdělte koncovým uživatelům, aby se k aplikaci Portál společnosti přihlásili při automatické instalaci.
 
-## <a name="monitor-ios--app-configuration-status-per-device"></a>Monitorování stavu konfigurace aplikací pro iOS podle zařízení 
+## <a name="monitor-iosipados--app-configuration-status-per-device"></a>Monitorování stavu konfigurace aplikace pro iOS/iPadOS na zařízení 
 Po přiřazení zásady konfigurace můžete monitorovat stav konfigurace aplikace pro iOS/iPadOS pro každé spravované zařízení. V části **Microsoft Intune** na portálu Azure Portal vyberte **Zařízení** > **Všechna zařízení**. V seznamu spravovaných zařízení vyberte konkrétní zařízení, ve kterém se má zobrazit podokno pro zařízení. V podokně zařízení vyberte **Konfigurace aplikace**.  
 
 ## <a name="additional-information"></a>Další informace

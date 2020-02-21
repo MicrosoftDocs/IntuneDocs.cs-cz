@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/05/2019
+ms.date: 02/18/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38e8998d1720434b0fe866fc5cd41a0b733fc49b
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: a19830130f992a002b73402f5e13a8f062539917
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059842"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512666"
 ---
 # <a name="common-issues-and-resolutions-with-email-profiles-in-microsoft-intune"></a>Běžné problémy a řešení v e-mailových profilech v Microsoft Intune
 
@@ -33,7 +33,7 @@ Projděte si některé běžné problémy s e-mailovými profily a zjistěte, ja
 
 - E-mailové profily se nasazují pro uživatele, který zařízení zaregistroval. Pokud chcete nakonfigurovat e-mailový profil, Intune v e-mailovém profilu uživatele během registrace používá vlastnosti Azure Active Directory (AD). [Přidání nastavení e-mailu do zařízení](email-settings-configure.md) může být dobrým prostředkem.
 - V případě Androidu Enterprise nasaďte pomocí spravovaného Obchod Google Play Gmail nebo 9 pro práci. [Přidat spravované aplikace Google Play](../apps/apps-add-android-for-work.md) zobrazí seznam kroků.
-- Microsoft Outlook pro iOS a Android nepodporuje e-mailové profily. Místo toho Nasaďte zásadu konfigurace aplikace. Další informace najdete v tématu [nastavení konfigurace pro Outlook](../apps/app-configuration-policies-outlook.md).
+- Microsoft Outlook pro iOS/iPadOS a Android nepodporují e-mailové profily. Místo toho Nasaďte zásadu konfigurace aplikace. Další informace najdete v tématu [nastavení konfigurace pro Outlook](../apps/app-configuration-policies-outlook.md).
 - Do zařízení se nemusí doručovat e-mailové profily cílené na skupiny zařízení (ne skupiny uživatelů). Pokud má zařízení primárního uživatele, bude mít cílení na zařízení fungovat. Pokud e-mailový profil obsahuje uživatelské certifikáty, ujistěte se, že zacílíte na skupiny uživatelů.
 - Uživatelům se zobrazí výzva k zadání hesla pro e-mailový profil. V tomto scénáři ověřte všechny certifikáty, na které se odkazuje v e-mailovém profilu. Pokud není jeden z certifikátů zaměřený na uživatele, pokusí se Intune znovu nasadit e-mailový profil.
 
@@ -41,7 +41,7 @@ Projděte si některé běžné problémy s e-mailovými profily a zjistěte, ja
 
 Pokud uživatelé vytvoří e-mailový profil před registrací v Intune nebo Office 365 MDM, e-mailový profil nasazený službou Intune nemusí fungovat podle očekávání:
 
-- **iOS**: Intune detekuje stávající duplicitní e-mailový profil na základě názvu hostitele a e-mailové adresy. Uživatelem vytvořený e-mailový profil zablokuje nasazení profilu vytvořeného v Intune. Jedná se o běžný problém, protože uživatelé iOS většinou vytvoří e-mailový profil a potom se zaregistrují. Portál společnosti aplikace uvádí, že uživatel není kompatibilní, a může uživateli požádat o odebrání e-mailového profilu.
+- **iOS/iPadOS**: Intune detekuje stávající duplicitní e-mailový profil na základě názvu hostitele a e-mailové adresy. Uživatelem vytvořený e-mailový profil zablokuje nasazení profilu vytvořeného v Intune. Toto je běžný problém, když uživatelé iOS/iPadOS obvykle vytvoří e-mailový profil a potom se zaregistrují. Portál společnosti aplikace uvádí, že uživatel není kompatibilní, a může uživateli požádat o odebrání e-mailového profilu.
 
   Uživatel by měl odebrat svůj e-mailový profil, aby bylo možné nasadit profil Intune. Pokud chcete tomuto problému zabránit, řekněte uživatelům, aby si zaregistrovali a povolili v Intune nasazení e-mailového profilu. Pak uživatelé můžou vytvořit svůj e-mailový profil.
 

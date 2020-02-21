@@ -1,11 +1,11 @@
 ---
-title: Konfigurace nastavení sítě VPN pro zařízení s iOS v Microsoft Intune – Azure | Microsoft Docs
-description: K přidání nebo vytvoření konfiguračního profilu sítě VPN můžete použít nastavení konfigurace virtuální privátní sítě (VPN), která jsou dostupná v Microsoft Intune na zařízeních s iOSem, včetně podrobností o připojení, metod ověřování a děleného tunelového propojení v základním nastavení, nastavení vlastní sítě VPN s identifikátorem, párů klíč-hodnota, nastavení sítě VPN pro jednotlivé aplikace, která zahrnují adresy URL pro Safari, nastavení sítě VPN na vyžádání s SSID a doménami hledání DNS, nastavení proxy, která je potřeba zahrnout do konfiguračního skriptu, nastavení IP adresy nebo plně kvalifikovaného názvu domény a portu TCP.
+title: Konfigurace nastavení sítě VPN pro zařízení s iOS nebo iPadOS v Microsoft Intune – Azure | Microsoft Docs
+description: Přidejte nebo vytvořte konfigurační profil sítě VPN pomocí nastavení konfigurace virtuální privátní sítě (VPN), včetně podrobností o připojení, metod ověřování a rozděleného tunelování v základní nastavení. vlastní nastavení sítě VPN s identifikátorem a páry klíč-hodnota; nastavení sítě VPN pro jednotlivé aplikace, která zahrnují adresy URL Safari, a sítě VPN na vyžádání se servery SSID nebo doménami hledání DNS. a nastavení proxy serveru pro zahrnutí konfiguračního skriptu, adresy IP nebo plně kvalifikovaného názvu domény a portu TCP v Microsoft Intune na zařízeních se systémem iOS/iPadOS.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,23 +15,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9eb7ee99d69fd56707bd9dfe5453ffe0bb107bad
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 01c6ae06459590fa9bb9842e90ad53e6c522d6a6
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885665"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512479"
 ---
-# <a name="add-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Přidat nastavení sítě VPN na zařízení s iOS v Microsoft Intune
+# <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>Přidání nastavení sítě VPN v zařízeních s iOS a iPadOS v Microsoft Intune
 
-Microsoft Intune obsahuje řadu nastavení sítě VPN, které můžete nasadit do zařízení s iOSem. Tato nastavení se používají k vytvoření a konfiguraci připojení sítě VPN k síti vaší organizace. Těmito nastaveními se zabývá tento článek. Některá nastavení jsou dostupná jen pro určité klienty VPN, jako je Citrix, Zscaler a další.
+Microsoft Intune zahrnuje mnoho nastavení sítě VPN, která se dají nasadit do zařízení s iOS/iPadOS. Tato nastavení se používají k vytvoření a konfiguraci připojení sítě VPN k síti vaší organizace. Těmito nastaveními se zabývá tento článek. Některá nastavení jsou dostupná jen pro určité klienty VPN, jako je Citrix, Zscaler a další.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořit profil konfigurace zařízení](vpn-settings-configure.md).
+[Vytvořte profil konfigurace zařízení](vpn-settings-configure.md).
 
 > [!NOTE]
-> Tato nastavení jsou k dispozici pro všechny typy registrace. Další informace o typech registrace najdete v tématu Registrace zařízení se [systémem iOS](../enrollment/ios-enroll.md).
+> Tato nastavení jsou k dispozici pro všechny typy registrace. Další informace o typech registrace najdete v tématu Registrace zařízení se [systémem iOS/iPadOS](../enrollment/ios-enroll.md).
 
 ## <a name="connection-type"></a>Typ připojení
 
@@ -130,7 +130,7 @@ Tato nastavení se použijí, když zvolíte **Typ připojení** > **IKEv2**.
 - **Běžný název certifikátu serveru**: zadejte cn pro samotný certifikát. Pokud je ponecháno prázdné, použije se hodnota vzdáleného identifikátoru.
 
 - **Rychlost detekce nedoručených partnerů**: vyberte, jak často klient sítě VPN kontroluje, jestli je tunel VPN aktivní. Možnosti:
-  - **Nenakonfigurováno**: používá výchozí systém iOS, který se může shodovat s volbou **střední**.
+  - **Nenakonfigurováno**: používá výchozí systém iOS/iPadOS, který se může shodovat s volbou **střední**.
   - **None**: zakáže detekci mrtvého partnera.
   - **Nízká**: pošle zprávu kontroly kontroly a každých 30 minut.
   - **Střední** (výchozí): odešle zprávu kontroly stavu kontroly každých 10 minut.
@@ -145,10 +145,10 @@ Tato nastavení se použijí, když zvolíte **Typ připojení** > **IKEv2**.
 - **Perfect Forward Secrecy**: výběrem **Povolit** zapněte metodu PFS (Perfect Forward Secrecy). PFS je funkce zabezpečení protokolu IP, která snižuje dopad v případě ohrožení zabezpečení klíče relace. **Disable** (default) nepoužívá metodu PFS.
 - **Ověření odvolání certifikátu**: výběrem možnosti **Povolit** zajistěte, aby se certifikáty odvolaly, než povolíte úspěšné připojení k síti VPN. Tato kontroler je nejlepší úsilí. Pokud vyprší časový limit serveru VPN před zjištěním, jestli je certifikát odvolaný, udělí se přístup. **Disable** (výchozí) nekontroluje odvolané certifikáty.
 
-- **Konfigurovat parametry přidružení zabezpečení**: **Nenakonfigurováno** (výchozí) používá výchozí systém iOS. Pokud chcete zadat parametry používané při vytváření přidružení zabezpečení se serverem VPN, vyberte **Povolit** .
+- **Konfigurovat parametry přidružení zabezpečení**: **Nenakonfigurováno** (výchozí) používá výchozí systém iOS/iPadOS. Pokud chcete zadat parametry používané při vytváření přidružení zabezpečení se serverem VPN, vyberte **Povolit** .
   - **Šifrovací algoritmus**: vyberte algoritmus, který chcete:
     - DES
-    - 3DES
+    - ŠIFROVÁNÍ
     - AES-128
     - AES-256 (výchozí)
     - AES-128 – GCM
@@ -160,14 +160,14 @@ Tato nastavení se použijí, když zvolíte **Typ připojení** > **IKEv2**.
     - SHA2 – 384
     - SHA2 – 512
   - **Skupina Diffie-Hellman**: vyberte skupinu, kterou chcete. Výchozí hodnota je skupina `2`.
-  - **Doba života** (minuty): vyberte, jak dlouho zůstane přidružení zabezpečení aktivní, dokud se klíče neotáčí. Zadejte celou hodnotu mezi `10` a `1440` (1440 minut je 24 hodin). Výchozí je `1440`.
+  - **Doba života** (minuty): vyberte, jak dlouho zůstane přidružení zabezpečení aktivní, dokud se klíče neotáčí. Zadejte celou hodnotu mezi `10` a `1440` (1440 minut je 24 hodin). Výchozí hodnota je `1440`.
 
-- **Konfigurace samostatné sady parametrů pro podřízená přidružení zabezpečení**: iOS umožňuje konfigurovat samostatné parametry pro připojení IKE a všechna podřízená připojení. 
+- **Konfigurace samostatné sady parametrů pro podřízená přidružení zabezpečení**: iOS/iPadOS umožňuje konfigurovat samostatné parametry pro připojení IKE a všechna podřízená připojení. 
 
   **Nenakonfigurováno** (výchozí) používá hodnoty, které zadáte v nastavení dříve **Konfigurovat parametry přidružení zabezpečení** . Pokud chcete zadat parametry používané při vytváření *podřízených* přidružení zabezpečení se serverem VPN, vyberte **Povolit** .
   - **Šifrovací algoritmus**: vyberte algoritmus, který chcete:
     - DES
-    - 3DES
+    - ŠIFROVÁNÍ
     - AES-128
     - AES-256 (výchozí)
     - AES-128 – GCM
@@ -179,13 +179,13 @@ Tato nastavení se použijí, když zvolíte **Typ připojení** > **IKEv2**.
     - SHA2 – 384
     - SHA2 – 512
   - **Skupina Diffie-Hellman**: vyberte skupinu, kterou chcete. Výchozí hodnota je skupina `2`.
-  - **Doba života** (minuty): vyberte, jak dlouho zůstane přidružení zabezpečení aktivní, dokud se klíče neotáčí. Zadejte celou hodnotu mezi `10` a `1440` (1440 minut je 24 hodin). Výchozí je `1440`.
+  - **Doba života** (minuty): vyberte, jak dlouho zůstane přidružení zabezpečení aktivní, dokud se klíče neotáčí. Zadejte celou hodnotu mezi `10` a `1440` (1440 minut je 24 hodin). Výchozí hodnota je `1440`.
 
 ## <a name="automatic-vpn-settings"></a>Automatické nastavení sítě VPN
 
-- **VPN pro jednotlivé aplikace:** Umožňuje používat síť VPN pro jednotlivé aplikace. Při otevření určitých aplikací automaticky aktivuje připojení VPN. Aplikace také můžete přidružit k danému profilu sítě VPN. SÍŤ VPN pro jednotlivé aplikace není v IKEv2 podporována. Podrobnější informace najdete v [pokynech pro nastavení sítě VPN pro aplikaci pro iOS](vpn-setting-configure-per-app.md). 
+- **VPN pro jednotlivé aplikace:** Umožňuje používat síť VPN pro jednotlivé aplikace. Při otevření určitých aplikací automaticky aktivuje připojení VPN. Aplikace také můžete přidružit k danému profilu sítě VPN. SÍŤ VPN pro jednotlivé aplikace není v IKEv2 podporována. Další informace najdete v tématu [pokyny pro nastavení sítě VPN pro jednotlivé aplikace pro iOS/iPadOS](vpn-setting-configure-per-app.md). 
   - **Typ zprostředkovatele:** Je k dispozici jen pro Pulse Secure a Vlastní VPN.
-  - Pokud používáte profily **VPN pro jednotlivé aplikace** pro iOS s typem Pulse Secure nebo Vlastní VPN, zvolte tunelování v aplikační vrstvě (proxy aplikace) nebo na úrovni paketů (tunel pro pakety). U tunelování v aplikační vrstvě nastavte hodnotu **ProviderType** na **app-proxy**, u tunelování na úrovni paketů na **packet-tunnel**. Pokud si nejste jistí, jakou hodnotu použít, podívejte se do dokumentace poskytovatele připojení VPN.
+  - Pokud používáte profily **sítě VPN pro** iOS/IPadOS s Pulse Secure nebo vlastní sítí VPN, vyberte tunelové propojení vrstev (App-proxy) nebo tunelové propojení na úrovni paketů (Packet-Tunnel). U tunelování v aplikační vrstvě nastavte hodnotu **ProviderType** na **app-proxy**, u tunelování na úrovni paketů na **packet-tunnel**. Pokud si nejste jistí, jakou hodnotu použít, podívejte se do dokumentace poskytovatele připojení VPN.
   - **Adresy URL Safari, které aktivují tuto síť VPN:** Můžete přidat jednu nebo více adres URL webu. Při návštěvě těchto adres URL pomocí prohlížeče Safari na zařízení se automaticky naváže připojení k VPN.
 
 - **Síť VPN na vyžádání:** Nakonfigurujte podmíněná pravidla, která řídí, kdy se má připojení VPN spustit. Můžete třeba vytvořit podmínku, že se připojení VPN použije, jen pokud zařízení není připojené k firemní síti Wi-Fi. Nebo vytvořte podmínku. Pokud například zařízení nemá přístup k zadané doméně hledání DNS, pak se připojení VPN nespustí.

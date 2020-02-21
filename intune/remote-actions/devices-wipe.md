@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62ba66469dfff004c3cd6a60284ec7466e8b9f00
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 84fe9e1d60e3e65289ca18735e64e82ac9c64f4a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415519"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514179"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Odebrání zařízení vymazáním, vyřazením nebo ručním zrušením registrace
 
@@ -47,7 +47,7 @@ Akce **Vymazání** obnoví výchozí tovární nastavení zařízení. Data už
 
 Pro Windows 10 verze 1709 nebo novější máte také možnost **Zachovat stav registrace a uživatelský účet**.
 
-Možnost **provést chráněný vymazání** zajistí, že se akce vymazání nedá obejít vypnutím zařízení. Chráněné vymazání bude pokračovat v pokusu o resetování zařízení, dokud nebylo úspěšné. V některých konfiguracích může tato akce opustit zařízení, protože se nemůže restartovat.
+Možnost **provést chráněný vymazání** zajistí, že se akce vymazání nedá obejít vypnutím zařízení. Chráněné vymazání bude pokračovat v pokusu o resetování zařízení, dokud nebylo úspěšné. V některých konfiguracích může tato akce opustit zařízení, protože se [nemůže restartovat](troubleshoot-device-actions.md#wipe-action).
 
 Zásady MDM se znovu použijí při příštím připojení zařízení k Intune.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 777267f10edac5bbdbe23ceb3068d4366a8df7b7
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 0d5a51d82551795ed8ad5c740d5fb852ff292e1b
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72509946"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514910"
 ---
 # <a name="develop-a-rollout-plan"></a>Vývoj plánu nasazení
 
@@ -37,7 +37,7 @@ V dalším kroku určete pro každou cílovou skupinu časový rámec. Tento úk
 * Ochota skupiny ke změně
 * Počet uživatelů a zařízení
 * Typy platforem zařízení
-* požadavky
+* Požadavky
 * Zeměpisná poloha
 * Obchodní riziko
 
@@ -58,7 +58,7 @@ Po úspěšném pilotním projektu jste připraveni spustit nasazení v plném p
 
 - **Zeměpisná oblast** <br/>V tomto postupu nasadíte pro všechny uživatele v konkrétní zeměpisné oblasti, ať už se jedná o stejný kontinent, zemi nebo oblast nebo budova stejné společnosti. Tento typ postupného nasazení umožňuje zaměřit se na uživatele, kteří jsou na určitém místě. Takový přístup je [šetrnější](#user-assisted-enrollment), protože počet míst, kde se Intune současně nasazuje, je menší. Na jednom místě budou pravděpodobně různá oddělení nebo různé způsoby použití, a proto mohou být současně nasazovány různé způsoby použití.
 
-- **Platforma** <br/>Tento typ nasazení spočívá v současném nasazení podobných platforem. Příkladem mohou být všechna zařízení s iOSem v prvním měsíci, po kterých budou následovat zařízení s Androidem a po nich zařízení s Windows. Tento typ postupného nasazení zjednodušuje podporu helpdesku, protože se podpora týká vždy jen jedné platformy.
+- **Platforma** <br/>Tento typ nasazení spočívá v současném nasazení podobných platforem. Příkladem může být všechna zařízení se systémem iOS/iPadOS první měsíc a potom Androidem a systémem Windows. Tento typ postupného nasazení zjednodušuje podporu helpdesku, protože se podpora týká vždy jen jedné platformy.
 
 V následujícím příkladu je plán zavedení Intune, který obsahuje cílové skupiny a časové rámce:
 
@@ -104,7 +104,7 @@ Tady je aktualizovaný příklad plánu nasazení Intune, který zahrnuje různ�
 | 2\. fáze nasazení v ostrém provozu |  |  | Maloobchod |  |
 | Samoobslužný provoz |  |  | Maloobchod |  |
 | 3\. fáze nasazení v ostrém provozu |  |  |  | Vedoucí pracovníci, personální oddělení, finance |
-| Samoobslužný provoz |  |  |  | Personalistika, finance |
+| Samoobslužný provoz |  |  |  | Personální, finanční oddělení |
 | Šetrný způsob |  |  |  | Vedení |
 
 ## <a name="next-steps"></a>Další kroky

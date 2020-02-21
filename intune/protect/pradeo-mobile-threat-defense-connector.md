@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: cde4d389-1770-4226-85a3-a2f3b3fb92a3
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 563b117583f8b8c1f4da08d5d4e3399d5939bf97
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: fd2f03edeb1e402401911ab2c80fa0d699e2628c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72504365"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514876"
 ---
 # <a name="pradeo-mobile-threat-defense-connector-with-intune"></a>Konektor Pradeo Mobile Threat Defense s Intune
 
@@ -30,7 +30,7 @@ Zásady podmíněného přístupu můžete nakonfigurovat na základě posouzen�
 
 ## <a name="how-do-intune-and-pradeo-help-protect-your-company-resources"></a>Jak služby Intune a Pradeo pomáhají chránit prostředky společnosti?
 
-Aplikace Pradeo pro Android a iOS zaznamenává telemetrii systému souborů, zásobníku sítě, zařízení a aplikací tam, kde je k dispozici, a potom ji posílá do cloudové služby Pradeo, kde se posoudí ohrožení zařízení mobilními hrozbami.
+Aplikace Pradeo pro Android a iOS/iPadOS zaznamenává telemetrii systému souborů, zásobníku sítě, zařízení a aplikací tam, kde je k dispozici, a poté odesílá data telemetrie do cloudové služby Pradeo, aby zhodnotila riziko zařízení pro mobilní hrozby.
 
 Zásady dodržování předpisů, které platí pro zařízení v Intune, zahrnují pravidlo pro službu ochrany před mobilními hrozbami Pradeo. Toto pravidlo je založené na hodnocení rizika službou Pradeo. Když je toto pravidlo aktivní, Intune vyhodnocuje soulad zařízení se zásadami, které jste povolili. Pokud se zjistí, že zařízení nesplňuje dané předpisy, zablokuje se přístup uživatelů k podnikovým prostředkům, jako jsou Exchange Online a SharePoint Online. Uživatelé dostanou také pokyny z mobilní aplikace Pradeo nainstalované na jejich zařízeních, jak problém vyřešit a jak opět získat přístup k firemním prostředkům.
 
@@ -86,7 +86,7 @@ Zjišťuje ohrožení vaší sítě, například útoky **prostředníkem**, a z
 
 - **iOS 7 nebo novější**
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 - Azure Active Directory Premium
 

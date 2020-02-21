@@ -16,21 +16,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88beb8f4791c127b0a225878f5bc43b6dd9b4025
-ms.sourcegitcommit: 637375a390b6e34f9c4415c77b99fe2980bbf554
+ms.openlocfilehash: 9afb8f431ae301fe74f420c11205a7ed2637434b
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75839379"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514621"
 ---
 # <a name="guided-scenario---deploy-microsoft-edge-for-mobile"></a>Scénář s asistencí – nasazení Microsoft Edge pro mobilní zařízení 
 
-Podle tohoto [Průvodce](~/fundamentals/guided-scenarios-overview.md)můžete aplikaci Microsoft Edge přiřadit uživatelům na zařízeních s iOS nebo Androidem ve vaší organizaci. Přiřazení této aplikace umožní uživatelům plynule procházet obsah pomocí podnikových zařízení. 
+Podle tohoto [Průvodce](~/fundamentals/guided-scenarios-overview.md)můžete aplikaci Microsoft Edge přiřadit uživatelům na zařízeních s iOS/IPadOS nebo Androidem ve vaší organizaci. Přiřazení této aplikace umožní uživatelům plynule procházet obsah pomocí podnikových zařízení. 
 
-Microsoft Edge umožňuje uživatelům vyjímat zbytečný web s integrovanými funkcemi, které jim pomůžou konsolidovat, organizovat a spravovat pracovní obsah. Uživatelé zařízení s iOS a Androidem, kteří se přihlásí pomocí svých podnikových účtů Azure AD v aplikaci Microsoft Edge, uvidí svůj prohlížeč předem načtený s **oblíbenými položkami** na pracovišti a vámi definovanými filtry webu.
+Microsoft Edge umožňuje uživatelům vyjímat zbytečný web s integrovanými funkcemi, které jim pomůžou konsolidovat, organizovat a spravovat pracovní obsah. Uživatelé zařízení se systémem iOS/iPadOS a Androidem, kteří se přihlásí pomocí svých podnikových účtů služby Azure AD v aplikaci Microsoft Edge, uvidí svůj prohlížeč předem načtený s **oblíbenými položkami** na pracovišti a vámi definovanými filtry webu.
 
 > [!NOTE]
-> Pokud jste zablokovali uživatelům, kteří si zaregistrují zařízení s iOS nebo Androidem, tento scénář nepovolí registraci a uživatelé si budou muset pro sebe nainstalovat Edge.
+> Pokud jste zablokované uživatelům zablokovali registraci zařízení se systémem iOS nebo iPadOS nebo Androidem, tento scénář nepovolí registraci a uživatelé budou muset pro sebe nainstalovat Edge.
 Následující funkce Microsoft Edge Enterprise, které jsou povolené zásadami Intune, zahrnují: 
 
 - **Dual-identity** – uživatelé můžou pro procházení přidat jak pracovní účet, tak i osobní účet. Mezi těmito dvěma identitami se dokončí oddělení, které se podobá architektuře a prostředí v aplikacích Office 365 a Outlook. Správci Intune budou moct nastavit požadované zásady pro chráněné prostředí pro procházení v rámci pracovního účtu. 
@@ -38,7 +38,7 @@ Následující funkce Microsoft Edge Enterprise, které jsou povolené zásadami
 - **Integrace služby Azure Application proxy** – správci můžou řídit přístup k aplikacím SaaS a webovým aplikacím, což pomáhá zajistit, aby se aplikace založené na prohlížeči spouštěly jenom v zabezpečeném prohlížeči Microsoft Edge, ať už se koncoví uživatelé připojují z podnikové sítě nebo se připojí z Internetu. 
 - **Zástupci spravovaných oblíbených položek a domovské stránky** – pro usnadnění přístupu můžou správci nastavit adresy URL tak, aby se zobrazovaly v části Oblíbené, pokud jsou koncoví uživatelé ve firemním kontextu. Správci můžou nastavit zástupce domovské stránky, který se zobrazí jako primární zástupce, když firemní uživatel otevře novou stránku nebo novou kartu v Microsoft Edge.
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 - [Nastavení autority MDM na Intune](mdm-authority-set.md#set-mdm-authority-to-intune) – nastavení autority správy mobilních zařízení (MDM) určuje způsob správy zařízení. Jako správce IT musíte nastavit autoritu MDM, aby uživatelé mohli registrovat zařízení pro správu.
 - Potřebná oprávnění správce Intune:
@@ -49,9 +49,9 @@ Následující funkce Microsoft Edge Enterprise, které jsou povolené zásadami
 
 ## <a name="step-1---introduction"></a>Krok 1 – Úvod
 
-Pomocí průvodce **nasazením Microsoft Edge pro mobilní** prostředí nastavíte základní nasazení Microsoft Edge pro vybranou skupinu uživatelů s iOS a Androidem. Toto nasazení implementuje zástupce s **duální identitou** a **spravované oblíbené položky a domovské stránky**. Zařízení zaregistrovaná vybranými uživateli navíc budou automaticky mít aplikaci Microsoft Edge nainstalovanou Intune. K této automatické instalaci dojde u všech typů registrace řízených uživatelem, mezi které patří: 
-- registrace zařízení se systémem iOS prostřednictvím aplikace Portál společnosti 
-- registrace spřažení uživatele v iOS prostřednictvím Apple Business Manageru 
+Pomocí průvodce **nasazením Microsoft Edge pro mobilní** prostředí nastavíte základní nasazení Microsoft Edge pro vybranou skupinu uživatelů iOS/IPadOS a Androidem. Toto nasazení implementuje zástupce s **duální identitou** a **spravované oblíbené položky a domovské stránky**. Zařízení zaregistrovaná vybranými uživateli navíc budou automaticky mít aplikaci Microsoft Edge nainstalovanou Intune. K této automatické instalaci dojde u všech typů registrace řízených uživatelem, mezi které patří: 
+- registrace zařízení se systémem iOS/iPadOS prostřednictvím aplikace Portál společnosti 
+- registrace spřažení uživatele pro iOS/iPadOS prostřednictvím Apple Business Manageru 
 - Starší registrace Androidu prostřednictvím aplikace Portál společnosti 
 
 Tento scénář s asistencí automaticky povolí zobrazení **MyApp** v oblíbených položkách Microsoft Edge a nakonfiguruje prohlížeč se stejným brandingem, který jste nastavili pro aplikaci Portál společnosti Intune. 
@@ -60,13 +60,13 @@ Tento scénář s asistencí automaticky povolí zobrazení **MyApp** v oblíben
 Požádáme vás o oblíbené položky na pracovišti, které uživatelé potřebují, a filtry, které požadujete pro procházení webu. Než budete pokračovat, ujistěte se, že jste dokončili následující úlohy:
 
 - Přidejte uživatele do skupin Azure AD. Další informace najdete v tématu [Vytvoření základní skupiny a přidání členů pomocí Azure Active Directory](https://go.microsoft.com/fwlink/?linkid=2102458).
-- Registrace zařízení s iOS nebo Androidem v Intune Další informace najdete v tématu [registrace zařízení](https://go.microsoft.com/fwlink/?linkid=2102547).
+- Registrace zařízení s iOS/iPadOS nebo Androidem v Intune Další informace najdete v tématu [registrace zařízení](https://go.microsoft.com/fwlink/?linkid=2102547).
 - Shromážděte seznam oblíbených položek na pracovišti, které se dají přidat do Microsoft Edge.
 - Shromážděte seznam filtrů webů, které se vynutily v Microsoft Edge.
 
 ## <a name="step-2---basics"></a>Krok 2 – základy
 
-V tomto kroku musíte zadat název a popis pro nové zásady Microsoft Edge. Na tyto zásady se dá později odkazovat, pokud potřebujete změnit přiřazení a konfigurace. Průvodce s asistencí přidá a přiřadí aplikaci Microsoft Edge pro iOS pro vaše zařízení s iOS a aplikaci Microsoft Edge pro Android pro vaše zařízení s Androidem. V tomto kroku se taky pro tyto aplikace vytvoří zásady konfigurace.
+V tomto kroku musíte zadat název a popis pro nové zásady Microsoft Edge. Na tyto zásady se dá později odkazovat, pokud potřebujete změnit přiřazení a konfigurace. Průvodce s asistencí přidá a přiřadí aplikaci Microsoft Edge iOS/iPadOS pro vaše zařízení s iOS/iPadOS a aplikaci Microsoft Edge pro Android pro vaše zařízení s Androidem. V tomto kroku se taky pro tyto aplikace vytvoří zásady konfigurace.
 
 ## <a name="step-3---configuration"></a>Krok 3 – konfigurace
 
@@ -74,7 +74,7 @@ V tomto kroku se ve scénáři s asistencí nakonfiguruje Microsoft Edge, aby zo
 
 ## <a name="step-4---assignments"></a>Krok 4 – přiřazení
 
-V tomto kroku můžete vybrat skupiny uživatelů, pro které chcete použít Microsoft Edge Mobile nakonfigurovaný pro práci. Microsoft Edge se taky nainstaluje do všech zařízení s iOS a Androidem zaregistrovaných těmito uživateli.
+V tomto kroku můžete vybrat skupiny uživatelů, pro které chcete použít Microsoft Edge Mobile nakonfigurovaný pro práci. Microsoft Edge se taky nainstaluje na všechna zařízení s iOS/iPadOS a Androidem zaregistrovaná těmito uživateli.
 
 ## <a name="step-5---review--create"></a>Krok 5 – přezkoumání a vytvoření
 

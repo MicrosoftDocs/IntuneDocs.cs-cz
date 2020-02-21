@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e38e4f8552b6ef217d264cfa74597bda5c665ab
-ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
+ms.openlocfilehash: b4999a813384c68bb394c7e73dee1c5c452459b9
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77125043"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515284"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 
@@ -59,7 +59,7 @@ Portál společnosti pro zápis do macOS má jednodušší proces registrace, kt
 ## <a name="week-of-october-28-2019"></a>Týden od 28. října 2019  
 
 ### <a name="improved-checklist-design-in-company-portal-app-for-android----5550857---"></a>Vylepšený návrh kontrolního seznamu v aplikaci Portál společnosti App pro Android <!-- 5550857 -->  
-Kontrolní seznam nastavení v aplikaci Portál společnosti pro Android byl aktualizovaný s odlehčeným návrhem a novými ikonami. Změny se zarovnají s posledními aktualizacemi provedenými v aplikaci Portál společnosti pro iOS. Pokud se chcete podívat na aktualizované kroky registrace, přečtěte si téma [registrace v pracovním profilu Android](/intune-user-help/enroll-device-android-work-profile) a [registrace zařízení s Androidem](/intune-user-help/enroll-device-android-company-portal).  
+Kontrolní seznam nastavení v aplikaci Portál společnosti pro Android byl aktualizovaný s odlehčeným návrhem a novými ikonami. Změny se zarovnají s posledními aktualizacemi provedenými v aplikaci Portál společnosti pro iOS/iPadOS. Pokud se chcete podívat na aktualizované kroky registrace, přečtěte si téma [registrace v pracovním profilu Android](/intune-user-help/enroll-device-android-work-profile) a [registrace zařízení s Androidem](/intune-user-help/enroll-device-android-company-portal).  
 
 Na následujících obrazovkách se zobrazuje aktualizovaný kontrolní seznam pro registraci pracovního profilu Androidu:
 
@@ -216,7 +216,7 @@ Aplikace Portál společnosti Intune pro Windows 10 byla aktualizována o [navig
 ## <a name="week-of-april-2-2018"></a>Týden od 2. dubna 2018
 
 ### <a name="user-experience-update-for-the-company-portal-app-for-ios----1412866---"></a>Aktualizace uživatelského prostředí pro aplikaci Portál společnosti pro iOS <!-- 1412866 -->
-Vydali jsme důležitou aktualizaci uživatelského prostředí aplikace Portál společnosti pro iOS. Tato aktualizace nabízí zcela přepracovaný vzhled aplikace, včetně modernějšího vzhledu a chování. Zachovali jsme funkčnost aplikace, ale zvýšili její využitelnost a přístupnost.  
+V aplikaci Portál společnosti pro iOS/iPadOS jsme vydali velkou aktualizaci uživatelského prostředí. Tato aktualizace nabízí zcela přepracovaný vzhled aplikace, včetně modernějšího vzhledu a chování. Zachovali jsme funkčnost aplikace, ale zvýšili její využitelnost a přístupnost.  
 
 Další vylepšení:
 - Podpora pro iPhone X
@@ -267,7 +267,7 @@ Pokud jste povolili [mapování skupin zařízení](../enrollment/device-group-m
 
 ### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290----1417174---"></a>Vylepšení pracovního postupu instalace zařízení v Portál společnosti pro iOS ve verzi 2.9.0 <!-- 1417174 -->
 
-Vylepšili jsme pracovní postup instalace zařízení v aplikaci Portál společnosti pro iOS. Jazyk je uživatelsky přívětivější a tam, kde to bylo možné, jsme také sjednotili obrazovky. Také jsme použitím názvu vaší společnosti všude v textu instalace upravili jazyk tak, aby více odpovídal vaší společnosti.
+Vylepšili jsme pracovní postup instalace zařízení v aplikaci Portál společnosti pro iOS/iPadOS. Jazyk je uživatelsky přívětivější a tam, kde to bylo možné, jsme také sjednotili obrazovky. Také jsme použitím názvu vaší společnosti všude v textu instalace upravili jazyk tak, aby více odpovídal vaší společnosti.
 
 > [!NOTE]
 > Používáme název společnosti, který jste nastavili na portálu Azure Portal v **Microsoft Intune** > **Klientské aplikace** > **Značky Portálu společnosti** > **Název společnosti**. Pokud jste nenastavili tuto hodnotu, budeme používat název tenanta nastavený v **Azure Active Directory** > **Vlastnosti** > **Název**. Pokud jste název společnosti nenastavili v Portál společnosti brandingu a nechcete, aby se váš název tenanta zobrazoval, doporučujeme nastavit název společnosti na kartě Portál společnosti branding. Pokud nechcete, aby se tento řetězec zobrazoval v hlavičce v Portál společnosti, můžete zrušit zaškrtnutí políčka Zobrazit název společnosti vedle možnosti logo.
@@ -303,7 +303,7 @@ Stále ještě na vyhodnocení relevance pracujeme, tak nám prosím dejte prost
 ### <a name="search-improvements-to-the-company-portal-website----1331697---"></a>Hledat na webu Portál společnosti vylepšení <!-- 1331697 -->
 Vylepšujeme schopnosti vyhledávání aplikací a začali jsme u [webu Portál společnosti](https://portal.manage.microsoft.com). Vyhledávání bude nyní možné provádět nejen podle polí Název a Popis, ale také na základě kategorií aplikací. Výsledky budou ve výchozím nastavení seřazeny v sestupném pořadí podle relevance. 
 
-Jelikož je web Portál společnosti součástí aplikace Portál společnosti pro iOS, získají tuto změnu i uživatelé systému iOS. Aplikace Portál společnosti pro Android a Windows obdrží podobné aktualizace v nadcházejících měsících.
+uživatelé iOS tuto změnu také dostanou, protože Portál společnosti web se používá také jako součást Portál společnosti aplikace pro iOS/iPadOS. Aplikace Portál společnosti pro Android a Windows obdrží podobné aktualizace v nadcházejících měsících.
 
 Stále ještě na vyhodnocení relevance pracujeme, tak nám prosím dejte prostřednictvím odkazu „Váš názor“ v dolní části webu Portál společnosti vědět, jak dobře toto vyhodnocení funguje.
 

@@ -1,11 +1,11 @@
 ---
 title: Vytvoření profilu Wi-Fi pro zařízení v Microsoft Intune – Azure | Microsoft Docs
-description: Projděte si postup vytvoření konfiguračního profilu zařízení v Microsoft Intune. Vytvářejte profily pro Android, Android Enterprise, Android webceloobrazovkový, iOS, macOS, Windows 10 a novější a Windows Holografick pro firmy. Pomocí těchto profilů můžete vytvořit připojení Wi-Fi pro použití certifikátů, volbu typu protokolu EAP, výběr metody ověřování, povolení proxy a další.
+description: Projděte si postup vytvoření konfiguračního profilu zařízení v Microsoft Intune. Vytvářejte profily pro Android, Android Enterprise, Android webceloobrazovkový, iOS, iPadOS, macOS, Windows 10 a novější a Windows Holografick pro firmy. Pomocí těchto profilů můžete vytvořit připojení Wi-Fi pro použití certifikátů, volbu typu protokolu EAP, výběr metody ověřování, povolení proxy a další.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,21 +16,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 47eae4d2e662be85de2831666f944e57ba674417
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 3110998970eeaf654ab57397ec827090a4103f34
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206104"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512326"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Přidání a použití nastavení Wi-Fi na zařízeních v Microsoft Intune
 
 Wi-Fi je bezdrátová síť, kterou používá mnoho mobilních zařízení k získání přístupu k síti. Microsoft Intune obsahuje vestavěná nastavení Wi-Fi, která se dají nasadit pro uživatele a zařízení ve vaší organizaci. Tato skupina nastavení se nazývá "profil" a je možné ji přiřadit různým uživatelům a skupinám. Po přiřazení získají vaši uživatelé přístup k síti Wi-Fi vaší organizace bez toho, aby ji nakonfigurovali sami.
 
-Můžete třeba nainstalovat novou Wi-Fi síť nazvanou Contoso Wi-Fi. Potom můžete třeba nastavit, že se všechna zařízení s iOSem mají připojovat k této síti. Postup je následující:
+Můžete třeba nainstalovat novou Wi-Fi síť nazvanou Contoso Wi-Fi. Pak budete chtít nastavit všechna zařízení se systémem iOS/iPadOS pro připojení k této síti. Postup je následující:
 
 1. Vytvořte profil sítě Wi-Fi, který obsahuje nastavení, která se připojují k bezdrátové síti Contoso Wi-Fi.
-2. Přiřaďte profil ke skupině, která obsahuje všechny uživatele zařízení se systémem iOS.
+2. Přiřaďte profil ke skupině, která obsahuje všechny uživatele zařízení se systémem iOS/iPadOS.
 3. Uživatelé najdou novou síť Contoso Wi-Fi v seznamu bezdrátových sítí na svém zařízení. Potom se mohou k této síti připojit s využitím metody ověřování, kterou zvolíte.
 
 Tento článek obsahuje seznam kroků pro vytvoření profilu sítě Wi-Fi. Obsahuje také odkazy, které popisují různá nastavení pro jednotlivé platformy.
@@ -41,9 +41,10 @@ Profily Wi-Fi podporují zařízení s následujícími platformami:
 
 - Android 4 a novější
 - Android Enterprise a beznabídkový režim
-- iOS 8.0 a novější
+- iOS 8,0 a novější
+- iPadOS 13,0 a novější
 - macOS X 10,11 a novější
-- Windows 10 a novější, Windows 10 Mobile a Windows Holographic for Business
+- Windows 10 a novější, Windows 10 Mobile a Windows Holografick pro firmy
 
 > [!NOTE]
 > Pro zařízení s Windows 8.1 můžete importovat konfiguraci Wi-Fi, kterou předtím vyexportujete z jiného zařízení.

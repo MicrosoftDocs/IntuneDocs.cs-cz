@@ -1,7 +1,7 @@
 ---
 title: Správa hromadně zakoupených aplikací Apple
 titleSuffix: Microsoft Intune
-description: Přečtěte si, jak synchronizovat aplikace zakoupené v rámci multilicenčního programu z obchodu iOS a macOS App Storu do Microsoft Intune a pak můžete spravovat a sledovat jejich používání.
+description: Přečtěte si, jak synchronizovat aplikace zakoupené v rámci multilicenčního programu z obchodu iOS/iPadOS a macOS App Storu do Microsoft Intune a pak můžete spravovat a sledovat jejich používání.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,19 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d965ac35719d809ab922d28f76dec1754e9a4c6b
-ms.sourcegitcommit: 9b29478f815e10c46c8030abe0146d601ce0e28c
+ms.openlocfilehash: 9127ee06bc2125f476c18e9b8e46a127e48d0245
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77051622"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513397"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Jak spravovat aplikace pro iOS a macOS zakoupené prostřednictvím Apple Volume Purchase Program s využitím Microsoft Intune
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Apple vám umožní koupit více licencí pro aplikaci, kterou chcete použít ve vaší organizaci na zařízeních s iOS a macOS pomocí [Apple Business Manageru](https://business.apple.com/) nebo [Apple School Manageru](https://school.apple.com/). Potom je možné synchronizovat informace o hromadném nákupu s Intune a sledovat využití aplikací, které jste tímto způsobem koupili. Nákup licencí aplikací vám pomůže efektivně spravovat aplikace v rámci vaší společnosti a uchovávat vlastnictví a kontrolu nad zakoupenými aplikacemi. 
+Apple vám umožní koupit více licencí pro aplikaci, kterou chcete ve vaší organizaci použít v zařízeních s iOS/iPadOS a macOS pomocí [Apple Business Manageru](https://business.apple.com/) nebo [Apple School Manageru](https://school.apple.com/). Potom je možné synchronizovat informace o hromadném nákupu s Intune a sledovat využití aplikací, které jste tímto způsobem koupili. Nákup licencí aplikací vám pomůže efektivně spravovat aplikace v rámci vaší společnosti a uchovávat vlastnictví a kontrolu nad zakoupenými aplikacemi. 
 
 Microsoft Intune vám pomůže spravovat aplikace zakoupené prostřednictvím tohoto programu:
 
@@ -38,13 +38,13 @@ Microsoft Intune vám pomůže spravovat aplikace zakoupené prostřednictvím t
 - Sledování, kolik licencí je dostupných a které se používaly pro zakoupené aplikace.
 - Pomůže vám nainstalovat aplikace až do počtu licencí, které vlastníte.
 
-Kromě toho můžete pomocí Intune na zařízení s iOS synchronizovat, spravovat a přiřazovat knihy, které jste zakoupili v Apple Business Manageru. Další informace najdete v článku [Správa e-knih pro iOS zakoupených v rámci multilicenčního programu](vpp-ebooks-ios.md).
+Kromě toho můžete pomocí Intune synchronizovat, spravovat a přiřazovat knihy, které jste zakoupili v Apple Business Manageru, a to pro zařízení s iOS/iPadOS. Další informace najdete v tématu [Správa e-knih pro iOS/iPadOS zakoupených prostřednictvím programu hromadného nákupu](vpp-ebooks-ios.md).
 
 ## <a name="what-are-location-tokens"></a>Co jsou tokeny umístění?
 Tokeny umístění jsou známé také jako tokeny programu Volume purchase program (VPP). Tyto tokeny se používají pro přiřazení a správu licencí zakoupených pomocí nástroje Apple Business Manager. Správci obsahu můžou zakoupit a přidružit licence k tokenům umístění, ke kterým mají oprávnění v Apple Business Manageru. Tyto tokeny umístění se pak stáhnou z Apple Business Manageru a nahrají se v Microsoft Intune. Microsoft Intune podporuje nahrávání více tokenů umístění na tenanta. Tokeny mají platnost jeden rok.
 
 ## <a name="how-are-purchased-apps-licensed"></a>Jak se aplikace koupily jako licencované?
-Zakoupené aplikace je možné přiřadit ke skupinám pomocí dvou typů licencí, které Apple nabízí pro zařízení s iOS a macOS.
+Zakoupené aplikace je možné přiřadit ke skupinám pomocí dvou typů licencí, které Apple nabízí pro zařízení s iOS/iPadOS a macOS.
 
 |   | Licencování zařízení | Licencování uživatelů |
 |-----|------------------|----------------|
@@ -64,7 +64,7 @@ Můžete zakoupit a distribuovat veřejné i soukromé aplikace pomocí nástroj
 - **Aplikace pro Store:** Pomocí Apple Business Manageru můžou správci obsahu koupit bezplatné i placené aplikace, které jsou k dispozici v obchodě s aplikacemi.
 - **Vlastní aplikace:** Pomocí Apple Business Manageru můžou správci obsahu taky koupit vlastní aplikace, které jsou pro vaši organizaci k dispozici soukromě. Tyto aplikace jsou přizpůsobené konkrétním potřebám vaší organizace vývojářům, se kterými přímo pracujete. Přečtěte si další informace o [tom, jak distribuovat vlastní aplikace](https://developer.apple.com/business/custom-apps/).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 - Účet [Apple Business Manager](https://business.apple.com/) nebo [Apple School Manager](https://school.apple.com/) pro vaši organizaci. 
 - Zakoupené licence aplikace přiřazené k jedné nebo více tokenům umístění. 
 - Byly staženy tokeny umístění. 
@@ -142,13 +142,13 @@ Koncový uživatel obdrží výzvu k instalaci aplikace v rámci VPP v řadě sc
 
 | # | Scénář                                | Pozvánka do programu Apple VPP                              | Výzva při instalaci aplikace | Výzva k zadání Apple ID |
 |---|--------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------|-----------------------------------|
-| 1 | BYOD – uživatel licencovaný (nejedná se o zařízení pro zápis uživatelů)                             | Ano                                                                                               | Ano                                           | Ano                                 |
-| 2 | Zařízení společnosti – licencovaný uživatel (zařízení není pod dohledem)     | Ano                                                                                               | Ano                                           | Ano                                 |
-| 3 | Zařízení společnosti – licencovaný uživatel (zařízení pod dohledem)         | Ano                                                                                               | Ne                                           | Ano                                 |
-| 4 | Vlastní zařízení – licencované zařízení                           | Ne                                                                                               | Ano                                           | Ne                                 |
-| 5 | Zařízení společnosti – licencované zařízení (zařízení není pod dohledem)                           | Ne                                                                                               | Ano                                           | Ne                                 |
-| 6 | Zařízení společnosti – licencované zařízení (zařízení pod dohledem)                           | Ne                                                                                               | Ne                                           | Ne                                 |
-| 7 | Beznabídkový režim (zařízení pod dohledem) – licencované zařízení | Ne                                                                                               | Ne                                           | Ne                                 |
+| 1 | BYOD – uživatel licencovaný (nejedná se o zařízení pro zápis uživatelů)                             | A                                                                                               | A                                           | A                                 |
+| 2 | Zařízení společnosti – licencovaný uživatel (zařízení není pod dohledem)     | A                                                                                               | A                                           | A                                 |
+| 3 | Zařízení společnosti – licencovaný uživatel (zařízení pod dohledem)         | A                                                                                               | N                                           | A                                 |
+| 4 | Vlastní zařízení – licencované zařízení                           | N                                                                                               | A                                           | N                                 |
+| 5 | Zařízení společnosti – licencované zařízení (zařízení není pod dohledem)                           | N                                                                                               | A                                           | N                                 |
+| 6 | Zařízení společnosti – licencované zařízení (zařízení pod dohledem)                           | N                                                                                               | N                                           | N                                 |
+| 7 | Beznabídkový režim (zařízení pod dohledem) – licencované zařízení | N                                                                                               | N                                           | N                                 |
 | 8 | Beznabídkový režim (zařízení pod dohledem) – licencovaný uživatel   | --- | ---                                          | ---                                |
 
 > [!Note]  
@@ -156,9 +156,9 @@ Koncový uživatel obdrží výzvu k instalaci aplikace v rámci VPP v řadě sc
 
 ## <a name="revoking-app-licenses"></a>Odvolávání licencí aplikací
 
-Můžete odvolat všechny přidružené licence aplikací pro iOS nebo macOS Volume-purchase program (VPP) na základě daného zařízení, uživatele nebo aplikace.  Existují však určité rozdíly mezi platformami iOS a macOS. 
+Můžete odvolat všechny přidružené licence aplikací pro iOS/iPadOS nebo macOS programu Volume purchase program (VPP) na základě daného zařízení, uživatele nebo aplikace.  Existují však určité rozdíly mezi platformami iOS/iPadOS a macOS. 
 
-|   | iOS | macOS |
+|   | iOS/iPadOS | macOS |
 |-----|------------------|----------------|
 | **Odebrat přiřazení aplikace** | Pokud odeberete aplikaci, která byla přiřazena uživateli, Intune získá zpět licenci uživatele nebo zařízení a odinstaluje aplikaci ze zařízení. | Když odeberete aplikaci, která byla přiřazena uživateli, Intune znovu získá licenci uživatele nebo zařízení. Aplikace se ze zařízení neodinstaluje. |
 | **Odvolat licenci aplikace** | Odvolání licence aplikace znovu získá licenci aplikace od uživatele nebo zařízení. Aby bylo možné aplikaci odebrat ze zařízení, je nutné změnit přiřazení pro **odinstalaci** . | Odvolání licence aplikace znovu získá licenci aplikace od uživatele nebo zařízení. Aplikace macOS s odvolanými licencemi zůstává v zařízení použitelná, ale nedá se aktualizovat, dokud uživatel nebo zařízení nepřidá licenci. Podle Applu se takové aplikace po uplynutí 30denní lhůty odeberou. Společnost Apple ale neposkytuje způsob, jak Intune aplikaci odebrat, a to pomocí akce odinstalovat přiřazení.
@@ -184,14 +184,14 @@ Token Apple VPP si můžete prodloužit stažením nového tokenu z Apple Busine
 
 ## <a name="deleting-a-vpp-app"></a>Odstranění aplikace VPP
 
-V současné době nelze aplikace VPP pro iOS z Microsoft Intune odstraňovat.
+V současné době nemůžete z Microsoft Intune odstranit aplikaci VPP pro iOS/iPadOS.
 
 ## <a name="assigning-custom-role-permissions-for-vpp"></a>Přiřazují se oprávnění vlastní role pro VPP
 
 Přístup k tokenům Apple VPP a aplikacím VPP se dá řídit nezávisle pomocí oprávnění přiřazených k vlastním rolím Správce v Intune.
 
 * Pokud chcete, aby vlastní role Intune spravovala tokeny programu Apple VPP v **aplikacích** > **tokeny programu Apple VPP**, přiřaďte oprávnění pro **spravované aplikace**.
-* Pokud chcete, aby mohla vlastní role Intune spravovat aplikace zakoupené pomocí tokenů VPP iOS v části **aplikace** > **všech aplikacích**, přiřaďte oprávnění pro **mobilní aplikace**. 
+* Pokud chcete, aby vlastní role Intune spravovala aplikace zakoupené pomocí tokenů VPP pro iOS/iPadOS, v části **aplikace** > **všechny aplikace**, přiřaďte oprávnění pro **mobilní aplikace**. 
 
 ## <a name="additional-information"></a>Další informace
 

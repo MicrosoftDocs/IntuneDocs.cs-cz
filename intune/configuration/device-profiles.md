@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,23 +17,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 800bbd5199bd4389ee1ae8aa98a68e21456e7000
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 951d3df8b842f1a0e76f875ea9fc7921c413494f
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206614"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513062"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Použití funkcí a nastavení v zařízeních pomocí profilů zařízení v Microsoft Intune
 
 
 
-Microsoft Intune zahrnuje nastavení a funkce, které můžete povolit nebo zakázat na různých zařízeních v rámci vaší organizace. Tato nastavení a funkce se přidají do části "konfigurační profily". Můžete vytvářet profily pro různá zařízení a různé platformy, včetně iOS, Androidu a Windows. Pak pomocí Intune aplikujte nebo přiřadíte profil k zařízením.
+Microsoft Intune zahrnuje nastavení a funkce, které můžete povolit nebo zakázat na různých zařízeních v rámci vaší organizace. Tato nastavení a funkce se přidají do části "konfigurační profily". Můžete vytvářet profily pro různá zařízení a různé platformy, včetně iOS/iPadOS, Androidu a Windows. Pak pomocí Intune aplikujte nebo přiřadíte profil k zařízením.
 
 Jako součást řešení správy mobilních zařízení (MDM) použijte tyto konfigurační profily k dokončení různých úloh. Například:
 
 - Na zařízeních s Windows 10 použijte šablonu profilu, která blokuje ovládací prvky ActiveX v Internet Exploreru.
-- V zařízeních s iOS a macOS můžou uživatelé používat tiskárny pro tisk ve vaší organizaci.
+- V zařízeních se systémem iOS/iPadOS a macOS umožňují uživatelům používat tiskárny pro tisk ve vaší organizaci.
 - Povolí nebo zakáže přístup k Bluetooth na zařízení.
 - Vytvořte profil Wi-Fi nebo VPN, který poskytuje různým zařízením přístup k podnikové síti.
 - Spravujte aktualizace softwaru, včetně okamžiku, kdy jsou nainstalovány.
@@ -62,12 +62,12 @@ Tato funkce podporuje:
 - iOS/iPadOS
 - macOS
 - Wvdows Phone 8.1
-- Windows 8.1
+- Windows 8.1
 - Windows 10 a novější
 
 ## <a name="custom-profile"></a>Profil Vlastní
 
-[Vlastní nastavení](custom-settings-configure.md) umožňuje správcům přiřazovat nastavení zařízení, která nejsou integrovaná do Intune. Na zařízeních s Androidem můžete zadat hodnoty OMA-URI. U zařízení s iOSem můžete naimportovat konfigurační soubor, který jste vytvořili v nástroji Apple Configurator.
+[Vlastní nastavení](custom-settings-configure.md) umožňuje správcům přiřazovat nastavení zařízení, která nejsou integrovaná do Intune. Na zařízeních s Androidem můžete zadat hodnoty OMA-URI. Pro zařízení s iOS/iPadOS můžete importovat konfigurační soubor, který jste vytvořili v Apple Configuratoru.
 
 Tato funkce podporuje:
 
@@ -89,7 +89,7 @@ Tato funkce podporuje:
 
 ## <a name="device-features"></a>Funkce zařízení
 
-[Funkce zařízení](device-features-configure.md) řídí funkce na zařízeních s iOS a MacOS, jako je například zpráva o prostředcích pro tisk, oznámení a zamykací obrazovce.
+[Funkce zařízení](device-features-configure.md) řídí funkce na zařízeních s iOS/IPadOS a MacOS, jako jsou například zprávy o prostředcích pro tisk, oznámení a zamykací obrazovce.
 
 Tato funkce podporuje:
 
@@ -106,7 +106,7 @@ Tato funkce podporuje:
 
 ## <a name="device-restrictions"></a>Omezení zařízení
 
-[Omezení zařízení](device-restrictions-configure.md) řídí zabezpečení, hardware, sdílení dat a další nastavení na zařízeních. Můžete například vytvořit profil omezení zařízení, který uživatelům zařízení s iOSem zakazuje použít fotoaparát v zařízení. 
+[Omezení zařízení](device-restrictions-configure.md) řídí zabezpečení, hardware, sdílení dat a další nastavení na zařízeních. Můžete například vytvořit profil omezení zařízení, který uživatelům zařízení s iOS/iPadOS brání v používání kamery zařízení. 
 
 Tato funkce podporuje:
 
@@ -115,7 +115,7 @@ Tato funkce podporuje:
 - iOS/iPadOS
 - macOS
 - Windows 10 a novější
-- Tým Windows 10
+- Windows 10 Team
 
 ## <a name="edition-upgrade"></a>Upgrade edice
 
@@ -129,9 +129,9 @@ Tato funkce podporuje:
 
 [Nastavení vzdělávání – Windows 10](education-settings-configure.md) konfiguruje možnosti pro [aplikaci Windows Zkuste si test](https://education.microsoft.com/gettrained/win10takeatest). Když tyto možnosti nakonfigurujete, žádnou jinou aplikaci nepůjde na zařízení spustit, dokud nebude test dokončen.
 
-[Nastavení vzdělávání – iOS](../fundamentals/education-settings-configure-ios-shared.md) používá aplikaci Classroom pro systém iOS, která umožňuje vést výuku a ovládat zařízení studentů v učebně. Můžete nakonfigurovat zařízení iPad, aby mohli několik studentů sdílet jedno zařízení.
+[Nastavení vzdělávání – iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) používá aplikaci učebny pro iOS/iPadOS k seznámení s učením a řízení zařízení studenta v učebně. Můžete nakonfigurovat zařízení iPad, aby mohli několik studentů sdílet jedno zařízení.
 
-## <a name="email"></a>E-mailu
+## <a name="email"></a>E-mail
 
 [Nastavení e-mailu](email-settings-configure.md) vytvoří, přiřadí a monitoruje nastavení e-mailů Exchange ActiveSync na zařízeních. E-mailové profily vám pomůžou s konzistencí, omezit volání podpory a umožnit koncovým uživatelům přístup k firemnímu e-mailu na svých osobních zařízeních, aniž by museli nastavovat. 
 
@@ -186,7 +186,7 @@ Tato funkce podporuje:
 
 - Windows 10 a novější
 
-Nastavení veřejného terminálu je dostupné taky jako omezení zařízení pro [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)a [iOS](device-restrictions-ios.md#kiosk).
+Nastavení veřejného terminálu je dostupné taky jako omezení zařízení pro [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)a [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
 ## <a name="oemconfig"></a>OEMConfig
 
@@ -196,7 +196,7 @@ Tato funkce podporuje:
 
 - Android Enterprise (OEMConfig)
 
-## <a name="powershell-scripts"></a>PowerShellové skripty
+## <a name="powershell-scripts"></a>Skripty prostředí PowerShell
 
 [Skripty PowerShellu na zařízeních s Windows 10](../apps/intune-management-extension.md) používají rozšíření pro správu Intune k nahrání skriptů PowerShellu v Intune a pak tyto skripty na svých zařízeních spustíte. Podívejte se také na to, co je potřeba k používání tohoto rozšíření, jak je přidat do Intune a další důležité informace.
 
@@ -219,7 +219,7 @@ Tato funkce podporuje:
 
 ## <a name="update-policies"></a>Zásady aktualizací
 
-[Zásady aktualizací pro iOS](../protect/software-updates-ios.md) ukazují, jak vytvořit a přiřadit zásady pro iOS k instalaci aktualizací softwaru na zařízení s iOSem. Můžete také zkontrolovat stav instalace.
+[zásady aktualizace pro iOS/iPadOS](../protect/software-updates-ios.md) ukazují, jak vytvořit a přiřadit zásady pro iOS/iPadOS pro instalaci softwarových aktualizací do zařízení se systémem iOS/iPadOS. Můžete také zkontrolovat stav instalace.
 
 Zásady aktualizace na zařízeních s Windows najdete v tématu [Optimalizace doručení](delivery-optimization-windows.md). 
 
@@ -240,7 +240,7 @@ Tato funkce podporuje:
 - iOS/iPadOS
 - macOS
 - Wvdows Phone 8.1
-- Windows 8.1
+- Windows 8.1
 - Windows 10 a novější
 
 ## <a name="wi-fi"></a>Wi-Fi

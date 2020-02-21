@@ -14,15 +14,15 @@ ms.localizationpriority: high
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 681b4f690d03cd21c5a430e02cb0f3584d2e680e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: ec7d4b8d83935b961d05e2e6fd22dd2d3f7e4086
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72510116"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514519"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Správa verzí operačního systému pomocí Intune
-Na moderních mobilních a počítačových platformách jsou velké aktualizace, opravy a nové verze vydávány rychlým tempem. Ve Windows máte nad úplnou správou aktualizací a oprav kontrolu, ale jiné platformy jako iOS a Android vyžadují, aby se procesu účastnili koncoví uživatelé.  Microsoft Intune má možnosti, které vám pomůžou se strukturováním správy verzí operačního systému napříč různými platformami.
+Na moderních mobilních a počítačových platformách jsou velké aktualizace, opravy a nové verze vydávány rychlým tempem. Máte ovládací prvky pro plně spravované aktualizace a opravy ve Windows, ale jiné platformy, jako je iOS/iPadOS a Android, vyžadují, aby se vaši koncoví uživatelé účastnili procesu.  Microsoft Intune má možnosti, které vám pomůžou se strukturováním správy verzí operačního systému napříč různými platformami.
 
 Intune vám může pomoct vyřešit tyto běžné scénáře: 
 - Určit, jaké verze operačního systému jsou na zařízeních koncových uživatelů

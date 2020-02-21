@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 267f09c3dc16aab10fbe64f0e8662ee6f7c7ffa0
-ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
+ms.openlocfilehash: 1d8950e57c2427c522d337807d315ed5c399c0d5
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74908224"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514077"
 ---
 # <a name="tutorial-walkthrough-intune-in-microsoft-endpoint-manager"></a>Kurz: návod Intune ve Správci Microsoft Endpoint Manager
 
@@ -32,14 +32,14 @@ ms.locfileid: "74908224"
 > [!NOTE]
 > Microsoft Endpoint Manager je jediná integrovaná platforma pro správu koncových bodů pro správu všech vašich koncových bodů. Toto centrum pro správu Microsoft Endpoint Manageru integruje nástroj ConfigMgr a Microsoft Intune.
 
-V tomto kurzu provedete následující:
+V tomto kurzu se naučíte:
 > [!div class="checklist"]
 > * Prohlídka centra pro správu Microsoft Endpoint Manageru
 > * Přizpůsobení zobrazení centra pro správu Microsoft Endpoint Manageru
 
 Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební účet](free-trial-sign-up.md).
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 Než budete nastavovat Microsoft Intune, projděte si následující požadavky:
 
 - [Podporované operační systémy a prohlížeče](../supported-devices-browsers.md) 
@@ -70,7 +70,7 @@ Pomocí následujících kroků můžete lépe pochopit Intune v centru pro spr�
     
     Intune umožňuje spravovat zařízení a aplikace vašich zaměstnanců, včetně toho, jak přistupují k firemním datům. Aby bylo možné použít tuto službu správy mobilních zařízení (MDM), musí být zařízení nejprve zaregistrovaná v Intune. Když je zařízení zaregistrované, vystaví se mu certifikát MDM. Tento certifikát slouží ke komunikaci se službou Intune. 
 
-    Existuje několik způsobů, jak zaregistrovat zařízení zaměstnanců do Intune. Jednotlivé způsoby závisí na vlastnictví zařízení (osobní nebo firemní), typu zařízení (iOS, Windows, Android) a požadavcích na správu (resetování, spřažení, uzamčení). Abyste ale mohli povolit registraci zařízení, musíte si nastavit infrastrukturu Intune. Registrace zařízení vyžaduje zejména [nastavení autority MDM](mdm-authority-set.md). Další informace o tom, jak připravit prostředí Intune (tenanta), najdete v tématu [Nastavení Intune](setup-steps.md). Jakmile budete mít tenanta Intune připravený, můžete zaregistrovat zařízení. Další informace o registraci zařízení najdete v článku [Co je registrace zařízení?](../enrollment/device-enrollment.md)
+    Existuje několik způsobů, jak zaregistrovat zařízení zaměstnanců do Intune. Každá metoda závisí na vlastnictví zařízení (osobní nebo firemní), typu zařízení (iOS/iPadOS, Windows, Android) a požadavcích na správu (resetování, spřažení, uzamykání). Abyste ale mohli povolit registraci zařízení, musíte si nastavit infrastrukturu Intune. Registrace zařízení vyžaduje zejména [nastavení autority MDM](mdm-authority-set.md). Další informace o tom, jak připravit prostředí Intune (tenanta), najdete v tématu [Nastavení Intune](setup-steps.md). Jakmile budete mít tenanta Intune připravený, můžete zaregistrovat zařízení. Další informace o registraci zařízení najdete v článku [Co je registrace zařízení?](../enrollment/device-enrollment.md)
 
 3. V navigačním podokně vyberte **zařízení** a zobrazí se podrobnosti o zaregistrovaných zařízeních v tenantovi Intune. 
 
@@ -117,7 +117,7 @@ Pomocí následujících kroků můžete lépe pochopit Intune v centru pro spr�
     > [!TIP]
     > Pokud jste v Azure Portal dříve použili Intune, zjistili jste výše uvedené podrobnosti v Azure Portal tak, že se přihlásíte k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a vyberete **Konfigurace zařízení**.
 
-    Intune obsahuje nastavení a funkce, které můžete různým zařízením v organizaci povolit nebo zakázat. Tato nastavení a funkce se přidají do části "konfigurační profily". Můžete vytvářet profily pro různá zařízení a různé platformy, včetně iOS, Androidu, macOS a Windows. Pak můžete použít Intune k aplikování profilu na zařízení ve vaší organizaci.   
+    Intune obsahuje nastavení a funkce, které můžete různým zařízením v organizaci povolit nebo zakázat. Tato nastavení a funkce se přidají do části "konfigurační profily". Můžete vytvářet profily pro různá zařízení a různé platformy, včetně iOS/iPadOS, Androidu, macOS a Windows. Pak můžete použít Intune k aplikování profilu na zařízení ve vaší organizaci.   
 
     Další informace o konfiguraci zařízení najdete v tématu [použití nastavení funkcí v zařízeních pomocí profilů zařízení v Microsoft Intune](../configuration/device-profiles.md).
 

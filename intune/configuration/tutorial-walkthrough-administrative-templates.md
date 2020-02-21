@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/07/2020
+ms.date: 02/18/2020
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80f489bc91f6d2f51cf9ee378793043a49c4e949
-ms.sourcegitcommit: e4602481a25a5e12379f673dfe801c611f51c35b
+ms.openlocfilehash: a96f291203e1513ab89196b26a7802856f90e048
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75735025"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511232"
 ---
 # <a name="tutorial-use-the-cloud-to-configure-group-policy-on-windows-10-devices-with-admx-templates-and-microsoft-intune"></a>Kurz: použití cloudu ke konfiguraci zásad skupiny na zařízeních s Windows 10 s šablonami ADMX a Microsoft Intune
 
@@ -41,7 +41,7 @@ Další informace o zásadách pro ADMX najdete v tématu [Principy zásad zálo
 
 V Microsoft Intune jsou tyto šablony integrované ve službě Intune a jsou dostupné jako profily **šablon pro správu** . V tomto profilu nakonfigurujete nastavení, která chcete zahrnout, a potom tento profil přiřadíte k vašim zařízením.
 
-V tomto kurzu provedete následující:
+V tomto kurzu se naučíte:
 
 > [!div class="checklist"]
 > * Zavedli jsme do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -55,7 +55,7 @@ Tato funkce platí pro:
 
 - Windows 10 verze 1703 a novější
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 - Předplatné Microsoft 365 E3 nebo E5, které zahrnuje Intune a Azure Active Directory (AD) Premium. Pokud nemáte předplatné E3 nebo E5, [zkuste to zdarma](https://docs.microsoft.com/office365/admin/try-or-buy-microsoft-365?view=o365-worldwide).
 
@@ -110,7 +110,7 @@ Toto centrum pro správu se zaměřuje na správu zařízení a zahrnuje služby
 
 Centrum pro správu Správce koncových bodů můžete otevřít taky z [centra pro správu Microsoft 365](https://admin.microsoft.com):
 
-1. Přejděte do [ (Nastavení)https://admin.microsoft.com](https://admin.microsoft.com) (Integrace a služby).
+1. Přejít na [https://admin.microsoft.com](https://admin.microsoft.com).
 2. Přihlaste se pomocí účtu správce předplatného Microsoft 365 tenanta.
 3. V části **centra pro správu**vyberte **všechna centra pro správu** > **správy koncových bodů**. Otevře se centrum pro správu Správce koncových bodů.
 
@@ -193,7 +193,7 @@ V těchto dalších krocích vytvoříte skupiny zabezpečení a přidáte uživ
 
   - Všichni studenti
   - Všechna zařízení s Androidem
-  - Všechna zařízení s iOS
+  - Všechna zařízení s iOS/iPadOS
   - Marketing
   - Lidské zdroje
   - Všichni zaměstnanci Charlotte
@@ -223,7 +223,7 @@ V centru pro správu Správce koncových bodů jste vytvořili nové skupiny zab
 V této části vytvoříme v Intune šablonu pro správu, podíváme se na některá nastavení ve **správě Zásady skupiny**a porovnáte stejné nastavení v Intune. Cílem je Ukázat nastavení v zásadách skupiny a zobrazit stejné nastavení v Intune.
 
 1. V centru pro správu Správce koncových bodů vyberte **zařízení** > **konfigurační profily** > **vytvořit profil**.
-2. Zadejte tyto vlastnosti:
+2. Zadejte následující vlastnosti:
 
     - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Například zadejte **šablonu pro správu – zařízení s Windows 10 student**.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
@@ -364,7 +364,7 @@ V této části vytvoříte v Intune šablonu správce OneDrivu, abyste mohli ř
 
 1. Vytvořte další profil (**devices** > **Configuration** Profiles > **Create Profile**).
 
-2. Zadejte tyto vlastnosti:
+2. Zadejte následující vlastnosti:
 
     - **Název**: zadejte **šablonu správce – zásady OneDrivu, které se vztahují na všechny uživatele Windows 10**.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
@@ -474,7 +474,7 @@ Tato část používá následující zdroje informací. Tyto prostředky nainst
         **Uživatel**: zadejte účet správce předplatného tenanta Microsoft 365.  
         **Heslo**: zadejte jeho heslo.
 
-    4. Vyberte **Přijmout**.
+    4. Vyberte **přijmout**.
 
 9. Vytvořte konfigurační profil konfigurace **testu** . Zadejte:
 

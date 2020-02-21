@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a4d6db4f61dea1b073ccce7c4c3f727a91402c1
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 6c016dd8a1d8a21e3ac96ab8637e26a029b18dbc
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74563643"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511799"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Konfigurace aplikace Portál společnosti služby Microsoft Intune
 
@@ -39,7 +39,7 @@ Portál společnosti v Microsoft Intune je místo, odkud mají uživatelé pří
 
 Přizpůsobením Portál společnosti umožníte vašim koncovým uživatelům známé a užitečné možnosti. Provedete to tak, že na portálu Intune vyberete **aplikace** > **branding a přizpůsobení**a pak nakonfigurujete požadovaná nastavení.
 
-Když uživatel instaluje aplikaci pro iOS z Portál společnosti, zobrazí se výzva. K tomu dochází, když je aplikace pro iOS propojená s obchodem s aplikacemi, která je propojená s programem Volume purchase program (VPP), nebo propojená s obchodní aplikací (LOB). Tato výzva umožní uživatelům přijmout akci nebo povolit správu aplikace. Výzva zobrazí název vaší společnosti, nebo pokud název vaší společnosti není k dispozici, zobrazí se **portál společnosti** . 
+Když uživatel instaluje aplikaci pro iOS/iPadOS z Portál společnosti, zobrazí se výzva. K tomu dochází, když je aplikace pro iOS/iPadOS propojená s obchodem s aplikacemi, která je propojená s programem Volume purchase program (VPP), nebo propojená s obchodní aplikací (LOB). Tato výzva umožní uživatelům přijmout akci nebo povolit správu aplikace. Výzva zobrazí název vaší společnosti, nebo pokud název vaší společnosti není k dispozici, zobrazí se **portál společnosti** . 
 
 > [!Note]
 > Pokud používáte Azure Government, nabízí se protokoly aplikace koncovým uživatelům, aby se rozhodli o způsobu sdílení po inicializaci procesu získání pomoci s problémem. Pokud ale Azure Government nepoužíváte, Portál společnosti pro Windows 10 bude odesílat protokoly aplikace přímo Microsoftu, když uživatel iniciuje proces pro získání pomoci s problémem. Odesílání protokolů aplikace do Microsoftu usnadní řešení problémů. 
@@ -92,11 +92,11 @@ Zvolte logo, které bude nejlépe vypadat na bílých nebo světlých pozadích.
 
 ### <a name="brand-image-for-company-portal"></a>Firemní logo pro Portál společnosti
 
-Zobrazte si firemní logo, které odráží značku vaší společnosti. Po uložení změn můžete zvolit možnost **Zobrazit náhled nastavení** na webovém portálu Intune v horní části podokna a zjistit, jak budou vaše konfigurace vypadat. Všimněte si, že náhled firemního loga uvidíte jenom na zařízení s iOSem, ale ne na webovém portálu Intune. 
+Zobrazte si firemní logo, které odráží značku vaší společnosti. Po uložení změn můžete zvolit možnost **Zobrazit náhled nastavení** na webovém portálu Intune v horní části podokna a zjistit, jak budou vaše konfigurace vypadat. Všimněte si, že budete moct zobrazit náhled obrázku značky jenom na zařízení s iOS/iPadOS, ne na webovém portálu Intune. 
 
 |Název pole|Další informace|
 |---|---|
-|**Nahrát firemní logo**| Tato možnost umožňuje zobrazit obrázek značky. Na Portál společnosti iOS se na stránce profilu uživatele zobrazuje jako obrázek na pozadí.<p><ul><li>Doporučená šířka obrázku: větší než 1125px (musí být aspoň 650 px)</li><li>Maximální velikost obrázku: 1,3 MB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
+|**Nahrát firemní logo**| Tato možnost umožňuje zobrazit obrázek značky. V Portál společnosti pro iOS/iPadOS se na stránce profilu uživatele zobrazuje jako obrázek na pozadí.<p><ul><li>Doporučená šířka obrázku: větší než 1125px (musí být aspoň 650 px)</li><li>Maximální velikost obrázku: 1,3 MB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
 
 Správné firemní logo může zvýšit důvěru uživatelů v aplikaci Portál společnosti tím, že prezentuje silný smysl pro vaši firemní značku. Nabízíme vám několik tipů, nad kterými byste se mohli zamyslet při pořizování, výběru a optimalizaci loga pro Portál společnosti. 
 
@@ -108,7 +108,7 @@ Správné firemní logo může zvýšit důvěru uživatelů v aplikaci Portál 
 
 - Odeberte nepotřebná metadata. Soubor obrázku může obsahovat metadata, jako jsou profil fotoaparátu, zeměpisná poloha, název, popisek a další. Pomocí nástroje pro optimalizaci obrázků tyto informace odstraňte, abyste zachovali kvalitu, ale vešli se do velikostního limitu souboru. 
 
-Po přidání nebo změně obrázku značky v Intune se koncový uživatel nemusí na zařízeních s iOS zobrazovat, dokud Portál společnosti nerozpoznal změnu při spuštění, a pak se restartoval, aby se zobrazila image značky. 
+Po přidání nebo změně obrázku značky v Intune nemusí koncový uživatel na zařízení se systémem iOS nebo iPadOS vidět změnu, dokud Portál společnosti nerozpoznali změnu při spuštění, a pak se restartoval, aby zobrazila obrázek značky. 
 
 ### <a name="brand-image-examples"></a>Příklady obrázků značky
 
@@ -122,20 +122,20 @@ Následující obrázek ukazuje příklad obrázku iPhone s brandingem:
 
 ## <a name="privacy-statement-customization"></a>Přizpůsobení prohlášení o zásadách ochrany osobních údajů
 
-Prohlášení o zásadách ochrany osobních údajů, které se zobrazí pro vaši organizaci, můžete přizpůsobit na spravovaných zařízeních se systémem iOS. Tato zpráva obsahuje seznam položek, které vaše organizace nemůže zobrazit nebo dělat na spravovaných zařízeních se systémem iOS.
+Prohlášení o zásadách ochrany osobních údajů, které se zobrazí pro vaši organizaci, můžete přizpůsobit na spravovaných zařízeních se systémem iOS/iPadOS. Tato zpráva obsahuje seznam položek, které vaše organizace nemůže zobrazit nebo dělat na spravovaných zařízeních se systémem iOS/iPadOS.
 
 V části **portál společnosti přizpůsobení** > **Správa zařízení a zpráva o ochraně osobních údajů**můžete:
 
 - Přijměte **výchozí hodnotu** pro použití seznamu, jak je uvedeno níže.
-- Zvolením možnosti **vlastní** upravíte seznam položek, které vaše organizace nemůže zobrazit nebo dělat na spravovaných zařízeních se systémem iOS. Pomocí [Markdownu](https://daringfireball.net/projects/markdown/) můžete přidat odrážky, tučné písmo, kurzívu a odkazy.
+- Zvolením možnosti **vlastní** upravíte seznam položek, které vaše organizace nemůže zobrazit nebo dělat na spravovaných zařízeních se systémem iOS/iPadOS. Pomocí [Markdownu](https://daringfireball.net/projects/markdown/) můžete přidat odrážky, tučné písmo, kurzívu a odkazy.
 
 ## <a name="company-portal-derived-credentials-for-ios-devices"></a>Portál společnosti odvozené přihlašovací údaje pro zařízení s iOS
-Intune podporuje ověřování osobních identit (PIV) a služby Common Access Card (CAC) odvozené přihlašovací údaje v partnerství s poskytovateli přihlašovacích údajů DISA purebred, Entrust Datacard a Intercede. Koncoví uživatelé procházejí dalšími kroky po registraci zařízení se systémem iOS, aby ověřili jejich identitu v aplikaci Portál společnosti. Odvozená pověření budou pro uživatele povolena tím, že nejprve nastaví poskytovatele pověření pro vašeho tenanta a pak zacílíte na profil, který používá odvozená pověření pro uživatele nebo zařízení.
+Intune podporuje ověřování osobních identit (PIV) a služby Common Access Card (CAC) odvozené přihlašovací údaje v partnerství s poskytovateli přihlašovacích údajů DISA purebred, Entrust Datacard a Intercede. Koncoví uživatelé procházejí dalšími kroky po registraci zařízení s iOS/iPadOS a ověřují jejich identitu v aplikaci Portál společnosti. Odvozená pověření budou pro uživatele povolena tím, že nejprve nastaví poskytovatele pověření pro vašeho tenanta a pak zacílíte na profil, který používá odvozená pověření pro uživatele nebo zařízení.
 
 > [!NOTE]
 > Uživateli se zobrazí pokyny k odvozeným přihlašovacím údajům na základě odkazu, který jste zadali přes Intune.
 
-Další informace o odvozených přihlašovacích údajích pro zařízení s iOS najdete v tématu [použití odvozených přihlašovacích údajů v Microsoft Intune](~/protect/derived-credentials.md).
+Další informace o odvozených přihlašovacích údajích pro zařízení s iOS/iPadOS najdete v tématu [použití odvozených přihlašovacích údajů v Microsoft Intune](~/protect/derived-credentials.md).
 
 ## <a name="dark-mode-for-ios-company-portal"></a>Tmavý režim pro iOS Portál společnosti
 
@@ -147,15 +147,15 @@ Koncoví uživatelé mohou aktivovat akce navigace, aplikace a zařízení ve Wi
 
 V aplikaci Portál společnosti pro Windows jsou k dispozici následující klávesové zkratky.
 
-| Oblast | Description | Klávesová zkratka |
+| Oblast | Popis | Klávesová zkratka |
 |:------------------:|:--------------:|:-----------------:|
-| Navigační nabídka | Navigace | Alt+M |
-|  | Domů | Alt+H |
+| Navigační nabídka | Navigace | ALT + M |
+|  | Domů | ALT + H |
 |  | Všechny aplikace | ALT + A |
 |  | Nainstalované aplikace | Alt+I |
-|  | Váš názor | Alt+F |
-|  | Můj profil | Alt+U |
-|  | Nastavení | Alt+T |
+|  | Váš názor | ALT + F |
+|  | Můj profil | ALT + U |
+|  | Nastavení | Alt + T |
 | Úvodní stránka – dlaždice Zařízení | Přejmenovat | F2 |
 |  | Odebrat | Ctrl+D nebo Delete |
 |  | Zkontrolovat přístup | Ctrl+M nebo F9 |
@@ -177,7 +177,7 @@ Uživatelé můžou na svých místních nebo vzdálených zařízeních provád
 - **Přejmenovat** – Tato akce změní název zařízení, které může uživatel vidět v portál společnosti. Nemění název místního zařízení, pouze výpis v Portál společnosti.
 - **Synchronizovat** – Tato akce zahájí vrácení se změnami zařízení se službou Intune. Zobrazí se jako **stav kontroly** v portál společnosti.
 - **Remote Lock** – zablokuje zařízení a vyžaduje ho k odemknutí.
-- **Resetování hesla** – Tato akce se používá k resetování hesla zařízení. V zařízeních se systémem iOS se heslo odebere a koncový uživatel bude muset zadat nový kód v nastavení. V podporovaných zařízeních s Androidem Intune vygeneruje nové heslo a dočasně se zobrazí v Portál společnosti.
+- **Resetování hesla** – Tato akce se používá k resetování hesla zařízení. V zařízeních se systémem iOS/iPadOS bude heslo odebráno a koncový uživatel bude muset zadat nový kód v nastavení. V podporovaných zařízeních s Androidem Intune vygeneruje nové heslo a dočasně se zobrazí v Portál společnosti.
 - **Obnovení klíčů** – Tato akce se používá k obnovení osobního obnovovacího klíče pro šifrovaná zařízení MacOS z webu portál společnosti. 
 
 ### <a name="self-service-actions"></a>Akce samoobslužných služeb
@@ -186,13 +186,13 @@ Některé platformy a konfigurace neumožňují akce zařízení samoobslužné 
 
 |  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
-| Vyřazení | K dispozici<sup>(1)</sup> | K dispozici | K dispozici | K dispozici<sup>(7)</sup> |
+| Vyřadit | K dispozici<sup>(1)</sup> | K dispozici | K dispozici | K dispozici<sup>(7)</sup> |
 | Vymazání | K dispozici | K dispozici<sup>(5)</sup> | Není k dispozici | K dispozici<sup>(7)</sup> |
 | Přejmenovat<sup>(4)</sup> | K dispozici | K dispozici | K dispozici | K dispozici |
-| Synchronizace | K dispozici | K dispozici | K dispozici | K dispozici |
+| Synchronizovat | K dispozici | K dispozici | K dispozici | K dispozici |
 | Vzdálené uzamčení | Pouze Windows Phone | K dispozici | K dispozici | K dispozici |
 | Resetovat heslo | Pouze Windows Phone | K dispozici<sup>(8)</sup> | Není k dispozici | K dispozici<sup>(6)</sup> |
-| Key Recovery | Není k dispozici | Není k dispozici | K dispozici<sup>(2)</sup> | Není k dispozici |
+| Obnovení klíče | Není k dispozici | Není k dispozici | K dispozici<sup>(2)</sup> | Není k dispozici |
 
 <sup>(1)</sup> **vyřazení** je vždycky blokované na zařízeních s Windows připojená k Azure AD.<br>
 <sup>(2)</sup> **obnovení klíče** pro MacOS je dostupné jenom přes webový portál.<br>

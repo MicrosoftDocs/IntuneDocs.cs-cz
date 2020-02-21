@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7a6914e8174023704cfc593ec08a525ec5889f3
-ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
+ms.openlocfilehash: 7d1a55f758be50c342a5c8851106f0c37e6aec50
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77437898"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513720"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Vytvoření a přiřazení zásad ochrany aplikací
 
@@ -74,21 +74,21 @@ Když vytvoříte zásady ochrany aplikací pro iOS/iPadOS a aplikace pro Androi
     Tato stránka poskytuje nastavení pro řízení ochrany před únikem informací (DLP), včetně omezení pro vyjmutí, kopírování, vložení a uložení. Tato nastavení určují, jak uživatelé pracují s daty v aplikacích, které tato zásada ochrany aplikací používá.
 
     **Nastavení ochrany dat**:<br>
-    - **iOS/iPadOS data Protection** – informace najdete v tématu [nastavení zásad ochrany aplikací pro iOS – ochrana dat](~/apps/app-protection-policy-settings-ios.md#data-protection).
+    - **iOS/iPadOS data Protection** – informace najdete v tématu [nastavení zásad ochrany aplikací pro iOS nebo IPadOS – ochrana dat](~/apps/app-protection-policy-settings-ios.md#data-protection).
     - **Ochrana dat v Androidu** – informace najdete v tématu [nastavení zásad ochrany aplikací pro Android – ochrana dat](~/apps/app-protection-policy-settings-android.md#data-protection).
 
 7. Kliknutím na **Další** zobrazte stránku **požadavky na přístup** .<br>
     Tato stránka poskytuje nastavení, která umožňují nakonfigurovat požadavky na kód PIN a přihlašovací údaje, které uživatelé musí splnit, aby měli přístup k aplikacím v pracovním kontextu. 
  
     **Nastavení požadavků na přístup**:<br>
-    - **požadavky na přístup k iOS/iPadOS** – informace najdete v tématu [nastavení zásad ochrany aplikací pro iOS – požadavky na přístup](~/apps/app-protection-policy-settings-ios.md#access-requirements).
+    - **požadavky na přístup pro iOS/iPadOS** – informace najdete v tématu [nastavení zásad ochrany aplikací pro iOS/iPadOS – požadavky na přístup](~/apps/app-protection-policy-settings-ios.md#access-requirements).
     - **Požadavky na přístup k Androidu** – informace najdete v tématu [nastavení zásad ochrany aplikací pro Android – požadavky na přístup](~/apps/app-protection-policy-settings-android.md#access-requirements).
 
 8. Kliknutím na **Další** zobrazte **podmíněný spouštěcí** stránku.<br>
     Tato stránka poskytuje nastavení pro nastavení požadavků na zabezpečení přihlášení pro zásady ochrany aplikací. Vyberte **Nastavení** a do sloupce **Hodnota** zadejte hodnotu, kterou uživatelé musí splnit, aby se přihlásili k firemní aplikaci. Pak vyberte **akci** , kterou chcete provést, pokud uživatelé nesplňují vaše požadavky. V některých případech lze pro jedno nastavení nakonfigurovat více akcí.
 
     **Nastavení podmíněného spuštění**:<br>
-    - **podmíněné spuštění iOS/iPadOS** – informace najdete v tématu [nastavení zásad ochrany aplikací pro iOS – podmíněné spuštění](~/apps/app-protection-policy-settings-ios.md#conditional-launch).
+    - **podmíněné spuštění iOS/iPadOS** – informace najdete v tématu [nastavení zásad ochrany aplikací pro iOS/iPadOS – podmíněné spuštění](~/apps/app-protection-policy-settings-ios.md#conditional-launch).
     - **Podmíněné spuštění Androidu** – informace najdete v tématu [nastavení zásad ochrany aplikací pro Android – podmíněné spuštění](~/apps/app-protection-policy-settings-android.md#conditional-launch).
 
 9. Kliknutím na tlačítko **Další** zobrazíte stránku **přiřazení** .<br>
@@ -99,7 +99,7 @@ Když vytvoříte zásady ochrany aplikací pro iOS/iPadOS a aplikace pro Androi
 11. Až skončíte, klikněte na **vytvořit** a vytvořte zásadu ochrany aplikací v Intune. 
 
     > [!TIP]
-    > Tato nastavení zásad se vynutí jenom při použití aplikace v pracovním kontextu. Když koncový uživatel použije aplikaci k provedení osobní úlohy, nebudou mít tyto zásady na ni vliv. Upozorňujeme, že když vytvoříte nový soubor, považuje se za osobní soubor. 
+    > Tato nastavení zásad se vynutí jen při použití aplikace v pracovním kontextu. Když koncový uživatel použije aplikaci k provedení osobní úlohy, nebudou mít tyto zásady na ni vliv. Upozorňujeme, že když vytvoříte nový soubor, považuje se za osobní soubor. 
 
 Koncoví uživatelé můžou stahovat aplikace z App Storu nebo Google Play. Více informací najdete v následujících tématech:
 * [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](../fundamentals/end-user-mam-apps-android.md)
@@ -180,7 +180,7 @@ Pokud chcete vytvořit tyto zásady, přejděte do části **aplikace** > **Zás
 > [!NOTE]
 > Zařízení s Androidem se zobrazí výzva k instalaci aplikace Portál společnosti Intune bez ohledu na to, který typ zařízení je zvolený. Pokud například vyberete možnost Android Enterprise, budou se stále zobrazovat uživatelé s nespravovanými zařízeními s Androidem.
 
-Pro iOS se pro nastavení zásad ochrany aplikací na zařízeních zaregistrovaných v Intune vyžaduje další nastavení konfigurace aplikace:
+Pro iOS/iPadOS se pro nastavení zásad ochrany aplikací na aplikace na zaregistrovaných zařízeních v Intune vyžaduje další nastavení konfigurace aplikace:
 
 - **IntuneMAMUPN** musí být nakonfigurované pro všechny aplikace spravované pomocí správy mobilních zařízení (MDM). Další informace najdete v tématu [Správa přenosu dat mezi aplikacemi pro iOS/iPadOS v Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 - **IntuneMAMDeviceID** musí být nakonfigurované pro všechny aplikace spravované pro správu MDM od třetích stran. **IntuneMAMDeviceID** by mělo být nakonfigurované na token ID zařízení. Například `key=IntuneMAMDeviceID, value={{deviceID}}`. Další informace najdete v tématu [Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOS/iPadOS](app-configuration-policies-use-ios.md).
@@ -192,7 +192,7 @@ Pro iOS se pro nastavení zásad ochrany aplikací na zařízeních zaregistrova
 ## <a name="policy-settings"></a>Nastavení zásad
 Pokud chcete zobrazit úplný seznam nastavení zásad pro iOS/iPadOS a Android, vyberte jeden z následujících odkazů:
 
-- [Zásady pro iOS](app-protection-policy-settings-ios.md)
+- [zásady pro iOS/iPadOS](app-protection-policy-settings-ios.md)
 - [Zásady pro Android](app-protection-policy-settings-android.md)
 
 ## <a name="next-steps"></a>Další kroky

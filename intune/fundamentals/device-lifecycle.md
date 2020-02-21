@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46a23ca18e385fa085afb59a654290702465a0ce
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 57a1e1c9c8a03fae67f2a4a25b6b4f16a20a8ec7
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414038"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514451"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Přehled životního cyklu správy mobilních zařízení (MDM) v Microsoft Intune
 
@@ -28,9 +28,9 @@ Všechna zařízení, která spravujete, mají *životní cyklus*. Intune vám m
 
 ![Životní cyklus zařízení](./media/device-lifecycle/device-lifecycle.png "životní cyklus zařízení v Intune")
 
-## <a name="enroll"></a>Registrace
+## <a name="enroll"></a>Registrovat
 
-Dnešní strategie správy mobilních zařízení (MDM) zahrnují využívání různých druhů telefonů, tabletů a počítačů (se systémy iOS, Android, Windows a Mac OS X). Pokud potřebujete mít možnost spravovat zařízení, což se často stává třeba u zařízení vlastněných společností, prvním krokem je [nastavení registrace zařízení](../enrollment/device-enrollment.md). Počítače s Windows můžete také spravovat buď tak, že je zaregistrujete v Intune (MDM), nebo do nich [nainstalujete klientský software Intune](../manage-windows-pcs-with-microsoft-intune.md).
+Dnešní strategie správy mobilních zařízení (MDM) se týkají nejrůznějších telefonů, tabletů a počítačů (iOS/iPadOS, Android, Windows a Mac OS X). Pokud potřebujete mít možnost spravovat zařízení, což se často stává třeba u zařízení vlastněných společností, prvním krokem je [nastavení registrace zařízení](../enrollment/device-enrollment.md). Počítače s Windows můžete také spravovat buď tak, že je zaregistrujete v Intune (MDM), nebo do nich [nainstalujete klientský software Intune](../manage-windows-pcs-with-microsoft-intune.md).
 
 ## <a name="configure"></a>Konfigurace
 
@@ -48,7 +48,7 @@ V moderním světě informačních technologií představuje ochrana zařízení
 - [**Nastavení Windows Hello pro firmy**](../protect/windows-hello.md) Nastavení Windows Hello pro firmy je alternativní metoda přihlašování, která umožňuje uživatelům používat k přihlášení *gesto*, třeba otisk prstu nebo Windows Hello, takže nemusí zadávat heslo.
 - [**Zásady ochrany počítačů se systémem Windows (s klientským softwarem Intune)** ](../policies-to-protect-windows-pcs-in-microsoft-intune.md). Pokud spravujete počítače s Windows pomocí klientského softwaru Intune, jsou dostupné zásady, které vám umožňují řídit na spravovaných počítačích s Windows nastavení služby Endpoint Protection, aktualizací softwaru a brány Windows Firewall.
 
-## <a name="retire"></a>Vyřazení
+## <a name="retire"></a>Vyřadit
 
 Když dojde ke ztrátě nebo odcizení zařízení, když je potřeba zařízení vyměnit nebo když se uživatelé přesunou na jinou pracovní pozici, je většinou vhodné zařízení [vyřadit nebo vymazat](../remote-actions/device-management.md). To můžete udělat několika způsoby, třeba zařízení resetovat, odebrat ho ze zprávy nebo z něj vymazat firemní data.
 

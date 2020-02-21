@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/08/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04d35f49f9e07cb72a1fea92210b05e0a95ec256
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: aef1747fdbb3118db82f6e99c2838632c8a9d369
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74390808"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512445"
 ---
 # <a name="add-wi-fi-settings-for-android-enterprise-dedicated-and-fully-managed-devices-in-microsoft-intune"></a>Přidání nastavení sítě Wi-Fi pro vyhrazená a plně spravovaná zařízení s Androidem v Microsoft Intune
 
@@ -58,7 +58,7 @@ Tuto možnost vyberte, pokud nasazujete na vyhrazené nebo plně spravované za�
 
   - **EAP-TLS**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** – **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
+    - **Vztah důvěryhodnosti serveru** –  - Kořenový certifikát pro ověřování serveru **: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
 
     - **Ověřování** klienta - **klientský certifikát pro ověřování klientů (certifikát identity)** : vyberte profil klientského certifikátu SCEP, který je také nasazený do zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
@@ -66,7 +66,7 @@ Tuto možnost vyberte, pokud nasazujete na vyhrazené nebo plně spravované za�
 
   - **EAP-TTLS**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** – **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
+    - **Vztah důvěryhodnosti serveru** –  - Kořenový certifikát pro ověřování serveru **: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
 
     - **Ověřování klientů**: vyberte **metodu ověřování**. Možnosti:
 
@@ -83,7 +83,7 @@ Tuto možnost vyberte, pokud nasazujete na vyhrazené nebo plně spravované za�
 
   - **PEAP**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** – **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
+    - **Vztah důvěryhodnosti serveru** –  - Kořenový certifikát pro ověřování serveru **: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
 
     - **Ověřování klientů**: vyberte **metodu ověřování**. Možnosti:
 
@@ -114,15 +114,15 @@ Tuto možnost vyberte, pokud nasazujete na vyhrazené nebo plně spravované za�
 
   - **EAP-TLS**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** – **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
+    - **Vztah důvěryhodnosti serveru** –  - Kořenový certifikát pro ověřování serveru **: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
 
-    - **Ověřování klientů** – **Klientský certifikát pro ověření klienta (certifikát identity)** : Zvolte profil klientského certifikátu SCEP nebo PKCS, který je také nasazený na zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
+    - **Ověřování klientů** –  - Klientský certifikát pro ověření klienta (certifikát identity) **: Zvolte profil klientského certifikátu SCEP nebo PKCS, který je také nasazený na zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
     - **Ochrana identity (vnější identita)** : Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
   - **EAP-TTLS**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** – **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
+    - **Vztah důvěryhodnosti serveru** –  - Kořenový certifikát pro ověřování serveru **: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
 
     - **Ověřování klientů**: vyberte **metodu ověřování**. Možnosti:
 
@@ -139,7 +139,7 @@ Tuto možnost vyberte, pokud nasazujete na vyhrazené nebo plně spravované za�
 
   - **PEAP**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** – **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
+    - **Vztah důvěryhodnosti serveru** –  - Kořenový certifikát pro ověřování serveru **: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
 
     - **Ověřování klientů**: vyberte **metodu ověřování**. Možnosti:
 
@@ -157,4 +157,4 @@ Tuto možnost vyberte, pokud nasazujete na vyhrazené nebo plně spravované za�
 
 Profil se vytvoří, ale nic nedělá. Pak [přiřaďte tento profil](device-profile-assign.md) a [sledujte jeho stav.](device-profile-monitor.md)..
 
-Můžete také vytvořit profily sítě Wi-Fi pro zařízení s [Androidem](wi-fi-settings-android.md), [iOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), [Windows 10](wi-fi-settings-windows.md)a [Windows 8.1](wi-fi-settings-import-windows-8-1.md) .
+Můžete také vytvořit profily sítě Wi-Fi pro zařízení s [Androidem](wi-fi-settings-android.md), [iOS/iPadOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), [Windows 10](wi-fi-settings-windows.md)a [Windows 8.1](wi-fi-settings-import-windows-8-1.md) .

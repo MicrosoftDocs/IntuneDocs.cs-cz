@@ -1,7 +1,7 @@
 ---
-title: Nastavení Intune na sdíleném zařízení pro aplikaci Classroom pro iOS
+title: Nastavení sdíleného zařízení v Intune pro aplikaci pro iOS/iPadOS
 titleSuffix: Microsoft Intune
-description: Přečtěte si o nastaveních Intune, pomocí kterých můžete ovládat nastavení aplikace Classroom na zařízeních s iOSem.
+description: Přečtěte si o nastaveních Intune, pomocí kterých můžete řídit nastavení pro aplikaci učeben na zařízeních s iOS/iPadOS.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -18,23 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0edfd9b8ee8b45952d9c22d5365d09d125ea7710
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 412dc9a12f5a13b5fbd738f3ac1b5b1033a2635b
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74784251"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514706"
 ---
 # <a name="configure-intune-education-settings-for-shared-ipad-devices"></a>Konfigurace nastavení vzdělávání Intune pro sdílená zařízení iPad
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 > [!NOTE]
-> Intune v současné době nepodporuje konfiguraci aplikace učebny. Tento článek platí jenom pro uživatele, kteří mají existující vzdělávací profily pro iOS v Intune.
+> Intune v současné době nepodporuje konfiguraci aplikace učebny. Tento článek platí jenom pro uživatele, kteří mají stávající vzdělávací profily pro iOS/iPadOS v Intune.
 
-Intune podporuje aplikaci Classroom pro systém iOS, která učitelům umožňuje vést výuku a ovládat zařízení studentů v učebně. Kromě aplikace Classroom podporuje Apple také možnost nakonfigurovat studentská zařízení iPad tak, aby mohlo jedno zařízení používat více studentů. Tento dokument vás provede využitím této možnosti pomocí Intune.
+Intune podporuje aplikaci pro iOS/iPadOS, která učitelům umožňuje seznámení s výukou a řízení zařízení studenta v učebně. Kromě aplikace Classroom podporuje Apple také možnost nakonfigurovat studentská zařízení iPad tak, aby mohlo jedno zařízení používat více studentů. Tento dokument vás provede využitím této možnosti pomocí Intune.
 
-Přečtěte si o konfiguraci vyhrazených (1:1) zařízení iPad pro použití aplikace Classroom v tématu [Jak nakonfigurovat nastavení Intune pro aplikaci Classroom pro iOS](education-settings-configure-ios.md).
+Informace o konfiguraci vyhrazených zařízení iPad (1:1) pro použití aplikace učebny najdete v tématu [jak nakonfigurovat nastavení Intune pro aplikaci pro iOS/iPadOS](education-settings-configure-ios.md).
 
 ## <a name="before-you-start"></a>Než začnete
 
@@ -64,7 +64,7 @@ Informace můžete do SDS naimportovat jednou z následujících metod:
 - [Další informace o licencování ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-whatis-azure-portal)
 
 
-## <a name="step-2---create-and-assign-an-ios-education-profile-in-intune"></a>Krok 2 – Vytvoření a přiřazení vzdělávacího profilu iOS v Intune
+## <a name="step-2---create-and-assign-an-iosipados-education-profile-in-intune"></a>Krok 2 – Vytvoření a přiřazení vzdělávacího profilu pro iOS/iPadOS v Intune
 
 ### <a name="configure-general-settings"></a>Konfigurace obecných nastavení
 
@@ -72,7 +72,7 @@ Informace můžete do SDS naimportovat jednou z následujících metod:
 3. V podokně **Intune** zvolte **Konfigurace zařízení**.
 2. V podokně **Konfigurace zařízení** v části **Spravovat** zvolte **Profily**.
 5. V podokně profilů zvolte **Vytvořit profil**.
-6. V podokně **Vytvořit profil** zadejte **Název** a **Popis** vzdělávacího profilu iOS.
+6. V podokně **vytvořit profil** zadejte **název** a **Popis** vzdělávacího profilu pro iOS/iPadOS.
 7. Z rozevíracího seznamu **Platforma** zvolte **iOS**.
 8. Z rozevíracího seznamu **Typ profilu** zvolte **Vzdělávání**.
 9. Zvolte **Nastavení** > **Konfigurovat**.

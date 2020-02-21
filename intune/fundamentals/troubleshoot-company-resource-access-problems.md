@@ -1,6 +1,6 @@
 ---
 title: Stavové a chybové kódy v Microsoft Intune – Azure | Microsoft Docs
-description: Podívejte se na seznam chyb, stavový kód, popisy a rozlišení při použití zařízení spravovaných přes MDM, získání přístupu k firemním prostředkům, chybám na zařízeních s iOS a chybám odpovědí OMA v Microsoft Intune.
+description: Podívejte se na seznam chyb, stavový kód, popisy a rozlišení při použití zařízení spravovaných přes MDM, získání přístupu k prostředkům společnosti, chyb na zařízeních s iOS/iPadOS a chyby odezvy OMA v Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17a8ebfcad2bcf485771f26184377aeb2c4bf4e1
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: bf31ce5f812603534f30b3b3aa3836ede0be6f6d
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72509803"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77510583"
 ---
 # <a name="common-error-codes-and-descriptions-in-microsoft-intune"></a>Běžné kódy chyb a popisy v Microsoft Intune
 
@@ -78,7 +78,7 @@ Pokud potřebujete pomoc, přečtěte si téma [získání podpory pro Microsoft
 |-2016341111|0x87D11389|Zařízení s platformou iOS vrátilo neočekávaný stav nečinnosti.|
 |-2016341112|0x87D11388|Zařízení s platformou iOS je momentálně zaneprázdněné.|
 
-## <a name="errors-returned-by-ios-devices"></a>Chyby vrácené v zařízeních s iOSem
+## <a name="errors-returned-by-iosipados-devices"></a>Chyby vrácené zařízeními se systémem iOS/iPadOS
 
 ### <a name="company-portal-errors"></a>Chyby Portálu společnosti
 
@@ -87,7 +87,7 @@ Pokud potřebujete pomoc, přečtěte si téma [získání podpory pro Microsoft
 |__Vnitřní chyba serveru__ <br>Vypadá to, že z důvodu chyby na našem serveru se vám nepovedlo nás kontaktovat. Zkuste to znovu, a pokud s tím budou problémy dál, obraťte se na správce.|Chyba 500|Tato chyba je pravděpodobně způsobena problémem ve službě Intune. Problém by se měl řešit na straně služby Intune a není způsobený potížemi na straně zákazníka.|
 |__Dočasně nedostupné__ <br>Vypadá to, že se vám nepovedlo nás kontaktovat, protože naše služba není dočasně k dispozici. Zkuste to znovu, a pokud s tím budou problémy dál, obraťte se na správce.|Chyba 503|Jedná se pravděpodobně o dočasný problém se službou Intune, může například probíhat údržba služby. Problém by se měl řešit na straně služby Intune a není způsobený potížemi na straně zákazníka.|
 |__Nejde se připojit k serveru__ <br>Vypadá to, že se vám nepovedlo nás kontaktovat. Zkuste to znovu, a pokud s tím budou problémy dál, obraťte se na správce.|Není přidružen stavový kód HTTP|Nepovedlo se navázat zabezpečené připojení k serveru, pravděpodobně kvůli problému s certifikáty, které používá protokol SSL. K tomuto problému mohlo dojít z důvodu nekompatibility zákaznických konfigurací s požadavky společnosti Apple na ATS (App Transport Security).|
-|__Něco se nepovedlo__ <br>Nepodařilo se načíst klienta Portálu společnosti. Zkuste to znovu, a pokud s tím budou problémy dál, obraťte se na správce.|Chyba 400|Všechny chyby se stavovým kódem HTTP obsahující 400, které nemají podrobnější chybovou zprávu, zobrazí toto. Jedná se o chybu v aplikaci Portál společnosti pro iOS na straně klienta.|
+|__Něco se nepovedlo__ <br>Nepodařilo se načíst klienta Portálu společnosti. Zkuste to znovu, a pokud s tím budou problémy dál, obraťte se na správce.|Chyba 400|Všechny chyby se stavovým kódem HTTP obsahující 400, které nemají podrobnější chybovou zprávu, zobrazí toto. Toto je chyba na straně klienta, která se děje v aplikaci Portál společnosti pro iOS/iPadOS.|
 |__Nejde kontaktovat server__ <br>Vypadá to, že se vám nepovedlo nás kontaktovat. Zkuste to znovu, a pokud s tím budou problémy dál, obraťte se na správce.|Chyba 500|Všechny chyby se stavovým kódem HTTP obsahující 500, které nemají podrobnější chybovou zprávu, zobrazí toto. Jedná se o chybu služby Intune, ke které dochází na straně služby.|
 
 ### <a name="service-errors"></a>Chyby služby
@@ -276,7 +276,7 @@ Pokud potřebujete pomoc, přečtěte si téma [získání podpory pro Microsoft
 |-2016332105|0x87D136B7|4007:Nerozpoznaný formát souboru|
 |-2016332106|0x87D136B6|4006:Datum odebrání profilu je v minulosti.|
 |-2016332107|0x87D136B5|4005:Heslo nevyhovuje zásadám.|
-|-2016332108|0x87D136B4|4004:Uživatel zrušil instalaci.|
+|-2016332108|0x87D136B4|4004: uživatel zrušil instalaci.|
 |-2016332109|0x87D136B3|4003:Profil není ve frontě pro instalaci.|
 |-2016332110|0x87D136B2|4002:Duplicitní UUID|
 |-2016332111|0x87D136B1|4001:Selhání instalace|
@@ -316,7 +316,7 @@ Pokud potřebujete pomoc, přečtěte si téma [získání podpory pro Microsoft
 |-2016344112|0x87D107D0|DCMO(1200): Operace probíhá úspěšně|
 |-2016345595|0x87D10205|Syncml(517): Odpověď na atomický příkaz byla tak velká, že se nevešla do jedné zprávy.|
 |-2016345596|0x87D10204|Syncml(516): Příkaz byl uvnitř elementu Atomic, a ten selhal. Příkaz se nepovedlo úspěšně vrátit zpátky.|
-|-2016345598|0x87D10202|Syncml(514): Příkaz SyncML se nedokončil úspěšně, protože operace byla zrušená ještě před jeho provedením.|
+|-2016345598|0x87D10202|SyncML (514): příkaz SyncML se nedokončil úspěšně, protože operace byla zrušená před zpracováním příkazu.|
 |-2016345599|0x87D10201|Syncml(513): Příjemce nepodporuje nebo odmítá podporovat určenou verzi synchronizačního protokolu SyncML použitou ve zprávě SyncML žádosti.|
 |-2016345600|0x87D10200|Syncml(512): Při synchronizační relaci došlo k chybě aplikace.|
 |-2016345601|0x87D101FF|Syncml(511): Při zpracování požadavku došlo na serveru k vážné chybě.|
@@ -368,7 +368,7 @@ Pokud potřebujete pomoc, přečtěte si téma [získání podpory pro Microsoft
 |-2016345812|0x87D1012C|Syncml(300): Požadovaný cíl je jedním z několika alternativních požadovaných cílů.|
 |-2016345896|0x87D100D8|Syncml(216):Příkaz byl uvnitř elementu Atomic, a ten selhal. Příkaz je úspěšně vrácený zpět.|
 |-2016345897|0x87D100D7|Syncml(215): Příkaz se neprovedl kvůli zásahu uživatele, který nepotvrdil volbu.|
-|-2016345898|0x87D100D6|Syncml(214): Operace je zrušená. Příkaz SyncML se úspěšně dokončil, ale v této relaci se další příkazy nezpracují.|
+|-2016345898|0x87D100D6|SyncML (214): operace se zrušila. Příkaz SyncML se úspěšně dokončil, ale v této relaci se další příkazy nezpracují.|
 |-2016345899|0x87D100D5|Syncml(213): Položka v bloku je přijatá a uložená do vyrovnávací paměti.|
 |-2016345900|0x87D100D4|Syncml(212): Ověření je přijaté. Zbytek synchronizační relace nevyžaduje další ověřování. Kód odpovědi jde použít jenom v odpovědi na žádost, ve které byly přihlašovací údaje poskytnuté.|
 |-2016345901|0x87D100D3|Syncml(211): Položka není odstraněná. Požadovaná položka se nenašla. Možná se odstranila dřív.|

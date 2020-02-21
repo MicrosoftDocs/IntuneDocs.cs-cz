@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4fca28329a5cd0adc7269929c4b2c2807bebf5e
-ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
+ms.openlocfilehash: 545f287e8b7ee82e2008f239171b22e01714b8c7
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77437949"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514740"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Řešení potíží s akcemi zařízení v Intune
 
@@ -92,6 +92,20 @@ Po dokončení těchto kroků už tuto odpověď nebudete dostávat.
 
 ### <a name="why-am-i-prompted-to-set-a-new-passcode-on-my-iosipados-device-when-i-issue-the-remove-passcode-action"></a>Proč se mi při vystavování akce odebrat heslo zobrazí výzva k nastavení nového hesla na zařízení se systémem iOS/iPadOS?
 Vzhledem k tomu, že jedna ze zásad dodržování předpisů vyžaduje heslo.
+
+
+## <a name="wipe-action"></a>Akce vymazání
+
+### <a name="i-cant-restart-a-windows-10-device-after-using-the-wipe-action"></a>Po použití akce vymazání nejde restartovat zařízení s Windows 10.
+To může být způsobeno tím, že použijete **zařízení pro vymazání a chcete pokračovat v mazání i v případě, že zařízení ztratí napájení. Pokud vyberete tuto možnost, uvědomte si, že může dojít k tomu, že se některá zařízení s Windows 10 nespustí znovu.** na zařízení s Windows 10.
+
+To může být způsobeno tím, že instalace systému Windows má zásadní poškození, které brání přeinstalaci operačního systému. V takovém případě se proces nezdařil a opustí systém v [prostředí Windows Recovery Environment]( https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
+
+### <a name="i-cant-restart-a-bitlocker-encrypted-device-after-using-the-wipe-action"></a>Po použití akce vymazání nejde restartovat zařízení zašifrované BitLockerem
+To může být způsobeno tím, že použijete **zařízení pro vymazání a chcete pokračovat v mazání i v případě, že zařízení ztratí napájení. Pokud vyberete tuto možnost, uvědomte si, že může dojít k tomu, že se některá zařízení s Windows 10 nespustí znovu.** možnost na zařízení šifrované pomocí BitLockeru.
+
+Pokud chcete tento problém vyřešit, na zařízení znovu nainstalujte Windows 10 pomocí spouštěcího média.
+
 
 ## <a name="next-steps"></a>Další kroky
 

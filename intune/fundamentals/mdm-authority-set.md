@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43c5d0731736df193bf615391ad486a60dff6cdd
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: b611b2307b7b4f7e789e7db9d070e4b6b3f1350c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885902"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514485"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Nastavení autority pro správu mobilních zařízení
 
@@ -69,7 +69,7 @@ V každém případě je vyjádření souhlasu omezeno výhradně na spouštěn�
 Po přechodu na novou autoritu MDM pravděpodobně nastane přechodná doba (až osm hodin), než se zařízení ohlásí a synchronizuje se službou. Je potřeba nakonfigurovat nastavení nové autority MDM a ujistit se, že zaregistrovaná zařízení budou po změně nadále spravovaná a chráněná. 
 - Zařízení se musí ke službě po změně připojit, aby nastavení z nové autority MDM (Intune samostatně) nahradila stávající nastavení v zařízení.
 - Po změně autority MDM některá základní nastavení (například profily) z předchozí autority MDM zůstanou v zařízení po dobu až sedmi dnů nebo do chvíle, kdy se zařízení ke službě poprvé připojí. Doporučuje se nakonfigurovat aplikace a nastavení (zásady, profily, aplikace atd.) v nové autoritě MDM co nejdříve a nasadit nastavení do skupin uživatelů obsahujících uživatele, kteří mají stávající zaregistrovaná zařízení. Jakmile se zařízení ke službě po změně autority MDM připojí, obdrží nová nastavení z nové autority MDM a zabrání se mezerám ve správě a ochraně.
-- Zařízení, která nemají přiřazené uživatele (obvykle v případě programu registrace zařízení s iOSem nebo hromadné registrace), nebudou na novou autoritu MDM migrována. Pro taková zařízení musíte zavolat podporu, aby vám s přesunem do nové autority MDM pomohla.
+- Zařízení, která nemají přidružené uživatele (obvykle když máte scénáře pro iOS/iPadOS Program registrace zařízení nebo hromadné registrace), se nemigrují do nové autority MDM. Pro taková zařízení musíte zavolat podporu, aby vám s přesunem do nové autority MDM pomohla.
 
 ## <a name="change-mdm-authority-to-office-365"></a>Změna autority MDM na Office 365
 
@@ -93,15 +93,15 @@ Autoritu MDM nemůžete změnit zpátky na neznámou. Autorita pro správu mobil
 - I když jsou zařízení při změně autority MDM (nebo krátce po ní) zapnutá a online, může trvat až osm hodin, než se do služby zaregistrují pod novou autoritou MDM (záleží na načasování příští naplánované pravidelné registrace).    
 
   > [!IMPORTANT]    
-  > V době mezi změnou autority MDM a nahráním obnoveného certifikátu APNs do nové autority se nové registrace a ohlášení zařízení s iOSem nezdaří. Proto je důležité certifikát APNs zkontrolovat a do nové autority nahrát co nejdřív po změně autority MDM.
+  > V době mezi změnou autority MDM a nahráním obnoveného certifikátu APNs do nové autority se nové registrace zařízení a zařízení se systémem iOS/iPadOS nezdaří. Proto je důležité certifikát APNs zkontrolovat a do nové autority nahrát co nejdřív po změně autority MDM.
 
 - Uživatelé můžou na novou autoritu MDM rychle přejít ručním spuštěním registrace zařízení do služby. Tuto změnu uživatelé snadno provedou pomocí aplikace Portál společnosti a inicializováním kontroly dodržování předpisů zařízením.
 - Pokud chcete ověřit, jestli správně fungují a když se zařízení zaregistrují a synchronizovaly se službou po změně autority MDM, hledejte zařízení v nové autoritě MDM.
 - Během změny autority MDM a ohlašování zařízení do služby bude zařízení přechodně offline. Aby se zajistilo, že zařízení během tohoto přechodného období zůstane chráněné a funkční, zůstanou v zařízení po dobu až sedmi dnů (nebo dokud se zařízení nepřipojí k nové autoritě MDM a neobdrží nová nastavení, která přepíší ta stávající) následující profily:
   - E-mailový profil
-  - profil VPN
+  - Profil VPN
   - Profil certifikátu
-  - Wi-Fi profil
+  - Profil Wi-Fi
   - Konfigurační profily
 - Po změně na novou autoritu MDM může trvat až týden, než budou data o dodržování předpisů v konzole pro správu Microsoft Intune přesná. Stavy dodržování předpisů v Azure Active Directory a na zařízení však přesné budou, takže zařízení je i nadále chráněné.
 - Zajistěte, aby nová nastavení, která mají přepsat stávající nastavení, měla stejný název jako ta předchozí, aby se původní nastavení skutečně přepsala. Jinak může mít zařízení nadbytečné profily a zásady.    

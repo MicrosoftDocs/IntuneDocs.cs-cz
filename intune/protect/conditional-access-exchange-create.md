@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d04897d38c1b46f27fe86e72ecfa6856aa9eece2
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: acc8241bf5b9ea05fcb23772586d459ca9e5e143
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755637"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515097"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Vytvoření zásady podmíněného přístupu pro místní Exchange a vyhrazenou verzi Exchange Online
 
@@ -50,7 +50,7 @@ Než budete moct nakonfigurovat podmíněný přístup, ověřte, že existují 
 
 - Pokud jsou zásady podmíněného přístupu nakonfigurované a cílené na uživatele, musí být předtím, než se uživatel může připojit k e-mailu, použít následující **zařízení** :
   - Musí být **zaregistrovaný** ve službě Intune nebo se musí jednat o počítač připojený k doméně.
-  - **Musí být zaregistrované v Azure Active Directory**. Kromě toho musí být ve službě Azure Active Directory zaregistrované ID protokolu Exchange ActiveSync klienta.
+  - **Je zaregistrované v Azure Active Directory**. Kromě toho musí být ve službě Azure Active Directory zaregistrované ID protokolu Exchange ActiveSync klienta.
 
 - Pro zákazníky s Intune a Office 365 se služba Azure AD Device Registration Service (DRS) aktivuje automaticky. Zákazníci, kteří už mají nasazenou službu AD FS Device Registration Service, nevidí registrovaná zařízení v místní službě Active Directory. **To neplatí pro počítače s Windows ani zařízení Windows Phone**.
 
@@ -62,13 +62,13 @@ Než budete moct nakonfigurovat podmíněný přístup, ověřte, že existují 
 
 ### <a name="support-for-mobile-devices"></a>Podpora mobilních zařízení
 
-- Windows Phone 8.1 nebo novější
+- Windows Phone 8.1 a novější
 - Nativní e-mailová aplikace v systému iOS
 - Poštovní klienti EAS, například Gmail v Androidu 4 a novějším
 - **Zařízení s pracovním profilem Androidu** s poštovními klienty EAS: Na zařízeních s pracovním profilem Androidu jsou v **pracovním profilu** podporované jen aplikace **Gmail** a **Nine Work for Android Enterprise**. Aby mohl podmíněný přístup pracovat s pracovními profily Androidu, musíte nasadit e-mailový profil pro aplikaci Gmail nebo devět Work pro Android Enterprise a tyto aplikace nasadit jako požadovanou instalaci.
 
 > [!NOTE]
-> Microsoft Outlook pro Android a iOS se nepodporuje prostřednictvím konektoru Exchange On-Premises Connector. Pokud chcete využít Azure Active Directory zásady podmíněného přístupu a zásady Intune App Protection s Outlookem pro iOS a Androidem pro místní poštovní schránky, přečtěte si téma [použití hybridního moderního ověřování v Outlooku pro iOS a Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
+> Microsoft Outlook pro Android a iOS/iPadOS se nepodporuje prostřednictvím konektoru Exchange On-Premises Connector. Pokud chcete využít Azure Active Directory zásady podmíněného přístupu a zásady Intune App Protection s Outlookem pro iOS/iPadOS a Androidem pro vaše místní poštovní schránky, přečtěte si téma [použití hybridního moderního ověřování s Outlookem pro iOS/iPadOS a Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
 
 ### <a name="support-for-pcs"></a>Podpora počítačů
 

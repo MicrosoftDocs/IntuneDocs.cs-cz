@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd0a4b0c5e0b4cbaa7ef43ec40cddb3ab30d3070
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: f5045e78eaca19e5a78468c7c4b6698e4e1a5019
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415482"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511544"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Kurz: Konfigurace časové rezervy pro používání služby Intune pro modul EMM a konfiguraci aplikací
 
@@ -32,12 +32,12 @@ ms.locfileid: "77415482"
 V tomto kurzu se naučíte:
 > [!div class="checklist"]
 > - Nastavte Intune jako poskytovatele podnikové mobility (EMM) v podnikové mřížce s časovou rezervou. V zařízeních spravovaných přes Intune budete moct omezit přístup k pracovním prostorům plánu vaší mřížky.
-> - Vytvořte zásady konfigurace aplikací pro správu časové rezervy pro aplikaci EMM v iOS a aplikaci časové rezervy pro zařízení s pracovním profilem Androidu.
-> - Vytvoření zásad dodržování předpisů pro zařízení v Intune pro nastavení podmínek, které musí zařízení s Androidem a iOS splňovat, aby se považovala za vyhovující.
+> - Vytvořte zásady konfigurace aplikací pro správu časové rezervy aplikace EMM na zařízeních iOS/iPadOS a aplikaci časové rezervy pro zařízení s pracovním profilem Androidu.
+> - Vytvoření zásad dodržování předpisů pro zařízení v Intune pro nastavení podmínek, které musí zařízení s Androidem a iOS/iPadOS splňovat, aby se dalo považovat za vyhovující.
 
 Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební účet](../fundamentals/free-trial-sign-up.md).
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 Pro účely tohoto kurzu budete potřebovat testovacího tenanta s následujícími předplatnými:
 - Azure Active Directory Premium ([bezplatná zkušební verze](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
 - Předplatné Intune ([bezplatná zkušební verze](../fundamentals/free-trial-sign-up.md))
@@ -51,10 +51,10 @@ Pomocí [pokynů pro časovou rezervu](https://get.slack.help/hc/articles/115002
 Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) jako globální správce nebo správce služby Intune. Pokud jste vytvořili zkušební předplatné Intune, účet, z něhož jste toto předplatné vytvořili, je globálním správcem.
 
 ## <a name="set-up-slack-for-emm-on-ios-devices"></a>Nastavení časové rezervy pro modul EMM na zařízeních s iOS
-Přidejte do tenanta Intune časovou rezervu aplikace pro systém iOS pro modul EMM a vytvořte zásadu konfigurace aplikace, která umožní uživatelům iOS vaší organizace povolit přístup k časové rezervě v Intune jako poskytovatel EMM.
+Přidejte pro modul EMM do svého tenanta Intune časovou rezervu aplikace pro iOS/iPadOS a vytvořte zásadu konfigurace aplikace, která umožní vašim organizacím uživatelům iOS/iPadOS povolit přístup k časové rezervě v Intune jako poskytovatel EMM.
 
 ### <a name="add-slack-for-emm-to-intune"></a>Přidání časové rezervy pro modul EMM do Intune
-Přidejte časovou rezervu pro modul EMM jako spravovanou aplikaci pro iOS v Intune a přiřaďte uživatele časové rezervy. Aplikace jsou specifické pro platformu, takže potřebujete přidat samostatnou aplikaci Intune pro uživatele časové rezervy na zařízeních s Androidem.
+Přidejte do Intune časovou rezervu pro modul EMM jako spravovanou aplikaci pro iOS/iPadOS a přiřaďte uživatele časové rezervy. Aplikace jsou specifické pro platformu, takže potřebujete přidat samostatnou aplikaci Intune pro uživatele časové rezervy na zařízeních s Androidem.
 1. V centru pro správu vyberte **aplikace** > **všechny aplikace** > **Přidat**.
 2. V části **Typ aplikace**vyberte aplikace pro **iOS** Store.
 3. Vyberte **Hledat v App Storu**. Zadejte hledaný termín "časová rezerva pro modul EMM" a vyberte aplikaci. V podokně Hledat v **App Storu** klikněte na **Vybrat** .
@@ -84,7 +84,7 @@ Přidejte zásady konfigurace aplikace pro tuto časovou rezervu pro modul EMM i
 12. Klikněte na **Uložit**.
 
 ### <a name="optional-create-an-ios-device-compliance-policy"></a>Volitelné Vytvoření zásady dodržování předpisů pro zařízení s iOS
-Nastavte zásadu dodržování předpisů zařízením s iOSem v Intune a nastavte podmínky, které zařízení musí splnit, než bude považováno za vyhovující. Pro účely tohoto kurzu vytvoříme zásadu dodržování předpisů pro zařízení s iOSem. Zásady dodržování předpisů jsou specifické pro konkrétní platformu, takže musíte vytvořit samostatnou zásadu pro uživatele časové rezervy na zařízeních s Androidem.
+Nastavte zásadu dodržování předpisů zařízením s iOSem v Intune a nastavte podmínky, které zařízení musí splnit, než bude považováno za vyhovující. Pro tento kurz vytvoříme zásadu dodržování předpisů pro zařízení s iOS/iPadOS. Zásady dodržování předpisů jsou specifické pro konkrétní platformu, takže musíte vytvořit samostatnou zásadu pro uživatele časové rezervy na zařízeních s Androidem.
 1. V centru pro správu vyberte **zásady** > **dodržování předpisů zařízením** > **vytvořit zásadu**.
 2. Do název zadejte "test zásad dodržování předpisů pro iOS".
 3. V části Popis zadejte "test zásad dodržování předpisů pro iOS".
@@ -105,7 +105,7 @@ Nastavte zásadu dodržování předpisů zařízením s iOSem v Intune a nastav
 Přidejte do svého tenanta Intune spravovanou aplikaci Google Playovou časovou rezervu a vytvořte zásadu konfigurace aplikace, která uživatelům s Androidem umožní přístup k časové rezervě v Intune jako poskytovatel EMM.
 
 ### <a name="add-slack-to-intune"></a>Přidání časové rezervy do Intune
-Přidejte časovou rezervu jako spravovanou aplikaci Google Play do Intune a přiřaďte uživatele časové rezervy. Aplikace jsou specifické pro platformu, takže potřebujete přidat samostatnou aplikaci Intune pro uživatele časové rezervy na zařízeních s iOS.
+Přidejte časovou rezervu jako spravovanou aplikaci Google Play do Intune a přiřaďte uživatele časové rezervy. Aplikace jsou specifické pro platformu, takže potřebujete přidat samostatnou aplikaci Intune pro uživatele časové rezervy na zařízeních s iOS/iPadOS.
 1. V Intune vyberte **aplikace** > **všechny aplikace** > **Přidat**.
 2. V části Typ aplikace vyberte **Store app – spravovaná Google Play**.
 3. Vyberte **spravované Google Play-schvalovat**. Zadejte hledaný termín "časová rezerva pro modul EMM" a vyberte aplikaci.
@@ -120,7 +120,7 @@ Přidejte časovou rezervu jako spravovanou aplikaci Google Play do Intune a př
 10. Klikněte na **Uložit**.
 
 ### <a name="add-an-app-configuration-policy-for-slack"></a>Přidání zásad konfigurace aplikace pro časovou rezervu
-Přidejte zásady konfigurace aplikace pro časovou rezervu. Zásady konfigurace aplikací pro spravovaná zařízení jsou specifické pro konkrétní platformu, takže musíte přidat samostatnou zásadu pro uživatele časové rezervy na zařízeních s iOS.
+Přidejte zásady konfigurace aplikace pro časovou rezervu. Zásady konfigurace aplikací pro spravovaná zařízení jsou specifické pro konkrétní platformu, takže musíte přidat samostatnou zásadu pro uživatele časové rezervy na zařízeních s iOS/iPadOS.
 1. V Intune vyberte **aplikace** > **zásady konfigurace aplikací** > **Přidat**.
 2. Do název zadejte Test zásad konfigurace aplikace pro časovou rezervu.
 3. V části typ registrace zařízení vyberte **spravovaná zařízení**.
@@ -136,7 +136,7 @@ Přidejte zásady konfigurace aplikace pro časovou rezervu. Zásady konfigurace
 12. Klikněte na **Uložit**.
 
 ### <a name="optional-create-an-android-device-compliance-policy"></a>Volitelné Vytvoření zásad dodržování předpisů pro zařízení s Androidem
-Nastavte zásadu dodržování předpisů zařízením s iOSem v Intune a nastavte podmínky, které zařízení musí splnit, než bude považováno za vyhovující. Pro tento kurz vytvoříme zásady dodržování předpisů pro zařízení s Androidem. Zásady dodržování předpisů jsou specifické pro konkrétní platformu, takže musíte vytvořit samostatnou zásadu pro uživatele časové rezervy na zařízeních s iOS.
+Nastavte zásadu dodržování předpisů zařízením s iOSem v Intune a nastavte podmínky, které zařízení musí splnit, než bude považováno za vyhovující. Pro tento kurz vytvoříme zásady dodržování předpisů pro zařízení s Androidem. Zásady dodržování předpisů jsou specifické pro konkrétní platformu, takže potřebujete vytvořit samostatnou zásadu pro uživatele časové rezervy na zařízeních s iOS/iPadOS.
 1. V Intune vyberte **Dodržování předpisů zařízením** > **Zásady** > **Vytvořit zásadu**.
 2. Do název zadejte "test zásad dodržování předpisů pro Android".
 3. V části Popis zadejte "test zásad dodržování předpisů pro Android".
@@ -155,13 +155,13 @@ Nastavte zásadu dodržování předpisů zařízením s iOSem v Intune a nastav
 
 ## <a name="launch-slack"></a>Časová rezerva spuštění
 
-Díky zásadám, které jste právě vytvořili, se všechna zařízení pracovních profilů s iOS nebo Androidem, která se pokusí přihlásit k některému z vašich pracovních prostorů, musí být zaregistrovaná v Intune. K otestování tohoto scénáře zkuste spustit časovou rezervu pro modul EMM na zařízení s iOS zaregistrovaným v Intune nebo zapněte časovou rezervu na zaregistrovaném zařízení pracovního profilu Androidu v Intune. 
+Díky zásadám, které jste právě vytvořili, se všechna zařízení pracovních profilů s iOS/iPadOS nebo Androidem, která se pokusí přihlásit k některému z vašich pracovních prostorů, musí být zaregistrovaná v Intune. K otestování tohoto scénáře zkuste spustit časovou rezervu pro modul EMM na zařízení se systémem iOS/iPadOS zaregistrovaným v Intune nebo na základě časové rezervy na zaregistrovaném zařízení pracovního profilu Androidu Intune. 
 
 ## <a name="next-steps"></a>Další kroky
 
 V tomto kurzu:
 - Intune nastavíte jako poskytovatele služby Enterprise mobility (EMM) v podnikové mřížce s časovou rezervou. 
-- Vytvořili jste zásady konfigurace aplikací pro správu časové rezervy pro aplikaci EMM v iOS a aplikaci časové rezervy pro zařízení s pracovním profilem Androidu.
-- Vytvořili jste zásady dodržování předpisů pro zařízení v Intune, abyste nastavili požadavky na zařízení s Androidem a iOS, aby se dalo považovat za vyhovující.
+- Zásady konfigurace aplikací jste vytvořili pro správu časové rezervy aplikace EMM na zařízeních iOS/iPadOS a v aplikaci časové rezervy pro zařízení s pracovním profilem Androidu.
+- Vytvořili jste zásady dodržování předpisů pro zařízení v Intune, abyste mohli nastavit podmínky, které musí zařízení s Androidem a iOS/iPadOS splňovat.
 
 Další informace o zásadách konfigurace aplikací najdete v tématu [zásady konfigurace aplikací pro Microsoft Intune](app-configuration-policies-overview.md). Další informace o zásadách dodržování předpisů pro zařízení najdete v tématu [Nastavení pravidel na zařízeních pro povolení přístupu k prostředkům ve vaší organizaci pomocí Intune](../protect/device-compliance-get-started.md).

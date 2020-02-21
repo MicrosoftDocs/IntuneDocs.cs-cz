@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/12/2018
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2bee04eabb7036d9a28ac628175b27f763d0ccb
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 47be57dece7867109565622ec2a1380e9a9d57d7
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207056"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512496"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Nastavení zařízení s Windows 10 a Windows holografické pro přidání připojení k síti VPN pomocí Intune
 
@@ -121,7 +121,7 @@ Další informace o vytváření vlastních dat XML protokolu EAP najdete v tém
 
 - **Pravidla síťových přenosů pro toto připojení k síti VPN**: vyberte protokoly a rozsahy místních a vzdálených portů a adres, které budou povolené pro připojení VPN. Když nevytvoříte pravidlo pro provoz sítě, budou povolené všechny protokoly, porty a rozsahy adres. Po vytvoření pravidla se pro připojení VPN použijí jenom protokoly, porty a rozsahy adres, které určíte v tomto pravidle.
 
-## <a name="conditional-access"></a>Conditional Access
+## <a name="conditional-access"></a>Podmíněný přístup
 
 - **Podmíněný přístup pro toto připojení k síti VPN**: umožňuje tok dodržování předpisů zařízením od klienta. Když je tato funkce povolená, komunikuje klient sítě VPN se službou Azure Active Directory (AD), aby získal certifikát pro účely ověření. U sítě VPN by mělo být nastavené ověřování certifikátem a server VPN musí důvěřovat serveru, který mu vrátí služba Azure AD.
 
@@ -143,7 +143,7 @@ Další informace o vytváření vlastních dat XML protokolu EAP najdete v tém
 
   ![Výběr tří teček a kliknutí a přetažení za účelem přesunutí přípony DNS](./media/vpn-settings-windows-10/vpn-settings-windows10-move-dns-suffix.png)
 
-- **Pravidla pro tabulku zásad překladu IP adres (NRPT)**: pravidla pro překlad adres IP (NRPT) definují, jak DNS překládá názvy při připojení k síti VPN. Po navázání připojení VPN zvolíte, které servery DNS připojení VPN používá.
+- **Pravidla pro tabulku zásad překladu IP adres (NRPT)** : pravidla pro překlad adres IP (NRPT) definují, jak DNS překládá názvy při připojení k síti VPN. Po navázání připojení VPN zvolíte, které servery DNS připojení VPN používá.
 
   Do tabulky můžete přidat pravidla, která zahrnují doménu, server DNS, proxy a další podrobnosti pro překlad domény, kterou zadáte. Připojení VPN používá tato pravidla, když se uživatelé připojí k doménám, které zadáte.
 
@@ -185,4 +185,4 @@ Pokud je například uživatel již připojen k důvěryhodné příponě DNS, n
 
 Profil je vytvořený, ale zatím se nepoužívá. Dále [Přiřaďte profil](device-profile-assign.md)a [sledujte jeho stav](device-profile-monitor.md).
 
-Nakonfigurujte nastavení sítě VPN pro zařízení s [Androidem](vpn-settings-android.md), [iOS](vpn-settings-ios.md)a [MacOS](vpn-settings-macos.md) .
+Nakonfigurujte nastavení sítě VPN pro zařízení s [Androidem](vpn-settings-android.md), [iOS/iPadOS](vpn-settings-ios.md)a [MacOS](vpn-settings-macos.md) .

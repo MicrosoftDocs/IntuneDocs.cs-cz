@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7214c4d262c332933e88af2cc158870bd844c5d
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: f5d5d62e1e05c8e29de1b5dba91647f2bfc3b186
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415457"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513329"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Řešení potíží se správou mobilních aplikací
 
@@ -34,15 +34,15 @@ Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získ
 
 Jedná se o běžné problémy, ke kterým může při používání zásad ochrany aplikací Intune docházet správce IT.
 
-| Problém | Popis | Rozlišení |
+| Problém | Popis | Řešení |
 | -- | -- | -- |
-| Zásady se neuplatňují na Skype pro firmy. | Zásady ochrany aplikací bez registrace zařízení, vytvořené na portálu Azure Portal, se neuplatňují na aplikaci Skype pro firmy na zařízeních s iOSem a Androidem. | Pro Skype pro firmy se musí nastavit moderní ověřování.  Pokud chcete pro Skype nastavit moderní ověřování, řiďte se pokyny v tématu [Povolení tenanta pro moderní ověřování](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx). |
+| Zásady se neuplatňují na Skype pro firmy. | Zásady ochrany aplikací bez registrace zařízení, které jsou v Azure Portal, se nevztahují na aplikaci Skype pro firmy na zařízeních s iOS/iPadOS a Androidem. | Pro Skype pro firmy se musí nastavit moderní ověřování.  Pokud chcete pro Skype nastavit moderní ověřování, řiďte se pokyny v tématu [Povolení tenanta pro moderní ověřování](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx). |
 | Zásady pro aplikace Office se neuplatňují. | Zásady ochrany aplikací se neuplatňují na žádné [podporované aplikace Office](https://www.microsoft.com/cloud-platform/microsoft-intune-partners) u žádného uživatele. | Zkontrolujte, jestli má uživatel licenci pro Intune a jestli na aplikace Office cílí nasazené zásady ochrany aplikací. Než se nově nasazené zásady ochrany aplikací uplatní, může to trvat až 8 hodin. |
 | Správce nemůže na portálu Azure Portal nakonfigurovat zásady ochrany aplikací. | Uživatel správce IT nemůže v Azure Portal nakonfigurovat zásady ochrany aplikací. | Následující role uživatelů mají přístup k Azure Portal: <ul><li>Globální správce, který můžete nastavit v [centru pro správu Microsoft 365](https://admin.microsoft.com/)</li><li>Vlastník, který můžete nastavit v [Azure Portal](https://portal.azure.com/).</li><li>Přispěvatel, který můžete nastavit v [Azure Portal](https://portal.azure.com/).</li></ul> Nápovědu k nastavení těchto rolí najdete [v tématu řízení správy na základě rolí (RBAC) pomocí Microsoft Intune](../fundamentals/role-based-access-control.md) .|
 |V sestavách zásad ochrany aplikací chybí uživatelské účty. | Sestavy z konzoly správce nezobrazují uživatelské účty, na které se nedávno nasadily zásady ochrany aplikací. | Než se uživatelé nově zacílení pomocí zásad ochrany aplikací zobrazí v sestavách jako cíloví uživatelé, může uplynout až 24 hodin. |
 | Změny zásad se neuplatňují. | Než se změny a aktualizace zásad ochrany aplikací uplatní, může uplynout až 8 hodin. | Koncový uživatel se může z aplikace odhlásit a znovu přihlásit, aby vynutil synchronizaci se službou. |
-| Zásady ochrany aplikace se neuplatňují na program DEP. | Zásady ochrany aplikací se nevztahují na zařízení v programu Apple DEP. | Zkontrolujte, jestli v programu Apple DEP (Device Enrollment Program) používáte přidružení uživatele. Spřažení uživatelů je požadováno u všech aplikací vyžadujících ověření uživatele pod programem DEP. <br><br>Další informace o registraci DEP pro iOS najdete v tématu [Automatická registrace zařízení s iOS pomocí program registrace zařízení společnosti Apple](../enrollment/device-enrollment-program-enroll-ios.md) .|
-| Zásady pro přenos dat v iOSu nefungují. | Možnost **Povolit aplikaci přenášet data do jiných aplikací** a **Povolit aplikaci přijímat data z dalších zásad aplikací** nespravuje přenos dat v iOS/iPadOS úspěšně. | Přečtěte si téma [Správa přenosu dat mezi aplikacemi pro iOS v Microsoft Intune](data-transfer-between-apps-manage-ios.md). |
+| Zásady ochrany aplikace se neuplatňují na program DEP. | Zásady ochrany aplikací se nevztahují na zařízení v programu Apple DEP. | Zkontrolujte, jestli v programu Apple DEP (Device Enrollment Program) používáte přidružení uživatele. Spřažení uživatelů je požadováno u všech aplikací vyžadujících ověření uživatele pod programem DEP. <br><br>Další informace o registraci DEP pro iOS/iPadOS najdete v tématu [Automatická registrace zařízení s iOS/iPadOS pomocí program registrace zařízení společnosti Apple](../enrollment/device-enrollment-program-enroll-ios.md) .|
+| Zásady přenosu dat nefungují s iOS/iPadOS | Možnost **Povolit aplikaci přenášet data do jiných aplikací** a **Povolit aplikaci přijímat data z dalších zásad aplikací** nespravuje přenos dat v iOS/iPadOS úspěšně. | Další informace najdete [v tématu Správa přenosu dat mezi aplikacemi pro iOS/iPadOS v Microsoft Intune](data-transfer-between-apps-manage-ios.md). |
 
 ## <a name="common-end-user-issues"></a>Běžné problémy koncových uživatelů
 
@@ -58,13 +58,13 @@ Běžné problémy koncových uživatelů jsou rozdělené do následujících k
 
 Platforma | Scénář | Vysvětlení |
 ---| --- | --- |
-iOS | Koncový uživatel může pomocí rozšíření pro sdílení v iOSu otevírat pracovní nebo školní data v nespravovaných aplikacích, a to i v případě, že je u zásad pro přenos dat nastavená možnost **Pouze spravované aplikace** nebo **Žádné aplikace**. Nemůže při tom dojít k úniku dat? | Zásady ochrany aplikací pro Intune nemůžou ovládat rozšíření pro sdílení v iOS, když dané zařízení nespravují. Proto **Intune „podniková“ data před jejich sdílením mimo příslušnou aplikaci zašifruje**. Můžete si to ověřit tak, že si zkusíte otevřít podnikový soubor mimo spravovanou aplikaci. Soubor by měl být zašifrovaný a mimo spravovanou aplikaci by ho nemělo být možné otevřít.
+iOS | Koncový uživatel může pomocí rozšíření pro sdílení pro iOS/iPadOS otevírat pracovní nebo školní data v nespravovaných aplikacích, a to i v případě, že se zásady přenosu dat nastavily **jenom na spravované aplikace** nebo **žádné aplikace.** Nemůže při tom dojít k úniku dat? | Zásady ochrany aplikací Intune nemůžou řídit rozšíření sdílené složky iOS/iPadOS bez správy zařízení. Proto **Intune „podniková“ data před jejich sdílením mimo příslušnou aplikaci zašifruje**. Můžete si to ověřit tak, že si zkusíte otevřít podnikový soubor mimo spravovanou aplikaci. Soubor by měl být zašifrovaný a mimo spravovanou aplikaci by ho nemělo být možné otevřít.
 iOS | Proč se koncovým uživatelům **zobrazí výzva k instalaci aplikace Microsoft Authenticator** | To je potřeba v případě, že se používá podmíněný přístup na základě aplikace, přečtěte si téma [vyžadování schválené klientské aplikace](https://docs.microsoft.com/azure/active-directory/conditional-access/app-based-conditional-access).
 Android | Proč je potřeba, aby si koncový uživatel **nainstaloval aplikaci Portál společnosti** i v případě, že používám ochranu aplikací MAM bez registrace zařízení?  | V Androidu je většina funkcí ochrany aplikací integrovaná do aplikace Portál společnosti. **Aplikace Portál společnosti se sice vyžaduje vždycky, ale registrace zařízení se nevyžaduje**. K ochraně aplikací bez registrace stačí, aby měl koncový uživatel na zařízení nainstalovanou aplikaci Portál společnosti.
 iOS/Android | Zásady ochrany aplikací se nepoužívají při použití konceptu e-mailu v aplikaci Outlook. | Vzhledem k tomu, že Outlook podporuje podnikový i osobní kontext, nevynutilo MAM v konceptu e-mailu.
 iOS/Android | Zásady ochrany aplikací se nepoužívají pro nové dokumenty v WXP (Word, Excel, PowerPoint) | Vzhledem k tomu, že WXP podporuje podnikový i osobní kontext, neuplatňuje MAM na nových dokumentech, dokud se neuloží do identifikovaného podnikového umístění, jako je OneDrive.
 iOS/Android | Aplikace, které neumožňují možnost Uložit jako do místního úložiště, když je povolená zásada | Chování aplikace pro toto nastavení řídí vývojář aplikace.
-Android | Android má více omezení než iOS, na kterých můžou nativní aplikace přistupovat k MAM chráněnému obsahu. | Android je otevřená platforma a "nativní" přidružení aplikace může změnit koncový uživatel na potenciálně nebezpečné aplikace. Použijte [výjimky zásad přenosu dat](app-protection-policies-exception.md) pro vyloučení konkrétních aplikací.
+Android | Android má víc omezení než iOS/iPadOS, na čem nativní aplikace můžou přistupovat k MAM chráněnému obsahu. | Android je otevřená platforma a "nativní" přidružení aplikace může změnit koncový uživatel na potenciálně nebezpečné aplikace. Použijte [výjimky zásad přenosu dat](app-protection-policies-exception.md) pro vyloučení konkrétních aplikací.
 Android | Azure Information Protection (AIP) se může uložit jako PDF, pokud je zabráněno možnost Uložit jako. | AIP respektuje zásadu MAM pro možnost zakázat tisk při použití příkazu Uložit jako PDF.
 iOS | Otevírání příloh PDF v aplikaci Outlook se nepovede a akce není povolená. | Tato situace může nastat, pokud se uživatel neověřil do aplikace Acrobat Reader pro Intune nebo použil k ověření v organizaci kryptografický otisk. Otevřete si aplikaci Acrobat Reader předem a proveďte ověření pomocí přihlašovacích údajů UPN.
 
@@ -82,7 +82,7 @@ Android | **Vyžaduje se aplikace Portál společnosti**: Pokud chcete s touto a
 
 ### <a name="error-messages-and-dialogs-on-ios"></a>Chybové zprávy a dialogy v iOS
 
-Chybová zpráva nebo dialog | Příčina | Náprava |
+Chybová zpráva nebo dialog | Příčina | Odstranění rizika |
 -- | --- | --- |
 **Nenastavena aplikace**: Tato aplikace zatím není nastavená tak, abyste ji mohli používat. O pomoc požádejte správce IT. | Nepovedlo se zjistit požadované zásady ochrany aplikací pro aplikaci. |Zkontrolujte, jestli jsou ve skupině zabezpečení uživatele nasazené zásady ochrany aplikací iOS a cílí na tuto aplikaci.
 **Vítá vás Intune Managed Browser**: Tato aplikace funguje nejlépe, když je spravována službou Microsoft Intune. Aplikaci můžete kdykoli použít k procházení webu, a pokud k její správě použijete Microsoft Intune, získáte přístup k dalším funkcím ochrany dat. | Nepovedlo se zjistit požadované zásady ochrany aplikací pro Intune Managed Browser aplikaci. <br><br>Uživatel může aplikaci stále používat k procházení webu, ale aplikaci nespravuje Intune. | Zkontrolujte, jestli jsou ve skupině zabezpečení uživetele nasazené zásady ochrany aplikací pro iOS a cílí na aplikaci Intune Managed Browser.
@@ -98,7 +98,7 @@ Chybová zpráva nebo dialog | Příčina | Náprava |
 
 ### <a name="error-messages-and-dialogs-on-android"></a>Chybové zprávy a dialogy v Androidu
 
-Dialog / chybová zpráva | Příčina | Náprava |
+Dialog / chybová zpráva | Příčina | Odstranění rizika |
 -- | --- | --- |
 **Nenastavena aplikace**: Tato aplikace zatím není nastavená tak, abyste ji mohli používat. O pomoc požádejte správce IT. | Nepovedlo se zjistit požadované zásady ochrany aplikací pro aplikaci. |Zkontrolujte, jestli jsou ve skupině zabezpečení uživatele nasazené zásady ochrany aplikací pro Android a jestli cílí na tuto aplikaci.
 **Aplikaci se nepodařilo spustit**: Při spouštění vaší aplikace se objevil problém. Zkuste aplikaci (nebo aplikaci Portál společnosti Intune) aktualizovat. Pokud potřebujete pomoc, obraťte se na správce IT. | Intune zjistil platné zásady ochrany aplikací pro aplikaci, ale aplikace selhává během inicializace MAM. | Zkontrolujte, jestli je verze aplikace aktuální. <br><br> Zkontrolujte, jestli je na zařízení nainstalovaná aktuální aplikace Portál společnosti Intune a jestli je aktuální. <br><br> Pokud chyba přetrvává, použijte aplikaci Portál společnosti k odeslání protokolů do Intune nebo vytvoření [lístku podpory](../fundamentals/get-support.md#create-an-online-support-ticket).

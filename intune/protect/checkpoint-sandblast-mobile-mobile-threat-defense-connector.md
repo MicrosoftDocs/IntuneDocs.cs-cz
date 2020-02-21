@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c4cffafd4145ab536157ea55c732ac27bec29538
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 1b740ed1e16f60b15991f1aa450e623cd20b62ea
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73801613"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515131"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Konektor Check Point SandBlast Mobile Threat Defense s Intune
 
@@ -33,7 +33,7 @@ Zásady podmíněného přístupu můžete nakonfigurovat na základě služby C
 
 ## <a name="how-do-intune-and-check-point-sandblast-mobile-help-protect-your-company-resources"></a>Jak pomáhají služby Intune a Check Point SandBlast Mobile chránit prostředky společnosti?
 
-Aplikace Check Point Sandblast Mobile pro Android a iOS zaznamenává telemetrii systému souborů, zásobníku sítě, zařízení a aplikací tam, kde je k dispozici, a posílá ji do cloudové služby Check Point SandBlast, kde se posoudí ohrožení zařízení mobilními hrozbami.
+Služba Check Point Sandblast Mobile App pro Android a iOS/iPadOS zachycuje systém souborů, zásobník sítě, telemetrii zařízení a aplikací tam, kde je k dispozici, a pošle data telemetrie do cloudové služby Check Point SandBlast, aby zhodnotila riziko zařízení pro mobilní hrozby.
 
 Zásady dodržování předpisů zařízení služby Intune zahrnují pravidlo pro ochranu před mobilními hrozbami Check Point SandBlast, která je založená na posouzení rizika službou Check Point SandBlast. Když je toto pravidlo aktivní, Intune vyhodnocuje soulad zařízení se zásadami, které jste povolili. Pokud se zjistí, že zařízení nesplňuje dané předpisy, zablokuje se přístup uživatelů k podnikovým prostředkům, jako jsou Exchange Online a SharePoint Online. Uživatelé dostanou také pokyny z mobilní aplikace Check Point SandBlast nainstalované na jejich zařízeních, jak problém vyřešit a jak opět získat přístup k firemním prostředkům.
 

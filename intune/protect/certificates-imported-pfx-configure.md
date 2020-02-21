@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/10/2020
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4db1a1a74c1a19f310aba0f1c10ed5d01869073f
-ms.sourcegitcommit: 576b9528629981e87e775fac146932e502f07a74
+ms.openlocfilehash: 0b615adf6435ecafb0dd6ca31be9ae96e4b98dde
+ms.sourcegitcommit: 67f926ba83f8a955e16b741a610ad84d6044f8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77258126"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77529307"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurace a používání importovaných certifikátů PKCS pomocí Intune
 
@@ -49,6 +49,8 @@ K používání importovaných certifikátů PKCS s Intune budete potřebovat n�
 - **Windows Server**:
 
   K hostování konektoru certifikátů PFX pro Microsoft Intune používáte Windows Server.  Konektor slouží ke zpracování požadavků na certifikáty importované do Intune.
+  
+  Konektor vyžaduje přístup ke stejným portům, které jsou podrobné pro spravovaná zařízení, jak se nachází v [obsahu koncového bodu zařízení](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices).
 
   Intune podporuje instalaci *Microsoft Intune Certificate Connector* na stejném serveru jako *konektor certifikátu PFX pro Microsoft Intune*.
 

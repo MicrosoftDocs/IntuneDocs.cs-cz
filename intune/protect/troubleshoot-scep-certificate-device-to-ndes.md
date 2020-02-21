@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c81fa9b521b0d950fb69c29f7625981e709863d
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
+ms.openlocfilehash: 7945f1df3ddf1a6ff2c42a537e1071d1b5acff24
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76913267"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514264"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Řešení potíží s komunikací serveru NDES pro profily certifikátů SCEP v Microsoft Intune
 
@@ -89,7 +89,7 @@ fe80::f53d:89b8:c3e8:5fec%13 GET /certsrv/mscep/mscep.dll operation=GetCACaps&me
 fe80::f53d:89b8:c3e8:5fec%13 Dalvik/2.1.0+(Linux;+U;+Android+5.0;+P01M+Build/LRX21V) - 200 0 0 421 
 ```
 
-### <a name="ios-and-ipados-devices"></a>zařízení s iOS a iPadOS
+### <a name="iosipados-devices"></a>zařízení s iOS/iPadOS
 
 Zkontrolujte [protokol ladění zařízení](troubleshoot-scep-certificate-profiles.md#logs-for-ios-and-ipados-devices). Vyhledat položky, které se podobají následujícímu protokolu, které jsou protokolovány při připojení zařízení k NDES:
 
@@ -293,7 +293,7 @@ Máte nakonfigurovanou službu Azure Proxy aplikací služby AD. Když přejdete
 
 Když přejdete na adresu URL serveru SCEP, zobrazí se následující chyba:
 
-![500 – interní chyba serveru](../protect/media/troubleshoot-scep-certificate-device-to-ndes/500-internal-server-error.png)
+![500 – Vnitřní chyba serveru](../protect/media/troubleshoot-scep-certificate-device-to-ndes/500-internal-server-error.png)
 
 - **Příčina 1**: účet služby NDES je zamčený nebo jeho heslo vypršelo.
 
@@ -337,7 +337,7 @@ Když přejdete na adresu URL serveru SCEP, zobrazí se následující chyba:
 
       Vyberte kartu **privátní klíč** , vyberte možnost **Označit privátní klíč jako exportovatelný**a pak klikněte na **OK**.
 
-      ![privátní klíč](../protect/media/troubleshoot-scep-certificate-device-to-ndes/private-key.png)
+      ![Privátní klíč](../protect/media/troubleshoot-scep-certificate-device-to-ndes/private-key.png)
 
   12. Dokončete zápis certifikátu.
 

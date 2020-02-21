@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e565f40aac2a2b97f547a5b68a70a887d9e820ae
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: d90e3757ced90bea21e4033b6baa93bfa201b1f2
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207464"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514213"
 ---
 # <a name="integrate-wandera-mobile-threat-protection-with-intune"></a>Integrace ochrany před mobilními hrozbami Wandera pomocí Intune  
 
@@ -91,7 +91,7 @@ Tento postup vás provede následujícími oddíly a postupy.
 Další informace o tomto procesu z Wandera se přihlaste k Wandera [paprsku](https://radar.wandera.com/login). V části **nastavení** > **Integrace modulu EMM**vyberte kartu **nabízení aplikace** a pak vyberte **Microsoft Intune**. Karta nabízených oznámení aplikací se aktualizuje pomocí pokynů, které jsou specifické pro Intune.  
 
 ### <a name="add-the-wandera-apps"></a>Přidání aplikací Wandera  
-Vytvořte klientské aplikace v Intune, abyste mohli nasadit aplikaci Wandera na zařízení s Androidem a iOS. Další informace najdete v tématu [Přidání aplikací MTD](mtd-apps-ios-app-configuration-policy-add-assign.md) pro postupy a vlastní podrobnosti specifické pro aplikace Wandera.  
+Vytvořte klientské aplikace v Intune, abyste mohli nasadit aplikaci Wandera na zařízení s Androidem a iOS/iPadOS. Další informace najdete v tématu [Přidání aplikací MTD](mtd-apps-ios-app-configuration-policy-add-assign.md) pro postupy a vlastní podrobnosti specifické pro aplikace Wandera.  
 
 Po vytvoření aplikací se sem vraťte, abyste vytvořili skupinu synchronizace a přiřadíte aplikace.
 
@@ -105,14 +105,14 @@ Po vytvoření aplikací se sem vraťte, abyste vytvořili skupinu synchronizace
 
    ![Konfigurovat skupinu synchronizace](./media/wandera-mtd-connector-integration/configure-sync-group.png)
 
-3. Vyberte **členy** a přiřaďte skupiny, které zahrnují zařízení s Androidem a iOS, která chcete používat s Wandera.
+3. Vyberte **členy** a přiřaďte skupiny, které zahrnují zařízení s Androidem a iOS/iPadOS, která chcete používat s Wandera.
 
 4. Vyberte **vytvořit** a uložte skupinu.
 
 Další informace najdete v tématu [nasazení aplikací](../apps/apps-deploy.md) .
 
 ### <a name="assign-the-wandera-apps-to-the-synchronization-group"></a>Přiřaďte aplikace Wandera ke skupině synchronizace.  
-Pro aplikaci Wandera, kterou jste vytvořili pro iOS a Android, opakujte následující postup.
+Pro aplikaci Wandera, kterou jste vytvořili pro iOS/iPadOS a pro Android, opakujte následující postup.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **aplikace** > **všechny aplikace** a vyberte aplikaci Wandera.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b67e3b14fd94376fb6dacad88fa58ddc460a6bc5
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: f056f665ebee0d1e2315129a4fe739b2c490ca98
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73057585"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514842"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Integrace ochrany před mobilními hrozbami do Intune
 
@@ -50,7 +50,7 @@ Pokud je tato možnost povolená, shromažďuje Intune informace o inventáři a
 Tato služba vyžaduje výslovný souhlas; žádné informace inventáře aplikací se ve výchozím nastavení nesdílí. Správce Intune musí povolit **synchronizaci aplikací pro zařízení s iOS** v nastavení konektoru ochrany před mobilními hrozbami předtím, než se nasdílí všechny informace o inventáři aplikace.
 
 **Inventář aplikací**  
-Pokud synchronizaci aplikací pro zařízení s iOSem povolíte, inventáře ze zařízení s iOSem v osobním i firemním vlastnictví se budou odesílat zprostředkovateli služby ochrany před mobilními hrozbami. Data v inventáři aplikací zahrnují tyto údaje:
+Pokud povolíte synchronizaci aplikací pro zařízení se systémem iOS/iPadOS, budou se k poskytovateli služeb MTD posílat inventáře z podnikových i osobních zařízení se systémem iOS/iPadOS. Data v inventáři aplikací zahrnují tyto údaje:
 
 - ID aplikace
 - Verze aplikace

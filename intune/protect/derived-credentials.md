@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9e8bc347dc6336f665fcabfb4e716fef4818515
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 91442d262adb1d85217cb73f2f415766b89267af
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207195"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77510516"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Použití odvozených přihlašovacích údajů v Microsoft Intune
 
@@ -37,7 +37,7 @@ Odvozené přihlašovací údaje jsou implementací pokynů National Institute o
 
 - Správce Intune Určuje **odvozená pověření** jako *metodu ověřování* pro následující objekty:
 
-  - Běžné typy profilů, jako jsou Wi-Fi, VPN a e-maily, včetně aplikace iOS Native mail
+  - Běžné typy profilů, jako jsou Wi-Fi, VPN a e-maily, včetně aplikace pro iOS/iPadOS Native mail
 
   - Ověřování aplikací
 
@@ -47,7 +47,7 @@ Odvozené přihlašovací údaje jsou implementací pokynů National Institute o
 
 - Jakmile zařízení obdrží odvozená pověření, použije se k ověřování a podepisování a šifrování S/MIME, když aplikace nebo profily přístupu k prostředkům vyžadují odvozená pověření. 
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 Než nakonfigurujete svého tenanta na použití odvozených přihlašovacích údajů, přečtěte si následující informace.
 
@@ -76,7 +76,7 @@ Důležité informace o používání různých vystavitelů najdete v pokynech 
 
 Naplánujte nasazení aplikace Portál společnosti Intune do zařízení, která se zaregistrují pro odvozená pověření. Uživatelé zařízení používají aplikaci Portál společnosti k zahájení procesu registrace přihlašovacích údajů.
 
-Informace pro zařízení s iOS najdete v tématu [Přidání aplikací z obchodu pro iOS do Microsoft Intune](../apps/store-apps-ios.md).
+Informace o zařízeních s iOS/iPadOS najdete v tématu [Přidání aplikací ze Storu pro iOS/iPadOS do Microsoft Intune](../apps/store-apps-ios.md).
 
 ## <a name="plan-for-derived-credentials"></a>Plánování odvozených přihlašovacích údajů
 
@@ -198,14 +198,14 @@ Kromě nasazení aplikace v Intune nakonfigurujte síť VPN Intune na aplikaci p
 **Proveďte následující úlohy**:
   
 1. Stáhněte si [aplikaci DISA purebred](https://cyber.mil/pki-pke/purebred/).
-2. Nasaďte aplikaci DISA purebred v Intune.  Přečtěte si téma [Přidání obchodní aplikace pro iOS do Microsoft Intune](../apps/lob-apps-ios.md).
+2. Nasaďte aplikaci DISA purebred v Intune.  Přečtěte si téma [Přidání obchodní aplikace pro iOS/iPadOS do Microsoft Intune](../apps/lob-apps-ios.md).
 3. Pro aplikaci DISA purebred [Vytvořte síť VPN pro jednotlivé aplikace](../configuration/vpn-settings-configure.md) .
 
 ## <a name="use-derived-credentials-for-authentication-and-smime-signing-and-encryption"></a>Použití odvozených přihlašovacích údajů pro ověřování a podepisování a šifrování S/MIME
 
 Můžete zadat **odvozená pověření** pro následující typy profilů a účely:
 
-- [Vyrovnání](#use-derived-credentials-for-app-authentication)
+- [Aplikace](#use-derived-credentials-for-app-authentication)
 - [E-mail](../configuration/email-settings-ios.md)
 - [VPN](../configuration/vpn-settings-ios.md)
 - [Podepisování a šifrování S/MIME](certificates-s-mime-encryption-sign.md)
@@ -224,7 +224,7 @@ Použijte odvozená pověření pro ověřování pomocí certifikátů u webů 
 2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
 3. Zadejte následující nastavení:
 
-    - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **odvozená pověření pro profil zařízení s iOS**.
+    - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **odvozená pověření pro profil zařízení s iOS/iPadOS**.
     - **Popis:** Zadejte popis, který nastavení stručně charakterizuje, a další důležité podrobnosti.
     - **Platforma**: vyberte **iOS/iPadOS**.
     - **Typ profilu**: vyberte **odvozené přihlašovací údaje**.

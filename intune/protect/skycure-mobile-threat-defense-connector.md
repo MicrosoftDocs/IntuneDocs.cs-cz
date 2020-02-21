@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be8fbb0bd96891eb3af3157deddfc325ebc5f2b9
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 884d7f5d4710b44c302598b3c34e704beace240a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508922"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515267"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Konektor Symantec Endpoint Protection Mobile
 
@@ -41,7 +41,7 @@ Pomocí zásad dodržování předpisů zařízením v Intune můžete povolit p
 
 ## <a name="how-do-intune-and-sep-mobile-help-protect-your-company-resources"></a>Jak Intune a SEP Mobile pomáhají chránit prostředky společnosti?
 
-SEP Mobile pro Android nebo iOS zaznamenává telemetrii systému souborů, zásobníku sítě, zařízení a aplikací tam, kde je k dispozici, a posílá ji do cloudové služby Symantec, kde se posoudí ohrožení zařízení mobilními hrozbami.
+Mobilní aplikace SEP pro Android nebo iOS/iPadOS zaznamenává telemetrii systému souborů, zásobníku sítě, zařízení a aplikací tam, kde je k dispozici, a pošle ji do cloudové služby Symantec a vyhodnotí riziko zařízení pro mobilní hrozby.
 
 Zásady dodržování předpisů, které platí pro zařízení v Intune, zahrnují pravidlo pro SEP Mobile, které je založené na hodnocení rizik službou SEP Mobile. Když je toto pravidlo aktivní, Intune vyhodnocuje soulad zařízení se zásadami, které jste povolili.
 
@@ -121,7 +121,7 @@ K integraci Intune s SEP Mobile musíte dokončit tyto kroky:
 
 - [Nastavení integrace SEP Mobile s Intune](skycure-mtd-connector-integration.md)
 
-- [Přidání a přiřazení aplikací SEP Mobile, Microsoft Authenticatoru a zásad konfigurace aplikace pro iOS](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Přidání a přiřazení mobilních aplikací SEP, Microsoft Authenticator a zásad konfigurace aplikací pro iOS/iPadOS](mtd-apps-ios-app-configuration-policy-add-assign.md)
 
 - [Vytvoření zásad dodržování předpisů pro zařízení s SEP Mobile v Intune](mtd-device-compliance-policy-create.md)
 

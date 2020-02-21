@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c0ca82b434b83937c7962b2676ce3c2a12c1424
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 1f6992aa93e1ca5a095b1e92a16a07bd0eb1c2f5
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74564006"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513629"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Jak z aplikací spravovaných pomocí Intune vymazat jenom firemní data
 
@@ -32,7 +32,7 @@ ms.locfileid: "74564006"
 V případě ztráty nebo odcizení zařízení nebo když zaměstnanec opouští společnost, je vhodné se ujistit, že byla ze zařízení odebraná firemní data. Nemusí ale být vhodné odebrat ze zařízení osobní data, zvlášť jestli je to zařízení, které vlastní zaměstnanec.
 
 >[!NOTE]
-> Platformy iOS, Android a Windows 10 jsou jediné platformy, které jsou aktuálně podporované pro mazání podnikových dat ze spravovaných aplikací Intune. Spravované aplikace Intune jsou aplikace, které obsahují sadu Intune APP SDK a mají licencovaný uživatelský účet pro vaši organizaci. Nasazení zásad ochrany aplikací není nutné k povolení selektivního vymazání aplikace.
+> Platformy iOS/iPadOS, Androidem a Windows 10 jsou jediné platformy, které jsou aktuálně podporované pro mazání podnikových dat ze spravovaných aplikací Intune. Spravované aplikace Intune jsou aplikace, které obsahují sadu Intune APP SDK a mají licencovaný uživatelský účet pro vaši organizaci. Nasazení zásad ochrany aplikací není nutné k povolení selektivního vymazání aplikace.
 
 Pokud chcete selektivně odebrat data firemních aplikací, vytvořte žádost o vymazání pomocí kroků v tomto tématu. Po dokončení žádosti se při příštím spuštění aplikace na zařízení z aplikace odeberou firemní data. Kromě vytvoření žádosti o vymazání můžete nakonfigurovat selektivní vymazání dat organizace jako novou akci, když nejsou splněny podmínky nastavení přístupu zásad ochrany aplikací. Tato funkce umožňuje automaticky chránit a odebírat citlivá data organizace z aplikací na základě předem nakonfigurovaných kritérií.
 
@@ -86,7 +86,7 @@ Vymazání v čekajícím stavu se zobrazují, dokud je ručně neodstraníte. R
 
 3. Zobrazí se výzva k potvrzení odstranění. Zvolte **Ano** nebo **Ne** a klikněte na **OK**.
 
-## <a name="see-also"></a>Související témata
+## <a name="see-also"></a>Viz také
 [Zásady ochrany aplikací](app-protection-policy.md)
 
 [Co je správa aplikací?](app-management.md)

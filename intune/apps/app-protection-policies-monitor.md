@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 899e2d2dc8458d0909f01e9dfcc1056874ef0fa7
-ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
+ms.openlocfilehash: 317f39b28909196d03ef5e7c68c7980f5fdfea3f
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77437966"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512207"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Jak monitorovat zásady ochrany aplikací
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -48,7 +48,7 @@ Doba uchování dat ochrany aplikací je 90 dní. Všechny instance aplikace, kt
    ![Snímek obrazovky s dlaždicí souhrnu v podokně Správa mobilních aplikací Intune](./media/app-protection-policies-monitor/app-protection-user-status-summary.png)
 
 - **Přiřazení uživatelé**: celkový počet přiřazených uživatelů ve vaší společnosti, kteří používají aplikaci přidruženou k zásadě v pracovním kontextu a jsou chráněni a licencováni, a také přiřazení nechráněných uživatelů a jejich nelicencovaných uživatelů.
-- **Uživatelé označení příznakem**: počet uživatelů, u kterých dochází k problémům s jejich zařízeními. Zařízení s jailbreakem (iOS) a rootem (Android) se hlásí v části **Uživatelé označení příznakem**. Uživatelé se zařízeními, která jsou označená kontrolou ověření identity zařízení Google SafetyNet (Pokud je zapnutá správcem IT), jsou také uvedena zde. 
+- **Uživatelé označení příznakem**: počet uživatelů, u kterých dochází k problémům s jejich zařízeními. Zařízení s jailbreakem (iOS/iPadOS) a rootem (Android) se hlásí v části **Uživatelé označení příznakem**. Uživatelé se zařízeními, která jsou označená kontrolou ověření identity zařízení Google SafetyNet (Pokud je zapnutá správcem IT), jsou také uvedena zde. 
 - **Uživatelé s potenciálně škodlivými aplikacemi**: počet uživatelů, kteří můžou mít v zařízení s Androidem zjištěnou škodlivou aplikaci Google Play chránit. 
 - **Stav uživatele pro iOS** a **stav uživatele pro Android**: počet uživatelů, kteří použili aplikaci, která má přiřazenou zásadu v pracovním kontextu pro související platformu. Tyto informace zobrazují počet uživatelů spravovaných zásadou a také počet uživatelů, kteří používají aplikaci, na kterou necílí žádné zásady v pracovním kontextu. Tyto uživatele případně můžete k zásadě přidat.
 - **Nejvyšší chráněné aplikace pro iOS/iPadOS** a **špičkové**aplikace pro Android: založené na nejpoužívanějších aplikacích pro iOS/iPadOS a Android zobrazuje tyto informace počet chráněných a nechráněných aplikací podle platformy.
@@ -61,7 +61,7 @@ Doba uchování dat ochrany aplikací je 90 dní. Všechny instance aplikace, kt
 Podrobné zobrazení souhrnu získáte tak, že vyberete dlaždici uživatelé s **příznakem příznaku** a **Uživatelé s potenciálně škodlivými aplikacemi** .
 
 ### <a name="flagged-users"></a>Uživatelé označení příznakem
-V podrobném přehledu se zobrazí chybová zpráva, otevíraná aplikace v okamžiku chyby, dotčená platforma operačního systému zařízení a časové razítko. Tato chyba je typicky pro zařízení s jailbreakem (iOS) nebo rootem (Android). Uživatelé se zařízeními, která jsou označena příznakem "podmíněné spuštění ověření zařízení SafetyNet", jsou také hlášeny v důsledku ohlášení Google. Aby bylo možné uživatele odebrat ze sestavy, je třeba změnit stav samotného zařízení, které se stane po kontrole další kořenové složky (nebo jailbreaků kontrolu/SafetyNet kontrolu), která musí hlásit pozitivní výsledek. Pokud je zařízení skutečně opraveno, bude při opětovném načtení podokna provedena aktualizace na sestavě uživatelů označených příznakem.
+V podrobném přehledu se zobrazí chybová zpráva, otevíraná aplikace v okamžiku chyby, dotčená platforma operačního systému zařízení a časové razítko. Tato chyba je typicky pro zařízení s jailbreakem (iOS/iPadOS) nebo rootem (Android). Uživatelé se zařízeními, která jsou označena příznakem "podmíněné spuštění ověření zařízení SafetyNet", jsou také hlášeny v důsledku ohlášení Google. Aby bylo možné uživatele odebrat ze sestavy, je třeba změnit stav samotného zařízení, které se stane po kontrole další kořenové složky (nebo jailbreaků kontrolu/SafetyNet kontrolu), která musí hlásit pozitivní výsledek. Pokud je zařízení skutečně opraveno, bude při opětovném načtení podokna provedena aktualizace na sestavě uživatelů označených příznakem.
 
 ### <a name="users-with-potentially-harmful-apps"></a>Uživatelé s potenciálně škodlivými aplikacemi
 Uživatelé se zařízeními, která jsou označená pomocí kontroly podmíněného spuštění **v části vyžadovat kontrolu hrozeb u aplikací** , se zobrazí v kategorii hrozeb, která je hlášena Google. Pokud jsou v sestavě uvedené aplikace, které se nasazují přes Intune, obraťte se na vývojáře aplikace, nebo aplikaci odeberte z přiřazení uživatelům. Podrobné zobrazení ukazuje:
@@ -170,7 +170,7 @@ Pomocí těchto kroků vygenerujte soubor. CSV aplikace App Protection nebo soub
     ![Snímek obrazovky pole pro potvrzení uložení sestavy](./media/app-protection-policies-monitor/app-protection-report-csv-1.png)
    
 > [!NOTE]
-> Intune poskytuje další pole pro vytváření sestav zařízení, včetně ID registrace aplikace, výrobce Androidu, modelu a verze opravy zabezpečení i modelu iOS/iPadOS. V Intune získáte přístup k těmto polím výběrem možnosti **aplikace** > **stav ochrany aplikace** > **Sestava ochrany aplikací: iOS/iPadOS, Android**. Kromě toho tyto parametry pomůžou nakonfigurovat seznam **povolených** pro výrobce zařízení (Android), seznam **povolených** nastavení pro model zařízení (Android a iOS) a **minimální verzi opravy zabezpečení Androidu** .   
+> Intune poskytuje další pole pro vytváření sestav zařízení, včetně ID registrace aplikace, výrobce Androidu, modelu a verze opravy zabezpečení i modelu iOS/iPadOS. V Intune získáte přístup k těmto polím výběrem možnosti **aplikace** > **stav ochrany aplikace** > **Sestava ochrany aplikací: iOS/iPadOS, Android**. Kromě toho tyto parametry pomůžou nakonfigurovat seznam **povolených** pro výrobce zařízení (Android), seznam **povolených** nastavení pro model zařízení (Android a iOS/iPadOS) a **minimální verzi opravy zabezpečení Androidu** .   
  
 ## <a name="see-also"></a>Viz také
 - [Správa přenosu dat mezi aplikacemi pro iOS/iPadOS](data-transfer-between-apps-manage-ios.md)

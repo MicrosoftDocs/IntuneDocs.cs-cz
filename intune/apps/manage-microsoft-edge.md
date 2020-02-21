@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3ae5a7508f27dbf15a58ba3386e744bb63bf102b
-ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
+ms.openlocfilehash: 40a7e1884a7e36bf56038bdafdd15a1556ef46c7
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77125009"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513448"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune
 
@@ -101,7 +101,7 @@ Vytvoření konfigurace aplikace pro Microsoft Edge:
 2. Vyberte **aplikace** > **zásady konfigurace aplikací** > **Přidat**.
 3. V podokně **Přidat zásady konfigurace** zadejte **název** a volitelný **Popis** nastavení konfigurace aplikace.
 4. Jako typ **Registrace zařízení** zvolte **Spravované aplikace**.
-5. Zvolte **vybrat požadovanou aplikaci**. Pak v podokně **cílové aplikace** zvolte **Managed Browser** nebo **Edge** pro iOS, Android nebo pro obojí.
+5. Zvolte **vybrat požadovanou aplikaci**. Pak v podokně **cílové aplikace** zvolte **Managed Browser** nebo **Edge** pro iOS/iPadOS, Android nebo pro obojí.
 6. Kliknutím na **OK** se vraťte do podokna **Přidat zásady konfigurace** .
 7. Klikněte na **Nastavení konfigurace**. V podokně **Konfigurace** definujte páry klíč-hodnota pro zadání konfigurací pro Microsoft Edge. Informace o různých párech klíč a hodnota, které můžete definovat, najdete v dalších částech tohoto článku.
 
@@ -136,7 +136,7 @@ V Androidu:
 - Microsoft Edge se spustí, pokud se na zařízení stáhne jenom Microsoft Edge a je zaměřený na zásady Intune.
 - Managed Browser se spustí, pokud se na zařízení používá jenom Managed Browser a je zaměřený na zásady Intune.
 
-V iOSu u aplikací, které mají integrovanou sadu Intune SDK pro iOS verze 9.0.9+:
+Pro iOS/iPadOS pro aplikace, které mají integrovanou sadu Intune SDK pro iOS v. 9.0.9+:
 - Intune Managed Browser se spustí, pokud se na zařízení nachází Managed Browser a Microsoft Edge.  
 - Microsoft Edge se spustí, pokud je na zařízení jenom Microsoft Edge a je zaměřený na zásady Intune.
 - Managed Browser se spustí, pokud se na zařízení používá jenom Managed Browser a je zaměřený na zásady Intune.
@@ -196,12 +196,12 @@ Pak použijte následující páry klíč/hodnota, které přidělí vaší orga
 
 |    Klíč    |    Hodnota    |
 |--------------------------------------------------------------------|------------|
-|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandLogo    |    True    |
-|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandColor    |    True    |
+|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandLogo    |    True (Pravda)    |
+|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandColor    |    True (Pravda)    |
 
 ## <a name="display-relevant-industry-news-on-new-tab-pages"></a>Zobrazit relevantní novinky v odvětví na nových stránkách karty
 
-V rámci Microsoft Edge Mobile můžete nakonfigurovat nové možnosti stránky s kartami a zobrazit tak novinky v oboru, které jsou relevantní pro vaši organizaci. Když tuto funkci povolíte, Microosft Edge Mobile používá název domény vaší organizace k agregaci zpráv z webu o vaší organizaci, oboru organizace a comeptitors, aby vaši uživatelé mohli najít relevantní externí novinky z centeralized nového. stránky karet v Microsoft Edge Novinky v oboru jsou ve výchozím nastavení vypnuté a můžete je použít k jejímu přihlášení ve vaší organizaci. 
+V rámci Microsoft Edge Mobile můžete nakonfigurovat nové možnosti stránky s kartami a zobrazit tak novinky v oboru, které jsou relevantní pro vaši organizaci. Když tuto funkci povolíte, Microsoft Edge Mobile používá název domény vaší organizace k agregaci zpráv z webu o vaší organizaci, oboru organizace a konkurenci, takže vaši uživatelé můžou najít relevantní externí novinky z centralizovaného nového. stránky karet v Microsoft Edge Novinky v oboru jsou ve výchozím nastavení vypnuté a můžete je použít k jejímu přihlášení ve vaší organizaci. 
 
 |    Klíč    |    Hodnota    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
@@ -252,7 +252,7 @@ K vytvoření seznamu povolených a blokovaných webů můžete použít různé
   - Port 443 pro protokol HTTPS
 - Použití zástupných znaků pro číslo portu **není podporováno.** Například `http://www.contoso.com:*` a `http://www.contoso.com:*/` podporované nejsou. 
 
-    |    URL    |    Podrobnosti    |    Odpovídá    |    Neodpovídá    |
+    |    Adresa URL    |    Podrobnosti    |    Odpovídá    |    Neodpovídá    |
     |-------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
     |    `http://www.contoso.com`    |    Odpovídá jediné stránce    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Odpovídá jediné stránce    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
@@ -293,7 +293,7 @@ Můžete nakonfigurovat, jestli mají být odkazy s omezeným přístupem otevř
 
 |    Klíč    |    Hodnota    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **True** umožňuje, aby Microsoft Edge přešl uživatele do svého osobního kontextu a otevřel Blokované weby.<p>**Blok** zabraňuje uživatelům, kteří přecházejí z přechodu na Microsoft Edge. Uživatelům se zobrazí zpráva s informacemi o tom, že lokalita, ke které se pokouší získat přístup, je blokovaná.    |
+|    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlock`    |    **Hodnota true** automaticky otevře weby přímo na kartě InPrivate bez vyzvání uživatele, aby provedl přepnutí na svůj osobní účet. <p> **Hodnota false** (výchozí) zablokuje web v rámci Microsoft Edge a uživatel se zobrazí výzva k přepnutí na svůj osobní účet k zobrazení.    |
 
 ## <a name="disable-microsoft-edge-prompt-to-save-passwords"></a>Vypnutí výzvy Microsoft Edge k uložení hesel
 

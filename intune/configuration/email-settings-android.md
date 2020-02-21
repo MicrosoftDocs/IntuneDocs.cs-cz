@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/15/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43a2b00ae824656621c8a586e41ba6425c69ed40
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 0a1bc53e0f05818b28bbd975e0de5cf5c9368afb
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506768"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512853"
 ---
 # <a name="android-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Nastavení zařízení s Androidem pro konfiguraci e-mailu, ověřování a synchronizace v Intune
 
@@ -32,7 +32,7 @@ Další informace o e-mailových profilech v Intune najdete v tématu [Konfigura
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořit profil konfigurace zařízení](email-settings-configure.md#create-a-device-profile).
+[Vytvořte profil konfigurace zařízení](email-settings-configure.md#create-a-device-profile).
 
 ## <a name="android-samsung-knox"></a>Android (Samsung Knox)
 
@@ -61,7 +61,7 @@ Další informace o e-mailových profilech v Intune najdete v tématu [Konfigura
 
 ### <a name="security-settings"></a>Nastavení zabezpečení
 
-- **SSL**: Při posílání a přijímání e-mailů a komunikaci se serverem Exchange se použije komunikace přes protokol SSL (Secure Sockets Layer).
+- **SSL**: Při posílání a přijímání e-mailů a komunikaci se serverem Exchange se použije komunikace SSL (Secure Sockets Layer).
 - **S/MIME**: Odchozí e-maily se budou posílat s využitím šifrování S/MIME.
   - Pokud vyberete **Certifikát**, vyberte profil certifikátu SCEP nebo PKCS klienta, který jste dříve vytvořili za účelem ověřování připojení Exchange.
 
@@ -83,4 +83,4 @@ Další informace o e-mailových profilech v Intune najdete v tématu [Konfigura
 
 [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
 
-Můžete také vytvořit e-mailové profily pro [Android Enterprise – Work Profile](email-settings-android-enterprise.md), [iOS](email-settings-ios.md), [Windows 10 a novější](email-settings-windows-10.md)a [Windows Phone 8,1](email-settings-windows-phone-8-1.md).
+Můžete také vytvořit e-mailové profily pro [Android Enterprise – Work Profile](email-settings-android-enterprise.md), [iOS/iPadOS](email-settings-ios.md), [Windows 10 a novější](email-settings-windows-10.md)a [Windows Phone 8,1](email-settings-windows-phone-8-1.md).

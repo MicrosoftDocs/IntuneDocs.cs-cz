@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7018e2ab4290219c752f44b4b391822438461e8e
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: c130ced8359311751c5ad68ac9789b11329595e0
+ms.sourcegitcommit: 67f926ba83f8a955e16b741a610ad84d6044f8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415092"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77529328"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového ve Microsoft Intune
 
@@ -55,11 +55,21 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-february-17-2020"></a>Týden od 17. února 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Správa aplikací
+
+#### <a name="microsofts-new-office-app---5859926---"></a>Nová aplikace Office v Microsoftu<!-- 5859926 -->
+Nová aplikace Office je teď všeobecně dostupná ke stažení a použití. Aplikace Office je konsolidované prostředí, ve kterém můžou uživatelé pracovat přes Word, Excel a PowerPoint v rámci jedné aplikace. Aplikaci můžete cílit pomocí zásady ochrany aplikací, aby se zajistila ochrana dat, ke kterým se dostanete.
+
+Další informace najdete v tématu [Jak povolit zásady ochrany aplikací Intune v aplikaci Office Mobile Preview](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-how-to-enable-intune-app-protection-policies-with/ba-p/1045493).
+
+<!-- ########################## -->
 ## <a name="week-of-february-10-2020"></a>Týden od 10. února 2020
 
 ### <a name="windows-7-ends-extended-support---3042987--"></a>Windows 7 končí rozšířenou podporou <!--3042987-->
 Systém Windows 7 dosáhl konce rozšířené podpory od 14. ledna 2020. Intune zastaralá podpora pro zařízení s Windows 7 ve stejnou dobu. Technickou pomoc a automatické aktualizace, které vám pomůžou chránit váš počítač, už nejsou dostupné. Měli byste upgradovat na Windows 10. Další informace najdete v [blogovém příspěvku plán změn](https://aka.ms/Windows7_Intune).
-
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Správa aplikací
@@ -487,6 +497,6 @@ Instance Intune, které jsou hostované na *Microsoft Azure Government* , teď m
 ## <a name="whats-new-archive"></a>Archiv co je nového
 V předchozích měsících se podívejte do [archivu co je nového](whats-new-archive.md).
 
-## <a name="notices"></a>Oznámení
+## <a name="notices"></a>Sdělení
 
 [!INCLUDE [Intune notices](../includes/intune-notices.md)]

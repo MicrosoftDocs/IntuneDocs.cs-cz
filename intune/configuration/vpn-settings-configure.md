@@ -1,11 +1,11 @@
 ---
 title: Přidání nastavení sítě VPN do zařízení v Microsoft Intune – Azure | Microsoft Docs
-description: Pro zařízení s Androidem, Androidem Enterprise, iOS, macOS a Windows můžete pomocí integrovaných nastavení vytvořit připojení k virtuální privátní síti (VPN) v Microsoft Intune.
+description: Pro zařízení s Androidem, Androidem Enterprise, iOS, iPadOS, macOS a Windows můžete pomocí integrovaných nastavení vytvořit připojení k virtuální privátní síti (VPN) v Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b11cbd3427b3b8e0a43a6e6e2af5fa80da45e16a
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 134ef9a2a4dfe8a4576c753a001439c42f678adc
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206274"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77510809"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Vytvoření profilů sítě VPN pro připojení k serverům VPN v Intune
 
@@ -28,7 +28,7 @@ ms.locfileid: "75206274"
 
 Virtuální privátní sítě (VPN) poskytují uživatelům zabezpečený vzdálený přístup k síti vaší organizace. Zařízení používají profil připojení VPN ke spuštění připojení se serverem VPN. **Profily sítě VPN** v Microsoft Intune přiřazují uživatelům a zařízením ve vaší organizaci nastavení sítě VPN, aby se mohli snadno a bezpečně připojit k síti vaší organizace.
 
-Chcete například nakonfigurovat všechna zařízení s iOS s požadovaným nastavením pro připojení ke sdílené složce v síti organizace. Vytvoříte profil sítě VPN, který bude obsahovat tato nastavení. Pak tento profil přiřadíte všem uživatelům, kteří mají zařízení s iOS. Uživatelé uvidí připojení VPN v seznamu dostupných sítí a můžou se připojit s minimálním úsilím.
+Chcete například nakonfigurovat všechna zařízení s iOS/iPadOS s požadovaným nastavením pro připojení ke sdílené složce v síti organizace. Vytvoříte profil sítě VPN, který bude obsahovat tato nastavení. Pak tento profil přiřadíte všem uživatelům, kteří mají zařízení se systémem iOS/iPadOS. Uživatelé uvidí připojení VPN v seznamu dostupných sítí a můžou se připojit s minimálním úsilím.
 
 > [!NOTE]
 > [Vlastní zásady konfigurace Intune](custom-settings-configure.md) můžete použít k vytvoření profilů sítě VPN pro následující platformy:
@@ -47,19 +47,19 @@ Profily VPN můžete vytvářet pomocí následujících typů připojení:
 |Typ připojení|Platforma|
 |-|-|
 |Automaticky|Windows 10|
-|Check Point Capsule VPN|– Android<br/>– Android Enterprise Working Profiles<br/>– iOS<br/>– macOS<br/>– Windows 10<br/>-Windows 8.1<br/>-Windows Phone 8,1|
-|Cisco AnyConnect|– Android<br/>– Android Enterprise Working Profiles<br/>– Vlastník zařízení s Androidem Enterprise (plně spravovaný)<br/>– iOS<br/>– macOS|
-|Cisco (IPSec)|iOS|
-|Citrix SSO|– Android<br/>– Android Enterprise Working Profiles: použití [zásad konfigurace aplikací](../apps/app-configuration-policies-use-android.md)<br/>– Vlastník zařízení s Androidem Enterprise (plně spravovaný): použít [zásady konfigurace aplikací](../apps/app-configuration-policies-use-android.md)<br/>– iOS<br/>– Windows 10|
-|Vlastní VPN|– iOS<br/>– macOS|
-|F5 Access|– Android<br/>– Android Enterprise Working Profiles<br/>– Vlastník zařízení s Androidem Enterprise (plně spravovaný)<br/>– iOS<br/>– macOS<br/>– Windows 10<br/>-Windows 8.1<br/>-Windows Phone 8,1|
-|IKEv2| – iOS<br/>– Windows 10|
+|Check Point Capsule VPN|– Android<br/>– Android Enterprise Working Profiles<br/>– iOS/iPadOS<br/>– macOS<br/>– Windows 10<br/>-Windows 8.1<br/>-Windows Phone 8,1|
+|Cisco AnyConnect|– Android<br/>– Android Enterprise Working Profiles<br/>– Vlastník zařízení s Androidem Enterprise (plně spravovaný)<br/>– iOS/iPadOS<br/>– macOS|
+|Cisco (IPSec)|iOS/iPadOS|
+|Citrix SSO|– Android<br/>– Android Enterprise Working Profiles: použití [zásad konfigurace aplikací](../apps/app-configuration-policies-use-android.md)<br/>– Vlastník zařízení s Androidem Enterprise (plně spravovaný): použít [zásady konfigurace aplikací](../apps/app-configuration-policies-use-android.md)<br/>– iOS/iPadOS<br/>– Windows 10|
+|Vlastní VPN|– iOS/iPadOS<br/>– macOS|
+|F5 Access|– Android<br/>– Android Enterprise Working Profiles<br/>– Vlastník zařízení s Androidem Enterprise (plně spravovaný)<br/>– iOS/iPadOS<br/>– macOS<br/>– Windows 10<br/>-Windows 8.1<br/>-Windows Phone 8,1|
+|IKEv2| – iOS/iPadOS<br/>– Windows 10|
 |L2TP|Windows 10|
-|Palo Alto Networks GlobalProtect|– Android Enterprise Working Profiles: použití [zásad konfigurace aplikací](../apps/app-configuration-policies-use-android.md)<br/>– iOS<br/>– Windows 10|
+|Palo Alto Networks GlobalProtect|– Android Enterprise Working Profiles: použití [zásad konfigurace aplikací](../apps/app-configuration-policies-use-android.md)<br/>– iOS/iPadOS<br/>– Windows 10|
 |PPTP|Windows 10|
-|Pulse Secure|– Android<br/>– Android Enterprise Working Profiles<br/>– Vlastník zařízení s Androidem Enterprise (plně spravovaný)<br/>– iOS<br/>– macOS<br/>– Windows 10<br/>-Windows 8.1<br/>-Windows Phone 8,1|
-|SonicWall Mobile Connect|– Android<br/>– Android Enterprise Working Profiles<br/>– iOS<br/>– macOS<br/>– Windows 10<br/>-Windows 8.1<br/>-Windows Phone 8,1|
-|Zscaler|– Android Enterprise Working Profiles: použití [zásad konfigurace aplikací](../apps/app-configuration-policies-use-android.md)<br/>– iOS|
+|Pulse Secure|– Android<br/>– Android Enterprise Working Profiles<br/>– Vlastník zařízení s Androidem Enterprise (plně spravovaný)<br/>– iOS/iPadOS<br/>– macOS<br/>– Windows 10<br/>-Windows 8.1<br/>-Windows Phone 8,1|
+|SonicWall Mobile Connect|– Android<br/>– Android Enterprise Working Profiles<br/>– iOS/iPadOS<br/>– macOS<br/>– Windows 10<br/>-Windows 8.1<br/>-Windows Phone 8,1|
+|Zscaler|– Android Enterprise Working Profiles: použití [zásad konfigurace aplikací](../apps/app-configuration-policies-use-android.md)<br/>– iOS/iPadOS|
 
 > [!IMPORTANT]
 > Před použitím profilů VPN přiřazených nějakému zařízení je nutné nainstalovat příslušnou aplikaci VPN pro profil. S přiřazením aplikace pomocí Intune vám pomůžou informace v článku [Co je správa aplikací v Microsoft Intune](../apps/app-management.md).  
@@ -119,4 +119,4 @@ Uživatel se ověřuje na serveru sítě VPN zadáním uživatelského jména a 
 
 Když je profil vytvořený, není ještě aktivní. Pak [Přiřaďte profil](device-profile-assign.md) k některým zařízením.
 
-V zařízeních s [Androidem](android-pulse-secure-per-app-vpn.md) a [iOS](vpn-setting-configure-per-app.md) taky můžete vytvářet a používat sítě VPN pro jednotlivé aplikace.
+V zařízeních s [Androidem](android-pulse-secure-per-app-vpn.md) a [iOS/iPadOS](vpn-setting-configure-per-app.md) můžete také vytvářet a používat sítě VPN pro jednotlivé aplikace.

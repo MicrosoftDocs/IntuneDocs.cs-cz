@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84d33e0ff6bbe407d9838f97214f37d042a2e261
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 6e00a2d3c245c1297f2ea28ab0184369e7d92980
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77414699"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513941"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
 
@@ -85,27 +85,27 @@ Většinu informací týkajících se aplikací najdete v úloze **aplikace** , 
 
 Následující čtyři části popisují možnosti, které jsou k dispozici v podokně **aplikace** .
 
-### <a name="manage"></a>Spravovat
+### <a name="manage"></a>Správa
 - **Aplikace**: Tuto možnost vyberte pro přidávání, zobrazení, přiřazování a monitorování aplikací používaných vašimi pracovníky. Více informací najdete v následujících tématech:
   - [Přidání aplikací](apps-add.md)
   - [Přiřazení aplikací](apps-deploy.md)
   - [Monitorování aplikací](apps-monitor.md)
 - **Zásady konfigurace aplikací**: Tuto možnost vyberte k poskytování nastavení, která se můžou požadovat, když uživatel spustí aplikaci. Více informací najdete v následujících tématech:
   - [Zásady konfigurace aplikací pro Intune](app-configuration-policies-overview.md)
-    - [Zásady konfigurace aplikací pro iOS](app-configuration-policies-use-ios.md)
+    - [zásady konfigurace aplikací pro iOS/iPadOS](app-configuration-policies-use-ios.md)
     - [Zásady konfigurace aplikací pro Android](app-configuration-policies-use-android.md)
 - **Zásady ochrany aplikací**: Tuto možnost vyberte, pokud chcete aplikaci přidružit nastavení pomáhající chránit firemní data, která tato aplikace používá. Můžete například omezit možnosti komunikace aplikace s jinými aplikacemi nebo vyžadovat, aby uživatel při přístupu k firemní aplikaci zadal PIN kód. Více informací najdete v následujících tématech:
   - [Zásady ochrany aplikací](app-protection-policies.md)
 - **Selektivní vymazání aplikace**: Tuto možnost vyberte, pokud chcete odebrat pouze firemní data z vybraného zařízení uživatele. Více informací najdete v následujících tématech:
   - [Selektivní vymazání aplikace](apps-selective-wipe.md)
 - **zřizovací profily aplikací pro iOS**: aplikace pro iOS/iPadOS obsahují zřizovací profil a kód, který je podepsaný certifikátem. Když tomuto certifikátu vyprší platnost, není možné aplikaci spustit. Intune poskytuje nástroje pro proaktivní přiřazení nových zásad zřizovacího profilu k zařízením s aplikacemi, kterým brzy vyprší platnost. Více informací najdete v následujících tématech:
-  - [Zřizovací profily aplikací pro iOS](app-provisioning-profile-ios.md)
+  - [profily zřizování aplikací pro iOS/iPadOS](app-provisioning-profile-ios.md).
 
 Další informace o této části najdete v tématu [Správa aplikací](app-management.md).
 
 ### <a name="monitor"></a>Monitorování
 - **Licence aplikací**: Tady můžete zobrazit, přiřadit a monitorovat aplikace hromadně zakoupené v obchodech s aplikacemi. Více informací najdete v následujících tématech:
-  - [Aplikace programu hromadných nákupů pro iOS](vpp-apps-ios.md)
+  - [aplikace programu hromadných nákupů pro iOS/iPadOS (VPP)](vpp-apps-ios.md)
   - [Aplikace hromadně zakoupené v Microsoft Storu pro firmy](windows-store-for-business.md)
 - **Zjištěné aplikace:** Můžete zobrazit aplikace přiřazené z Intune nebo nainstalované v zařízení. Další informace najdete v tématu [zjištěné aplikace Intune](app-discovered-apps.md).
 - **Stav instalace aplikace**: Tady můžete zobrazit stav vytvořeného přiřazení aplikace. Další informace najdete v článku [Monitorování informací a přiřazení aplikace pomocí Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
@@ -116,7 +116,7 @@ Další informace o této části najdete v tématu [Monitorování aplikací](a
 
 ### <a name="set-up"></a>Nastavení
 - **tokeny VPP pro iOS**: použijte a zobrazte licence pro iOS/IPadOS Volume purchase program (VPP). Více informací najdete v následujících tématech:
-  - [Multilicenční aplikace pro iOS](vpp-apps-ios.md)
+  - [hromadně zakoupené aplikace pro iOS/iPadOS](vpp-apps-ios.md)
 - **Certifikát Windows Enterprise**: Tady můžete použít nebo zobrazit stav certifikátu pro podepisování kódu, který se používá k distribuci obchodních aplikací do spravovaných zařízení s Windows.
 - **Certifikát Windows Symantec**: Tady můžete použít nebo zobrazit stav certifikátu Symantec pro podepisování kódu, který je nutný k distribuci souborů appx pro XAP a WP8.x na zařízení s Windows 10 Mobile.
 - **Microsoft Store pro firmy**: Tady můžete nastavit integraci do Microsoft Storu pro firmy. Potom můžete zakoupené aplikace synchronizovat s Intune, přiřazovat je a sledovat využití licencí. Více informací najdete v následujících tématech:

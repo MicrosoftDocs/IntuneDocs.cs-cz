@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/05/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8748639f0407de7b1bb83f646b7decf8c838766
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 6dff94a9bfeb21f09b8a8c629e10ba562d7e642b
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206665"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511419"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Vytvořte profil zařízení v Microsoft Intune
 
@@ -87,7 +87,7 @@ V tomto článku najdete:
 
      Pokud třeba pro platformu vyberete **iOS/iPadOS** , možnosti typu vašeho profilu vypadají podobně jako v následujícím profilu:
 
-     ![Vytvoření profilu iOS v Intune](./media/device-profile-create/create-device-profile.png)
+     ![Vytvoření profilu iOS/iPadOS v Intune](./media/device-profile-create/create-device-profile.png)
 
 4. Po dokončení vyberte **OK** > **vytvořit** a uložte provedené změny. Profil se vytvoří a zobrazí se v seznamu.
 
@@ -99,7 +99,7 @@ Další informace o značkách oboru a o tom, co můžete dělat, najdete v tém
 
 ### <a name="add-a-scope-tag"></a>Přidat značku oboru
 
-1. Vyberte **obor (značky)**.
+1. Vyberte **obor (značky)** .
 2. Vyberte **Přidat** a vytvořte novou značku oboru. Nebo vyberte ze seznamu existující značku oboru.
 3. Výběrem **OK** uložte změny.
 
@@ -171,10 +171,10 @@ Při vytváření profilů Vezměte v úvahu následující doporučení:
   **Název profilu**: Šablona správce – konfigurační profil OneDrivu pro všechny uživatele Windows 10  
   **Popis profilu**: Profil šablony správce OneDrivu, který obsahuje minimální a základní nastavení pro všechny uživatele Windows 10. Vytvořeno pomocí user@contoso.com, aby uživatelé nemohli sdílet data organizace s osobními účty OneDrive.
 
-  **Název profilu**: profil VPN pro všechny uživatele iOS  
-  **Popis profilu**: profil VPN, který obsahuje minimální a základní nastavení pro všechny uživatele iOS pro připojení k síti Contoso VPN. Vytvořeno pomocí user@contoso.com, aby se uživatelé k síti VPN automaticky ověřovali a místo toho byli vyzváni k zadání uživatelského jména a hesla.
+  **Název profilu**: profil VPN pro všechny uživatele iOS/iPadOS  
+  **Popis profilu**: profil VPN, který obsahuje minimální a základní nastavení pro všechny uživatele iOS/iPadOS pro připojení k síti Contoso VPN. Vytvořeno pomocí user@contoso.com, aby se uživatelé k síti VPN automaticky ověřovali a místo toho byli vyzváni k zadání uživatelského jména a hesla.
 
-- Vytvořte svůj profil podle úkolu, jako je například konfigurace nastavení Microsoft Edge, povolení ochrany proti virům v programu Microsoft Defender, blokování zařízení s iOS s jailbreakem a tak dále.
+- Vytvořte svůj profil podle úkolu, jako je konfigurace nastavení Microsoft Edge, povolení ochrany proti virům v programu Microsoft Defender, blokování zařízení s iOS/iPadOS s jailbreakem a tak dále.
 
 - Vytvářejte profily, které se vztahují na konkrétní skupiny, jako jsou marketing, prodej, správci IT nebo umístění nebo školní systém.
 

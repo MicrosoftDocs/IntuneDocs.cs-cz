@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/26/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c24c120b033a4db0162e985ef185932dd931eda
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 492c90bc1d032b32ebc3a4b8465163085674f245
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506925"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511442"
 ---
 # <a name="use-custom-settings-for-macos-devices-in-microsoft-intune"></a>Použití vlastního nastavení u zařízení s macOS v Microsoft Intune
 
@@ -50,7 +50,7 @@ Tento článek obsahuje pokyny k používání Apple Configuratoru a Apple Profi
   - Přidat [zařízení s macOS](https://help.apple.com/profilemanager/mac/5.7/#/pm9onzap1984) v Profile Manageru.
   - Po přidání zařízení v Profile Manageru přejděte na **Under the Library** (pod Knihovna)  > **Devices** (Zařízení) > vyberte zařízení > **Settings** (Nastavení). Zadejte obecné nastavení, nastavení zabezpečení, ochrany osobních údajů, adresáře a certifikátu zařízení.
 
-    Stáhněte a uložte si tento soubor. Zadáte ho v profilu Intune. 
+    Soubor si stáhněte a uložte. Zadáte ho v profilu Intune. 
 
   - Ujistěte se, že nastavení, která exportujete z nástroje Apple Profile Manager, jsou kompatibilní s verzí macOS na zařízeních. Informace potřebné k řešení nekompatibilních nastavení najdete v **referenčních materiálech k profilu konfigurace** a **referenčních materiálech k protokolu správy mobilních zařízení** na webu pro [vývojáře Apple](https://developer.apple.com/).
 
@@ -70,4 +70,4 @@ Vyberte **OK** > **Vytvořit** a změny uložte. Profil se vytvoří a zobrazí 
 
 Profil je vytvořený, ale zatím se nepoužívá. V dalším kroku [profil přiřadíte](device-profile-assign.md).
 
-Podívejte se, jak [vytvořit profil na zařízeních s iOSem](../custom-settings-ios.md).
+Podívejte se, jak [vytvořit profil na zařízeních s iOS/iPadOS](../custom-settings-ios.md).

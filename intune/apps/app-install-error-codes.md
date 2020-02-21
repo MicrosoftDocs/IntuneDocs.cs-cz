@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a9ce1a881e9a30d0f18cb676e7f7f11c4b5c8b1
-ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
+ms.openlocfilehash: ef20d378740eae73c41521d8dfc7f8fdd853fdb9
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77437830"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513892"
 ---
 # <a name="intune-app-installation-error-reference"></a>Reference k chybě instalace aplikace Intune
 
@@ -51,7 +51,7 @@ V této části se zmiňují Správce zařízení (DA) i registrace Samsung KNOX
 | 0xC7D14FB1  | -942583887 | Koncový uživatel zrušil instalaci aplikace. | Uživatel aplikaci explicitně odinstaloval. Tato chyba se vrátí, když uživatel zruší aktivitu instalace operačního systému Android. Uživatel po zobrazení výzvy operačního systému k instalaci stiskl tlačítko Zrušit nebo klikl mimo zobrazenou výzvu. Tato chyba se vrátí jenom pro scénáře DA. V případě scénářů KNOX není uživatel vyzván k instalaci, a to lze provést v tichém režimu. Intune zobrazí oznámení, že uživatelé můžou kliknutím akci zopakovat. Pokud je aplikace dostupnou aplikací, oznámení může být zavřeno. Pokud je však aplikace požadována, nelze ji zrušit. Požádejte uživatele, aby instalaci nezrušil. |
 | 0xC7D14FB9 | -942583879 | Koncový uživatel zrušil instalaci aplikace. (Na příkazovém řádku Accept) | Informujte uživatele o přijetí aplikace nasazené v Intune a po zobrazení výzvy aplikaci nainstalujte. |
 
-## <a name="ios-app-installation-errors"></a>chyby instalace aplikace pro iOS
+## <a name="ios-and-ipados-app-installation-errors"></a>chyby instalace aplikací pro iOS a iPadOS
 
 Následující chybové zprávy a popisy poskytují podrobné informace o chybách instalace pro iOS/iPadOS. 
 

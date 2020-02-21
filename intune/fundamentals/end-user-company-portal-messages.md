@@ -17,12 +17,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57467d3d073666c1c22ac0a412f68a258d5b3d75
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: cbc4e1cc8cf7bd578690bf3e34353a60ec67cdab
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414077"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514723"
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Vysvětlení zpráv aplikace Portál společnosti pro koncové uživatele
 
@@ -52,7 +52,7 @@ Přijetím této výzvy uživatel umožní, aby se telefonní číslo a číslo 
 
 Stránku **Hardware** zobrazíte tak, že přejdete na **Skupiny** > **Všechna mobilní zařízení** > **Zařízení**. Vyberte zařízení uživatele a pak použijte možnosti **Zobrazit vlastnosti** > **Hardware**.
 
-### <a name="what-happens-if-users-deny-access"></a>Co se stane, když uživatel přístup zamítne
+### <a name="what-happens-if-users-deny-access"></a>Co se stane, když uživatel přístup odepře
 
 Pokud uživatel přístup zamítne, může aplikaci Portál společnosti dál používat a zaregistrovat své zařízení. Na stránce __Hardware__ v konzole pro správu ale bude telefonní číslo a číslo IMEI zařízení prázdné. Při druhém přihlášení k aplikaci Portál společnosti po zamítnutí přístupu se ve zprávě zobrazí zaškrtávací políčko **Příště se už neptat**, takže uživatel může zobrazování této výzvy zastavit.
 
@@ -77,11 +77,11 @@ Přijetím této výzvy uživatel umožní, aby služba Intune vytvořila pracov
 > [!NOTE]
 > **Společnost Microsoft nebude nikdy přistupovat k vašim kontaktům!** Text zprávy je pod kontrolu Googlu a nejde ho změnit.
 
-### <a name="what-happens-if-users-deny-access"></a>Co se stane, když uživatel přístup zamítne
+### <a name="what-happens-if-users-deny-access"></a>Co se stane, když uživatel přístup odepře
 
 Pokud uživatel přístup zamítne, nebude zařízení v Intune zaregistrováno a nebude možné ho spravovat. Při druhém přihlášení k aplikaci Portál společnosti po zamítnutí přístupu se ve zprávě zobrazí zaškrtávací políčko **Příště se už neptat**, takže uživatel může zobrazování této výzvy zastavit.
 
-Pokud uživatel povolí přístup, ale později ho zamítne, zobrazí se tato zpráva při přihlášení k aplikaci Portál společnosti, které následuje po registraci zařízení.
+Pokud uživatel povolí přístup, ale později ho odepře, tato zpráva se zobrazí při přihlášení k aplikaci Portál společnosti, které následuje po registraci zařízení.
 
 Pokud se uživatel rozhodne povolit přístup později, může přejít na **Nastavení** > **Aplikace** > **Portál společnosti** > **Oprávnění** > **Telefon** a zapnout ho.
 
@@ -102,7 +102,7 @@ Přijetím této výzvy umožní uživatel zápis datových protokolů na SD kar
 > [!NOTE]
 > **Aplikace Portál společnosti nikdy nemá přístup k fotografiím, médiím a souborům uživatele!** Text zprávy je pod kontrolu Googlu a nejde ho změnit.
 
-### <a name="what-happens-if-users-deny-access"></a>Co se stane, když uživatel přístup zamítne
+### <a name="what-happens-if-users-deny-access"></a>Co se stane, když uživatel přístup odepře
 
 Pokud uživatel přístup zamítne, může pořád odesílat datové protokoly e-mailem, ale tyto protokoly se nezkopírují na SD kartu zařízení.
 
@@ -126,7 +126,7 @@ Pokud jste aplikaci Portál společnosti nepřidali na seznam **Povolených apli
 
 Přidejte Portál společnosti do seznamu **povolených aplikací** nebo **aplikací s výjimkou** v zásadách ochrany aplikací pro Windows Information Protection (NV). Další informace najdete v článku [Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune](../apps/windows-information-protection-policy-create.md).
 
-## <a name="approve-a-ios-company-app-line-of-business-app-on-your-ios-device"></a>Schválení aplikace společnosti pro iOS (obchodní aplikace) na zařízení s iOS 
+## <a name="approve-a-iosipados-company-app-line-of-business-app-on-your-iosipados-device"></a>Schválení aplikace společnosti pro iOS/iPadOS (obchodní aplikace) na zařízení se systémem iOS/iPadOS 
 
 ### <a name="where-it-appears"></a>Místo zobrazení
 
@@ -136,7 +136,7 @@ aplikace pro iOS vyvinuté ve vaší organizaci, které nejsou dostupné v obcho
 
 ### <a name="what-it-means"></a>Význam
 
-Tato zpráva znamená, že je potřeba upravit nastavení zařízení s iOS a schválit a nainstalovat aplikaci vyvinutou vaší společností na zařízení s iOS.
+Tato zpráva znamená, že budete muset změnit nastavení zařízení s iOS/iPadOS a schválit a nainstalovat aplikaci vyvinutou vaší společností na zařízení s iOS/iPadOS.
 
 Když tyto aplikace nainstalujete pomocí Portál společnosti a aplikaci spustíte, po stažení proveďte následující kroky, abyste aplikaci schválili:
 
@@ -156,5 +156,5 @@ Když tyto aplikace nainstalujete pomocí Portál společnosti a aplikaci spust�
     Měli byste být schopni spustit a používat podnikovou aplikaci.
 
 
-## <a name="see-also"></a>Související témata
+## <a name="see-also"></a>Viz také
 [Co říct koncovým uživatelům o používání služby Intune](end-user-educate.md)

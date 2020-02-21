@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f0b5e67c433f2d3633219650f48307dccae196e9
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: b9fe275be3f7eccee7f60dc27e5068e5b91ca93d
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73713294"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514145"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Podmíněný přístup na základě aplikace s Intune
 
@@ -34,9 +34,9 @@ Podmíněný přístup na základě aplikace a Správa klientských aplikací p�
 > [!NOTE]
 > Spravovaná aplikace je taková aplikace, která využívá zásady ochrany aplikací a která lze spravovat pomocí Intune.
 
-Blokovat integrované e-mailové aplikace na zařízeních s iOSem a Androidem můžete jen tehdy, pokud aplikaci Microsoft Outlook povolíte přístup k Exchangi Online. Kromě toho můžete u aplikací, které nepoužívají zásady ochrany aplikací Intune, blokovat přístup k SharePointu Online.
+Pokud povolíte přístup k Exchangi Online jenom aplikaci Microsoft Outlook, můžete zablokovat integrované e-mailové aplikace v iOS/iPadOS a Androidu. Kromě toho můžete u aplikací, které nepoužívají zásady ochrany aplikací Intune, blokovat přístup k SharePointu Online.
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 Před vytvořením zásad podmíněného přístupu na základě aplikace musíte mít:
 

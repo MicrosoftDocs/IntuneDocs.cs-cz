@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4ff350bd8c1c16eedd30a6b7af4f3927bce3c3e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9d0fe5634e5af6ef4c6f19e067131f151733c0b5
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508763"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515233"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Konektor Zimperium Mobile Threat Defense s Intune
 
@@ -33,7 +33,7 @@ Zásady podmíněného přístupu můžete nakonfigurovat na základě posouzen�
 
 ## <a name="how-do-intune-and-zimperium-help-protect-your-company-resources"></a>Jak služby Intune a Zimperium pomáhají chránit prostředky společnosti?
 
-Aplikace Zimperium pro Android a iOS zaznamenává telemetrii systému souborů, zásobníku sítě, zařízení a aplikací tam, kde je k dispozici, a posílá ji do cloudové služby Zimperium, kde se posoudí ohrožení zařízení mobilními hrozbami.
+Aplikace Zimperium pro Android a iOS/iPadOS zachytí telemetrii systému souborů, zásobníku sítě, zařízení a aplikací tam, kde je k dispozici, a pak pošle data telemetrie do cloudové služby Zimperium, která vyhodnotí riziko pro mobilní hrozby zařízení.
 
 Zásady dodržování předpisů, které platí pro zařízení v Intune, zahrnují pravidlo pro službu Zimperium Mobile Threat Defense. Toto pravidlo je založené na hodnocení rizika službou Zimperium. Když je toto pravidlo aktivní, Intune vyhodnocuje soulad zařízení se zásadami, které jste povolili. Pokud se zjistí, že zařízení nesplňuje dané předpisy, zablokuje se přístup uživatelů k podnikovým prostředkům, jako jsou Exchange Online a SharePoint Online. Uživatelé dostanou také pokyny z mobilní aplikace Zimperium nainstalované na jejich zařízeních, jak problém vyřešit a jak opět získat přístup k firemním prostředkům.
 
@@ -89,7 +89,7 @@ Zjišťuje hrozby v síti, například **útoky prostředníkem**, a zabraňuj
 
 - **iOS 8 nebo novější**
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 - Azure Active Directory Premium
 

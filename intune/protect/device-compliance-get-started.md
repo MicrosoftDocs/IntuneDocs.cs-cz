@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 867873c78b34d5573084a3a6e44d7d4d67846423
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: b593cab8a9a89f895c668b2b49583b73cbfccffa
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77413650"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515165"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Nastavení pravidel na zařízeních pro povolení přístupu k prostředkům ve vaší organizaci pomocí Intune
 
@@ -95,9 +95,9 @@ Intune také obsahuje sadu předdefinovaných nastavení zásad dodržování p�
 
 
 > [!NOTE]
-> Vylepšené zjišťování jailbreaků pro zařízení s iOS bylo v Intune dočasně zakázané.
+> Vylepšené zjišťování jailbreaků pro zařízení s iOS/iPadOS bylo dočasně zakázáno v Intune.
 
-- **Vylepšené zjišťování jailbreaků**: Pokud je toto nastavení povolené, zařízení s iOS se budou v Intune kontrolovat častěji. Pokud je povolena, používá tato vlastnost funkce zjišťování polohy zařízení a má vliv na výdrž baterie. Data o umístění uživatele neukládá Intune.
+- **Vylepšené zjišťování jailbreaků**: Pokud je toto nastavení povolené, bude mít zařízení s iOS/iPadOS, aby se v Intune kontrolovala častěji. Pokud je povolena, používá tato vlastnost funkce zjišťování polohy zařízení a má vliv na výdrž baterie. Data o umístění uživatele neukládá Intune.
 
   Povolení tohoto nastavení vyžaduje, aby zařízení:
   - Povolte služby zjišťování polohy na úrovni operačního systému.

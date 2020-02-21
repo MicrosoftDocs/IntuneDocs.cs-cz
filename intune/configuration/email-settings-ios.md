@@ -1,11 +1,11 @@
 ---
-title: Konfigurace nastavení e-mailu pro zařízení s iOS v Microsoft Intune – Azure | Microsoft Docs
-description: Podívejte se na seznam všech nastavení e-mailu, která můžete nakonfigurovat a přidat do zařízení se systémem iOS v Microsoft Intune, včetně použití serverů Exchange a získání atributů z Azure Active Directory. Můžete taky povolit SSL, ověřovat uživatele pomocí certifikátů nebo uživatelského jména a hesla a synchronizovat e-mail na zařízeních s iOS pomocí profilů konfigurace zařízení v Microsoft Intune.
+title: Konfigurace nastavení e-mailu pro zařízení s iOS/iPadOS v Microsoft Intune – Azure | Microsoft Docs
+description: Podívejte se na seznam všech nastavení e-mailu, která můžete nakonfigurovat a přidat do zařízení se systémem iOS a iPadOS v Microsoft Intune, včetně použití serverů Exchange Server a získávání atributů z Azure Active Directory. Můžete taky povolit SSL, ověřovat uživatele pomocí certifikátů nebo uživatelského jména a hesla a synchronizovat e-mail na zařízeních s iOS/iPadOS pomocí profilů konfigurace zařízení v Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/12/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,25 +15,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73de0ac94ff02e43fe73ca6357f6008ba71e3b93
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 0ea06c50b1da237d4a822e80a8085b3b51913cec
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74390822"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512802"
 ---
-# <a name="add-e-mail-settings-for-ios-devices-in-microsoft-intune"></a>Přidání nastavení e-mailu pro zařízení s iOS v Microsoft Intune
+# <a name="add-e-mail-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Přidání nastavení e-mailu pro zařízení s iOS a iPadOS v Microsoft Intune
 
 V Microsoft Intune můžete vytvořit a nakonfigurovat e-mail pro připojení k e-mailovému serveru, zvolit způsob ověřování uživatelů, použít S/MIME pro šifrování a další.
 
-V tomto článku najdete seznam všech nastavení e-mailu, která jsou dostupná pro zařízení s iOS. Můžete vytvořit konfigurační profil zařízení, který bude nabízet nebo nasazovat tato nastavení e-mailu do zařízení s iOS.
+V tomto článku najdete seznam všech nastavení e-mailu, která jsou dostupná pro zařízení s iOS/iPadOS. Můžete vytvořit konfigurační profil zařízení, který bude nabízet nebo nasazovat tato nastavení e-mailu do zařízení se systémem iOS/iPadOS.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořit profil konfigurace zařízení](../email-settings-configure.md).
+[Vytvořte profil konfigurace zařízení](../email-settings-configure.md).
 
 > [!NOTE]
-> Tato nastavení jsou k dispozici pro všechny typy registrace. Další informace o typech registrace najdete v tématu Registrace zařízení se [systémem iOS](../ios-enroll.md).
+> Tato nastavení jsou k dispozici pro všechny typy registrace. Další informace o typech registrace najdete v tématu Registrace zařízení se [systémem iOS/iPadOS](../ios-enroll.md).
 
 ## <a name="exchange-activesync-account-settings"></a>Nastavení účtu Exchange ActiveSync
 
@@ -72,7 +72,7 @@ V tomto článku najdete seznam všech nastavení e-mailu, která jsou dostupná
 
   - Některé organizace zakazují koncovým uživatelům možnost [samoobslužného přístupu k aplikacím](https://docs.microsoft.com/azure/active-directory/manage-apps/manage-self-service-access). V této situaci může přihlášení s moderním ověřováním selhat, dokud správce nevytvoří podnikovou aplikaci „Účty iOS“ a neudělí uživatelům k této aplikaci přístup ve službě Azure AD.
 
-    Výchozí akcí je přidání aplikace pomocí funkce **Přidat aplikaci** na [přístupovém panelu aplikace](https://docs.microsoft.com/azure/active-directory/user-help/active-directory-saas-access-panel-introduction) **bez schválení organizací**. Další informace najdete v článku o [přiřazení uživatelů k aplikacím](https://docs.microsoft.com/azure/active-directory/manage-apps/ways-users-get-assigned-to-applications).
+    Výchozí akcí je přidání aplikace pomocí [přístupového panelu aplikace](https://docs.microsoft.com/azure/active-directory/user-help/active-directory-saas-access-panel-introduction) **Přidat funkci aplikace** **bez schválení od firmy**. Další informace najdete v článku o [přiřazení uživatelů k aplikacím](https://docs.microsoft.com/azure/active-directory/manage-apps/ways-users-get-assigned-to-applications).
 
   > [!NOTE]
   > Když povolíte OAuth, stane se následující:  
@@ -114,7 +114,7 @@ V tomto článku najdete seznam všech nastavení e-mailu, která jsou dostupná
   Možnosti:
 
   - **Zakázat S/MIME** (výchozí): nepoužívá e-mailový certifikát S/MIME k podepsání, šifrování nebo dešifrování e-mailů.
-  - **Povolit S/MIME**: umožňuje uživatelům podepsat a šifrovat e-mail v aplikaci iOS Native mail. Dále zadejte:
+  - **Povolit S/MIME**: umožňuje uživatelům podepisovat a šifrovat e-maily v nativní e-mailové aplikaci iOS/iPadOS. Dále zadejte:
 
     - **Povolené podepisování S/MIME**: **Zakázat** (výchozí) neumožní uživatelům digitálně podepsat zprávu. **Možnost Povolit** umožňuje uživatelům digitálně podepisovat odchozí e-maily pro účet, který jste zadali. Podepisování pomáhá uživatelům, kteří přijímají zprávy, určit, že zpráva pochází od konkrétního odesílatele, a ne od někoho, kdo má jako odesílatele.
       - **Povolit uživateli změnu nastavení**: **Povolit** umožňuje uživatelům změnit možnosti podepisování. **Disable** (výchozí) znemožní uživatelům měnit podepisování a vynutí, aby uživatelé používali nakonfigurovaná podepisování.

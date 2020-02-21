@@ -1,11 +1,11 @@
 ---
-title: nastavení funkcí zařízení s iOS v Microsoft Intune – Azure | Microsoft Docs
-description: Podívejte se na všechna nastavení a nakonfigurujte zařízení s iOS pro účely tisku, rozložení domovské obrazovky, oznámení aplikací, sdílené zařízení, jednotné přihlašování a nastavení filtru webového obsahu v Microsoft Intune. Pomocí těchto nastavení v profilu konfigurace zařízení můžete nakonfigurovat, aby zařízení s iOS používala tyto funkce Apple ve vaší organizaci.
+title: nastavení funkcí zařízení s iOS/iPadOS v Microsoft Intune – Azure | Microsoft Docs
+description: Podívejte se na všechna nastavení a nakonfigurujte zařízení s iOS a iPadOS pro účely tisku, rozložení domovské obrazovky, oznámení aplikací, sdílené zařízení, jednotné přihlašování a nastavení filtru webového obsahu v Microsoft Intune. Pomocí těchto nastavení v profilu konfigurace zařízení můžete nakonfigurovat zařízení se systémem iOS/iPadOS, aby tyto funkce společnosti Apple používala ve vaší organizaci.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,27 +16,27 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 85fc8bf002a4d5d00d2163c0b75c49d11dcd9b61
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 7f19ccfb6949dbfa0de62a8b711436ab9cde8c9c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206359"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512938"
 ---
-# <a name="ios-and-ipados-device-settings-to-use-common-ios-features-in-intune"></a>nastavení zařízení s iOS a iPadOS pro použití běžných funkcí iOS v Intune
+# <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>nastavení zařízení s iOS a iPadOS pro použití běžných funkcí iOS/iPadOS v Intune
 
-Intune obsahuje některá vestavěná nastavení, která uživatelům iOS umožní používat na svých zařízeních jiné funkce společnosti Apple. Správci můžou například řídit, jak uživatelé iOS používají tiskárny pro průchozí tisk, přidávat aplikace a složky do Docku a stránky na domovské obrazovce, zobrazovat oznámení aplikací, zobrazit podrobnosti o značce assetu na zamykací obrazovce, používat ověřování pomocí jednotného přihlašování a ověřovat uživatele. s certifikáty.
+Intune obsahuje některá vestavěná nastavení, která uživatelům iOS/iPadOS můžou na svých zařízeních používat jiné funkce společnosti Apple. Správci můžou například řídit, jak uživatelé systému iOS/iPadOS používají tiskárny pro průchozí zařízení, přidávat aplikace a složky do Docku a stránky na domovské obrazovce, zobrazovat oznámení aplikací, zobrazit podrobnosti o značce assetu na zamykací obrazovce, používat ověřování pomocí jednotného přihlašování a ověřovat uživatele pomocí certifikátů.
 
-Pomocí těchto funkcí můžete ovládat zařízení iOS jako součást řešení správy mobilních zařízení (MDM).
+Pomocí těchto funkcí můžete řídit zařízení s iOS/iPadOS jako součást řešení správy mobilních zařízení (MDM).
 
-Tento článek uvádí tato nastavení a popisuje, co jednotlivé nastavení dělá. Další informace o těchto funkcích najdete v [Přidání nastavení funkcí zařízení se systémem iOS nebo MacOS](../device-features-configure.md).
+Tento článek uvádí tato nastavení a popisuje, co jednotlivé nastavení dělá. Další informace o těchto funkcích najdete v [Přidání nastavení funkcí zařízení s iOS/iPadOS nebo MacOS](../device-features-configure.md).
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořte konfigurační profil zařízení s iOS](../device-features-configure.md).
+[Vytvořte konfigurační profil zařízení s iOS/iPadOS](../device-features-configure.md).
 
 > [!NOTE]
-> Tato nastavení platí pro různé typy registrace s některými nastaveními, která platí pro všechny možnosti registrace. Další informace o různých typech registrace najdete v tématu Registrace zařízení se [systémem iOS](../ios-enroll.md).
+> Tato nastavení platí pro různé typy registrace s některými nastaveními, která platí pro všechny možnosti registrace. Další informace o různých typech registrace najdete v tématu Registrace zařízení se [systémem iOS/iPadOS](../ios-enroll.md).
 
 ## <a name="airprint"></a>AirPrint
 
@@ -47,8 +47,8 @@ Tento článek uvádí tato nastavení a popisuje, co jednotlivé nastavení dě
 
 - **IP adresa**: zadejte adresu IPv4 nebo IPv6 tiskárny. Pokud k identifikaci tiskáren používáte názvy hostitelů, můžete získat IP adresu tím, že v terminálu otestujete tiskárnu. Další podrobnosti najdete v článku získání IP adresy a cesty (v tomto článku).
 - **Cesta**: cesta je obvykle `ipp/print` pro tiskárny v síti. Další podrobnosti najdete v článku získání IP adresy a cesty (v tomto článku).
-- **Port**: zadejte port naslouchání cíle přenosu. Pokud necháte tuto vlastnost prázdnou, použije se při tisku výchozí port. K dispozici v iOS 11,0 a novějších verzích.
-- **TLS**: vyberte **Povolit** a zabezpečte připojení přes tisk přes protokol TLS (Transport Layer Security). K dispozici v iOS 11,0 a novějších verzích.
+- **Port**: zadejte port naslouchání cíle přenosu. Pokud necháte tuto vlastnost prázdnou, použije se při tisku výchozí port. K dispozici v iOS 11.0 + a iPadOS 13.0 +.
+- **TLS**: vyberte **Povolit** a zabezpečte připojení přes tisk přes protokol TLS (Transport Layer Security). K dispozici v iOS 11.0 + a iPadOS 13.0 +.
 
 Pokud chcete přidat servery pro tisk přes mosty, můžete:
 
@@ -75,22 +75,23 @@ Chcete-li přidat servery s modulem pro tisk, budete potřebovat IP adresu tisk�
 Tato funkce platí pro:
 
 - iOS 9,3 nebo novější
+- iPadOS 13,0 a novější
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
 ### <a name="dock"></a>Vyjměte
 
-Pomocí nastavení **Dock** přidejte až šest položek nebo složek do Docku obrazovky iOS. Mnoho zařízení podporuje méně položek. Například zařízení iPhone podporují až čtyři položky. V takovém případě se na zařízení zobrazí jenom první čtyři položky, které přidáte.
+Pomocí nastavení **Dock** přidejte až šest položek nebo složek do Docku obrazovky pro iOS/iPadOS. Mnoho zařízení podporuje méně položek. Například zařízení iPhone podporují až čtyři položky. V takovém případě se na zařízení zobrazí jenom první čtyři položky, které přidáte.
 
 Pro Dock zařízení můžete přidat až **šest** položek (kombinované aplikace a složky).
 
 - **Přidat**: přidá aplikace nebo složky do Docku na zařízení.
 - **Zadejte**: přidat **aplikaci** nebo **složku**:
 
-  - **Aplikace**: tuto možnost vyberte, pokud chcete přidat aplikace do Dock na obrazovce. Napište
+  - **Aplikace**: tuto možnost vyberte, pokud chcete přidat aplikace do Dock na obrazovce. Zadejte:
 
-    - **Název aplikace**: zadejte název aplikace. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení s iOS.
-    - **ID sady prostředků aplikace**: Zadejte ID sady prostředků aplikace. Některé příklady najdete v tématu [ID sad pro integrované aplikace pro iOS](bundle-ids-built-in-ios-apps.md) .
+    - **Název aplikace**: zadejte název aplikace. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení iOS/iPadOS.
+    - **ID sady prostředků aplikace**: Zadejte ID sady prostředků aplikace. Některé příklady najdete v tématu [ID sady pro integrované aplikace pro iOS/iPadOS](bundle-ids-built-in-ios-apps.md) .
 
   - **Složka**: tuto možnost vyberte, pokud chcete přidat složku do Docku na obrazovce.
 
@@ -99,24 +100,24 @@ Pro Dock zařízení můžete přidat až **šest** položek (kombinované aplik
     - **Název složky**: zadejte název složky. Tento název se zobrazí uživatelům na svém zařízení.
     - **Seznam stránek**: **přidejte** stránku a zadejte následující vlastnosti:
 
-      - **Název stránky**: zadejte název stránky. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení s iOS.
-      - **Název aplikace**: zadejte název aplikace. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení s iOS.
-      - **ID sady prostředků aplikace**: Zadejte ID sady prostředků aplikace. Některé příklady najdete v tématu [ID sad pro integrované aplikace pro iOS](bundle-ids-built-in-ios-apps.md) .
+      - **Název stránky**: zadejte název stránky. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení iOS/iPadOS.
+      - **Název aplikace**: zadejte název aplikace. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení iOS/iPadOS.
+      - **ID sady prostředků aplikace**: Zadejte ID sady prostředků aplikace. Některé příklady najdete v tématu [ID sady pro integrované aplikace pro iOS/iPadOS](bundle-ids-built-in-ios-apps.md) .
 
       Pro Dock zařízení můžete přidat až **20** stránek.
 
 > [!NOTE]
-> Když přidáváte ikony pomocí nastavení Dock, ikony na domovské obrazovce a stránkách jsou zamčené a nejde je přesunout. To může být záměrné pomocí zásad MDM a iOS pro iOS a Apple.
+> Když přidáváte ikony pomocí nastavení Dock, ikony na domovské obrazovce a stránkách jsou zamčené a nejde je přesunout. To může být záměrné pro iOS/iPadOS a zásady MDM společnosti Apple.
 
 #### <a name="example"></a>Příklad
 
 V následujícím příkladu se zobrazí docká obrazovka jenom aplikace Safari, pošta a akcie. Aplikace Pošta je vybrána k zobrazení vlastností:
 
-![Ukázkové nastavení Docku iOSu](./media/ios-device-features-settings/FfFiUcP.png)
+![Ukázka nastavení pro iOS/iPadOS Dock](./media/ios-device-features-settings/FfFiUcP.png)
 
 Když přiřadíte zásady k iPhonu, bude Dock vypadat podobně jako na následujícím obrázku:
 
-![Ukázkové rozložení Docku iOSu na iPhonu](./media/ios-device-features-settings/bAgCe8F.png)
+![Ukázka rozložení zařízení s iOS/iPadOS Dock na iPhonu](./media/ios-device-features-settings/bAgCe8F.png)
 
 ### <a name="pages"></a>Pages
 
@@ -129,7 +130,7 @@ Na zařízení můžete přidat až **40** stránek.
 
 - **Seznam stránek**: **přidejte** stránku a zadejte následující vlastnosti:
 
-  - **Název stránky**: zadejte název stránky. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manageru a na *zařízení s iOS se nezobrazuje.*
+  - **Název stránky**: zadejte název stránky. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manageru a *není* zobrazený na zařízení se systémem iOS/iPadOS.
 
   Do zařízení můžete přidat až **60** položek (sloučené aplikace a složky).
 
@@ -139,8 +140,8 @@ Na zařízení můžete přidat až **40** stránek.
 
       - **Aplikace**: tuto možnost vyberte, pokud chcete přidat aplikace na stránku na obrazovce. Dále zadejte:
 
-        - **Název aplikace**: zadejte název aplikace. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení s iOS.
-        - **ID sady prostředků aplikace**: Zadejte ID sady prostředků aplikace. Některé příklady najdete v tématu [ID sad pro integrované aplikace pro iOS](bundle-ids-built-in-ios-apps.md) .
+        - **Název aplikace**: zadejte název aplikace. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení iOS/iPadOS.
+        - **ID sady prostředků aplikace**: Zadejte ID sady prostředků aplikace. Některé příklady najdete v tématu [ID sady pro integrované aplikace pro iOS/iPadOS](bundle-ids-built-in-ios-apps.md) .
 
       - **Složka**: tuto možnost vyberte, pokud chcete přidat složku do Docku na obrazovce.
 
@@ -149,19 +150,19 @@ Na zařízení můžete přidat až **40** stránek.
         - **Název složky**: zadejte název složky. Tento název se zobrazí uživatelům na zařízení.
         - **Přidat**: přidá stránky do složky. Zadejte také následující vlastnosti:
 
-          - **Název stránky**: zadejte název stránky. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení s iOS.
-          - **Název aplikace**: zadejte název aplikace. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení s iOS.
-          - **ID sady prostředků aplikace**: Zadejte ID sady prostředků aplikace. Některé příklady najdete v tématu [ID sad pro integrované aplikace pro iOS](bundle-ids-built-in-ios-apps.md) .
+          - **Název stránky**: zadejte název stránky. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení iOS/iPadOS.
+          - **Název aplikace**: zadejte název aplikace. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení iOS/iPadOS.
+          - **ID sady prostředků aplikace**: Zadejte ID sady prostředků aplikace. Některé příklady najdete v tématu [ID sady pro integrované aplikace pro iOS/iPadOS](bundle-ids-built-in-ios-apps.md) .
 
 #### <a name="example"></a>Příklad
 
 V následujícím příkladu je přidána nová stránka s názvem **Contoso** . Na stránce se zobrazí aplikace najít přátele a nastavení. Vybraná aplikace nastavení zobrazuje vlastnosti:
 
-![Příklad nastavení domovské obrazovky iOSu](./media/ios-device-features-settings/Jc2OxyX.png)
+![Příklad nastavení domovské obrazovky pro iOS/iPadOS v Intune](./media/ios-device-features-settings/Jc2OxyX.png)
 
 Když přiřadíte zásady k iPhonu, stránka bude vypadat podobně jako na následujícím obrázku:
 
-![Zařízení s iOSem se změněnou domovskou obrazovkou](./media/ios-device-features-settings/Bd37PHa.png)
+![zařízení s iOS/iPadOS s upravenou domovskou obrazovkou v Intune](./media/ios-device-features-settings/Bd37PHa.png)
 
 ## <a name="app-notifications"></a>Oznámení aplikací
 
@@ -169,9 +170,9 @@ Když přiřadíte zásady k iPhonu, stránka bude vypadat podobně jako na nás
 
 - **Přidat**: Přidat oznámení pro aplikace:
 
-    ![Přidání oznámení aplikace v profilu iOS v Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
+    ![Přidání oznámení aplikace v profilu iOS/iPadOS v Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
 
-  - **ID sady prostředků aplikace**: zadejte **ID sady prostředků** aplikace, kterou chcete přidat. Některé příklady najdete v tématu [ID sad pro integrované aplikace pro iOS](bundle-ids-built-in-ios-apps.md) .
+  - **ID sady prostředků aplikace**: zadejte **ID sady prostředků** aplikace, kterou chcete přidat. Některé příklady najdete v tématu [ID sady pro integrované aplikace pro iOS/iPadOS](bundle-ids-built-in-ios-apps.md) .
   - **Název aplikace**: zadejte název aplikace, kterou chcete přidat. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení.
   - **Vydavatel**: zadejte vydavatele aplikace, kterou přidáváte. Tento název se používá pro váš odkaz v centru pro správu Microsoft Endpoint Manager. Nezobrazuje *se* na zařízení.
   - **Oznámení**: **povolí** nebo **zakáže** aplikaci odesílat oznámení do zařízení.
@@ -189,6 +190,7 @@ Když přiřadíte zásady k iPhonu, stránka bude vypadat podobně jako na nás
 Tato funkce platí pro:
 
 - iOS 9.3 nebo novější
+- iPadOS 13,0 a novější
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
@@ -211,7 +213,7 @@ Tato funkce platí pro:
 
   - **Hlavní název uživatele**: hlavní název uživatele (UPN) se analyzuje následujícím způsobem:
 
-    ![Atribut uživatelského jména](./media/ios-device-features-settings/User-name-attribute.png)
+    ![iOS/iPadOS – atribut jednotného přihlašování pro uživatele v Intune](./media/ios-device-features-settings/User-name-attribute.png)
 
     Sféru také můžete přepsat textem, který zadáte do textového pole **Sféra**.
 
@@ -229,12 +231,12 @@ Tato funkce platí pro:
 - **Sféra**: zadejte část domény adresy URL. Zadejte například `contoso.com`.
 - **Předpony adres URL, které použijí jednotné přihlašování**: **Přidejte** všechny adresy URL vaší organizace, které k ověření uživatelů používají jednotné přihlašování.
 
-  Například pokud se uživatel připojí k některému z těchto webů, použije zařízení s iOSem přihlašovací údaje pro jednotné přihlašování. Uživatel nemusí zadávat další přihlašovací údaje. Je-li povoleno ověřování Multi-Factor Authentication, je nutné, aby uživatel zadal druhé ověření.
+  Když se například uživatel připojí k některé z těchto webů, zařízení s iOS/iPadOS používá přihlašovací údaje jednotného přihlašování. Uživatel nemusí zadávat další přihlašovací údaje. Je-li povoleno ověřování Multi-Factor Authentication, je nutné, aby uživatel zadal druhé ověření.
 
   > [!NOTE]
   > V těchto adresách URL se musí používat správně naformátovaný plně kvalifikovaný název domény. Apple vyžaduje, aby byly ve formátu `http://<yourURL.domain>`.
 
-  Odpovídající vzory adres URL musí mít na začátku `http://` nebo `https://`. Je spuštěna jednoduchá řetězcová shoda, takže předpona adresy URL `http://www.contoso.com/` neodpovídá `http://www.contoso.com:80/`. V systému iOS 10,0 nebo novějším je možné použít jeden zástupný znak \* k zadání všech vyhovujících hodnot. Například `http://*.contoso.com/` odpovídá `http://store.contoso.com/` i `http://www.contoso.com`.
+  Odpovídající vzory adres URL musí mít na začátku `http://` nebo `https://`. Je spuštěna jednoduchá řetězcová shoda, takže předpona adresy URL `http://www.contoso.com/` neodpovídá `http://www.contoso.com:80/`. U iOS 10.0 + a iPadOS 13.0 + se dá použít jeden zástupný znak \* k zadání všech vyhovujících hodnot. Například `http://*.contoso.com/` odpovídá `http://store.contoso.com/` i `http://www.contoso.com`.
 
   Vzory `http://.com` a `https://.com` odpovídají všem adresám URL protokolu HTTP a HTTPS v uvedeném pořadí.
 
@@ -283,7 +285,7 @@ Tato funkce platí pro:
   - **Nenakonfigurováno**: rozšíření aplikací se nepoužívají. Pokud chcete zakázat rozšíření aplikace, můžete změnit typ rozšíření aplikace jednotného přihlašování na **Nenakonfigurováno**.
   - **Přesměrování**: pomocí obecného přizpůsobitelné přípony aplikace pro přesměrování provede jednotné přihlašování s moderními toky ověřování. Ujistěte se, že znáte ID rozšíření pro rozšíření aplikace vaší organizace.
   - **Přihlašovací údaje**: pomocí obecného rozšíření aplikace s přizpůsobitelnými přihlašovacími údaji můžete provádět jednotné přihlašování s toky ověřování typu výzva a odpověď. Ujistěte se, že znáte ID rozšíření pro rozšíření aplikace vaší organizace.
-  - **Kerberos**: použijte integrované rozšíření protokolu Kerberos společnosti Apple, které je součástí iOS 13,0 (a novějších) a iPadOS 13,0 (a novější). Tato možnost je verze rozšíření **přihlašovacích údajů** specifická pro Kerberos.
+  - **Kerberos**: použijte integrované rozšíření protokolu Kerberos společnosti Apple, které je součástí iOS 13.0 + a iPadOS 13.0 +. Tato možnost je verze rozšíření **přihlašovacích údajů** specifická pro Kerberos.
 
   > [!TIP]
   > Pomocí typů **přesměrování** a **přihlašovacích údajů** přidáte vlastní hodnoty konfigurace, které budou předávány prostřednictvím rozšíření. Pokud používáte **přihlašovací údaje**, zvažte použití integrovaného nastavení konfigurace poskytovaného společností Apple v typu **Kerberos** .
@@ -353,7 +355,7 @@ Pokud se zařízením s existující imagí nepřiřazuje profil bez obrázku, m
 - **Obrázek tapety**: nahrajte existující obrázek. png,. jpg nebo. jpeg, který chcete použít. Ujistěte se, že velikost souboru je menší než 750 KB. Můžete také **Odebrat** obrázek, který jste přidali.
 
 > [!TIP]
-> Chcete-li zobrazit různé obrázky na zamykací obrazovce a na domovské obrazovce, vytvořte profil s obrázkem zamykací obrazovky. Vytvořte jiný profil s obrázkem na domovské obrazovce. Přiřaďte oba profily ke skupinám uživatelů nebo zařízení s iOS.
+> Chcete-li zobrazit různé obrázky na zamykací obrazovce a na domovské obrazovce, vytvořte profil s obrázkem zamykací obrazovky. Vytvořte jiný profil s obrázkem na domovské obrazovce. Přiřaďte oba profily ke skupinám uživatelů a zařízení s iOS/iPadOS.
 
 ## <a name="next-steps"></a>Další kroky
 

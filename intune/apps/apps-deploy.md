@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 15d6a67cb41455a1e3c0830e9ed242bfa52b0269
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
+ms.openlocfilehash: cee415174d68f3e6c9e72f0f0e06aa0d5d80ad91
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912654"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511850"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Přiřazení aplikací do skupin pomocí Microsoft Intune
 
@@ -49,7 +49,7 @@ Následující tabulka obsahuje různé možnosti pro přiřazení aplikací už
 | Koncoví uživatelé instalují dostupné aplikace z webového Portálu společnosti | Ano | Ano |
 
 > [!NOTE]
-> V současné době můžete přiřadit aplikace pro iOS a Android (firemní i zakoupené v obchodu s aplikacemi) zařízením, která nejsou zaregistrovaná v Intune.
+> V současné době můžete k zařízením, která nejsou zaregistrovaná v Intune, přiřazovat aplikace pro iOS/iPadOS a Android (aplikace pro firmy i aplikace z obchodu pro nákup).
 >
 > Pokud chtějí uživatelé získat aktualizace aplikací na zařízeních, která nejsou zaregistrovaná v Intune, musí přejít na Portál společnosti organizace a aktualizace aplikací nainstalovat ručně.
 
@@ -67,9 +67,9 @@ Následující tabulka obsahuje různé možnosti pro přiřazení aplikací už
    - **Odinstalace**: aplikace se odinstaluje ze zařízení ve vybraných skupinách, pokud Intune tuto aplikaci do zařízení dřív nainstaloval pomocí stejného nasazení prostřednictvím "dostupného pro zaregistrovaná zařízení" nebo "povinného" přiřazení. Po nasazení nelze odebrat webové odkazy.
 
      > [!NOTE]
-     > **Jenom pro aplikace pro iOS**:
-     > - Pokud chcete nakonfigurovat, co se stane se spravovanými aplikacemi, když už zařízení nejsou spravovaná, můžete vybrat zamýšlené nastavení v části **odinstalace při odebírání zařízení**. Další informace najdete v tématu [Nastavení odinstalace aplikací pro aplikace spravované v iOS](apps-deploy.md#app-uninstall-setting-for-ios-managed-apps).
-     > - Pokud jste vytvořili profil VPN pro iOS, který obsahuje nastavení sítě VPN pro jednotlivé aplikace, můžete vybrat profil sítě VPN v části **VPN**. Při spuštění aplikace se připojení VPN otevře. Další informace najdete v článku o [nastavení VPN pro zařízení s iOSem](../vpn-settings-ios.md).
+     > **Jenom pro aplikace pro iOS/iPadOS**:
+     > - Pokud chcete nakonfigurovat, co se stane se spravovanými aplikacemi, když už zařízení nejsou spravovaná, můžete vybrat zamýšlené nastavení v části **odinstalace při odebírání zařízení**. Další informace najdete v tématu [Nastavení odinstalace aplikací pro aplikace spravované pro iOS/iPadOS](apps-deploy.md#app-uninstall-setting-for-ios-managed-apps).
+     > - Pokud jste vytvořili profil VPN pro iOS/iPadOS, který obsahuje nastavení sítě VPN pro jednotlivé aplikace, můžete vybrat profil VPN v části **VPN**. Při spuštění aplikace se připojení VPN otevře. Další informace najdete v tématu [nastavení sítě VPN pro zařízení s iOS/iPadOS](../vpn-settings-ios.md).
      >
      > **Pouze pro aplikace pro Android**: Pokud nasadíte aplikaci pro Android, která je **k dispozici s registrací nebo bez registrace**, stav hlášení bude k dispozici pouze v zaregistrovaných zařízeních.
      >
@@ -94,7 +94,7 @@ Informace v následující tabulce vám pomohou pochopit výsledný záměr při
 |-----------------------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |Uživatel: Povinné|Uživatel: K dispozici|Povinné a K dispozici|
 |Uživatel: Povinné|Uživatel: Odinstalace|Požadováno|
-|Uživatel: K dispozici|Uživatel: Odinstalace|Odinstalovat|
+|Uživatel: K dispozici|Uživatel: Odinstalace|Odinstalace|
 |Uživatel: Povinné|Zařízení: Povinné|Existuje obojí, Intune zpracovává Povinné.
 |Uživatel: Povinné|Zařízení: Odinstalace|Existuje obojí, Intune překládá Povinné.
 |Uživatel: K dispozici|Zařízení: Povinné|Existuje obojí, Intune překládá Povinné (Povinné a K dispozici).
@@ -114,7 +114,7 @@ Informace v následující tabulce vám pomohou pochopit výsledný záměr při
 
 > [!NOTE]
 > Jenom pro spravované aplikace pro App Store (iOS) platí, že pokud je přidáte do Microsoft Intune a přiřadíte jako **Povinné**, vytvoří se automaticky se záměry **Povinné** i **K dispozici**.<br><br>
-> Aplikace iOS pro App Store (nikoli aplikace iOS VPP), které jsou cílené se záměrem Povinné, se na zařízení vynutí při ohlášení zařízení a zobrazí se také v aplikaci Portál společnosti.<br><br>
+> aplikace z obchodu pro iOS (ne aplikace pro iOS/iPadOS VPP), které jsou cílené na povinný záměr, se v zařízení v okamžiku ohlášení zařízení vynutily a zobrazí se také v aplikaci Portál společnosti.<br><br>
 > Pokud se v nastavení **odinstalovat při odebrání zařízení** vyskytnou konflikty, aplikace se ze zařízení neodebere, když už zařízení není spravované.
 
 ## <a name="managed-google-play-app-deployment-to-unmanaged-devices"></a>Spravované Google Play nasazení aplikace na nespravovaná zařízení
@@ -132,7 +132,7 @@ Postup přiřazení spravované aplikace Google Play k nespravovaným zařízen�
 Po vydání selektivního vymazání aplikace v konzole Intune se pracovní účet automaticky odebere z aplikace Obchod Play a koncový uživatel z tohoto bodu už nebude zobrazovat pracovní aplikace v katalogu aplikací Obchod Play. Když se pracovní účet odebere ze zařízení, aplikace nainstalované z Obchod Play zůstanou nainstalované na zařízení a neodinstaluje se. 
 
 ## <a name="app-uninstall-setting-for-ios-managed-apps"></a>Nastavení odinstalace aplikace pro aplikace spravované v iOS
-V případě zařízení se systémem iOS si můžete vybrat, co se stane se spravovanými aplikacemi při zrušení registrace zařízení v Intune nebo odebrání profilu správy pomocí nastavení **odinstalovat při odebrání zařízení** . Toto nastavení platí jenom pro aplikace po zaregistrování zařízení a aplikace se nainstalují jako spravované. Nastavení nelze konfigurovat pro webové aplikace ani pro webové odkazy. Po vyřazení z selektivního vymazání aplikace se odebere jenom data chráněná správou mobilních aplikací (MAM).
+V případě zařízení se systémem iOS/iPadOS můžete zvolit, co se stane se spravovanými aplikacemi při zrušení registrace zařízení v Intune nebo odebrání profilu správy pomocí nastavení **odinstalovat při odebrání zařízení** . Toto nastavení platí jenom pro aplikace po zaregistrování zařízení a aplikace se nainstalují jako spravované. Nastavení nelze konfigurovat pro webové aplikace ani pro webové odkazy. Po vyřazení z selektivního vymazání aplikace se odebere jenom data chráněná správou mobilních aplikací (MAM).
 
 Výchozí hodnoty pro nastavení jsou předem vyplněné pro nová přiřazení následujícím způsobem:
 

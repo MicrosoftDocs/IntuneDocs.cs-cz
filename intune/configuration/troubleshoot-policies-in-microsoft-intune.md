@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/05/2019
+ms.date: 02/18/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8768022872d32116add0ed4ea4caf1f8fcb800f
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9acb934cdf67aae9c18091a0340f27de635b5399
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059271"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511013"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Řešení potíží se zásadami a profily a v Intune
 
@@ -77,7 +77,7 @@ Zkontrolujte [stav tenanta](../fundamentals/tenant-status.md) a potvrďte, že j
 
         - Chcete-li vynutit vrácení se změnami:
             - Na zařízení s Androidem otevřete Portál společnosti App > **zařízení** > vyberte zařízení ze seznamu > **Ověřte nastavení zařízení**.
-            - Na zařízení s iOS otevřete aplikaci Portál společnosti > **zařízení** > v seznamu vyberte zařízení > **kontrolu nastavení**.
+            - V zařízení se systémem iOS/iPadOS otevřete aplikaci Portál společnosti > **zařízení** > v seznamu vyberte zařízení, > **kontrolu nastavení**.
 
         - Na zařízení s Windows otevřete **nastavení** > **účty** > **přístup do práce nebo do školy** > vyberte účet nebo registraci MDM > **informace** > **synchronizaci**.
 
@@ -91,7 +91,7 @@ Zkontrolujte [stav tenanta](../fundamentals/tenant-status.md) a potvrďte, že j
 
         **Stavy zásad**:
 
-        - **Nelze použít**: Tato zásada není na této platformě podporována. Například zásady iOS nefungují na Androidu. Zásady Samsung KNOX nefungují na zařízeních s Windows.
+        - **Nelze použít**: Tato zásada není na této platformě podporována. Například zásady pro iOS/iPadOS nefungují na Androidu. Zásady Samsung KNOX nefungují na zařízeních s Windows.
         - **Konflikt**: v zařízení existuje stávající nastavení, které Intune nemůže přepsat. Nebo jste nasadili dvě zásady se stejným nastavením s použitím různých hodnot.
         - **Čeká na vyřízení**: zařízení není zaregistrované v Intune, aby bylo možné tyto zásady získat. Nebo zařízení přijalo zásady, ale neoznámilo stav Intune.
         - **Chyby**: Vyhledání chyb a možných řešení při [řešení problémů s přístupem k prostředkům společnosti](../fundamentals/troubleshoot-company-resource-access-problems.md).
@@ -110,7 +110,7 @@ Zkontrolujte [stav tenanta](../fundamentals/tenant-status.md) a potvrďte, že j
 
     - **Vyhovuje**: zařízení dostalo profil a sestavy do Intune, které odpovídají danému nastavení.
 
-    - **Nedá se použít**: nastavení profilu se nedá použít. Například nastavení e-mailu pro zařízení s iOS se nevztahují na zařízení s Androidem.
+    - **Nedá se použít**: nastavení profilu se nedá použít. Například nastavení e-mailu pro zařízení s iOS/iPadOS se nevztahují na zařízení s Androidem.
 
     - **Čeká na vyřízení**: Profil se pošle do zařízení, ale neohlásil stav Intune. Na vyřízení může čekat třeba šifrování v systému Android, které vyžaduje, aby šifrování povolil uživatel.
 
@@ -121,7 +121,7 @@ Zkontrolujte [stav tenanta](../fundamentals/tenant-status.md) a potvrďte, že j
 
 ## <a name="policy-troubleshooting-resources"></a>Zásady odstraňování potíží s prostředky
 
-- [Řešení potíží se zásadami pro iOS nebo Android, které se nevztahují na zařízení](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (otevírá jiný web Microsoftu)
+- [Řešení potíží se zásadami iOS/iPadOS nebo Androidem, které se nevztahují na zařízení](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (otevírá se další web Microsoftu)
 - [Řešení potíží s chybami zásad Windows 10 v Intune](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (otevření blogu)
 - [Řešení potíží s vlastním nastavením CSP pro Windows 10](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (otevře další web Microsoftu)
 - Zásady správy mobilních zařízení s [Windows 10 zásady skupiny a Intune](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (otevře se další web Microsoftu)
@@ -144,7 +144,7 @@ V závislosti na platformě zařízení může být potřeba resetovat zásady z
 
 Například v Windows 8.1 na ploše potáhnutím prstem zprava otevřete panel **ovládací tlačítka** . Vyberte **nastavení** > **Ovládací panely** > **uživatelské účty**. Na levé straně vyberte odkaz **Resetovat zásady zabezpečení** a zvolte **Resetovat zásady**.
 
-Jiné platformy, například zařízení se systémem Android, iOS a Windows Phone 8,1, může být potřeba vyřadit a znovu zaregistrovat, aby bylo možné použít méně omezující zásadu.
+Jiné platformy, jako jsou Android, iOS/iPadOS a Windows Phone 8,1, může být potřeba vyřadit a znovu zaregistrovat, aby bylo možné použít méně omezující zásadu.
 
 [Řešení potíží při registraci zařízení](../enrollment/troubleshoot-device-enrollment-in-intune.md) může být dobrým prostředkem.
 

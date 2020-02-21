@@ -1,12 +1,12 @@
 ---
-title: nastavení zařízení s iOS v Microsoft Intune – Azure | Microsoft Docs
+title: nastavení zařízení s iOS/iPadOS v Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Přidání, konfigurace nebo vytvoření nastavení na zařízeních s iOS k omezení funkcí, včetně nastavení požadavků na heslo, řízení uzamčené obrazovky, používání integrovaných aplikací, přidávání omezených nebo schválených aplikací, zpracování zařízení Bluetooth, připojení ke cloudu pro zálohování a ukládání, Povolit celoobrazovkový režim, přidat domény a řídit, jak uživatelé pracují s webovým prohlížečem Safari v Microsoft Intune.
+description: Přidání, konfigurace nebo vytvoření nastavení na zařízeních s iOS/iPadOS k omezení funkcí, včetně nastavení požadavků na heslo, řízení uzamčené obrazovky, používání integrovaných aplikací, přidávání omezených nebo schválených aplikací, zpracování zařízení Bluetooth, připojení ke cloudu pro zálohování a ukládání, povolení celoobrazovkového režimu, přidání domén a řízení způsobu interakce uživatelů s webovým prohlížečem Safari v Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/04/2020
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc252068d963d75bf6ade79852d6ba01bda8800b
-ms.sourcegitcommit: 9b29478f815e10c46c8030abe0146d601ce0e28c
+ms.openlocfilehash: 1e352ca0c0100ebe1756d621feb725e040521901
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77051605"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513060"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s iOS a iPadOS pro povolení nebo omezení funkcí pomocí Intune
 
 Tento článek obsahuje seznam a popisuje různá nastavení, která můžete řídit na zařízeních s iOS a iPadOS. V rámci řešení pro správu mobilních zařízení (MDM) pomocí těchto nastavení můžete povolit nebo zakázat funkce, nastavit pravidla pro hesla, povolit nebo omezit konkrétní aplikace a další.
 
-Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a pak se přiřadí nebo nasadí na vaše zařízení s iOS.
+Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a pak se přiřadí nebo nasadí na vaše zařízení s iOS/iPadOS.
 
 > [!TIP]
 > Tato nastavení používají nastavení MDM od společnosti Apple. Další informace o těchto nastaveních najdete v tématu [Nastavení správy mobilních zařízení společnosti Apple](https://support.apple.com/guide/mdm/welcome/web) (otevření webu společnosti Apple).
@@ -37,7 +37,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 [Vytvoří konfigurační profil omezení zařízení](../device-restrictions-configure.md).
 
 > [!NOTE]
-> Tato nastavení platí pro různé typy registrace s některými nastaveními, která platí pro všechny možnosti registrace. Další informace o různých typech registrace najdete v tématu Registrace zařízení se [systémem iOS](../ios-enroll.md).
+> Tato nastavení platí pro různé typy registrace s některými nastaveními, která platí pro všechny možnosti registrace. Další informace o různých typech registrace najdete v tématu Registrace zařízení se [systémem iOS/iPadOS](../ios-enroll.md).
 
 ## <a name="general"></a>Obecné
 
@@ -45,7 +45,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 - **Sdílet data o využití**: vyberte možnost **blokovat** , pokud chcete zabránit tomu, aby zařízení odesílalo data o diagnostice a využití do Applu. **Nenakonfigurováno** (výchozí) umožňuje odesílat tato data.
 
-- **Snímek obrazovky**: vyberte možnost **blokovat** , pokud chcete zabránit snímekům obrazovky nebo snímku obrazovky na zařízení. V iOS 9,0 a novějších blokují také nahrávky obrazovky. **Nenakonfigurováno** (výchozí) umožňuje uživateli zachytit obsah obrazovky jako obrázek nebo jako video.
+- **Snímek obrazovky**: vyberte možnost **blokovat** , pokud chcete zabránit snímekům obrazovky nebo snímku obrazovky na zařízení. V systému iOS/iPadOS 9,0 a novějších blokují také nahrávky obrazovky. **Nenakonfigurováno** (výchozí) umožňuje uživateli zachytit obsah obrazovky jako obrázek nebo jako video.
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
@@ -61,6 +61,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
   Tato funkce platí pro:  
   - iOS 9.3.2 a novější
+  - iPadOS 13,0 a novější
 
 - **Sledování vzdálené obrazovky podle aplikace učebny**: zvolit **blok** , aby aplikace učebny zabránila vzdálenému zobrazení obrazovky na zařízení. **Nenakonfigurováno** (výchozí) umožňuje aplikaci Apple učeben zobrazit obrazovku.
 
@@ -68,15 +69,16 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
   Tato funkce platí pro:  
   - iOS 9,3 a novější
+  - iPadOS 13,0 a novější
 
-- **Aplikace učebny s upozorněním na obrazovku**: Pokud je tato možnost **povolená**, můžou učitelé tiše sledovat obrazovku zařízení s iOS v iOS pomocí aplikace učebny bez vědomí vašich studentů. Studentská zařízení zaregistrovaná ve třídě pomocí aplikace učebny automaticky poskytnou oprávnění učiteli tohoto kurzu. **Nenakonfigurováno** (výchozí) zabrání této funkci.
+- **Aplikace učebny s upozorněním na obrazovku**: Pokud je tato možnost **povolená**, můžou učitelé tiše sledovat obrazovku zařízení s iOS a iPadOS pomocí aplikace učebny bez vědomí vašich studentů. Studentská zařízení zaregistrovaná ve třídě pomocí aplikace učebny automaticky poskytnou oprávnění učiteli tohoto kurzu. **Nenakonfigurováno** (výchozí) zabrání této funkci.
 
   Chcete-li použít toto nastavení, nastavte nastavení **zachycení obrazovky** na **blokovat**.
 
 - **Důvěryhodnost podnikových aplikací**: vyberte **blok** pro odebrání veřejného tlačítka **Enterprise Developer** v nastavení > obecných profilů > & správu zařízení na zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživateli zvolit důvěřování aplikacím, které se nestahují z App Storu.
-- **Změna účtu**: když se nastaví **blok**, uživatel nemůže v aplikaci nastavení pro iOS aktualizovat nastavení specifická pro konkrétní zařízení. Uživatel například nemůže vytvořit nové účty zařízení nebo změnit uživatelské jméno nebo heslo. **Nenakonfigurováno** (výchozí) umožňuje uživatelům změnit tato nastavení.
+- **Změna účtu**: když se nastaví **blok**, uživatel nebude moct aktualizovat nastavení specifická pro zařízení v aplikaci nastavení pro iOS/iPadOS. Uživatel například nemůže vytvořit nové účty zařízení nebo změnit uživatelské jméno nebo heslo. **Nenakonfigurováno** (výchozí) umožňuje uživatelům změnit tato nastavení.
 
-  Tato funkce se vztahuje také na nastavení přístupná z aplikace nastavení pro iOS, jako je pošta, kontakty, kalendář, Twitter a další. Tato funkce se nevztahuje na aplikace s nastavením účtu, které nemůžete konfigurovat z aplikace nastavení pro iOS, jako je například aplikace Microsoft Outlook.
+  Tato funkce se vztahuje také na nastavení přístupná z aplikace nastavení pro iOS/iPadOS, jako je pošta, kontakty, kalendář, Twitter a další. Tato funkce se nevztahuje na aplikace s nastaveními účtu, která se nedají konfigurovat z aplikace nastavení pro iOS/iPadOS, jako je například aplikace Microsoft Outlook.
 
 - **Čas obrazovky**: vyberte možnost **blokovat** , pokud chcete uživatelům zabránit v nastavení vlastních omezení na obrazovce čas (nastavení zařízení). **Není nakonfigurováno** umožňuje uživateli nakonfigurovat na zařízení omezení zařízení (například Rodičovská kontrola nebo obsah a omezení ochrany osobních údajů).
 
@@ -91,7 +93,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 - **Úprava tapety**: **blok** brání v změně tapety. **Nenakonfigurováno** (výchozí) umožňuje uživateli změnit tapetu v zařízení.
 - **Změny nastavení vztahu důvěryhodnosti pro podnikovou aplikaci**: **blok** znemožní uživateli měnit nastavení vztahu důvěryhodnosti podnikových aplikací na zařízeních pod dohledem. **Nenakonfigurováno** (výchozí) umožňuje uživateli důvěřovat aplikacím, které se nestahují z App Storu.
 - **Změny profilu konfigurace**: **blok** zabraňuje změnám konfiguračního profilu na zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživateli instalovat konfigurační profily.
-- **Zámek aktivace**: vyberte **povolit** pro povolení zámek aktivace na zařízeních s iOS pod dohledem. Zámek aktivace znemožňuje opětovné aktivaci ztraceného nebo odcizeného zařízení.
+- **Zámek aktivace**: vyberte **povolit** pro povolení zámek aktivace na zařízeních s iOS/iPadOS, která jsou pod dohledem. Zámek aktivace znemožňuje opětovné aktivaci ztraceného nebo odcizeného zařízení.
 - **Blokovat odebrání aplikace**: vyberte možnost **blokovat** , pokud chcete uživatelům zabránit v odebírání aplikací. **Nenakonfigurováno** (výchozí) umožňuje uživatelům odebírat aplikace ze zařízení.
 - **Povolí příslušenství USB, když je zařízení zamknuté**: **umožňuje dovolit** , aby data Exchange příslušenství využívala zařízení, které je po celou hodinu uzamčené. **Nenakonfigurováno** (výchozí) neaktualizuje režim omezeného portu USB na zařízení a příslušenství USB bude zablokováno v přenosu dat ze zařízení, pokud je po celou hodinu uzamčené.
 - **Vynutit automatické datum a čas**: **vyžaduje** , aby zařízení pod dohledem, aby automaticky nastavila datum &ho času. Časové pásmo zařízení se aktualizuje, když má zařízení mobilní připojení nebo má Wi-Fi s povolenými službami zjišťování polohy.
@@ -99,24 +101,28 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
   Tato funkce platí pro:  
   - iOS 11,3 a novější
+  - iPadOS 13,0 a novější
 
 - **Povolit učebně zamknout aplikaci a uzamknout zařízení bez zobrazení výzvy**: **Povolit** umožní učitelům uzamknout aplikace nebo zamknout zařízení pomocí aplikace učeben bez vyzvání studenta. Uzamykání aplikací znamená, že zařízení může přistupovat jenom k aplikacím určeném pro učitele. **Nenakonfigurováno** (výchozí) znemožní učitelům uzamknout aplikace nebo zařízení pomocí aplikace učebny bez vyzvání studenta.
 
   Tato funkce platí pro:  
   - iOS 11,0 a novější
+  - iPadOS 13,0 a novější
 
 - **Automaticky připojovat třídy učeben bez výzvy k zadání**: **Povolit** automaticky umožňuje studentům připojit se ke třídě, která je v aplikaci učebny bez vyzvání k učiteli. **Nenakonfigurováno** (výchozí) vyzývá učitele, aby se studenti chtěli připojit ke třídě, která je v aplikaci učebny.
 
   Tato funkce platí pro:  
   - iOS 11,0 a novější
+  - iPadOS 13,0 a novější
 
 - **Blokovat vytvoření sítě VPN**: **blok** zabraňuje uživatelům v vytváření nastavení konfigurace sítě VPN. **Nenakonfigurováno** (výchozí) umožňuje uživatelům vytvářet v zařízení sítě VPN.
 - **Úprava nastavení eSIM**: **blok** znemožní uživatelům odebrat nebo přidat plán na mobilní zařízení na kartě zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživatelům změnit tato nastavení.
 
   Tato funkce platí pro:  
   - iOS 12,1 a novější
+  - iPadOS 13,0 a novější
 
-- **Odložit aktualizace softwaru**: Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), v zařízení se zobrazí aktualizace softwaru, které Apple uvolňuje. Pokud se třeba aktualizace pro iOS uvolní od společnosti Apple na konkrétní datum, pak se tato aktualizace přirozeně zobrazuje na zařízení v datu vydání verze.
+- **Odložit aktualizace softwaru**: Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), v zařízení se zobrazí aktualizace softwaru, které Apple uvolňuje. Například pokud se aktualizace pro iOS/iPadOS uvolní od společnosti Apple v konkrétní datum, pak se tato aktualizace přirozeně zobrazuje na zařízení po datu vydání verze.
 
   **Možnost Povolit** umožňuje prodlevu při zobrazení aktualizací softwaru na zařízeních, od 0-90 dnů. Toto nastavení neřídí, kdy jsou aktualizace nebo nejsou nainstalovány. 
 
@@ -126,6 +132,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
     Toto nastavení platí pro:  
     - iOS 11,3 a novější
+    - iPadOS 13,0 a novější
 
 ## <a name="password"></a>Heslo
 
@@ -159,13 +166,13 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 - **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet neúspěšných přihlášení, než se zařízení vymaže (mezi 4-11).
   
-  iOS má integrované zabezpečení, které může mít vliv na toto nastavení. IOS může například zpozdit spuštění zásad v závislosti na počtu neúspěšných přihlášení. Může také zvážit opakované zadání stejného hesla jako jednoho pokusu. [Příručka zabezpečení iOS](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) společnosti Apple (Otevírá web společnosti Apple) je dobrým prostředkem a poskytuje konkrétnější údaje o heslech.
+  iOS/iPadOS má integrované zabezpečení, které může mít vliv na toto nastavení. Například iOS/iPadOS může zpozdit spuštění zásady v závislosti na počtu neúspěšných přihlášení. Může také zvážit opakované zadání stejného hesla jako jednoho pokusu. [Příručka zabezpečení iOS/iPadOS](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) společnosti Apple (Otevírá web společnosti Apple) je dobrým prostředkem a poskytuje konkrétnější údaje o heslech.
   
-- **Maximální počet minut po uzamčení obrazovky, po kterém se vyžaduje zadání hesla**<sup>1</sup>: zadejte, jak dlouho zůstane zařízení nečinné, než uživatel musí znovu zadat heslo. Pokud je čas, který zadáte, delší dobu, než je aktuálně nastaveno na zařízení, zařízení bude ignorovat čas, který zadáte. Podporováno v zařízeních iOS 8,0 a novějších.
+- **Maximální počet minut po uzamčení obrazovky, po kterém se vyžaduje zadání hesla**<sup>1</sup>: zadejte, jak dlouho zůstane zařízení nečinné, než uživatel musí znovu zadat heslo. Pokud je čas, který zadáte, delší dobu, než je aktuálně nastaveno na zařízení, zařízení bude ignorovat čas, který zadáte. Podporováno na zařízeních s iOS 8.0 + a iPadOS 13.0 +.
 
 - **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**<sup>1</sup>: zadejte maximální počet minut nečinnosti, který je v zařízení povolený, dokud se nezamkne obrazovka.
 
-  **Možnosti iOS**:  
+  **Možnosti iOS/iPadOS**:  
 
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nedotkne.
   - **Okamžitě**: po 30 sekundách nečinnosti se zamkne obrazovka.
@@ -174,7 +181,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
   - **3**: obrazovka se zamkne po 3 minutách nečinnosti.
   - **4**: obrazovka se zamkne po 4 minutách nečinnosti.
   - **5**: obrazovka se zamkne po 5 minutách nečinnosti.
-    
+
   **iPadOS možnosti**:  
 
   - **Nenakonfigurováno** (výchozí): Intune toto nastavení nedotkne.
@@ -184,7 +191,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
   - **10**: po 10 minutách nečinnosti se zamkne obrazovka.
   - **15**: po 15 minutách nečinnosti se zamkne obrazovka.
 
-  Pokud se hodnota nevztahuje na iOS nebo iPadOS, pak Apple používá nejbližší *nejnižší* hodnotu. Pokud například zadáte `4` minut, zařízení iPadOS používají `2` minut. Pokud zadáte `10` minut, zařízení s iOS budou používat `5` minut. Toto je omezení Apple.
+  Pokud se hodnota nevztahuje na iOS a iPadOS, pak Apple používá nejbližší *nejnižší* hodnotu. Pokud například zadáte `4` minut, zařízení iPadOS používají `2` minut. Pokud zadáte `10` minut, zařízení s iOS budou používat `5` minut. Toto je omezení Apple.
   
   > [!NOTE]
   > Uživatelské rozhraní Intune pro toto nastavení nedělí podporované hodnoty pro iOS a iPadOS. Uživatelské rozhraní může být v budoucí verzi aktualizováno.
@@ -197,6 +204,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
   ID obličeje platí pro:  
   - iOS 11,0 a novější
+  - iPadOS 13,0 a novější
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
@@ -208,8 +216,9 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
     ID obličeje platí pro:  
     - iOS 11,0 a novější
+    - iPadOS 13,0 a novější
 
-- **Blokovat automatické vyplňování hesel**: Pokud chcete zabránit použití funkce automatického vyplňování hesel v iOS, vyberte **blokovat** . Výběr **bloku** má také následující dopad:
+- **Blokovat automatické vyplňování hesel**: Pokud chcete zabránit použití funkce automatického vyplňování hesel v iOS/iPadOS, vyberte **blokovat** . Výběr **bloku** má také následující dopad:
 
   - Uživatelům se nezobrazí výzva k použití uloženého hesla v Safari nebo ve všech aplikacích.
   - Automatická silná hesla jsou zakázaná a silná hesla se uživatelům nedoporučují.
@@ -222,6 +231,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
   Tato funkce platí pro:  
   - iOS 11,0 a novější
+  - iPadOS 13,0 a novější
   
 <sup>1</sup> když nakonfigurujete **maximální počet minut nečinnosti** , po kterém se zamkne obrazovka a **maximální počet minut po uzamčení obrazovky, když se bude vyžadovat nastavení hesla** , uplatní se v uvedeném pořadí. Pokud například nastavíte hodnotu pro obě nastavení na **5** minut, obrazovka se vypne automaticky po pěti minutách a zařízení se zamkne po dalších pět minut. Pokud ale uživatel vypne obrazovku ručně, druhé nastavení se použije okamžitě. Ve stejném příkladu potom, co uživatel vypne obrazovku, zařízení zamkne pět minut později.
 
@@ -247,25 +257,25 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
   > [!NOTE]
   > Pokud je toto nastavení blokované, zablokují se taky klávesnice třetích stran nainstalované z App Storu.
 
-  - **Povolení čtení nespravovaných aplikací ze spravovaných účtů kontaktů**: Pokud nastavíte možnost **povoleno**, nespravované aplikace, jako je integrovaná aplikace kontaktů pro iOS, můžou číst kontaktní informace a přistupovat k nim ze spravovaných aplikací, včetně mobilní aplikace Outlook. **Nenakonfigurováno** (výchozí) zabraňuje čtení, včetně odebrání duplicit, z vestavěné aplikace kontaktů na zařízení.  
+  - **Povolení čtení nespravovaných aplikací ze spravovaných účtů kontaktů**: Pokud nastavíte možnost **povoleno**, nespravované aplikace, jako je integrovaná aplikace pro iOS nebo iPadOS Contacts, můžou číst a přistupovat ke kontaktovým informacím ze spravovaných aplikací, včetně mobilní aplikace Outlook. **Nenakonfigurováno** (výchozí) zabraňuje čtení, včetně odebrání duplicit, z vestavěné aplikace kontaktů na zařízení.  
   
     Toto nastavení povoluje nebo znemožňuje čtení kontaktních informací. Neřídí synchronizaci kontaktů mezi aplikacemi.
   
     Pokud chcete použít toto nastavení, nastavte možnost **zobrazení firemních dokumentů v nespravovaných aplikacích** na **blokovat**.
 
-  Další informace o těchto dvou nastaveních a jejich dopad na Outlook pro iOS synchronizace exportů najdete v tématu [Podpora tipů: použití nastavení vlastního profilu Intune s aplikací pro nativní kontakty iOS](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Use-Intune-custom-profile-settings-with-the-iOS/ba-p/298453).
+  Další informace o těchto dvou nastaveních a jejich dopad na Outlook pro iOS/iPadOS kontaktování exportu najdete v tématu [Podpora tipů: použití nastavení vlastního profilu Intune s aplikací pro nativní kontakty iOS/iPadOS](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Use-Intune-custom-profile-settings-with-the-iOS/ba-p/298453).
 
 - Považovat postupné **přetažení jako nespravovaného cíle**: **vyžadovat** , aby se přetažení považovalo za nespravovaný cíl přetažení. Zastaví spravované aplikace z odesílání dat pomocí přetažení. 
 - **Zobrazení nefiremních dokumentů v podnikových aplikacích**: **blok** zabraňuje zobrazení nefiremních dokumentů v podnikových aplikacích. **Nenakonfigurováno** (výchozí) umožňuje zobrazit libovolný dokument v podnikových spravovaných aplikacích.
 
-  Nastavení **blokování** taky brání synchronizaci exportu kontaktů v Outlooku pro iOS. Další informace najdete v tématu [Podpora tipů: povolení synchronizace kontaktů iOS v Outlooku s ovládacími prvky IOS12 MDM](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Enabling-Outlook-iOS-Contact-Sync-with-iOS12-MDM/ba-p/298453).
+  Nastavení **blokování** taky brání synchronizaci exportu kontaktů v Outlooku pro iOS/iPadOS. Další informace najdete v tématu [Podpora tipů: povolení aplikace Outlook pro iOS/IPadOS synchronizace kontaktů s ovládacími prvky](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Enabling-Outlook-iOS-Contact-Sync-with-iOS12-MDM/ba-p/298453)správy mobilních zařízení (MDM) iOS12.
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
 - **Vyžadovat heslo pro iTunes Store pro všechny nákupy**: **vyžaduje** , aby uživatel zadal heslo Apple ID pro každý nákup v aplikaci nebo iTunes. **Nenakonfigurováno** (výchozí) umožňuje nákupy bez výzvy k zadání hesla pokaždé, když.
 - **Nákupy v aplikaci**: vyberte možnost **blokovat** , aby se zabránilo nákupům v aplikaci ze Storu. **Nenakonfigurováno** (výchozí) umožňuje nákup obchodů v běžící aplikaci.
 - **Stáhnout obsah z úložiště obchodu iBooks s označením jako ' Erotika '** : vyberte možnost **blokovat** , pokud chcete zabránit uživatelům v stahování médií z obchodu iBooks úložiště, které je označeno jako erotika. **Nenakonfigurováno** (výchozí) umožňuje uživateli stahovat knihy s kategorií "Erotika".
-- **Povoluje spravovaným aplikacím psát kontakty na nespravované účty kontaktů**: Když nastavíte možnost **povoleno**, spravované aplikace, jako je například mobilní aplikace Outlook, můžou ukládat nebo synchronizovat kontaktní informace, včetně obchodních a firemních kontaktů, do integrované aplikace pro kontakty pro iOS. Pokud je nastavené na **Nenakonfigurováno** (výchozí), spravované aplikace nemůžou ukládat ani synchronizovat kontaktní informace na integrované aplikaci kontaktů pro iOS na zařízení.
+- **Umožňuje spravovaným aplikacím psát kontakty na nespravované účty kontaktů**: Pokud je nastavené na **povoleno**, spravované aplikace, jako je například mobilní aplikace Outlook, můžou ukládat nebo synchronizovat kontaktní informace, včetně obchodních a firemních kontaktů, do integrované aplikace pro iOS/iPadOS Contacts. Pokud je nastavené na **Nenakonfigurováno** (výchozí), spravované aplikace nemůžou ukládat ani synchronizovat kontaktní informace na integrované aplikaci pro iOS/iPadOS kontakty na zařízení.
   
   Pokud chcete použít toto nastavení, nastavte možnost **zobrazení firemních dokumentů v nespravovaných aplikacích** na **blokovat**.
 
@@ -275,28 +285,29 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 - **App Store**: **blok** zabrání přístupu k obchodu s aplikacemi na zařízeních pod dohledem. **Nenakonfigurováno** (výchozí) umožňuje přístup.
 
-  Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
+  Od iOS/iPadOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
   - **Instalují se aplikace z App Storu**: vyberte **blok** pro blokování obchodu s aplikacemi z domovské obrazovky zařízení. Koncoví uživatelé můžou aplikace dál instalovat pomocí iTunes nebo Apple Configuratoru. **Nenakonfigurováno** (výchozí) povolí App Storu na domovské obrazovce.
-  - **Automatické stahování aplikací**: výběrem možnosti **blokovat** zabráníte automatickému stahování aplikací zakoupených na jiných zařízeních. Nemá vliv na aktualizace existujících aplikací. **Nenakonfigurováno** (výchozí) umožňuje, aby se aplikace nakoupily na jiných zařízeních iOS ke stažení na zařízení.
+  - **Automatické stahování aplikací**: výběrem možnosti **blokovat** zabráníte automatickému stahování aplikací zakoupených na jiných zařízeních. Nemá vliv na aktualizace existujících aplikací. **Nenakonfigurováno** (výchozí) umožňuje, aby se aplikace na zařízení nakoupily na jiných zařízeních s iOS/iPadOS.
 
-- **Explicitní Hudba iTunes, podcast nebo obsah zpráv**: vyberte **blok** , abyste zabránili explicitnímu obsahu iTunes v hudbě, podcastech nebo zprávách. **Nenakonfigurováno** (výchozí) povolí zařízení přístup k obsahu, který je hodnocen jako dospělý ze Storu. iOS 13 a novější můžou vyžadovat jenom zařízení pod dohledem. 
+- **Explicitní Hudba iTunes, podcast nebo obsah zpráv**: vyberte **blok** , abyste zabránili explicitnímu obsahu iTunes v hudbě, podcastech nebo zprávách. **Nenakonfigurováno** (výchozí) povolí zařízení přístup k obsahu, který je hodnocen jako dospělý ze Storu.
 
-  Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
+  Od iOS/iPadOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
 - **Přidání Game Center přátelé**: **blok** zabraňuje uživatelům v přidávání Game Centerch přátel. **Nenakonfigurováno** (výchozí) umožňuje uživateli přidávat přátele do Game Center.
 
-  Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
+  Od iOS/iPadOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
 - **Game Center**: **blokovat** použití aplikace Game Center **Nenakonfigurováno** (výchozí) umožňuje použití aplikace Game Center v zařízení.
 - **Hry pro více hráčů**: vyberte možnost **blokovat** , aby se zabránilo hraní her. **Nenakonfigurováno** (výchozí) umožňuje uživateli hrát hry s více hráči na zařízení.
 
-  Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
+  Od iOS/iPadOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
 - **Přístup k síťové jednotce v aplikaci soubory**: použití protokolu SMB (Server Message Block), zařízení mají přístup k souborům nebo jiným prostředkům na síťovém serveru. Při **vypnutí** se zabrání přístupu k souborům na síťové jednotce SMB. **Nenakonfigurováno** (výchozí) umožňuje přístup.
 
   Tato funkce platí pro:  
-  - iOS a iPadOS 13,0 a novější
+  - iOS 13,0 a novější
+  - iPadOS 13,0 a novější
 
 ## <a name="built-in-apps"></a>Integrované aplikace
 
@@ -312,7 +323,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 - **Vyhledávání Spotlightu, které vrátí výsledky z Internetu**: **blok** přestane vracet žádné výsledky z internetu hledání. **Nenakonfigurováno** (výchozí) umožňuje vyhledávání Spotlightu připojit se k Internetu a poskytnout tak výsledky hledání.
 
 - **Soubory cookie prohlížeče Safari**: Vyberte způsob zpracování souborů cookie v zařízení. Možnosti:
-  - Allow
+  - Povolit
   - Blokovat všechny soubory cookie
   - Povolení souborů cookie z navštívených webů
   - Povoluje soubory cookie z aktuálního webu
@@ -325,11 +336,11 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 - **Kamera**: vyberte možnost **blokovat** , pokud chcete zabránit přístupu k fotoaparátu na zařízení. **Nenakonfigurováno** (výchozí) umožňuje přístup k kameře zařízení.
 
-  Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
+  Od iOS/iPadOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
   - **FaceTime**: **blok** , aby se zabránilo přístupu k aplikaci FaceTime. **Nenakonfigurováno** (výchozí) povolí přístup k aplikaci FaceTime na zařízení.
 
-    Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
+    Od iOS/iPadOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
 - **Filtr vulgárních výrazů v Siri**: **vyžadovat, aby** Siri nemohlo diktovat nebo diktovat vulgární jazyk.
 
@@ -349,16 +360,19 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
   Tato funkce platí pro:  
   - iOS 4,0 a novější
+  - iPadOS 13,0 a novější
 
 - **Najít iPhone**: **Nenakonfigurováno** (výchozí) umožňuje pomocí této funkce najít moji aplikaci získat přibližnou polohu zařízení. **Blok** zabraňuje této funkci v aplikaci najít moji. 
 
   Tato funkce platí pro:  
-  - iOS 13,0 a iPadOS 13,0 a novější
+  - iOS 13,0 a novější
+  - iPadOS 13,0 a novější
 
 - **Najít přátele**: **Nenakonfigurováno** (výchozí) umožňuje pomocí této funkce najít moji aplikaci najít rodinu a přátele ze zařízení Apple nebo iCloud.com. **Blok** zabraňuje této funkci v aplikaci najít moji.
 
   Tato funkce platí pro:  
-  - iOS 13,0 a iPadOS 13,0 a novější
+  - iOS 13,0 a novější
+  - iPadOS 13,0 a novější
 
 - **Změny v nastavení aplikace Find My Friends**: **Block** zabraňuje změnám v nastavení aplikace Find My Friends. **Nenakonfigurováno** (výchozí) umožňuje uživateli měnit nastavení aplikace najít přátele.
 
@@ -368,11 +382,11 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 - **Safari**: **zablokujte** v zařízení použití prohlížeče Safari. **Nenakonfigurováno** (výchozí) umožňuje uživatelům používat prohlížeč Safari.
 
-  Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
+  Od iOS/iPadOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
 - **Safari AutoFill**: **Block** zakáže funkci automatického vyplňování v prohlížeči Safari na zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživatelům změnit nastavení automatického dokončování ve webovém prohlížeči.
 
-  Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
+  Od iOS/iPadOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
 ## <a name="restricted-apps"></a>Omezené aplikace
 
@@ -399,7 +413,7 @@ Pokud chcete do těchto seznamů přidat aplikace, můžete:
 
 ## <a name="show-or-hide-apps"></a>Zobrazit nebo skrýt aplikace
 
-Platí pro zařízení se systémem iOS 9,3 nebo novějším.
+Platí pro zařízení se systémem iOS 9.3 + a iPadOS 13.0 +.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
@@ -459,6 +473,7 @@ Poznámka potřeba pro datový roaming (Tip nebo důležitá Poznámka pro usnad
 
   Tato funkce platí pro:  
   - iOS 11,0 a novější
+  - iPadOS 13,0 a novější
 
 - **Úprava osobního hotspotu**: Pokud je nastavená možnost **blokovat**, uživatel nemůže změnit nastavení osobního hotspotu. **Nenakonfigurováno** (výchozí) umožňuje koncovým uživatelům povolit nebo zakázat svůj osobní hotspot.
 
@@ -466,6 +481,7 @@ Poznámka potřeba pro datový roaming (Tip nebo důležitá Poznámka pro usnad
 
   Tato funkce platí pro:  
   - iOS 12,2 a novější
+  - iPadOS 13,0 a novější
 
 - **Připojit se k sítím Wi-Fi jenom pomocí konfiguračních profilů**: **vyžaduje** , aby zařízení používalo jenom sítě Wi-Fi nastavené prostřednictvím konfiguračních profilů Intune. **Nenakonfigurováno** (výchozí) umožňuje zařízení používat jiné sítě Wi-Fi.
 
@@ -478,7 +494,8 @@ Poznámka potřeba pro datový roaming (Tip nebo důležitá Poznámka pro usnad
   Konfigurace tohoto nastavení nezabrání uživatelům v výběru sítě Wi-Fi.
 
   Tato funkce platí pro:  
-  - iOS a iPadOS 13,0 a novější
+  - iOS 13,0 a novější
+  - iPadOS 13,0 a novější
 
 ## <a name="connected-devices"></a>Připojená zařízení
 
@@ -495,7 +512,7 @@ Poznámka potřeba pro datový roaming (Tip nebo důležitá Poznámka pro usnad
 - **Přetažení**: **blok** zabraňuje použití přetahování na zařízení. **Nenakonfigurováno** (výchozí) umožňuje použití funkce prohodit pro výměnu obsahu s blízkými zařízeními.
 - **Apple Watch párování**: **blok** brání párování s Apple Watch. **Nenakonfigurováno** (výchozí) povolí zařízení párování s Apple Watch.
 - **Úpravy Bluetooth**: **blok** zabrání koncovému uživateli ve změně nastavení Bluetooth na zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživateli změnit tato nastavení.
-- **Párování hostitelů pro řízení zařízení, s nimiž se může zařízení s iOS spárovat**: **není nakonfigurovaná** (výchozí) umožňuje, aby správce mohl řídit, se kterými zařízeními se zařízení s iOS může spárovat. **Blok** zabraňuje párování hostitelů.
+- **Párování hostitelů pro řízení zařízení, se kterými se zařízení s iOS/iPadOS může spárovat**: **není nakonfigurovaná** (výchozí) umožňuje správcům řídit, která zařízení se můžou spárovat se zařízením s iOS/iPadOS. **Blok** zabraňuje párování hostitelů.
 - **Blokovat tisk**: vyberte možnost **blokovat** , pokud chcete zabránit použití funkce pro tisk do zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživateli používat postupné tisku.
   - **Blokovat úložiště přihlašovacích údajů pro tisk v řetězci klíčů**: **blok** zabraňuje použití úložiště klíčů pro uživatelské jméno a heslo v zařízení. **Nenakonfigurováno** (výchozí) umožňuje ukládání uživatelského jména a hesla pro tisk do aplikace pro řetězce klíčů.
   - **Vyžadovat důvěryhodný certifikát TLS pro spolutisk**: **vyžaduje** , aby zařízení používalo důvěryhodné certifikáty pro komunikaci tisku TLS.
@@ -504,11 +521,13 @@ Poznámka potřeba pro datový roaming (Tip nebo důležitá Poznámka pro usnad
 
   Tato funkce platí pro:  
   - iOS 11,0 a novější
+  - iPadOS 13,0 a novější
 
 - **Přístup k souborům na jednotce USB**: zařízení se můžou připojit a otevírat soubory na USB jednotce. Pokud je zařízení USB připojené k zařízení, **zakažte zakázat** přístup zařízení k jednotce USB v aplikaci soubory. Zakázáním této funkce se taky zablokuje koncovým uživatelům přenos souborů na jednotku USB připojenou k iPadu. **Nenakonfigurováno** (výchozí) povolí přístup k jednotce USB v aplikaci Files.
 
   Tato funkce platí pro:  
-  - iOS a iPadOS 13,0 a novější
+  - iOS 13,0 a novější
+  - iPadOS 13,0 a novější
 
 ## <a name="keyboard-and-dictionary"></a>Klávesnice a slovník
 
@@ -523,7 +542,8 @@ Poznámka potřeba pro datový roaming (Tip nebo důležitá Poznámka pro usnad
 - **QuickPath**: **Nenakonfigurováno** (výchozí) umožňuje uživatelům používat QuickPath, což umožňuje průběžné zadávání na klávesnici zařízení. Uživatelé můžou k vytváření slov psát přetáhnutím prstem přes tyto klávesy. **Blok** zabraňuje uživatelům v používání QuickPath. 
 
   Tato funkce platí pro:  
-  - iOS 13,0 a iPadOS 13,0 a novější
+  - iOS 13,0 a novější
+  - iPadOS 13,0 a novější
 
 ## <a name="cloud-and-storage"></a>Cloud a úložiště
 
@@ -539,21 +559,21 @@ Poznámka potřeba pro datový roaming (Tip nebo důležitá Poznámka pro usnad
 - **Synchronizace datových proudů do iCloud**: **není nakonfigurovaná** (výchozí) umožňuje uživatelům povolit, aby se **Váš fotografický Stream** na svém zařízení synchronizoval s iCloud a aby byly na všech zařízeních uživatele dostupné fotky. **Blok** zabraňuje synchronizaci streamování fotografií do iCloud. Blokování této funkce může způsobit ztrátu dat. 
 - **Knihovna fotografií iCloud**: Pokud chcete zakázat používání knihovny fotografií iCloud k ukládání fotek a videí do cloudu, nastavte **blokování** . Ze zařízení se odeberou všechny fotky, které nejsou kompletně stažené z knihovny fotografií iCloud. **Nenakonfigurováno** (výchozí) umožňuje použití knihovny fotografií iCloud.
 - **Sdílený datový proud fotek**: výběrem možnosti **blokovat** zakážete **Sdílení fotek iCloud** na zařízení. **Nenakonfigurováno** (výchozí) umožňuje sdílení fotek.
-- **Předání**: **Nenakonfigurováno** (výchozí) umožňuje uživatelům začít pracovat na zařízení se systémem iOS a potom pokračovat v práci, kterou zahájili na jiném zařízení se systémem iOS nebo MacOS. **Blok** zabraňuje tomuto předání.
+- **Předání**: **Nenakonfigurováno** (výchozí) umožňuje uživatelům začít pracovat na zařízení se systémem iOS/iPadOS a potom pokračovat v práci, kterou zahájili na jiném zařízení s iOS/iPadOS nebo MacOS. **Blok** zabraňuje tomuto předání.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
 - **Zálohování do iCloud**: **Nenakonfigurováno** (výchozí) umožňuje uživateli zálohovat zařízení na iCloud. **Blokování** zabrání uživateli v zálohování zařízení do iCloud.
 
-  Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
+  Od iOS/iPadOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
 - **Blokování synchronizace dokumentů iCloud**: **Nenakonfigurováno** (výchozí) povolí synchronizaci dokumentu a klíč-hodnota do prostoru úložiště iCloud. **Blok** zabraňuje iCloud synchronizaci dokumentů a dat.
 
-  Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
+  Od iOS/iPadOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
 - **Blokovat synchronizaci řetězce klíčů iCloud**: Pokud chcete zakázat synchronizaci přihlašovacích údajů uložených v řetězci klíčů do iCloud, vyberte **blok** . **Nenakonfigurováno** (výchozí) umožňuje uživatelům synchronizovat tyto přihlašovací údaje.
 
-  Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
+  Od iOS/iPadOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
 ## <a name="autonomous-single-app-mode"></a>Autonomní režim jedné aplikace
 
@@ -569,7 +589,7 @@ Například ve škole nebo univerzitním prostředí přidejte aplikaci, která 
 
 Soubor CSV můžete také **naimportovat** se seznamem názvů aplikací a jejich ID sady. Případně **exportujte** existující seznam obsahující aplikace.
 
-## <a name="kiosk"></a>Veřejný terminál
+## <a name="kiosk"></a>Kiosk
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
@@ -612,14 +632,14 @@ Soubor CSV můžete také **naimportovat** se seznamem názvů aplikací a jejic
 - **Ovládací prvek Lupa**: **povolí** změny přiblížení uživatele. **Není nakonfigurováno** , zabraňuje změnám lupy.
 
 > [!NOTE]
-> Než budete moct nakonfigurovat nastavení zařízení s iOSem pro celoobrazovkový (beznabídkový) režim, musíte převést zařízení do režimu dohledu pomocí nástroje Apple Configurator nebo Programu registrace zařízení Apple. Podívejte se na téma Příručka Apple na používání nástroje Apple Configuratoru.
-> Pokud je aplikace pro iOS, kterou zadáte, nainstalovaná po přiřazení profilu, zařízení nepřejde do celoobrazovkového režimu, dokud se zařízení nerestartuje.
+> Než budete moct nakonfigurovat zařízení se systémem iOS/iPadOS pro celoobrazovkový režim, musíte k uvedení zařízení do režimu pod dohledem použít nástroj Apple Configuratoru nebo Apple Program registrace zařízení. Podívejte se na téma Příručka Apple na používání nástroje Apple Configuratoru.
+> Pokud je aplikace pro iOS/iPadOS, kterou zadáte, nainstalovaná po přiřazení profilu, zařízení nepřejde do celoobrazovkového režimu, dokud se zařízení nerestartuje.
 
-## <a name="domains"></a>Domény
+## <a name="domains"></a>Domains
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
-- **Neoznačená e-mailová** doména > **Adresa URL e-mailové domény**: přidejte jednu nebo více adres URL do seznamu. Když koncoví uživatelé dostanou e-mail z jiné domény než z domén, které zadáte, e-mail se v aplikaci iOS mail označí jako nedůvěryhodný.
+- **Neoznačená e-mailová** doména > **Adresa URL e-mailové domény**: přidejte jednu nebo více adres URL do seznamu. Když koncoví uživatelé dostanou e-mail z jiné domény než z domén, které zadáte, v aplikaci pro iOS/iPadOS pošty se e-mail označí jako nedůvěryhodný.
 
 - **Spravované webové domény** > **Adresa URL webové domény**; Přidejte do seznamu jednu nebo více adres URL. Po stažení dokumentů z domén, které zadáte, se považují za spravované. Toto nastavení platí jenom pro dokumenty stažené prostřednictvím prohlížeče Safari.
 
@@ -629,10 +649,11 @@ Soubor CSV můžete také **naimportovat** se seznamem názvů aplikací a jejic
 
   Toto nastavení platí pro:  
   - iOS 9,3 a novější
+  - iPadOS 13,0 a novější
 
 ## <a name="settings-that-require-supervised-mode"></a>Nastavení, které vyžaduje režim pod dohledem
 
-Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavování zařízení prostřednictvím Programu registrace zařízení společnosti Apple nebo prostřednictvím Apple Configuratoru. Po povolení režimu pod dohledem může Intune v zařízení nakonfigurovat následující funkce:
+režim iOS/iPadOS pod dohledem se dá povolit jenom při počátečním nastavení zařízení prostřednictvím Program registrace zařízení společnosti Apple nebo pomocí Apple Configuratoru. Po povolení režimu pod dohledem může Intune v zařízení nakonfigurovat následující funkce:
 
 - Zámek aplikace (režim jedné aplikace) 
 - Globální proxy server HTTP 

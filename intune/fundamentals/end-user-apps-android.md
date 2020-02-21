@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 40e8dd8409f70a70934684c56ed9e9729f4ebf0f
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 231b30e93a3e56811e1569c32cc1286e02320f0d
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414603"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514400"
 ---
 # <a name="how-your-android-users-get-their-apps"></a>Jak uživatelé s Androidem získávají svoje aplikace
 
@@ -61,10 +61,10 @@ Intune používá k tiché instalaci aplikací na zařízeních Zebra spravovan�
 
 Obchodní aplikace nasazené do zařízení Zebra musí být nainstalované z veřejného umístění na zařízení. Balíček aplikace. apk může být přístupný pro jiné aplikace a služby, které mají také přístup k veřejnému úložišti na zařízení. Tento přístup je obvykle malé okno mezi dokončením stahování aplikace a na začátku instalace. Toto okno může být pro určitý časový útok možné. Například balíček. apk může být během tohoto okna změněn. Intune minimalizuje dobu, po kterou se. apk stráví ve veřejném úložišti, a nepovoluje instalaci nepodepsaných aplikací. Aby se minimalizovalo riziko zabezpečení, ujistěte se, že soubory. apk, které nahráváte, neobsahují citlivé informace.
 
-## <a name="see-also"></a>Související témata
+## <a name="see-also"></a>Viz také
 
 [Přidávání aplikací s Microsoft Intune](../apps/apps-add.md)
 
-[Jak uživatelé systému iOS získávají svoje aplikace](end-user-apps-ios.md)
+[Jak uživatelé iOS/iPadOS získávají své aplikace](end-user-apps-ios.md)
 
 [Jak uživatelé s Windows získávají svoje aplikace](end-user-apps-windows.md)

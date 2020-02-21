@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f617e85e78ac5436567790d416c988742a2abe4c
-ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
+ms.openlocfilehash: c880251d59810dc02446020ed02fd6049878262c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75956227"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515012"
 ---
 # <a name="plan-communications"></a>Plán komunikace
 
@@ -52,7 +52,7 @@ Vytvořili jsme krátká, podrobná videa, která pomáhají uživatelům usnadn
 
 - [Registrace zařízení s Androidem](https://www.youtube.com/watch?v=k0Q_sGLSx6o&t=1s)
 - [Registrace zařízení s pracovním profilem Androidu](https://www.youtube.com/watch?v=9Dl8HsGk4tI&t=3s)
-- [Registrace zařízení s iOSem](https://www.youtube.com/watch?v=mJyv6YcHi7c)
+- [Registrace zařízení se systémem iOS/iPadOS](https://www.youtube.com/watch?v=mJyv6YcHi7c)
 - [Registrace zařízení s macOS](https://www.youtube.com/watch?v=Pa2pfhwq_yk)
 - [Registrace Windows](https://www.youtube.com/watch?v=TKQxEckBHiE)
 
@@ -61,5 +61,5 @@ Vytvořili jsme krátká, podrobná videa, která pomáhají uživatelům usnadn
 Intune obsahuje další prostředky, které můžete použít ke zvýšení úrovně registrace zařízení uživateli:
 
 - Informace o postupu při registraci pro konkrétní platformu mobilního OS najdete v článku [Jaké informace mají dostat koncoví uživatelé o Microsoft Intune](end-user-educate.md).
-- [Registrace zařízení v Intune pro správce IT](../enrollment/device-enrollment.md) vysvětluje, jak zaregistrovat zařízení s Androidem, iOS a Mac v Intune.
-- Sdílejte aplikaci Portál společnosti s uživateli Androidu, iOS a Windows.
+- [Registrace zařízení v Intune pro správce IT](../enrollment/device-enrollment.md) vysvětluje, jak zaregistrovat zařízení s Androidem, iOS/IPadOS a Mac v Intune.
+- Sdílejte aplikaci Portál společnosti s uživateli Androidu, iOS/iPadOS a Windows.

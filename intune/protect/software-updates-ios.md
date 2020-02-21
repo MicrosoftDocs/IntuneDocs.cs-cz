@@ -1,6 +1,6 @@
 ---
-title: Konfigurace zásad aktualizace softwaru iOS v Microsoft Intune – Azure | Microsoft Docs
-description: V Microsoft Intune vytvořte nebo přidejte zásady konfigurace, které budou omezovat, kdy se aktualizace softwaru automaticky instalují na zařízení s iOS. Můžete zvolit datum a čas, kdy se aktualizace nemají instalovat. Můžete tyto zásady také přiřadit skupinám, uživatelům nebo zařízením a vyhledat případné chyby instalace.
+title: Konfigurace zásad aktualizace softwaru pro iOS/iPadOS v Microsoft Intune – Azure | Microsoft Docs
+description: V Microsoft Intune vytvořte nebo přidejte zásady konfigurace, které budou omezovat, kdy se aktualizace softwaru automaticky instalují na zařízení s iOS/iPadOS. Můžete zvolit datum a čas, kdy se aktualizace nemají instalovat. Můžete tyto zásady také přiřadit skupinám, uživatelům nebo zařízením a vyhledat případné chyby instalace.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -13,16 +13,16 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bb146fdee7a1d7d770575334eeed84f73cda8894
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 8f977e449bc38aee84262a401b4b238505aa5b8b
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207481"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514791"
 ---
-# <a name="add-ios-software-update-policies-in-intune"></a>Přidání zásad aktualizace softwaru pro iOS do Intune
+# <a name="add-iosipados-software-update-policies-in-intune"></a>Přidání zásad aktualizace softwaru pro iOS/iPadOS v Intune
 
-Zásady aktualizací softwaru vám umožňují vynutit, aby se na zařízení s iOSem, která jsou pod dohledem, automaticky instalovala nejnovější dostupná aktualizace operačního systému. Při konfiguraci zásad můžete přidat dny a časy, kdy nechcete, aby se na zařízení instalovala aktualizace.
+Zásady aktualizace softwaru umožňují vynutit pod dohledem zařízení s iOS/iPadOS automatickou instalaci nejnovější dostupné aktualizace operačního systému. Při konfiguraci zásad můžete přidat dny a časy, kdy nechcete, aby se na zařízení instalovala aktualizace.
 
 Tato funkce platí pro:
 
@@ -52,7 +52,7 @@ Zařízení se přihlašuje k Intune přibližně každých 8 hodin. Pokud je ak
    > [!IMPORTANT]  
    > Zásada, která má *čas spuštění* a čas *ukončení* nastavenou na hodnotu 12, se vyhodnotí jako 0 hodin a ne za 24 hodin. Výsledkem není žádné omezení.  
     
-   Pokud chcete v zařízeních se systémem iOS odložit viditelnost aktualizací softwaru po určitou dobu, nakonfigurujte tato nastavení v části [omezení zařízení](../configuration/device-restrictions-ios.md#general). Zásady aktualizace softwaru přepíšou všechna omezení zařízení. Při nastavování zásad aktualizace softwaru i omezení pro zpoždění viditelnosti aktualizací softwaru vynutí zařízení aktualizaci softwaru na základě zásad. Toto omezení platí tak, aby se uživatelům nezobrazila možnost aktualizovat samotné zařízení a aktualizace se odeslala v prvním časovém intervalu, jak je definováno v zásadách aktualizace pro iOS.
+   Pokud chcete v zařízeních se systémem iOS/iPadOS zpozdit viditelnost aktualizací softwaru po určitou dobu, nakonfigurujte tato nastavení v části [omezení zařízení](../configuration/device-restrictions-ios.md#general). Zásady aktualizace softwaru přepíšou všechna omezení zařízení. Při nastavování zásad aktualizace softwaru i omezení pro zpoždění viditelnosti aktualizací softwaru vynutí zařízení aktualizaci softwaru na základě zásad. Toto omezení platí tak, aby se uživatelům nezobrazila možnost aktualizovat samotné zařízení a aktualizace se odeslala v prvním časovém intervalu, jak je definováno v zásadách aktualizace pro iOS.
 
    Po nakonfigurování *nastavení zásad aktualizace*vyberte **Další**. 
 
@@ -66,7 +66,7 @@ Zařízení se přihlašuje k Intune přibližně každých 8 hodin. Pokud je ak
 
    U zařízení používaných uživateli, na které zásady cílí, se vyhodnotí dodržování předpisů pro aktualizace. Tyto zásady podporují také zařízení bez uživatelů.
 
-7. Na kartě **Revize + vytvořit** zkontrolujte nastavení a potom vyberte **vytvořit** , jakmile budete připraveni Uložit zásady aktualizace pro iOS. Vaše nová zásada se zobrazí v seznamu zásad aktualizace pro iOS.
+7. Na kartě **Revize + vytvořit** zkontrolujte nastavení a potom vyberte **vytvořit** , jakmile budete připraveni Uložit zásady aktualizace pro iOS/iPadOS. Vaše nová zásada se zobrazí v seznamu zásad aktualizace pro iOS.
 
 
 Pokyny z týmu podpory pro Intune najdete v tématu [zpoždění viditelnosti aktualizací softwaru v Intune pro zařízení pod dohledem](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Delaying-visibility-of-software-updates-in-Intune-for-supervised/ba-p/345753).
@@ -90,7 +90,7 @@ Můžete upravit existující zásadu, včetně změny časových omezení:
 
 ## <a name="monitor-device-installation-failures"></a>Monitorování chyb instalace na zařízeních
 <!-- 1352223 -->
-**Aktualizace softwaru** > **chyby instalace pro zařízení s iOS** zobrazují seznam zařízení s iOS, která cílí na zásady aktualizace, se pokusily o aktualizaci a nešlo je aktualizovat. U každého zařízení můžete zobrazit, proč se automaticky neaktualizovalo. Zařízení, která jsou v pořádku a aktuální, se v seznamu nezobrazují. „Aktuální“ zařízení obsahují nejnovější aktualizaci, kterou samotné zařízení podporuje.
+**Aktualizace softwaru** > **chyby instalace pro zařízení s iOS** zobrazují seznam zařízení s iOS/iPadOS, která cílí na zásady aktualizace, se pokusily o aktualizaci a nešlo je aktualizovat. U každého zařízení můžete zobrazit, proč se automaticky neaktualizovalo. Zařízení, která jsou v pořádku a aktuální, se v seznamu nezobrazují. „Aktuální“ zařízení obsahují nejnovější aktualizaci, kterou samotné zařízení podporuje.
 
 ## <a name="next-steps"></a>Další kroky
 

@@ -18,19 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c18b6bcc8ec6e8d78862c0368c920fd3d79ce2b5
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: 49c629039c08c892c7d6b19422d79c9eb1a8d760
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755574"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77510465"
 ---
 # <a name="protect-devices-with-microsoft-intune"></a>Ochrana zařízení pomocí Microsoft Intune
 
 Microsoft Intune pomáhá chránit vámi spravovaná zařízení i data, která jsou na nich uložená.
 
 ## <a name="device-configuration"></a>Konfigurace zařízení
-[Zásady konfigurace](../configuration/device-profiles.md) umožňují Intune nastavit celou řadu parametrů a funkcí a pomáhají tak s ochranou a konfigurací zařízení. Například:
+[Zásady konfigurace](../configuration/device-profiles.md) umožňují Intune nastavit celou řadu parametrů a funkcí a pomáhají tak s ochranou a konfigurací zařízení. Příklad:
 
 - Na zařízení můžete omezit používání hardwarových funkcí, jako je fotoaparát nebo Bluetooth.
 - Můžete nakonfigurovat, které aplikace splňují či nesplňují vaše požadavky. Když se nainstaluje aplikace nesplňující požadavky, dostanete upozornění (a některé platformy instalaci přímo zablokují).
@@ -43,7 +43,7 @@ Pokud je potřeba [odebrat zařízení ze správy Intune](../remote-actions/devi
 
 ## <a name="require-devices-to-be-compliant"></a>Nastavení požadavků pro zařízení
 Intune obsahuje [zásady dodržování předpisů](device-compliance-get-started.md), s jejichž pomocí můžete vyhodnotit, jaká zařízení nesplňují vámi stanovené požadavky (v některých případech můžete stav i napravit). Můžete si třeba nechat hlásit:
-- Zařízení s iOSem s jailbreakem
+- zařízení s jailbreakem iOS/iPadOS
 - Šifrovaná nebo nešifrovaná zařízení
 - Stav zařízení s Windows 10 (podle Služby pro ověření stavu)
 
@@ -60,7 +60,7 @@ Intune poskytuje celou řadu funkcí, které usnadňují ochranu aplikací a jej
 Intune umožňuje integraci se službou [Windows Hello pro firmy](windows-hello.md). Tato alternativní metoda pro přihlašování do systému Windows 10 a novějších pomocí účtu služby Active Directory nebo Azure Active Directory nahrazuje heslo, čipovou kartu nebo virtuální čipovou kartu.
 
 ## <a name="disable-activation-lock-on-ios-devices"></a>Zakázat Zámek aktivace na zařízeních s iOS
-Zámek aktivace je funkce, která pomáhá chránit zařízení uživatelů. Tato funkce vyžaduje, aby uživatelé před vymazáním nebo opětovnou aktivací zařízení zadali své Apple ID a heslo. Tato funkce ale může vést k problémům, pokud třeba uživatel odejde ze společnosti, aniž by ze zařízení zámek odebral. [Zakázat zámek aktivace iOS](../remote-actions/device-activation-lock-disable.md) může pomáhat odebráním zámku ze zařízení s iOS pod dohledem, abyste je mohli znovu přidělit nebo vymazat.
+Zámek aktivace je funkce, která pomáhá chránit zařízení uživatelů. Tato funkce vyžaduje, aby uživatelé před vymazáním nebo opětovnou aktivací zařízení zadali své Apple ID a heslo. Tato funkce ale může vést k problémům, pokud třeba uživatel odejde ze společnosti, aniž by ze zařízení zámek odebral. [Zakázat iOS/iPadOS zámek aktivace](../remote-actions/device-activation-lock-disable.md) může pomáhat odebráním zámku ze zařízení se systémem iOS/iPadOS, která vám umožní znovu přidělit nebo vymazat.
 
 ## <a name="next-steps"></a>Další kroky
 

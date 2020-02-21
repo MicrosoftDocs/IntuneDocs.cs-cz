@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ab41026cd9b2ceeaaa478fc27c984d0d89db4c5
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 3a15bf0bd8ed0a46f330b159e45d0a5d5a4c7059
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74058530"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77510380"
 ---
 # <a name="device-management-overview"></a>Přehled správy zařízení
 
@@ -33,7 +33,7 @@ Díky poskytovateli správy zařízení může organizace zajistit, aby přístu
 
 Odpověď je [Microsoft Intune](what-is-intune.md). Intune nabízí správu mobilních zařízení (MDM) a správu mobilních aplikací (MAM). K hlavním úlohám řešení MDM nebo MAM patří:
 
-- Podporují nejrůznější mobilní prostředí a bezpečně spravují zařízení s iOS, Androidem, Windows a macOS.
+- Podporují nejrůznější mobilní prostředí a bezpečně spravují zařízení s iOS/iPadOS, Androidem, Windows a macOS.
 - Ujistěte se, že zařízení a aplikace vyhovují požadavkům na zabezpečení vaší organizace.
 - Vytvořte zásady, které pomůžou zabezpečit data vaší organizace v bezpečí na zařízeních vlastněných organizací a osobním zařízením.
 - Použití jediného unifikovaného mobilního řešení k vynucení těchto zásad a usnadnění správy zařízení, aplikací, uživatelů a skupin
@@ -47,7 +47,7 @@ Intune je součástí Microsoft Azure, Microsoft 365 a integruje se s Azure Acti
 
 Je běžné, že lidé mají několik zařízení, která používají různé platformy. Zaměstnanec může například pro práci používat Surface Pro a pro soukromé účely mobilní zařízení s Androidem. A je běžné, že tato osoba z obou uvedených zařízení přistupuje k prostředkům organizace, jako jsou například Microsoft Outlook a SharePoint.
 
-Pomocí Intune můžete spravovat více zařízení pro každou osobu a různé platformy, které běží na jednotlivých zařízeních, například iOS, macOS, Android a Windows. Intune odděluje zásady a nastavení podle platformy zařízení. Proto je snadné spravovat a zobrazovat zařízení konkrétní platformy.
+S Intune můžete spravovat víc zařízení na osobu a na různých platformách, které se na jednotlivých zařízeních spouštějí, včetně iOS/iPadOS, macOS, Androidu a Windows. Intune odděluje zásady a nastavení podle platformy zařízení. Proto je snadné spravovat a zobrazovat zařízení konkrétní platformy.
 
 **[Typické scénáře](common-scenarios.md)** jsou výborným zdrojem informací o tom, jak se v Intune řeší běžné situace při práci s mobilními zařízeními. Najdete zde scénáře pro tyto oblasti:  
 
@@ -59,11 +59,11 @@ Další informace o Intune najdete v tématu [co je Intune](what-is-intune.md).
 
 ## <a name="integration-with-secure-and-protect-services"></a>Integrace se službami zabezpečení a ochrany
 
-Hlavní úlohou řešení správy zařízení je poskytování zabezpečení a ochrany. Intune k plnění této úlohy skvěle využívá integraci s dalšími službami. Například:
+Hlavní úlohou řešení správy zařízení je poskytování zabezpečení a ochrany. Intune k plnění této úlohy skvěle využívá integraci s dalšími službami. Příklad:
 
 - **Microsoft 365** je hlavní komponentou pro zjednodušení běžných úloh IT. V centru pro správu Microsoft 365 vytváříte uživatele a spravujete skupiny. Získáte také přístup k dalším službám, jako je například Intune, Azure AD a další.
 
-  Vytvořte například skupinu zařízení se systémem iOS v Microsoft 365. Potom pomocí Intune odešlete této skupině zařízení s iOSem zásady týkající se funkcí iOSu, jako jsou například přístup do App Storu, použití AirDropu, zálohování v iCloudu, použití webového filtru Apple a další.
+  Vytvořte například skupinu zařízení se systémem iOS/iPadOS v Microsoft 365. Pak pomocí Intune zařaďte zásady do skupiny zařízení se systémem iOS/iPadOS, které se zaměřují na funkce iOS/iPadOS, jako je například přístup k obchodu s aplikacemi, zálohování na iCloud, použití webového filtru společnosti Apple a další.
 
 - **Windows Defender** obsahuje mnoho funkcí zabezpečení, které usnadňují ochranu zařízení s Windows 10. Při společném použití Intune a programu Windows Defender můžete například:
 
@@ -97,7 +97,7 @@ V centru pro správu správy zařízení můžete:
 - [Správa rolí](role-based-access-control.md)  
 - Správa aktualizací softwaru
   - [Správa aktualizací Windows 10](../protect/windows-update-for-business-configure.md)  
-  - [Správa aktualizací iOSu](../protect/software-updates-ios.md)  
+  - [Správa aktualizací pro iOS/iPadOS](../protect/software-updates-ios.md)  
 - [Azure Active Directory](https://docs.microsoft.com/azure/active-directory)  
 - [Správa uživatelů](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
 - [Správa skupin a členů](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)

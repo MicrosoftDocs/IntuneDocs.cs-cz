@@ -7,14 +7,25 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: d360fa5efe2deba2d19cd67e6ed9f8cbb7f864d9
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: f23d81ddb07fcafb198cd725781747b61a3b73ea
+ms.sourcegitcommit: 67f926ba83f8a955e16b741a610ad84d6044f8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415080"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77529327"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune.
+
+### <a name="microsoft-intune-support-for-windows-10-mobile-ending--3544938--"></a>Microsoft Intune podpora pro Windows 10 Mobile<!--3544938-->
+Hlavní podpora Microsoftu pro Windows 10 Mobile skončila v prosinci 2019. Jak je uvedeno v tomto prohlášení o podpoře, uživatelé s Windows 10 Mobile už nebudou mít nárok na příjem nových aktualizací zabezpečení, opravy hotfix bez zabezpečení, bezplatné podpory s asistencí nebo online aktualizace obsahu od Microsoftu. V závislosti na podpoře všech mobilních operačních systémů bude Microsoft Intune nyní koncová podpora obou Portál společnosti pro mobilní aplikace Windows 10 a Windows 10 Mobile v květnu 11. května 2020.
+
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+Pokud máte ve vaší organizaci nasazená zařízení s Windows 10 Mobile, mezi Now a 11. května 2020 můžete registrovat nová zařízení, přidávat nebo odebírat zásady a aplikace nebo aktualizovat jakákoli nastavení správy. Po 11. května zastavíme nové registrace a nakonec odebereme správu Windows 10 Mobile z uživatelského rozhraní Intune. Zařízení už nebudou zaregistrovaná ve službě Intune a odstraníme data zařízení a zásad.  
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
+Můžete si prohlédnout sestavy Intune a zjistit, která zařízení nebo uživatelé to mohou mít vliv. Přejít na **zařízení** > **všechna zařízení** a filtrovat podle OS. Můžete přidat další sloupce, které vám pomůžou identifikovat, kdo ve vaší organizaci má zařízení s Windows 10 Mobile. Zajistěte, aby vaši koncoví uživatelé upgradovali svoje zařízení, nebo aby zařízení nepoužívali pro podnikový přístup.
+
+
 
 ### <a name="plan-for-change-change-in-experience-when-enrolling-android-enterprise-dedicated-devices-in-intune--6114580--"></a>Plánování změn: Změna prostředí při registraci vyhrazených zařízení s Androidem Enterprise v Intune<!--6114580-->
 Sdíleli jsme se v listopadu vydané verzi, kterou přidáváme podporu pro nasazení certifikátu SCEP na vyhrazená zařízení s Androidem Enterprise, aby bylo možné povolit přístup k profilům Wi-Fi pomocí certifikátů. Tato změna se týká některých drobných změn toků registrace pro vyhrazená podniková zařízení s Androidem. S nadcházející aktualizací Service Update nebo 2003 jsou k dispozici několik dalších změn, o kterých bychom rádi vědomi.
@@ -44,16 +55,6 @@ Dejte koncovým uživatelům a helpdesku o této změně. K vytvoření kanálu 
 
 #### <a name="additional-information"></a>Další informace
 https://helpx.adobe.com/acrobat/kb/intune-app-end-of-life.html
-
-
-### <a name="end-support-for-windows-phone-81--3544909--"></a>Koncová podpora pro Windows Phone 8,1<!--3544909-->
-Hlavní podpora Microsoftu pro Windows Phone 8,1 skončila v červenci 2017 a rozšířená podpora skončila v červnu 2019. Aplikace Portál společnosti pro Windows Phone 8,1 byla v režimu Sustained od října 2017. Microsoft Intune bude nyní ukončena 20. února 2020 pro Windows Phone 8,1.
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Po 20. února 2020 tato zařízení neobdrží žádné aktualizace zabezpečení a nebudete moct zaregistrovat žádná nová zařízení. Stávající zařízení Windows Phone 8,1 zůstanou zaregistrovaná (zásady, aplikace, vytváření sestav), ale Všimněte si, že po tomto datu se nebude podporovat jakékoli řešení potíží s existující registrací, protože celá řada komponent, jako jsou certifikáty třetích stran, už ukončila podporu pro platformy. Intune ukončí testování kompatibility s Intune a Windows Phone 8,1.
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
-Můžete si prohlédnout sestavy Intune a zjistit, která zařízení nebo uživatelé to mohou mít vliv. Přejděte na Zařízení > Všechna zařízení a vyfiltrujte si je podle operačního systému. Můžete přidat další sloupce, které vám pomůžou určit, kdo ve vaší organizaci má zařízení s Windows Phone 8,1. Požádejte koncové uživatele, aby svá zařízení upgradovali na podporovanou verzi operačního systému.
 
 
 ### <a name="take-action-use-microsoft-edge-for-your-protected-intune-browser-experience--5728447--"></a>Provést akci: použití Microsoft Edge pro chráněné prostředí Intune Browser<!--5728447-->

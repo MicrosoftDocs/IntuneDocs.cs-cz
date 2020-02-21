@@ -1,6 +1,6 @@
 ---
-title: nastavení dodržování předpisů pro zařízení s iOS v Microsoft Intune – Azure | Microsoft Docs
-description: Podívejte se na seznam všech nastavení, která můžete použít při nastavování dodržování předpisů pro zařízení s iOS v Microsoft Intune. Vyžadovat e-mail, podívejte se na zařízení s jailbreakem nebo rootem, nastavte povolený minimální a maximální operační systém, nastavte jakákoli omezení hesla, včetně délky hesla a nečinnosti zařízení, omezit aplikace a další.
+title: nastavení dodržování předpisů pro zařízení s iOS/iPadOS v Microsoft Intune – Azure | Microsoft Docs
+description: Podívejte se na seznam všech nastavení, která můžete použít při nastavování dodržování předpisů pro zařízení s iOS/iPadOS v Microsoft Intune. Vyžadovat e-mail, podívejte se na zařízení s jailbreakem nebo rootem, nastavte povolený minimální a maximální operační systém, nastavte jakákoli omezení hesla, včetně délky hesla a nečinnosti zařízení, omezit aplikace a další.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9bcfed67eda96bb4d79317bcc69d21a5f8197bc
-ms.sourcegitcommit: 2b905913840d4133a7964fe4f54a58ea6e421e12
+ms.openlocfilehash: 437673878335b04b76c53b13f18acac32213720a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074627"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514026"
 ---
-# <a name="ios-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>nastavení iOS k označení zařízení jako kompatibilních nebo nekompatibilních s Intune
+# <a name="iosipados-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>nastavení iOS/iPadOS pro označení zařízení jako kompatibilních nebo nekompatibilních s Intune
 
-Tento článek obsahuje seznam a popis různých nastavení dodržování předpisů, která můžete nakonfigurovat na zařízeních s iOS v Intune. Jako součást řešení správy mobilních zařízení (MDM) použijte Tato nastavení pro vyžadování e-mailu, označení rootem (jailbreak) zařízení jako nevyhovující předpisům, nastavení povolené úrovně hrozby, nastavení hesel pro vypršení platnosti a další.
+Tento článek obsahuje seznam a popis různých nastavení dodržování předpisů, která můžete nakonfigurovat v zařízeních s iOS/iPadOS v Intune. Jako součást řešení správy mobilních zařízení (MDM) použijte Tato nastavení pro vyžadování e-mailu, označení rootem (jailbreak) zařízení jako nevyhovující předpisům, nastavení povolené úrovně hrozby, nastavení hesel pro vypršení platnosti a další.
 
 Tato funkce platí pro:
 
@@ -86,11 +86,11 @@ Podrobnosti o e-mailových profilech najdete v tématu [Konfigurace přístupu k
 ### <a name="password"></a>Heslo
 
 > [!NOTE]
-> Po použití zásad dodržování předpisů nebo konfigurace u zařízení s iOSem se uživatelům bude každých 15 minut zobrazovat výzva k nastavení hesla. Uživatelům se výzva bude zobrazovat tak dlouho, dokud heslo nenastaví. Když je pro zařízení se systémem iOS nastavené heslo, automaticky se spustí proces šifrování. Zařízení zůstane zašifrované, dokud heslo nebude zakázané.
+> Po použití zásady dodržování předpisů nebo zásad konfigurace u zařízení se systémem iOS/iPadOS se uživatelům zobrazí výzva k nastavení hesla každých 15 minut. Uživatelům se výzva bude zobrazovat tak dlouho, dokud heslo nenastaví. Když je pro zařízení se systémem iOS/iPadOS nastaveno heslo, automaticky se spustí proces šifrování. Zařízení zůstane zašifrované, dokud heslo nebude zakázané.
 
 - **Vyžadovat heslo k odemknutí mobilních zařízení**:  
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.  
-  - **Vyžadovat** – uživatelé musí zadat heslo, aby mohli získat přístup ke svému zařízení. Zařízení s iOSem, která používají heslo, jsou zašifrovaná.
+  - **Vyžadovat** – uživatelé musí zadat heslo, aby mohli získat přístup ke svému zařízení. zařízení s iOS/iPadOS, která používají heslo, se šifrují.
 
 - **Jednoduchá hesla**:  
   - **Nenakonfigurováno** (*výchozí*) – uživatelé můžou vytvářet jednoduchá hesla, třeba **1234** nebo **1111**.
@@ -125,7 +125,7 @@ Podrobnosti o e-mailových profilech najdete v tématu [Konfigurace přístupu k
   Aplikace můžete omezit přidáním jejich ID sady prostředků do zásady. Pokud je aplikace v zařízení nainstalovaná, zařízení se označí jako nevyhovující.
 
   - **Název aplikace** – zadejte uživatelsky přívětivý název, který vám usnadní identifikaci ID sady prostředků.
-  - **ID sady prostředků aplikace** – zadejte jedinečný identifikátor sady přiřazený poskytovatelem aplikace. ID sady najdete v tématu [Jak najít ID sady prostředků pro aplikaci pro iOS](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app) (otevře se další web Microsoftu).  
+  - **ID sady prostředků aplikace** – zadejte jedinečný identifikátor sady přiřazený poskytovatelem aplikace. ID sady najdete v tématu [Jak najít ID sady prostředků pro aplikaci pro iOS/iPadOS](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app) (otevře se další web Microsoftu).  
 
 ## <a name="next-steps"></a>Další kroky
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/28/2020
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b61c333f41054194b44c7517e508fe1ef6d28d4
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: c6678c3fbc247ac0595775c0ccc72c7bdb9c55e1
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812374"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513091"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Přiřazení profilů uživatelů a zařízení v Microsoft Intune
 
@@ -73,7 +73,7 @@ Na zařízeních s Windows 10 můžete přidat **pravidla použitelnosti** , aby
 
 Mnoho uživatelů požaduje používání skupin uživatelů a kdy používat skupiny zařízení. Odpověď závisí na vašem cíli. Tady jsou některé doprovodné materiály, které vám pomohou začít.
 
-### <a name="device-groups"></a>skupiny zařízení.
+### <a name="device-groups"></a>Skupiny zařízení
 
 Pokud chcete použít nastavení na zařízení bez ohledu na to, kdo je přihlášený, přiřaďte své profily ke skupině zařízení. Nastavení použitá pro skupiny zařízení vždy přecházejí na zařízení, nikoli na uživatele.
 
@@ -89,7 +89,7 @@ Pokud si nejste vědomi, kdo se k zařízení přihlásil, nebo pokud je někdo 
 
 ### <a name="user-groups"></a>Skupiny uživatelů
 
-Nastavení profilu použité pro skupiny uživatelů vždycky přejdou na uživatele a při přihlášení ke svému množství zařízení se dostanete k uživateli. Pro uživatele je běžné mít mnoho zařízení, jako je například Surface pro práci, a osobní zařízení s iOS. A je normální pro uživatele, kteří mají přístup k e-mailu a jiným prostředkům organizace z těchto zařízení.
+Nastavení profilu použité pro skupiny uživatelů vždycky přejdou na uživatele a při přihlášení ke svému množství zařízení se dostanete k uživateli. Pro uživatele je běžné mít mnoho zařízení, jako je například Surface pro práci, a osobní zařízení s iOS/iPadOS. A je normální pro uživatele, kteří mají přístup k e-mailu a jiným prostředkům organizace z těchto zařízení.
 
 Příklad:
 

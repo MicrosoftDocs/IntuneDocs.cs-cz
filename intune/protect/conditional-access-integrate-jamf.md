@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 4b6dcbcc-4661-4463-9a36-698d673502c6
-ms.reviewer: elocholi
+ms.reviewer: jinyoon
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 01dae8f6c90155e649211ab226cf24eeade29b42
-ms.sourcegitcommit: f5108039f0ade52e95ea3ac1da1aa16d02224af3
+ms.openlocfilehash: 9dab1025e283ed1591c22b03ed4e3a61d40a20c3
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74946678"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515080"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrace Jamf Pro s Intune pro dodržování předpisů
 
@@ -33,7 +33,7 @@ Když se Jamf pro integruje s Intune, můžete synchronizovat data inventáře z
 
 Až nakonfigurujete integraci, [nakonfigurujte Jamf a Intune tak, aby vynutila dodržování předpisů s podmíněným přístupem](conditional-access-assign-jamf.md) na zařízeních spravovaných pomocí Jamf.
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 ### <a name="products-and-services"></a>Produkty a služby
 
@@ -90,21 +90,19 @@ Postup připojení Intune s Jamf pro:
    > [!IMPORTANT]
    > Než tuto stránku opustíte, zkopírujte hodnotu pro tajný klíč klienta a zaznamenejte ho pro pozdější použití. Tuto hodnotu budete potřebovat v pozdějších postupech. Tato hodnota není znovu k dispozici, aniž by bylo nutné znovu vytvořit registraci aplikace.
 
-6. V části **Správa** vyberte **Oprávnění rozhraní API**. 
+6. V části **Spravovat**vyberte **oprávnění rozhraní API** . 
 
-7. Na stránce oprávnění rozhraní API vyberte **Přidat oprávnění** a přidejte tak nové oprávnění. Na stránce **požádat o oprávnění API** vyberte **Intune**a pak vyberte **oprávnění aplikace**. Zaškrtněte políčko pouze u **update_device_attributes**.
+7. Na stránce oprávnění rozhraní API odeberte všechna oprávnění z této aplikace, a to tak, že vyberete ikonu **...** vedle každého existujícího oprávnění. Upozorňujeme, že to je povinné; integrace nebude úspěšná, pokud se v této registraci aplikace vyskytnou nějaká neočekávaná oprávnění navíc.
 
-8. Počkejte několik minut, aby se nové oprávnění mohlo projevit. Pak vyberte **udělit souhlas správce pro _\<> tenanta_** . Ověřte svůj účet v novém okně a udělte přístup k aplikaci podle pokynů.  
+8. V dalším kroku přidáme oprávnění k aktualizaci atributů zařízení. V levém horním rohu stránky **oprávnění rozhraní API** vyberte **Přidat oprávnění** a přidejte tak nové oprávnění. 
 
-9. Je možné, že budete muset několik minut počkat, aby se mohl uplatnit souhlas správce.
+9. Na stránce **požádat o oprávnění API** vyberte **Intune**a pak vyberte **oprávnění aplikace**. Zaškrtněte políčko pouze pro **update_device_attributes** a uložte nové oprávnění.
 
-10. Aktualizujte stránku kliknutím na tlačítko **aktualizovat** v horní části stránky. Potvrďte, že byl udělen souhlas správce pro **update_device_attributes** oprávnění. 
+10. Potom pro tuto aplikaci udělte souhlas správce tak, že vyberete **udělit souhlas správce pro _\<> tenanta_**  v levém horním rohu stránky **oprávnění k rozhraní API** . Je možné, že budete muset znovu ověřit účet v novém okně a udělit přístup k aplikaci podle pokynů.  
 
-11. Odeberte souhlas správce od **uživatele. oprávnění číst** výběrem nabídky **...** a výběrem možnosti **odvolat souhlas správce**.
+11. Aktualizujte stránku kliknutím na tlačítko **aktualizovat** v horní části stránky. Potvrďte, že byl udělen souhlas správce pro **update_device_attributes** oprávnění. 
 
-12. Bude také nutné odebrat **uživatele. oprávnění ke čtení** . Vyberte nabídku **...** **uživatel. číst** a vybrat **Odebrat oprávnění**. 
-
-8. Po úspěšném zaregistrování aplikace by měla oprávnění API obsahovat jenom jedno oprávnění nazvané **update_device_attributes** a mělo by se zobrazit takto:
+12. Po úspěšném zaregistrování aplikace by měla oprávnění API obsahovat jenom jedno oprávnění nazvané **update_device_attributes** a mělo by se zobrazit takto:
 
    ![Úspěšná oprávnění](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
 

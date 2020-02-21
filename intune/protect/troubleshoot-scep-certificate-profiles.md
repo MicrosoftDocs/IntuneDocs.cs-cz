@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38bc86b1b9ba85eb7885a0e00673e551821063c1
-ms.sourcegitcommit: 459b0ee01eb6e69cc0ce66d4c4b81d73f510f96d
+ms.openlocfilehash: 4496a5bbc6d5ee5134dc4e6a795494710ea6865d
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034239"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515216"
 ---
 # <a name="overview-for-troubleshooting-scep-certificate-profiles-with-microsoft-intune"></a>Přehled řešení potíží s profily certifikátů SCEP pomocí Microsoft Intune
 
@@ -125,7 +125,7 @@ Můžete také [nahrávat a e-mailem protokoly](/intune-user-help/send-logs-to-y
 
 U zařízení se systémem iOS nebo iPadOS používáte protokoly ladění a **Xcode** , které běží na počítači Mac:
 
-1. Připojte zařízení s iOS k počítači Mac a potom otevřete konzolu **aplikace** > **nástroje** , kde otevřete konzolovou aplikaci. 
+1. Připojte zařízení se systémem iOS/iPadOS k počítači Mac a potom otevřete konzolu **aplikace** > **nástroje** , kde otevřete konzolovou aplikaci. 
 
 2. V části **Akce**vyberte **Zahrnout informační zprávy** a **zahrnout zprávy ladění**.
 

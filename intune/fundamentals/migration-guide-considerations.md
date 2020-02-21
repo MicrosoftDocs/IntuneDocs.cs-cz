@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86cef30c31b53c6bfd1873390fb7546cbeab2a53
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 936e4836938ddddc8e795d85de5a449ee77edaa4
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72510040"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514995"
 ---
 # <a name="special-migration-considerations"></a>Zvláštní stránky migrace
 
@@ -32,7 +32,7 @@ V závislosti na prostředí vašeho stávajícího poskytovatele MDM se vás m�
 
 Program registrace zařízení Apple (DEP) nastaví konfiguraci zařízení, kterou koncový uživatel nebude moct odebrat. Pokud chcete zachovat pokročilé funkce správy DEP, je potřeba vrátit zařízení do výchozího stavu prostřednictvím vymazání a pak ho zaregistrovat do Intune.
 
-Pokud chcete ke správě zařízení v Intune dále používat program DEP, [nastavte registraci zařízení s iOSem pomocí programu DEP](../enrollment/device-enrollment-program-enroll-ios.md).
+Pokud chcete pokračovat v používání programu DEP ke správě zařízení v Intune, [nastavte registraci zařízení s iOS/iPadOS pomocí program registrace zařízení](../enrollment/device-enrollment-program-enroll-ios.md).
 
 
 ## <a name="next-steps"></a>Další kroky

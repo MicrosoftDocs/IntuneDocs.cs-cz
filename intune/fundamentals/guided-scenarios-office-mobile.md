@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3399cf006543c0a3554c4c6ec812554462d74231
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: 0232855773626693d848f77e561c51d281739215
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75691808"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514604"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Scénář s asistencí – zabezpečené systém Microsoft Office mobilní aplikace 
 
-Podle tohoto scénáře v portálu pro správu zařízení můžete na zařízeních s iOS a Androidem povolit základní ochranu aplikací Intune.
+Podle tohoto průvodce na portálu pro správu zařízení můžete povolit základní ochranu aplikací Intune na zařízeních s iOS/iPadOS a Androidem.
 
 Ochrana aplikace, kterou povolíte, vynutila následující akce: 
 - Zašifrujte pracovní soubory.
@@ -51,13 +51,13 @@ Pomocí zásad ochrany aplikací můžete uživatelům zabránit v ukládání p
 
 Podmíněný přístup založený na aplikaci a správa klientských aplikací přidávají další vrstvu zabezpečení. Zajišťují, aby přístup k Exchangi Online a dalším službám Office 365 měly jenom klientské aplikace, které podporují řešení Intune s jeho zásadami ochrany aplikací.
 
-Blokovat integrované e-mailové aplikace na zařízeních s iOSem a Androidem můžete jen tehdy, pokud aplikaci Microsoft Outlook povolíte přístup k Exchangi Online. Kromě toho můžete u aplikací, které nepoužívají zásady ochrany aplikací Intune, blokovat přístup k SharePointu Online.
+Pokud povolíte přístup k Exchangi Online jenom aplikaci Microsoft Outlook, můžete zablokovat integrované e-mailové aplikace v iOS/iPadOS a Androidu. Kromě toho můžete u aplikací, které nepoužívají zásady ochrany aplikací Intune, blokovat přístup k SharePointu Online.
 
 V tomto příkladu použil správce zásady ochrany aplikací u aplikace Outlook a následné pravidlo podmíněného přístupu. To přidá Outlook na seznam schválených aplikací, které lze využít k přístupu k firemnímu e-mailu.
 
 ![Tok procesu podmíněného přístupu aplikace Outlook](./media/guided-scenarios-office-mobile/guided-scenarios-office-mobile-02.png)
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 Budete potřebovat následující oprávnění správce Intune:
 
@@ -69,7 +69,7 @@ Budete potřebovat následující oprávnění správce Intune:
 
 Po použití scénáře s průvodcem **Intune App Protection** se vyhnete sdílení nebo nevracení dat mimo vaši organizaci. 
 
-Přiřazení uživatelé s iOS a Androidem musí při každém otevření aplikace Office zadat kód PIN. Po 5 neúspěšných pokusech o zadání PIN kódu musí uživatelé resetovat PIN kód. Pokud už potřebujete PIN zařízení, nebudou mít uživatelé vliv na to.
+Přiřazení uživatelé s iOS/iPadOS a Androidem musí při každém otevření aplikace Office zadat kód PIN. Po 5 neúspěšných pokusech o zadání PIN kódu musí uživatelé resetovat PIN kód. Pokud už potřebujete PIN zařízení, nebudou mít uživatelé vliv na to.
 
 ### <a name="what-you-will-need-to-continue"></a>Co budete potřebovat k pokračování
 
@@ -86,7 +86,7 @@ V tomto kroku musíte zadat **předponu** a **Popis** pro nové zásady ochrany 
 
 ## <a name="step-3---apps"></a>Krok 3 – aplikace
 
-Abychom vám pomohli začít, tento scénář s asistencí předem vybere následující mobilní aplikace, které se budou chránit na zařízeních s iOS a Androidem:
+Abychom vám pomohli začít, tento scénář s asistencí předem vybírá následující mobilní aplikace pro ochranu na zařízeních s iOS/iPadOS a Androidem:
 - Microsoft Excel 
 - Microsoft Word 
 - Microsoft Teams 
@@ -105,7 +105,7 @@ Po výběru aplikací klikněte na tlačítko **Další**.
 
 V tomto kroku musíte nakonfigurovat požadavky pro přístup k firemním souborům a e-mailům v těchto aplikacích a jejich sdílení. Ve výchozím nastavení mohou uživatelé ukládat data do účtů OneDrive a SharePoint vaší organizace.
 
-| Nastavení | Description | Výchozí hodnota |
+| Nastavení | Popis | Výchozí hodnota |
 |---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
 | Typ kódu PIN | Číselné kódy PIN se skládají ze všech čísel. Hesla se skládají z alfanumerických znaků a speciálních znaků.  Pro konfiguraci typu "heslo" v systému iOS/iPadOS je nutné, aby měla aplikace sadu Intune SDK verze 7.1.12 nebo vyšší. Číselný typ nemá žádné omezení, pokud se jedná o verzi sady Intune SDK. | Číselné |
 | Vyberte minimální délku PIN kódu. | Určuje minimální počet číslic v posloupnosti kódu PIN. | 6 |

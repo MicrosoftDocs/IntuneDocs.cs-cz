@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24d0a8160d852a5a44f5df688b7e0bc230d56704
-ms.sourcegitcommit: c7c6be3833d9a63d43f31d598b555b49b33cf5cb
+ms.openlocfilehash: c454ae6184f4d2a7c3c31f3c61d2cf4331ac187c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76966381"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514094"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Konfigurace infrastruktury pro podporu SCEP s Intune
 
@@ -97,7 +97,7 @@ Povolí všechny porty a protokoly, které jsou nezbytné pro komunikaci mezi sl
 
 Při použití SCEP se používají následující certifikáty a šablony.
 
-|Objekt    |Details    |
+|Objekt    |Podrobnosti    |
 |----------|-----------|
 |**Šablona certifikátu SCEP**         |Šablona, kterou nakonfigurujete ve vaší vydávající certifikační autoritě, která se používá k sestavování požadavků SCEP zařízení. |
 |**Certifikát pro ověřování klientů** |Požadováno od vaší vydávající certifikační autority nebo veřejné certifikační autority.<br /> Tento certifikát nainstalujete do počítače, který je hostitelem služby NDES a používá ho Intune Certificate Connector.<br /> Pokud má certifikát nastavené použití klíče *klienta* a *serveru* (**rozšířené použití klíčů**) na šabloně certifikační autority, kterou používáte k vystavení tohoto certifikátu. Pak můžete použít stejný certifikát pro ověřování serverů a klientů. |
@@ -123,7 +123,7 @@ Následující části vyžadují znalost systému Windows Server 2012 R2 nebo n
 
 ### <a name="create-the-scep-certificate-template"></a>Vytvoření šablony certifikátu SCEP
 
-1. Vytvořte šablonu certifikátu v2 (s kompatibilitou systému Windows 2003), která se použije jako šablona certifikátu SCEP. Můžete postupovat následovně:
+1. Vytvořte šablonu certifikátu v2 (s kompatibilitou systému Windows 2003), která se použije jako šablona certifikátu SCEP. Můžete:
 
    - Pomocí modulu snap-in *šablony certifikátů* vytvořte novou vlastní šablonu.
    - Zkopírujte existující šablonu (třeba šablonu Uživatel) a pak aktualizujte kopii, která se má použít jako šablona NDES.
@@ -148,7 +148,7 @@ Následující části vyžadují znalost systému Windows Server 2012 R2 nebo n
        > [!IMPORTANT]
        > Přidejte pouze zásady pro aplikace, které požadujete. Správnost zadaných voleb zkontrolujte se správci zabezpečení.
 
-     - V případě šablon certifikátů pro iOS a macOS také upravte **použití klíče** a ujistěte se, že není vybraná možnost **podpis je důkazem původu** .
+     - Pro šablony certifikátů iOS/iPadOS a macOS také upravte **použití klíče** a ujistěte se, že není vybraná možnost **podpis je důkazem původu** .
 
      ![Šablona, karta Rozšíření](./media/certificates-scep-configure/scep-ndes-extensions.jpg)  
 
@@ -217,7 +217,7 @@ Po [Vytvoření šablony certifikátu SCEP](#create-the-scep-certificate-templat
 Ve výchozím nastavení Intune používá hodnotu nakonfigurovanou v šabloně. Můžete ale nakonfigurovat certifikační autoritu, aby žadateli umožňovala zadat jinou hodnotu a tato hodnota se dá nastavit v konzole Intune.
 
 > [!IMPORTANT]
-> Pro iOS a macOS vždy použijte hodnotu nastavenou v šabloně.
+> Pro iOS/iPadOS a macOS vždycky použijte hodnotu nastavenou v šabloně.
 
 #### <a name="to-configure-a-value-that-can-be-set-from-within-the-intune-console"></a>Konfigurace hodnoty, kterou je možné nastavit v konzole Intune
 
@@ -253,10 +253,10 @@ Následující postupy vám pomůžou nakonfigurovat službu zápisu síťových
 
       - **Webový server** > **Vývoj aplikací** > **ASP.NET 4.5**
 
-        Instalace technologie ASP.NET 4.5 nainstaluje rozhraní .NET Framework 4.5. Při instalaci .NET Framework 4.5 nainstalujte základní rozhraní **.NET Framework 4.5**, **ASP.NET 4.5** a funkci **Služby WCF** > **Aktivace protokolem HTTP**.
+        Instalace technologie ASP.NET 4.5 nainstaluje rozhraní .NET Framework 4.5. Při instalaci rozhraní .NET Framework 4.5 nainstalujte základní funkci rozhraní **.NET Framework 4.5**, **ASP.NET 4.5** a funkci **Služby WCF** > **Aktivace protokolem HTTP**.
 
       - **Nástroje pro správu** > **Kompatibilita správy služby IIS 6** > **Kompatibilita metabáze služby IIS 6**
-      - **Nástroje pro správu** > **Kompatibilita správy služby IIS 6** > **Kompatibilita rozhraní WMI služby IIS 6**
+      - **Nástroje pro správu** > **Kompatibilita správy služby IIS 6** > **Kompatibilita metabáze služby IIS 6 WMI**
       - Na serveru přidejte účet služby NDES jako člena místní skupiny **IIS_IUSR**.
 
 2. V počítači, který je hostitelem služby NDES, spusťte na příkazovém řádku se zvýšenými oprávněními následující příkaz. Následující příkaz nastaví hlavní název služby (SPN) účtu služby NDES:
@@ -363,7 +363,7 @@ Microsoft Intune Certificate Connector se nainstaluje na server, na kterém bě�
 
 2. Vyberte možnost **Správa tenanta** > **konektory a tokeny** > **konektory certifikátů** > **Přidat**.
 
-3. Stáhněte a uložte konektor pro soubor SCEP. Uložte ho do umístění přístupné ze serveru, na který chcete konektor nainstalovat.
+3. Stáhněte a uložte konektor pro soubor SCEP. Uložte ho do umístění přístupného ze serveru, na který chcete konektor nainstalovat.
 
    ![ConnectorDownload](./media/certificates-scep-configure/download-certificates-connector.png)
 

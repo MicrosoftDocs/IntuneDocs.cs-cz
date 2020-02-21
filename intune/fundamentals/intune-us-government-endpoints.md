@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfa93bb758447c872d172ded7706fd7507a42f11
-ms.sourcegitcommit: c7c6be3833d9a63d43f31d598b555b49b33cf5cb
+ms.openlocfilehash: d7edf84ada3c84b7ad31748909ef81a877237fd5
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76966279"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514468"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Koncové body pro státní správu USA pro Microsoft Intune
 
@@ -31,7 +31,7 @@ Tato stránka obsahuje seznam koncových bodů pro státní správu USA potřebn
 
 Pokud chcete spravovat zařízení za branami firewall a proxy servery, musíte povolit komunikaci s Intune.
 
-- Proxy server musí podporovat **HTTP (80)** i **HTTPS (443)**, protože klienti Intune používají oba protokoly.
+- Proxy server musí podporovat **HTTP (80)** i **HTTPS (443)** , protože klienti Intune používají oba protokoly.
 - U některých úloh (například stahování aktualizací softwaru) vyžaduje Intune neověřený proxy server přístup k manage.microsoft.com.
 
 Nastavení proxy server můžete upravit na jednotlivých klientských počítačích. Nastavení Zásady skupiny můžete použít také ke změně nastavení všech klientských počítačů umístěných za zadaným proxy server.
@@ -42,7 +42,7 @@ Další informace o automatické registraci Windows 10 a registraci zařízení 
 
 Následující tabulky obsahují seznam portů a služeb, ke kterým přistupuje klient Intune:
 
-|**Koncový bod**|**IP adresa**|
+|**Služba**|**IP adresa**|
 |---------------------|-----------|
 |*.manage.microsoft.us | 52.243.26.209 <br> 52.247.173.11 <br> 52.227.183.12 <br>52.227.180.205 <br> 52.227.178.107 <br> 13.72.185.168 <br> 52.227.173.179 <br> 52.227.175.242 <br> 13.72.39.209 <br> 52.243.26.209 <br> 52.247.173.11 |
 | enterpriseregistration.microsoftonline.us | 13.72.188.239 <br> 13.72.55.179 |
@@ -65,17 +65,17 @@ V zařízeních spravovaných pomocí Intune, která spravuje použití správy 
 
 ## <a name="apple-device-network-information"></a>Informace o síti pro zařízení Apple
 
-|**Používá pro**|**Název hostitele (IP adresa/podsíť)**|**Protokol**|**Port**|
+|**Používá se pro**|**Název hostitele (IP adresa/podsíť)**|**Protokol**|**Přístavní**|
 |------------|-----------|------------|-----------|
-|Načítání a zobrazování obsahu ze serverů Apple|itunes.apple.com<br>\*.itunes.apple.com<br>\*.mzstatic.com<br>\*.phobos.apple.com<br>\*.phobos.itunes-apple.com.akadns.net|HTTP|80|
+|Načítání a zobrazování obsahu ze serverů Apple|itunes.apple.com<br>\*. itunes.apple.com<br>\*. mzstatic.com<br>\*. phobos.apple.com<br>\*. phobos.itunes-apple.com.akadns.net|HTTP|80|
 |Komunikace se servery APNS|#-courier.push.apple.com<br>' # ' je náhodné číslo od 0 do 50.|TCP|5223 a 443|
 |Různé funkce, včetně přístupu k Internetu, obchodu iTunes, macOS App Storu, iCloud, zasílání zpráv atd.|phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net|HTTP/HTTPS|80 nebo 443|
 
-Více informací najdete v následujících tématech:
+Více informací najdete v následujících tématech:
 
 - [Porty TCP a UDP používané softwarovými produkty společnosti Apple](https://support.apple.com/HT202944)
-- [O připojeních hostitele serveru macOS, iOS a iTunes a procesech na pozadí iTunes](https://support.apple.com/HT201999)
-- [Pokud klienti macOS a iOS nezískávají nabízená oznámení Apple](https://support.apple.com/HT203609)
+- [O připojeních hostitele serveru macOS, iOS/iPadOS a iTunes a procesech na pozadí iTunes](https://support.apple.com/HT201999)
+- [Pokud klienti macOS a iOS/iPadOS nezískávají nabízená oznámení Apple](https://support.apple.com/HT203609)
 
 ## <a name="next-steps"></a>Další kroky
 [Koncové body sítě pro Microsoft Intune](intune-endpoints.md)

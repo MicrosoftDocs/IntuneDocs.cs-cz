@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdc704d1971dfcc46ee2c3f5550e201d7a8e89fb
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 1cdfc7d42d3bffe1abe21deddfe146af953b150a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505182"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514944"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Implementace plánu Microsoft Intune
 
@@ -39,7 +39,7 @@ Požadavky samotné služby Intune:
 
 - Předplatné Office 365 (pro aplikace Office a aplikace spravované zásadou ochrany aplikací)
 
-- Certifikát Apple APNs (pro správu platformy zařízení iOS)
+- Certifikát Apple APNs (pro povolení správy platforem zařízení s iOS/iPadOS)
 
 - Azure AD Connect (pro synchronizaci adresáře)
 
@@ -88,7 +88,7 @@ Než začnete v Intune nastavovat, konfigurovat, spravovat a registrovat zaříz
 
 ### <a name="task-6-enable-device-platforms"></a>6\. úkol: Povolení platforem zařízení
 
-Ve výchozím nastavení je povolená většina platforem zařízení. Výjimkou jsou zařízení Apple (iOS a Mac). Předtím, než budete v Intune registrovat a spravovat zařízení s iOSem, musíte tuto platformu zařízení povolit. K tomu potřebujete vytvořit MDM Push Certificate a přidat ho do Intune.
+Ve výchozím nastavení jsou povolené většinu platforem zařízení s výjimkou zařízení Apple (iOS/iPadOS a Mac). Aby bylo možné zařízení s iOS/iPadOS registrovat a spravovat v Intune, musí být povolená platforma zařízení. K tomu potřebujete vytvořit MDM Push Certificate a přidat ho do Intune.
 
 - Další informace o [povolení registrace zařízení Apple](../enrollment/apple-mdm-push-certificate-get.md).
 
@@ -130,7 +130,7 @@ Intune podporuje podmíněný přístup pro Exchange Online, místní Exchange, 
 
 ### <a name="task-13-enroll-devices"></a>13. úkol: Registrace zařízení
 
-Intune podporuje tyto platformy zařízení: iOS, Mac OS, Android, Windows pro stolní počítače a Windows Mobile. Podle potřeby zaregistrujte požadované platformy mobilních zařízení na základě způsobu použití nasazené služby Intune a požadavků.
+Intune podporuje platformy zařízení s iOS/iPadOS, Mac OS, Androidem, Windows Desktop a Windows Mobile. Podle potřeby zaregistrujte požadované platformy mobilních zařízení na základě způsobu použití nasazené služby Intune a požadavků.
 
 - Další informace o [registraci zařízení](../enrollment/device-enrollment.md).
 

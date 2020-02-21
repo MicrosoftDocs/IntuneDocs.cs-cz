@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19c1bb959212ebeaea40f7089cba5533b6efeb71
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
+ms.openlocfilehash: 9f639c4d2c2bcfa62f828fa18973fe6a513b1a82
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912603"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514859"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Nastavení integrace Symantec Endpoint Protection Mobile s Intune
 
@@ -54,7 +54,7 @@ SEP Mobile podporuje dva způsoby integrace s Intune:
 
 ### <a name="how-are-the-sep-mobile-apps-used-with-azure-ad-and-intune"></a>Jak se používají aplikace SEP Mobile s Azure AD a Intune?
 
-- **Aplikace pro iOS:** Umožňuje koncovým uživatelům přihlásit se do služby Azure AD pomocí aplikace pro iOS.
+- **aplikace pro iOS:** Umožňuje koncovým uživatelům přihlásit se k Azure AD pomocí aplikace pro iOS/iPadOS.
 
 - **Aplikace pro Android:** Umožňuje koncovým uživatelům přihlásit se do služby Azure AD pomocí aplikace pro Android.
 
@@ -77,11 +77,11 @@ SEP Mobile podporuje dva způsoby integrace s Intune:
 
 5. Když se otevře přihlašovací stránka, zadejte své přihlašovací údaje Intune a pak vyberte **Accept** (Přijmout).
 
-    ![Obrázek výzvy k přihlášení aplikace pro iOS do služby Intune](./media/skycure-mtd-connector-integration/symantec-portal-basic-accept.png)
+    ![Obrázek výzvy pro přihlášení k Intune aplikace pro iOS/iPadOS](./media/skycure-mtd-connector-integration/symantec-portal-basic-accept.png)
 
 6. Po přidání aplikace do Azure AD se zobrazí indikace, že byla aplikace úspěšně přidána.
 
-    ![Obrázek dokončení přidání aplikace pro iOS](./media/skycure-mtd-connector-integration/symantec-portal-basic-added.png)
+    ![Obrázek obrazovky pro dokončení aplikace pro iOS/iPadOS](./media/skycure-mtd-connector-integration/symantec-portal-basic-added.png)
 
 7. Tyto kroky opakujte pro aplikaci **SEP Mobile pro Android** a aplikaci **správy**.
 
@@ -101,7 +101,7 @@ Služba SEP Mobile sesynchronizuje zařízení, na kterých běží její služb
 
 ### <a name="retrieve-the-directory-id-in-azure-ad"></a>Načtení ID adresáře v Azure AD
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k [portálu Azure](https://portal.azure.com).
 
 2. Do vyhledávacího pole zadejte „Active Directory“ a pak vyberte **Azure Active Directory**.
 
@@ -136,11 +136,11 @@ Služba SEP Mobile sesynchronizuje zařízení, na kterých běží její služb
 
 6. Vedle **iOS App** (Aplikace pro iOS) zvolte tlačítko **Add to Active Directory** (Přidat do AD).
 
-    ![Obrázek znázorňující přidání aplikace pro iOS do Active Directory](./media/skycure-mtd-connector-integration/symantec-portal-basic-add.png)
+    ![Obrázek znázorňující přidání aplikace pro iOS/iPadOS do služby Active Directory](./media/skycure-mtd-connector-integration/symantec-portal-basic-add.png)
 
 7. Přihlaste se pomocí přihlašovacích údajů Azure Active Directory pro účet Office 365, který spravuje adresář.
 
-8. Pomocí tlačítka **Accept** (Přijmout) přidejte aplikaci SEP Mobile pro iOS do Azure Active Directory.
+8. Kliknutím na tlačítko **přijmout** přidejte aplikaci SEP Mobile iOS/iPadOS do Azure Active Directory.
 
     ![Obrázek znázorňující tlačítko Přijmout](./media/skycure-mtd-connector-integration/symantec-portal-basic-accept.png)
 

@@ -1,12 +1,12 @@
 ---
-title: Konfigurace nastavení Wi-Fi pro zařízení s iOSem v Microsoft Intune – Azure | Microsoft Docs
+title: Konfigurace nastavení Wi-Fi pro zařízení s iOS/iPadOS v Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Vytvořte nebo přidejte konfigurační profil zařízení s připojením Wi-Fi pro zařízení s iOSem. Podívejte se na různá nastavení, včetně přidání certifikátů, volby typu protokolu EAP a výběru metody ověřování v Microsoft Intune.
+description: Vytvořte nebo přidejte profil konfigurace zařízení Wi-Fi pro zařízení s iOS/iPadOS. Podívejte se na různá nastavení, včetně přidání certifikátů, volby typu protokolu EAP a výběru metody ověřování v Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd37813e5ea0b6a64d7fae22cada06cccb01a942
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 68685428ac94dfe08306858774eaf98fb079e66c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059222"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512309"
 ---
-# <a name="add-wi-fi-settings-for-ios-devices-in-microsoft-intune"></a>Přidání nastavení Wi-Fi pro zařízení s iOSem v Microsoft Intune
+# <a name="add-wi-fi-settings-for-ios-and-ipados-devices-in-microsoft-intune"></a>Přidání nastavení Wi-Fi pro zařízení s iOS a iPadOS v Microsoft Intune
 
-Můžete vytvořit profil s konkrétním nastavením Wi-Fi a potom ho nasadit na zařízení s iOSem. Microsoft Intune nabízí mnoho funkcí, včetně ověřování ve vaší síti, přidání certifikátu PKCS nebo SCEP a dalších.
+Můžete vytvořit profil s konkrétním nastavením Wi-Fi a potom tento profil nasadit do zařízení se systémem iOS/iPadOS. Microsoft Intune nabízí mnoho funkcí, včetně ověřování ve vaší síti, přidání certifikátu PKCS nebo SCEP a dalších.
 
 Tato nastavení Wi-Fi jsou rozdělena do dvou kategorií: základní nastavení a nastavení Enterprise.
 
@@ -36,7 +36,7 @@ Těmito nastaveními se zabývá tento článek.
 [Vytvořte profil zařízení v Microsoft Intune](../device-profile-create.md).
 
 > [!NOTE]
-> Tato nastavení jsou k dispozici pro všechny typy registrace. Další informace o typech registrace najdete v tématu Registrace zařízení se [systémem iOS](../enrollment/ios-enroll.md).
+> Tato nastavení jsou k dispozici pro všechny typy registrace. Další informace o typech registrace najdete v tématu Registrace zařízení se [systémem iOS/iPadOS](../enrollment/ios-enroll.md).
 
 ## <a name="basic-profiles"></a>Základní profily
 

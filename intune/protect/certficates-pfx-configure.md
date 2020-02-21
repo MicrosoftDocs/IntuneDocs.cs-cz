@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6d35d7470508b610f850ca7f9f394e0d26bec677
-ms.sourcegitcommit: 576b9528629981e87e775fac146932e502f07a74
+ms.openlocfilehash: b963a508ac140988993d3953d6a9d6398404e7b6
+ms.sourcegitcommit: 67f926ba83f8a955e16b741a610ad84d6044f8f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77258092"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77529290"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
@@ -66,7 +66,7 @@ Pokud chcete používat certifikáty PKCS s Intune, musíte mít následující 
   Microsoft Intune Certificate Connector podporuje také režim FIPS (Federal Information Processing Standard). Režim FIPS není povinný, ale pokud ho aktivujete, můžete vydávat a odvolávat certifikáty.
 
 - **Konektor certifikátu PFX pro Microsoft Intune**:  
-  Pokud plánujete používat e-mailové šifrování S/MIME, Stáhněte si pomocí portálu Intune *Certificate Connector* , který podporuje import certifikátů PFX.  Přejděte na **Konfigurace zařízení** > **konektory certifikátů** > **Přidat**a postupujte podle *pokynů k instalaci konektoru pro importované certifikáty PFX*. Pomocí odkazu ke stažení na portálu začněte stahovat instalační program **PfxCertificateConnectorBootstrapper. exe**. 
+  Pokud plánujete používat e-mailové šifrování S/MIME, Stáhněte si pomocí portálu Intune *Certificate Connector* , který podporuje import certifikátů PFX.  Přejděte na **Konfigurace zařízení** > **konektory certifikátů** > **Přidat**a postupujte podle *pokynů k instalaci konektoru pro importované certifikáty PFX*. Pomocí odkazu ke stažení na portálu začněte stahovat instalační program **PfxCertificateConnectorBootstrapper. exe**.
 
   Každý tenant Intune podporuje jednu instanci tohoto konektoru. Tento konektor můžete nainstalovat na stejný server jako instanci konektoru Microsoft Intune Certificate Connector.
 
@@ -79,10 +79,12 @@ Pokud chcete používat certifikáty PKCS s Intune, musíte mít následující 
   Další informace najdete v tématu [koncové body sítě pro Microsoft Intune](../fundamentals/intune-endpoints.md)a [požadavky na konfiguraci sítě a šířku pásma Intune](../fundamentals/network-bandwidth-use.md).
 
 - **Windows Server**:  
-  Používáte Windows Server k hostování:
+  Pro hostování použijte Windows Server:
 
   - Scénáře ověřování a podepisování e-mailů S Microsoft Intune Certificate Connector – pro ověřování a kódování MIME
   - Konektor certifikátů PFX pro scénáře šifrování e-mailu S/MIME pro Microsoft Intune –.
+
+  Konektory vyžadují přístup ke stejným portům, jako jsou popsány pro spravovaná zařízení, jak se nachází v [obsahu koncového bodu zařízení](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices).
 
   Intune podporuje instalaci *konektoru PFX Certificate* na stejném serveru jako *Microsoft Intune Certificate Connector*.
   
@@ -124,7 +126,7 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
 9. V **Rozšíření** zkontrolujte, jestli jsou v rozšíření **Zásady použití** položky Šifrování systému souborů, Zabezpečení e-mailu a Ověření klienta.
 
     > [!IMPORTANT]
-    > V případě šablon certifikátů pro iOS přejděte na kartu **Rozšíření**, aktualizujte **Použití klíče** a zkontrolujte, že není vybraná možnost **Podpis je důkazem původu**.
+    > V případě šablon certifikátů pro iOS/iPadOS otevřete kartu **rozšíření** , aktualizujte **použití klíče**a potvrďte, že není vybraná možnost **podpis je důkazem původu** .
 
 10. V **Zabezpečení** přidejte účet počítače pro server, na který instalujete Microsoft Intune Certificate Connector. Pro tento účet povolte oprávnění **Číst** a **Zaregistrovat**.
 11. Vyberte **Použít** > **OK** a šablonu certifikátu uložte. Zavřete **konzolu šablon certifikátů**.

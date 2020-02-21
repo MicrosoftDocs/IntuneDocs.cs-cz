@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cafe9d3036a727d79de88eda050399138da55675
-ms.sourcegitcommit: 24487f078349795922dc497c952e8358cf767a1a
+ms.openlocfilehash: 7113552e09a7c7fa145a452e56575bfaf5297c3e
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76977746"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514556"
 ---
 # <a name="in-development-for-microsoft-intune---february-2020"></a>Ve vývoji pro Microsoft Intune – únor 2020
 
@@ -65,8 +65,8 @@ Aplikaci Portál společnosti na zařízeních s Windows aktualizujeme tak, aby 
 Aplikace Portál společnosti zobrazí koncovým uživatelům další zprávy o stavu instalace aplikace. Následující podmínky se vztahují na nové funkce závislosti Win32:
 - Aplikaci se nepovedlo nainstalovat. Nevyhověly závislosti definované správcem.
 
-### <a name="retarget-web-clips-to-microsoft-edge-on-ios-devices---5455276---"></a>Změna cílení webových klipů na zařízení s iOS na Microsoft Edge<!-- 5455276 -->
-Webové klipy, které fungují jako připnuté webové aplikace na zařízeních s iOS, bude nutné aktualizovat. Nově nasazené webové klipy se otevřou v Microsoft Edge místo Intune Managed Browser, pokud je to potřeba pro otevření v chráněném prohlížeči. Aby bylo zajištěno, že budou otevřeny v Microsoft Edge místo Managed Browser, je třeba změnit cílení na stávající webové klipy.
+### <a name="retarget-web-clips-to-microsoft-edge-on-iosipados-devices---5455276---"></a>Změna cílení webových klipů na zařízení s iOS nebo iPadOS na Microsoft Edge<!-- 5455276 -->
+Webové klipy, které fungují jako připnuté webové aplikace v zařízeních s iOS/iPadOS, budou muset být aktualizované. Nově nasazené webové klipy se otevřou v Microsoft Edge místo Intune Managed Browser, pokud je to potřeba pro otevření v chráněném prohlížeči. Aby bylo zajištěno, že budou otevřeny v Microsoft Edge místo Managed Browser, je třeba změnit cílení na stávající webové klipy.
 
 ### <a name="macos-company-portal-user-experience-improvements---5568987---"></a>vylepšení uživatelského prostředí pro macOS Portál společnosti<!-- 5568987 -->
 Vylepšujeme možnosti registrace zařízení macOS a aplikace Portál společnosti pro Mac. Můžete očekávat následující:
@@ -92,22 +92,22 @@ Bude k dispozici nový profil konfigurace zařízení macOS, který konfiguruje 
 Platí pro:
 - macOS
 
-### <a name="vpn-profiles-with-ikev2-vpn-connections-can-use-always-on-with-ios-devices----1947932-idready---"></a>Profily sítě VPN s připojením IKEv2 VPN můžou používat Always On se zařízeními s iOS. <!-- 1947932 idready -->
-Na zařízeních se systémem iOS můžete vytvořit profil sítě VPN, který používá připojení IKEv2 (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **iOS/iPadOS** pro platformu > **VPN** pro typ profilu). V budoucí aktualizaci můžete nakonfigurovat Always On s IKEv2. Po nakonfigurování se profily IKEv2 VPN připojují automaticky a udržují se připojení (nebo rychlé opětovné připojení) k síti VPN. Zůstane připojený i při přesunu mezi sítěmi nebo po restartování zařízení.
+### <a name="vpn-profiles-with-ikev2-vpn-connections-can-use-always-on-with-iosipados-devices----1947932-idready---"></a>Profily sítě VPN s připojením IKEv2 VPN můžou používat Always On se zařízeními se systémem iOS/iPadOS. <!-- 1947932 idready -->
+Na zařízeních se systémem iOS/iPadOS můžete vytvořit profil sítě VPN, který používá připojení IKEv2 (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **iOS/iPadOS** pro pro typ profilu Platform > **VPN** ). V budoucí aktualizaci můžete nakonfigurovat Always On s IKEv2. Po nakonfigurování se profily IKEv2 VPN připojují automaticky a udržují se připojení (nebo rychlé opětovné připojení) k síti VPN. Zůstane připojený i při přesunu mezi sítěmi nebo po restartování zařízení.
 
-V systému iOS je vždycky zapnutá síť VPN omezená na profily IKEv2.
+V systému iOS/iPadOS je vždycky zapnutá síť VPN omezená na profily IKEv2.
 
-Pokud chcete zobrazit aktuální nastavení IKEv2, která můžete nakonfigurovat, přejděte na [Přidat nastavení sítě VPN na zařízeních s iOS v Microsoft Intune](../configuration/vpn-settings-ios.md#ikev2-settings).
+Pokud chcete zobrazit aktuální nastavení IKEv2, která můžete konfigurovat, přejděte na téma [Přidání nastavení sítě VPN na zařízeních s iOS/iPadOS v Microsoft Intune](../configuration/vpn-settings-ios.md#ikev2-settings).
 
 Platí pro:
 - iOS
 
-### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-ios-and-macos-devices---5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984-idready---"></a>Vylepšené prostředí uživatelského rozhraní při vytváření konfiguračních profilů na zařízeních s iOS a macOS<!-- 5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984 idready -->
-Když vytváříte profil pro zařízení se systémem iOS nebo macOS, prostředí v centru pro správu správy koncových bodů se aktualizuje. Tato změna má vliv na následující konfigurační profily zařízení (**zařízení** > **konfiguračních profilech** > **Vytvoření profilu** > **iOS** nebo **MacOS** pro platformu):
+### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984-idready---"></a>Vylepšené prostředí uživatelského rozhraní při vytváření konfiguračních profilů na zařízeních s iOS/iPadOS a macOS<!-- 5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984 idready -->
+Když vytváříte profil pro zařízení s iOS/iPadOS nebo macOS, bude se aktualizovat prostředí v centru pro správu správy koncových bodů. Tato změna má vliv na následující konfigurační profily zařízení (**zařízení** > **konfiguračních profilech** > **Vytvoření profilu** > **iOS** nebo **MacOS** pro platformu):
 
-- Vlastní: iOS, macOS
-- Funkce zařízení: iOS, macOS
-- Omezení zařízení: iOS, macOS
+- Vlastní: iOS/iPadOS, macOS
+- Funkce zařízení: iOS/iPadOS, macOS
+- Omezení zařízení: iOS/iPadOS, macOS
 - Ochrana koncového bodu: macOS
 - Rozšíření: macOS
 - Soubor předvoleb: macOS
@@ -190,7 +190,7 @@ V uzlu *zabezpečení koncového bodu* budete moct nakonfigurovat nastavení pro
 
 [!INCLUDE [Intune notices](../includes/intune-notices.md)]
 
-## <a name="see-also"></a>Související témata
+## <a name="see-also"></a>Viz také
 Podrobnosti o posledním vývoji najdete v tématu [co je nového v Microsoft Intune](whats-new.md).
 
 

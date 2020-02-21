@@ -15,19 +15,19 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f41d5d1ec3e302a277fe5e6ff6af9d33a7e89517
-ms.sourcegitcommit: d21539e52631c589bfeaa182418390f66672736c
+ms.openlocfilehash: 7d17749353bc3904a3d99210a5d56531d9af9c28
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/01/2020
-ms.locfileid: "75564913"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514808"
 ---
 # <a name="sophos-mobile-threat-defense-connector-with-intune"></a>Nastavení konektoru ochrany před mobilními hrozbami v Intune
 Přístup mobilních zařízení k podnikovým prostředkům můžete řídit pomocí podmíněného přístupu na základě posouzení rizik, které provádí společnost Sophos Mobile, řešení ochrany před mobilními hrozbami (MTD), které se integruje s Microsoft Intune. Riziko se vyhodnocuje na základě telemetrie shromážděných ze zařízení s mobilní aplikací Sophos.
 Na základě zásad dodržování předpisů zařízením v Intune můžete nakonfigurovat zásady podmíněného přístupu, které jsou založené na nástroji Sophos Mobile Threat Assessment, které můžete použít k povolení nebo blokování zařízení nesplňujících požadavky pro přístup k podnikovým prostředkům na základě zjištěných hrozeb.
 
 ## <a name="how-do-intune-and-sophos-mobile-help-protect-your-company-resources"></a>Jak Intune a Sophos Mobile chrání firemní prostředky?
-Mobilní aplikace Sophos pro Android a iOS zaznamenává telemetrii systému souborů, zásobníku sítě, zařízení a aplikací tam, kde je k dispozici, a poté odesílá data telemetrie do mobilní cloudové služby Sophos, aby zhodnotila riziko zařízení pro mobilní hrozby.
+Mobilní aplikace Sophos pro Android a iOS/iPadOS zaznamenává systém souborů, zásobník sítě, zařízení a telemetrii aplikací tam, kde je k dispozici, a poté odesílá data telemetrie do mobilní cloudové služby Sophos, aby zhodnotila riziko zařízení pro mobilní hrozby.
 Zásady dodržování předpisů pro zařízení v Intune obsahují pravidlo pro ochranu před mobilními hrozbami, které je založené na posouzení rizikového mobilního rizika pro Sophos. Když je toto pravidlo aktivní, Intune vyhodnocuje soulad zařízení se zásadami, které jste povolili. Pokud se zjistí, že zařízení nesplňuje dané předpisy, zablokuje se přístup uživatelů k podnikovým prostředkům, jako jsou Exchange Online a SharePoint Online. Uživatelé také dostanou pokyny z mobilní aplikace Sophos nainstalované ve svých zařízeních k vyřešení problému a opětovnému získání přístupu k podnikovým prostředkům.  
 
 ## <a name="sample-scenarios"></a>Ukázkové scénáře
@@ -67,7 +67,7 @@ Detekuje hrozby pro vaši síť, jako jsou útoky prostředníkem, a zabraňuje 
 - Android 5,0 a novější
 - iOS 11,0 a novější
 
-## <a name="prerequisites"></a>Požadované součásti  
+## <a name="prerequisites"></a>Předpoklady  
 - Azure Active Directory Premium
 - Odběr služby Microsoft Intune 
 - Předplatné ochrany před mobilními hrozbami v Sophos

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3affffdf69445ced667d718587303a5409423bf
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 0d9e61cbe4f6d6e07c61fe182e639e715996f9ee
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502396"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514434"
 ---
 # <a name="prevent-data-leaks-on-non-managed-devices-using-microsoft-intune"></a>Zabránění únikům dat na nespravovaných zařízeních pomocí Microsoft Intune
 
@@ -47,7 +47,7 @@ Následující akční plán je možné provést při splnění následujících
 
 ## <a name="action-plan"></a>Akční plán
 
-Pro zařízení s iOSem a Androidem:
+Pro zařízení s iOS/iPadOS a Androidem:
 
 1. Seznamte se s tím, jak [zásady ochrany aplikací fungují](../apps/app-protection-policy.md).
 2. Podívejte se, jak [vytvořit a nasadit zásady ochrany aplikací](../apps/app-protection-policies.md) pro mobilní aplikace Office.
@@ -63,7 +63,7 @@ Pro zařízení s Windows 10:
 
 Podle potřeby nasdílejte následující odkazy na další informace:
 
-* [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](../fundamentals/end-user-mam-apps-ios.md)
+* [Co očekávat, když je vaše aplikace pro iOS/iPadOS spravovaná zásadami ochrany aplikací](../fundamentals/end-user-mam-apps-ios.md)
 * [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](../fundamentals/end-user-mam-apps-android.md)
 
 ## <a name="next-steps"></a>Další kroky

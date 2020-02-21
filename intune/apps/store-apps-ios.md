@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2daa7428cf8677f9e1a2b11db2b3ce65e2df8bc4
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: f2baf60fed2c6010e5ae0784cda166ac4fabfd57
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76754996"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511731"
 ---
 # <a name="add-ios-store-apps-to-microsoft-intune"></a>Přidání aplikací pro App Store (iOS) do Microsoft Intune
 
@@ -32,11 +32,11 @@ ms.locfileid: "76754996"
 Informace v tomto článku vám pomůžou přidat do Intune aplikace z obchodu pro iOS. Aplikace z App Storu (iOS) jsou aplikace, které Intune instaluje na zařízení uživatelů. Uživatel je jeden ze zaměstnanců společnosti. Aplikace z obchodu pro iOS se automaticky aktualizují.
 
 >[!NOTE]
->Uživatelé zařízení s iOSem můžou odebrat některé integrované aplikace pro iOS, jako jsou například aplikace Akcie a Mapy, nemůžou je ale s použitím Intune znovu nasadit. Pokud uživatel tyto aplikace odstraní, musí si je znovu ručně nainstalovat z App Storu.
+>I když uživatelé zařízení se systémem iOS/iPadOS můžou odebrat některé integrované aplikace pro iOS/iPadOS, jako jsou například akcie a mapy, nemůžete tyto aplikace znovu nasadit pomocí Intune. Pokud uživatel tyto aplikace odstraní, musí si je znovu ručně nainstalovat z App Storu.
 
 ## <a name="before-you-start"></a>Než začnete
 
-Pomocí této metody můžete aplikace přiřazovat jen v případě, že jsou v App Storu bezplatné. Pokud chcete pomocí Intune přiřazovat placené aplikace, zvažte použití [programu Volume Purchase Program (Program hromadných nákupů) pro iOS](vpp-apps-ios.md).
+Pomocí této metody můžete aplikace přiřazovat jen v případě, že jsou v App Storu bezplatné. Pokud chcete přiřadit placené aplikace pomocí Intune, zvažte použití [programu Volume purchase pro iOS/iPadOS](vpp-apps-ios.md).
 
 >[!NOTE]
 >Při práci s Microsoft Intune doporučujeme používat prohlížeč Microsoft Edge nebo Google Chrome.

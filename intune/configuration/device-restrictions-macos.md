@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6513c09f252d5a914ace4e57e5a593877a387172
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 3d26c4c6cd05a411555f7824ad21b72431eb569c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206546"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511168"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>macOS nastavení zařízení pro povolení nebo omezení funkcí pomocí Intune
 
@@ -90,12 +90,12 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
     Tato funkce platí pro:  
     - macOS 10.10.3 a novější
 
-  - **Počet nealfanumerických znaků v hesle**: zadejte počet složitých znaků vyžadovaných v hesle (**0** až **4**).<br>Složitý znak je symbol, například **?**.
+  - **Počet nealfanumerických znaků v hesle**: zadejte počet složitých znaků vyžadovaných v hesle (**0** až **4**).<br>Složitý znak je symbol, například **?** .
   - **Minimální délka hesla**: zadejte minimální délku hesla, které uživatel musí nakonfigurovat (mezi **4** a **16** znaky).
   - **Jednoduchá hesla**: povolí použití jednoduchých hesel, jako je **0000** nebo **1234**.
   - **Maximální počet minut po uzamčení obrazovky, než se požaduje heslo**: Určete, jak dlouho musí být počítač neaktivní, než bude nutné heslo odemknout.
   - **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**: zadejte dobu, po kterou musí být počítač nečinný, než se zamkne obrazovka.
-  - **Vypršení platnosti hesla (dny)**: zadejte počet dnů, po jejichž uplynutí musí uživatel změnit heslo (**1** až **255** dní).
+  - **Vypršení platnosti hesla (dny)** : zadejte počet dnů, po jejichž uplynutí musí uživatel změnit heslo (**1** až **255** dní).
   - **Zakázat opakované použití předchozích hesel**: zadejte počet dříve použitých hesel, která se nesmí znovu použít, od **1** do **24**.
 
 - **Zablokovat uživateli změnu hesla**: vyberte **blok** pro zastavení změny, přidání nebo odebrání hesla. **Nenakonfigurováno** (výchozí) umožňuje přidávat, měnit a odebírat hesla.
@@ -163,7 +163,7 @@ Pokud chcete do těchto seznamů přidat aplikace, můžete:
 - **Zablokovat zálohování záložek iCloud**: **blok** zabraňuje iCloud synchronizaci záložek zařízení. **Nenakonfigurováno** (výchozí) umožňuje synchronizaci záložek iCloud.
 - **Zablokovat zálohování poznámek iCloud**: **blok** zabraňuje iCloud synchronizaci poznámek zařízení. **Nenakonfigurováno** (výchozí) umožňuje synchronizaci poznámek s iCloud.
 - **Blokovat knihovnu fotografií iCloud**: **Block** zakáže knihovnu fotografií iCloud a zabrání iCloud synchronizaci fotek zařízení. Všechny fotky, které nejsou plně stažené z knihovny fotografií iCloud, se z místního úložiště na zařízení odeberou. **Nenakonfigurováno** (výchozí) umožňuje synchronizovat fotky mezi zařízením a knihovnou fotek iCloud.
-- **Předání**: **Nenakonfigurováno** (výchozí) umožňuje uživatelům začít pracovat na zařízení MacOS a potom pokračovat v práci, kterou zahájil na jiném zařízení s iOS nebo MacOS. **Blok** zabraňuje funkci předání na zařízení. 
+- **Předání**: **Nenakonfigurováno** (výchozí) umožňuje uživatelům začít pracovat na zařízení MacOS a potom pokračovat v práci, kterou zahájil na jiném zařízení s iOS/iPadOS nebo MacOS. **Blok** zabraňuje funkci předání na zařízení. 
 
   Tato funkce platí pro:  
   - macOS 10,15 a novější
@@ -178,4 +178,4 @@ Pokud chcete do těchto seznamů přidat aplikace, můžete:
 
 [Přiřaďte profil](../device-profile-assign.md) a [monitorujte jeho stav](../device-profile-monitor.md).
 
-Na zařízeních s [iOS](../device-restrictions-ios.md) můžete taky omezit funkce a nastavení zařízení.
+Na zařízeních s [iOS/iPadOS](../device-restrictions-ios.md) můžete taky omezit funkce a nastavení zařízení.

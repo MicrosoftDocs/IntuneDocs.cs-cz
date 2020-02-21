@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/28/2020
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c9b56ba1515608afb6c2a0d151f5412711d49e57
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
+ms.openlocfilehash: b83367bb2f1d3622a1fc4e11eedd88f3f26ee8dd
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886714"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77510601"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Vytvoření profilu Wi-Fi s předsdíleným klíčem pomocí vlastního profilu zařízení v Intune
 
@@ -44,14 +44,14 @@ Tato funkce podporuje:
 
 - Může být pro vás snadnější zkopírovat kód z počítače připojeného k síti, jak je popsáno dále v tomto článku.
 - Přidáním dalších nastavení OMA-URI můžete přidat více sítí a klíčů.
-- Pro iOS nastavte profil nástrojem Apple Configurator na stanici Mac.
+- Pro iOS/iPadOS použijte pro nastavení profilu Apple Configuratoru na stanici Mac.
 - PSK vyžaduje řetězec 64 číslic v šestnáctkovém formátu nebo heslo o délce 8 až 63 tisknutelných znaků ASCII. Některé znaky, například hvězdička (*), nejsou podporovány.
 
 ## <a name="create-a-custom-profile"></a>Vytvoření vlastního profilu
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
-3. Zadejte tyto vlastnosti:
+3. Zadejte následující vlastnosti:
 
     - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem zásad je například **vlastní nastavení profilu Wi-Fi OMA-URI pro zařízení s Androidem**.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.

@@ -1,12 +1,12 @@
 ---
 title: Nastavení služby pro správu telekomunikačních výdajů v Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Integrujte Microsoft Intune se službou Saaswedo Telecom výdaje za sledování využití dat a nastavení prahových hodnot nebo omezení na zařízeních s Androidem a iOS.
+description: Integrujte Microsoft Intune se službou Saaswedo Telecom výdaje za sledování využití dat a nastavení prahových hodnot nebo omezení pro zařízení s Androidem, iOS a iPadOS.
 keywords: Saaswedo
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/05/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,16 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c97a3ad329ce0e431c6dc8ef318306e4e002f36
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: e6c4d08d1010654a16e13981a0d3353b2418524a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207107"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512870"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Nastavení služby TEM (Telecom Expense Management) v Intune
-
-
 
 Pomocí Intune můžete spravovat telekomunikační výdaje ze využívání dat na mobilních zařízeních vlastněných organizací. Intune se integruje se [správou telekomunikačních výdajů Datalert](http://datalert.biz/get-started)v Saaswedo. Datalert je řešení pro správu telekomunikačních výdajů v reálném čase, které spravuje využití telekomunikačních dat. Může vám to zabránit nákladným a neočekávaným datům a poplatkům za roaming pro vaše zařízení spravovaná pomocí Intune.
 
@@ -50,9 +48,10 @@ Pokud chcete používat službu Datalert s Intune, je k dispozici několik nasta
 
   [Verze Androidu, které podporují Knox](https://seap.samsung.com/faq/what-versions-android-support-knox-standard-and-knox-premium-sdks-0) (otevře web Samsung), uvádí podporované verze Knox.
 
-- iOS 8.0 a novější
+- iOS 8,0 a novější
+- iPadOS 13,0 a novější
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 - Předplatné, které se má Microsoft Intune a přístup k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)
 - Předplatné [Datalert](http://www.datalert.biz/) (otevře web Datalert)
@@ -136,11 +135,11 @@ Tyto kategorie se uživatelům zobrazí během registrace ([registrace zařízen
 
 #### <a name="add-the-datalert-app-to-intune"></a>Přidání aplikace Datalert do Intune
 
-V následujících krocích se přidá aplikace Datalert. V takovém případě se používá iOS. [Přidejte aplikace](../apps/apps-add.md) a [používejte značky oboru](../fundamentals/scope-tags.md) , které obsahují konkrétnější informace o těchto krocích.
+V následujících krocích se přidá aplikace Datalert. Jako příklad se používá iOS/iPadOS. [Přidejte aplikace](../apps/apps-add.md) a [používejte značky oboru](../fundamentals/scope-tags.md) , které obsahují konkrétnější informace o těchto krocích.
 
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace** > **všechny aplikace** > **Přidat**.
 
-2. Vyberte **Typ aplikace**. Například pro iOS vyberte **Store app-iOS**.
+2. Vyberte **Typ aplikace**. Například pro iOS/iPadOS vyberte **Store app-iOS/iPadOS**.
 
 3. V **části Hledat v App Storu**zadejte **Datalert** a vyhledejte aplikaci Datalert.
 
@@ -178,7 +177,7 @@ Služba Datalert je teď aktivní. Spustí monitorování využití dat a zaká�
 
 Pro činnost koncového uživatele mohou následující články pomáhat:
 
-- [Registrace zařízení s iOSem ve službě TEM (Telecom Expense Management)](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-ios)
+- [Registrace zařízení se systémem iOS/iPadOS ve správě telekomunikačních výdajů](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-ios)
 - [Registrace zařízení s Androidem ve službě TEM (Telecom Expense Management)](https://docs.microsoft.com/intune-user-help/enroll-your-device-with-telecom-expense-management-android)
 
 ## <a name="turn-off-the-datalert-service"></a>Vypnutí služby Datalert

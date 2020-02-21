@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,18 +15,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c86252030a4baf957077cd889386bb8016554f1
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 53985a9af523ecf60efda5c5c651161c132e326c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206563"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511217"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Konfigurace nastavení omezení zařízení v Microsoft Intune
 
 
 
-Intune zahrnuje zásady omezení zařízení, které správcům pomůžou řídit zařízení se systémem Android, iOS, macOS a Windows. Tato omezení umožňují řídit široké spektrum nastavení a funkcí pro ochranu prostředků vaší organizace. Správci můžou například:
+Intune zahrnuje zásady omezení zařízení, které správcům pomůžou řídit zařízení se systémem Android, iOS/iPadOS, macOS a Windows. Tato omezení umožňují řídit široké spektrum nastavení a funkcí pro ochranu prostředků vaší organizace. Správci můžou například:
 
 - Povolí nebo zablokuje fotoaparát zařízení.
 - Řízení přístupu k Google Play, obchodům s aplikacemi, zobrazování dokumentů a hraní her
@@ -44,7 +44,7 @@ V tomto článku se dozvíte, jak vytvořit profil omezení pro zařízení. Mů
 2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
 3. Zadejte následující vlastnosti:
 
-    - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem zásad je například **iOS: blokovat kameru na zařízeních**.
+    - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem zásad je například **iOS/iPadOS: zablokovat kameru na zařízeních**.
     - **Popis**: zadejte popis zásady. Toto nastavení není povinné, ale doporučujeme ho zadat.
     - **Platforma**: vyberte platformu zařízení. Možnosti:  
 
@@ -58,7 +58,7 @@ V tomto článku se dozvíte, jak vytvořit profil omezení pro zařízení. Mů
 
     - **Typ profilu**: vyberte **omezení zařízení**.
 
-        Pokud chcete vytvořit profil omezení zařízení pro zařízení s Windows 10 Team, jako je například Surface Hub, zvolte **omezení zařízení (Windows 10 Team)**.
+        Pokud chcete vytvořit profil omezení zařízení pro zařízení s Windows 10 Team, jako je například Surface Hub, zvolte **omezení zařízení (Windows 10 Team)** .
 
 4. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Pro podrobnější nastavení vyberte platformu:
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09c8a8819c288663936174e9317267c39eac63bc
-ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
+ms.openlocfilehash: 77a4f0ea0ee076907d2a6cd14000c5cf319231e6
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77437847"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513771"
 ---
 # <a name="how-to-create-exceptions-to-the-intune-app-protection-policy-app-data-transfer-policy"></a>Jak vytvořit výjimky zásad pro přenos dat zásad Intune App Protection (APP)
 
@@ -32,13 +32,13 @@ Jako správce můžete vytvořit výjimky zásad pro přenos dat zásad Intune A
 >[!WARNING] 
 > Za provádění změn v zásadách výjimek přenosu dat nesete zodpovědnost. Nespravované aplikace (aplikace, které nejsou spravované pomocí Intune), které přidáte do těchto zásad, budou mít přístup k datům chráněným pomocí spravovaných aplikací. Takový přístup k chráněným datům může mít za následek porušení zabezpečení dat. Výjimky přenosu dat přidávejte jenom pro aplikace, které vaše organizace musí používat, ale které nepodporují zásady ochrany aplikací Intune. Kromě toho přidávejte výjimky jenom pro aplikace, které nepovažujete za rizikové z hlediska úniku dat.
 
-V rámci zásad ochrany aplikací Intune nastavení **Allow aplikace pro přenos dat do jiných aplikací** do **aplikací spravovaných podle zásad** znamená, že aplikace může přenášet data jenom do aplikací spravovaných přes Intune. Pokud potřebujete povolit přenos dat do konkrétních aplikací, které nepodporují aplikaci Intune, můžete k této zásadě vytvořit výjimky pomocí **vybrat aplikace, které se mají vyloučit**. Výjimky umožňují, aby aplikace spravované Intune vyvolaly nespravované aplikace založené na protokolu URL (iOS) nebo názvu balíčku (Android). Intune přidává ve výchozím nastavení důležité nativní aplikace do seznamu výjimek. 
+V rámci zásad ochrany aplikací Intune nastavení **Allow aplikace pro přenos dat do jiných aplikací** do **aplikací spravovaných podle zásad** znamená, že aplikace může přenášet data jenom do aplikací spravovaných přes Intune. Pokud potřebujete povolit přenos dat do konkrétních aplikací, které nepodporují aplikaci Intune, můžete k této zásadě vytvořit výjimky pomocí **vybrat aplikace, které se mají vyloučit**. Výjimky umožňují aplikacím spravovaným v Intune vyvolat nespravované aplikace založené na protokolu URL (iOS/iPadOS) nebo názvu balíčku (Android). Intune přidává ve výchozím nastavení důležité nativní aplikace do seznamu výjimek. 
 
 > [!NOTE]
 > Změna nebo přidání aplikací do výjimek zásad přenosu dat nemá vliv na jiné zásady ochrany aplikací, jako jsou omezení vyjmutí, kopírování a vložení. 
 
 ## <a name="ios-data-transfer-exceptions"></a>Výjimky přenosu dat pro iOS
-U zásad cílících na iOS/iPadOS můžete nakonfigurovat výjimky přenosu dat pomocí protokolu URL. Pokud chcete přidat výjimku, vyhledejte informace o podporovaných protokolech URL v dokumentaci od vývojáře příslušné aplikace. Další informace o výjimkách přenosu dat pro iOS/iPadOS najdete v tématu [nastavení zásad ochrany aplikací pro iOS – výjimky přenosu dat](app-protection-policy-settings-ios.md#data-transfer-exemptions).
+U zásad cílících na iOS/iPadOS můžete nakonfigurovat výjimky přenosu dat pomocí protokolu URL. Pokud chcete přidat výjimku, vyhledejte informace o podporovaných protokolech URL v dokumentaci od vývojáře příslušné aplikace. Další informace o výjimkách přenosu dat pro iOS/iPadOS najdete v tématu [nastavení zásad ochrany aplikací pro iOS/iPadOS – výjimky přenosu dat](app-protection-policy-settings-ios.md#data-transfer-exemptions).
 
 > [!NOTE]
 > U aplikací jiných výrobců Microsoft nenabízí metodu ručního vyhledání protokolu adresy URL pro vytváření výjimek aplikací. 
@@ -71,5 +71,5 @@ Po přidání balíčku **Webex** jako výjimky k zásadám přenosu dat MAM se 
 ## <a name="next-steps"></a>Další kroky
 
 - [Vytvoření a nasazení zásad ochrany aplikací](app-protection-policies.md)
-- [Nastavení zásad ochrany aplikací pro iOS – výjimky přenosu dat](app-protection-policy-settings-ios.md#data-transfer-exemptions)
+- [nastavení zásad ochrany aplikací pro iOS/iPadOS – výjimky přenosu dat](app-protection-policy-settings-ios.md#data-transfer-exemptions)
 - [Nastavení zásad ochrany aplikací pro Android – výjimky přenosu dat](app-protection-policy-settings-android.md#data-transfer-exemptions)

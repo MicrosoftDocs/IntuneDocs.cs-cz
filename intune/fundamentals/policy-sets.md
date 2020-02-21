@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d302db46510b664aec5b0a71fd8b19985e29be37
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 48bfe727615f5165fc70ed2e08f98f01203dc895
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206121"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514825"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Použití sad zásad k seskupení kolekcí objektů pro správu
 
@@ -40,9 +40,9 @@ Sady zásad můžete použít k těmto akcím:
 - Přiřazení běžně používaných nebo relevantních aplikací všem uživatelům
 
 V sadě zásad můžete zahrnout následující objekty správy:
-- Apps
+- Aplikace
 - Zásady konfigurace aplikací
-- Zásady ochrany aplikací
+- Zásady ochrany aplikace
 - Konfigurační profily zařízení
 - Zásady dodržování předpisů pro zařízení
 - Omezení typu zařízení
@@ -52,7 +52,7 @@ V sadě zásad můžete zahrnout následující objekty správy:
 Při vytváření sady zásad můžete vytvořit jednu jednotku přiřazení a spravovat přidružení mezi různými objekty. Sada zásad bude odkazovat na externí objekty. Všechny změny v zahrnutých objektech ovlivní také sadu zásad. Po vytvoření sady zásad můžete opakované zobrazení a úpravu svých objektů a přiřazení. 
 
 > [!NOTE]
-> Sady zásad podporují nastavení pro Windows, Android, macOS a iOS a dají se přiřadit pro různé platformy.
+> Sady zásad podporují nastavení Windows, Androidu, macOS a iOS/iPadOS a dají se přiřadit pro různé platformy.
 
 ## <a name="how-to-create-a-policy-set"></a>Postup vytvoření sady zásad
 
@@ -82,15 +82,15 @@ U sad zásad, které jsou novinkou 1910, se zobrazí následující známé prob
 - Pokud při vytváření sady zásad dojde k pokusu o vytvoření sady zásad bez výběru značek oboru, ověření se při dosažení stránky **Kontrola a vytvoření** nezdaří a na stavovém řádku se zobrazí chyba. Správce musí v procesu přepnout na jinou stránku a pak se vrátit na stránku **Revize + vytvořit** . Tím se povolí možnost **vytvořit** .  
  
 - Sady zásad aktuálně podporují následující typy aplikací:
-    - Aplikace z obchodu pro iOS
-    - obchodní aplikace pro iOS
-    - Spravovaná obchodní aplikace pro iOS
+    - aplikace pro iOS/iPadOS Store
+    - obchodní aplikace pro iOS/iPadOS
+    - Spravovaná obchodní aplikace pro iOS/iPadOS
     - Aplikace z obchodu pro Android
     - Obchodní aplikace pro Android
     - Spravovaná obchodní aplikace pro Android
     - Sada Office 365 ProPlus (Windows 10)
     - Webový odkaz
-    - Integrovaná aplikace pro iOS
+    - Integrovaná aplikace pro iOS/iPadOS
     - Integrovaná aplikace pro Android
 
 - Nastavení přiřazení sady zásad pro **všechny uživatele** na **profil autopilotu** se nepodporuje.
@@ -103,18 +103,18 @@ U sad zásad, které jsou novinkou 1910, se zobrazí následující známé prob
 
 - Typy zásad MAM, které podporují sady zásad, zahrnují následující: 
     - Ochrana MAM NV (Windows) cílené spravované aplikace na MDM 
-    - Ochrana cílené spravované aplikace MAM iOS
+    - Ochrana cílené spravované aplikace MAM iiOS/iPadOSOS
     - Ochrana cílené spravované aplikace MAM pro Android
-    - Konfigurace cílené spravované aplikace MAM iOS
+    - Konfigurace cílené spravované aplikace MAM iOS/iPadOS
     - Konfigurace cílené spravované aplikace MAM pro Android
 
 - Typy zásad MAM, které nepodporují sady zásad, zahrnují následující: 
     - MAMá Ochrana aplikace cílené na správu nedokončené výroby (Windows)
 
 - MAM zpracovává přiřazení sady zásad jako přímá přiřazení pro následující typy zásad:
-    - Ochrana cílené spravované aplikace MAM iOS
+    - Ochrana cílené spravované aplikace MAM iOS/iPadOS
     - Ochrana cílené spravované aplikace MAM pro Android
-    - Konfigurace cílené spravované aplikace MAM iOS
+    - Konfigurace cílené spravované aplikace MAM iOS/iPadOS
     - Konfigurace cílené spravované aplikace MAM pro Android
 
     Pokud se do sady zásad, která je nasazená do skupiny, přidá zásada, bude se tato skupina zobrazovat jako přímo přiřazená v rámci úlohy, nikoli přiřazená prostřednictvím sady zásad. V důsledku toho MAM nezpracovává odstranění přiřazení skupin pocházející ze sad zásad.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ea4f4cd53af06bf6ec47ed14976526116d963690
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 7520e5883a89d6cd040be670aedc8436cc40fadb
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502381"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515182"
 ---
 # <a name="prevent-unauthorized-access-to-company-data-using-microsoft-intune"></a>Zabránění neoprávněnému přístupu k podnikovým datům v Microsoft Intune
 
@@ -50,5 +50,5 @@ Můžete sdílet podrobnosti o tom, [jak a kdy chránit dokumenty a e-maily, kte
 
 V dalších krocích se dozvíte o jiných způsobech, jakými můžete zlepšit ochranu firemních dat, mezi které patří: 
 
-* Naučte se používat [Azure Information Protection v zařízeních s iOS a Androidem](https://docs.microsoft.com/information-protection/rms-client/mobile-app-faq).
+* Naučte se používat [Azure Information Protection na zařízeních s iOS/iPadOS a Androidem](https://docs.microsoft.com/information-protection/rms-client/mobile-app-faq).
 * V případě telefonů Windows Phone a počítačů Mac najdete další informace v tématu o [aplikaci pro sdílení obsahu Microsoft Rights Management](https://technet.microsoft.com/dn451248).

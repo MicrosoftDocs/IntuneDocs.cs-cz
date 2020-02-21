@@ -1,11 +1,11 @@
 ---
 title: Řešení potíží a kontrola protokolů profilů zařízení Wi-Fi v Microsoft Intune – Azure | Microsoft Docs
-description: Pochopení a řešení potíží s profilem konfigurace zařízení Wi-Fi pro zařízení s Androidem, iOS a Windows v Microsoft Intune. Zkontrolujte protokoly a podívejte se na některé běžné problémy a možná řešení.
+description: Pochopení a řešení potíží s profilem konfigurace zařízení Wi-Fi pro zařízení s Androidem, iOS/iPadOS a Windows v Microsoft Intune. Zkontrolujte protokoly a podívejte se na některé běžné problémy a možná řešení.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70f471e7f4db7ddce89d8956474822375c684944
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: db663f96f1e4fe84c506395b98c52956069e5426
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547978"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512819"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Řešení potíží s profily konfigurace zařízení Wi-Fi v Microsoft Intune
 
-V Intune můžete vytvořit profily konfigurace zařízení, které zahrnují nastavení připojení pro vaši síť Wi-Fi. Pomocí těchto nastavení můžete zařízení s Androidem, iOS a Windows propojit s podnikovou sítí.
+V Intune můžete vytvořit profily konfigurace zařízení, které zahrnují nastavení připojení pro vaši síť Wi-Fi. Pomocí těchto nastavení můžete k síti organizace připojit zařízení s Androidem, iOS/iPadOS a Windows.
 
 Tento článek ukazuje, jak profil sítě Wi-Fi vypadá, když se na zařízeních úspěšně vztahuje. Obsahuje také informace protokolu, běžné problémy a další. Pomocí tohoto článku můžete pomoct s řešením vašich profilů sítě Wi-Fi.
 
@@ -100,25 +100,25 @@ Následující protokol zobrazuje výsledky hledání a zobrazuje profil sítě 
 
 ```
 
-## <a name="ios"></a>iOS
+## <a name="iosipados"></a>iOS/iPadOS
 
 Po instalaci profilu sítě Wi-Fi na zařízení se zobrazí v **profilu správy**:
 
 > [!div class="mx-imgBorder"]
-> ![profil správy na zařízení s iOS](./media/troubleshoot-wi-fi-profiles/ios-management-profile.png)
+> ![profil správy v zařízení se systémem iOS/iPadOS v Intune](./media/troubleshoot-wi-fi-profiles/ios-management-profile.png)
 
 > [!div class="mx-imgBorder"]
-> ![se připojení Wi-Fi na zařízení s iOS zobrazuje jako síť Wi-Fi](./media/troubleshoot-wi-fi-profiles/ios-wifi-connection-in-management-profile.png)
+> ![se připojení Wi-Fi v zařízení s iOS/iPadOS v Intune zobrazuje jako síť Wi-Fi](./media/troubleshoot-wi-fi-profiles/ios-wifi-connection-in-management-profile.png)
 
-### <a name="review-the-ios-console-and-device-logs"></a>Kontrola konzoly iOS a protokolů zařízení
+### <a name="review-the-iosipados-console-and-device-logs"></a>Zkontrolujte konzolu iOS/iPadOS a protokoly zařízení.
 
-V zařízeních se systémem iOS nezahrnuje protokol Portál společnosti aplikace informace o profilech sítě Wi-Fi. Chcete-li zobrazit podrobnosti o instalaci profilů sítě Wi-Fi, použijte protokoly konzoly nebo zařízení:
+V zařízeních se systémem iOS/iPadOS neobsahuje protokol aplikací Portál společnosti informace o profilech sítě Wi-Fi. Chcete-li zobrazit podrobnosti o instalaci profilů sítě Wi-Fi, použijte protokoly konzoly nebo zařízení:
 
-1. Připojte zařízení s iOS k počítači Mac. Přejít na **aplikace** > **nástroje**a otevřete konzolovou aplikaci.
+1. Připojte zařízení s iOS/iPadOS k počítači Mac. Přejít na **aplikace** > **nástroje**a otevřete konzolovou aplikaci.
 2. V části **Akce**vyberte **Zahrnout informační zprávy** a **zahrnout zprávy ladění**:
 
     > [!div class="mx-imgBorder"]
-    > ![zahrnout informační zprávy a zahrnout zprávy ladění do aplikace konzoly iOS](./media/troubleshoot-wi-fi-profiles/ios-console-app-include-info-messages-debug-messages.png)
+    > ![zahrnout informační zprávy a zahrnout zprávy ladění v konzolové aplikaci iOS/iPadOS](./media/troubleshoot-wi-fi-profiles/ios-console-app-include-info-messages-debug-messages.png)
 
 3. Reprodukování scénáře a uložení protokolů do textového souboru:
 
@@ -194,7 +194,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
   1. Přejděte na **nastavení** > **účty** > **přístup do práce nebo do školy**.
   2. Vyberte svůj pracovní nebo školní účet > **informace**.
   3. V dolní části stránky **Nastavení** vyberte **vytvořit sestavu**.
-  4. Otevře se okno, které zobrazuje cestu k souborům protokolu. Vyberte **Exportovat**.
+  4. Otevře se okno, které zobrazuje cestu k souborům protokolu. Vyberte **exportovat**.
   5. Přejít na `\Users\Public\Documents\MDMDiagnostics` cestu a zobrazit sestavu:
 
       > [!div class="mx-imgBorder"]
@@ -263,7 +263,7 @@ K tomuto problému obvykle dochází z nějakého důvodu mimo Intune. Následuj
 
 - Další informace o profilech Wi-Fi v Microsoft Intune najdete v následujících článcích:
 
-  - Přidejte nastavení Wi-Fi pro zařízení se systémem [Android](wi-fi-settings-android.md), [iOS](wi-fi-settings-ios.md)a [Windows 10 a novějším](wi-fi-settings-windows.md).
+  - Přidejte nastavení Wi-Fi pro zařízení se systémem [Android](wi-fi-settings-android.md), [iOS/iPadOS](wi-fi-settings-ios.md)a [Windows 10 a novějším](wi-fi-settings-windows.md).
   - [Tip podpory – jak nakonfigurovat NDES pro nasazení certifikátů SCEP v Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-How-to-configure-NDES-for-SCEP-certificate/ba-p/455125)
   - Řešení potíží s [nasazením profilu certifikátu SCEP](https://support.microsoft.com/help/4526725/troubleshooting-scep-profile-deployment-to-android-devices-in-intune) a [konfigurací NDES](https://support.microsoft.com/help/4459540/troubleshoot-ndes-configuration-for-use-with-intune).
 

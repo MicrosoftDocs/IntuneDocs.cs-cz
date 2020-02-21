@@ -1,6 +1,6 @@
 ---
-title: Aplikace pro iOS se zásadami ochrany aplikací
-description: Toto téma popisuje, co můžete očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací.
+title: aplikace pro iOS/iPadOS se zásadami ochrany aplikací
+description: Toto téma popisuje, co očekávat, když je vaše aplikace pro iOS/iPadOS spravovaná zásadami ochrany aplikací.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 165ce160339647e396b9cfc3a8374f21c77665f8
-ms.sourcegitcommit: f9dc50642efa8656054ef67f9335b9b46b655f93
+ms.openlocfilehash: c854811a9deb938613af872f3cf86244ab9121b3
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/02/2020
-ms.locfileid: "75606617"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514655"
 ---
-# <a name="what-to-expect-when-your-ios-app-is-managed-by-app-protection-policies"></a>Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací
+# <a name="what-to-expect-when-your-iosipados-app-is-managed-by-app-protection-policies"></a>Co očekávat, když je vaše aplikace pro iOS/iPadOS spravovaná zásadami ochrany aplikací
 
 Zásady ochrany aplikací Intune se vztahují na aplikace, které se používaly pro práci nebo školu. To znamená, že když vaši zaměstnanci a studenti používají své aplikace v osobním kontextu, můžou si všimnout žádného rozdílu ve svém prostředí. V pracovním nebo školním kontextu se ale můžou zobrazovat výzvy k rozhodování o rozhodnutích, aktualizovat jejich nastavení nebo se obrátit na nápovědu. V tomto článku se dozvíte, co se uživatelům snaží při pokusu o přístup a používání aplikací chráněných v Intune.  
 
@@ -34,7 +34,7 @@ Pokud zařízení **není zaregistrované v Intune**, zobrazí se uživateli př
 
 <!--- The following screenshot from the Skype app illustrates this restart request: --->
 
-<!---  ![Screenshot of the iOS device showing PIN prompt](./media/end-user-mam-apps-ios/iOS_AppPINPrompt.png) --->
+<!---  ![Screenshot of the iOS/iPadOS device showing PIN prompt](./media/end-user-mam-apps-ios/iOS_AppPINPrompt.png) --->
 
 Na zařízeních, která jsou **zaregistrovaná pro správu přes Intune**, se uživateli zobrazí zpráva, že jeho aplikace je teď spravovaná.
 

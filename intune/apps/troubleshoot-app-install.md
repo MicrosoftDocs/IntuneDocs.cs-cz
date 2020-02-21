@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a7216dedf67f6ee9fc8d899756f789d1c0dccc6
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 13aea23f58c69d5c7e38f77ae7dfa19bd12edd35
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415497"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511647"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Řešení problémů s instalací aplikací
 
@@ -50,7 +50,7 @@ Intune poskytuje podrobnosti o řešení potíží s aplikacemi nainstalovanými
     > Stejná aplikace může být přiřazena k více skupinám, ale s různými zamýšlenými akcemi (záměry) pro aplikaci. Zjištěný záměr pro aplikaci bude například zobrazovat **vyloučeno**, pokud byla aplikace vyloučena pro uživatele během přiřazování aplikace. Další informace najdete v tématu [Řešení konfliktů mezi záměry aplikace](apps-deploy.md#how-conflicts-between-app-intents-are-resolved).<br><br>
     > Pokud dojde k chybě instalace požadované aplikace, vy nebo váš tým technické podpory bude moci synchronizovat zařízení a zopakovat pokus o instalaci.
 
-Podrobnosti o chybě při instalaci aplikace označí problém. Tyto podrobnosti můžete použít k určení nejvhodnějších kroků pro vyřešení problému. Další informace o řešení potíží s instalací aplikací najdete v tématu chyby [instalace aplikace pro Android](app-install-error-codes.md#android-app-installation-errors) a [chyby instalace aplikace pro iOS](app-install-error-codes.md#ios-app-installation-errors).
+Podrobnosti o chybě při instalaci aplikace označí problém. Tyto podrobnosti můžete použít k určení nejvhodnějších kroků pro vyřešení problému. Další informace o řešení potíží s instalací aplikací najdete v tématu chyby [instalace aplikace pro Android](app-install-error-codes.md#android-app-installation-errors) a [chyby instalace aplikace pro iOS](app-install-error-codes.md#ios-and-ipados-app-installation-errors).
 
 > [!Note]  
 > Do podokna **řešení potíží** se dostanete také tak, že v prohlížeči přejdete na adresu: [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
@@ -65,7 +65,7 @@ Pokud máte problémy s instalací aplikací, je třeba vzít v úvahu následuj
   3. Přejděte na [Azure Active Directory uživatelé](https://portal.azure.com/#pane/Microsoft_AAD_IAM/UsersManagementMenupane/AllUsers).
   4. Vyberte ovlivněného uživatele a klikněte na **zařízení**.
   5. Pokud uživatel překročí nastavený limit, pak odstraňte všechny zastaralé záznamy, které už nepotřebujete.
-- V případě zařízení se systémem iOS/iPadOS DEP se ujistěte, že je uživatel v podokně Přehled zařízení Intune uveden jako **zapsaný uživatelem** . Pokud se zobrazuje NA, pak Nasaďte zásadu konfigurace pro Portál společnosti Intune. Další informace najdete v tématu [Konfigurace aplikace Portál společnosti](app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-dep-devices).
+- V případě zařízení se systémem iOS/iPadOS DEP se ujistěte, že je uživatel v podokně Přehled zařízení Intune uveden jako **zapsaný uživatelem** . Pokud se zobrazuje NA, pak Nasaďte zásadu konfigurace pro Portál společnosti Intune. Další informace najdete v tématu [Konfigurace aplikace Portál společnosti](app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices).
 
 ## <a name="win32-app-installation-troubleshooting"></a>Řešení potíží s instalací aplikace Win32
 

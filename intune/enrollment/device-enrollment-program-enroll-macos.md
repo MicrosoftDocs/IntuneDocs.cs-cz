@@ -1,7 +1,7 @@
 ---
-title: Registrace zařízení s macOS – Device Enrollment Program nebo Apple School Manageru
+title: Registrace zařízení macOS – Apple Business Manager nebo Apple School Manager
 titleSuffix: ''
-description: Přečtěte si, jak k registraci zařízení s macOS, které je v majetku firmy, použít Program registrace zařízení (DEP).
+description: Naučte se registrovat zařízení macOS vlastněná společností.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,22 +18,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d55139a106599664f801a6bf73b0e0e8db24b57a
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 6ef08ea65a4976bcf77154108e415634dbae8e05
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77414495"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514332"
 ---
-# <a name="automatically-enroll-macos-devices-with-the-device-enrollment-program-or-apple-school-manager"></a>Automatická registrace zařízení s macOSem pomocí Programu registrace zařízení nebo Apple School Manageru
+# <a name="automatically-enroll-macos-devices-with-the-apple-business-manager-or-apple-school-manager"></a>Automatická registrace zařízení macOS pomocí Apple Business Manageru nebo Apple School Manageru
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Můžete nastavit registraci v Intune pro zařízení macOS zakoupená prostřednictvím programu Apple [program registrace zařízení (DEP)](https://deploy.apple.com) nebo [Apple School Manageru](https://school.apple.com/). Některé z těchto registrací můžete použít pro velká množství zařízení bezkontaktně nikdy. Tato zařízení s macOS můžete dát rovnou uživatelům. Když uživatel zařízení zapne, Průvodce nastavením spustí předem nakonfigurovaná nastavení a zařízení se zaregistruje do správy v Intune.
+Můžete nastavit registraci v Intune pro zařízení macOS zakoupená prostřednictvím [Apple Business Manageru](https://business.apple.com/) nebo [Apple School Manageru](https://school.apple.com/). Některé z těchto registrací můžete použít pro velká množství zařízení bezkontaktně nikdy. Tato zařízení s macOS můžete dát rovnou uživatelům. Když uživatel zařízení zapne, Průvodce nastavením spustí předem nakonfigurovaná nastavení a zařízení se zaregistruje do správy v Intune.
 
-Nastavení registrace, používáte portál Intune i portál Apple DEP portály. Vytvoříte registrační profily obsahující nastavení aplikovaná na zařízení během registrace.
+Pokud chcete nastavit registraci, použijte portál Intune i Apple. Vytvoříte registrační profily obsahující nastavení aplikovaná na zařízení během registrace.
 
-Registrační program DEP ani Apple School Manager nefungují se [správcem registrace zařízení](device-enrollment-manager-enroll.md).
+Pomocí [správce registrace zařízení](device-enrollment-manager-enroll.md)nefunguje zápis z Apple Business Manageru ani Apple School Manager.
 
 <!--
 **Steps to enable enrollment programs from Apple**
@@ -43,7 +43,7 @@ Registrační program DEP ani Apple School Manager nefungují se [správcem regi
 4. [Assign DEP profile to devices](#assign-an-enrollment-profile-to-devices)
 5. [Distribute devices to users](#end-user-experience-with-managed-devices)
 -->
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 - Zařízení zakoupená v [Apple School Manageru](https://school.apple.com/) nebo [od společnosti Apple program registrace zařízení](http://deploy.apple.com)
 - Seznam sériových čísel nebo čísel nákupních objednávek
@@ -90,7 +90,7 @@ Na portálu Apple použijete k vytvoření tokenu. Použijete také na portálu 
 
 8. V možnosti **Vybrat akci** vyberte **Přiřadit k serveru**, vyberte &lt;název_serveru&gt; zadaný pro Microsoft Intune a pak zvolte **OK**. Portál Apple přiřadí daná zařízení k serveru Intune, aby bylo možné je spravovat, a pak zobrazí zprávu o **dokončení přiřazení**.
 
-### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Krok 3: Uložte si Apple ID, které jste použili k vytvoření tohoto tokenu.
+### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Krok 3. Uložte si Apple ID, které jste použili k vytvoření tohoto tokenu.
 
 V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)zadejte Apple ID pro budoucí referenci.
 

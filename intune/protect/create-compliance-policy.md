@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba6b8fb66d25af3833e55eebc12e8b6df2fb5ba5
-ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
+ms.openlocfilehash: 68fcdb66591ec0e566aa702b3ca4d6c5c5448859
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74860226"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514009"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Vytvoření zásady dodržování předpisů v Microsoft Intune
 
@@ -52,7 +52,7 @@ Pokud chcete používat zásady dodržování předpisů zařízením, ujistěte
   - iOS
   - macOS
   - Windows 10
-  - Windows 8.1
+  - Windows 8.1
   - Wvdows Phone 8.1
 
 - Registrace zařízení v Intune (vyžaduje se pro zobrazení stavu dodržování předpisů)
@@ -67,7 +67,7 @@ Pokud chcete používat zásady dodržování předpisů zařízením, ujistěte
 
 3. Zadejte následující vlastnosti:
 
-   - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Například dobrým názvem zásady je **zařízení s jailbreakem pro iOS označena jako nevyhovující předpisům**.
+   - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem zásad je například **Označit zařízení s jailbreakem/iPadOS jailbreak jako nevyhovující předpisům**.
 
    - **Popis**: zadejte popis zásady. Toto nastavení není povinné, ale doporučujeme ho zadat.
 
