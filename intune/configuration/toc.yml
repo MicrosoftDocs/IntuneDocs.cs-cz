@@ -23,7 +23,7 @@
           href: administrative-templates-windows.md
         - name: Aktualizace Office pomocí šablon pro správu
           href: administrative-templates-update-office.md
-    - name: Funkce zařízení v systémech iOS a macOS
+    - name: Funkce zařízení v systémech iOS/iPadOS a macOS
       href: device-features-configure.md
     - name: Omezení nastavení a funkcí zařízení
       href: device-restrictions-configure.md
@@ -47,7 +47,7 @@
       items:
         - name: VPN pro aplikaci pro Android
           href: android-pulse-secure-per-app-vpn.md
-        - name: VPN pro aplikaci pro iOS
+        - name: VPN pro aplikaci pro iOS/iPadOS
           href: vpn-setting-configure-per-app.md
     - name: Síť Wi-Fi
       href: wi-fi-settings-configure.md
@@ -117,7 +117,7 @@
               href: wi-fi-settings-android-enterprise.md
             - name: Vlastní
               href: custom-settings-android-for-work.md
-        - name: iOS
+        - name: iOS/iPadOS
           items:
             - name: Funkce zařízení
               href: ios-device-features-settings.md

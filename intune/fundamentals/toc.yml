@@ -9,7 +9,7 @@
     - name: Přehled správy zařízení
       href: what-is-device-management.md
       displayName: teamviewer
-    - name: Co je nového
+    - name: Novinky
       href: whats-new.md
       items:
         - name: Co je nového v uživatelském rozhraní aplikace
@@ -18,7 +18,7 @@
           href: in-development.md
         - name: Důležitá oznámení
           href: 'whats-new.md#notices'
-- name: Rychlý start
+- name: Rychlé starty
   items:
     - name: Vyzkoušejte si Intune zdarma
       href: free-trial-sign-up.md
@@ -29,7 +29,7 @@
       href: quickstart-create-group.md
     - name: Vytvořit a přiřadit vlastní roli
       href: quickstart-create-custom-role.md
-- name: Kurzy
+- name: Výukové kurzy
   items:
     - name: Seznámení se se službou Intune v Microsoft Endpoint Manageru
       href: tutorial-walkthrough-endpoint-manager.md
@@ -127,7 +127,7 @@
               href: end-user-mam-apps-ios.md
             - name: Jak získat aplikace pro Android
               href: end-user-apps-android.md
-            - name: Jak získat aplikace pro iOS
+            - name: Jak získat aplikace pro iOS/iPadOS
               href: end-user-apps-ios.md
             - name: Jak získat aplikace pro Windows
               href: end-user-apps-windows.md
@@ -201,10 +201,6 @@
           href: tenant-status.md
         - name: Pomoc uživatelům s řešením problémů
           href: help-desk-operators.md
-        - name: Protokoly auditu pro aktivity v Intune
-          href: monitor-audit-logs.md
-        - name: Kontrola protokolů pomocí Azure Monitoru
-          href: review-logs-using-azure-monitor.md
         - name: Používání dokumentace Intune
           href: use-docs.md
         - name: Získání podpory
@@ -213,9 +209,13 @@
       items:
         - name: Sestavy Intune
           href: reports.md
+        - name: Protokoly auditu pro aktivity v Intune
+          href: monitor-audit-logs.md
+        - name: Kontrola protokolů pomocí Azure Monitoru
+          href: review-logs-using-azure-monitor.md
 - name: Reference
   items:
-    - name: "Kódy a\_popisy chyb"
+    - name: Kódy a popisy chyb
       items:
         - name: Řešení problémů s přístupem k prostředkům společnosti
           href: troubleshoot-company-resource-access-problems.md
@@ -233,7 +233,7 @@
           href: ui-changes.md
         - name: Klasické skupiny Intune
           href: groups-get-started.md
-        - name: Nastavení vzdělávání pro iOS
+        - name: Nastavení vzdělávání pro iOS/iPadOS
           items:
             - name: iPad
               href: education-settings-configure-ios.md

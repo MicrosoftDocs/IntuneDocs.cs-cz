@@ -100,7 +100,7 @@
     - name: Nastavení registrace zařízení s macOS
       href: macos-enroll.md
       items:
-        - name: Program registrace zařízení nebo Apple School Manager
+        - name: Automatická registrace zařízení
           href: device-enrollment-program-enroll-macos.md
     - name: Sestava nedokončených registrací
       href: enrollment-report-company-portal-abandon.md
