@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/20/2020
+ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6808a76ca95bfa1d694907732d9e4fff3dd5e69c
-ms.sourcegitcommit: 67f926ba83f8a955e16b741a610ad84d6044f8f9
+ms.openlocfilehash: c7709d4162b065952d2f2f7acc778739ccb34eb7
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77529379"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609320"
 ---
 # <a name="microsoft-intune-protected-apps"></a>Microsoft Intune chráněné aplikace  
 
@@ -57,7 +57,7 @@ Následující tabulky obsahují podrobné informace o podporovaných partnerech
 | **Fakturace Microsoftu**<p><img alt="Microsoft app - Microsoft Invoicing icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-invoicing.png" width="100"> | Fakturace Microsoftu usnadňuje malým firmám vytvářet odhady a faktury na základě profesionálního vzhledu, získávat platby rychle a ušetřit čas. Bez ohledu na to, jestli jste v kanceláři nebo na cestách, vám fakturace umožní rychle vytvářet a odesílat faktury, přijímat platby online a strávit méně času na paperwork a současně držet peníze. | [Google Play odkaz (Android)](https://play.google.com/store/apps/details?id=com.microsoft.dynamics.ProjectMadeira),<br>[Odkaz na App Store (iOS)](https://itunes.apple.com/us/app/microsoft-invoicing/id1145475572?mt=8) |  
 | **Microsoft Kaizala**<p><img alt="Microsoft app - Microsoft Kaizala icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-kiazala.png" width="100"> | Microsoft Kaizala je mobilní aplikace, která je určená pro komunikaci velkých skupin a pro správu práce. Kaizala usnadňuje připojení a koordinaci práce s celým řetězcem hodnot, včetně polí zaměstnanci, dodavatelé, partneři a zákazníci bez ohledu na to, kde jsou. | [Google Play odkaz (Android)](https://play.google.com/store/apps/details?id=com.microsoft.mobile.polymer),<br>[Odkaz na App Store (iOS)](https://itunes.apple.com/in/app/microsoft-kaizala/id1112208399) |  
 | **Spouštěč Microsoftu**<p><img alt="Microsoft app - Microsoft Launcher icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-launcher.png" width="100"> | Spouštěč Microsoftu (dříve označovaný jako spouštěč šipek) může přizpůsobit zařízení s Androidem tak, aby odpovídalo vašemu stylu pomocí motivy, barev motivů, balíčků ikon a dalších. Pomocí účet Microsoft nebo pracovního/školního účtu máte přístup k vašemu kalendáři, dokumentům a posledním aktivitám v přizpůsobeném kanálu. Můžete dokonce na počítači s Windows otevřít fotky, dokumenty a webové stránky, abyste byli produktivní napříč všemi vašimi zařízeními. | [Odkaz na Google Play (Android)](https://play.google.com/store/apps/details?id=com.microsoft.launcher) |  
-| **systém Microsoft Office**<p><img alt="Microsoft app - Microsoft Office icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-office.png" width="100"> | Systém Microsoft Office aplikace je konsolidované prostředí, ve kterém můžou uživatelé pracovat v rámci jedné aplikace v aplikacích Word, Excel a PowerPoint. | [Google Play odkaz (Android)](https://play.google.com/store/apps/details?id=com.microsoft.office.officehubrow),<br>[Odkaz na App Store (iOS)](https://apps.apple.com/app/microsoft-office/id541164041) |  
+| **systém Microsoft Office**<p><img alt="Microsoft app - Microsoft Office icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-office.png" width="100"> | Aplikace systém Microsoft Office kombinuje aplikace Word, Excel a PowerPoint, které znáte a využívají se novými funkcemi, které na cestách vytvářejí jednodušší a ještě výkonnější prostředí Office. | [Google Play odkaz (Android)](https://play.google.com/store/apps/details?id=com.microsoft.office.officehubrow),<br>[Odkaz na App Store (iOS)](https://apps.apple.com/app/microsoft-office/id541164041) |  
 | **Microsoft OneDrive**<p><img alt="Microsoft app - Microsoft OneDrive for Business icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-onedrive-for-business.png" width="100"> | Získejte online úložiště pro pracovní soubory, abyste je mohli sdílet a spolupracovat s ostatními lidmi ve vaší práci nebo ve škole. I když jste na cestách, snadno získáte přístup k osobním a pracovním souborům.<p><p>Tato aplikace se dá použít jako aplikace s více identitami pro Android a iOS/iPadOS. | [Google Play odkaz (Android)](https://play.google.com/store/apps/details?id=com.microsoft.skydrive),<br>[Odkaz na App Store (iOS)](https://itunes.apple.com/us/app/onedrive-cloud-storage-for/id477537958?mt=8) |  
 | **Microsoft OneNote**<p><img alt="Microsoft app - Microsoft OneNote icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-onenote.png" width="100"> | Zachyťte své myšlenky, vyhledávání a nápady pomocí OneNotu, vlastního digitálního poznámkového bloku. Zajistěte si inspiraci své poznámky ke třídě nebo sledujte seznam pochůzek, které jsou příliš důležité k zapomenout. Bez ohledu na to, jestli jste doma, v kanceláři nebo na cestách, máte k dispozici svoje poznámky na všech svých zařízeních.<p><p>Tato aplikace se dá použít jako aplikace s více identitami pro Android a iOS/iPadOS. | [Google Play odkaz (Android)](https://play.google.com/store/apps/details?id=com.microsoft.office.onenote),<br>[Odkaz na App Store (iOS)](https://itunes.apple.com/us/app/microsoft-onenote-for-iphone/id410395246?mt=8) |  
 | **Aplikace Microsoft Outlook**<p><img alt="Microsoft app - Microsoft Outlook icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-outlook.png" width="100"> | Pomocí této bezplatné e-mailové aplikace získáte více práce odkudkoli a jediným jednotným zobrazením e-mailu, kalendáře, kontaktů a příloh. Automatické extrakce nejdůležitějších zpráv – napříč všemi vašimi e-mailovými účty. Snadné zobrazení kalendáře, sdílení dostupných časů, plánování schůzek a připojení souborů z e-mailu, OneDrivu nebo Dropboxu. stačí jenom pár klepnutí.<p><p>Tato aplikace se dá použít jako aplikace s více identitami pro Android a iOS/iPadOS.| [Google Play odkaz (Android)](https://play.google.com/store/apps/details?id=com.microsoft.office.outlook),<br>[Odkaz na App Store (iOS)](https://itunes.apple.com/us/app/microsoft-outlook/id951937596?mt=8) |  

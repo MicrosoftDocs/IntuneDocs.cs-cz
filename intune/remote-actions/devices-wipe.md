@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84fe9e1d60e3e65289ca18735e64e82ac9c64f4a
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: 41a46bd400c5901f0352709f6057bddac262ff9e
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77514179"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609373"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Odebrání zařízení vymazáním, vyřazením nebo ručním zrušením registrace
 
@@ -196,6 +196,9 @@ Pokud chcete zařízení Apple DEP zcela odebrat ze systému správy Intune, pos
 5. Zvolte **Znovu přiřadit**.
 
     ![Snímek obrazovky opětovného přiřazení Apple](./media/devices-wipe/apple-reassign.png)
+
+## <a name="device-states"></a>Stavy zařízení
+Popis stavů zařízení najdete v [kolekci managementStates](https://docs.microsoft.com/intune/developer/intune-data-warehouse-collections.md#managementstates).
 
 ## <a name="fresh-start"></a>Nový Start
 

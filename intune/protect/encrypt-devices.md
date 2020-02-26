@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 02/25/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 5209ce7fba30a156de055503751104f9090d49d7
-ms.sourcegitcommit: e7052114324b80d0503b107c934bb90b8eb29704
+ms.openlocfilehash: a5c844377dcd69b6caf5ef9f72fcb8dbb4ef8bd0
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755999"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609312"
 ---
 # <a name="use-device-encryption-with-intune"></a>Použití šifrování zařízení s Intune
 
@@ -39,17 +39,30 @@ Intune také obsahuje integrovanou [sestavu šifrování](encryption-monitor.md)
 
 Pomocí Intune můžete na zařízeních se systémem macOS nakonfigurovat šifrování disků trezoru. Pak pomocí sestavy šifrování Intune zobrazte podrobnosti o šifrování těchto zařízení a spravujte klíče pro obnovení pro zařízení zašifrovaná pomocí trezoru.
 
-Pro práci s úložištěm na zařízení se vyžaduje registrace zařízení schválená uživatelem. Uživatel musí ručně schválit profil správy ze systémového prefrences, aby se dalo považovat za schválený uživatelem. 
+Pro práci s úložištěm na zařízení se vyžaduje registrace zařízení schválená uživatelem. Uživatel musí ručně schválit profil správy ze systémových předvoleb, aby bylo možné registraci považovat za schválenou uživatelem.
 
 Trezor úložišť je program pro šifrování celého disku, který je součástí macOS. Intune můžete použít ke konfiguraci trezoru úložišť na zařízeních, na kterých běží **macOS 10,13 nebo novější**.
 
 Pro konfiguraci trezoru úložišť vytvořte [profil konfigurace zařízení](../configuration/device-profile-create.md) pro službu Endpoint Protection pro platformu MacOS. Nastavení trezoru úložiště je jednou z dostupných kategorií nastavení pro macOS Endpoint Protection.
 
-Když vytvoříte zásadu pro šifrování zařízení pomocí trezoru, zásada se použije na zařízení ve dvou fázích. Nejdřív je zařízení připravené k tomu, aby Intune mohl načíst a zálohovat obnovovací klíč. To se označuje jako v úschově. Po uloží klíče se může šifrování disku spustit.
+Když vytvoříte zásadu pro šifrování zařízení pomocí trezoru, zásada se použije na zařízení ve dvou fázích. Nejdřív je zařízení připravené k tomu, aby Intune mohl načíst a zálohovat obnovovací klíč. Tato akce se označuje jako v úschově. Po uloží klíče se může šifrování disku spustit.
 
 ![Nastavení trezoru úložišť](./media/encrypt-devices/filevault-settings.png)
 
 Podrobnosti o nastavení trezoru klíčů, které můžete spravovat pomocí Intune, najdete v tématu [trezor](endpoint-protection-macos.md#filevault) pro MacOS v článku Intune pro nastavení ochrany koncových bodů.
+
+### <a name="permissions-to-manage-filevault"></a>Oprávnění ke správě trezoru úložišť
+
+Aby bylo možné spravovat trezory v Intune, musí mít váš účet příslušné oprávnění [řízení přístupu na základě role](../fundamentals/role-based-access-control.md) (RBAC) Intune.
+
+Níže jsou uvedené oprávnění trezoru úložišť, která jsou součástí kategorie **vzdálené úlohy** , a předdefinované role RBAC, které udělují oprávnění:
+ 
+- **Získat klíč trezoru úložiště**:
+  - Operátor helpdesku
+  - Správce zabezpečení koncového bodu
+
+- **Otočit klíč trezoru**
+  - Operátor helpdesku
 
 ### <a name="how-to-configure-macos-filevault"></a>Jak nakonfigurovat macOS trezor
 
@@ -84,7 +97,7 @@ Jakmile Intune zašifruje zařízení macOS s trezorem souborů, můžete si z w
 
 ### <a name="retrieve-personal-recovery-key-from-mem-encrypted-macos-devices"></a>Načtení osobního obnovovacího klíče ze zařízení s macOS šifrovaným zařízením MEM
 
-Koncoví uživatelé budou moci načíst svůj osobní obnovovací klíč (klíč trezoru) pomocí aplikace Portál společnosti pro iOS. Zařízení, které má osobní obnovovací klíč, musí být zaregistrované v Intune a zašifrované pomocí trezoru služby prostřednictvím Intune. Pomocí aplikace Portál společnosti pro iOS může koncový uživatel otevřít webovou stránku, která obsahuje klíč pro osobní obnovení trezoru souborů. Obnovovací klíč můžete z Intune načíst taky tak, že vyberete **zařízení** > *šifrovaných a zaregistrovaných zařízení MacOS* > **získat obnovovací klíč**. 
+Koncoví uživatelé načtou svůj osobní obnovovací klíč (klíč trezoru) pomocí aplikace Portál společnosti pro iOS. Zařízení, které má osobní obnovovací klíč, musí být zaregistrované v Intune a zašifrované pomocí trezoru služby prostřednictvím Intune. Pomocí aplikace Portál společnosti pro iOS může koncový uživatel otevřít webovou stránku, která obsahuje klíč pro osobní obnovení trezoru souborů. Obnovovací klíč můžete z Intune načíst taky tak, že vyberete **zařízení** > *šifrovaných a zaregistrovaných zařízení MacOS* > **získat obnovovací klíč**. 
 
 ## <a name="bitlocker-encryption-for-windows-10"></a>Šifrování BitLockeru pro Windows 10
 
@@ -113,7 +126,7 @@ Nakonfigurujte BitLocker při vytváření [profilu konfigurace zařízení](../
 
 6. Dokončete konfiguraci dalšího nastavení a potom profil uložte.
 
-### <a name="manage-bitlocker"></a>Spravovat nástroj BitLocker
+### <a name="manage-bitlocker"></a>Správa nástroje BitLocker
 
 Jakmile Intune zašifruje zařízení s Windows 10 pomocí nástroje BitLocker, můžete zobrazit a načíst klíče pro obnovení nástroje BitLocker při zobrazení [sestavy šifrování](encryption-monitor.md)Intune.
 
@@ -121,7 +134,7 @@ Jakmile Intune zašifruje zařízení s Windows 10 pomocí nástroje BitLocker, 
 
 Pomocí akce zařízení v Intune můžete vzdáleně otočit obnovovací klíč BitLockeru zařízení se systémem Windows 10 verze 1909 nebo novějším.
 
-#### <a name="prerequisites"></a>Požadované součásti
+#### <a name="prerequisites"></a>Požadavky
 
 Zařízení musí splňovat následující požadavky, aby podporovaly rotaci obnovovacího klíče nástroje BitLocker:
 
@@ -131,7 +144,7 @@ Zařízení musí splňovat následující požadavky, aby podporovaly rotaci ob
 
   - **Otočení hesla pro obnovení na základě klienta**
 
-  Toto nastavení se nachází v části *šifrování Windows* jako součást zásad konfigurace zařízení pro Windows 10 Endpoint Protection.
+  Toto nastavení se vztahuje na *šifrování Windows* jako součást zásad konfigurace zařízení pro Windows 10 Endpoint Protection.
   
 #### <a name="to-rotate-the-bitlocker-recovery-key"></a>Otočení obnovovacího klíče BitLockeru
 
@@ -152,5 +165,5 @@ Pomocí sestavy šifrování můžete spravovat:
 
 Zkontrolujte nastavení šifrování, která můžete nakonfigurovat pomocí Intune pro:
 
-- [BitLocker](endpoint-protection-windows-10.md#windows-encryption)
+- [Zapnut](endpoint-protection-windows-10.md#windows-encryption)
 - [FileVault](endpoint-protection-macos.md#filevault)

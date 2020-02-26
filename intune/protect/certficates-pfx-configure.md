@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/20/2020
+ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b963a508ac140988993d3953d6a9d6398404e7b6
-ms.sourcegitcommit: 67f926ba83f8a955e16b741a610ad84d6044f8f9
+ms.openlocfilehash: 99983b2d2776e72232c65fcfb12d8075061d804b
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77529290"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609341"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
@@ -208,14 +208,15 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
    
    |Nastavení     | Platforma     | Podrobnosti   |
    |------------|------------|------------|
-   |**Prahová hodnota obnovení (%)**        |<ul><li>Vše         |Doporučuje se 20%  | 
-   |**Období platnosti certifikátu**  |<ul><li>Vše         |Pokud jste šablonu certifikátu nezměnili, může být tato možnost nastavená na jeden rok. |
-   |**Zprostředkovatel úložiště klíčů (KSP)**   |<ul><li>Windows 10  | V případě systému Windows vyberte místo, kam chcete uložit klíče na zařízení. |
-   |**Certifikační autorita**      |<ul><li>Vše         |Zobrazuje interní plně kvalifikovaný název domény (FQDN) vaší certifikační autority organizace.  |
-   |**Název certifikační autority** |<ul><li>Vše         |Zobrazuje název vaší certifikační autority organizace, například "certifikační autorita společnosti Contoso". |
+   |**Prahová hodnota obnovení (%)**        |<ul><li>Všechny         |Doporučuje se 20%  | 
+   |**Období platnosti certifikátu**  |<ul><li>Všechny         |Pokud jste šablonu certifikátu nezměnili, může být tato možnost nastavená na jeden rok. |
+   |**Zprostředkovatel úložiště klíčů (KSP)**   |<ul><li>Windows 10  |V případě systému Windows vyberte místo, kam chcete uložit klíče na zařízení. |
+   |**Certifikační autorita**      |<ul><li>Všechny         |Zobrazuje interní plně kvalifikovaný název domény (FQDN) vaší certifikační autority organizace.  |
+   |**Název certifikační autority** |<ul><li>Všechny         |Zobrazuje název vaší certifikační autority organizace, například "certifikační autorita společnosti Contoso". |
+   |**Název šablony certifikátu**    |<ul><li>Všechny         |Zobrazuje název šablony certifikátu. |
    |**Typ certifikátu**             |<ul><li>Android Enterprise (*pracovní profil*)</li><li>iOS</li><li>macOS</li><li>Windows 10 a novější|Vyberte typ: <ul><li> Certifikáty **uživatelů** můžou v předmětu a síti SAN certifikátu obsahovat atributy uživatele i zařízení. </il><li>Certifikáty **zařízení** mohou obsahovat pouze atributy zařízení v předmětu a San certifikátu. Použijte zařízení pro scénáře, jako jsou například zařízení bez uživatele, jako jsou veřejné terminály nebo jiná sdílená zařízení.  <br><br> Tento výběr má vliv na formát názvu subjektu. |
-   |**Formát názvu subjektu**          |<ul><li>Vše         |U většiny platforem nastavte tuto možnost na **běžný název** , pokud není vyžadováno jinak.<br><br>U následujících platforem se formát názvu subjektu určuje podle typu certifikátu: <ul><li>Android Enterprise (*pracovní profil*)</li><li>iOS</li><li>macOS</li><li>Windows 10 a novější</li></ul>  <p> Další informace najdete v části [Formát názvu subjektu](#subject-name-format) dále v tomto článku. |
-   |**Alternativní název subjektu**     |<ul><li>Vše         |Pokud není vyžadováno jinak, nastavte tuto možnost na **hlavní název uživatele (UPN)** . |
+   |**Formát názvu subjektu**          |<ul><li>Všechny         |Podrobnosti o tom, jak nakonfigurovat formát názvu subjektu, najdete v části [Formát názvu subjektu](#subject-name-format) dále v tomto článku.  <br><br> U většiny platforem použijte možnost **běžný název** , pokud není vyžadováno jinak. <br><br>U následujících platforem se formát názvu subjektu určuje podle typu certifikátu: <ul><li>Android Enterprise (*pracovní profil*)</li><li>iOS</li><li>macOS</li><li>Windows 10 a novější</li></ul>  <p>  |
+   |**Alternativní název subjektu**     |<ul><li>Všechny         |V případě *atributu*vyberte **hlavní název uživatele (UPN)** , pokud není vyžadováno jinak, nakonfigurujte odpovídající *hodnotu*a klikněte na tlačítko **Přidat**. <br><br>Další informace najdete v části [Formát názvu subjektu](#subject-name-format) dále v tomto článku.|
    |**Rozšířené použití klíče**           |<ul><li> Správce zařízení s Androidem </li><li>Android Enterprise (*vlastník zařízení*, *pracovní profil*) </li><li>Windows 10 |Certifikáty obvykle vyžadují *ověření klienta* , aby se mohl uživatel nebo zařízení ověřit na serveru. |
    |**Povolí všem aplikacím přístup k privátnímu klíči.** |<ul><li>macOS  |Nastavením této vlastnosti **povolíte** aplikacím, které jsou nakonfigurované pro přidružené zařízení Mac, přístup k privátnímu klíči certifikátů PKCS. <br><br> Další informace o tomto nastavení najdete v tématu *AllowAllAppsAccess* v části referenční část certifikátu [konfiguračního profilu](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) v dokumentaci pro vývojáře Apple. |
    |**Kořenový certifikát**             |<ul><li>Správce zařízení s Androidem </li><li>Android Enterprise (*vlastník zařízení*, *pracovní profil*) |Vyberte profil certifikátu od kořenové certifikační autority, který byl dříve přiřazen. |
@@ -286,8 +287,6 @@ Platformy:
   > - Vlastnosti zařízení používané v *předmětu* nebo *síti SAN* certifikátu zařízení, jako jsou **IMEI**, **sériové**a **FullyQualifiedDomainName**, jsou vlastnosti, které by mohly být falešné osobou, která by mohla mít přístup k zařízení.
   > - Zařízení musí podporovat všechny proměnné určené v profilu certifikátu pro daný profil k instalaci na toto zařízení.  Pokud se například používá **{{IMEI}}** v názvu subjektu profilu SCEP a je přiřazeno k zařízení, které nemá číslo IMEI, profil se nepodaří nainstalovat.  
  
-
-
 ## <a name="whats-new-for-connectors"></a>Co je nového u konektorů
 
 Aktualizace pro dvě konektory certifikátů jsou vydávány pravidelně. Když aktualizujeme konektor, můžete si přečíst o těchto změnách.
@@ -305,7 +304,7 @@ Aktualizace pro dvě konektory certifikátů jsou vydávány pravidelně. Když 
 - **Konektor certifikátů PFX pro Microsoft Intune verze 6.1905.0.402**  
   Změny v této verzi:  
   - Interval dotazování konektoru se zkracuje z 5 minut na 30 sekund.
- 
+
 ### <a name="april-2-2019"></a>2\. dubna 2019
 
 - **Intune Certificate Connector – verze 6.1904.1.0**  

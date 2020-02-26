@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/30/2020
+ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa4510b95e1e84d9f94158833dac555daa33c690
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
+ms.openlocfilehash: 7251a2db0c36db9d01e51ca8fc62bd4e072d80e6
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912552"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609228"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Nasazení aplikací pro Windows 10 pomocí Microsoft Intune 
 
@@ -44,18 +44,19 @@ Obchodní aplikace (LOB) a aplikace pro Microsoft Store pro firmy jsou na zaří
 
 Konkrétní typy aplikací jsou podporované v závislosti na verzi Windows 10, kterou používají vaši uživatelé. Následující tabulka uvádí typ aplikace a podporu Windows 10.
 
-| Typ aplikace | Domů | Úrovni | Obchodní | Enterprise | Vzdělávání | S-režim | Hololense | SurfaceHub | WCOS | Mobilní telefon |
+| Typ aplikace | Domů | Pro | Firemní | Enterprise | Vzdělávání | S-režim | HoloLens<sup>1 | Surface Hub | WCOS | Mobilní |
 |----------------|------|-----|----------|------------|-----------|--------|-----------|------------|------|--------|
 |  . SOUBOR | Ne | Ano | Ano | Ano | Ano | Ne | Ne | Ne | Ne | Ne |
 | . IntuneWin | Ne | Ano | Ano | Ano | Ano | 19H2 + | Ne | Ne | Ne | Ne |
-| C2R Office | Ne | Ano | Ano | Ano | Ano | Ne | Ne | Ne | Ne | Ne |
+| C2R Office | Ne | Ano | Ano | Ano | Ano | RS4 + | Ne | Ne | Ne | Ne |
 | LOB: APPX/MSIX | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano |
 | MSFB offline | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano |
-| MSFB online | Ano | Ano | Ano | Ano | Ano | Ano | RS4 + | Ano | Ano | Ano |
-| Webové aplikace | Ano | Ano | Ano | Ano | Ano | Ano | Ano<sup>1 | Ano<sup>1 | Ano | Ano |
+| MSFB online | Ano | Ano | Ano | Ano | Ano | Ano | RS4 + | Ne | Ano | Ano |
+| Webové aplikace | Ano | Ano | Ano | Ano | Ano | Ano | Ano<sup>2 | Ano<sup>2 | Ano | Ano<sup>2 |
 | Odkaz na Store | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano |
 
-<sup>1</sup> spustit pouze z portálu společnosti.
+<sup>1</sup> Chcete-li odemknout správu aplikací, Upgradujte své zařízení HoloLens na [holografické pro firmy](../fundamentals/windows-holographic-for-business.md).<br />
+<sup>2</sup> spustit pouze z portál společnosti.
 
 > [!NOTE]
 > Všechny typy aplikací pro Windows vyžadují registraci.
@@ -64,7 +65,7 @@ Konkrétní typy aplikací jsou podporované v závislosti na verzi Windows 10, 
 
 Do konzoly pro správu Intune můžete podepisovat a nahrávat obchodní aplikace pro Windows 10. Ty můžou zahrnovat moderní aplikace, jako jsou aplikace Univerzální platforma Windows (UWP) a balíčky aplikací pro Windows (AppX), a také aplikace pro Win 32, jako jsou například jednoduché soubory balíčku Instalační služby společnosti Microsoft (MSI). Správce musí ručně nahrávat a nasazovat aktualizace obchodních aplikací. Tyto aktualizace se automaticky nainstalují na uživatelská zařízení, ve kterých je nainstalovaná aplikace. Není vyžadován žádný zásah uživatele a uživatel nemá žádnou kontrolu nad aktualizacemi. 
 
-## <a name="microsoft-store-for-business-apps"></a>Aplikace pro Microsoft Store pro firmy
+## <a name="microsoft-store-for-business-apps"></a>Aplikace z Microsoft Storu pro firmy
 
 Microsoft Store pro obchodní aplikace jsou moderní aplikace zakoupené na portálu pro správu Microsoft Store pro firmy. Pak se synchronizují s Microsoft Intune pro správu. Aplikace můžou být buď online licencované, nebo offline. Microsoft Store přímo spravuje aktualizace bez dalších akcí, které správce vyžaduje. Aktualizace konkrétních aplikací můžete také zabránit pomocí vlastního identifikátoru URI (Uniform Resource Identifier). Další informace najdete v tématu o [správě podnikových aplikací a zabránění jejich automatické aktualizace](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Uživatel může také zakázat aktualizace pro všechny Microsoft Store pro obchodní aplikace na zařízení. 
 

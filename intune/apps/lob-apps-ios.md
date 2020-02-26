@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b7c0a7dfa4337983c12ada2d0f415c771bd0548
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: 507c7ecff9715ebf9f24567c735592f3f255ccc9
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755183"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609175"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Přidání obchodní aplikace pro iOS do Microsoft Intune
 
@@ -31,10 +31,13 @@ ms.locfileid: "76755183"
 
 Informace v tomto článku vám pomůžou přidat do Microsoft Intune obchodní aplikaci pro iOS. Obchodní aplikace (LOB) je aplikace, kterou do Intune přidáte z instalačního souboru aplikace IPA. Tento typ aplikace zpravidla vzniká interně. Nejdřív se budete muset připojit k programu iOS Developer Enterprise program. Další informace o tom, jak to udělat, najdete na [webu společnosti Apple](https://developer.apple.com/programs/ios/enterprise/).
 
->[!NOTE]
->Uživatelé iOS zařízení můžou odebrat některé výchozí aplikace pro iOS, například Akcie nebo Mapy. Intune je ale neumožňuje znovu nasadit. Pokud uživatel tyto aplikace odstraní, musí si je znovu nainstalovat z App Storu.
+> [!NOTE]
+> Uživatelé iOS zařízení můžou odebrat některé výchozí aplikace pro iOS, například Akcie nebo Mapy. Intune je ale neumožňuje znovu nasadit. Pokud uživatel tyto aplikace odstraní, musí si je znovu nainstalovat z App Storu.
 >
->obchodní aplikace pro iOS mají maximální velikost 4 GB na aplikaci.
+> obchodní aplikace pro iOS mají maximální velikost 4 GB na aplikaci.
+
+> [!NOTE]
+> Identifikátory sady prostředků (například *com. contoso. app*) mají být jedinečné identifikátory aplikace. Například pokud chcete pro účely testování nainstalovat beta verzi obchodní aplikace v rámci produkční verze, beta verze musí mít jiný jedinečný identifikátor (například *com. contoso. app-beta*). V opačném případě se beta verze překryje s produkčním prostředím a bude se považovat za upgrade. Přejmenování souboru. ipa nemá žádný vliv na toto chování.
 
 ## <a name="select-the-app-type"></a>Vyberte typ aplikace.
 

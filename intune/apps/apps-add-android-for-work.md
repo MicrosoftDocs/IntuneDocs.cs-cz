@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aaed7ec6ba1daa28949b2c1f0997b76135b7e88f
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: a4b3bd06bad6c31c2d0fb4c31a7ad605af96be86
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77513601"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609199"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Přidání spravovaných aplikací Google Play do zařízení s Androidem Enterprise pomocí Intune
 
@@ -122,7 +122,7 @@ Existují dva způsoby, jak přidat obchodní aplikace do spravovaných Google P
 5. V okně Google Play vyberte **soukromé aplikace** (vedle ikony *zámku* ). 
 6. Kliknutím na tlačítko **"+"** v pravém dolním rohu přidejte novou aplikaci.
 7. Přidejte **název** aplikace a klikněte na **nahrát APK** přidat balíček aplikace APK.
-8. Klikněte na **Vytvořit**.
+8. Klikněte na tlačítko **Vytvořit**.
 9. Pokud jste dokončili přidávání aplikací, zavřete podokno spravované Google Play.
 10. V podokně **aplikace aplikace** klikněte na **synchronizovat** a synchronizujte se se službou Managed Google Play Service. 
 
@@ -166,7 +166,7 @@ Webové odkazy se otevřou pomocí Microsoft Edge nebo jakékoli jiné aplikace 
 5. V okně Google Play vyberte **Web Apps** (vedle ikony *zeměkoule* ).
 6. Kliknutím na tlačítko **"+"** v pravém dolním rohu přidejte novou aplikaci.
 7. Přidejte **název**aplikace, **adresu URL**webové aplikace, vyberte, jak se má aplikace zobrazit, a vyberte ikonu aplikace.
-8. Klikněte na **Vytvořit**.
+8. Klikněte na tlačítko **Vytvořit**.
 9. Pokud jste dokončili přidávání aplikací, zavřete podokno spravované Google Play.
 10. V podokně **aplikace aplikace** klikněte na **synchronizovat** a synchronizujte se se službou Managed Google Play Service. 
 
@@ -224,6 +224,9 @@ U spravovaných aplikací Google Play nasazených do zařízení se systémem An
 
 ## <a name="delete-managed-google-play-apps"></a>Odstranit spravované aplikace Google Play
 V případě potřeby můžete z Microsoft Intune odstranit spravované aplikace Google Play. Pokud chcete odstranit spravovanou aplikaci Google Play, otevřete Microsoft Intune v Azure Portal a vyberte **aplikace** > **všechny aplikace**. V seznamu aplikace vyberte tři tečky (...) napravo od spravované aplikace Google Play a pak v zobrazeném seznamu vyberte **Odstranit** . Při odstranění spravované aplikace Google Play ze seznamu aplikací se spravovaná aplikace Google Play automaticky neschválí.
+
+> [!NOTE]
+> Pokud je aplikace neschválená nebo Odstraněná ze spravovaného úložiště Google Play, nebude odebrána ze seznamu klientských aplikací Intune. To vám umožní pořád cílit zásady odinstalace na uživatele, i když je aplikace neschválená.
 
 ## <a name="android-enterprise-system-apps"></a>Systémové aplikace typu Android Enterprise
 

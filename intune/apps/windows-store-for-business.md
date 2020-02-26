@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3c1627ba89ad50b2053187a20fee6cbc7a9064e8
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 6faaa800d8dedc53ab20f1dae2c3049132642b7d
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74562494"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609161"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Jak spravovat hromadně zakoupené aplikace z Microsoft Store pro firmy pomocí Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-[Microsoft Store pro firmy](https://www.microsoft.com/business-store) je místo, kde můžete najít a zakoupit aplikace pro svou organizaci, a to jednotlivě i hromadně. Pokud Store propojíte s Microsoft Intune, můžete hromadně zakoupené aplikace spravovat z Azure Portalu. Například:
+[Microsoft Store pro firmy](https://www.microsoft.com/business-store) je místo, kde můžete najít a zakoupit aplikace pro svou organizaci, a to jednotlivě i hromadně. Pokud Store propojíte s Microsoft Intune, můžete hromadně zakoupené aplikace spravovat z Azure Portalu. Příklad:
 * Seznam aplikací, které jste zakoupili (nebo které jsou zdarma) můžete synchronizovat z obchodu s Intune.
 * Aplikace, které jsou synchronizované, se zobrazí v konzole pro správu Intune. Tyto aplikace můžete přiřadit stejně jako všechny ostatní aplikace.
 * Licencované verze aplikací v režimu online i offline jsou synchronizovány do Intune. Názvy aplikací budou na portálu připojeny "online" nebo "offline".
@@ -48,7 +48,7 @@ Než začnete synchronizovat a přiřazovat aplikace z Microsoft Storu pro firmy
 - Portál Intune synchronizuje aplikace s online i offline licencemi, které jste zakoupili v Microsoft Storu pro firmy. Tyto aplikace můžete nasadit pro skupiny zařízení nebo skupiny uživatelů. 
 - Instalace online aplikací se spravují ve Storu.
 - V Intune se můžou synchronizovat také offline aplikace, které jsou bezplatné. Tyto aplikace instaluje Intune, nikoli Store.
-- Pokud chcete tuto funkci použít, musí být zařízení připojená ke službě Active Directory Domain Services nebo k síti na pracovišti.
+- Aby bylo možné tuto funkci používat, musí být zařízení připojená k Active Directory Domain Services, připojenému k Azure AD nebo na pracovišti.
 - Zaregistrovaná zařízení musí používat Windows 10 verze 1511 nebo novější.
 
 Kromě toho související sady a licencované aplikace Offline, které se synchronizují z Microsoft Storu pro firmy, se teď budou konsolidovat do jediného záznamu aplikace v uživatelském rozhraní. Všechny podrobnosti o nasazení z jednotlivých balíčků se budou migrovat do tohoto jediného záznamu. Pokud chcete zobrazit související sady Azure Portal, v podokně **aplikace** vyberte **licence aplikací** .
@@ -68,7 +68,7 @@ Teď můžete pokračovat a nastavit synchronizaci v konzole Intune.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte možnost **Správa tenanta** > **konektory a tokeny** > **Microsoft Store pro firmy**.
-3. Klikněte na **Povolit**.
+3. Klikněte na možnost **Povolit**.
 4. Pokud jste to ještě neudělali, klikněte na odkaz pro registraci Microsoft Storu pro firmy a podle předchozího postupu přidružte svůj účet.
 5. V rozevíracím seznamu **Jazyk** vyberte jazyk, ve kterém se aplikace z Microsoft Storu pro firmy zobrazují na portálu Azure Portal. Bez ohledu na jazyk, ve kterém se budou zobrazovat, se nainstalují v jazyce koncového uživatele, pokud je dostupný.
 6. Kliknutím na **Synchronizovat** přeneste aplikace zakoupené v Microsoft Storu do Intune.
