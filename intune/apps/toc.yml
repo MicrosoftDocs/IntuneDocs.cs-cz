@@ -82,12 +82,16 @@
               href: apps-win32-s-mode.md
         - name: Přidání specifických aplikací
           items:
-            - name: Aplikace Portál společnosti
+            - name: Aplikace Portál společnosti – Autopilot
+              href: store-apps-company-portal-autopilot.md
+            - name: Aplikace Portál společnosti – stažení
               href: store-apps-company-portal-app.md
             - name: Microsoft Edge pro Windows 10
               href: apps-windows-edge.md
             - name: Microsoft Edge pro macOS
               href: apps-edge-macos.md
+            - name: Microsoft Defender ATP pro macOS
+              href: apps-advanced-threat-protection-macos.md
         - name: Skripty prostředí PowerShell
           href: intune-management-extension.md
     - name: Přiřazení aplikací
