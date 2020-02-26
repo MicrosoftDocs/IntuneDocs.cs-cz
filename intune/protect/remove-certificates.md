@@ -1,7 +1,7 @@
 ---
 title: Odebrání certifikátů SCEP a PKCS v Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Správci můžou k odebrání certifikátů z Microsoft Intune použít akce vymazání nebo vyřazení. Při některých scénářích, třeba při zrušení registrace zařízení nebo při odebrání zásady dodržování předpisů, se certifikát odebere automaticky. Při jiných scénářích naopak certifikáty zůstanou v zařízení, třeba při ztrátě nebo odebrání licence v Intune. Podívejte se na různé způsoby u zařízení se systémy Android, Android Enterprise, iOS, macOS a Windows.
+description: Správci můžou k odebrání certifikátů z Microsoft Intune použít akce vymazání nebo vyřazení. Při některých scénářích, třeba při zrušení registrace zařízení nebo při odebrání zásady dodržování předpisů, se certifikát odebere automaticky. Při jiných scénářích naopak certifikáty zůstanou v zařízení, třeba při ztrátě nebo odebrání licence v Intune. Podívejte se na různé způsoby pro zařízení s Androidem, Androidem Enterprise, iOS/iPadOS, macOS a Windows.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: lacranda
-ms.openlocfilehash: dbf6d95c8902a95993b972ff7639d4afb4324ac8
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: a77780c05b0f637a4ee5100f8c7a1a729c3ec674
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74410178"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576262"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Odebrání certifikátů SCEP a PKCS v Microsoft Intune
 
@@ -42,7 +42,7 @@ Ruční odstranění certifikátu je scénář, který platí pro různé platfo
 
 V tomto scénáři se po odstranění certifikátu při příštím ověření zařízení v Intune zjistí, že nedodržuje předpisy, protože u něho chybí očekávaný certifikát. Intune pak vystaví nový certifikát pro obnovení kompatibility zařízení. K obnovení certifikátu není nutná žádná další akce.
 
-## <a name="windows-devices"></a>Zařízení s Windows
+## <a name="windows-devices"></a>Zařízení Windows
 
 ### <a name="scep-certificates"></a>Certifikáty SCEP
 
@@ -230,6 +230,6 @@ Certifikáty SCEP *zůstávají* v zařízení (certifikáty se neodvolává ani
 
 Certifikáty PKCS nejsou v macOS podporované.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 [Použití certifikátů k ověřování](certificates-configure.md)

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c016dd8a1d8a21e3ac96ab8637e26a029b18dbc
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: 4c938aba7fde84536af2452f13f6ed030fa1d823
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77511799"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576432"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Konfigurace aplikace Portál společnosti služby Microsoft Intune
 
@@ -37,7 +37,7 @@ Portál společnosti v Microsoft Intune je místo, odkud mají uživatelé pří
 > [!Tip]
 > Když si portál společnosti přizpůsobíte, bude se vaše konfigurace vztahovat na web portálu společnosti i na aplikace Portál společnosti. Všimněte si, že uživatelé musí mít přiřazenou licenci Intune pro přístup k webu Portál společnosti.
 
-Přizpůsobením Portál společnosti umožníte vašim koncovým uživatelům známé a užitečné možnosti. Provedete to tak, že na portálu Intune vyberete **aplikace** > **branding a přizpůsobení**a pak nakonfigurujete požadovaná nastavení.
+Přizpůsobením Portál společnosti umožníte vašim koncovým uživatelům známé a užitečné možnosti. Provedete to tak, že přejdete do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431), vyberete **Správa tenanta** > **branding a přizpůsobení**a pak nakonfigurujete požadovaná nastavení.
 
 Když uživatel instaluje aplikaci pro iOS/iPadOS z Portál společnosti, zobrazí se výzva. K tomu dochází, když je aplikace pro iOS/iPadOS propojená s obchodem s aplikacemi, která je propojená s programem Volume purchase program (VPP), nebo propojená s obchodní aplikací (LOB). Tato výzva umožní uživatelům přijmout akci nebo povolit správu aplikace. Výzva zobrazí název vaší společnosti, nebo pokud název vaší společnosti není k dispozici, zobrazí se **portál společnosti** . 
 
@@ -79,7 +79,7 @@ Přiřaďte barvu motivu pro Portál společnosti. Vyberte standardní barvu neb
 |**Vyberte standardní barvu, nebo zadejte šestičíselný šestnáctkový kód**| Zvolte možnost **Standard** pro vizuální výběr barvy. Zvolte **Vlastní**, pokud chcete vybrat konkrétní barvu podle hodnoty šestnáctkového kódu.|
 |**Zvolit barvu motivu**| Vyberte barvu motivu, kterou chcete použít pro Portál společnosti. Můžete ji vybrat ze standardní barvy nebo zadat konkrétní šestnáctkový kód. |
 |**Zobrazení**| Vyberte, zda chcete zobrazit **Logo a název firmy**, **Jen logo firmy** nebo **Jen název firmy**. |
-|**Nahrát firemní logo**|Tato možnost vám umožní nahrát vlastní firemní logo, které se bude zobrazovat na Portálu společnosti. Všimněte si, že barva textu se automaticky zvolí tak, aby byl zajištěn nejvyšší kontrast. Pokud chcete dosáhnout nejlepšího vzhledu, nahrajte logo s transparentním pozadím.<p><ul><li>Maximální velikost obrázku: 400 px × 400 px</li><li>Maximální velikost souboru: 750 kB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
+|**Nahrát firemní logo**|Tato možnost vám umožní nahrát vlastní firemní logo, které se bude zobrazovat na Portálu společnosti. Všimněte si, že barva textu se automaticky zvolí tak, aby byl zajištěn nejvyšší kontrast. Pokud chcete dosáhnout nejlepšího vzhledu, nahrajte logo s transparentním pozadím.<p><ul><li>Maximální velikost obrázku: 400px × 400px</li><li>Maximální velikost souboru: 750 KB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
 
 Po nahrání loga se v oblasti náhledu zobrazí logo s barvou motivu. Pokud jste si zvolili zobrazení názvu firmy, zobrazí se název na Portálu společnosti v černé nebo bílé barvě. Barva se zvolí automaticky tak, aby byl zajištěn nejvyšší kontrast s ohledem na barvu motivu. V oblasti náhledu na obrazovce se název vaší firmy nezobrazí. 
 
@@ -88,7 +88,7 @@ Zvolte logo, které bude nejlépe vypadat na bílých nebo světlých pozadích.
 
 |Název pole|Další informace|
 |---|---|
-|**Nahrát logo**| Tato možnost je dostupná, pokud jste zvolili zobrazení loga společnosti. Pokud chcete dosáhnout nejlepšího vzhledu, nahrajte logo s transparentním pozadím.<p><ul><li>Maximální velikost obrázku: 400 px × 400 px</li><li>Maximální velikost souboru: 750 kB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
+|**Nahrát logo**| Tato možnost je dostupná, pokud jste zvolili zobrazení loga společnosti. Pokud chcete dosáhnout nejlepšího vzhledu, nahrajte logo s transparentním pozadím.<p><ul><li>Maximální velikost obrázku: 400px × 400px</li><li>Maximální velikost souboru: 750 KB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
 
 ### <a name="brand-image-for-company-portal"></a>Firemní logo pro Portál společnosti
 
@@ -96,7 +96,7 @@ Zobrazte si firemní logo, které odráží značku vaší společnosti. Po ulo�
 
 |Název pole|Další informace|
 |---|---|
-|**Nahrát firemní logo**| Tato možnost umožňuje zobrazit obrázek značky. V Portál společnosti pro iOS/iPadOS se na stránce profilu uživatele zobrazuje jako obrázek na pozadí.<p><ul><li>Doporučená šířka obrázku: větší než 1125px (musí být aspoň 650 px)</li><li>Maximální velikost obrázku: 1,3 MB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
+|**Nahrát firemní logo**| Tato možnost umožňuje zobrazit obrázek značky. V Portál společnosti pro iOS/iPadOS se na stránce profilu uživatele zobrazuje jako obrázek na pozadí.<p><ul><li>Doporučená šířka obrázku: Větší než 1125px (musí být aspoň 650 px)</li><li>Maximální velikost obrázku: 1,3 MB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
 
 Správné firemní logo může zvýšit důvěru uživatelů v aplikaci Portál společnosti tím, že prezentuje silný smysl pro vaši firemní značku. Nabízíme vám několik tipů, nad kterými byste se mohli zamyslet při pořizování, výběru a optimalizaci loga pro Portál společnosti. 
 
@@ -157,12 +157,12 @@ V aplikaci Portál společnosti pro Windows jsou k dispozici následující klá
 |  | Můj profil | ALT + U |
 |  | Nastavení | Alt + T |
 | Úvodní stránka – dlaždice Zařízení | Přejmenovat | F2 |
-|  | Odebrat | Ctrl+D nebo Delete |
+|  | odebrat | Ctrl+D nebo Delete |
 |  | Zkontrolovat přístup | Ctrl+M nebo F9 |
 | Podrobnosti o zařízení | Přejmenovat | F2 |
-|  | Odebrat | Ctrl+D nebo Delete |
+|  | odebrat | Ctrl+D nebo Delete |
 |  | Zkontrolovat přístup | Ctrl+M nebo F9 |
-| Podrobnosti aplikace | Install | Ctrl+I |
+| Podrobnosti aplikace | Instalace | Ctrl+I |
 | Zařízení | K dispozici | Ctrl+D |
 
 Koncoví uživatelé budou také moci zobrazit dostupné zkratky v aplikaci pro Windows Portál společnosti.
@@ -186,10 +186,10 @@ Některé platformy a konfigurace neumožňují akce zařízení samoobslužné 
 
 |  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
-| Vyřadit | K dispozici<sup>(1)</sup> | K dispozici | K dispozici | K dispozici<sup>(7)</sup> |
+| Vyřazení | K dispozici<sup>(1)</sup> | K dispozici | K dispozici | K dispozici<sup>(7)</sup> |
 | Vymazání | K dispozici | K dispozici<sup>(5)</sup> | Není k dispozici | K dispozici<sup>(7)</sup> |
 | Přejmenovat<sup>(4)</sup> | K dispozici | K dispozici | K dispozici | K dispozici |
-| Synchronizovat | K dispozici | K dispozici | K dispozici | K dispozici |
+| Synchronizace | K dispozici | K dispozici | K dispozici | K dispozici |
 | Vzdálené uzamčení | Pouze Windows Phone | K dispozici | K dispozici | K dispozici |
 | Resetovat heslo | Pouze Windows Phone | K dispozici<sup>(8)</sup> | Není k dispozici | K dispozici<sup>(6)</sup> |
 | Obnovení klíče | Není k dispozici | Není k dispozici | K dispozici<sup>(2)</sup> | Není k dispozici |
@@ -203,6 +203,6 @@ Některé platformy a konfigurace neumožňují akce zařízení samoobslužné 
 <sup>(7)</sup> **vyřazení** a **vymazání** nejsou k dispozici ve scénářích pro vlastníky zařízení s Androidem Enterprise (odolat, Cobo, COSU).<br> 
 <sup>(8)</sup> **resetování hesla** není u zaregistrovaných zařízení se systémem iOS podporované uživatelem.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - [Ruční přidání aplikace Portál společnosti pro Windows 10 pomocí Microsoft Intune](company-portal-app.md)

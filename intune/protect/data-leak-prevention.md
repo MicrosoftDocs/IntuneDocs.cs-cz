@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d9e61cbe4f6d6e07c61fe182e639e715996f9ee
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: 7f7a6203fcf641c41192eec8aaa0835939376d54
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77514434"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575932"
 ---
 # <a name="prevent-data-leaks-on-non-managed-devices-using-microsoft-intune"></a>Zabránění únikům dat na nespravovaných zařízeních pomocí Microsoft Intune
 
@@ -31,18 +31,18 @@ Pokud povolíte přístup k firemním datům hostovaným v Office 365, můžete 
 
 Zásady ochrany aplikací nastavené v Intune platí i pro zařízení spravovaná pomocí řešení pro správu zařízení od jiných výrobců než Microsoftu. Osobní data na zařízeních nejsou nijak dotčena – oddělení IT spravuje jenom firemní data. 
 
-Pro ochranu firemních dat můžete nastavit zásady ochrany aplikací, které budou platit pro mobilní aplikace Office na zařízeních se systémem Windows, iOS nebo Android. Tyto zásady umožňují stanovit pravidla, třeba kód PIN podle aplikace nebo šifrování firemních dat, případně pokročilejší nastavení omezující způsob použití funkcí Vyjmout, Kopírovat, Vložit a Uložit jako ze strany uživatelů mezi spravovanými a nespravovanými aplikacemi. Firemní data můžete také vzdáleně vymazat, aniž by si uživatelé museli zaregistrovat zařízení.
+Pro ochranu firemních dat můžete nastavit zásady ochrany aplikací pro mobilní aplikace Office na zařízeních s Windows, iOS/iPadOS nebo Androidem. Tyto zásady umožňují stanovit pravidla, třeba kód PIN podle aplikace nebo šifrování firemních dat, případně pokročilejší nastavení omezující způsob použití funkcí Vyjmout, Kopírovat, Vložit a Uložit jako ze strany uživatelů mezi spravovanými a nespravovanými aplikacemi. Firemní data můžete také vzdáleně vymazat, aniž by si uživatelé museli zaregistrovat zařízení.
 
 Zásady ochrany aplikací Intune fungují nezávisle na správě zařízení. Zásady ochrany aplikací umožňují spravovat mobilní aplikace Office na nespravovaných zařízeních i zařízeních spravovaných v Intune, jakož i na zařízeních spravovaných v řešeních MDM od jiných výrobců než Microsoftu.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 Následující akční plán je možné provést při splnění následujících požadavků:
 
 * Vaše společnost je připravena na zabezpečený přechod do cloudu.
 * Vaše společnost používá Office 365 Exchange Online, SharePoint Online, OneDrive pro firmy nebo Yammer.
 * Vaše společnost má licence na Microsoft 365, Enterprise Mobility + Security (EMS) nebo Azure Information Protection.
-* Vaše společnost umožňuje uživatelům přístup k podnikovým datům na zařízeních se systémem Windows, iOS nebo Android ve firemním i osobním vlastnictví.
+* Vaše společnost umožňuje uživatelům přístup k podnikovým datům ze zařízení s Windows, iOS/iPadOS nebo Androidem vlastněných společností, která jsou ve vlastnictví společnosti nebo v osobním vlastnictví.
 * Vaše společnost nechce vyžadovat registraci zařízení patřících uživatelům ve službě pro správu zařízení.
 
 ## <a name="action-plan"></a>Akční plán
@@ -66,6 +66,6 @@ Podle potřeby nasdílejte následující odkazy na další informace:
 * [Co očekávat, když je vaše aplikace pro iOS/iPadOS spravovaná zásadami ochrany aplikací](../fundamentals/end-user-mam-apps-ios.md)
 * [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](../fundamentals/end-user-mam-apps-android.md)
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Potřebujete pomoc s povolením této funkce nebo jiných scénářů EMS nebo Office 365? Pokud máte alespoň 150 licencí na Microsoft 365, Enterprise Mobility + Security nebo Azure Active Directory Premium, využijte [výhod služby FastTrack](https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program).

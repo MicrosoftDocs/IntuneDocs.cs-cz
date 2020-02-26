@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 842af9c8fffcb3755c81260739f4949768e75bac
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
+ms.openlocfilehash: e2075ed8328e6a33732e03fbf521d32b2edd6a35
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912671"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575838"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Příprava obchodních aplikací na zásady ochrany aplikací
 
@@ -51,7 +51,7 @@ Další informace o nástroji App Wrapping Tool pro zásady ochrany aplikací na
 |**Nástroj App Wrapping** | **Xamarin** |**Cordova** |
 |------|----|----|
 |**iOS** |Ano|Ano|
-|**Androidem**|Ne – Použijte [xamarinové vazby sady Intune App SDK](app-sdk-xamarin.md).|Ano|
+|**Android**|Ne – Použijte [xamarinové vazby sady Intune App SDK](app-sdk-xamarin.md).|Ano|
 
 ## <a name="intune-app-sdk"></a>Sada Intune App SDK
 
@@ -72,7 +72,7 @@ Další informace o sadě SDK najdete v tématu [Přehled](app-sdk.md). Pokud ch
 |**Intune App SDK** |**Xamarin** |**Cordova**
 |------|----|----|
 |**iOS**|Ano – Použijte [xamarinové vazby sady Intune App SDK](app-sdk-xamarin.md).|Ne|
-|**Androidem**| Ano – Použijte [xamarinové vazby sady Intune App SDK](app-sdk-xamarin.md).|Ne|
+|**Android**| Ano – Použijte [xamarinové vazby sady Intune App SDK](app-sdk-xamarin.md).|Ne|
 
 ## <a name="not-using-an-app-development-platform-listed-above"></a>Nepoužíváte platformu pro vývoj aplikací uvedenou výše?
 
@@ -82,7 +82,7 @@ Vývojový tým sady Intune SDK aktivně testuje a udržuje podporu pro aplikace
 
 Tato tabulka obsahuje seznam nastavení, která jsou povolená, pokud aplikace používá sadu App SDK nebo nástroj pro zabalení aplikace. Některé funkce vyžadují, aby vývojáři aplikací použili určitou logiku mimo základní integraci se sadou Intune SDK a jako takové nejsou povolené, pokud aplikace používá nástroj pro zabalení aplikace. 
 
-|Funkce|App SDK (sada)|Nástroj App Wrapping|
+|Funkce|Sada App SDK|Nástroj App Wrapping|
 |-----------|---------------------|-----------|
 |Omezit zobrazování obsahu webu jenom na podnikový spravovaný prohlížeč|X|X|
 |Zabránit zálohování Androidu, iTunes a iCloudu|X|X|
@@ -103,7 +103,7 @@ Tato tabulka obsahuje seznam nastavení, která jsou povolená, pokud aplikace p
 |Blokovat snímek obrazovky (jenom Android)|X|X|
 |Podpora MAM bez registrace zařízení|X|X|
 |Úplné vymazání dat aplikací|X|X|
-|Selektivní vymazání pracovních a školních dat ve scénářích s více identitami <br><br>**Poznámka:** V iOSu platí, že při odebrání profilu pro správu se odebere taky příslušná aplikace.|X||
+|Selektivní vymazání pracovních a školních dat ve scénářích s více identitami <br><br>**Poznámka:** Pro iOS/iPadOS se při odebrání profilu správy odebere i aplikace.|X||
 |Zabránit možnosti Uložit jako|X||
 |Cílová konfigurace aplikace (nebo konfigurace aplikace prostřednictvím kanálu MAM)|X|X|
 |Podpora víc identit|X||
@@ -117,13 +117,13 @@ Tato tabulka obsahuje seznam nastavení, která jsou povolená, pokud aplikace p
 |Vyžadovat minimální sadu Intune SDK pro iOS (pouze iOS)|X|X|
 |Ověření zařízení SafetyNet (jenom Android)|X|X|
 |Kontrola hrozeb u aplikací (jenom Android)|X|X|
-|Vyžadovat úroveň rizika zařízení u dodavatele ochrany před mobilními hrozbami maxmimum|X||
+|Vyžadovat maximální úroveň rizika zařízení u dodavatele ochrany před mobilními hrozbami|X||
 |Konfigurace obsahu oznámení aplikace pro účty organizace|X|X|
 |Vyžadovat použití schválených klávesnic (jenom Android)|X|X|
 |Vyžadovat zásady ochrany aplikací (podmíněný přístup)|X||
 |Vyžadovat aplikaci schválenou klienta (podmíněný přístup)|X||
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Další informace o zásadách ochrany aplikací a službě Intune najdete v těchto tématech:
 

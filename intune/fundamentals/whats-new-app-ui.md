@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4999a813384c68bb394c7e73dee1c5c452459b9
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: aab10058fe507a956bb793902e6f7b09d8579966
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77515284"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576543"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 
@@ -168,7 +168,7 @@ Správce služby Microsoft Intune může nahrát obrázek vlastní značky, kter
 ## <a name="week-of-august-27-2018"></a>Týden od 27. srpna 2018  
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Nová aktualizace uživatelského prostředí pro Portál společnosti web <!--2000968 -->  
-Na základě názorů zákazníků jsme přidali na web Portál společnosti nové funkce. Na svých zařízeních si všimnete značného vylepšení stávající funkčnosti a použitelnosti. Konkrétní oblasti webu, jako jsou podrobnosti o zařízení, názory a podpora a přehledy zařízení, teď mají nový, moderní a reagující návrh. Aktualizovali jsme [dokumentaci na Portálu společnosti Intune](https://docs.microsoft.com/intune-user-help/using-the-intune-company-portal-website), aby tyto změny reflektovala.   
+Na základě názorů zákazníků jsme přidali na web Portál společnosti nové funkce. Na svých zařízeních si všimnete značného vylepšení stávající funkčnosti a použitelnosti. Konkrétní oblasti webu, jako jsou podrobnosti o zařízení, názory a podpora a přehledy zařízení, teď mají nový, moderní a reagující návrh. Aktualizovali jsme [dokumentaci na Portálu společnosti Intune](https://docs.microsoft.com/intune-user-help/using-the-intune-company-portal-website), aby reflektovala tyto změny.   
 
 Mezi nové aktualizace patří:  
 
@@ -270,7 +270,7 @@ Pokud jste povolili [mapování skupin zařízení](../enrollment/device-group-m
 Vylepšili jsme pracovní postup instalace zařízení v aplikaci Portál společnosti pro iOS/iPadOS. Jazyk je uživatelsky přívětivější a tam, kde to bylo možné, jsme také sjednotili obrazovky. Také jsme použitím názvu vaší společnosti všude v textu instalace upravili jazyk tak, aby více odpovídal vaší společnosti.
 
 > [!NOTE]
-> Používáme název společnosti, který jste nastavili na portálu Azure Portal v **Microsoft Intune** > **Klientské aplikace** > **Značky Portálu společnosti** > **Název společnosti**. Pokud jste nenastavili tuto hodnotu, budeme používat název tenanta nastavený v **Azure Active Directory** > **Vlastnosti** > **Název**. Pokud jste název společnosti nenastavili v Portál společnosti brandingu a nechcete, aby se váš název tenanta zobrazoval, doporučujeme nastavit název společnosti na kartě Portál společnosti branding. Pokud nechcete, aby se tento řetězec zobrazoval v hlavičce v Portál společnosti, můžete zrušit zaškrtnutí políčka Zobrazit název společnosti vedle možnosti logo.
+> Používáme název společnosti, který jste nastavili na portálu Azure Portal v **Microsoft Intune** > **Klientské aplikace** > **Značky Portálu společnosti** > **Název společnosti**. Pokud jste nenastavili tuto hodnotu, budeme používat název tenanta nastavený v **Azure Active Directory** > **Vlastnosti** > **Název**. Pokud jste nenastavili název společnosti v poli Značky Portálu společnosti a nechcete zobrazovat název tenanta, doporučujeme nastavit název společnosti na Portálu společnosti na kartě značky. Pokud nechcete, aby se tento řetězec zobrazoval v záhlaví Portálu společnosti, můžete zrušit zaškrtnutí políčka Vedle loga zobrazit název společnosti.
 
 |Dříve|Nyní|
 |---|---|
@@ -407,7 +407,7 @@ Na stránce podrobností o aplikacích v aplikaci Portál společnosti pro Andro
 
 ### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Vylepšené přihlašování napříč Portál společnosti aplikacemi pro všechny platformy <!--User Story 1132123-->
 
-Avizujeme změnu, kterou uvedeme během několika nadcházejících měsíců a která vylepší přihlašování k aplikacím Portál společnosti Intune v systémech Android, iOS a Windows. Nové uživatelské prostředí se automaticky zobrazí na všech platformách pro aplikaci Portál společnosti, až Azure AD tuto změnu provede. Kromě toho se teď uživatelé můžou k Portálu společnosti přihlašovat z jiného zařízení pomocí vygenerovaného kódu na jedno použití. To se hodí hlavně v případech, kdy se uživatelé potřebují přihlásit bez přihlašovacích údajů.  
+Oznamujeme změnu, která se chystá během několika následujících měsíců, což vylepšit možnosti přihlašování pro Portál společnosti Intune aplikace pro Android, iOS/iPadOS a Windows. Nové uživatelské prostředí se automaticky zobrazí na všech platformách pro aplikaci Portál společnosti, až Azure AD tuto změnu provede. Kromě toho se teď uživatelé můžou k Portálu společnosti přihlašovat z jiného zařízení pomocí vygenerovaného kódu na jedno použití. To se hodí hlavně v případech, kdy se uživatelé potřebují přihlásit bez přihlašovacích údajů.  
 
 Níže můžete vidět předchozí způsob přihlašování, nový způsob přihlašování pomocí přihlašovacích údajů a nový způsob přihlašování z jiného zařízení.
 
@@ -494,7 +494,7 @@ Tato aktualizace se zobrazí pouze na zařízení s Windows 10 Anniversary Updat
 ### <a name="new-menu-action-to-easily-remove-company-portal---1164569--"></a>Nová akce nabídky pro snadné odebrání Portál společnosti <!--1164569-->
 Na základě zpětné vazby od uživatelů jsme do aplikace Portál společnosti pro Android přidali novou akci nabídky k zahájení odebrání Portálu společnosti ze zařízení. Tato akce odebere zařízení ze správy Intune, aby uživatel mohl aplikaci ze zařízení odebrat.
 
-![Obrázek aplikace Portál společnosti pro Android s otevřenou nabídkou akcí v pravém horním rohu. Nová možnost Odebrat portál společnosti je k dispozici jako třetí pod možnostmi Můj profil a Nastavení a nad možnostmi Podmínky, Nápověda a váš názor a O produktu.](./media/whats-new-app-ui/android_remove_cp_menu_action_after_1705.png)
+![Obrázek aplikace Portál společnosti pro Android s otevřenou nabídkou akcí v pravém horním rohu. Nová možnost Odebrat Portál společnosti je k dispozici jako třetí pod možnostmi Můj profil a Nastavení a nad možnostmi Podmínky, Nápověda a váš názor a O produktu.](./media/whats-new-app-ui/android_remove_cp_menu_action_after_1705.png)
 
 ![Obrázek potvrzovacího okna, které se otevře, když v nabídce akcí vyberete možnost Odebrat Portál společnosti. V dialogovém okně se uživateli zobrazí následující informace: „Pokud odeberete Portál společnosti, váš správce IT už nebude vaše zařízení spravovat a může odebrat přístup k podnikovým datům, aplikacím a e-mailu.“ Pak uživatele požádá o potvrzení, jestli chce aplikaci Portál společnosti skutečně odebrat. Pokud ji chce odebrat, musí zvolit Ano.](./media/whats-new-app-ui/android_remove_cp_menu_confirmation_after_1705.png)
 
@@ -575,11 +575,11 @@ Od března bude aplikace Portál společnosti pro Android odpovídat [specifikac
 
 ![Nalevo je obrázek aplikace Portál společnosti pro Android před aktualizací. Napravo je obrázek aplikace Portál společnosti pro Android po aktualizaci. Na obou obrázcích je karta Zařízení jako vybraná karta ze tří dostupných karet Aplikace, Zařízení a Kontaktovat oddělení IT.](./media/whats-new-app-ui/CP_Android_DevicesTab_BeforeAfter.png)
 
-* __Rozhraní__: tlačítka __vybrané aplikace__ a __všechny aplikace__ byly aktualizovány na kartě __aplikace__ . Tlačítko __Hledat__ je nyní plovoucí tlačítko akce.
+* __Rozhraní__: __Vybrané aplikace__ a tlačítka __všechny aplikace__ byly aktualizovány na kartě __aplikace__ . Tlačítko __Hledat__ je teď plovoucí tlačítko akce.
 
 ![Nalevo je obrázek aplikace Portál společnosti pro Android před aktualizací. Napravo je obrázek aplikace Portál společnosti pro Android po aktualizaci. Na obou obrázcích je karta Aplikace jako vybraná karta ze tří dostupných karet Aplikace, Zařízení a Kontaktovat oddělení IT.](./media/whats-new-app-ui/CP_Android_AppsTab_BeforeAfter.png)
 
-* __Navigace__: V části Všechny aplikace se teď zobrazují karty __Doporučené__, __Vše__ a __Kategorie__, které zjednodušují navigaci. __Kontaktovat oddělení IT__ je teď jednodušší a s vylepšenou čitelností.
+* __Navigace__: U všech aplikací se zobrazuje seznam __doporučených__, __všech__ __kategorií__ a pro snazší navigaci s kartami. __Kontaktovat oddělení IT__ je teď jednodušší a s vylepšenou čitelností.
 
 <html>
 <body>
@@ -607,7 +607,7 @@ Zde najdete plánované aktualizace našeho uživatelského rozhraní, které vy
 > Níže uvedené obrázky mohou být verze Preview a uvedený produkt se může lišit od prezentovaných verzí.  
 
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Související témata
 * [Blog Microsoft Intune](https://go.microsoft.com/fwlink/?LinkID=273882)
 * [Plán cloudové platformy](https://www.microsoft.com/cloud-platform/roadmap)
 * [Co je nového v Intune](whats-new.md)

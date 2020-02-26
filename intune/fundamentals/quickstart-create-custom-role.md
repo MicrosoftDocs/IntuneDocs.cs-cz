@@ -15,20 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c61449e17b96151d2717365e5193fd6c4bdaae3
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 5b38df90e47e709e02f12a6ccdab68714d04ca93
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72509889"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575862"
 ---
-# <a name="quickstart-create-and-assign-a-custom-role"></a>Rychlý start: Vytvoření a přiřazení vlastní role
+# <a name="quickstart-create-and-assign-a-custom-role"></a>Rychlý Start Vytvořit a přiřadit vlastní roli
 
 V tomto rychlém startu pro Intune vytvoříte vlastní roli se specifickými oprávněními pro oddělení operací zabezpečení. Potom tuto roli přiřadíte skupině příslušných operátorů. Existuje několik výchozích rolí, které se dají okamžitě použít. Vytvořením vlastních rolí, jako je tato, však můžete přesně řídit přístup ke všem částem systému pro správu mobilních zařízení.
 
 Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební účet](free-trial-sign-up.md).
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Požadavky
 
 - Abyste mohli projít tento rychlý start, je nutné [vytvořit skupinu](quickstart-create-group.md).
 
@@ -58,10 +58,10 @@ Operátor zabezpečení může použít nová oprávnění až poté, co danou r
 1. V Intune zvolte **Role** > **Všechny role** > **Operace zabezpečení**.
 2. V části **Role Intune** zvolte **Přiřazení** > **Přiřadit**.
 3. Do pole **Název přiřazení** zadejte *Operace zabezpečení*.
-4. Zvolte **Členové (Skupiny)**  > **Přidat**.
+4. Zvolte **Členové (Skupiny)** > **Přidat**.
 5. Zvolte skupinu **Testeři Contoso**.
 6. Zvolte **Vybrat** > **OK**.
-7. Zvolte **Rozsah (Skupiny)**  > **Vybrat skupiny, které se zahrnou** > **Testeři Contoso**.
+7. Zvolte **Rozsah (Skupiny)** > **Vybrat skupiny, které se zahrnou** > **Testeři Contoso**.
 8. Zvolte **Vybrat** > **OK** > **OK**.
 
 Teď jsou všichni členové dané skupiny členy role *Operace zabezpečení* a můžou kontrolovat následující informace o zařízení: identifikátory podnikových zařízení, zásady dodržování předpisů zařízením, konfigurace zařízení a informace o organizaci.
@@ -70,11 +70,11 @@ Teď jsou všichni členové dané skupiny členy role *Operace zabezpečení* a
 
 Pokud už nechcete novou vlastní roli dále používat, můžete ji odstranit. Zvolte **Role** > **Všechny role** > vyberte tři tečky vedle příslušné role > **Odstranit**.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 V tomto rychlém startu jste vytvořili vlastní roli pro operace zabezpečení a přiřadili jste ji skupině. Další informace o rolích v Intune najdete v článku [Řízení správy na základě role (RBAC) v Microsoft Intune](role-based-access-control.md).
 
 Pokud chcete postupovat podle této série rychlých startů Intune, pokračujte k dalšímu rychlému startu.
 
 > [!div class="nextstepaction"]
-> [Rychlý start: Vytvoření e-mailového profilu zařízení pro iOS](../configuration/quickstart-email-profile.md)
+> Rychlý Start [: Vytvoření profilu e-mailového zařízení pro iOS/iPadOS](../configuration/quickstart-email-profile.md)

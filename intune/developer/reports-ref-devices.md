@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 85b6d49f435ec45a2c6a2b81387ea25a1c15299b
-ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
+ms.openlocfilehash: 19ecbc632b924dda297b3692cabf5345b4724b30
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75654069"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575788"
 ---
 # <a name="reference-for-devices-entities"></a>Referenční informace o entitách zařízení
 
@@ -42,7 +42,7 @@ Kategorie **zařízení** obsahuje entity pro mobilní zařízení, které sledu
 
 Entita **deviceTypes** představuje typ zařízení, na který odkazují jiné entity datového skladu. Typ zařízení obvykle popisuje model zařízení, výrobce nebo kombinaci obou těchto možností.
 
-| Vlastnost  | Description |
+| Vlastnost  | Popis |
 |---------|------------|
 | deviceTypeID |Jedinečný identifikátor typu zařízení |
 | deviceTypeKey |Jedinečný identifikátor typu zařízení v datovém skladu – náhradní klíč |
@@ -50,7 +50,7 @@ Entita **deviceTypes** představuje typ zařízení, na který odkazují jiné e
 
 ### <a name="example"></a>Příklad
 
-| deviceTypeID  | Název | Description |
+| deviceTypeID  | Název | Popis |
 |---------|------------|--------|
 | 0 |Desktop |Zařízení se systémem Windows |
 | 1 |WindowsRT |Zařízení se systémem WindowsRT |
@@ -76,7 +76,7 @@ Entita **deviceTypes** představuje typ zařízení, na který odkazují jiné e
 ## <a name="enrollmentactivities"></a>enrollmentActivities 
 Entita **enrollmentActivity** označuje aktivitu registrace zařízení.
 
-| Vlastnost                      | Description                                                               |
+| Vlastnost                      | Popis                                                               |
 |-------------------------------|---------------------------------------------------------------------------|
 | dateKey                       | Klíč data, kdy se tato aktivita registrace nahrála.               |
 | deviceEnrollmentTypeKey       | Klíč typu registrace.                                        |
@@ -90,36 +90,36 @@ Entita **enrollmentActivity** označuje aktivitu registrace zařízení.
 ## <a name="enrollmenteventstatuses"></a>enrollmentEventStatuses 
 Entita **enrollmentEventStatus** indikuje výsledek registrace zařízení.
 
-| Vlastnost                   | Description                                                                       |
+| Vlastnost                   | Popis                                                                       |
 |----------------------------|-----------------------------------------------------------------------------------|
 | enrollmentEventStatusKey   | Jedinečný identifikátor stavu registrace v datovém skladu (náhradní klíč)  |
-| enrollmentEventStatusName  | Název stavu registrace. Podívejte se na následující příklady:                            |
+| enrollmentEventStatusName  | Název stavu registrace. Podívejte se na příklady níže.                            |
 
 ### <a name="example"></a>Příklad
 
-| enrollmentEventStatusName  | Description                            |
+| enrollmentEventStatusName  | Popis                            |
 |----------------------------|----------------------------------------|
 | Úspěch                    | Úspěšná registrace zařízení         |
-| Neúspěch                     | Neúspěšná registrace zařízení             |
+| Selhalo                     | Neúspěšná registrace zařízení             |
 | Není k dispozici              | Stav registrace není k dispozici.  |
 
 ## <a name="enrollmentfailurecategories"></a>enrollmentFailureCategories 
 Entita **EnrollmentFailureCategory** indikuje, proč se registrace zařízení nezdařila. 
 
-| Vlastnost                       | Description                                                                                 |
+| Vlastnost                       | Popis                                                                                 |
 |--------------------------------|---------------------------------------------------------------------------------------------|
 | enrollmentFailureCategoryKey   | Jedinečný identifikátor kategorie selhání registrace v datovém skladu (náhradní klíč)  |
-| enrollmentFailureCategoryName  | Název kategorie selhání registrace. Podívejte se na následující příklady:                            |
+| enrollmentFailureCategoryName  | Název kategorie selhání registrace. Podívejte se na příklady níže.                            |
 
 ### <a name="example"></a>Příklad
 
-| enrollmentFailureCategoryName   | Description                                                                                                   |
+| enrollmentFailureCategoryName   | Popis                                                                                                   |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------|
 | Nepoužitelné                  | Kategorie selhání registrace se nedá použít.                                                            |
 | Není k dispozici                   | Kategorie selhání registrace není k dispozici.                                                             |
 | Neznámé                         | Neznámá chyba                                                                                                |
-| Ověřování                  | Ověření se nezdařilo.                                                                                        |
-| Autorizace                   | Volání bylo ověřeno, ale není autorizováno k registraci.                                                         |
+| Ověřování                  | Ověřování se nezdařilo.                                                                                        |
+| Authorization                   | Volání bylo ověřeno, ale není autorizováno k registraci.                                                         |
 | AccountValidation               | Nepovedlo se ověřit účet pro registraci. (Účet zablokován, registrace není povolená.)                      |
 | UserValidation                  | Uživatele nelze ověřit. (Uživatel neexistuje, chybí licence)                                           |
 | DeviceNotSupported              | Zařízení není podporováno pro správu mobilních zařízení.                                                         |
@@ -133,14 +133,14 @@ Entita **EnrollmentFailureCategory** indikuje, proč se registrace zařízení n
 ## <a name="enrollmentfailurereasons"></a>enrollmentFailureReasons  
 Entita **EnrollmentFailureReason** označuje podrobnější důvod selhání registrace zařízení v dané kategorii selhání.  
 
-| Vlastnost                     | Description                                                                               |
+| Vlastnost                     | Popis                                                                               |
 |------------------------------|-------------------------------------------------------------------------------------------|
 | enrollmentFailureReasonKey   | Jedinečný identifikátor důvodu selhání registrace v datovém skladu (náhradní klíč)  |
-| enrollmentFailureReasonName  | Název důvodu selhání registrace. Podívejte se na následující příklady:                            |
+| enrollmentFailureReasonName  | Název důvodu selhání registrace. Podívejte se na příklady níže.                            |
 
 ### <a name="example"></a>Příklad
 
-| enrollmentFailureReasonName      | Description                                                                                                                                                                                            |
+| enrollmentFailureReasonName      | Popis                                                                                                                                                                                            |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Nepoužitelné                   | Důvod selhání registrace se nedá použít.                                                                                                                                                       |
 | Není k dispozici                    | Důvod selhání registrace není k dispozici.                                                                                                                                                        |
@@ -163,7 +163,7 @@ Entita **EnrollmentFailureReason** označuje podrobnější důvod selhání reg
 
 Entita **enrollmentType** označuje, jestli je zařízení firemní, osobně vlastněné nebo neznámé.
 
-| Vlastnost  | Description | Příklad |
+| Vlastnost  | Popis | Příklad |
 |---------|------------|--------|
 | ownerTypeID |Jedinečný identifikátor typu vlastníka. | |
 | ownerTypeKey |Jedinečný identifikátor typu vlastníka v datovém skladu – náhradní klíč. | |
@@ -176,7 +176,7 @@ Entita **enrollmentType** označuje, jestli je zařízení firemní, osobně vla
 
 Entita **managementStates** poskytuje podrobné informace o stavu zařízení. Podrobnosti můžou být užitečné v případech, kdy se používají vzdálené akce, nebo pokud jde o zařízení s jailbreakem nebo rootem.
 
-| Vlastnost  | Description |
+| Vlastnost  | Popis |
 |---------|------------|
 | managementStateID | Jedinečný identifikátor stavu správy |
 | managementStateKey | Jedinečný identifikátor stavu správy v datovém skladu – náhradní klíč |
@@ -184,7 +184,7 @@ Entita **managementStates** poskytuje podrobné informace o stavu zařízení. P
 
 ### <a name="example"></a>Příklad
 
-| managementStateID  | Název | Description |
+| managementStateID  | Název | Popis |
 |---------|------------|--------|
 | 0 |Spravovaní | Spravováno bez čekajících vzdálených akcí |
 | 1 |RetirePending | Pro toto zařízení existuje příkaz pro vyřazení z provozu, který čeká na vyřízení. |
@@ -203,7 +203,7 @@ Entita **managementStates** poskytuje podrobné informace o stavu zařízení. P
 
 Entita **ManagementAgentType** představuje agenty používané ke správě zařízení.
 
-| Vlastnost  | Description |
+| Vlastnost  | Popis |
 |---------|------------|
 | managementAgentTypeID | Jedinečný identifikátor typu agenta správy. |
 | managementAgentTypeKey | Jedinečný identifikátor typu agenta správy v datovém skladu – náhradní klíč. |
@@ -211,7 +211,7 @@ Entita **ManagementAgentType** představuje agenty používané ke správě zař
 
 ### <a name="example"></a>Příklad
 
-| ManagementAgentTypeID  | Název | Description |
+| ManagementAgentTypeID  | Název | Popis |
 |---------|------------|--------|
 | 1 |EAS | Zařízení se spravuje prostřednictvím protokolu Exchange Active Sync. |
 | 2 |MDM | Zařízení se spravuje pomocí agenta MDM. |
@@ -225,7 +225,7 @@ Entita **ManagementAgentType** představuje agenty používané ke správě zař
 
 Entita **zařízení** obsahuje seznam všech zaregistrovaných zařízení, která jsou pod správou, a jejich odpovídající vlastnosti.
 
-|          Vlastnost          |                                                                                       Description                                                                                      |
+|          Vlastnost          |                                                                                       Popis                                                                                      |
 |:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | deviceKey                  | Jedinečný identifikátor zařízení v datovém skladu – náhradní klíč                                                                                                               |
 | deviceId                   | Jedinečný identifikátor zařízení                                                                                                                                                     |
@@ -242,14 +242,14 @@ Entita **zařízení** obsahuje seznam všech zaregistrovaných zařízení, kte
 | deviceCategoryKey          | Klíč kategorie, která je k tomuto zařízení přidružená.                                                                                                                                     |
 | deviceEnrollmentType       | Klíč typu registrace, který je přidružený k tomuto zařízení a který udává metodu registrace.                                                                                             |
 | complianceStateKey         | Klíč stavu dodržování předpisů, který je k tomuto zařízení přidružený.                                                                                                                             |
-| osVersion                  | Verze operačního systému v zařízení                                                                                                                                                |
+| osVersion                  | Verze operačního systému zařízení.                                                                                                                                                |
 | easDeviceId                | ID protokolu Exchange ActiveSync zařízení.                                                                                                                                                  |
-| serialNumber               | SerialNumber                                                                                                                                                                           |
+| serialNumber               | sériové číslo                                                                                                                                                                           |
 | userId                     | Jedinečný identifikátor uživatele přidružený k zařízení                                                                                                                           |
 | rowLastModifiedDateTimeUTC | Datum a čas ve standardu UTC, kdy se toto zařízení v datovém skladu naposledy změnilo.                                                                                                       |
 | manufacturer               | Výrobce zařízení                                                                                                                                                             |
 | model                      | Model zařízení                                                                                                                                                                    |
-| operatingSystem            | Operační systém zařízení Windows, iOS atd.                                                                                                                                   |
+| operatingSystem            | Operační systém zařízení Windows, iOS/iPadOS atd.                                                                                                                                   |
 | IsDeleted                  | Binární soubor zobrazující, zda se zařízení odstranilo nebo ne.                                                                                                                                 |
 | androidSecurityPatchLevel  | Úroveň opravy zabezpečení Androidu                                                                                                                                                           |
 | MEID                       | MEID                                                                                                                                                                                   |
@@ -268,7 +268,7 @@ Entita **zařízení** obsahuje seznam všech zaregistrovaných zařízení, kte
 
 Entita **devicePropertyHistory** má stejné vlastnosti jako tabulka zařízení a denní snímky každého záznamu zařízení za den v posledních 90 dnech. Sloupec DateKey označuje den pro každý řádek.
 
-|          Vlastnost          |                                                                                      Description                                                                                     |
+|          Vlastnost          |                                                                                      Popis                                                                                     |
 |:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | dateKey                    | Odkaz na tabulku kalendářních dat udávající den.                                                                                                                                          |
 | deviceKey                  | Jedinečný identifikátor zařízení v datovém skladu – náhradní klíč Jedná se o odkaz na tabulku zařízení obsahující ID zařízení v Intune.                               |

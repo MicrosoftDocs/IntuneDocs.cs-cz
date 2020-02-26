@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61b703837598ddbe2c0c44874928b4444466c811
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
+ms.openlocfilehash: f3b32268d0b04dee84a737b9a1c768bc4fab7202
+ms.sourcegitcommit: 3964e6697b4d43e2c69a15e97c8d16f8c838645b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886780"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77556495"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Řešení potíží se zásadami BitLockeru v Microsoft Intune
 
@@ -35,11 +35,13 @@ Pomocí Microsoft Intune máte k dispozici následující metody pro správu ná
 
 - **Zásady konfigurace zařízení** – některé integrované možnosti zásad jsou k dispozici v Intune, když vytváříte profil konfigurace zařízení pro správu služby Endpoint Protection. Pokud chcete najít tyto možnosti, [vytvořte profil zařízení pro Endpoint Protection](endpoint-protection-configure.md#create-a-device-profile-containing-endpoint-protection-settings), vyberte **Windows 10 a novější** pro *platformu*a pak vyberte kategorii **šifrování Windows** pro *Nastavení*. 
 
-   Informace o dostupných možnostech a funkcích si můžete přečíst tady: [šifrování Windows](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption).
+   Informace o dostupných možnostech a funkcích si můžete přečíst tady: [Šifrování systému Windows](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption).
 
 - **Směrné plány zabezpečení** - [standardních hodnot zabezpečení](security-baselines.md) jsou známé skupiny nastavení a výchozí hodnoty, které doporučuje příslušný bezpečnostní tým k zabezpečení zařízení s Windows. Různé zdroje standardních hodnot, jako jsou *základní hodnoty zabezpečení MDM* nebo *standardní hodnoty ATP v programu Microsoft Defender* , můžou spravovat stejné nastavení i jiná nastavení. Můžou taky spravovat stejná nastavení, která spravujete pomocí zásad konfigurace zařízení. 
 
-Kromě Intune je možné, že nastavení BitLockeru se spravují jiným způsobem, jako je Zásady skupiny, nebo ručně nastaveným uživatelem zařízení.
+Pro hardware, který je kompatibilní s moderní pohotovostní úsporou a HSTI při použití některé z těchto funkcí, se šifrování zařízení BitLockeru automaticky zapne při každém připojení zařízení do Azure AD. Azure AD poskytuje portál, ve kterém se zálohují taky klíče pro obnovení, takže uživatelé můžou v případě potřeby získat vlastní obnovovací klíč pro samoobslužné služby.
+
+Je také možné, že nastavení nástroje BitLocker jsou spravovaná jiným způsobem, například Zásady skupiny, nebo ručně nastaveným uživatelem zařízení.
 
 Bez ohledu na to, jak se na zařízení aplikují nastavení, zásady BitLockeru využívají [CSP nástroje BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) ke konfiguraci šifrování na zařízení. Zprostředkovatel kryptografických služeb BitLocker je integrovaný do systému Windows a když Intune nasadí zásady BitLockeru na přiřazené zařízení, je na zařízení CSP nástroje BitLocker, které zapisuje příslušné hodnoty do registru Windows, aby se nastavení ze zásad projevilo.
 
@@ -103,7 +105,7 @@ Confirm-SecureBootUEFI
 
 ### <a name="review-the-devices-registry-key-configuration"></a>Kontrola konfigurace klíče registru zařízení
 
-Po úspěšném nasazení zásad BitLockeru do zařízení se podívejte na následující klíč registru na zařízení, kde můžete zkontrolovat konfiguraci nastavení BitLockeru: *HKEY_LOCAL_MACHINE \software\microsoft\policymanager\current\device\bitlocker*. Tady je příklad:
+Po úspěšném nasazení zásad BitLockeru do zařízení si prohlédněte následující klíč registru na zařízení, kde můžete zkontrolovat konfiguraci nastavení BitLockeru:  *HKEY_LOCAL_MACHINE \software\microsoft\policymanager\current\device\bitlocker*. Tady je příklad:
 
 ![Klíč registru BitLockeru](./media/troubleshooting-bitlocker-policies/registry.png)
 
@@ -164,6 +166,15 @@ Teď byste měli mít dobrý nápad, jak ověřit, že zásady BitLockeru se ús
 
   2. **BitLocker není podporován na všech hardwarových počítačích**.
      I v případě, že máte správnou verzi Windows, je možné, že základní hardware zařízení nesplňuje požadavky na šifrování BitLockeru. [Požadavky na systém pro nástroj BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements) najdete v dokumentaci k systému Windows, ale hlavní akce, které je třeba ověřit, že má zařízení kompatibilní čip TPM (1,2 nebo novější) a firmware systému BIOS kompatibilní se standardem TCG (Trusted Computing Group) nebo rozhraní UEFI.
+     
+**Šifrování BitLockeru se neprovádí v tichém režimu** – nakonfigurovali jste zásady Endpoint Protection s nastavením upozornění pro jiné šifrování disku, které se nastaví jako zablokované a Průvodce šifrováním se pořád zobrazuje:
+
+- **Potvrzení, že verze Windows podporuje tiché šifrování** To vyžaduje minimálně verzi 1803. Pokud uživatel není na zařízení správce, než vyžaduje minimální verzi 1809. Navíc 1809 přidání podpory pro zařízení, která nepodporují moderní pohotovostní režim
+
+**Zařízení šifrované bitlockerem se zobrazuje jako nevyhovující zásadám dodržování předpisů Intune** – k tomuto problému dochází, když šifrování nástrojem BitLocker není dokončené. Šifrování BitLockeru může trvat dlouhou dobu, a to na základě faktorů, jako je velikost disku, počet souborů a nastavení nástroje BitLocker. Po dokončení šifrování se zařízení zobrazí jako vyhovující. Zařízení se taky můžou dočasně nedodržující předpisy hned po poslední instalaci aktualizací WIndows.
+
+**Zařízení se šifrují pomocí 128 bitových algorithim, když jsou specifické pro zásady 256 bit** – ve výchozím nastavení Windows 10 zašifruje jednotku pomocí šifrování XTS-AES 128-bit. V této příručce najdete [nastavení 256 šifrování pro BitLocker při autopilotu](https://techcommunity.microsoft.com/t5/intune-customer-success/setting-256-bit-encryption-for-bitlocker-during-autopilot-with/ba-p/323791#).
+
 
 **Ukázkové šetření**
 
@@ -194,7 +205,7 @@ Teď byste měli mít dobrý nápad, jak ověřit, že zásady BitLockeru se ús
 
 Když vyřešíte problémy se zásadami BitLockeru v Intune a můžete potvrdit, že zásada dosáhne zamýšleného zařízení, je možné, že problém nesouvisí přímo s Intune. Problém je pravděpodobnější, že se jedná o problém s operačním systémem Windows nebo s hardwarem. V takovém případě začněte hledat v jiných oblastech, jako je například konfigurace čipu TPM nebo rozhraní UEFI a zabezpečené spouštění).
 
-## <a name="next-steps"></a>Další kroky  
+## <a name="next-steps"></a>Další postup  
 
 V následující části najdete další zdroje informací, které mohou při práci s nástrojem BitLocker pomáhat:
 

@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c705e8863ef4e01906a773d528f9ae2f40461c71
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 08041a57ab52f395283e57cda596d00ba168aba1
+ms.sourcegitcommit: 3964e6697b4d43e2c69a15e97c8d16f8c838645b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885860"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77556478"
 ---
 # <a name="basic-setup"></a>Základní nastavení
 
@@ -53,20 +53,13 @@ Pokud plánujete, že budete v Intune používat ověřování profilů VPN, Wi-
 
 - [Jak konfigurovat infrastrukturu certifikátů pro PFX](/intune/certficates-pfx-configure)
 
-
 ## <a name="task-list-for-an-intune-setup"></a>Seznam kroků instalace Intune
 
 ### <a name="task-1-intune-subscription"></a>Krok 1: Předplatné Intune
 
-Ještě než začnete s migrací do Intune, potřebujete předplatné Intune.
+Než budete moct migrovat do Intune, budete nejdřív potřebovat [předplatné Intune](account-sign-up.md).
 
-- Můžete navštívit [tuto stránku](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0), kde najdete pokyny, jak:
-
-  - Vytvořit nové předplatné Intune propojené s novým tenantem AAD
-
-  - Propojit předplatné Intune přihlášením k existujícímu tenantovi AAD
-
-### <a name="task-2-assign-intune-user-licenses"></a>Krok 2: Přiřazení uživatelských licencí pro Intune
+### <a name="task-2-assign-intune-user-licenses"></a>Krok 2: Přiřazení uživatelských licencí Intune
 
 - Podívejte se, [jak přiřadit uživatelské licence pro Intune](licenses-assign.md).
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2f1be7a2457cca7da62883370c9e273168c6a29
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 0c550fba45e5e6b16e49e7103fde40de1e08ba55
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502439"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576474"
 ---
 # <a name="data-intune-sends-to-apple"></a>Data z Intune odesílaná Applu
 
@@ -44,7 +44,7 @@ Následující tabulka uvádí data, která Microsoft Intune odesílá ze zaří
 |---|---| ---|
 | [APNS](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token, PushMagic | Pokud server přijme zařízení, dané zařízení poskytne serveru svůj token zařízení pro nabízená oznámení. Pomocí tohoto tokenu by měl server odesílat nabízené zprávy do daného zařízení. Tato přihlašovací zpráva obsahuje také řetězec PushMagic. Server si musí pamatovat tento řetězec a zahrnout ho do každé nabízené zprávy, kterou odesílá do daného zařízení. |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token serveru | Token zařízení pro nabízená oznámení, který se používá k ověření služby Apple |
-| ASM/DEP | název_serveru | Identifikovatelný název pro server MDM |
+| ASM/DEP | server_name | Identifikovatelný název pro server MDM |
 | ASM/DEP | server_uuid | Systémem generovaný identifikátor serveru |
 | ASM/DEP | admin_id | Apple ID osoby, která vygenerovala aktuálně používané tokeny |
 | ASM/DEP | org_name | Název organizace |
@@ -59,7 +59,7 @@ Následující tabulka uvádí data, která Microsoft Intune odesílá ze zaří
 | ASM/DEP | profile_status | Stav instalace profilu. Možné hodnoty: **empty**, **assigned**, **pushed** nebo **removed** |
 | ASM/DEP | profile_uuid | Jedinečné ID přiřazeného profilu |
 | ASM/DEP | device_assigned_by | E-mail osoby, která přiřadila dané zařízení |
-| ASM/DEP | os | Operační systém zařízení: iOS, OSX nebo tvOS. Tento klíč je platný v X-Server-Protocol-Version 2 nebo v novější verzi. |
+| ASM/DEP | os | Operační systém zařízení: iOS/iPadOS, OSX nebo tvOS. Tento klíč je platný v X-Server-Protocol-Version 2 nebo v novější verzi. |
 | ASM/DEP | device_family | Produktová řada Apple, do které dané zařízení patří: iPad, iPhone, iPod, Mac nebo AppleTV. Tento klíč je platný v X-Server-Protocol-Version 2 nebo v novější verzi. |
 | ASM/DEP | profile_name | Řetězec. Popisný název pro profil. |
 | ASM/DEP | support_phone_number | Volitelný parametr. Řetězec. Telefonní číslo podpory pro organizaci. |

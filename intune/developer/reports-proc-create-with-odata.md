@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18815fb671e853bc0463fed750d40b80ccb285fb
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 7fbbffb187fc9e9537bf647bc33e3d98879369c3
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74784268"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576047"
 ---
 # <a name="create-an-intune-report-from-the-odata-feed-with-power-bi"></a>Vytvoření sestavy Intune z datového kanálu OData pomocí Power BI
 
-Tento článek vysvětluje, jak vytvořit vizualizaci stromové struktury vašich dat Intune pomocí Power BI Desktop, které uživatelé interaktivní filtrují. Například vaše finanční ŘEDITELka může chtít zjistit, jak celkové rozdělení zařízení porovnává mezi zařízeními vlastněná společností a osobními zařízeními. Mapa stromové struktury poskytuje podrobný přehled celkového počtu typů zařízení. Můžete zkontrolovat počet zařízení s iOSem, Androidem a Windows, která jsou ve vlastnictví společnosti nebo v osobním vlastnictví.
+Tento článek vysvětluje, jak vytvořit vizualizaci stromové struktury vašich dat Intune pomocí Power BI Desktop, které uživatelé interaktivní filtrují. Například vaše finanční ŘEDITELka může chtít zjistit, jak celkové rozdělení zařízení porovnává mezi zařízeními vlastněná společností a osobními zařízeními. Mapa stromové struktury poskytuje podrobný přehled celkového počtu typů zařízení. Můžete zkontrolovat počet zařízení s iOS/iPadOS, Androidem a Windows, která jsou ve vlastnictví společnosti nebo v osobním vlastnictví.
 
 ## <a name="overview-of-creating-the-chart"></a>Přehled vytvoření grafu
 
@@ -47,7 +47,7 @@ Používání pojmů *entita* a *tabulka* může být matoucí. Datový model je
 
 ## <a name="install-power-bi-desktop"></a>Instalace Power BI Desktopu
 
-Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktop si můžete stáhnout z webu: [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
+Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktop si můžete stáhnout z: [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
 
 ## <a name="connect-to-the-odata-feed-for-the-intune-data-warehouse-for-your-tenant"></a>Připojení k datovému kanálu OData pro datový sklad Intune pro vašeho tenanta
 
@@ -60,7 +60,7 @@ Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktop 
 4. Otevřete Power BI Desktop.
 5. V řádku nabídek vyberte **soubor** > **získat data** > datový **kanál OData**.
 6. Vložte adresu URL vlastního informačního kanálu, kterou jste zkopírovali v předchozím kroku, do pole Adresa URL v okně datového **kanálu OData** .
-7. Vyberte **Základní**.
+7. Vyberte **Basic**.
 
     ![Kanál OData pro datový sklad Intune pro vašeho tenanta](./media/reports-proc-create-with-odata/reports-create-01-odatafeed.png)
 
@@ -120,7 +120,7 @@ Teď máte interaktivní filtr, pomocí kterého můžete přepínat mezi zaří
 1. V průřezu vyberte **Společnost** , aby se zobrazila distribuce zařízení vlastněné společností.
 2. Vyberte **osobní** v průřezu, abyste viděli zařízení v osobním vlastnictví.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - Další informace o [vytváření a správě relací](https://powerbi.microsoft.com/documentation/powerbi-desktop-create-and-manage-relationships/) v Power BI Desktopu najdete v dokumentaci k Power BI.
 - Přečtěte si článek [Datový model datového skladu Intune](reports-ref-data-model.md).

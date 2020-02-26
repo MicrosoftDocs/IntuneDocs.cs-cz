@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 061644a1c83b02902a6bbdaf3cfbd04815d32ea3
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: 9c2083d6f259b62b2856e08fec5ebcb696cbc0df
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755030"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576445"
 ---
-# <a name="manually-add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Ruční přidání aplikace Portál společnosti pro Windows 10 pomocí Microsoft Intune
+# <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Přidání aplikace Portál společnosti s Windows 10 pomocí Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Vaši uživatelé si mohou nainstalovat aplikaci Portál společnosti sami z Microsoft Storu, aby mohli spravovat zařízení a instalovat aplikace. Pokud potřeby vaší firmy vyžadují, abyste jim aplikaci Portál společnosti přiřadili vy, můžete aplikaci Portál společnosti pro Windows 10 také přiřadit ručně přímo z Intune. Můžete to udělat, i když nemáte službu Intune integrovanou s Microsoft Storem pro firmy.
+Vaši uživatelé si mohou nainstalovat aplikaci Portál společnosti sami z Microsoft Storu, aby mohli spravovat zařízení a instalovat aplikace. Pokud vaše obchodní potřeby vyžadují, abyste jim přidělili Portál společnosti aplikaci, můžete aplikaci Portál společnosti pro Windows 10 přiřadit přímo z Intune. Můžete to udělat, i když nemáte službu Intune integrovanou s Microsoft Storem pro firmy.
 
- > [!NOTE]
- > Možnost popsaná v tomto článku vyžaduje, abyste přiřadili ruční aktualizace vždy, když je vydána aktualizace aplikace.
+ > [!IMPORTANT]
+ > Pokud si stáhnete aplikaci Portál společnosti, možnost popsanou v tomto článku vyžaduje, abyste při každém vydání aktualizace aplikace přiřadili ruční aktualizace. Postup nasazení Portál společnosti aplikace pro zařízení s autopilotem s Windows 10, která se zřídí, najdete v tématu [Přidání zařízení s Windows 10 portál společnosti autopilotování aplikací](~/apps/store-apps-company-portal-autopilot.md).
 
 ## <a name="configure-settings-to-show-offline-apps"></a>Konfigurace nastavení k zobrazení offline aplikací
 1. Přihlaste se k [Microsoft Storu pro firmy](https://www.microsoft.com/business-store) pomocí svého účtu správce.
@@ -95,7 +95,7 @@ Aplikaci můžete tímto způsobem podepsat a přiřadit takto:
 3. Pokud chcete podepsat aplikaci Portál společnosti pro Windows 10, spusťte skript se vstupními parametry popsanými v hlavičce skriptu, jak je uvedeno v následující tabulce.  
     Závislosti není nutné do skriptu předávat. Jsou vyžadované jenom v případě, že aplikaci nahráváte do konzoly pro správu Intune.
 
-| Parametr |  Description  |
+| Parametr |  Popis  |
 |---|---|
 | InputWin10AppxBundle  |  Cesta ke zdrojovému souboru appxbundle |
 | OutputWin10AppxBundle | Výstupní cesta pro podepsaný soubor appxbundle 
@@ -107,7 +107,7 @@ Aplikaci můžete tímto způsobem podepsat a přiřadit takto:
 
 Po dokončení běhu tohoto skriptu bude jeho výstupem podepsaná verze aplikace Portál společnosti pro Windows 10. Potom můžete podepsanou verzi aplikace přiřadit jako obchodní aplikaci přes Intune. Tím se aktuálně přiřazené verze upgradují na tuto novou aplikaci.  
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - [Přiřazení aplikací skupinám](apps-deploy.md)
 

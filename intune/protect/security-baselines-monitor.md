@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbf82c0bef88e4a6d0e790f4b0ecdf73d2731d5d
-ms.sourcegitcommit: 9bb1bcd9f1bdd53b470073da956bbd8b0935dfbc
+ms.openlocfilehash: 3d8ee4ec6a5bcb29a51b68cff7b840823b678636
+ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556398"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77569281"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Sledování standardních hodnot zabezpečení a profilů v Microsoft Intune
 
@@ -59,7 +59,7 @@ V podokně Přehled se zobrazí souhrn založený na grafu o tom, kolik zaříze
 
 ![Kontrolovat stav zařízení](./media/security-baselines-monitor/overview.png)
 
-Pokud má zařízení různý stav z různých kategorií na základě směrného plánu, zařízení je reprezentované jediným stavem. Stav, který představuje zařízení, pochází z následujícího pořadí: nesprávně **nakonfigurované**, **neshoduje se se směrným plánem**, **není k dispozici**, **odpovídá směrnému plánu**.
+Pokud má zařízení různý stav z různých kategorií na základě směrného plánu, zařízení je reprezentované jediným stavem. Stav, který představuje zařízení, je pořízen z následujícího pořadí: Nesprávně **nakonfigurované**, **neshoduje se směrným plánem**, **není k dispozici**, **odpovídá směrnému plánu**.
 
 Například, pokud zařízení obsahuje nastavení jsou klasifikovány jako *nesprávně nakonfigurované* a jedno nebo více nastavení, které jsou klasifikovány jako *neodpovídá směrného plánu*, zařízení je klasifikován tak *správněnakonfigurovaný*.
 
@@ -106,6 +106,18 @@ Monitorování profilu vám umožní získat přehled o stavu nasazení vašich 
 
    ![Zobrazit různé možnosti monitorování pro profil standardních hodnot zabezpečení](./media/security-baselines-monitor/monitor-status-options.png)
 
+## <a name="view-endpoint-security-configurations-per-device"></a>Zobrazit konfigurace zabezpečení Endpoint na zařízení
+
+Podívejte se na podrobnosti o konfiguracích zabezpečení, které se vztahují na jednotlivá zařízení, která vám pomůžou izolovat nesprávně nakonfigurované nastavení.
+
+1. Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)a přihlaste se.
+
+2. V části **zařízení** > **všechna zařízení** a vyberte zařízení, které chcete zobrazit.
+
+3. V kategorii *monitor* vyberte možnost **Konfigurace zabezpečení koncového bodu** a zobrazte seznam konfigurací zabezpečení, které se vztahují k danému zařízení.
+
+4. Můžete vybrat konfiguraci zabezpečení koncového bodu pro přechod k podrobnostem a zobrazit další podrobnosti o vyhodnocení této konfigurace zabezpečení na zařízení.
+
 ## <a name="troubleshoot-using-per-setting-status"></a>Řešení potíží s použitím stavu podle nastavení
 
 Nasadili jste základní úroveň zabezpečení, ale stav nasazení zobrazuje chybu. Následující kroky vám poskytnou pokyny k řešení této chyby.
@@ -135,9 +147,10 @@ Na zařízeních s Windows 10 je k dispozici integrovaná sestava diagnostické 
 [Diagnostika selhání MDM ve Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) poskytuje další informace o této předdefinované sestavě.
 
 > [!TIP]
+>
 > - Některá nastavení také uvádějí identifikátor GUID. Tento identifikátor GUID můžete vyhledat v místním registru (Regedit) pro všechny hodnoty sady.
 > - Protokoly Prohlížeč událostí můžou taky zahrnovat nějaké informace o chybě v nastavení problematické (**Prohlížeč událostí** > **protokoly aplikací a služeb** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider** > **admin**).
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 [Sledujte profily zařízení](../configuration/device-profile-monitor.md) a [Podívejte se na některé běžné problémy a jejich řešení](../configuration/device-profile-troubleshoot.md).

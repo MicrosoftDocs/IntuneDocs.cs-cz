@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 514baf3395a2cad9682e6c070b8615f320cc214c
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 0f543d38b6688b03126e8fb7d5666c1383b2fc0f
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73801458"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576497"
 ---
 # <a name="integrate-check-point-sandblast-mobile-with-intune"></a>Integrace Check Point SandBlast Mobile a Intune
 
@@ -32,7 +32,7 @@ Provedením následujících kroků Integrujte řešení ochrany před mobilním
 > [!NOTE]
 > Tento dodavatel ochrany před mobilními hrozbami není u neregistrovaných zařízení podporován.
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 Pokyny v tomto článku se provádějí v [konzole Check Point SandBlast Mobile](https://intune-4.eu1.locsec.net/). 
 
@@ -74,7 +74,7 @@ Proces autorizace aplikace Check Point SandBlast:
 
 4. V rozevíracím seznamu **MDM Service** zvolte **Microsoft Intune**.
 
-5. Po nastavení Microsoft Intune jako služby MDM Service se zobrazí okno pro **konfiguraci Microsoft Intune**. U každé platformy zařízení: iOS, Android a Windows zvolte **Add to my organization** (Přidat do mojí organizace), aby bylo možné autorizovat komunikaci Check Point SandBlast Mobile s Intune a Azure AD.
+5. Jakmile nastavíte Microsoft Intune jako službu MDM, okno **konfigurace Microsoft Intune** se zobrazí, vyberte možnost **Přidat do mojí organizace** pro každou platformu zařízení: iOS/IPadOS, Android a Windows pro autorizaci kontrolního bodu SandBlast Mobile ke komunikaci s Intune a Azure AD.
 
     ![Obrázek znázorňující konfiguraci Check Point MTD v Intune](./media/checkpoint-sandblast-mobile-mtd-connector-integration/checkpoint-MTD-1.PNG)
 
@@ -87,6 +87,6 @@ Proces autorizace aplikace Check Point SandBlast:
 
 8. Zvolte **Verify** (Ověřit) a po úspěšném ověření skupiny zabezpečení zvolte **Save** (Uložit).
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - [Nastavení aplikací Check Point SandBlast Mobile](mtd-apps-ios-app-configuration-policy-add-assign.md)

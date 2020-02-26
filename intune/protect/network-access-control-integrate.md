@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/25/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: baeece091358a7cd05f0d1f8db7c0032870fc262
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 472b23581cddad16a1b7eaf37ddf99e7e37e70f5
+ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207090"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77569230"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integrace řešení pro řízení přístupu k síti (NAC) do Intune
 
@@ -67,35 +67,38 @@ Následující seznam obsahuje přehled fungování řešení pro řízení př�
 
 ## <a name="use-nac-for-vpn-on-your-ios-devices"></a>Použití NAC pro VPN na zařízeních s iOS  
 
-- NAC je k dispozici na následujících sítích VPN bez povolení NAC v profilu sítě VPN:
+NAC je k dispozici na následujících sítích VPN bez povolení NAC v profilu sítě VPN:
 
   - NAC pro Cisco Legacy AnyConnect
   - Přístup k starší verzi F5
   - Citrix VPN
 
-- NAC je k dispozici také pro přístup k Citrix SSO a F5. Povolení NAC pro Citrix SSO:
+NAC se podporuje taky pro přístup k Cisco AnyConnect, Citrix SSO a F5. 
+
+### <a name="to-enable-nac-for-cisco-anyconnect-for-ios"></a>Povolení NAC pro Cisco AnyConnect pro iOS:
+
+  - Integrujte ISE do Intune pro NAC, jak je popsáno v následujícím odkazu.
+  - Nastavte možnost **Povolit síťové Access Control (NAC)** v profilu sítě VPN na **Ano**.
+
+### <a name="to-enable-nac-for-citrix-sso"></a>Povolení NAC pro Citrix SSO:
 
   - Použijte Citrix Gateway 12.0.59 nebo vyšší.  
   - Uživatelé musí mít nainstalované Citrix SSO 1.1.6 nebo novější.
   - [Integrujte NetScaler do Intune pro NAC](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) , jak je popsáno v dokumentaci k produktu Citrix.
   - V profilu sítě VPN vyberte **základní nastavení** > **Povolit síťový Access Control (NAC)** **> vyberte Souhlasím**.
 
-  Z bezpečnostních důvodů je připojení VPN odpojené každých 24 hodin. SÍŤ VPN se může okamžitě znovu připojit.
 
-- Povolení přístupu k NAC pro F5:
+### <a name="to-enable-nac-for-f5-access"></a>Povolení přístupu k NAC pro F5:
 
   - Použijte F5 BIG-IP 13.1.1.5. BIG-IP 14 se nepodporuje.
-  - Integrujte BIG-IP s Intune for NAC. [Přehled: Konfigurace funkce APM pro stav zařízení pomocí příručky pro správu koncových bodů v systému](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) F5 seznam kroků.
+  - Integrujte BIG-IP s Intune for NAC. Přehled [: Konfigurace funkce APM pro stav zařízení pomocí](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) systémů správy koncových bodů: Příručka k nástroji F5 seznam kroků.
   - V profilu sítě VPN vyberte **základní nastavení** > **Povolit síťový Access Control (NAC)** **> vyberte Souhlasím**.
 
   Z bezpečnostních důvodů je připojení VPN odpojené každých 24 hodin. SÍŤ VPN se může okamžitě znovu připojit.
 
-- Řízení přístupu k síti není podporované pro následujícího klienta VPN v iOS:
-  - Cisco AnyConnect
-
 Spolupracujeme s našimi partnery pro vydání řešení NAC pro tyto novější klienty. Až budou řešení připravena, Tento článek se aktualizuje o další informace.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - [Integrace řešení Cisco ISE do Intune](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)
 - [Integrace řešení Citrix NetScaler do Intune](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html)

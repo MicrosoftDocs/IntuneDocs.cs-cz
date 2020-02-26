@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d6dc10eca80a7d403d0ff44c25d3cfaed85fafa
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: f4a1d0575ce4c46c56fd1b3d2a7526a18a076fcf
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77514196"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576122"
 ---
 # <a name="troubleshoot-conditional-access"></a>Řešení potíží s podmíněným přístupem
 Tento článek popisuje, co dělat, když se vašim uživatelům nedaří získat přístup k prostředkům chráněným pomocí podmíněného přístupu, nebo když uživatelé mají přístup k chráněným prostředkům, ale měli byste je zablokovat.
@@ -44,7 +44,7 @@ Aby podmíněný přístup fungoval, musí být splněné následující požada
 
 - Uživateli se standardně musí přiřadit zásady dodržování předpisů pro zařízení. To může záviset na konfiguraci nastavení **označení zařízení bez přiřazených zásad dodržování předpisů,** které se vztahuje na **nastavení zásad** dodržování předpisů pro **zařízení** > na portálu pro správu Intune.
 
-- Pokud uživatel nepoužívá Outlook, ale nativního poštovního klienta daného zařízení, musí být v zařízení aktivovaný protokol Exchange ActiveSync. K tomu dochází automaticky pro zařízení se systémy iOS, Windows Phone a Android Knox.
+- Pokud uživatel nepoužívá Outlook, ale nativního poštovního klienta daného zařízení, musí být v zařízení aktivovaný protokol Exchange ActiveSync. K tomu dochází automaticky pro zařízení se systémy iOS/iPadOS, Windows Phone a Android Knox.
 
 - Pro místní Exchange musí být váš Intune Exchange Connector správně nakonfigurovaný. Další informace najdete v tématu [Poradce při potížích s Exchange Connectorem v Microsoft Intune](troubleshoot-exchange-connector.md).
 
@@ -114,5 +114,5 @@ Pokud zařízení nedodržuje předpisy, ale má i nadále přístup, proveďte 
   
   - Pokud je zařízení uvedené, použijte příkaz Get-CASmailbox-identity: UPN | FL rutina pro získání podrobných informací o jeho stavu přístupu a poskytování těchto informací podpora Microsoftu.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 Pokud vám tyto informace nepomohly, můžete také [získat podporu pro Microsoft Intune](../fundamentals/get-support.md).

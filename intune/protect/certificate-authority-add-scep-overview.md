@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d05e33dbc28707bc6f929be72ba4a77c2e0641c
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 85aac54a81d81dc138dd12612db183aae839b72b
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206053"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575978"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Přidání partnerské certifikační autority pomocí protokolu SCEP do Intune
 
-Použijte certifikační autority (CA) třetích stran s Intune. CA třetích stran můžou zřídit mobilní zařízení s novými nebo obnovenými certifikáty pomocí Simple Certificate Enrollment Protocol (SCEP) a můžou podporovat zařízení s Windows, iOS, Androidem a macOS.
+Použijte certifikační autority (CA) třetích stran s Intune. CA třetích stran můžou zřídit mobilní zařízení s novými nebo obnovenými certifikáty pomocí Simple Certificate Enrollment Protocol (SCEP) a můžou podporovat zařízení s Windows, iOS/iPadOS, Androidem a macOS.
 
 K použití této funkce potřebujete dvě věci: open-source rozhraní API a úlohy správce Intune.
 
@@ -41,7 +41,7 @@ Pomocí aplikace Azure Active Directory (Azure AD) můžete delegovat práva, ab
 
 Tento článek poskytuje přehled této funkce z pohledu správce, včetně vytvoření aplikace Azure AD.
 
-## <a name="overview"></a>Overview
+## <a name="overview"></a>Přehled
 
 Následující kroky poskytují přehled použití protokolu SCEP pro certifikáty v Intune:
 
