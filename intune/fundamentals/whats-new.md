@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2f984392983d81bc64edb7206469babdb806d63
-ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
+ms.openlocfilehash: 17bb4ca225fa93352428cbe208c2fc1a53812f2c
+ms.sourcegitcommit: 8b716db3c0fdbb7dff62497ec283902a5069a343
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77609268"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652297"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového ve Microsoft Intune
 
@@ -223,7 +223,7 @@ Na zařízeních se systémem Android Enterprise Work Profiles můžete vytvoři
 
 Když teď zvolíte typ podniku, můžete taky zadat automatické nastavení proxy serveru, včetně proxy server URL, jako je například `proxy.contoso.com`.
 
-Pokud chcete zobrazit aktuální nastavení Wi-Fi, která můžete nakonfigurovat, přejděte na [Přidat nastavení Wi-Fi pro zařízení s Androidem Enterprise a Androidem v Microsoft Intune](../configuration/wi-fi-settings-android-enterprise.md).
+Pokud chcete zobrazit aktuální nastavení Wi-Fi, která můžete nakonfigurovat, přejděte na [Přidat nastavení Wi-Fi pro zařízení s Androidem Enterprise a Androidem v Microsoft Intune](../configuration/wi-fi-settings-android-enterprise.md#work-profile-only).
 
 Platí pro:
 - Pracovní profil Android Enterprise

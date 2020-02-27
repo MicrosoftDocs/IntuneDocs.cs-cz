@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 02/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4962b4c75460b129f9df7729b5a34485d8ee0760
-ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
+ms.openlocfilehash: 29ddc53af79121965698d67f0d4510ac34bbabca
+ms.sourcegitcommit: 8b716db3c0fdbb7dff62497ec283902a5069a343
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77576071"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652449"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Vytvoření zásady podmíněného přístupu pro místní Exchange a vyhrazenou verzi Exchange Online
 
@@ -31,7 +31,7 @@ V tomto článku se dozvíte, jak nakonfigurovat podmíněný přístup pro mís
 
 Pokud máte vyhrazené prostředí Exchange Online a potřebujete zjistit, jestli má novou, nebo starší verzi konfigurace, obraťte se prosím na správce svého účtu. Pokud chcete řídit přístup k e-mailům v místním systému Exchange nebo ve starším vyhrazeném prostředí Exchange Online, nakonfigurujte podmíněný přístup na místní Exchange v Intune.
 
-## <a name="before-you-begin"></a>Než začnete
+## <a name="before-you-begin"></a>Před zahájením
 
 Než budete moct nakonfigurovat podmíněný přístup, ověřte, že existují následující konfigurace:
 
@@ -62,10 +62,28 @@ Než budete moct nakonfigurovat podmíněný přístup, ověřte, že existují 
 
 ### <a name="support-for-mobile-devices"></a>Podpora mobilních zařízení
 
-- Windows Phone 8.1 nebo novější
+- Windows Phone 8.1 a novější
 - Nativní e-mailová aplikace v systému iOS/iPadOS
 - Poštovní klienti EAS, například Gmail v Androidu 4 a novějším
-- **Zařízení s pracovním profilem** klienta EAS poštovní klienti: Na zařízeních s pracovním profilem Androidu jsou podporovaná jenom **Gmail** a **devět práce pro Android Enterprise** v **pracovním profilu** . Aby mohl podmíněný přístup pracovat s pracovními profily Androidu, musíte nasadit e-mailový profil pro aplikaci Gmail nebo devět Work pro Android Enterprise a tyto aplikace nasadit jako požadovanou instalaci.
+- **Zařízení s pracovním profilem Androidu** s poštovními klienty EAS: Na zařízeních s pracovním profilem Androidu jsou v **pracovním profilu** podporované jen aplikace **Gmail** a **Nine Work for Android Enterprise**. Aby mohl podmíněný přístup pracovat s pracovními profily Androidu, musíte nasadit e-mailový profil pro aplikaci Gmail nebo devět Work pro Android Enterprise a tyto aplikace nasadit jako požadovanou instalaci.
+
+  Nastavení podmíněného přístupu pro zařízení s pracovním profilem Androidu:
+
+  1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+  
+  2. V případě **potřeby**Nasaďte aplikaci Gmail nebo devět Work.
+
+  3. Vyberte **zařízení** > **konfigurační profily** > **vytvořit profil**, zadejte **název** a **Popis** profilu.
+
+  4. Na **platformě**vyberte **Android Enterprise** a v **typ profilu**vyberte **e-mail** .
+
+  5. Nakonfigurujte [Nastavení e-mailového profilu](https://docs.microsoft.com/intune/configuration/email-settings-android-enterprise#android-enterprise).
+
+  6. Až to budete mít, vyberte **OK** > **Vytvořit** a změny uložte.
+
+  7. Po vytvoření e-mailového profilu [ho přiřaďte do skupin](https://docs.microsoft.com/intune/device-profile-assign).
+
+  8. Nastavte [podmíněný přístup na základě zařízení](https://docs.microsoft.com/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access).
 
 > [!NOTE]
 > Microsoft Outlook pro Android a iOS/iPadOS se nepodporuje prostřednictvím konektoru Exchange On-Premises Connector. Pokud chcete využít Azure Active Directory zásady podmíněného přístupu a zásady Intune App Protection s Outlookem pro iOS/iPadOS a Androidem pro vaše místní poštovní schránky, přečtěte si téma [použití hybridního moderního ověřování s Outlookem pro iOS/iPadOS a Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
@@ -133,7 +151,7 @@ Než budete moct pomocí následujícího postupu nastavit místní řízení p�
 
 10. Vyberte **zkontrolovat + Uložit**a pak **Uložit** a uložte zásady podmíněného přístupu Exchange.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 V dalším kroku vytvoříte zásadu dodržování předpisů a přiřadíte ji uživatelům pro Intune, abyste mohli vyhodnotit jejich mobilní zařízení, přečtěte si téma Začínáme [s dodržováním předpisů zařízením](device-compliance-get-started.md).
 

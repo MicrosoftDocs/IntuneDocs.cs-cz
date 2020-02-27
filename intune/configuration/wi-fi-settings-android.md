@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 02/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ea0a60537bb488d3280990747d3e337e73fddc0
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: 955d9931779752e8736435555db7f7aba777b430
+ms.sourcegitcommit: 8b716db3c0fdbb7dff62497ec283902a5069a343
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76754554"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652398"
 ---
 # <a name="add-wi-fi-settings-for-devices-running-android-in-microsoft-intune"></a>Přidání nastavení Wi-Fi pro zařízení s Androidem v Microsoft Intune
 
@@ -51,28 +51,15 @@ Těmito nastaveními se zabývá tento článek.
 
   - **EAP-TLS**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** – **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Tento certifikát je prezentován serveru, když se klient připojí k síti. Ověřuje připojení.
+    - **Vztah důvěryhodnosti serveru** –  - Kořenový certifikát pro ověřování serveru **: Zvolte existující profil důvěryhodného kořenového certifikátu. Tento certifikát je prezentován serveru, když se klient připojí k síti. Ověřuje připojení.
 
-    - **Ověřování klientů** – **Klientský certifikát pro ověření klienta (certifikát identity)** : Zvolte profil klientského certifikátu SCEP nebo PKCS, který je také nasazený na zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
+    - **Ověřování klientů** –  - Klientský certifikát pro ověření klienta (certifikát identity) **: Zvolte profil klientského certifikátu SCEP nebo PKCS, který je také nasazený na zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
     - **Ochrana identity (vnější identita)** : Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
-    - **Nastavení proxy serveru**: zadejte konfiguraci proxy serveru, kterou používá vaše organizace. Možnosti:
-
-      - **Žádné** – nepoužíváte proxy server.
-      - **Automaticky** – tuto možnost vyberte, pokud má být k dispozici nastavení *adresy URL proxy serveru* , které můžete použít k určení proxy server nebo souboru automatické konfigurace proxy serveru (PAC), který obsahuje seznam proxy serverů.
-
-    - **Adresa URL proxy serveru**: Toto nastavení je dostupné, když nastavíte *nastavení proxy* serveru na *Automatické*. Zadejte jednu z následujících možností, jak zařízení nasměrovat na proxy server:
-
-      - IP adresa. Například `10.0.0.11`.
-      - ADRESA URL. Například `http://proxyserver.contoso.com`.
-      - Adresa URL souboru automatické konfigurace proxy serveru (PAC). Příklad: `http://proxy.contoso.com/proxy.pac`.
-
-      Další informace o souborech PAC najdete v tématu [soubor automatické konfigurace proxy serveru](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (otevře se na webu, který není Microsoft).
-
   - **EAP-TTLS**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** – **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Tento certifikát je prezentován serveru, když se klient připojí k síti. Ověřuje připojení.
+    - **Vztah důvěryhodnosti serveru** –  - Kořenový certifikát pro ověřování serveru **: Zvolte existující profil důvěryhodného kořenového certifikátu. Tento certifikát je prezentován serveru, když se klient připojí k síti. Ověřuje připojení.
 
     - **Ověřování klientů**: vyberte **metodu ověřování**. Možnosti:
 
@@ -88,22 +75,9 @@ Těmito nastaveními se zabývá tento článek.
 
       - **Ochrana identity (vnější identita)** : Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
-    - **Nastavení proxy serveru**: zadejte konfiguraci proxy serveru, kterou používá vaše organizace. Možnosti:
-
-      - **Žádné** – nepoužíváte proxy server.
-      - **Automaticky** – tuto možnost vyberte, pokud má být k dispozici nastavení *adresy URL proxy serveru* , které můžete použít k určení proxy server nebo souboru automatické konfigurace proxy serveru (PAC), který obsahuje seznam proxy serverů.
-
-    - **Adresa URL proxy serveru**: Toto nastavení je dostupné, když nastavíte *nastavení proxy* serveru na *Automatické*. Zadejte jednu z následujících možností, jak zařízení nasměrovat na proxy server:
-
-      - IP adresa. Například `10.0.0.11`.
-      - ADRESA URL. Například `http://proxyserver.contoso.com`.
-      - Adresa URL souboru automatické konfigurace proxy serveru (PAC). Příklad: `http://proxy.contoso.com/proxy.pac`.
-
-      Další informace o souborech PAC najdete v tématu [soubor automatické konfigurace proxy serveru](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (otevře se na webu, který není Microsoft).
-
   - **PEAP**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** – **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Tento certifikát je prezentován serveru, když se klient připojí k síti. Ověřuje připojení.
+    - **Vztah důvěryhodnosti serveru** –  - Kořenový certifikát pro ověřování serveru **: Zvolte existující profil důvěryhodného kořenového certifikátu. Tento certifikát je prezentován serveru, když se klient připojí k síti. Ověřuje připojení.
 
     - **Ověřování klientů**: vyberte **metodu ověřování**. Možnosti:
 
@@ -116,19 +90,6 @@ Těmito nastaveními se zabývá tento článek.
       - **Certifikáty**: Zvolte profil klientského certifikátu SCEP nebo PKCS, který je také nasazený na zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
       - **Ochrana identity (vnější identita)** : Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
-
-      - **Nastavení proxy serveru**: zadejte konfiguraci proxy serveru, kterou používá vaše organizace. Možnosti:
-
-        - **Žádné** – nepoužíváte proxy server.
-        - **Automaticky** – tuto možnost vyberte, pokud má být k dispozici nastavení *adresy URL proxy serveru* , které můžete použít k určení proxy server nebo souboru automatické konfigurace proxy serveru (PAC), který obsahuje seznam proxy serverů.
-
-      - **Adresa URL proxy serveru**: Toto nastavení je dostupné, když nastavíte *nastavení proxy* serveru na *Automatické*. Zadejte jednu z následujících možností, jak zařízení nasměrovat na proxy server:
-
-        - IP adresa. Například `10.0.0.11`.
-        - ADRESA URL. Například `http://proxyserver.contoso.com`.
-        - Adresa URL souboru automatické konfigurace proxy serveru (PAC). Příklad: `http://proxy.contoso.com/proxy.pac`.
-
-        Další informace o souborech PAC najdete v tématu [soubor automatické konfigurace proxy serveru](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (otevře se na webu, který není Microsoft).
 
 ## <a name="next-steps"></a>Další kroky
 

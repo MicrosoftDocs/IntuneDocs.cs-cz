@@ -16,18 +16,18 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 312f8ee3acb6b8be767d6349b29932ab65ae75d8
-ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
+ms.openlocfilehash: 04c726c1dc6af7e92b75335d105de605ef00e712
+ms.sourcegitcommit: 8b716db3c0fdbb7dff62497ec283902a5069a343
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77611028"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652364"
 ---
-# <a name="troubleshoot-android-device-enrollment-problems-in-microsoft-intune"></a>Řešení potíží s registrací zařízení s Androidem v Microsoft Intune
+# <a name="troubleshoot-android-enterprise-device-problems-in-microsoft-intune"></a>Řešení potíží se zařízeními s Androidem Enterprise v Microsoft Intune
 
-Tento článek pomáhá správcům Intune pochopit a řešit problémy při registraci zařízení s Androidem v Intune.
+Tento článek pomáhá správcům Intune pochopit a řešit problémy, když se zařízení s Androidem Enterprise v Intune nacházejí.
 
-## <a name="apps-on-android-devices"></a>Aplikace na zařízeních s Androidem
+## <a name="apps-on-android-enterprise-devices"></a>Aplikace na zařízeních s Androidem Enterprise
 
 ### <a name="managed-google-play-apps-that-arent-deployed-through-intune-are-displayed-in-the-work-profile"></a>Spravované Google Play aplikace, které nejsou nasazené prostřednictvím Intune, se zobrazují v pracovním profilu.
 Systémové aplikace můžete v pracovním profilu povolit výrobcem OEM zařízení v době, kdy se pracovní profil vytvoří. Toto neřídí poskytovatel MDM.
@@ -42,14 +42,14 @@ K řešení potíží použijte následující postup:
   6. Zkontrolujte aplikace, které se zobrazují v pracovním profilu. 
   7. Pokud se stejné aplikace zobrazují v aplikaci test DPC, aplikace je pro toto zařízení očekávána výrobcem OEM.
 
-### <a name="unapproved-google-play-for-work-store-apps-arent-being-removed-from-the-mobile-apps-page-in-intune"></a>Neschválená Google Play pro aplikace z obchodu s pracovními aplikacemi se neodstraňují ze stránky Mobile Apps v Intune.
+### <a name="unapproved-managed-google-play-for-work-store-apps-arent-being-removed-from-the-client-apps-page-in-intune"></a>Neschválené aplikace spravované Google Play pro pracovní úložiště se neodstraňují na stránce klientské aplikace v Intune.
 Toto chování je očekávané.
 
 ### <a name="managed-google-play-apps-arent-being-reported-under-the-discovered-apps-blade-in-the-intune-portal"></a>Spravované Google Play aplikace nejsou hlášeny v okně zjištěné aplikace na portálu Intune.
-Toto chování je očekávané.
+Toto chování je očekávané. V okně zjištěné aplikace jsou v inventáři pouze systémové aplikace nainstalované v pracovním profilu. Pokud chcete zobrazit nainstalované spravované aplikace Google Play, použijte okno **spravované aplikace** .
 
 ### <a name="are-web-applications-supported-for-work-profile-enrolled-devices"></a>Jsou webové aplikace podporované pro zařízení zaregistrovaná v pracovním profilu?
-Momentálně ne.
+Ano. Další informace najdete v tématu [spravované Google Play webové odkazy](../apps/apps-add-android-for-work.md#managed-google-play-web-links) .
 
 ## <a name="device-management"></a>Správa zařízení
 
@@ -66,11 +66,8 @@ Momentálně ne.
 ### <a name="managed-google-play-last-sync-time--hasnt-been-updated-in-days"></a>Čas poslední synchronizace spravovaného Google Play se neaktualizoval ve dnech.
 Toto chování je očekávané. Synchronizace se spustí, jenom když to uděláte ručně.
 
-### <a name="is-system-center-configuration-manager-hybrid-supported"></a>Je System Center Configuration Manager podporován hybridní?
-Podporuje se s Configuration Manager 1702 a novějšími verzemi pro správu profilů práce. Vyhrazená zařízení (COSU) nejsou v hybridním scénáři podporovaná.
-
 ### <a name="encryption-is-required-when-a-device-is-enrolled-can-it-be-turned-off"></a>Když je zařízení zaregistrované, vyžaduje se šifrování. Může být vypnutá?
-Ne, z Google pro pracovní profil se vyžaduje šifrování. 
+Ne, Google vyžaduje, aby zařízení bylo zašifrované, aby bylo možné vytvořit pracovní profil. 
 
 ### <a name="samsung-devices-are-blocking-the-use-of-third-party-keyboards-like-swiftkey"></a>Zařízení Samsung blokují použití klávesnic třetích stran, jako je SwiftKey.
 Společnost Samsung začala toto omezení na zařízeních s Androidem 8.0 a novějším vynucovat. Společnost Microsoft v současnosti pracuje s Samsung na tomto problému a bude publikovat nové informace, jakmile bude k dispozici.
@@ -85,7 +82,7 @@ U zaregistrovaných zařízení pracovního profilu můžete resetovat jenom hes
 - heslo k pracovnímu profilu je spravované.
 - koncový uživatel ho může resetovat.
 
-Pro vyhrazená zařízení (COSU) se podporuje resetování hesla zařízení.
+Pro vyhrazená zařízení (COSU) a plně spravovaná se podporuje resetování hesla zařízení.
 
 
 ## <a name="next-steps"></a>Další kroky

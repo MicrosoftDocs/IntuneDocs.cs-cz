@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/18/2020
+ms.date: 02/26/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aef1747fdbb3118db82f6e99c2838632c8a9d369
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: 6b6d5d51bedcd3f8251dd4ac307b58a08ba7cdc6
+ms.sourcegitcommit: 8b716db3c0fdbb7dff62497ec283902a5069a343
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77512445"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652432"
 ---
 # <a name="add-wi-fi-settings-for-android-enterprise-dedicated-and-fully-managed-devices-in-microsoft-intune"></a>Přidání nastavení sítě Wi-Fi pro vyhrazená a plně spravovaná zařízení s Androidem v Microsoft Intune
 
@@ -152,6 +152,19 @@ Tuto možnost vyberte, pokud nasazujete na vyhrazené nebo plně spravované za�
       - **Certifikáty**: Zvolte profil klientského certifikátu SCEP nebo PKCS, který je také nasazený na zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
       - **Ochrana identity (vnější identita)** : Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
+
+- **Nastavení proxy serveru**: zadejte konfiguraci proxy serveru, kterou používá vaše organizace. Možnosti:
+
+  - **Žádné** – nepoužíváte proxy server.
+  - **Automaticky** – tuto možnost vyberte, pokud má být k dispozici nastavení *adresy URL proxy serveru* , které můžete použít k určení proxy server nebo souboru automatické konfigurace proxy serveru (PAC), který obsahuje seznam proxy serverů.
+
+- **Adresa URL proxy serveru**: Toto nastavení je dostupné, když nastavíte *nastavení proxy* serveru na *Automatické*. Zadejte jednu z následujících možností, jak zařízení nasměrovat na proxy server:
+
+  - IP adresa. Například `10.0.0.11`.
+  - ADRESA URL. Například `http://proxyserver.contoso.com`.
+  - Adresa URL souboru automatické konfigurace proxy serveru (PAC). Například: `http://proxy.contoso.com/proxy.pac`.
+
+  Další informace o souborech PAC najdete v tématu [soubor automatické konfigurace proxy serveru](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (otevře se na webu, který není Microsoft).
 
 ## <a name="next-steps"></a>Další kroky
 

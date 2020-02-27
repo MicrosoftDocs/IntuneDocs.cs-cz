@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 282464ebb616f5c8dec928b93f4852603bb20e10
-ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
+ms.openlocfilehash: f6798082f293db6745ea4a15155e15ea112ca6fd
+ms.sourcegitcommit: 8b716db3c0fdbb7dff62497ec283902a5069a343
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/24/2020
-ms.locfileid: "77569434"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652415"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Používání a Správa zařízení s Androidem Enterprise pomocí OEMConfig v Microsoft Intune
 
@@ -49,7 +49,7 @@ Když výrobce OEM přidá a vylepšuje funkce správy, výrobce OEM také aktua
 > [!TIP]
 > OEMConfig můžete použít jenom u zařízení, která tuto funkci podporují, a mít odpovídající aplikaci OEMConfig. Konkrétní podrobnosti získáte od výrobce OEM.
 
-## <a name="before-you-begin"></a>Než začnete
+## <a name="before-you-begin"></a>Před zahájením
 
 Při používání OEMConfig si pamatujte na následující informace:
 
@@ -80,17 +80,17 @@ Ujistěte se, že zařízení podporuje OEMConfig, do Intune se přidá správn�
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
-3. Zadejte tyto vlastnosti:
+3. Zadejte následující vlastnosti:
 
-    - **Platforma**: Vyberte **Android Enterprise**.
-    - **Typ profilu**: Vyberte **OEMConfig**.
+    - **Platforma**: vyberte **Android Enterprise**.
+    - **Typ profilu**: vyberte **OEMConfig**.
 
 4. Vyberte **Vytvořit**.
 5. V části **základy**zadejte následující vlastnosti:
 
     - **Název**: Zadejte popisný název nového profilu.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
-    - **Aplikace OEMConfig**: Zvolte **možnost vybrat aplikaci v OEMConfig**.
+    - **Aplikace OEMConfig**: zvolte **Vybrat aplikaci OEMConfig**.
 
 6. V **přidružené aplikaci**vyberte existující aplikaci OEMConfig, kterou jste dříve přidali, > **Vybrat**. Ujistěte se, že jste zvolili správnou aplikaci OEMConfig pro zařízení, ke kterým přiřadíte zásadu.
 
@@ -105,7 +105,7 @@ Ujistěte se, že zařízení podporuje OEMConfig, do Intune se přidá správn�
     > [!TIP]
     > Přečtěte si dokumentaci OEM a ujistěte se, že jste správně nakonfigurovali vlastnosti. Tyto vlastnosti aplikace jsou součástí výrobce OEM, nikoli Intune. Intune provede minimální ověření vlastností nebo to, co zadáte. Pokud například zadáte `abcd` pro číslo portu, profil se uloží tak, jak je, a nasadí se do vašich zařízení s hodnotami, které nakonfigurujete. Ujistěte se, že zadáváte správné informace.
 
-    - **Návrhář konfigurace**: Když vyberete tuto možnost, zobrazí se pro konfiguraci dostupné vlastnosti v rámci schématu aplikace.
+    - **Návrhář konfigurace**: po výběru této možnosti se zobrazí vlastnosti dostupné v rámci schématu aplikace, které můžete nakonfigurovat.
 
       - Kontextové nabídky v Návrháři konfigurace označují, že jsou k dispozici další možnosti. Například místní nabídka vám může umožnit přidání, odstranění a změnu pořadí nastavení. Tyto možnosti jsou zahrnuty v výrobci OEM. Nezapomeňte si přečíst dokumentaci k aplikaci pro výrobce OEM, kde se dozvíte, jak se tyto možnosti mají použít k vytváření profilů.
 
@@ -115,7 +115,7 @@ Ujistěte se, že zařízení podporuje OEMConfig, do Intune se přidá správn�
 
       - Pokud vytvoříte prázdnou (nenakonfigurovanou) sadu prostředků v Návrháři konfigurace, odstraní se při přepnutí do editoru JSON.
 
-    - **Editor JSON**: Když vyberete tuto možnost, otevře se Editor JSON se šablonou pro úplnou konfiguraci schématu, která je vložena v aplikaci. V editoru Přizpůsobte šablonu pomocí hodnot pro různá nastavení. Použijete-li **Návrháře konfigurace** ke změně hodnot, Editor JSON přepíše šablonu hodnotami z návrháře konfigurace.
+    - **Editor JSON**: Když vyberete tuto možnost, otevře se Editor JSON se šablonou pro úplné schéma konfigurace vložené do aplikace. V editoru Přizpůsobte šablonu pomocí hodnot pro různá nastavení. Použijete-li **Návrháře konfigurace** ke změně hodnot, Editor JSON přepíše šablonu hodnotami z návrháře konfigurace.
 
       - Pokud aktualizujete existující profil, Editor JSON zobrazí nastavení, které bylo naposledy uloženo s profilem.
 
@@ -162,6 +162,7 @@ V porovnání se standardními aplikacemi aplikace OEMConfig rozšiřují opráv
 | Spectralink – protokolování | com. Spectralink. slnklogger |  |
 | Spectralink - VQO | com. Spectralink. slnkvqo |  |
 | Seuic | com. seuic. seuicoemconfig | |
+| Unitech elektronika | com. Unitech. oemconfig | |
 
 -----------------
 
@@ -170,6 +171,6 @@ Pokud aplikace OEMConfig pro vaše zařízení existuje, ale není v tabulce vý
 > [!NOTE]
 > Aby bylo možné nakonfigurovat aplikace OEMConfig pomocí profilů OEMConfig, musí být na zprovoznění služby Intune. Jakmile je aplikace podporovaná, nemusíte od Microsoftu kontaktovat žádné informace o jeho nastavování ve vašem tenantovi. Stačí postupovat podle pokynů na této stránce.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 [Monitorujte stav profilu](device-profile-monitor.md).
