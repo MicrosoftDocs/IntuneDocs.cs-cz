@@ -39,6 +39,8 @@
   items:
     - name: Co je Intune for Education?
       href: introduction-intune-education.md
+    - name: Co je Intune for US Government?
+      href: introduction-intune-government.md
     - name: Architektura z širší perspektivy
       href: high-level-architecture.md
     - name: Životní cyklus zařízení
