@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,24 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7279921719677fce0845517aefc5958f57ce13cb
-ms.sourcegitcommit: 32391f74241ee3289a76ccd5319fe700b800d427
+ms.openlocfilehash: 900858d9c437f2d2662260ca62534a987446d2b2
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77075701"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77782117"
 ---
 # <a name="create-mobile-threat-defense-app-protection-policy-with-intune"></a>Vytvoření zásad ochrany aplikací ochrany před mobilními hrozbami v Intune
 
 Intune s ochranou před mobilními hrozbami (MTD) pomáhá detekovat hrozby a hodnotit rizika na mobilních zařízeních. Můžete vytvořit zásady ochrany aplikací Intune, které posuzují riziko, aby bylo možné zjistit, jestli má zařízení povolený přístup k podnikovým datům.
 
-
 > [!NOTE]
 > Tento článek se týká všech partnerů ochrany před mobilními hrozbami, které podporují zásady ochrany aplikací:
 >
-> - Lepší mobilní zařízení (Android)
-> - Zimperium (Android, iOS)
-> - Lookout for Work (Android, iOS).
+> - Lepší mobilní zařízení (Android, iOS/iPadOS)
+> - Zimperium (Android, iOS/iPadOS)
+> - Lookout for Work (Android, iOS/iPadOS).
 
 ## <a name="before-you-begin"></a>Před zahájením
 
@@ -49,7 +48,7 @@ Předpoklady pro zásady ochrany aplikací pomocí MTD:
 
 Pomocí postupu [Vytvořte zásady ochrany aplikací pro iOS/iPadOS nebo Android](../apps/app-protection-policies.md#app-protection-policies-for-iosipados-and-android-apps)a na stránkách *aplikace*, *podmíněné spouštění*a *přiřazení* použijte následující informace:
 
-- **Aplikace**: Vyberte aplikace, na které chcete cílit zásady ochrany aplikací. Pro tuto sadu funkcí se tyto aplikace zablokují nebo selektivně vymažou na základě posouzení rizik zařízení od zvoleného dodavatele ochrany před mobilními hrozbami. 
+- **Aplikace**: Vyberte aplikace, na které chcete cílit zásady ochrany aplikací. Pro tuto sadu funkcí se tyto aplikace zablokují nebo selektivně vymažou na základě posouzení rizik zařízení od zvoleného dodavatele ochrany před mobilními hrozbami.
 - **Podmíněné spuštění**: pod *podmínkami zařízení*, v rozevíracím seznamu vyberte **maximální povolenou úroveň hrozby zařízení**.
 
   Možnosti pro **hodnotu**úrovně hrozby:
@@ -57,7 +56,7 @@ Pomocí postupu [Vytvořte zásady ochrany aplikací pro iOS/iPadOS nebo Android
   - **Zabezpečeno:** Tato úroveň poskytuje nejvyšší zabezpečení. Zařízení nemůže mít k dispozici žádné hrozby a bude mít přístup k prostředkům společnosti. Pokud se najde jakákoli hrozba, zařízení se vyhodnotí jako nevyhovující.
   - **Nízká:** Zařízení se vyhodnotí jako vyhovující i v případě, že se v něm nachází jenom hrozby nízké úrovně. Jakákoliv vyšší úroveň zařízení zařadí do stavu nedodržující předpisy.
   - **Střední:** Zařízení vyhovuje, pokud se v něm přítomné hrozby pohybují na střední nebo nízké úrovni. Pokud se v zařízení zjistí hrozby vysoké úrovně, vyhodnotí se jako nevyhovující.
-  - **Vysoká:** Tato úroveň poskytuje nejnižší zabezpečení. To umožňuje všechny úrovně hrozeb a používá ochranu před mobilními hrozbami jenom pro účely vytváření sestav. Při tomto nastavení musejí mít zařízení aplikaci pro ochranu před mobilními hrozbami aktivovanou.
+  - **Vysoká**: Tato úroveň je nejméně bezpečná a umožňuje všechny úrovně hrozeb s využitím ochrany před mobilními hrozbami pouze pro účely vytváření sestav. Při tomto nastavení musejí mít zařízení aplikaci pro ochranu před mobilními hrozbami aktivovanou.
 
   Možnosti pro **akci**:
 
@@ -66,7 +65,6 @@ Pomocí postupu [Vytvořte zásady ochrany aplikací pro iOS/iPadOS nebo Android
 
 - **Přiřazení**: přiřaďte zásady skupinám uživatelů.  Zařízení, která používají členové skupiny, se vyhodnocují pro přístup k podnikovým datům na cílových aplikacích prostřednictvím ochrany aplikací Intune.
 
-
-## <a name="next-steps"></a>Další kroky  
+## <a name="next-steps"></a>Další kroky
 
 - Přečtěte si další informace o [ochrany před mobilními hrozbami](~/protect/mobile-threat-defense.md) v Microsoft Intune.

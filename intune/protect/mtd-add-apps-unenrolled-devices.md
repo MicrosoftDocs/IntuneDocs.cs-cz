@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1cf0a3d8b30955be8413b376acd223a924be843
-ms.sourcegitcommit: 06dce5c8111592ad774247e86e539dd3128117e5
+ms.openlocfilehash: a0d1574599b9e514d4bb0289b88ad3c55cc24d15
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75545921"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77782247"
 ---
 # <a name="add-mobile-threat-defense-apps-to-unenrolled-devices"></a>Přidání aplikací ochrany před mobilními hrozbami do neregistrovaných zařízení
 
@@ -33,21 +33,27 @@ Koncoví uživatelé potřebují k registraci zařízení Microsoft Authenticato
 
 Volitelně můžete pomocí Intune přidávat a nasazovat Microsoft Authenticator a taky aplikace pro ochranu před mobilními hrozbami (MTD).
 
-> [!NOTE] 
-> Tento článek se týká všech partnerů ochrany před mobilními hrozbami, které podporují zásady ochrany aplikací: lepší mobilní zařízení (Android), Zimperium (Android, iOS), Lookout for Work (Android/iOS).
-> 
-> U neregistrovaných zařízení **nepotřebujete zásady konfigurace aplikace pro iOS** , které nastaví ochranu před mobilními hrozbami pro aplikaci iOS, kterou používáte s Intune. Jedná se o klíčový rozdíl v porovnání s registrovanými zařízeními Intune. 
+> [!NOTE]
+> Tento článek se týká všech partnerů ochrany před mobilními hrozbami, které podporují zásady ochrany aplikací:
+>
+> - Lepší mobilní zařízení (Android, iOS/iPadOS)
+> - Zimperium (Android, iOS/iPadOS)
+> - Lookout for Work (Android, iOS/iPadOS)
+>
+> U neregistrovaných zařízení **nepotřebujete zásady konfigurace aplikace pro iOS** , které nastaví ochranu před mobilními hrozbami pro aplikaci iOS, kterou používáte s Intune. Jedná se o klíčový rozdíl v porovnání s registrovanými zařízeními Intune.
 
 ## <a name="configure-microsoft-authenticator-for-ios-via-intune-optional"></a>Konfigurace Microsoft Authenticator pro iOS přes Intune (volitelné)
+
 Pokud používáte zásady ochrany aplikací Intune s ochranou před mobilními hrozbami, Intune bude koncovému uživateli instalovat, přihlašovat se k němu a zaregistrovat zařízení pomocí Microsoft Authenticator (iOS).
 
 Pokud ale chcete, aby byla aplikace k dispozici koncovým uživatelům prostřednictvím Portál společnosti Intune, přečtěte si pokyny, [jak přidat aplikace z obchodu pro iOS do Microsoft Intune](../apps/store-apps-ios.md). Použijte tuto [adresu URL obchodu s aplikacemi Microsoft Authenticator-iOS](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) při dokončování části **Konfigurace informací o aplikaci** . Nezapomeňte v posledním kroku [přiřadit aplikaci do skupin s Intune](../apps/apps-deploy.md) .
 
-> [!NOTE] 
+> [!NOTE]
 > U zařízení se systémem iOS je potřeba [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to), aby mohla být identita uživatelů ověřena pomocí Azure AD. Portál společnosti Intune funguje jako zprostředkovatel na zařízeních s Androidem, aby uživatelé mohli své identity zkontrolovat pomocí Azure AD.
 
 ## <a name="making-mobile-threat-defense-apps-available-via-intune-optional"></a>Zpřístupnění aplikací ochrany před mobilními hrozbami přes Intune (volitelné)
-Pokud používáte zásady ochrany aplikací Intune s ochranou před mobilními hrozbami, Intune bude koncovému uživateli instalovat a přihlásit se k požadované klientské aplikaci ochrany před mobilními hrozbami. 
+
+Pokud používáte zásady ochrany aplikací Intune s ochranou před mobilními hrozbami, Intune bude koncovému uživateli instalovat a přihlásit se k požadované klientské aplikaci ochrany před mobilními hrozbami.
 
 Pokud ale chcete, aby byla aplikace k dispozici koncovým uživatelům prostřednictvím Portál společnosti Intune, můžete postupovat podle následujících kroků v [Azure Portal](https://portal.azure.com/). Ověřte si, že jste seznámení s těmito postupy:
 
@@ -55,7 +61,8 @@ Pokud ale chcete, aby byla aplikace k dispozici koncovým uživatelům prostřed
 - [Přiřazení aplikace pomocí služby Intune](../apps/apps-deploy.md)
 
 ### <a name="making-lookout-for-work-available-to-end-users"></a>Umožnění Lookout for Work k dispozici koncovým uživatelům
-- **Androidem**  
+
+- **Androidemem**  
   - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](../apps/store-apps-android.md). Tuto [adresu URL Lookout for Work-obchod Play](https://play.google.com/store/apps/details?id=com.lookout.enterprise) použijte při dokončování části **Konfigurace informací o aplikaci** .
 
 - **iOS**
@@ -76,11 +83,12 @@ Pokud ale chcete, aby byla aplikace k dispozici koncovým uživatelům prostřed
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Check Point SandBlast Mobile - App Store URL](https://apps.apple.com/us/app/sandblast-mobile-protect/id1006390797) when completing the **Configure app information** section. -->
 
 ### <a name="making-zimperium-available-to-end-users"></a>Zpřístupnění Zimperium koncovým uživatelům
-- **Androidem**
+
+- **Androidemem**
   - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](../apps/store-apps-android.md). Při dokončování části **Konfigurace informací o aplikaci** použijte tuto [adresu Zimperium obchod Play](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) .
 - **iOS**
   - Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](../apps/store-apps-ios.md). Tuto [adresu URL obchodu s aplikacemi Zimperium](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8) použijte při dokončování části **Konfigurace informací o aplikaci** .
- 
+
 <!-- ### Making Pradeo available to end users
 - **Android**
   - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Pradeo - Play Store URL](https://play.google.com/store/apps/details?id=net.pradeo.service&hl=en_US) when completing the **Configure app information** section.
@@ -88,9 +96,11 @@ Pokud ale chcete, aby byla aplikace k dispozici koncovým uživatelům prostřed
 - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Pradeo - App Store URL](https://itunes.apple.com/us/app/pradeo-agent/id547979360?mt=8) when completing the **Configure app information** section. -->
 
-### <a name="making-better-mobile-available-to-end-users"></a>Zpřístupnění lepšího mobilního telefonu koncovým uživatelům 
-- **Androidem**
+### <a name="making-better-mobile-available-to-end-users"></a>Zpřístupnění lepšího mobilního telefonu koncovým uživatelům
+
+- **Androidemem**
   - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](../apps/store-apps-android.md). Tuto [aktivní adresu URL ochrany obchod Play](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise) použijte při dokončování části **Konfigurace informací o aplikaci** .
+
 <!-- - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield - App Store URL](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) when completing the **Configure app information** section. -->
 
@@ -108,7 +118,6 @@ Pokud ale chcete, aby byla aplikace k dispozici koncovým uživatelům prostřed
 - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Wandera Mobile - - App Store URL](https://itunes.apple.com/app/wandera/id605469330) when completing the **Configure app information** section. -->
 
-## <a name="next-steps"></a>Další kroky  
+## <a name="next-steps"></a>Další kroky
 
 - [Povolení konektoru ochrany před mobilními hrozbami v Intune pro neregistrovaná zařízení](~/protect/mtd-enable-unenrolled-devices.md)
-

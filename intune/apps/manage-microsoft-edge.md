@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9622eb33cb4e7732b573e8caf56acf4e3966badb
-ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
+ms.openlocfilehash: 6bcec352121781162f5f03a14717fdea62515db2
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77609121"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77781185"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune
 
@@ -171,7 +171,7 @@ Aby bylo možné povolit proxy aplikace pro Microsoft Edge, cílovému serveru M
 |-------------------------------------------------------------------|-------------|
 |    com.microsoft.intune.mam.managedbrowser.AppProxyRedirection    |    true    |
 
-Další informace o tom, jak používat Microsoft Edge a Azure Proxy aplikací služby AD společně pro bezproblémový (a chráněný) přístup k místním webovým aplikacím, najdete v tématu [lepší spolupráce: Intune a Azure Active Directory tým pro zlepšení přístupu uživatelů](https://cloudblogs.microsoft.com/enterprisemobility/2017/07/06/better-together-intune-and-azure-active-directory-team-up-to-improve-user-access). Tento Blogový příspěvek odkazuje na Intune Managed Browser, ale obsah platí i pro Microsoft Edge.
+Další informace o tom, jak používat Microsoft Edge a Azure Proxy aplikací služby AD společně pro bezproblémový (a chráněný) přístup k místním webovým aplikacím, najdete v tématu [lepší spolupráce: Intune a Azure Active Directory tým pro zlepšení přístupu uživatelů](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/better-together-intune-and-azure-active-directory-team-up-to/ba-p/250254). Tento Blogový příspěvek odkazuje na Intune Managed Browser, ale obsah platí i pro Microsoft Edge.
 
 ## <a name="configure-a-homepage-shortcut-for-microsoft-edge"></a>Konfigurace zástupce domovské stránky pro Microsoft Edge
 
@@ -196,8 +196,8 @@ Pak použijte následující páry klíč/hodnota, které přidělí vaší orga
 
 |    Klíč    |    Hodnota    |
 |--------------------------------------------------------------------|------------|
-|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandLogo    |    True    |
-|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandColor    |    True    |
+|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandLogo    |    True (Pravda)    |
+|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandColor    |    True (Pravda)    |
 
 ## <a name="display-relevant-industry-news-on-new-tab-pages"></a>Zobrazit relevantní novinky v odvětví na nových stránkách karty
 
@@ -252,7 +252,7 @@ K vytvoření seznamu povolených a blokovaných webů můžete použít různé
   - Port 443 pro protokol HTTPS
 - Použití zástupných znaků pro číslo portu **není podporováno.** Například `http://www.contoso.com:*` a `http://www.contoso.com:*/` podporované nejsou. 
 
-    |    URL    |    Podrobnosti    |    Odpovídá    |    Neodpovídá    |
+    |    Adresa URL    |    Podrobnosti    |    Odpovídá    |    Neodpovídá    |
     |-------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
     |    `http://www.contoso.com`    |    Odpovídá jediné stránce    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Odpovídá jediné stránce    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |

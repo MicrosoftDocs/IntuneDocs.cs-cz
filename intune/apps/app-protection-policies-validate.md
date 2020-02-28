@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/27/2020
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9c3e775773ab08721cb3a65858f3d8c8402104f
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: ae6bfd71cb6730c9e71075df5ea2f45aa514178a
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74563738"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77781693"
 ---
 # <a name="how-to-validate-your-app-protection-policy-setup-in-microsoft-intune"></a>Ověření nastavení zásad ochrany aplikací v Microsoft Intune
 
@@ -56,11 +56,11 @@ Postupujte podle stavu uživatele:
 - Pokud je aplikace uživatele uvedená **v seznamu nevráceno se změnami**, ověřte, jestli jste pro tuto aplikaci správně nakonfigurovali [Zásady ochrany aplikací](app-protection-policies-validate.md) .
 - Ujistěte se, že tyto podmínky platí pro všechny uživatele, na které chcete [Zásady ochrany aplikací](app-protection-policies-monitor.md) použít.
 
-## <a name="see-also"></a>Související témata
+## <a name="see-also"></a>Viz také
 
 - [Co jsou zásady ochrany aplikací Intune?](app-protection-policies.md)
 - [Licence, které zahrnují Intune](../fundamentals/licenses.md)
 - [Přiřazení licencí uživatelům, aby mohli zaregistrovat zařízení v Intune](../fundamentals/licenses-assign.md)
-- [Jak ověřit nastavení zásad ochrany aplikací](app-protection-policies-validate.md)
+- [Ověření nastavení zásad ochrany aplikací](app-protection-policies-validate.md)
 - [Jak monitorovat zásady ochrany aplikací](app-protection-policies-monitor.md)
 

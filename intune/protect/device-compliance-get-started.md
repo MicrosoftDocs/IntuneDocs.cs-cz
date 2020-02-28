@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b593cab8a9a89f895c668b2b49583b73cbfccffa
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: 45bcabf8c7dc932c9415fbd309bf09f53499fbcc
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77515165"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77781930"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Nastavení pravidel na zařízeních pro povolení přístupu k prostředkům ve vaší organizaci pomocí Intune
 
@@ -93,16 +93,13 @@ Intune také obsahuje sadu předdefinovaných nastavení zásad dodržování p�
 
   Pokud zařízení nemá přiřazené zásady dodržování předpisů, považuje se toto zařízení za vyhovující ve výchozím nastavení. Pokud používáte podmíněný přístup se zásadami dodržování předpisů, doporučujeme změnit výchozí nastavení na **nekompatibilní**. Pokud koncový uživatel nedodržuje předpisy, protože zásada není přiřazená, zobrazí se `No compliance policies have been assigned`[aplikace Portál společnosti](../apps/company-portal-app.md) .
 
-
-> [!NOTE]
-> Vylepšené zjišťování jailbreaků pro zařízení s iOS/iPadOS bylo dočasně zakázáno v Intune.
-
-- **Vylepšené zjišťování jailbreaků**: Pokud je toto nastavení povolené, bude mít zařízení s iOS/iPadOS, aby se v Intune kontrolovala častěji. Pokud je povolena, používá tato vlastnost funkce zjišťování polohy zařízení a má vliv na výdrž baterie. Data o umístění uživatele neukládá Intune.
+- **Vylepšené zjišťování jailbreaků**: Pokud je toto nastavení povolené, způsobí to, že se na zařízeních s iOS/iPadOS bude nacházet v zařízení s jailbreakem/. Toto nastavení má vliv jenom na zařízení, která jsou cílem zásad dodržování předpisů, které blokují zařízení s jailbreakem. Povolení této vlastnosti používá služby zjišťování polohy zařízení a může mít vliv na využití baterie. Data o umístění uživatele nejsou uložená službou Intune a používají se jenom k aktivaci jailbreaků detekce na pozadí. 
 
   Povolení tohoto nastavení vyžaduje, aby zařízení:
   - Povolte služby zjišťování polohy na úrovni operačního systému.
-  - Povolí portálu společnosti používat služby zjišťování polohy.
-  - vyhodnocovat a hlásit do Intune stav jailbreaku minimálně každých 72 hodin. V opačném případě je zařízení označeno jako nedodržující předpisy. Vyhodnocování se aktivuje otevřením aplikace Portál společnosti nebo fyzicky přesunutím měřičů zařízení 500 nebo dalších. Pokud zařízení nepřesouvá 500 metrů za 72 hodin, musí uživatel otevřít aplikaci Portál společnosti pro vylepšené vyhodnocování přerušení jailbreak.
+  - Vždy povolí Portál společnosti používat služby zjišťování polohy.
+
+  Vyhodnocování se aktivuje otevřením aplikace Portál společnosti nebo fyzickému přesunutí zařízení o důležitou vzdálenost přibližně 500 metrů a dalších. U iOS 13 a dalších funkcí bude tato funkce vyžadovat, aby uživatelé vždy, když se jim zobrazí výzva, povolili Portál společnosti používat jejich umístění na pozadí. Pokud uživatelé nemají vždycky přístup k poloze a mají nakonfigurovanou zásadu s tímto nastavením, bude jejich zařízení označeno jako nedodržující předpisy. Všimněte si, že Intune nemůže zaručit, že při každé významné změně umístění dojde k tomu, aby jailbreaků kontrolu detekce, protože to závisí na síťovém připojení zařízení.
 
 - **Doba platnosti stavu dodržování předpisů (dny)** : Zadejte časové období, během kterého zařízení nahlásí stav všech přijatých zásad dodržování předpisů. Zařízení, která během tohoto období nevrátí stav, se považují za nedodržující předpisy. Výchozí hodnota je 30 dní. Minimální hodnota je 1 den.
 

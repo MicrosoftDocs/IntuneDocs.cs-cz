@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/25/2020
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5195ee83efb68cea061e69f5cad49e9d43458450
-ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
+ms.openlocfilehash: afcb49447aa044b730d2271603d4966466318193
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77609369"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77782024"
 ---
-# <a name="send-custom-notifications-in-intune"></a>Odesílání vlastních oznámení v Intune  
+# <a name="send-custom-notifications-in-intune"></a>Odesílání vlastních oznámení v Intune
 
-Pomocí Microsoft Intune můžete odesílat vlastní oznámení uživatelům spravovaných zařízení se systémem iOS/iPadOS a Androidem. Tyto zprávy se zobrazí jako standardní nabízená oznámení z aplikace Portál společnosti a z aplikace Microsoft Intune na zařízení uživatele, stejně jako oznámení z jiných aplikací na zařízení. Zařízení macOS a Windows nepodporují vlastní oznámení Intune.   
+Pomocí Microsoft Intune můžete odesílat vlastní oznámení uživatelům spravovaných zařízení se systémem iOS/iPadOS a Androidem. Tyto zprávy se zobrazí jako standardní nabízená oznámení z aplikace Portál společnosti a z aplikace Microsoft Intune na zařízení uživatele, stejně jako oznámení z jiných aplikací na zařízení. Zařízení macOS a Windows nepodporují vlastní oznámení Intune.
 
 Vlastní zprávy s oznámením obsahují krátký nadpis a tělo zprávy o 500 nebo méně znaků. Tyto zprávy lze přizpůsobit pro jakýkoli obecný účel komunikace.
 
@@ -76,14 +76,14 @@ Pokud máte aplikaci Portál společnosti otevřenou na zařízení s Androidem,
 - Do skupin za hodinu můžete poslat až 25 zpráv. Toto omezení je na úrovni tenanta. Toto omezení se nevztahuje na odesílání oznámení na jednotlivá zařízení.
 - Do skupin za hodinu můžete poslat až 25 zpráv. Toto omezení je na úrovni tenanta. Toto omezení se nevztahuje na odesílání oznámení jednotlivcům.
 - Když odesíláte zprávy do jednotlivých zařízení, můžete do stejného zařízení poslat až 10 zpráv za hodinu.
-- Můžete odesílat oznámení uživatelům ve skupinách. Při odesílání oznámení do skupin může každé oznámení směrovat přímo na 25 skupin. Vnořené skupiny se do tohoto součtu nepočítají. Při odesílání oznámení do skupiny se zprávy zaměřují jenom na uživatele ve skupině a odesílají se do každého zařízení s iOS nebo Androidem, které uživatel zaregistroval. Zařízení ve skupině budou při cílení na oznámení ignorována.
-- Oznámení můžete odesílat do jediného zařízení. Místo používání skupin vyberte zařízení a pak použijte [akci vzdáleného zařízení](device-management.md#available-device-actions) k odeslání vlastního oznámení.  
+- Můžete odesílat oznámení uživatelům ve skupinách. Při odesílání oznámení do skupin může každé oznámení směrovat přímo na 25 skupin. Vnořené skupiny se do tohoto součtu nepočítají. Při odesílání oznámení do skupiny se zprávy zaměřují jenom na uživatele ve skupině a odesílají se do každého zařízení s iOS/iPadOS nebo Androidem, které uživatel zaregistroval. Zařízení ve skupině budou při cílení na oznámení ignorována.
+- Oznámení můžete odesílat do jediného zařízení. Místo používání skupin vyberte zařízení a pak použijte [akci vzdáleného zařízení](device-management.md#available-device-actions) k odeslání vlastního oznámení.
 
 **Doručení**:
 
 - Intune pošle zprávy do aplikace Portál společnosti uživatelů nebo do aplikace Microsoft Intune, která pak vytvoří nabízené oznámení. Uživatelé nemusí být přihlášeni do aplikace, aby bylo oznámení na zařízení vloženo, ale zařízení musí být zaregistrováno cílovým uživatelem.
-- Intune, Portál společnosti aplikace a aplikace Microsoft Intune, nemůžou zaručit doručení vlastního oznámení. Vlastní oznámení se můžou zobrazovat i po několika hodinách, pokud je to u všech, takže by se nemuseli používat pro naléhavé zprávy.  
-- Vlastní oznamovací zprávy z Intune se na zařízeních zobrazují jako standardní nabízená oznámení. Pokud je aplikace Portál společnosti v zařízení se systémem iOS otevřená, když obdrží oznámení, zobrazí se oznámení v aplikaci, nikoli jako nabízené oznámení systému.  
+- Intune, Portál společnosti aplikace a aplikace Microsoft Intune, nemůžou zaručit doručení vlastního oznámení. Vlastní oznámení se můžou zobrazovat i po několika hodinách, pokud je to u všech, takže by se nemuseli používat pro naléhavé zprávy.
+- Vlastní oznamovací zprávy z Intune se na zařízeních zobrazují jako standardní nabízená oznámení. Pokud je aplikace Portál společnosti v zařízení se systémem iOS nebo iPadOS otevřená při přijetí oznámení, zobrazí se v aplikaci oznámení místo jako nabízené oznámení systému.  
 - Vlastní oznámení můžete zobrazit na zamykací obrazovce na zařízeních s iOS/iPadOS a Androidem v závislosti na nastavení zařízení.  
 - V zařízeních s Androidem můžou mít další aplikace přístup k datům ve vlastních oznámeních. Nepoužívejte je pro citlivou komunikaci.  
 - Uživatelé zařízení, kteří se nedávno zaregistrovali, nebo uživatelé, kteří byli odebráni ze skupiny, můžou dál dostávat vlastní oznámení, které se později pošle do této skupiny.  Podobně platí, že pokud přidáte uživatele do skupiny po odeslání vlastního oznámení do skupiny, je možné, že nově přidaná zpráva byla přijata k přijetí dříve odeslané zprávy s oznámením.  
@@ -98,7 +98,7 @@ Pokud máte aplikaci Portál společnosti otevřenou na zařízení s Androidem,
 
    ![Vytvoření vlastního oznámení](./media/custom-notifications/custom-notifications.png)  
 
-3. Na kartě **přiřazení** vyberte skupiny, kterým chcete poslat toto vlastní oznámení, a pak pokračujte výběrem další. Odeslání oznámení skupině bude cílit jenom na uživatele této skupiny. oznámení bude odesláno do všech zařízení s iOS a Androidem zaregistrovaných tímto uživatelem.
+3. Na kartě **přiřazení** vyberte skupiny, kterým chcete poslat toto vlastní oznámení, a pak pokračujte výběrem další. Odeslání oznámení skupině bude cílit jenom na uživatele této skupiny. oznámení bude odesláno do všech zařízení s iOS/iPadOS a Androidem zaregistrovaných tímto uživatelem.
 
 4. Na kartě **Revize + vytvořit** zkontrolujte informace a až budete připraveni odeslat oznámení, vyberte **vytvořit**.  
 

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/11/2019
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f0123647fb1e8a1d52506ad0753906f974103aad
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 628aa93af912d6c50a6897dbf871702e46b4893e
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502210"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77782146"
 ---
 # <a name="lookout-mobile-endpoint-security-connector-with-intune"></a>Podívejte se na mobilní koncový bod Security Connector s Intune
 
@@ -32,7 +32,7 @@ Přístup mobilních zařízení k firemním prostředkům můžete regulovat n
 - Nainstalované škodlivé aplikace
 - Škodlivé profily sítě
 
-Pomocí zásad dodržování předpisů Intune můžete nakonfigurovat zásady podmíněného přístupu na základě posouzení rizik ve vyhledávání. V nastaveních můžete povolit nebo blokovat zařízení, která nedodržují předpisy, podle zjištěných hrozeb.
+Zásady podmíněného přístupu můžete nakonfigurovat na základě posouzení rizik ve vyhledávání, které se povoluje v zásadách dodržování předpisů Intune pro zaregistrovaná zařízení, která můžete použít k povolení nebo blokování zařízení nesplňujících požadavky pro přístup k podnikovým prostředkům na základě zjištěných hrozeb. U neregistrovaných zařízení můžete zásady ochrany aplikací použít k vykonání bloku nebo selektivního vymazání na základě zjištěných hrozeb.
 
 ## <a name="how-do-intune-and-lookout-mobile-endpoint-security-help-protect-company-resources"></a>Jak Intune a Prohlédněte si Mobile Endpoint Security, jak zajistit ochranu firemních prostředků?
 Na mobilní zařízení se nainstaluje a spustí mobilní aplikace Lookoutu **Lookout for Work**. Tato aplikace zaznamenává telemetrii systému souborů, zásobníku sítě, zařízení a aplikací tam, kde je k dispozici, a posílá ji do cloudové služby Lookout, kde se posoudí ohrožení zařízení mobilními hrozbami. Klasifikace úrovní rizik pro hrozby můžete změnit v konzole Lookoutu tak, aby odpovídaly vašim požadavkům.  
@@ -48,7 +48,7 @@ Pro Lookout se podporují tyto platformy, pokud jsou zaregistrované v Intune:
 
 Další informace o podpoře platforem a jazyků najdete na webu pro [hledání](https://personal.support.lookout.com/hc/articles/114094140253).  
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 * Předplatné Lookout Mobile Endpoint Security pro podniky  
 * Odběr služby Microsoft Intune
 * Azure Active Directory Premium
@@ -99,7 +99,9 @@ Zjišťuje ohrožení vaší sítě, například útoky prostředníkem, a zabra
 
 ## <a name="next-steps"></a>Další kroky
 Tady jsou hlavní kroky, které je nutné provést při implementaci tohoto řešení:
-1. [Nastavení integrace služby Lookout](lookout-mtd-connector-integration.md)
-2. [Povolení mobilního koncového bodu zabezpečení v Intune](mtd-connector-enable.md)
-3. [Přidání a podepsání aplikace Lookout for Work](mtd-apps-ios-app-configuration-policy-add-assign.md)
-4. [Konfigurace zásad dodržování předpisů zařízení služby Lookout](mtd-device-compliance-policy-create.md)
+- [Nastavení integrace služby Lookout](lookout-mtd-connector-integration.md)
+- [Povolení mobilního koncového bodu zabezpečení v Intune](mtd-connector-enable.md)
+- [Přidání a podepsání aplikace Lookout for Work](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Konfigurace zásad dodržování předpisů zařízení služby Lookout](mtd-device-compliance-policy-create.md)
+- [Vytvoření zásady ochrany aplikací MTD](mtd-app-protection-policy.md)
+

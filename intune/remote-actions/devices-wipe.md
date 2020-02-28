@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/08/2019
+ms.date: 2/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41a46bd400c5901f0352709f6057bddac262ff9e
-ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
+ms.openlocfilehash: 931a1255a0b7aef6f776e8e0bf259e1ea0dd8d65
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77609373"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77781856"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Odebrání zařízení vymazáním, vyřazením nebo ručním zrušením registrace
 
@@ -47,8 +47,6 @@ Akce **Vymazání** obnoví výchozí tovární nastavení zařízení. Data už
 
 Pro Windows 10 verze 1709 nebo novější máte také možnost **Zachovat stav registrace a uživatelský účet**.
 
-Možnost **provést chráněný vymazání** zajistí, že se akce vymazání nedá obejít vypnutím zařízení. Chráněné vymazání bude pokračovat v pokusu o resetování zařízení, dokud nebylo úspěšné. V některých konfiguracích může tato akce opustit zařízení, protože se [nemůže restartovat](troubleshoot-device-actions.md#wipe-action).
-
 Zásady MDM se znovu použijí při příštím připojení zařízení k Intune.
 
 Vymazání je vhodné, když chcete zařízení resetovat, abyste ho mohli dát novému uživateli, nebo když došlo k jeho ztrátě nebo odcizení. Volbu **vymazání** používejte velmi opatrně. Data v zařízení není možné obnovit.
@@ -71,8 +69,8 @@ Vymazání je vhodné, když chcete zařízení resetovat, abyste ho mohli dát 
     |Uživatelská data mimo profil uživatele||
     |Automatické přihlášení uživatele|| 
     
-         
-7. Potvrďte vymazání volbou možnosti **Ano**.
+7. **Vymaže zařízení a pokračuje v mazání i v případě, že zařízení ztratí napájení.** možnost zajistěte, aby se akce vymazání nemohla obejít vypnutím zařízení. Tato možnost bude pokračovat v pokusu o resetování zařízení, dokud neproběhne úspěšně. V některých konfiguracích může tato akce opustit zařízení, protože se [nemůže restartovat](troubleshoot-device-actions.md#wipe-action).        
+8. Potvrďte vymazání volbou možnosti **Ano**.
 
 Pokud je zařízení zapnuté a připojené, akce **Vymazání** se do všech typů zařízení rozšíří do 15 minut.
 

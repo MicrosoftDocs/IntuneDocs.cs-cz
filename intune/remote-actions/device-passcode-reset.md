@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/18/2018
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd6e58efa096c006780c17d991a9ea5da26099d4
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 9481e25a3d9aa48e21c4e01194dfa7ee1ad1bd38
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415552"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77782163"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Resetování nebo odebrání hesla zařízení v Intune
 
@@ -59,7 +59,7 @@ K vytvoření nového hesla pracovního profilu použijte akci Resetovat heslo. 
 
 1. Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) pomocí kterékoli z následujících rolí: Azure Active Directory globální správce, Azure Active Directory Správce služby Intune, pracovník odborné pomoci nebo správce rolí.
 2. Vyberte **Zařízení** a potom **Všechna zařízení**.
-3. Ze seznamu zařízení, která spravujete, vyberte zařízení a vyberte **...Další**. Pak zvolte vzdálenou akci zařízení **Odebrat heslo**.
+3. V seznamu zařízení, která spravujete, vyberte zařízení a zvolte **Odebrat heslo**.
 
 ## <a name="reset-android-work-profile-passcodes"></a>Resetování hesel pracovních profilů Androidu
 

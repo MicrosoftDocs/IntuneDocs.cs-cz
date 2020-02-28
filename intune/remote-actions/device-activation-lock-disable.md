@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65a13c2690f08c2244f31854556a88b6301c6ac5
-ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
+ms.openlocfilehash: af5bb1c95a15a5c52585278605e2f7a86307cb76
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77576024"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77782230"
 ---
 # <a name="disable-activation-lock-on-supervised-iosipados-devices-with-intune"></a>Zakázání Zámek aktivace na zařízeních s iOS/iPadOS pod dohledem v Intune
 
@@ -84,9 +84,9 @@ Akce **zakázat zámek aktivace** vzdálené zařízení v Intune odebere zámek
     >Před vymazáním zařízení si kód zkopírujte. Když nastavení zařízení obnovíte před zkopírováním kódu, kód se z Azure odebere.
 
 7. Přejděte do okna zařízení **Přehled** a pak vyberte **Vymazat**.
-8. Jakmile se zařízení obnoví, zobrazí se výzva k zadání *Apple ID* a *hesla*. Pole *ID* nechte prázdné a jako *heslo* zadejte **kód pro překonání zámku**. Tímto se účet odebere ze zařízení. 
+8. Jakmile se zařízení obnoví, zobrazí se výzva k zadání *Apple ID* a *hesla*. Pole *ID* nechte prázdné a jako **heslo** zadejte *kód pro překonání zámku*. Tímto se účet odebere ze zařízení. 
 
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Stav požadavku na odemčení můžete zkontrolovat na stránce podrobností pro dané zařízení v úloze **Spravovat zařízení**.

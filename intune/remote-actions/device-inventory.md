@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af4270587ab5894d52a7d12b1c2082b7b3298e51
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: df814abf9cdff3eb4d9fbac8183618461b590adb
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77413747"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77781916"
 ---
 # <a name="see-device-details-in-intune"></a>Zobrazení podrobností o zařízení v Intune
 
@@ -39,11 +39,16 @@ V tomto článku se dozvíte, jak si můžete zobrazit všechna zařízení a je
    - **Přehled** zobrazuje název zařízení a uvádí některé klíčové vlastnosti zařízení, jako je například to, jestli se jedná o zařízení s podporou vlastního zařízení (BYOD), vrácení se změnami a další. Na zařízení můžete provést následující akce:
       - [Vyřadit](devices-wipe.md#retire)
       - [Vymazání](devices-wipe.md#wipe)
+      - [Odstranit](devices-wipe.md#delete-devices-from-the-intune-portal)
       - [Vzdálené uzamčení](device-remote-lock.md)
-      - [Synchronizace zařízení](device-sync.md)
+      - [Synchronizace](device-sync.md)
       - [Resetovat heslo](device-passcode-reset.md)
       - [Restartovat](device-restart.md) (jenom Windows)
       - [Začít znovu](device-fresh-start.md) (jenom Windows)
+      - [Resetování autopilotu]() (jenom Windows)
+      - [Rychlá kontrola](../configuration/device-restrictions-windows-10.md) (jenom Windows 10)
+      - [Úplná kontrola](../configuration/device-restrictions-windows-10.md) (jenom Windows 10)
+       - [Přejmenování zařízení](device-rename.md)
       - Spustit relaci vzdálené pomoci
    - Pomocí **vlastností** můžete zařízení přiřadit [kategorii, kterou vytvoříte](../enrollment/device-group-mapping.md), a upravit jeho vlastnictví na osobní nebo podnikové.
    - **Hardware** obsahuje mnoho podrobností o zařízení, jako je ID zařízení, operační systém a verze, prostor úložiště a další podrobnosti.
@@ -85,7 +90,7 @@ V závislosti na tom, jaký dopravce zařízení používá, se nemusí shromaž
 |Datum zápisu|Datum a čas, kdy se zařízení zaregistrovalo v Intune|Windows, iOS/iPadOS, Android|
 |Poslední kontakt|Datum a čas posledního připojení zařízení k Intune|Windows, iOS/iPadOS, Android|
 |Kód pro obejití zámku aktivace|Kód, který lze použít k zakázání zámku aktivace.|iOS|
-|Registrované v Azure AD|Pokud **Ano**, zařízení je registrované v Azure Active Directory|Windows, iOS/iPadOS, Android|
+|Registrováno v Azure AD|Pokud **Ano**, zařízení je registrované v Azure Active Directory|Windows, iOS/iPadOS, Android|
 |Intune je zaregistrované.|Pokud **Ano**, zařízení je zaregistrované v Intune.|Windows, iOS/iPadOS, Android|
 |Dodržování předpisů|Stav dodržování předpisů zařízení|Windows, iOS/iPadOS, Android|
 |EAS aktivované|Pokud **Ano**, pak je zařízení synchronizované s poštovní schránkou Exchange|Windows, iOS/iPadOS, Android|
