@@ -13,6 +13,8 @@
       href: quickstart-create-assign-app-policy.md
 - name: Výukové kurzy
   items:
+    - name: Ochrana e-mailu na spravovaných zařízeních
+      href: ../protect/tutorial-protect-email-on-enrolled-devices.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
     - name: Ochrana e-mailu na nespravovaných zařízeních
       href: ../protect/tutorial-protect-email-on-unmanaged-devices.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
     - name: Konfigurace Slacku na používání Intune
