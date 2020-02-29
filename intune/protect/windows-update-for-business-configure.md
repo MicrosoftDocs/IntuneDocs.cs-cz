@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e478402f826809bda4f81315d5a1a4ff6e1a8b88
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
+ms.openlocfilehash: c9245ca028bdb5589df8c76b10560d9130a1108c
+ms.sourcegitcommit: 9ee2401a2f01373a962749b0728c22385dbcba6d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886794"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78181717"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Správa aktualizací softwaru Windows 10 v Intune
 
@@ -40,7 +40,7 @@ Pro skupiny zařízení přiřadíte zásady pro aktualizační kanály Windows 
 
 Další informace najdete v tématu o [správě aktualizací pomocí Windows Update pro firmy](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb).
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Požadavky
 
 Aby se pro zařízení s Windows 10 v Intune používaly aktualizace Windows, musí se splnit následující požadavky.
 
@@ -77,14 +77,14 @@ Aktualizační kanály Windows 10 podporují [značky oboru](../fundamentals/sco
 
 ### <a name="create-and-assign-update-rings"></a>Vytvoření a přiřazení aktualizačních kanálů
 
-1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager]( https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Vyberte **zařízení** > **Windows** > **aktualizačních okruhů Windows 10** > **vytvořit**.
 
 3. V části *základy*zadejte název, popis (volitelné) a pak vyberte **Další**.
-  ![vytvoření aktualizačního kroužku]( ./media/windows-update-for-business-configure/basics-tab.png)
-  
-4. V části **aktualizovat nastavení vyzvánění**nakonfigurujte nastavení pro své obchodní potřeby. Informace o dostupných nastaveních najdete v tématu Nastavení služby Windows Update. Po konfiguraci nastavení *aktualizace a uživatelského prostředí* vyberte **Další**.
+  ![vytvoření aktualizačního kroužku](./media/windows-update-for-business-configure/basics-tab.png)
+
+4. V části **aktualizovat nastavení vyzvánění**nakonfigurujte nastavení pro své obchodní potřeby. Informace o dostupných nastaveních najdete v tématu [nastavení služby Windows Update](../protect/windows-update-settings.md). Po konfiguraci nastavení *aktualizace a uživatelského prostředí* vyberte **Další**.
 
 5. V části **značky oboru**vyberte **+ Vybrat rozsah značky** a otevřete tak podokno *Vybrat značky* , pokud je chcete použít pro aktualizační kanál. Zvolte jednu nebo více značek a kliknutím na tlačítko **Vybrat** je přidejte do aktualizačního kanálu a vraťte se na stránku *značka oboru*s.
 
@@ -119,7 +119,7 @@ Při odstranění prstence z Intune se nezmění nastavení na zařízeních, kt
 1. Při prohlížení stránky přehled pro aktualizační kanál vyberte možnost **Odstranit**.
 2. Vyberte **OK**.
 
-#### <a name="pause"></a>Pozastavení
+#### <a name="pause"></a>Pause
 
 Vyberte **pozastavit** , pokud chcete, aby zařízení nepřijímala aktualizace funkcí nebo aktualizace kvality až 35 dní od času, kdy jste okruh zastavili. Po uplynutí maximálního počtu dní funkce pozastavení automaticky vyprší a zařízení zkontroluje dostupné aktualizace ve Windows Update. Po této kontrole můžete aktualizace znovu pozastavit.
 Pokud obnovíte pozastavený aktualizační kanál a pak tento prstenec znovu zastavíte, doba pozastavení se resetuje na 35 dní.
@@ -155,7 +155,7 @@ Když je aktualizační kanál pozastaven, můžete vybrat možnost **Rozšíře
 2. Vyberte z dostupných možností, aby se obnovily buď aktualizace **funkcí** , nebo **kvality** , a pak vyberte **OK**.
 3. Po rozšíření pozastavení pro jeden typ aktualizace můžete vybrat rozšířit znovu a rozšířit jiný typ aktualizace.
 
-#### <a name="uninstall"></a>Odinstalovat  
+#### <a name="uninstall"></a>Odinstalace  
 
 Správce Intune může pomocí **odinstalace** odinstalovat (vrátit zpátky) nejnovější aktualizaci *funkcí* nebo nejnovější aktualizaci *kvality* pro aktivní nebo pozastavený aktualizační kanál. Po odinstalování jednoho typu můžete odinstalovat jiný typ. Intune nepodporuje nebo nespravuje možnost uživatelů odinstalovat aktualizace.  
 

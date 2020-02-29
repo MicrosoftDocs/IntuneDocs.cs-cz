@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: bd9fd38fdc244bc48333496c2f266ff039e55585
-ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
+ms.openlocfilehash: 92d1ca850d8bb542f0b7fe027ab7af8c12089ef8
+ms.sourcegitcommit: 9ee2401a2f01373a962749b0728c22385dbcba6d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75855559"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78181751"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Nastavení přístupu zařízení s iOSem k prostředkům společnosti  
 
@@ -48,7 +48,7 @@ Pokud chcete zachovat přístup k pracovním nebo školním informacím ze zař�
 ### <a name="security"></a>Zabezpečení  
 Při počátečním nastavení vás aplikace požádá, abyste se ve vaší organizaci ověřili. Potom vás informuje o všech nastaveních, která musíte aktualizovat. Organizace si například často určují požadavky na minimální a maximální délku hesla, které musíte splnit.
 
-### <a name="protection"></a>Protection  
+### <a name="protection"></a>Ochrana  
 Po registraci zařízení bude aplikace Portál společnosti i nadále kontrolovat, že je chráněno. Pokud si například nainstalujete aplikaci z nedůvěryhodného zdroje, upozorní vás a dokonce vám může i odvolat přístup k firemním datům. Tento druh zásad je v organizacích společný a často vyžaduje, abyste před tím, než budete moct znovu získat přístup, odinstalovali nedůvěryhodnou aplikaci.  
 
 ### <a name="setting-notifications"></a>Nastavení oznámení  
@@ -71,10 +71,10 @@ Pozastavení aplikace po dobu delší než několik minut může způsobit ukon�
     ![Příklad obrazovky Portál společnosti a obrazovky "nastavit přístup".](./media/ios-enrollment-checklist-1909.PNG)  
 
 4. Zobrazí se obrazovka **Vybrat typ zařízení a registrace** a zobrazí výzvu k zadání typu zařízení.  
-    * Klepněte na **(organizace) Toto zařízení vlastní** , pokud jste si dostali zařízení z vaší organizace. Potom přejděte na [zabezpečení celé zařízení](###secure-entire-device) v tomto článku a dokončete instalaci.  
-    * Pokud používáte osobní zařízení, které jste napravili z domova, klepněte na **Toto zařízení** . Pak pokračujte na další krok.  
+    * Klepněte na **(organizace) Toto zařízení vlastní** , pokud jste si dostali zařízení z vaší organizace. Potom přejděte na [zabezpečení celé zařízení](#secure-entire-device) v tomto článku a dokončete instalaci.  
+    * Pokud používáte osobní zařízení, které jste napravili z domova, klepněte na **Toto zařízení** . Pak pokračujte k dalšímu kroku.  
 
-    Pokud tuto obrazovku nevidíte, přejděte k nastavení [zabezpečit celé zařízení](enroll-your-device-in-intune-ios.md#secure-entire-device) a dokončete instalaci.  
+    Pokud tuto obrazovku nevidíte, přejděte k nastavení [zabezpečit celé zařízení](#secure-entire-device) a dokončete instalaci.  
     
     ![Příklad obrazovky Portál společnosti, obrazovky "vybrat zařízení a typ registrace", možnosti typu zařízení.](./media/ios-device-type-1909.PNG)  
 
@@ -123,7 +123,7 @@ Pozastavení aplikace po dobu delší než několik minut může způsobit ukon�
 
 9. Vraťte se do aplikace Portál společnosti. Portál společnosti se začne synchronizovat a nastavit vaše zařízení. Portál společnosti vás může zobrazit výzva k aktualizaci dalších nastavení zařízení. Pokud k tomu klepne, klepněte na **pokračovat**.  
 
-10. Poznáte, že je instalace dokončena, když všechny položky v seznamu zobrazí zelenou značku zaškrtnutí. Klepněte na **Hotovo**.   
+10. Poznáte, že je instalace dokončena, když všechny položky v seznamu zobrazí zelenou značku zaškrtnutí. Klepněte na možnost **Hotovo**.   
 
 > [!Note]
 > Pokud vaše organizace sleduje omezení hlasu a dat nebo poskytuje zařízení vlastněná společností, může být potřeba provést několik dalších kroků. Pokud se zobrazí výzva k instalaci aplikace **Datalert** , přečtěte si téma [registrace zařízení ve správě telekomunikačních výdajů](enroll-your-device-with-telecom-expense-management-ios.md). Pokud je vaše organizace součástí Program registrace zařízení společnosti Apple, přečtěte si, [jak zaregistrovat zařízení vlastněné společností](enroll-your-device-dep-ios.md).  

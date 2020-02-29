@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c02ea34417073091e2f2841b363edfb9966ce558
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 78e0e8560c64a1d6be4fa5e01aa9ce32b8a4c613
+ms.sourcegitcommit: 9ee2401a2f01373a962749b0728c22385dbcba6d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75205900"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78181768"
 ---
 # <a name="configure-google-chrome-for-android-devices-using-intune"></a>Konfigurace Google Chrome pro zařízení s Androidem pomocí Intune 
 
 Pomocí zásad konfigurace aplikací Intune můžete nakonfigurovat Google Chrome pro zařízení s Androidem. Nastavení aplikace lze automaticky použít. Můžete například konkrétně nastavit záložky a adresy URL, které chcete blokovat nebo zakázat.
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Požadavky
 
 - Zařízení s Androidem Enterprise uživatele musí být zaregistrované v Intune. Další informace najdete v tématu [Nastavení registrace zařízení s pracovním profilem v Androidu Enterprise](~/enrollment/android-work-profile-enroll.md).
 - Google Chrome se přidá jako spravovaná aplikace Google Play. Další informace o spravovaných Google Play najdete v tématu [připojení účtu Intune k vašemu spravovanému Google Playmu účtu](~/enrollment/connect-intune-android-enterprise.md).

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/10/2019
+ms.date: 02/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81554f03063269ff6bdca30e23a1ad135a2a1b77
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: 9a002d2a90d3c451b01cbf478ad979e4a702ac7a
+ms.sourcegitcommit: 9ee2401a2f01373a962749b0728c22385dbcba6d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77512054"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78181700"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Nastavení zásad ochrany aplikací pro Android v Microsoft Intune
 Tento článek popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem. Popsaná nastavení zásad lze [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v podokně **Nastavení** v Azure Portal.
@@ -51,7 +51,7 @@ Existují tři kategorie nastavení zásad: nastavení ochrany dat, požadavky n
 | <ul><ui>**výběru klávesnic ke schválení** | Tato možnost je k dispozici, když vyberete možnost *vyžadovat* u předchozí možnosti. Zvolením možnosti *Vybrat* můžete spravovat seznam klávesnic a metod zadávání, které se dají používat s aplikacemi chráněnými touto zásadou. Do seznamu můžete přidat další klávesnice a odebrat všechny výchozí možnosti. Chcete-li uložit nastavení, musíte mít alespoň jednu schválenou klávesnici. Pokud chcete přidat klávesnici, zadejte: <ul><li>**Název**: popisný název, který identifikuje klávesnici a je viditelný pro uživatele. </li><li>**ID balíčku**: ID balíčku aplikace v Google Play Storu. Pokud je například adresa URL aplikace v obchodě Play `https://play.google.com/store/details?id=com.contoskeyboard.android.prod`, ID balíčku je `com.contosokeyboard.android.prod`. ID tohoto balíčku se zobrazí uživateli jako jednoduchý odkaz pro stažení klávesnice z Google Play. <p><div class="NOTE"><p>Poznámka</p><p>Uživateli, kterému je přiřazeno více zásad ochrany aplikací, bude povoleno používat pouze schválené klávesnice společné pro všechny zásady.</p> | |
 | **Oznámení o datech organizace** | Určete, jak se budou sdílet data organizace prostřednictvím oznámení operačního systému pro účty org. Nastavení této zásady ovlivní místní zařízení a veškerá připojená zařízení, například wearables a inteligentní reproduktory. Aplikace můžou poskytovat další ovládací prvky pro přizpůsobení chování oznámení nebo se můžou rozhodnout Nedodržovat všechny hodnoty. Vyberte z těchto možností: <ul><li>**Blokované**: Nesdílet oznámení.</li><ul><li>Pokud aplikace nepodporuje, budou oznámení povolena.</li></ul><li>**Blokovat organizační data**: nesdílejte data organizace v oznámeních. Například "máte novou poštu"; "Máte schůzku".</li><UL><li>Pokud aplikace nepodporuje, budou oznámení zablokovaná.</li></ul><li>**Allow**: sdílení dat organizace v oznámeních</li><p>**Poznámka**: *Toto nastavení vyžaduje podporu aplikace. V tuto chvíli bude tato nastavení podporovat Outlook pro Android 4.83.0 nebo novější.* | **Povoleno**   |
   
-### <a name="encryption"></a>Encryption
+### <a name="encryption"></a>Šifrování
 | Nastavení | Způsob použití | Výchozí hodnota |
 |------|------|------|
 | **Šifrování dat organizace** | Vyberte **vyžadovat** , pokud chcete v této aplikaci povolit šifrování pracovních nebo školních dat. Intune používá k bezpečnému šifrování dat aplikací rozhraní OpenSSL (256) šifrování AES a systém úložiště klíčů pro Android. Data jsou mezi vstupně-výstupními úlohami souborů synchronně šifrovaná. Obsah v úložišti zařízení je zašifrovaný vždycky. Nové soubory budou šifrovány pomocí 256 bitových klíčů. Stávající 128 zašifrované soubory budou podrobeny pokusu o migraci do 256 klíčů, ale proces není zaručen. Soubory zašifrované pomocí 128 bitových klíčů budou moci být čitelné. <br><br> Metoda šifrování je ověřená FIPS 140-2; Další informace najdete v tématu [Knihovna FIPS OpenSSL a příručka pro Android](https://wiki.openssl.org/images/7/76/OpenSSL_FIPS_Library_and_Android_Guide.pdf).     |  **Žádá**|  
@@ -87,7 +87,7 @@ U některých aplikací a služeb platformy, které mají výjimku, můžou zás
   | com.android.providers.settings | Nastavení systému Android |
   | com.android.settings | Nastavení systému Android |
   | com.azure.authenticator | Aplikace Azure Authenticator, která je nutná k úspěšnému ověřování v mnoha situacích |
-  | com.microsoft.windowsintune.companyportal | Intune Portál společnosti|
+  | com.microsoft.windowsintune.companyportal | Portál společnosti Intune|
 
 ### <a name="conditional-exemptions"></a>Podmíněné výjimky
   Tyto aplikace můžou přenášet data do aplikací spravovaných službou Intune a z nich za určitých podmínek.

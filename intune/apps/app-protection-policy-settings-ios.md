@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2019
+ms.date: 02/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6917e1b1002829a1a3040bed2b4929e2b6a927ca
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: f410f00cbf5ece9b8a8a737469de539a2be4e4d6
+ms.sourcegitcommit: 9ee2401a2f01373a962749b0728c22385dbcba6d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77512020"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78181870"
 ---
 # <a name="ios-app-protection-policy-settings"></a>Nastavení zásad ochrany aplikací pro iOS
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -48,7 +48,7 @@ Existují tři kategorie nastavení zásad: *přemístění dat*, *požadavky na
 | **Oznámení o datech organizace** | Určete, jak se budou sdílet data organizace prostřednictvím oznámení operačního systému pro účty org. Nastavení této zásady ovlivní místní zařízení a veškerá připojená zařízení, například wearables a inteligentní reproduktory. Aplikace můžou poskytovat další ovládací prvky pro přizpůsobení chování oznámení nebo se můžou rozhodnout Nedodržovat všechny hodnoty. Vyberte z těchto možností: <ul><li>**Blokované**: Nesdílet oznámení.</li><ul><li>Pokud aplikace nepodporuje, budou oznámení povolena.</li></ul><li>**Blokovat organizační data**: nesdílejte data organizace v oznámeních, například.</li><UL><li>"Máte novou poštu"; "Máte schůzku".</li><li>Pokud aplikace nepodporuje, budou oznámení zablokovaná.</li></ul><li>**Allow**: sdílení dat organizace v oznámeních.</li></ul> <p>**Poznámka**: *Toto nastavení vyžaduje podporu aplikace. V tuto chvíli bude tato nastavení podporovat Outlook pro iOS verze 4.15.0 nebo novější.* | **Povoleno**   |
 | **Klávesnice třetích stran** | Vyberte možnost **blokovat** , pokud chcete zabránit použití klávesnic třetích stran ve spravovaných aplikacích.<p>Když tuto možnost povolíte, obdrží uživatel jednorázově zprávu o tom, že použití takových klávesnic je zablokované. Tato zpráva se zobrazí při první komunikaci uživatele s daty organizace vyžadující použití klávesnice. Při použití spravovaných aplikací je k dispozici jenom standardní klávesnice iOS/iPadOS a všechny ostatní možnosti klávesnice jsou zakázané. Toto nastavení bude mít vliv na organizaci i osobní účty aplikací s více identitami. Toto nastavení nemá vliv na používání klávesnic třetích stran v nespravovaných aplikacích.<p>**Poznámka:** Tato funkce vyžaduje, aby aplikace používala Intune SDK verze 12.0.16 nebo novější. Aplikace s verzemi sady SDK od 8.0.14 do a včetně 12.0.15 nebudou mít tuto funkci správně platit pro aplikace s více identitami. Další podrobnosti najdete v tématu [známý problém: klávesnice třetích stran nejsou v iOS/iPadOS pro osobní účty blokované](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Updated-Known-issue-Third-party-keyboards-are-not-blocked-in-iOS/ba-p/339486). | **Povoleno**  |
 
-### <a name="encryption"></a>Encryption
+### <a name="encryption"></a>Šifrování
 | Nastavení | Způsob použití | Výchozí hodnota |
 |------|----------|-------|
 | **Šifrování dat organizace** | Vyberte vyžadovat, pokud chcete v této aplikaci povolit šifrování pracovních nebo školních dat.  Intune vynutilo šifrování zařízení s iOS/iPadOS, aby se chránila data aplikací v době, kdy je zařízení zamčené.  Aplikace můžou volitelně šifrovat data aplikací pomocí šifrování sady Intune APP SDK.  Sada Intune APP SDK používá kryptografické metody iOS/iPadOS k aplikování 256 šifrování AES na data aplikací. <br><br> Pokud povolíte toto nastavení, je možné, že si uživatel bude muset nastavit kód PIN a používat ho pro přístup k zařízení. Pokud není k dispozici žádný kód PIN a šifrování zařízení, zobrazí se uživateli výzva k nastavení kódu PIN se zprávou "vaše organizace vyžaduje, abyste pro přístup k této aplikaci nejdřív povolili kód PIN zařízení." <br><br> Pokud chcete zjistit, které moduly šifrování pro iOS/iPadOS jsou ověřené FIPS 140-2, přejděte k [oficiální dokumentaci Apple](https://support.apple.com/en-us/HT202739) . | **Žádá**  |

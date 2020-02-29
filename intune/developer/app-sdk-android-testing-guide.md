@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d473d29536b4ffdcc221c8cf61c63725bae0fa2
-ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
+ms.openlocfilehash: 699665f93d04801223f2fc6e6536d9b675e75242
+ms.sourcegitcommit: 9ee2401a2f01373a962749b0728c22385dbcba6d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75653899"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78181938"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-testing-guide"></a>Průvodce testováním Microsoft Intune App SDK pro Android
 
@@ -58,7 +58,7 @@ Pro přístup k firemním prostředkům můžete vyžadovat PIN kód. Můžete t
     - Chyba při zobrazení výzvy může být způsobena nesprávně integrovanou `MAMActivity` hodnotou. Další informace o `MAMActivity`najdete v tématu [Microsoft Intune App SDK pro Android – příručka pro vývojáře](app-sdk-android.md).
 
 > [!NOTE] 
-> Pokud předchozí test nefunguje, následující testy budou pravděpodobně také neúspěšné. Projděte si integraci [sady SDK](app-sdk-android.md##sdk-integration) a [ADAL](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal) .
+> Pokud předchozí test nefunguje, následující testy budou pravděpodobně také neúspěšné. Projděte si integraci [sady SDK](app-sdk-android.md#sdk-integration) a [ADAL](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal) .
 
 ### <a name="restrict-transferring-and-receiving-data-with-other-apps"></a>Omezení přenosu a příjem dat s jinými aplikacemi
 Přenos dat mezi podnikovými spravovanými aplikacemi můžete řídit následujícím způsobem:
