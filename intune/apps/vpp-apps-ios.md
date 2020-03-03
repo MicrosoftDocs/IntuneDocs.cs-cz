@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/17/2019
+ms.date: 02/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9127ee06bc2125f476c18e9b8e46a127e48d0245
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: e3efa4a354a71846a5add46794ed853696d04560
+ms.sourcegitcommit: fab685b22a010fe231b27a0c5eda34a6f22f4c8d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77513397"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78216096"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Jak spravovat aplikace pro iOS a macOS zakoupené prostřednictvím Apple Volume Purchase Program s využitím Microsoft Intune
 
@@ -64,7 +64,7 @@ Můžete zakoupit a distribuovat veřejné i soukromé aplikace pomocí nástroj
 - **Aplikace pro Store:** Pomocí Apple Business Manageru můžou správci obsahu koupit bezplatné i placené aplikace, které jsou k dispozici v obchodě s aplikacemi.
 - **Vlastní aplikace:** Pomocí Apple Business Manageru můžou správci obsahu taky koupit vlastní aplikace, které jsou pro vaši organizaci k dispozici soukromě. Tyto aplikace jsou přizpůsobené konkrétním potřebám vaší organizace vývojářům, se kterými přímo pracujete. Přečtěte si další informace o [tom, jak distribuovat vlastní aplikace](https://developer.apple.com/business/custom-apps/).
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 - Účet [Apple Business Manager](https://business.apple.com/) nebo [Apple School Manager](https://school.apple.com/) pro vaši organizaci. 
 - Zakoupené licence aplikace přiřazené k jedné nebo více tokenům umístění. 
 - Byly staženy tokeny umístění. 
@@ -87,7 +87,7 @@ Migrujte existující koupený obsah a tokeny VPP do aplikací a knih v Apple Bu
 1. Vyzvěte nákupčí VPP, aby se připojili k vaší organizaci, a nasměrujte jednotlivé uživatele na výběr jedinečného umístění. 
 2. Než budete pokračovat, ujistěte se, že všichni odběratelé VPP v rámci vaší organizace dokončili krok 1.
 3. Ověřte, že se všechny koupené aplikace a licence migrovali do aplikací a knih v Apple Business Manageru nebo Apple School Manageru.
-4. Stáhněte si nový token umístění tak, že ve **Správci Apple Business (nebo School)**  > **Nastavení** > **aplikace a knihy** > **tokeny My Server**.
+4. Stáhněte si nový token umístění tak, že ve **Správci Apple Business (nebo School)** > **Nastavení** > **aplikace a knihy** > **tokeny My Server**.
 5. V centru pro správu Microsoft Endpoint Manageru aktualizujte token umístění, a to tak, že ve **správě tenanta** > **konektory a tokeny** > **Apple VPP tokeny** a synchronizujete token.
 
 ## <a name="upload-an-apple-vpp-or-location-token"></a>Nahrání tokenu Apple VPP nebo umístění
@@ -142,11 +142,11 @@ Koncový uživatel obdrží výzvu k instalaci aplikace v rámci VPP v řadě sc
 
 | # | Scénář                                | Pozvánka do programu Apple VPP                              | Výzva při instalaci aplikace | Výzva k zadání Apple ID |
 |---|--------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------|-----------------------------------|
-| 1 | BYOD – uživatel licencovaný (nejedná se o zařízení pro zápis uživatelů)                             | A                                                                                               | A                                           | A                                 |
-| 2 | Zařízení společnosti – licencovaný uživatel (zařízení není pod dohledem)     | A                                                                                               | A                                           | A                                 |
-| 3 | Zařízení společnosti – licencovaný uživatel (zařízení pod dohledem)         | A                                                                                               | N                                           | A                                 |
-| 4 | Vlastní zařízení – licencované zařízení                           | N                                                                                               | A                                           | N                                 |
-| 5 | Zařízení společnosti – licencované zařízení (zařízení není pod dohledem)                           | N                                                                                               | A                                           | N                                 |
+| 1 | BYOD – uživatel licencovaný (nejedná se o zařízení pro zápis uživatelů)                             | Ano                                                                                               | Ano                                           | Ano                                 |
+| 2 | Zařízení společnosti – licencovaný uživatel (zařízení není pod dohledem)     | Ano                                                                                               | Ano                                           | Ano                                 |
+| 3 | Zařízení společnosti – licencovaný uživatel (zařízení pod dohledem)         | Ano                                                                                               | N                                           | Ano                                 |
+| 4 | Vlastní zařízení – licencované zařízení                           | N                                                                                               | Ano                                           | N                                 |
+| 5 | Zařízení společnosti – licencované zařízení (zařízení není pod dohledem)                           | N                                                                                               | Ano                                           | N                                 |
 | 6 | Zařízení společnosti – licencované zařízení (zařízení pod dohledem)                           | N                                                                                               | N                                           | N                                 |
 | 7 | Beznabídkový režim (zařízení pod dohledem) – licencované zařízení | N                                                                                               | N                                           | N                                 |
 | 8 | Beznabídkový režim (zařízení pod dohledem) – licencovaný uživatel   | --- | ---                                          | ---                                |

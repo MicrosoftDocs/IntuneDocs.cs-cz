@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e7709eac2b360aa09415249c1c3f704b52a492b
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: cd05547d4699888f5fade58fb5a50557604d81ea
+ms.sourcegitcommit: fab685b22a010fe231b27a0c5eda34a6f22f4c8d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206580"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78216043"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Seznamy nastavení omezení zařízení s Androidem a Samsung KNOX standard v Intune
 
@@ -35,7 +35,7 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
 - **Kamera**: vyberte možnost **blokovat** , pokud chcete zabránit přístupu k fotoaparátu. **Nenakonfigurováno** umožňuje přístup k kameře zařízení.
 - **Kopírování a vkládání (jenom Samsung KNOX)**: vyberte **blok** , aby se zabránilo kopírování a vkládání. **Není nakonfigurováno** , umožňuje funkce kopírování a vkládání na zařízení.
 - **Sdílení schránky mezi aplikacemi (jenom Samsung KNOX)**: vyberte **blok** , aby se zabránilo použití schránky pro kopírování a vkládání mezi aplikacemi. **Není nakonfigurováno** umožňuje použití schránky ke kopírování a vkládání mezi aplikacemi.
-- **Odeslání diagnostických dat (jenom Samsung KNOX)**: výběrem možnosti **blokovat** zabráníte uživateli v odesílání diagnostických dat ze zařízení. **Není nakonfigurováno** umožňuje uživateli odeslat data.
+- **Odeslání diagnostických dat (jenom Samsung KNOX)**: výběrem možnosti **blokovat** zabráníte uživateli v odesílání zpráv o chybách ze zařízení. **Není nakonfigurováno** umožňuje uživateli odeslat data.
 - **Vymazat (jenom Samsung KNOX)**: umožňuje uživateli na zařízení spustit akci [vymazání](../remote-actions/devices-wipe.md) .
 - **Zeměpisná poloha (jenom Samsung KNOX)**: Pokud chcete zakázat používání informací o poloze zařízení, vyberte **blokovat** . **Není nakonfigurováno** , umožňuje zařízení používat informace o poloze.
 - **Vypnutí (jenom Samsung KNOX)**: vyberte **blok** , aby se zabránilo uživateli v vypnutí zařízení. Pokud je toto nastavení zakázané, **počet neúspěšných přihlášení před vymazáním nastavení zařízení** nepůjde nastavit a nefunguje. **Nenakonfigurováno** umožňuje uživateli vypnout zařízení.
@@ -52,7 +52,7 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
     > [!NOTE]
     > Při registraci MDM zařízení Samsung Knox automaticky vyžadují 4místný číselný kód PIN. Nativní zařízení s Androidem můžou automaticky vyžadovat PIN kód, aby mohl být kompatibilní s podmíněným přístupem.
 
-- **Minimální délka hesla**: Zadejte minimální délku hesla uživatel musí zadat (mezi 4 a 16 znaky).
+- **Minimální délka hesla**: zadejte minimální délku hesla, které uživatel musí zadat (mezi 4 a 16 znaky).
 - **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**: zadejte maximální počet minut nečinnosti povolený v zařízení, dokud se obrazovka nezamkne. Koncový uživatel nemůže na zařízení nastavit větší časovou hodnotu, než je nakonfigurovaná v profilu. Může ale nastavit kratší časovou hodnotu. Pokud je v profilu nastaveno třeba 15 minut, může koncový uživatel nastavit 5 minut, ale nemůže nastavit 30 minut. 
 - **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet povolených neúspěšných přihlášení, než se zařízení vymaže.
 - **Vypršení platnosti hesla (dny)**: zadejte počet dní, než bude nutné změnit heslo zařízení.
@@ -65,7 +65,7 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
   - **Aspoň alfanumerické znaky**
   - **Aspoň alfanumerické se symboly**
 - **Zakázat opakované použití předchozích hesel**: zastaví koncovému uživateli vytvoření hesla, které předtím používali.
-- **Odemknutí otiskem prstu (jenom Samsung KNOX)**: vyberte **blok** , abyste zabránili použití otisku prstu k odemknutí zařízení. **Není nakonfigurováno** uživatel k odemknutí zařízení otiskem prstu.
+- **Odemknutí otiskem prstu (jenom Samsung KNOX)**: vyberte **blok** , abyste zabránili použití otisku prstu k odemknutí zařízení. **Není nakonfigurováno** umožňuje uživateli odemknout zařízení pomocí otisku prstu.
 - **Smart Lock a jiní agenti**pro určování důvěryhodnosti: vyberte **blok** , aby Smart Lock nebo jiní agenti pro určování důvěryhodnosti zabránili v úpravě nastavení ZAMYKACÍ obrazovky (Samsung KNOX standard 5.0 +). Tato funkce telefonu, která se někdy označuje jako agent pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo zamykací obrazovky zařízení, pokud se zařízení nachází v důvěryhodném umístění. Tato funkce se dá použít například v případě, že je zařízení připojené k určitému zařízení Bluetooth nebo když se nachází blízko značky NFC. Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
 - **Šifrování**: vyberte **vyžadovat** , aby byly soubory v zařízení šifrované. Ne všechna zařízení podporují šifrování. Chcete-li použít tuto funkci, postupujte také takto: 
   1. Nastavte **heslo** na **povinné**.
@@ -106,7 +106,7 @@ K přidání aplikace do těchto seznamů můžete:
 - **Webový prohlížeč (jenom Samsung KNOX)**: vyberte možnost **blokovat** , aby se zabránilo použití výchozího webového prohlížeče na zařízení. **Není nakonfigurováno** , umožňuje používat výchozí webový prohlížeč zařízení.
 - **Automatické vyplňování (jenom Samsung KNOX)**: Pokud chcete zabránit automatickému vyplnění textu v prohlížeči, vyberte **blokovat** . **Není nakonfigurováno** umožňuje použít funkci automatického vyplňování webového prohlížeče.
 - **Soubory cookie (jenom Samsung KNOX)**: vyberte, jak chcete soubory cookie zpracovávat z webů na zařízení. Možnosti:
-  - Allow
+  - Povolit
   - Blokovat všechny soubory cookie
   - Povolení souborů cookie z navštívených webů
   - Povoluje soubory cookie z aktuálního webu
@@ -138,7 +138,7 @@ Pro každé nastavení přidejte seznam aplikací. Možnosti:
 
 ## <a name="cellular-and-connectivity"></a>Mobilní síť a připojení
 
-- **Datový roaming (jenom Samsung KNOX)**: vyberte **blok** , aby se zabránilo datovému roamingu v mobilní síti. **Není nakonfigurováno** povolí datový roaming, když je zařízení v mobilní síti.
+- **Datový roaming (jenom Samsung KNOX)**: vyberte **blok** , aby se zabránilo datovému roamingu v mobilní síti. Možnost **Nenakonfigurováno** povolí datový roaming, když je zařízení v mobilní síti.
 - **Zasílání zpráv SMS a MMS (jenom Samsung KNOX)**: Pokud chcete zabránit textovému zasílání zpráv na zařízení, vyberte **blokovat** . **Není nakonfigurováno** , umožňuje na zařízení používat zprávy SMS a MMS.
 - **Hlasové vytáčení (jenom Samsung KNOX)**: Pokud chcete zabránit uživatelům používat funkci hlasového vytáčení na zařízení, vyberte **blokovat** . **Nenakonfigurováno** umožňuje hlasové vytáčení zařízení.
 - **Hlasový roaming (jenom Samsung KNOX)**: Pokud chcete zabránit hlasovému roamingu přes mobilní síť, vyberte **blokovat** . Možnost **Nenakonfigurováno** umožňuje hlasový roaming, když je zařízení v mobilní síti.
@@ -147,7 +147,7 @@ Pro každé nastavení přidejte seznam aplikací. Možnosti:
 - **Wi-Fi (jenom Samsung KNOX)**: Pokud chcete zabránit použití Wi-Fi na zařízení, vyberte **blokovat** . Možnost **Nenakonfigurováno** umožňuje použití funkcí Wi-Fi zařízení.
 - **Sdílení internetového připojení přes Wi-Fi (jenom Samsung KNOX)**: Pokud chcete zabránit použití internetového připojení přes Wi-Fi na zařízení, vyberte **blokovat** . **Není nakonfigurováno** umožňuje na zařízení používat sdílení Wi-Fi.
 
-## <a name="kiosk"></a>Kiosk
+## <a name="kiosk"></a>Veřejný terminál
 
 Nastavení platí jen pro zařízení se zabezpečením Samsung Knox Standard a jen pro aplikace, které spravujete přes Intune.
 

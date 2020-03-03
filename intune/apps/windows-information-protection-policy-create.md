@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d1a8ee3f6d5eb190fb2ee252dfb5f6c23a1cf16
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 8ae5e45c521046fb414a1d141c6859c7a4e5d61a
+ms.sourcegitcommit: fab685b22a010fe231b27a0c5eda34a6f22f4c8d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74563776"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78216129"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune
 
@@ -47,7 +47,7 @@ Musíte porozumět několika konceptům při přidání zásady WIP:
 - **Aplikace pro Store:** Do zásad můžete přidat libovolnou aplikaci z Microsoft Storu.
 - **Desktopové aplikace Windows:** Do zásad můžete přidat libovolné tradiční desktopové aplikace Windows (např. soubory typu exe nebo dll).
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Požadavky
 
 Abyste mohli vytvořit zásadu ochrany aplikací WIP, musíte nejdříve nakonfigurovat poskytovatele MAM. Přečtěte si další informace o tom, [jak nakonfigurovat poskytovatele MAM u Intune](app-protection-policies-configure-windows-10.md).  
 
@@ -88,7 +88,7 @@ Pokud už máte v organizaci nastavenou službu Intune, můžete vytvořit zása
 4. V podokně **Intune App Protection** vyberte **chráněné aplikace** . Otevře se podokno **chráněné aplikace** , ve kterém se zobrazí všechny aplikace, které už jsou v seznamu pro tuto zásadu ochrany aplikací uvedené.
 5. Vyberte **Přidat aplikace**. Informace v části **Přidat aplikace** zobrazí filtrovaný seznam aplikací. Seznam v horní části podokna vám umožní změnit filtr seznamu.
 6. Otevřete každou aplikaci, které chcete povolit přístup k podnikovým datům.
-7. Klikněte na **OK**. V podokně **chráněné aplikace** se aktualizuje zobrazení všech vybraných aplikací.
+7. Klikněte na tlačítko **OK**. V podokně **chráněné aplikace** se aktualizuje zobrazení všech vybraných aplikací.
 8. Klikněte na **Uložit**.
 
 ## <a name="add-a-store-app-to-your-protected-apps-list"></a>Přidání aplikace ze Storu do seznamu chráněných aplikací
@@ -102,7 +102,7 @@ Pokud už máte v organizaci nastavenou službu Intune, můžete vytvořit zása
 5. Vyberte **Přidat aplikace**. Informace v části **Přidat aplikace** zobrazí filtrovaný seznam aplikací. Seznam v horní části podokna vám umožní změnit filtr seznamu.
 6. Ze seznamu vyberte **Aplikace pro Store**.
 7. Zadejte hodnoty pro **Název**, **Vydavatel**, **Název produktu** a **Akce**. Nezapomeňte nastavit hodnotu **Akce** na **Povolit**, aby měla aplikace přístup k podnikovým datům.
-9. Klikněte na **OK**. V podokně **chráněné aplikace** se aktualizuje zobrazení všech vybraných aplikací.
+9. Klikněte na tlačítko **OK**. V podokně **chráněné aplikace** se aktualizuje zobrazení všech vybraných aplikací.
 10. Klikněte na **Uložit**.
 
 ## <a name="add-a-desktop-app-to-your-protected-apps-list"></a>Přidání desktopové aplikace do seznamu chráněných aplikací
@@ -115,7 +115,7 @@ Pokud už máte v organizaci nastavenou službu Intune, můžete vytvořit zása
 5. Vyberte **Přidat aplikace**. Informace v části **Přidat aplikace** zobrazí filtrovaný seznam aplikací. Seznam v horní části podokna vám umožní změnit filtr seznamu.
 6. Ze seznamu vyberte **Desktopové aplikace**.
 7. Zadejte hodnoty pro **Název**, **Vydavatel**, **Název produktu**, **Soubor**, **Minimální verze**, **Maximální verze** a **Akce**. Nezapomeňte nastavit hodnotu **Akce** na **Povolit**, aby měla aplikace přístup k podnikovým datům.
-9. Klikněte na **OK**. V podokně **chráněné aplikace** se aktualizuje zobrazení všech vybraných aplikací.
+9. Klikněte na tlačítko **OK**. V podokně **chráněné aplikace** se aktualizuje zobrazení všech vybraných aplikací.
 10. Klikněte na **Uložit**.
 
 ## <a name="wip-learning"></a>Kurzy k WIP
@@ -132,7 +132,7 @@ Když pracujete s aplikacemi podporujícími WIP a s neznámými aplikacemi v r�
 
 ### <a name="what-are-the-protection-modes"></a>Co jsou režimy ochrany?
 
-#### <a name="block"></a>Blokování
+#### <a name="block"></a>Zablokovat
 WIP hledá nepatřičné postupy sdílení dat a zabrání uživateli dokončit akci. K blokovaným akcím může patřit sdílení mezi podnikově nechráněnými aplikacemi a sdílení podnikových dat mezi dalšími lidmi a zařízeními mimo vaši organizaci.
 
 #### <a name="allow-overrides"></a>Povolit potlačení

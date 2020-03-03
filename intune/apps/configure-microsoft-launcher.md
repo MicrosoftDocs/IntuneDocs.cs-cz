@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b0145a17434d8b309806f468bf066d54ae117144
-ms.sourcegitcommit: 1aaff35fddb3d06458d739968d28971fed0bb2ba
+ms.openlocfilehash: 55f76b0c5c71f7828fed17233c2b81d6b066cc3b
+ms.sourcegitcommit: fab685b22a010fe231b27a0c5eda34a6f22f4c8d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "77155356"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78216113"
 ---
 # <a name="configure-microsoft-launcher"></a>Konfigurace Microsoft Launcheru
 
@@ -57,10 +57,10 @@ V následující tabulce jsou uvedeny dostupné konfigurační klíče pro spou�
 
 |    Konfigurační klíč    |    Typ hodnoty    |    Výchozí hodnota    |    Popis     |
 |---------------------------------------------------|------------------|---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    Typ registrace    |    Řetězec     |    Výchozí    |    Umožňuje nastavit typ registrace, na kterou by tyto zásady měly platit. V současné době **výchozí** hodnota odkazuje na **CorporateOwnedBuisnessOnly**. K dispozici nejsou žádné další podporované typy registrace.        Název klíče JSON: management_mode_key        |
+|    Typ registrace    |    String     |    Výchozí    |    Umožňuje nastavit typ registrace, na kterou by tyto zásady měly platit. V současné době **výchozí** hodnota odkazuje na **CorporateOwnedBuisnessOnly**. K dispozici nejsou žádné další podporované typy registrace.        Název klíče JSON: management_mode_key        |
 |    Změna uživatele v pořadí aplikace domovské obrazovky povolena    |    Logická hodnota    |    True    |    Umožňuje určit, zda je možné změnit nastavení **pořadí aplikace domovské obrazovky** koncovým uživatelem.<ul><li>Pokud je nastavená **hodnota true**, pořadí aplikací definované v zásadě se vynutilo jenom pro počáteční nasazení. Následně se zásada neuplatní, aby se projevily změny, které uživatel mohl udělat.</li><li>Pokud je nastavená **hodnota false**, bude se při každé synchronizaci vyžadovat pořadí aplikací.</li></ul><br>**Poznámka:** Pořadí aplikace domovské obrazovky lze nakonfigurovat pouze pomocí editoru JSON.<br><br>Název klíče JSON:<br>`com.microsoft.launcher.HomeScreen.AppOrder.UserChangeAllowed`    |
-|    Nastavit velikost mřížky    |    Řetězec    |    Autom.    |    Umožňuje nastavit velikost mřížky pro aplikace, které mají být umístěny na domovské obrazovce. Počet řádků a sloupců aplikace můžete nastavit tak, aby se definovala velikost mřížky v následujícím formátu: `columns;rows`. Pokud definujete velikost mřížky, maximální počet aplikací, které se zobrazí na řádku na domovské obrazovce, bude počet řádků, které jste nastavili, a maximální počet aplikací, které se zobrazí ve sloupci na domovské obrazovce, bude počet sloupců, které jste nastavili.<br><br>        Název klíče JSON:<br>`com.microsoft.launcher.HomeScreen.GridSize`    |
-|    Nastavit tapetu zařízení    |    Řetězec    |    Null    |    Umožňuje nastavit tapetu podle vlastního výběru zadáním adresy URL obrázku, který chcete nastavit jako tapetu.<br><br>Název klíče JSON:<br>`com.microsoft.launcher.Wallpaper.URL`    |
+|    Nastavit velikost mřížky    |    String    |    Autom.    |    Umožňuje nastavit velikost mřížky pro aplikace, které mají být umístěny na domovské obrazovce. Počet řádků a sloupců aplikace můžete nastavit tak, aby se definovala velikost mřížky v následujícím formátu: `columns;rows`. Pokud definujete velikost mřížky, maximální počet aplikací, které se zobrazí na řádku na domovské obrazovce, bude počet řádků, které jste nastavili, a maximální počet aplikací, které se zobrazí ve sloupci na domovské obrazovce, bude počet sloupců, které jste nastavili.<br><br>        Název klíče JSON:<br>`com.microsoft.launcher.HomeScreen.GridSize`    |
+|    Nastavit tapetu zařízení    |    String    |    Null    |    Umožňuje nastavit tapetu podle vlastního výběru zadáním adresy URL obrázku, který chcete nastavit jako tapetu.<br><br>Název klíče JSON:<br>`com.microsoft.launcher.Wallpaper.URL`    |
 |    Nastavit, aby se změna uživatele na tapetě zařízení povolila    |    Bool    |    True    |    Umožňuje určit, zda může koncový uživatel změnit nastavení tapety zařízení.<ul><li>Pokud je nastavená **hodnota true**, Tapeta v zásadách se vynutila jenom při počátečním nasazení. Následně se zásada neuplatní, aby se projevily změny, které uživatel mohl udělat.</li><li>Pokud je nastavena **hodnota false**, bude při každé synchronizaci vynutila tapeta.</li></ul><br>Název klíče JSON:<br>`com.microsoft.launcher.Wallpaper.URL.UserChangeAllowed`        |
 |    Povolení informačního kanálu    |    Logická hodnota    |    True    |    Umožňuje povolit informační kanál spouštěče zařízení v případě, že uživatel přetáhne přímo na domovské obrazovce.<ul><li>Pokud je nastaveno na **true**, kanál bude povolen.</li><li>Pokud je hodnota nastavena na **false**, kanál bude zakázán.</li></ul><br>Název klíče JSON:<br>`com.microsoft.launcher.Feed.Enabled`    |
 |    Povolit změnu uživatele v informačním kanálu povolen    |    Logická hodnota    |    True    |     Umožňuje určit, jestli může koncový uživatel změnit nastavení **Povolení kanálu** .<ul><li>Pokud je nastavená **hodnota true**, informační kanál se vynutil jenom pro počáteční nasazení. Následně se zásada neuplatní, aby se projevily změny, které uživatel mohl udělat.</li><li>Pokud je nastavená **hodnota false**, bude se při každé synchronizaci vyžadovat informační kanál.</li></ul><br>Název klíče JSON:`com.microsoft.launcher.Feed.Enabled.UserChangeAllowed`    |
