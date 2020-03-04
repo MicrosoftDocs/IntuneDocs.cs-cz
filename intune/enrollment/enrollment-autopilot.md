@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f97c4c56073044e79b5251dc83c54decb5c9c55
-ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
+ms.openlocfilehash: 499a1fa468193a5be2da05a62568301f4f23aaf4
+ms.sourcegitcommit: 6608dc70d01376e0cd90aa620a2fe01337f6a2f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124839"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78260261"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows v Intune pomocí Windows Autopilot  
 Windows Autopilot usnadňuje registraci zařízení v Intune. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
 
 Existují čtyři typy nasazení autopilotu:
 - [Režim automatického nasazení](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) pro veřejné terminály, digitální podpisy nebo sdílené zařízení
-- [Bílá šetrnější](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) umožňuje partnerům nebo pracovníkům IT předem zřídit počítač s Windows 10, aby byl plně nakonfigurovaný a připravený pro přípravu vlastního[projektu pro stávající zařízení](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) vám umožní snadno nasadit nejnovější verzi Windows 10 na vaše stávající zařízení.
+- [Bílá šetrnější](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) umožňuje partnerům nebo pracovníkům IT předem zřídit počítač s Windows 10, aby byl plně nakonfigurovaný a připravený pro podnik.
+- [Autopilot pro stávající zařízení](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) umožňuje snadno nasadit nejnovější verzi Windows 10 na vaše stávající zařízení.
 - [Režim řízený uživatelem](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) pro tradiční uživatele. 
-
 
 ## <a name="prerequisites"></a>Požadavky
 - [Předplatné Intune](../fundamentals/licenses.md)
@@ -174,6 +174,9 @@ Tato sestava je ve verzi Preview. Záznamy nasazení zařízení se aktuálně s
 K zařízení Autopilot můžete přiřadit uživatele. Díky přiřazení se během instalace systému Windows uživatel předem vyplní na přihlašovací stránce s [firemním brandingem](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding) ze služby Azure Active Directory. Také můžete nastavit vlastní uvítací název. Ten se předem nevyplňuje, ani neupravuje přihlašování ve Windows. Způsobem popsaným níže lze přiřadit jen uživatele s licencí pro službu Intune.
 
 Požadavky: Azure Active Directory Portál společnosti byl nakonfigurován a Windows 10 verze 1809 nebo novější.
+
+> [!NOTE]
+> Pokud používáte službu AD FS, přiřazení uživatele ke konkrétnímu zařízení s autopilotem nefunguje.
 
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **Windows** > **Windows** > **zařízení** (v části **program Windows autopilot Deployment** > vyberte zařízení > **přiřadit uživatele**.
 

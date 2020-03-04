@@ -18,17 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d87a4b5d46a5f0d40cebe3dbcaff211ff508d667
-ms.sourcegitcommit: 822a70c61f5d644216ccc401b8e8949bc39e8d4a
+ms.openlocfilehash: d30c02e67579e7c4e2d577f8804189fec1c6110d
+ms.sourcegitcommit: 6608dc70d01376e0cd90aa620a2fe01337f6a2f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76125306"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78260244"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Nasazení hybridních zařízení připojených k Azure AD pomocí Intune a automatického pilotního projektu Windows
 Pomocí Intune a Windows autopilotu můžete nastavit zařízení připojená k hybridnímu Azure Active Directory (Azure AD). Pokud to chcete provést, postupujte podle kroků v tomto článku.
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Požadavky
 
 [Zařízení připojená k hybridní službě Azure AD](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)se úspěšně nakonfigurovala. Ujistěte se, že [jste ověřili registraci zařízení](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) pomocí rutiny Get-MsolDevice.
 
@@ -39,6 +39,8 @@ Zařízení, která chcete zaregistrovat, musí:
 - Být schopné testovat řadič domény domény, ke které se pokoušíte připojit.
 - Pokud používáte proxy server, musí být povolená a nakonfigurovaná možnost nastavení proxy serveru WPAD.
 - Absolvujte integrované prostředí (OOBE).
+- Použijte typ ověřování, který Azure Active Directory podporuje v OOBE.
+
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Nastavení automatické registrace pro Windows 10
 
@@ -209,7 +211,7 @@ Změna stavu profilu zařízení z *nepřiřazeného* *přiřazení* a nakonec t
 ## <a name="create-and-assign-a-domain-join-profile"></a>Vytvoření a přiřazení profilu připojení k doméně
 
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **konfigurační profily** > **vytvořit profil**.
-2. Zadejte tyto vlastnosti:
+2. Zadejte následující vlastnosti:
    - **Název**: Zadejte popisný název nového profilu.
    - **Popis**: Zadejte popis profilu.
    - **Platforma**: vyberte **Windows 10 a novější**.

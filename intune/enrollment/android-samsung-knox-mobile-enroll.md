@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: ''
-ms.date: 02/27/2020
+ms.date: 03/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ccbba6163bfa0cd7b65bc25d71a0aff9babeda3
-ms.sourcegitcommit: fab685b22a010fe231b27a0c5eda34a6f22f4c8d
+ms.openlocfilehash: ae445597cfd1afc4650c7a900ee335c939adedce
+ms.sourcegitcommit: 6608dc70d01376e0cd90aa620a2fe01337f6a2f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "78216182"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78260176"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Automatická registrace zařízení s Androidem pomocí technologie Knox Mobile Enrollment od Samsungu
 
@@ -57,39 +57,43 @@ Pokud chcete provést registraci do Intune pomocí KME, musíte nejprve zaregist
 
 ## <a name="create-mdm-profile"></a>Vytvoření profilu MDM
 
-Když se vaše společnost úspěšně zaregistruje, můžete na portálu Knox pomocí níže uvedených informací vytvořit profil MDM pro Microsoft Intune. Na portálu Knox můžete vytvořit profily MDM jak pro Android, tak i Android Enterprise. 
-
-### <a name="for-android-enterprise"></a>Android Enterprise
-
-| Pole profilu MDM| Požadováno? | Hodnoty | 
-|-------------------|-----------|-------| 
-|MDM Server URI (URI serveru MDM)     | Ne        |Nechte prázdné.| 
-|Profile Name (Název profilu)       | Ano       |Zadejte libovolný název profilu. |
-|Popis        | Ne        |Zadejte text popisující profil. |
-|MDM Agent APK (APK Agent MDM)      | Ano       |https://aka.ms/intune_kme_deviceowner| 
-|Custom JSON (Vlastní JSON)        | Ne        |{"com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "Zadejte řetězec tokenu registrace Intune"}. Přečtěte si, [jak vytvořit registrační profil](android-kiosk-enroll.md). |
-|Skip Setup wizard (Přeskočit průvodce nastavením)  | Ne        |Tuto možnost vyberte, pokud chcete pro koncového uživatele přeskočit výzvy pro instalaci standardních zařízení.|
-|Allow End User to Cancel Enrollment (Povolit koncovému uživateli zrušit registraci) | Ne | Tuto možnost vyberte, pokud chcete uživatelům povolit, aby zrušili KME.|
-| Add legal agreements (Přidat právní smlouvy) | Ne | Nechte prázdné. |
-| Podrobnosti kontaktu podpory | Ano | Kliknutím na Upravit aktualizujte podrobnosti o kontaktu. |
-|Associate a Knox license with this profile (Přiřadit tomuto profilu licenci Knox) | Ne | Tuto možnost nechejte nezvolenou. Registrace do Intune pomocí KME nevyžaduje licenci Knox.|
+Když se vaše společnost úspěšně zaregistruje, můžete na portálu Knox pomocí níže uvedených informací vytvořit profil MDM pro Microsoft Intune. Na portálu Knox můžete vytvořit profily MDM jak pro Android, tak i Android Enterprise.
+- Pokud chcete vytvořit profil MDM pro Android, vyberte jako typ profilu na portálu Knox možnost **Správce zařízení** . 
+- Pokud chcete vytvořit profil MDM pro Android Enterprise, vyberte jako typ profilu na portálu Knox možnost **vlastník zařízení** .  
 
 ### <a name="for-android"></a>Pro Android
 
+| Pole profilu MDM| Požadované? | Hodnoty | 
+|-------------------|-----------|-------| 
+|Profile Name (Název profilu)       | Ano       |Zadejte libovolný název profilu. |
+|Popis        | Ne        |Zadejte text popisující profil. |
+|Informace MDM     | Ano        |Vyberte **identifikátor URI serveru, který není pro moji MDM vyžadován**.| 
+|MDM Agent APK (APK Agent MDM)      | Ano       |https://aka.ms/intune_kme_deviceowner| 
+|Custom JSON (Vlastní JSON)        | Ano*        |{"com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "Zadejte řetězec tokenu registrace Intune"}. Naučte se, jak vytvořit token registrace pro [vyhrazená zařízení](android-kiosk-enroll.md) a [plně spravovaná zařízení](android-fully-managed-enroll.md). |
+|Skip Setup wizard (Přeskočit průvodce nastavením)  | Ne        |Tuto možnost vyberte, pokud chcete pro koncového uživatele přeskočit výzvy pro instalaci standardních zařízení.|
+|Allow End User to Cancel Enrollment (Povolit koncovému uživateli zrušit registraci) | Ne | Tuto možnost vyberte, pokud chcete uživatelům povolit, aby zrušili KME.|
+| Zásady ochrany osobních údajů, smlouvy EULA a podmínky služby | Ne | Nechte prázdné. |
+| Podrobnosti kontaktu podpory | Ano | Kliknutím na Upravit aktualizujte podrobnosti o kontaktu. |
+|Associate a Knox license with this profile (Přiřadit tomuto profilu licenci Knox) | Ne | Tuto možnost nechejte nezvolenou. Registrace do Intune pomocí KME nevyžaduje licenci Knox.|
+
+\* toto pole není vyžadováno k dokončení vytváření profilu na portálu Knox. Intune ale vyžaduje, aby toto pole bylo vyplněné, aby mohl profil úspěšně zaregistrovat zařízení v Intune.
+
+### <a name="for-android-enterprise"></a>Android Enterprise
+
 Podrobné pokyny najdete v pokynech k [vytváření profilů společnosti Samsung](https://docs.samsungknox.com/KME-Getting-Started/Content/create-profiles.htm) .
 
-| Pole profilu MDM| Požadováno? | Hodnoty |
+| Pole profilu MDM| Požadované? | Hodnoty |
 |-------------------|-----------|-------|
-|MDM Server URI (URI serveru MDM)     | Ne        |Nechte prázdné.|
 |Profile Name (Název profilu)       | Ano       |Zadejte libovolný název profilu.|
 |Popis        | Ne        |Zadejte text popisující profil.|
-|Vyberte si MDM | Ano | Vyberte jednu z MDMs. |
+|Vyberte si MDM | Ano | Vyberte Microsoft Intune. |
 |MDM Agent APK (APK Agent MDM)      | Ano       |https://aka.ms/intune_kme|
+|MDM Server URI (URI serveru MDM)     | Ne        |Nechte prázdné.|
 |Vlastní data JSON        | Ne        |Nechte prázdné.|
 |Duální zpráva | Ne | Nechte prázdné.|
 |Kód QR pro registraci | Ne | Můžete přidat kód QR pro zrychlení registrace.|
-|Systémové aplikace | Ano | Vyberte jednu z uvedených možností. |
-|Přidat právní smlouvu | Ne | Nechte prázdné.|
+|Systémové aplikace | Ano | Pokud chcete zajistit, aby všechny aplikace byly povolené a dostupné pro daný profil, vyberte možnost **opustit všechny systémové aplikace s povolenou** . Pokud tuto možnost nevyberete, zobrazí se v zásobníku aplikace zařízení jenom omezená sada systémových aplikací. Aplikace, jako je třeba e-mailová aplikace, zůstanou skryté. |
+|Zásady ochrany osobních údajů, smlouvy EULA a podmínky služby | Ne | Nechte prázdné.|
 |název společnosti, | Ano | Tento název se zobrazí při registraci zařízení. |
 
 ## <a name="add-devices"></a>Přidání zařízení
@@ -124,7 +128,7 @@ Potřebujete ještě další pomoc? Projděte si kompletní [uživatelskou pří
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
 
-- **Podpora vlastníka zařízení:** - **Podpora vlastníka zařízení:** Intune podporuje registraci vyhrazených a plně spravovaných zařízení pomocí portálu KME. Další režimy vlastníka zařízení s Androidem Enterprise se budou podporovat, jakmile budou dostupné v Intune.
+- **Podpora vlastníka zařízení:**  - **Podpora vlastníka zařízení:** Intune podporuje registraci vyhrazených a plně spravovaných zařízení pomocí portálu KME. Další režimy vlastníka zařízení s Androidem Enterprise se budou podporovat, jakmile budou dostupné v Intune.
 
 - **Nepodporují se pracovní profil:** KME je metoda registrace podnikového zařízení a zařízení zaregistrovaná v pracovním profilu Android, která zajišťují, že pracovní a osobní údaje jsou oddělené na osobních zařízeních. To znamená, že registrace zařízení do pracovního profilu pomocí KME není podporovaným scénářem v Intune.
 

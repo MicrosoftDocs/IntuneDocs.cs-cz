@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: adca40b558a75d2c080fe453218f232a37b21daa
-ms.sourcegitcommit: cd90650c339795d44702e9dcd0b9679a7b438bb2
+ms.openlocfilehash: a1eca1f8911e9c6aae3b3725cf15f04d954c5f48
+ms.sourcegitcommit: 6608dc70d01376e0cd90aa620a2fe01337f6a2f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77473761"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78260312"
 ---
-# <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>Automatická registrace zařízení s iOS/iPadOS pomocí Program registrace zařízení společnosti Apple
+# <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>Automatická registrace zařízení se systémem iOS/iPadOS pomocí Programu registrace zařízení společnosti Apple
 
 Můžete nastavit Intune pro registraci zařízení s iOS/iPadOS zakoupených prostřednictvím programu Apple [program registrace zařízení (DEP)](https://deploy.apple.com). DEP umožňuje registrovat velké počty zařízení, aniž byste je museli přitýkat. Zařízení, jako jsou iPhone, iPady a MacBooks, se dají dodávat přímo uživatelům. Když uživatel zapne zařízení, Pomocník s nastavením, který zahrnuje typické prostředí pro produkty Apple, běží s předem nakonfigurovaným nastavením a zařízení se zaregistruje do správy.
 
@@ -42,6 +42,8 @@ Pokud chcete povolit moderní ověřování během registrace, nahrajte aplikaci
 
 Pokud chcete povolit, aby se Portál společnosti automaticky aktualizovala a poskytovala aplikace Portál společnosti na zařízeních, která jsou už zaregistrovaná pomocí programu DEP, nasaďte aplikaci Portál společnosti přes Intune jako povinnou aplikaci VPP (Volume purchase program), která se použije v [zásadách konfigurace aplikace](../apps/app-configuration-policies-use-ios.md) .
 
+Poznámka: během automatizované registrace zařízení, když Portál společnosti běží v režimu jedné aplikace, se kliknutím na odkaz Další informace v důsledku režimu jedné aplikace zobrazí chybová zpráva. Po dokončení registrace můžete zobrazit další informace v CP, pokud už zařízení není v režimu jedné aplikace. 
+
 ## <a name="what-is-supervised-mode"></a>Co je režim Pod dohledem?
 
 Apple představil režim pod dohledem v iOS/iPadOS 5. Zařízení s iOS/iPadOS v režimu pod dohledem je možné spravovat s dalšími ovládacími prvky, jako je například blokování snímku obrazovky a blokování instalace aplikací z App Storu. To je zvlášť užitečné pro zařízení vlastněná firmou. Intune podporuje konfiguraci zařízení do režimu Pod dohledem v rámci programu registrace zařízení Apple (DEP).
@@ -56,7 +58,7 @@ Podpora zařízení DEP, která nejsou pod dohledem, se v iOS/iPadOS 11 nepouž�
 4. [Assign DEP profile to devices](#assign-an-enrollment-profile-to-devices)
 5. [Distribute devices to users](#end-user-experience-with-managed-devices)
 -->
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 - Zařízení zakoupená v [Programu registrace zařízení společnosti Apple](http://deploy.apple.com)
 - [Autorita pro správu mobilních zařízení (MDM)](../fundamentals/mdm-authority-set.md)
 - [Certifikát Apple MDM Push Certificate](apple-mdm-push-certificate-get.md)
@@ -108,7 +110,7 @@ K vytvoření tokenu použijete portál Apple Business Manager nebo Apple School
 
    Na portálu Apple přejděte do části **programy pro nasazení** &gt; **program registrace zařízení** &gt; **Zobrazit historii přiřazení** a zobrazte tak seznam zařízení a jejich přiřazení k serveru MDM.
 
-### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Krok 3. Uložte si Apple ID, které jste použili k vytvoření tohoto tokenu.
+### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Krok 3: Uložte si Apple ID, které jste použili k vytvoření tohoto tokenu.
 
 V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)zadejte Apple ID pro budoucí referenci.
 
@@ -144,7 +146,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
 5. V části **Přidružení uživatele** zvolte, jestli se zařízení s tímto profilem musí registrovat s přiřazeným uživatelem nebo bez něj.
     - **Zaregistrovat s přidružením uživatele** – tuto možnost vyberte u zařízení patřících uživatelům, kteří chtějí Portál společnosti používat pro služby, jako je instalace aplikací. Pokud používáte službu AD FS a profil registrace se **ověřuje pomocí portál společnosti místo pomocníka s nastavením** nastaven na **ne**, vyžaduje se [pravidlo WS-Trust 1,3 uživatelské_jméno/Smíšený Koncový bod](https://technet.microsoft.com/library/adfs2-help-endpoints) [Další informace](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint) .
 
-    - **Zaregistrovat bez přidružení uživatele** – Tuto možnost zvolte pro zařízení nespojená s jedním uživatelem. Tuto možnost použijte pro zařízení, která nemají přístup k místním uživatelským datům. Aplikace, jako je aplikace Portál společnosti, nefungují.
+    - **Zaregistrovat bez přidružení uživatele** – Tuto možnost zvolte pro zařízení nespojená s jedním uživatelem. Tuto možnost použijte pro zařízení, která nemají přístup k místním uživatelským datům. Aplikace, jako je Portál společnosti aplikace, nefungují.
 
 5. Pokud jste zvolili možnost **registrovat s přidružením uživatele**, můžete uživatelům povolit ověřování pomocí portál společnosti namísto pomocníka s nastavením Apple.
 

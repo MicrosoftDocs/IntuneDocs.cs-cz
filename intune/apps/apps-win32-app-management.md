@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 03/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dbefd797fead7113045ee7e7655b715a0b4961fd
-ms.sourcegitcommit: 32391f74241ee3289a76ccd5319fe700b800d427
+ms.openlocfilehash: 516d5148ac44d72aaacf1d670d2d4f0345823d49
+ms.sourcegitcommit: 6608dc70d01376e0cd90aa620a2fe01337f6a2f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77075820"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78260278"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatná verze Intune – Správa aplikací Win32
 
@@ -342,6 +342,11 @@ Koncový uživatel uvidí informační zprávy systému Windows pro požadované
 Následující obrázek upozorní koncového uživatele, že se na zařízení provádí změny aplikace.
 
 ![Snímek obrazovky oznamující uživateli, že probíhají změny aplikace](./media/apps-win32-app-management/apps-win32-app-09.png)    
+
+Kromě toho aplikace Portál společnosti zobrazuje další zprávy o stavu instalace aplikací koncovým uživatelům. Pro funkce závislosti Win32 platí následující podmínky:
+- Aplikaci se nepovedlo nainstalovat. Nevyhověly závislosti definované správcem.
+- Aplikace byla úspěšně nainstalována, ale vyžaduje restart.
+- Aplikace se právě instaluje, ale vyžaduje restart, aby bylo možné pokračovat.
 
 ## <a name="set-win32-app-availability-and-notifications"></a>Nastavení dostupnosti a oznámení aplikace Win32
 Můžete nakonfigurovat čas zahájení a konečný termín pro aplikaci Win32. V počátečním čase rozšíření pro správu Intune spustí stažení obsahu aplikace a uloží je do mezipaměti pro požadovaný záměr. Aplikace se nainstaluje v čase konečného termínu. V případě dostupných aplikací se čas spuštění určí při zobrazení aplikace v Portál společnosti a obsah se stáhne, když koncový uživatel požádá aplikaci z Portál společnosti. Navíc můžete povolit dobu odkladu pro restartování. 

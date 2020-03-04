@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/25/2019
+ms.date: 03/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a5c844377dcd69b6caf5ef9f72fcb8dbb4ef8bd0
-ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
+ms.openlocfilehash: a2b988af00ce1ab5b9fa4e664d09b383403bd002
+ms.sourcegitcommit: 6608dc70d01376e0cd90aa620a2fe01337f6a2f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77609312"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78260346"
 ---
 # <a name="use-device-encryption-with-intune"></a>Použití šifrování zařízení s Intune
 
@@ -125,6 +125,32 @@ Nakonfigurujte BitLocker při vytváření [profilu konfigurace zařízení](../
 5. Nakonfigurujte nastavení BitLockeru tak, aby vyhovovalo vašim obchodním potřebám, a pak vyberte **OK**.
 
 6. Dokončete konfiguraci dalšího nastavení a potom profil uložte.
+
+### <a name="silently-enable-bitlocker-on-devices"></a>Tiché zapnutí nástroje BitLocker na zařízeních
+
+Můžete nakonfigurovat zásady BitLockeru, které automaticky a tiše povolí BitLocker na zařízení. To znamená, že BitLocker umožňuje úspěšně povolit bez předvádění uživatelského rozhraní koncovému uživateli, a to i v případě, že tento uživatel není místním správcem na zařízení.
+
+**Požadavky na zařízení**:
+
+Zařízení musí splňovat následující podmínky, aby bylo možné tiše povolit nástroj BitLocker:
+
+- Zařízení musí používat Windows 10 verze 1809 nebo novější.
+- Zařízení musí být připojené ke službě Azure AD.  
+
+**Konfigurace zásad BitLockeru**:
+
+V zásadách BitLockeru musí být nakonfigurovaná následující dvě nastavení pro [základní nastavení BitLockeru](../protect/endpoint-protection-windows-10.md#bitlocker-base-settings) :
+
+- **Upozornění pro další** = *blok*šifrování disku.
+- **Povolit Standard uživatelům povolit šifrování během připojení k Azure AD** = *Povolit*
+
+Zásady BitLockeru **nesmí vyžadovat** použití spouštěcího kódu PIN nebo spouštěcího klíče. Když je *vyžadován*spouštěcí PIN kód TPM nebo spouštěcí klíč, BitLocker nemůže tiše povolit a vyžaduje interakci od koncového uživatele.  Tento požadavek splníte pomocí následujících tří [Nastavení jednotky s operačním systémem BitLocker](../protect/endpoint-protection-windows-10.md#bitlocker-os-drive-settings) ve stejné zásadě:
+
+- **Kompatibilní spouštěcí PIN kód TPM** nesmí být nastavený tak, aby *vyžadoval spouštěcí PIN kód s čipem TPM* .
+- **Kompatibilní spouštěcí klíč čipu TPM** nesmí nastavit, aby *vyžadoval spouštěcí klíč s čipem TPM* .
+- **Kompatibilní spouštěcí klíč TPM a PIN** nesmí být nastavené tak, aby *vyžadovaly spouštěcí klíč a PIN kód s čipem TPM* .
+
+
 
 ### <a name="manage-bitlocker"></a>Správa nástroje BitLocker
 

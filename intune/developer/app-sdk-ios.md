@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48d2e88fbe35729a5b8496d4ac1a4c444df3d89f
-ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
+ms.openlocfilehash: 024f92b35b3b2885f58a7b544144d328c34ab499
+ms.sourcegitcommit: a25f556aa9df4fcd9fdacccd12c9029bc6c5fe20
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77609142"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256471"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -264,12 +264,16 @@ SplashDuration | Počet | Minimální doba v sekundách, po kterou se při spuš
 BackgroundColor| String| Určuje barvu pozadí pro součásti uživatelského rozhraní sady Intune SDK. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.   | Volitelný parametr. Výchozím nastavením je barva pozadí systému, která se může lišit v různých verzích iOS a v závislosti na nastavení tmavého režimu iOS. |
 ForegroundColor| String| Určuje barvu popředí pro součásti uživatelského rozhraní sady Intune SDK, jako je barva textu. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.  | Volitelný parametr. Výchozím nastavením je barva popisku systému, která se může lišit v různých verzích iOS a v závislosti na nastavení tmavého režimu iOS. |
 AccentColor | String| Určuje barvu zvýraznění pro součásti uživatelského rozhraní sady Intune SDK, například barvu textu tlačítka a zvýraznění pole připnutí. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.| Volitelný parametr. Výchozí hodnota je systémová modrá. |
+SecondaryBackgroundColor| String| Určuje sekundární barvu pozadí pro obrazovky MTD. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.   | Volitelný parametr. Výchozí hodnota je bílá. |
+SecondaryForegroundColor| String| Určuje sekundární barvu popředí pro obrazovky MTD, jako je barva poznámky pod čarou. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.  | Volitelný parametr. Výchozí hodnota je šedá. |
 SupportsDarkMode| Logická hodnota | Určuje, jestli má barevné schéma uživatelského rozhraní Intune SDK sledovat nastavení režimu tmavého systému, pokud není nastavená žádná explicitní hodnota pro BackgroundColor/ForegroundColor/AccentColor. | Volitelný parametr. Výchozí hodnota je Ano. |
 MAMTelemetryDisabled| Logická hodnota| Určuje, jestli SDK nebude odesílat žádná telemetrická data do back-endu.| Volitelný parametr. Výchozí hodnota je NE. |
 MAMTelemetryUsePPE | Logická hodnota | Určuje, jestli sada MAM SDK bude odesílat data do back-endu telemetrie PPE. Použijte při testování aplikací se zásadami Intune, aby se testovací telemetrická data nesmíchala se zákaznickými. | Volitelný parametr. Výchozí hodnota je NE. |
 MaxFileProtectionLevel | String | Volitelný parametr. Povoluje aplikaci určit maximální úroveň, kterou `NSFileProtectionType` může podporovat. Tato hodnota přepíše zásady odeslané službou, pokud je příslušná úroveň vyšší než ta, kterou aplikace může podporovat. Možné hodnoty: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`.|
 OpenInActionExtension | Logická hodnota | Pro rozšíření akce Open in se nastavuje na ANO. Další informace najdete v části Sdílení dat přes UIActivityViewController. |
 WebViewHandledURLSchemes | Pole řetězců | Určuje schémata URL zpracovávaná komponentami WebView vaší aplikace. | Povinný parametr, pokud aplikace používá komponenty WebView, které zpracovávají adresy URL prostřednictvím odkazů nebo JavaScriptu. |
+DocumentBrowserFileCachePath | String | Pokud vaše aplikace používá [`UIDocumentBrowserViewController`](https://developer.apple.com/documentation/uikit/uidocumentbrowserviewcontroller?language=objc) k procházení souborů v různých poskytovatelích souborů, můžete tuto cestu nastavit relativně k domovskému adresáři v izolovaném prostoru aplikace, aby sada Intune SDK mohla do této složky vyřadit dešifrované spravované soubory. | Volitelný parametr. Výchozím nastavením je adresář `/Documents/`. |
+VerboseLoggingEnabled | Logická hodnota | Pokud je tato hodnota nastavená na Ano, Intune se přihlásí do režimu podrobného protokolování. | Volitelný parametr. Výchozí hodnota je ne. |
 
 ## <a name="receive-app-protection-policy"></a>Příjem zásad ochrany aplikací
 
@@ -464,6 +468,14 @@ IntuneMAMPolicyManager.h | Třída IntuneMAMPolicyManager zveřejňuje zásady I
 IntuneMAMPolicy.h | Třída IntuneMAMPolicy zveřejňuje některá nastavení zásad MAM, která se týkají aplikace. Tato nastavení zásad se zveřejňují, aby aplikace mohla přizpůsobit svoje uživatelské rozhraní. Většinu nastavení zásad vynucuje sada SDK, nikoli aplikace. Jediné nastavení, které by aplikace měla implementovat, je ovládací prvek Uložit jako. Tato třída zveřejňuje některá rozhraní API, která jsou nezbytná k implementaci ovládacího prvku Uložit jako. |
 IntuneMAMFileProtectionManager.h | Třída IntuneMAMFileProtectionManager zveřejňuje rozhraní API, pomocí kterých může aplikace explicitně zabezpečit soubory a adresáře na základě zadané identity. Tato identita může být spravovaná přes Intune nebo nespravovaná a sada SDK použije příslušné zásady MAM. Použití této třídy je volitelné. |
 IntuneMAMDataProtectionManager.h | Třída IntuneMAMDataProtectionManager zveřejňuje rozhraní API, pomocí kterých může aplikace zabezpečit datové vyrovnávací paměti na základě zadané identity. Tato identita může být spravovaná přes Intune nebo nespravovaná a sada SDK podle toho použije šifrování. |
+
+## <a name="implement-allowed-accounts"></a>Implementace povolených účtů
+
+Intune umožňuje správcům IT určit, které účty může uživatel přihlásit. Aplikace se můžou v sadě Intune App SDK zadat dotaz na zadaný seznam povolených účtů a pak zajistit, aby se do zařízení přihlásily jenom povolené účty.
+
+K dotazování na povolené účty by měla aplikace v `IntuneMAMEnrollmentManager`kontrolovat vlastnost `allowedAccounts`. Vlastnost `allowedAccounts` je buď pole obsahující povolené účty, nebo hodnotu Nil. Pokud má vlastnost hodnotu Nil, nebyly zadány žádné povolené účty.
+
+Aplikace mohou také reagovat na změny vlastnosti `allowedAccounts` tím, že budou pozorovat oznámení `IntuneMAMAllowedAccountsDidChangeNotification`. Oznámení se publikuje vždy, když se změní vlastnost `allowedAccounts` v hodnotě.
 
 ## <a name="implement-save-as-and-open-from-controls"></a>Implementace ovládacích prvků Uložit jako a otevřít z
 
@@ -729,6 +741,16 @@ Ve výchozím nastavení se všechny aplikace považují za aplikace s jedinou i
     Při selektivním vymazání aplikace volá sada SDK metodu `wipeDataForAccount` z `IntuneMAMPolicyDelegate`. Za odebrání zadaného uživatelského účtu a veškerých dat, která jsou s ním spojená, zodpovídá aplikace. SDK dokáže odebrat všechny soubory, které uživatel vlastní, a udělá to, pokud aplikace po zavolání `wipeDataForAccount` vrátí FALSE.
 
     Tato metoda se volá z vlákna na pozadí. Aplikace by neměly vracet hodnotu, dokud se neodeberou všechna data uživatele (s výjimkou souborů, u kterých aplikace vrací hodnotu FALSE).
+
+## <a name="siri-intents"></a>Siri záměry
+Pokud se vaše aplikace integruje s Siri záměry, nezapomeňte si přečíst poznámky k `areSiriIntentsAllowed` v `IntuneMAMPolicy.h`, kde najdete pokyny k podpoře tohoto scénáře. 
+    
+## <a name="notifications"></a>Oznámení
+Pokud vaše aplikace obdrží oznámení, přečtěte si poznámky k `notificationPolicy` v `IntuneMAMPolicy.h`, kde najdete pokyny k podpoře tohoto scénáře.  Doporučujeme, aby se aplikace registrovaly na `IntuneMAMPolicyDidChangeNotification` popsané v `IntuneMAMPolicyManager.h`a komunikovali tuto hodnotu do jejich `UNNotificationServiceExtension` prostřednictvím řetězce klíčů.
+## <a name="displaying-web-content-within-application"></a>Zobrazení webového obsahu v rámci aplikace
+Pokud má vaše aplikace možnost zobrazovat weby v rámci webového zobrazení a zobrazované webové stránky mají možnost přejít na libovolné weby, aplikace je responisble pro nastavení aktuální identity tak, aby se spravovaná data nedala prostřednictvím webu. zobrazení. Příklady tohoto příkladu jsou webové stránky navrhnout funkci nebo zpětná vazba, které mají buď přímé nebo nepřímé odkazy na vyhledávací web.
+Aplikace s více identitami by měly volat IntuneMAMPolicyManager setUIPolicyIdentity před zobrazením webového zobrazení v prázdném řetězci. Po ukončení webového zobrazení by aplikace měla zavolat setUIPolicyIdentity na předání v aktuální identitě.
+Aplikace s jednou identitou by měly volat IntuneMAMPolicyManager setCurrentThreadIdentity před zobrazením webového zobrazení v prázdném řetězci. Po ukončení webového zobrazení by aplikace měla volat setCurrentThreadIdentity předání v Nil.
 
 ## <a name="ios-best-practices"></a>Doporučené postupy pro iOS
 

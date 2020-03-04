@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8782d18b1a16ffc9bc7e48b19a1b70fdfbe71b8
-ms.sourcegitcommit: fab685b22a010fe231b27a0c5eda34a6f22f4c8d
+ms.openlocfilehash: 07463f3bcac7d657659ece7fed2c40db53ee2122
+ms.sourcegitcommit: a25f556aa9df4fcd9fdacccd12c9029bc6c5fe20
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "78216138"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256369"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Jak spravovat hromadně zakoupené aplikace z Microsoft Store pro firmy pomocí Microsoft Intune
 
@@ -51,7 +51,8 @@ Než začnete synchronizovat a přiřazovat aplikace z Microsoft Storu pro firmy
 - Aby bylo možné tuto funkci používat, musí být zařízení připojená k Active Directory Domain Services, připojenému k Azure AD nebo na pracovišti.
 - Zaregistrovaná zařízení musí používat Windows 10 verze 1511 nebo novější.
 
-Kromě toho související sady a licencované aplikace Offline, které se synchronizují z Microsoft Storu pro firmy, se teď budou konsolidovat do jediného záznamu aplikace v uživatelském rozhraní. Všechny podrobnosti o nasazení z jednotlivých balíčků se budou migrovat do tohoto jediného záznamu. Pokud chcete zobrazit související sady Azure Portal, v podokně **aplikace** vyberte **licence aplikací** .
+> [!NOTE]
+Pokud zakážete úložiště na spravovaných zařízeních (ručně prostřednictvím zásad nebo Zásady skupiny), instalace licencovaných aplikací online se nezdaří.
 
 ## <a name="associate-your-microsoft-store-for-business-account-with-intune"></a>Přidružení účtu v Microsoft Storu pro firmy k Intune
 Než povolíte synchronizaci v konzole služby Intune, musíte svůj účet ve Storu nakonfigurovat tak, aby používal Intune jako nástroj pro správu:

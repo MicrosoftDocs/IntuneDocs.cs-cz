@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: abf23bff0d8889b57ab05c55b7e1464d0a9d2436
-ms.sourcegitcommit: 32391f74241ee3289a76ccd5319fe700b800d427
+ms.openlocfilehash: a46532467f8de7caf8cc88fe60e7a5cbc10ba147
+ms.sourcegitcommit: a25f556aa9df4fcd9fdacccd12c9029bc6c5fe20
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77075786"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256522"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Nastavení standardních hodnot zabezpečení Windows MDM pro Intune
 
@@ -364,7 +364,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
   Pokud je možnost *vyžadovat heslo* nastavená na *hodnotu Ano*, jsou k dispozici následující nastavení.
 
   - **Minimální počet znakových sad pro heslo**:  
-    Počet komplexních typů prvků (velká a malá písmena, číslice a interpunkční znaménka) vyžadované pro silný kód PIN nebo heslo. PIN kód vynutil následující chování pro stolní a mobilní zařízení: 1-číslice pouze 2 – číslice a malá písmena jsou vyžadována 3 číslicemi, malými písmeny a velkými písmeny. Nepodporováno v účtech Microsoft Desktop a doménových účtů. vyžadují se 4 číslice, malá písmena, Velká písmena a speciální znaky. Nepodporuje se v desktopu. Výchozí hodnota je 1.  
+    Počet komplexních typů prvků (velká a malá písmena, číslice a interpunkční znaménka) vyžadované pro silný kód PIN nebo heslo. PIN kód vynutil následující chování pro stolní a mobilní zařízení: 1-číslice pouze 2 – číslice a malá písmena jsou vyžadována 3 číslicemi, malými písmeny a velkými písmeny. Nepodporováno v účtech Microsoft Desktop a doménových účtů. vyžadují se 4 číslice, malá písmena, Velká písmena a speciální znaky. Nepodporuje se v desktopu.  
     [Další informace](https://go.microsoft.com/fwlink/?linkid=2067055)
 
     **Výchozí hodnota**: 3

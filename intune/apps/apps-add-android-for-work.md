@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4b3bd06bad6c31c2d0fb4c31a7ad605af96be86
-ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
+ms.openlocfilehash: 126ea5a1798252f29e988553edfea462eff2fd7e
+ms.sourcegitcommit: a25f556aa9df4fcd9fdacccd12c9029bc6c5fe20
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77609199"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256454"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Přidání spravovaných aplikací Google Play do zařízení s Androidem Enterprise pomocí Intune
 
@@ -122,7 +122,7 @@ Existují dva způsoby, jak přidat obchodní aplikace do spravovaných Google P
 5. V okně Google Play vyberte **soukromé aplikace** (vedle ikony *zámku* ). 
 6. Kliknutím na tlačítko **"+"** v pravém dolním rohu přidejte novou aplikaci.
 7. Přidejte **název** aplikace a klikněte na **nahrát APK** přidat balíček aplikace APK.
-8. Klikněte na tlačítko **Vytvořit**.
+8. Klikněte na **Vytvořit**.
 9. Pokud jste dokončili přidávání aplikací, zavřete podokno spravované Google Play.
 10. V podokně **aplikace aplikace** klikněte na **synchronizovat** a synchronizujte se se službou Managed Google Play Service. 
 
@@ -156,9 +156,6 @@ Spravované Google Play webové odkazy se můžou instalovat a spravovat stejně
 
 Webové odkazy se otevřou pomocí Microsoft Edge nebo jakékoli jiné aplikace prohlížeče, kterou si zvolíte k nasazení. Nezapomeňte nasadit aspoň jednu aplikaci v prohlížeči do zařízení, aby se webové odkazy daly správně otevřít. Všechny možnosti **zobrazení** dostupné pro webové odkazy (celá obrazovka, samostatné a minimální uživatelské rozhraní) ale budou fungovat jenom s prohlížečem Chrome. 
 
-> [!IMPORTANT]
-> Od publikování tohoto dokumentu máme známou chybu Google, která brání tomu, aby se webové odkazy otevíraly v zařízeních s jinými prohlížeči než Chrome. Společnost Google se zavázala tuto chybu opravit.  Toto oznámení se odebere, když Microsoft potvrdí, že vaše oprava zveřejnila Google.
-
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **aplikace** > **všechny aplikace** > **Přidat**.
 3. V podokně **Vybrat typ aplikace** v části dostupné typy **aplikací pro Store** vyberte **Managed Google Play App**.
@@ -166,7 +163,7 @@ Webové odkazy se otevřou pomocí Microsoft Edge nebo jakékoli jiné aplikace 
 5. V okně Google Play vyberte **Web Apps** (vedle ikony *zeměkoule* ).
 6. Kliknutím na tlačítko **"+"** v pravém dolním rohu přidejte novou aplikaci.
 7. Přidejte **název**aplikace, **adresu URL**webové aplikace, vyberte, jak se má aplikace zobrazit, a vyberte ikonu aplikace.
-8. Klikněte na tlačítko **Vytvořit**.
+8. Klikněte na **Vytvořit**.
 9. Pokud jste dokončili přidávání aplikací, zavřete podokno spravované Google Play.
 10. V podokně **aplikace aplikace** klikněte na **synchronizovat** a synchronizujte se se službou Managed Google Play Service. 
 

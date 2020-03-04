@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60244bb268f7becadc427c397d7c2d1562bcf6b5
-ms.sourcegitcommit: ea81ad5f33f18d9fe43254e27e02de5eaef74a05
+ms.openlocfilehash: 163f5dd246fb17e7d67a8baffbae9926f2f4bc79
+ms.sourcegitcommit: a25f556aa9df4fcd9fdacccd12c9029bc6c5fe20
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75722602"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256437"
 ---
 # <a name="android-enterprise-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení Androidu Enterprise k označení zařízení jako kompatibilních nebo nekompatibilních s Intune
 
@@ -84,10 +84,7 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 
 - **Vyžadovat heslo k odemknutí mobilních zařízení**: 
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
-  - **Vyžadovat** – uživatelé musí zadat heslo, aby mohli získat přístup ke svému zařízení. 
-
-  Toto nastavení platí na úrovni zařízení. Pokud potřebujete vyžadovat heslo na úrovni pracovního profilu, použijte zásady konfigurace. Viz [nastavení konfigurace zařízení s Androidem Enterprise](../configuration/device-restrictions-android-for-work.md).
-
+  - **Vyžadovat** – uživatelé musí zadat heslo, aby mohli získat přístup ke svému zařízení.
   - **Požadovaný typ hesla:** Zvolte, jestli se má heslo obsahovat jenom číslice nebo kombinaci číslic s jinými znaky. Možnosti:
     - **Výchozí nastavení zařízení** – vyhodnotit dodržování předpisů heslem, nezapomeňte vybrat jinou sílu hesla než **výchozí zařízení**.  
     - **Vyžaduje se heslo, žádná omezení.**
@@ -123,7 +120,7 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 
     *Ve výchozím nastavení není nakonfigurována žádná verze*.
 
-#### <a name="encryption"></a>Encryption
+#### <a name="encryption"></a>Šifrování
 
 - **Šifrování datového úložiště na zařízení**: 
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
@@ -203,7 +200,7 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
   
   - **Počet předchozích hesel, která se nesmí použít znovu**: Zadejte počet dřívějších hesel, která se nesmí znovu použít. Toto nastavení použijte, pokud chcete uživateli zabránit ve vytváření hesel, která používal dříve.
 
-#### <a name="encryption"></a>Encryption
+#### <a name="encryption"></a>Šifrování
 
 - **Šifrování datového úložiště na zařízení**: 
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.

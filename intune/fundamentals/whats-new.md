@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/24/2020
+ms.date: 03/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af8b46605d099a920ee512bce3ba94708b4a9eac
-ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
+ms.openlocfilehash: 7148db8f3fbfce4862afd12cabf7729645d737bf
+ms.sourcegitcommit: 6608dc70d01376e0cd90aa620a2fe01337f6a2f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77781168"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78260193"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového ve Microsoft Intune
 
@@ -53,6 +53,26 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 ### Monitor and troubleshoot
 ### Role-based access control
 -->  
+
+<!-- ########################## -->
+## <a name="week-of-march-2-2020"></a>Týden od 2. března 2020
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Správa zařízení
+
+### <a name="bulk-remote-actions--4576882--"></a>Hromadné vzdálené akce<!--4576882-->
+Nyní můžete vydávat hromadné příkazy pro následující vzdálené akce: restartovat, přejmenovat, autopilot resetovat, synchronizovat, vymazat a odstranit. Pokud chcete zobrazit nové hromadné akce, přejděte do [centra pro správu Microsoft Endpoint manageru](https://go.microsoft.com/fwlink/?linkid=2109431) > **zařízení** > **všechna zařízení** > **hromadných akcí**.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Správa aplikací
+
+#### <a name="company-portal-app-installation-status-messages-for-win32-apps----2514416---"></a>Portál společnosti zprávy o stavu instalace aplikací pro aplikace Win32 <!-- 2514416 -->
+Aplikace Portál společnosti zobrazuje koncovým uživatelům další zprávy o stavu instalace aplikace. Pro nové funkce závislosti Win32 platí následující podmínky:
+- Aplikaci se nepovedlo nainstalovat. Nevyhověly závislosti definované správcem.
+- Aplikace byla úspěšně nainstalována, ale vyžaduje restart.
+- Aplikace se právě instaluje, ale vyžaduje restart, aby bylo možné pokračovat.
+
+Další informace najdete v tématu [Správa aplikací Win32](~/apps/apps-win32-app-management.md).
 
 <!-- ########################## -->
 ## <a name="week-of-february-24-2020"></a>Týden od 24. února 2020
@@ -602,7 +622,7 @@ Instance Intune, které jsou hostované na *Microsoft Azure Government* , teď m
 ## <a name="whats-new-archive"></a>Archiv co je nového
 V předchozích měsících se podívejte do [archivu co je nového](whats-new-archive.md).
 
-## <a name="notices"></a>Sdělení
+## <a name="notices"></a>Oznámení
 
 [!INCLUDE [Intune notices](../includes/intune-notices.md)]
 

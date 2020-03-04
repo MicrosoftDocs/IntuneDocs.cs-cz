@@ -5,24 +5,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 03/03/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
-ms.reviewer: karthig
+ms.reviewer: mattsha
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e2909e7ad1ced9483a6cec58f1f3009f56946f5f
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 467e347a84cef1fb7ac302da5a4264f23b4be5a2
+ms.sourcegitcommit: 6608dc70d01376e0cd90aa620a2fe01337f6a2f1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74058432"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78260329"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Nastavení Windows 10 (a novější) pro ochranu zařízení pomocí Intune
 
@@ -54,7 +54,7 @@ Ochrana Application Guard je dostupná jenom pro zařízení s Windows 10 (64bit
    Zprostředkovatel kryptografických služeb Application Guard: [Nastavení/ClipboardSettings](https://go.microsoft.com/fwlink/?linkid=872351)  
 
   Vyberte, které akce kopírování a vkládání jsou povolené mezi místním počítačem a virtuálním prohlížečem Application Guard.  
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Povolí kopírování a vkládání jenom z počítačů do prohlížeče.**  
   - **Povoluje kopírování a vkládání jenom z prohlížeče na počítač.**  
   - **Povolí kopírování a vkládání mezi počítačem a prohlížečem.**  
@@ -66,9 +66,9 @@ Ochrana Application Guard je dostupná jenom pro zařízení s Windows 10 (64bit
   Zprostředkovatel kryptografických služeb Application Guard: [Nastavení/ClipboardFileType](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardfiletype)  
 
   Vyberte povolený obsah schránky.  
-  - **Není nakonfigurováno**  
-  - **text**  
-  - **Obrázky**  
+  - **Nenakonfigurované**  
+  - **Textové**  
+  - **Fotografií**  
   - **Text a obrázky**  
 
 - **Externí obsah na podnikových webech**  
@@ -92,7 +92,7 @@ Ochrana Application Guard je dostupná jenom pro zařízení s Windows 10 (64bit
     - Místní tiskárny
     - Síťové tiskárny  
 
-- **Shromažďování protokolů**  
+- **Shromažďovat protokoly**  
   **Výchozí**: Nenakonfigurováno  
   Zprostředkovatel kryptografických služeb Application Guard: [audit/AuditApplicationGuard](https://go.microsoft.com/fwlink/?linkid=872418)  
 
@@ -179,7 +179,7 @@ Tato nastavení platí pro všechny typy sítě.
   CSP brány firewall: [MdmStore/Global/EnablePacketQueue](https://go.microsoft.com/fwlink/?linkid=872551)  
 
   Určete, jak je povolené škálování softwaru na straně příjmu pro šifrované přijímání a prostý text před scénářem brány IPsec pro tunelové připojení. Toto nastavení potvrdí, že se zachová pořadí paketů. Vaše možnosti jsou:  
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Zakázat všechny služby Řízení front paketů**  
   - **Zařadit pouze příchozí šifrované pakety do fronty**  
   - **Queue Packets po dešifrování se provede jenom pro předávání.**  
@@ -204,7 +204,7 @@ Následující nastavení jsou uvedena v tomto článku v jednom okamžiku, ale 
 - **Neviditelný režim**  
   **Výchozí**: Nenakonfigurováno  
   CSP brány firewall: [DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)  
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Blokování** – brána firewall je zablokovaná pro provoz v režimu utajení. Blokování neviditelného režimu vám umožňuje zablokovat také **výjimku zabezpečených paketů protokolu IPsec**.  
   - **Povolení** – brána firewall funguje v režimu utajení, což pomáhá zabránit odpovědím na požadavky na zjišťování.  
 
@@ -214,14 +214,14 @@ Následující nastavení jsou uvedena v tomto článku v jednom okamžiku, ale 
 
   Tato možnost je ignorována, pokud je *režim utajení* nastaven na možnost *blokovat*.  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - Zabezpečené pakety protokolu IPSec nezískají výjimky.  
   - **Povolit** – povolit výjimky. Režim utajení brány firewall nesmí bránit hostitelskému počítači v reakci na nevyžádaný síťový provoz zabezpečený protokolem IPsec.  
 
 - **Stíněné**  
   **Výchozí**: Nenakonfigurováno  
   Firewall CSP: [stíněný](https://go.microsoft.com/fwlink/?linkid=872561)  
-    - **Není nakonfigurováno**  
+    - **Nenakonfigurované**  
     - **Blokovat** – když je zapnutá brána firewall v programu Microsoft Defender a toto nastavení je nastavené na *blokovat*, veškerý příchozí provoz se zablokuje bez ohledu na nastavení dalších zásad. 
     - **Povolit** – Pokud je nastavené na *Povolit*, toto nastavení je vypnuté – a na základě dalších nastavení zásad je povolený příchozí provoz.
 
@@ -230,7 +230,7 @@ Následující nastavení jsou uvedena v tomto článku v jednom okamžiku, ale 
   CSP brány firewall: [DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)  
   
   Jednosměrové odpovědi na zprávy vícesměrového nebo všesměrového vysílání obvykle nebudete chtít přijímat. Tyto odpovědi mohou označovat útok na útok DoS (Denial of Service) nebo útočník, který se pokouší zjistit známý živý počítač.  
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Blokování** – zakažte odezvy jednosměrového vysílání na vysílání vícesměrového vysílání.  
   - **Povolení** – povolí jednosměrové odpovědi na vysílání vícesměrového vysílání.  
 
@@ -238,7 +238,7 @@ Následující nastavení jsou uvedena v tomto článku v jednom okamžiku, ale 
   **Výchozí**: Nenakonfigurováno  
   CSP brány firewall: [DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=8725630)  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Blok** – skryje oznámení, která se použijí, když je aplikace blokovaná pro naslouchání na portu.  
   - **Povolit** – povolí toto nastavení a může uživatelům zobrazovat oznámení, když je aplikace blokovaná na portu blokována.  
 
@@ -248,7 +248,7 @@ Následující nastavení jsou uvedena v tomto článku v jednom okamžiku, ale 
   
   Nakonfigurujte výchozí akci, kterou firewall provede u odchozích připojení. Toto nastavení se použije pro Windows verze 1809 a vyšší.  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Block** – výchozí akce brány firewall neběží na odchozím provozu, pokud není explicitně zadáte blokování.  
   - **Povoleno** – výchozí akce brány firewall jsou spouštěny u odchozích připojení.  
 
@@ -256,7 +256,7 @@ Následující nastavení jsou uvedena v tomto článku v jednom okamžiku, ale 
   **Výchozí**: Nenakonfigurováno  
   CSP brány firewall: [DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)  
  
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Blokovat** – výchozí akce brány firewall se nespouští u příchozích připojení.  
   - **Povolit** – výchozí akce brány firewall se spouštějí u příchozích připojení.  
 
@@ -266,7 +266,7 @@ Následující nastavení jsou uvedena v tomto článku v jednom okamžiku, ale 
   **Výchozí**: Nenakonfigurováno  
   CSP brány firewall: [AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Blokovat** – pravidla brány firewall autorizovaných aplikací v místním úložišti se ignorují a neuplatňují.  
   - **Povolit** -
    zvolit **Povolit** použije pravidla brány firewall v místním úložišti, aby byla rozpoznaná a vynutila.  
@@ -275,7 +275,7 @@ Následující nastavení jsou uvedena v tomto článku v jednom okamžiku, ale 
   **Výchozí**: Nenakonfigurováno  
   CSP brány firewall: [GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Blok** – globální pravidla brány firewall portu v místním úložišti se ignorují a neuplatňují.  
   - **Povolení** – použít a vyhovět pravidla firewallu globálního portu v místním úložišti  
 
@@ -283,7 +283,7 @@ Následující nastavení jsou uvedena v tomto článku v jednom okamžiku, ale 
   **Výchozí**: Nenakonfigurováno  
   CSP brány firewall: [AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Blokování** – pravidla firewallu z místního úložiště se ignorují a neuplatňují.
   - **Povolí** rozpoznání a vykonání pravidel brány firewall v místním úložišti.  
 
@@ -291,7 +291,7 @@ Následující nastavení jsou uvedena v tomto článku v jednom okamžiku, ale 
   **Výchozí**: Nenakonfigurováno  
   CSP brány firewall: [AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Blokovat** – pravidla zabezpečení připojení z místního úložiště se ignorují a neuplatňují bez ohledu na verzi schématu a verzi pravidla zabezpečení připojení.  
   - **Povolí** – použije pravidla zabezpečení připojení z místního úložiště bez ohledu na verze schématu nebo pravidla zabezpečení připojení.  
 
@@ -319,7 +319,7 @@ Vlastní pravidla brány firewall podporují tyto možnosti:
   
   Určete, jestli se toto pravidlo vztahuje na **příchozí**nebo **odchozí** provoz. Pokud je nastavená jako **nenakonfigurovaná**, pravidlo se automaticky použije pro odchozí přenosy.  
 
-- **Action**  
+- **Akce**  
   **Výchozí**: Nenakonfigurováno  
   Firewall CSP: [FirewallRules/*FirewallRuleName*za akci](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#action)a [FirewallRules/*FirewallRuleName*/Action/Type](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#type)  
 
@@ -449,7 +449,7 @@ V zařízení musí být nainstalovaný Microsoft Edge.
   - **Vyžadovat** – vyzvat uživatele k povolení šifrování zařízení V závislosti na edici Windows a konfiguraci systému se může od uživatelů vyžadovat:  
     - Potvrďte, že šifrování od jiného zprostředkovatele není povolené.  
     - Je nutné vypnout nástroj BitLocker Drive Encryption a pak znovu zapnout nástroj BitLocker.  
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   
   Pokud je zapnuto šifrování Windows a současně je aktivní jiná metoda šifrování, mohlo by to narušit stabilitu zařízení.  
 
@@ -472,6 +472,9 @@ Základní nastavení jsou univerzální nastavení BitLockeru pro všechny typy
   - **Blokovat** – zakáže upozornění, pokud je na zařízení jiná služba šifrování disku.  
   - **Nenakonfigurováno** – povolí zobrazení upozornění pro další šifrování disku.  
 
+  > [!TIP]  
+  > Chcete-li nainstalovat nástroj BitLocker automaticky a tiše na zařízení, které je připojené k Azure AD, a spustí systém Windows 1809 nebo novější, musí být toto nastavení nastaveno na *blokovat*. Další informace najdete v tématu [tiché zapnutí nástroje BitLocker na zařízeních](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
+
   Když se nastaví *blokování*, můžete nakonfigurovat následující nastavení:  
 
   - **Povolit Standard uživatelům povolit šifrování během připojení ke službě Azure AD**  
@@ -481,6 +484,9 @@ Základní nastavení jsou univerzální nastavení BitLockeru pro všechny typy
 
      - **Povolit** – standardní uživatelé (bez správců) můžou povolit šifrování BitLockeru, když se přihlásí.  
      - **Nenakonfigurovaní** jenom správci můžou na zařízení povolit šifrování BitLockeru.  
+
+  > [!TIP]  
+  > K automatickému a tiché instalaci nástroje BitLocker na zařízení, které je připojené k Azure AD, se používá systém Windows 1809 nebo novější, musí být toto nastavení nastavené na *Povolit*. Další informace najdete v tématu [tiché zapnutí nástroje BitLocker na zařízeních](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
 
 - **Konfigurace metod šifrování**  
   **Výchozí**: Nenakonfigurováno  
@@ -555,6 +561,9 @@ Tato nastavení platí konkrétně pro datové jednotky s operačním systémem.
     - **Nepovolit spouštěcí PIN kód s čipem TPM**  
     - **Vyžadovat spouštěcí PIN kód s čipem TPM**
 
+    > [!TIP]
+    > K automatickému a tiché instalaci nástroje BitLocker na zařízení, které je připojené k Azure AD, se používá systém Windows 1809 nebo novější, ale toto nastavení nesmí být nastavené tak, aby *vyžadovalo spouštěcí PIN kód s čipem TPM*. Další informace najdete v tématu [tiché zapnutí nástroje BitLocker na zařízeních](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
+
   - **Kompatibilní spouštěcí klíč TPM**  
     **Výchozí**: povolení spouštěcího klíče s čipem TPM  
 
@@ -564,6 +573,9 @@ Tato nastavení platí konkrétně pro datové jednotky s operačním systémem.
     - **Nepovolit spouštěcí klíč s čipem TPM**  
     - **Vyžadovat spouštěcí klíč s čipem TPM**  
 
+    > [!TIP]
+    > K automatickému a tiché instalaci nástroje BitLocker na zařízení, které je připojené k Azure AD, se používá systém Windows 1809 nebo novější, ale toto nastavení nesmí být nastavené tak, aby *vyžadovalo spouštěcí klíč s čipem TPM*. Další informace najdete v tématu [tiché zapnutí nástroje BitLocker na zařízeních](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
+
   - **Kompatibilní spouštěcí klíč a PIN kód TPM**  
     **Výchozí**: povolení spouštěcího klíče a PIN kódu pomocí TPM  
 
@@ -571,6 +583,9 @@ Tato nastavení platí konkrétně pro datové jednotky s operačním systémem.
     - **Povolení spouštěcího klíče a kódu PIN pomocí TPM**  
     - **Nepovolit spouštěcí klíč a PIN kód s čipem TPM**  
     - **Vyžadovat spouštěcí klíč a PIN kód s čipem TPM**   
+
+    > [!TIP]  
+    > K automatickému a tiché instalaci nástroje BitLocker na zařízení, které je připojené k Azure AD, se používá systém Windows 1809 nebo novější, ale toto nastavení nesmí být nastavené tak, aby *vyžadovalo spouštěcí klíč a PIN kód s čipem TPM*. Další informace najdete v tématu [tiché zapnutí nástroje BitLocker na zařízeních](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
 
 - **Minimální délka PIN kódu**  
     **Výchozí**: Nenakonfigurováno  
@@ -642,7 +657,7 @@ Tato nastavení platí konkrétně pro datové jednotky s operačním systémem.
     
     Toto nastavení inicializuje otočení hesla pro obnovení na základě klienta po obnovení jednotky operačního systému (buď pomocí programu Bootmgr nebo WinRE).  
 
-    - Nenakonfigurováno  
+    - Není nakonfigurováno  
     - Zakázané střídání klíčů  
     - Rotace klíčů povolená pro dedivizi připojenou ke službě Azure AD  
     - Zapnuté střídání klíčů pro Azure AD a zařízení připojená k hybridnímu připojení  
@@ -739,7 +754,7 @@ Tato nastavení platí konkrétně pro pevné datové jednotky.
     
     Toto nastavení inicializuje otočení hesla pro obnovení na základě klienta po obnovení jednotky operačního systému (buď pomocí programu Bootmgr nebo WinRE).  
 
-    - Nenakonfigurováno  
+    - Není nakonfigurováno  
     - Zakázané střídání klíčů  
     - Rotace klíčů povolená pro dedivizi připojenou ke službě Azure AD  
     - Zapnuté střídání klíčů pro Azure AD a zařízení připojená k hybridnímu připojení  
@@ -787,7 +802,7 @@ Pravidla pro omezení možností útoku zabraňují malwaru chování často pou
 
   Ochrana před akcemi a aplikacemi, které se obvykle používají k navýšení malwaru pro napadení malwarem.  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Povolit** – příznak pro krádeže přihlašovacích údajů ze subsystému místního úřadu zabezpečení systému Windows (Lsass. exe).  
   - **Jenom audit**  
 
@@ -795,7 +810,7 @@ Pravidla pro omezení možností útoku zabraňují malwaru chování často pou
   **Výchozí**: Nenakonfigurováno  
   Pravidlo: [zablokuje Adobe Reader z vytváření podřízených procesů](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-adobe-reader-from-creating-child-processes) .  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Enable** – zablokuje podřízené procesy vytvořené z aplikace Adobe Reader.  
   - **Jenom audit**  
 
@@ -807,7 +822,7 @@ Aplikacím Office zablokujte provádění následujících akcí:
   **Výchozí**: Nenakonfigurováno  
   Pravidlo: [blokovat aplikacím Office vkládání kódu do jiných procesů](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Blok** – zablokuje aplikacím Office vkládání do jiných procesů.  
   - **Jenom audit**  
 
@@ -815,7 +830,7 @@ Aplikacím Office zablokujte provádění následujících akcí:
   **Výchozí**: Nenakonfigurováno  
   Pravidlo: [blokovat aplikacím Office vytváření spustitelného obsahu](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Blok** – zablokuje aplikacím Office a makrům vytváření spustitelného obsahu.  
   - **Jenom audit**  
 
@@ -823,7 +838,7 @@ Aplikacím Office zablokujte provádění následujících akcí:
   **Výchozí**: Nenakonfigurováno  
   Pravidlo: [blokovat všechny aplikace Office z vytváření podřízených procesů](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Blok** – zablokuje aplikacím Office spouštění podřízených procesů.  
   - **Jenom audit**  
   
@@ -831,7 +846,7 @@ Aplikacím Office zablokujte provádění následujících akcí:
   **Výchozí**: Nenakonfigurováno  
   Pravidlo: [blokování volání Win32 API v makrech Office](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Blok** – zablokuje importy Win32 z kódu makra v Office.  
   - **Jenom audit**  
   
@@ -839,7 +854,7 @@ Aplikacím Office zablokujte provádění následujících akcí:
   **Výchozí**: Nenakonfigurováno  
   Pravidlo: [Blokovat aplikaci Office Communications z vytváření podřízených procesů](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-communication-application-from-creating-child-processes)  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Enable** – zablokuje vytváření podřízeného procesu z aplikací Office Communications.  
   - **Jenom audit**  
 
@@ -851,7 +866,7 @@ Z důvodu ochrany před hrozbami od skriptů zablokujte tyto akce:
   **Výchozí**: Nenakonfigurováno  
   Pravidlo: [zablokuje spuštění potenciálně zablokovaných skriptů](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts) .    
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Blok** – zablokuje všechny zakódovaná kód JS, VBS, PS nebo makra.  
   - **Jenom audit**  
 
@@ -859,7 +874,7 @@ Z důvodu ochrany před hrozbami od skriptů zablokujte tyto akce:
   **Výchozí**: Nenakonfigurováno  
   Pravidlo: [zablokovat jazyk JavaScript nebo VBScript pro spuštění staženého spustitelného obsahu](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Blok** -Block js/vbs ze spouštění datové části stažené z Internetu  
   - **Jenom audit**  
 
@@ -867,7 +882,7 @@ Z důvodu ochrany před hrozbami od skriptů zablokujte tyto akce:
   **Výchozí**: Nenakonfigurováno  
   Pravidlo: [blokování vytváření procesů, které pocházejí z příkazů PsExec a WMI](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands)  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Blokové** vytváření procesů, které pocházejí z příkazů PsExec a WMI.  
   
   - **Jenom audit**  
@@ -876,7 +891,7 @@ Z důvodu ochrany před hrozbami od skriptů zablokujte tyto akce:
   **Výchozí**: Nenakonfigurováno  
   Pravidlo: [blokuje nedůvěryhodné a nepodepsané procesy, které se spouštějí z USB](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb) .    
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Blokuje** nedůvěryhodné a nepodepsané procesy, které se SPOUŠTĚJÍ z USB.  
   - **Jenom audit**  
   
@@ -884,7 +899,7 @@ Z důvodu ochrany před hrozbami od skriptů zablokujte tyto akce:
   **Výchozí**: Nenakonfigurováno  
   Pravidlo: [zablokovat spouštění spustitelných souborů, pokud nesplňují kritéria prevalence, stáří nebo seznamu důvěryhodných](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion)    
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Blok** – zablokuje spouštění spustitelných souborů, pokud nesplňují kritéria prevalence, stáří nebo seznamu důvěryhodných souborů.  
   - **Jenom audit**  
 
@@ -896,7 +911,7 @@ Z důvodu ochrany před e-mailovými hrozbami zablokujte tuto akci:
   **Výchozí**: Nenakonfigurováno  
   Pravidlo: [blokovat spustitelný obsah z e-mailového klienta a webové pošty](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Blok** -blokovat spuštění spustitelného obsahu (exe, DLL, PS, js, VBS atd.) vyřazeného z e-mailu (webová pošta/pošta – klient).  
   - **Jenom audit**  
 
@@ -906,7 +921,7 @@ Z důvodu ochrany před e-mailovými hrozbami zablokujte tuto akci:
   Výchozí: Nenakonfigurováno  
   Pravidlo: [použití rozšířené ochrany proti ransomwarem](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#use-advanced-protection-against-ransomware)  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Povolit** – používejte agresivní ransomwarem ochranu.  
   - **Jenom audit**  
 
@@ -921,7 +936,7 @@ Z důvodu ochrany před e-mailovými hrozbami zablokujte tuto akci:
 > [!IMPORTANT]  
 > Aby bylo možné správně nainstalovat a spustit aplikace pro obchodní prostředí Win32, nastavení antimalwarového programu by mělo vyloučit následující adresáře, aby byly prohledávány:  
 > **Na klientských počítačích x64**:  
-> *C:\Program Files (x86)\Microsoft Intune Management Extension\Content*  
+> *C:\Program Files (x86) \Microsoft Intune Management Extension\Content*  
 > *C:\windows\IMECache*  
 >  
 > **Na klientských počítačích x86**:  
@@ -938,8 +953,8 @@ Z důvodu ochrany před e-mailovými hrozbami zablokujte tuto akci:
 
   Umožňuje chránit soubory a složky před neautorizovanými změnami od neznámých aplikací.  
 
-  - **Není nakonfigurováno**  
-  - **Enable**  
+  - **Nenakonfigurované**  
+  - **Povolení**  
   - **Jenom audit**  
   - **Zablokovat úpravu disku**  
   - **Auditovat úpravu disku**  
@@ -1045,7 +1060,7 @@ Zablokujte přístup koncových uživatelů k různým oblastem aplikace Securit
 
   Nakonfigurujte, jestli koncoví uživatelé můžou zobrazit oblast ochrany před viry a hrozbami v Security Center programu Microsoft Defender. Skrytím této části se taky zablokuje všechna oznámení týkající se ochrany před viry a hrozbami.  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Skryl**  
 
 - **Ochrana ransomwarem**  
@@ -1054,7 +1069,7 @@ Zablokujte přístup koncových uživatelů k různým oblastem aplikace Securit
 
   Nakonfigurujte, jestli koncoví uživatelé můžou zobrazit oblast ransomwarem Protection v programu Microsoft Defender Security Center. Skrytím této části se taky zablokuje všechna oznámení týkající se ransomwarem Protection.  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Skryl**  
 
 - **Ochrana účtu**  
@@ -1063,7 +1078,7 @@ Zablokujte přístup koncových uživatelů k různým oblastem aplikace Securit
 
   Nakonfigurujte, jestli koncoví uživatelé můžou zobrazit oblast ochrany účtu v Security Center programu Microsoft Defender. Skrytím této části se taky zablokuje všechna oznámení týkající se ochrany účtů.  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Skryl**  
 
 - **Firewall a ochrana sítě**  
@@ -1072,7 +1087,7 @@ Zablokujte přístup koncových uživatelů k různým oblastem aplikace Securit
 
   Nakonfigurujte, jestli koncoví uživatelé můžou zobrazit oblast brána firewall a ochrana sítě v centru zabezpečení v programu Microsoft Defender. Skrytím této části dojde také k blokování všech oznámení souvisejících s bránou firewall a ochranou sítě.  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Skryl**  
 
 - **Řízení aplikací a prohlížečů**  
@@ -1081,7 +1096,7 @@ Zablokujte přístup koncových uživatelů k různým oblastem aplikace Securit
 
   Nakonfigurujte, jestli koncoví uživatelé můžou v centru zabezpečení v programu Microsoft Defender zobrazit oblast ovládacího prvku aplikace a prohlížeče. Skrytím této části dojde také k blokování všech oznámení souvisejících s ovládacím prvkem aplikace a prohlížeče.  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Skryl**  
 
 - **Hardwarová ochrana**  
@@ -1090,7 +1105,7 @@ Zablokujte přístup koncových uživatelů k různým oblastem aplikace Securit
 
   Nakonfigurujte, jestli koncoví uživatelé mohou zobrazit oblast hardwarového zabezpečení v Security Center programu Microsoft Defender. Skrytím této části dojde také k blokování všech oznámení týkajících se hardwarové ochrany.  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Skryl**  
 
 - **Výkon a stav zařízení**  
@@ -1099,7 +1114,7 @@ Zablokujte přístup koncových uživatelů k různým oblastem aplikace Securit
 
   Nakonfigurujte, jestli koncoví uživatelé můžou zobrazit oblast výkon a stav zařízení v centru zabezpečení v programu Microsoft Defender. Skrytím této části dojde také k blokování všech oznámení týkajících se výkonu a stavu zařízení.  
   
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Skryl**  
 
 - **Možnosti pro rodinu**  
@@ -1108,7 +1123,7 @@ Zablokujte přístup koncových uživatelů k různým oblastem aplikace Securit
 
   Nakonfigurujte, jestli koncoví uživatelé mohou zobrazit oblast možností rodiny v centru zabezpečení v programu Microsoft Defender. Skrytím této části budou také zablokována všechna oznámení týkající se rodinných možností.  
   
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Skryl**  
 
 - **Oznámení ze zobrazených oblastí aplikace**  
@@ -1117,7 +1132,7 @@ Zablokujte přístup koncových uživatelů k různým oblastem aplikace Securit
 
   Vyberte, která oznámení se mají zobrazit koncovým uživatelům. Nekritická oznámení zahrnují Shrnutí aktivity antivirové ochrany v programu Microsoft Defender, včetně oznámení po dokončení kontroly. Všechna další oznámení se považují za závažná.  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Blokovat Nekritická oznámení**  
   - **Blokovat všechna oznámení**  
 
@@ -1126,7 +1141,7 @@ Zablokujte přístup koncových uživatelů k různým oblastem aplikace Securit
 
   Nakonfigurujte zobrazení ovládacího prvku oznamovací oblasti. Aby se toto nastavení projevilo, musí se uživatel odhlásit a přihlásit nebo restartovat počítač.  
   
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Skryl**  
 
 - **Tlačítko vymazat čip TPM**  
@@ -1134,7 +1149,7 @@ Zablokujte přístup koncových uživatelů k různým oblastem aplikace Securit
 
   Nakonfigurujte zobrazení tlačítka vymazat čip TPM.  
   
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Zakázat**  
 
 - **Upozornění na aktualizaci firmwaru TPM**  
@@ -1142,7 +1157,7 @@ Zablokujte přístup koncových uživatelů k různým oblastem aplikace Securit
   
   Konfigurace zobrazení firmwaru čipu TPM při zjištění ohroženého firmwaru.  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Skryl**  
 
 - **Ochrana před zneužitím**  
@@ -1219,7 +1234,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
 
 
   - **Blok** Zabraňte použití místního účtu správce.  
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
 
 - **Přejmenovat účet správce**  
   **Výchozí**: *Nenakonfigurováno*  
@@ -1228,14 +1243,14 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
 
   Definujte jiný název účtu, který se má přidružit k identifikátoru zabezpečení (SID) pro účet Administrator.  
 
- #### <a name="guest"></a>Guest  
+ #### <a name="guest"></a>Host  
 
 - **Účet Guest**  
   **Výchozí**: Nenakonfigurováno  
   LocalPoliciesSecurityOptions CSP: [LocalPoliciesSecurityOptions](https://go.microsoft.com/fwlink/?linkid=867853)  
 
   - **Blok** – zabraňuje použití účtu Guest.  
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
 
 - **Přejmenovat účet hosta**  
   **Výchozí**: *Nenakonfigurováno*  
@@ -1275,7 +1290,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
  
 
   Definujte, kdo má povolené formátování a vysunutí vyměnitelných médií NTFS:  
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Správci**  
   - **Správci a členové skupiny Power Users**  
   - **Správci a interaktivní uživatelé**  
@@ -1316,7 +1331,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
 
   Nakonfigurujte informace o uživateli, které se zobrazí, když je relace uzamčena. Pokud tato možnost není nakonfigurovaná, zobrazí se zobrazované jméno uživatele, doména a uživatelské jméno.  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Zobrazované jméno uživatele, doména a uživatelské jméno**  
   - **Jen zobrazované jméno uživatel**  
   - **Nezobrazovat informace o uživateli**  
@@ -1437,7 +1452,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
 
   Pokud toto nastavení povolíte, bude klient SMB odmítat nezabezpečená přihlášení hostů.  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Blok** – klient SMB odmítne nezabezpečená přihlášení hostů.  
 
 ### <a name="recovery-console-and-shutdown"></a>Konzola pro zotavení a vypnutí  
@@ -1489,7 +1504,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
 
   Definujte chování výzvy ke zvýšení oprávnění pro správce v režimu schválení správcem.  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Zvýšit oprávnění bez dotaz**  
   - **Požádat o přihlašovací údajů na zabezpečené ploše**  
   - **Vyzvat k zadání pověření**  
@@ -1503,7 +1518,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
 
   Definujte chování výzvy ke zvýšení oprávnění pro standardní uživatele.  
 
-  - **Není nakonfigurováno**  
+  - **Nenakonfigurované**  
   - **Automaticky zamítat žádosti o zvýšení oprávnění**  
   - **Požádat o přihlašovací údajů na zabezpečené ploše**  
   - **Vyzvat k zadání pověření**  
@@ -1596,8 +1611,8 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [TaskScheduler/EnableXboxGameSaveTask](https://go.microsoft.com/fwlink/?linkid=875480)  
    
   Toto nastavení určuje, zda je úloha uložení hry Xbox povolená nebo zakázaná.  
-  - **Povoleno**
-  - **Není nakonfigurováno**
+  - **Umožněn**
+  - **Nenakonfigurované**
 
 - **Služba správy příslušenství pro Xbox**  
   **Výchozí**: ruční  
@@ -1606,7 +1621,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   Toto nastavení určuje typ spuštění služby pro správu doplňku.  
   - **Zásah**
   - **Automaticky**
-  - **Disabled** (Zakázáno)
+  - **Zabezpečen**
 
 - **Služba Xbox Live auth Manager**  
   **Výchozí**: ruční  
@@ -1615,7 +1630,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   Toto nastavení určuje typ spuštění služby Live auth Manager.  
   - **Zásah**
   - **Automaticky**
-  - **Disabled** (Zakázáno)
+  - **Zabezpečen**
  
 - **Služba Xbox Live pro uložení her**  
   **Výchozí**: ruční  
@@ -1624,7 +1639,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   Toto nastavení určuje typ spuštění služby Live Game Save.  
   - **Zásah**
   - **Automaticky**
-  - **Disabled** (Zakázáno)
+  - **Zabezpečen**
 
 - **Síťová služba Xbox Live**  
   **Výchozí**: ruční  
@@ -1633,7 +1648,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   Toto nastavení určuje typ spuštění síťové služby.  
   - **Zásah**
   - **Automaticky**
-  - **Disabled** (Zakázáno)
+  - **Zabezpečen**
 
 ## <a name="user-rights"></a>Uživatelská práva
 
@@ -1642,7 +1657,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/AccessCredentialManagerAsTrustedCaller](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-accesscredentialmanagerastrustedcaller)
 
   Toto uživatelské právo používá správce přihlašovacích údajů během operací zálohování a obnovení. Pokud je toto oprávnění přiděleno jiným entitám, může dojít k ohrožení zabezpečení uložených přihlašovacích údajů uživatelů.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Povolení místního přihlášení**  
@@ -1650,7 +1665,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/AllowLocalLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-allowlocallogon)
 
   Toto uživatelské právo určuje, kteří uživatelé se mohou přihlašovat k počítači.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Povolení přístupu ze sítě**  
@@ -1658,7 +1673,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/AccessFromNetwork](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-accessfromnetwork)
 
   Toto uživatelské právo určuje, kteří uživatelé a skupiny budou mít povolené připojení k počítači přes síť.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Jednat jako součást operačního systému**  
@@ -1666,7 +1681,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/ActAsPartOfTheOperatingSystem](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-actaspartoftheoperatingsystem)
 
   Jednat jako součást operačního systému
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**  
 
 - **Zálohování souborů a adresářů**  
@@ -1674,7 +1689,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/BackupFilesAndDirectories](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-backupfilesanddirectories)
 
   Toto uživatelské právo určuje, kteří uživatelé mohou při zálohování souborů a adresářů obejít oprávnění k souborům, adresářům, registrům a dalším trvalým objektům.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Změna systémového času**  
@@ -1682,7 +1697,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/ChangeSystemTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-changesystemtime)
 
   Toto uživatelské právo určuje, kteří uživatelé a skupiny mohou měnit čas a datum interních hodin počítače.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Vytváření globálních objektů**  
@@ -1690,7 +1705,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/CreateGlobalObjects](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createglobalobjects)
 
   Toto nastavení zabezpečení určuje, zda mohou uživatelé vytvářet globální objekty, které jsou k dispozici pro všechny relace. Uživatelé, kteří můžou vytvářet globální objekty, můžou ovlivnit procesy, které běží v relacích jiných uživatelů, což by mohlo vést k selhání aplikace nebo poškození dat.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Vytvořit stránkovací soubor**  
@@ -1698,7 +1713,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/CreatePageFile](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createpagefile)
 
   Toto uživatelské právo určuje, kteří uživatelé a skupiny mohou volat interní rozhraní API pro vytvoření a změnu velikosti stránkovacího souboru.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Vytvořit trvalé sdílené objekty**  
@@ -1706,7 +1721,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/CreatePermanentSharedObjects](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createpermanentsharedobjects)
 
   Toto uživatelské právo určuje, které účty mohou procesy použít k vytvoření objektu adresáře pomocí Správce objektů.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Vytváření symbolických odkazů**  
@@ -1714,7 +1729,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/CreateSymbolicLinks](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createsymboliclinks)
 
   Toto uživatelské právo určuje, zda uživatel může vytvořit symbolický odkaz z počítače, ke kterému jsou přihlášeni.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Vytváření tokenů**  
@@ -1722,7 +1737,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/okta](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createtoken)
 
   Toto uživatelské právo určuje, kteří uživatelé nebo skupiny můžou procesy použít k vytvoření tokenu, který pak můžete použít k získání přístupu k jakýmkoli místním prostředkům, když proces používá k vytvoření přístupového tokenu interní rozhraní API.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Ladit programy**  
@@ -1730,7 +1745,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
     CSP: [UserRights/DebugPrograms](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-debugprograms)
 
   Toto uživatelské právo určuje, kteří uživatelé mohou připojit ladicí program k jakémukoli procesu nebo k jádru.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Odepřít přístup ze sítě**  
@@ -1738,7 +1753,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/DenyAccessFromNetwork](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denyaccessfromnetwork)
 
   Toto uživatelské právo určuje, kterým uživatelům se zabrání v přístupu k počítači přes síť.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Odepřít přihlášení jako služba**  
@@ -1746,7 +1761,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/DenyLocalLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denylocallogon)
 
   Toto nastavení zabezpečení určuje, které účty služeb brání registraci procesu jako služby.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Odepřít přihlášení prostřednictvím služby Vzdálená plocha**  
@@ -1754,7 +1769,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/DenyRemoteDesktopServicesLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denyremotedesktopserviceslogon)
 
   Toto uživatelské právo určuje, kteří uživatelé a skupiny mají zakázáno přihlášení jako klient služby Vzdálená plocha.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Povolit delegování**  
@@ -1762,7 +1777,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/EnableDelegation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-enabledelegation)
 
  Toto uživatelské právo určuje, kteří uživatelé mohou nastavit nastavení důvěryhodný pro delegování u objektu uživatele nebo počítače.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Generování auditů zabezpečení**  
@@ -1770,7 +1785,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/GenerateSecurityAudits](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-generatesecurityaudits)
 
   Toto uživatelské právo určuje, které účty může proces použít k přidání položek do protokolu zabezpečení. Protokol zabezpečení slouží ke sledování neautorizovaného přístupu k systému.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Zosobnění klienta**  
@@ -1778,7 +1793,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/ImpersonateClient](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-impersonateclient)
 
   Přiřazení tohoto uživatele uživateli umožňuje programům spuštěným jménem tohoto uživatele zosobnit klienta. Vyžadování tohoto uživatelského práva pro tento druh zosobnění brání neoprávněnému uživateli v přesvědčit klienta, aby se připojil ke službě, kterou vytvořil, a pak zosobňuje tohoto klienta, což může zvýšit oprávnění neoprávněného uživatele na administrativní nebo systémové úrovně.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Zvýšit prioritu plánování**  
@@ -1786,7 +1801,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/IncreaseSchedulingPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-increaseschedulingpriority)
 
   Toto uživatelské právo určuje, které účty můžou použít proces s přístupem Zapisovat vlastnosti k jinému procesu, aby se zvýšila priorita spouštění přiřazená k druhému procesu.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Načtení a uvolnění ovladačů zařízení**  
@@ -1794,7 +1809,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/LoadUnloadDeviceDrivers](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-loadunloaddevicedrivers)
 
   Toto uživatelské právo určuje, kteří uživatelé mohou dynamicky načítat a uvolňovat ovladače zařízení nebo jiný kód v režimu jádra.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Zamknout stránky v paměti**  
@@ -1802,7 +1817,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/LockMemory](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-lockmemory)
 
   Toto uživatelské právo určuje, které účty mohou pomocí procesu uchovávat data ve fyzické paměti, což zabrání systému v stránkování dat do virtuální paměti na disku.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Správa auditování a protokolu zabezpečení**  
@@ -1810,7 +1825,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/ManageAuditingAndSecurityLog](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-manageauditingandsecuritylog)
 
   Toto uživatelské právo určuje, kteří uživatelé mohou určovat možnosti auditování přístupu k objektům pro jednotlivé prostředky, například soubory, objekty služby Active Directory a klíče registru.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Provádět úlohy údržby svazku**  
@@ -1818,7 +1833,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/ManageVolume](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-managevolume)
 
   Toto uživatelské právo určuje, kteří uživatelé a skupiny mohou spouštět úlohy údržby svazku, například vzdálené defragmentace.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Úprava hodnot prostředí firmwaru**  
@@ -1826,7 +1841,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/ModifyFirmwareEnvironment](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-modifyfirmwareenvironment)
 
   Toto uživatelské právo určuje, kdo může upravovat hodnoty prostředí firmwaru.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Úprava popisku objektu**  
@@ -1834,7 +1849,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/ModifyObjectLabel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-modifyobjectlabel)
 
   Toto uživatelské právo určuje, které uživatelské účty mohou měnit označení integrity objektů, jako jsou soubory, klíče registru nebo procesy vlastněné jinými uživateli.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Profilovat jeden proces**  
@@ -1842,7 +1857,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/ProfileSingleProcess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-profilesingleprocess)
 
   Toto uživatelské právo určuje, kteří uživatelé mohou pomocí nástrojů pro monitorování výkonu monitorovat výkon systémových procesů.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 - **Vzdálené vypnutí**  
@@ -1850,7 +1865,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/RemoteShutdown](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-remoteshutdown)
 
   Toto uživatelské právo určuje, kteří uživatelé mohou vypnout počítač ze vzdáleného umístění v síti. Zneužití tohoto uživatelského práva může mít za následek odepření služby.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
   
 - **Obnovení souborů a adresářů**  
@@ -1858,7 +1873,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/RestoreFilesAndDirectories](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-restorefilesanddirectories)
   
   Toto uživatelské právo určuje, kteří uživatelé mohou při obnovování zálohovaných souborů a adresářů obejít oprávnění k souborům, adresářům, registrům a dalším trvalým objektům, a určí, kteří uživatelé mohou nastavit libovolný platný objekt zabezpečení jako vlastníka objektu.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
   
 - **Převzetí vlastnictví souborů nebo objektů**  
@@ -1866,7 +1881,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   CSP: [UserRights/TakeOwnership](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-takeownership)
 
   Toto uživatelské právo určuje, kteří uživatelé mohou převzít vlastnictví všech zabezpečených objektů v systému, včetně objektů služby Active Directory, souborů a složek, tiskáren, klíčů registru, procesů a vláken.
-  - **Není nakonfigurováno**
+  - **Nenakonfigurované**
   - **Povoleno**
 
 ## <a name="next-steps"></a>Další kroky
