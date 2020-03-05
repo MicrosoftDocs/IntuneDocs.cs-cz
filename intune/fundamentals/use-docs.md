@@ -2,7 +2,7 @@
 title: Používání dokumentace Intune
 titleSuffix: Microsoft Intune
 description: Naučte se hledat v dokumentaci k Intune, poskytovat zpětnou vazbu k dokumentům a přispívat do dokumentů.
-ms.date: 09/15/2019
+ms.date: 03/03/2020
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 607e1136fd3ab5661a2b054410d6fc7fce94994d
-ms.sourcegitcommit: 1aaff35fddb3d06458d739968d28971fed0bb2ba
+ms.openlocfilehash: de30ade4c145a930ed370fd651c35bd57700c76d
+ms.sourcegitcommit: b4502dc09b82985265299968a11158f5898b56e0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "77155339"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78287547"
 ---
 # <a name="using-the-intune-docs"></a>Používání dokumentace Intune
 
@@ -114,3 +114,23 @@ Při přispívání do dokumentace k Intune postupujte podle těchto obecných p
 - Postupujte podle [pracovního postupu Flow GitHub](https://guides.github.com/introduction/flow/).  
 
 - Na blogu (nebo cokoli) o vašich příspěvcích, často!  
+
+## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Konsolidace dokumentace pro Microsoft Endpoint Manager
+
+Pro lepší podporu kombinovaných scénářů pro Intune a Configuration Manager se tato knihovna dokumentace přesouvá na [https://docs.microsoft.com/memdocs/intune](https://docs.microsoft.com/memdocs/intune). Knihovna dokumentace Configuration Manager se později přesune na [https://docs.microsoft.com/memdocs/configmgr](https://docs.microsoft.com/memdocs/configmgr). Všechny odkazy budou automaticky přesměrovány, takže nemusíte dělat žádné změny pro čtení tohoto obsahu.
+
+Pokud zadáte zpětnou vazbu nebo přispějete k článkům, jsou nutné některé změny:
+
+- Existující problémy GitHubu zůstanou v původním úložišti, [https://github.com/MicrosoftDocs/IntuneDocs/issues](https://github.com/MicrosoftDocs/IntuneDocs/issues).
+
+  - Tyto problémy se nebudou zobrazovat jako otevřené nebo uzavřené problémy v části věnované zpětné vazbě v odkazovaném článku.
+
+  - Dál budeme pracovat na vyřešení těchto problémů.
+
+  - V některých případech můžeme v případě obtížného rozhodování uzavřít problém, který si myslíme, že si nemyslímeme, že bude možné včas vyřešit.
+
+  - Pokud máte problém ve stávajícím úložišti a zapálených se o něm, zaslat svůj názor na migrovaný článek v úložišti memdocs.
+
+- Před migrací sloučíme a zavřete všechny otevřené žádosti o přijetí změn.
+
+- Když při migraci zadáte zpětnou vazbu nebo upravíte článek, bude problém nebo žádost o přijetí změn přejít do úložiště memdocs.

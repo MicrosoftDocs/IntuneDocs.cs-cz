@@ -1,11 +1,11 @@
 ---
 title: Použití importovaných certifikátů PFX v Microsoft Intune – Azure | Microsoft Docs
-description: Používejte importované certifikáty PKCS (Public Key Cryptography Standards) s Microsoft Intune, včetně importu certifikátů, konfigurace šablony certifikátu, instalace Intune Imported Certificate Connectoru a vytvoření importovaného souboru PKCS. Profil certifikátu.
+description: Používejte importované certifikáty PKCS (Public Key Cryptography Standards) s Microsoft Intune. Importujte certifikáty, nakonfigurujte šablony certifikátů, nainstalujte si Intune Imported PFX Certificate Connector a vytvořte importovaný profil certifikátu PKCS.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/21/2020
+ms.date: 03/04/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,18 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02fa3acdaf0dc450afee97dfaaf5870166013356
-ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
+ms.openlocfilehash: d31093f4765969d97f3d57f4b41eaa5ef98daaf1
+ms.sourcegitcommit: b4502dc09b82985265299968a11158f5898b56e0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/24/2020
-ms.locfileid: "77569519"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78287580"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurace a používání importovaných certifikátů PKCS pomocí Intune
 
 Microsoft Intune podporuje použití importovaných certifikátů PKCS (Public Key párové), které se běžně používají pro šifrování S/MIME s e-mailovými profily. Některé e-mailové profily v Intune podporují možnost Povolit S/MIME, kde můžete definovat podpisový certifikát S/MIME a certifikát šifrování S/MIME.
 
-Šifrování s/MIME je náročné, protože e-mail je zašifrovaný pomocí konkrétního certifikátu. Musíte mít privátní klíč certifikátu, který šifruje e-mail na zařízení, ve kterém tento e-mail čtete, aby ho bylo možné dešifrovat. Šifrovací certifikáty se pravidelně obnovují, což znamená, že pro všechna vaše zařízení budete možná potřebovat historii šifrování, aby bylo možné číst starší e-maily.  Vzhledem k tomu, že je potřeba použít stejný certifikát pro všechna zařízení, není možné pro tento účel použít profily certifikátů [SCEP](certificates-scep-configure.md) nebo [PKCS](certficates-pfx-configure.md) , protože tyto mechanismy pro doručování certifikátů poskytují jedinečné certifikáty pro každé zařízení.
+Šifrování s/MIME je náročné, protože e-mail je zašifrovaný pomocí konkrétního certifikátu:
+
+- Musíte mít privátní klíč certifikátu, který šifruje e-mail na zařízení, ve kterém tento e-mail čtete, aby ho bylo možné dešifrovat.
+- Předtím, než vyprší platnost certifikátu na zařízení, byste měli importovat nový certifikát, aby zařízení mohla dál dešifrovat nový e-mail. Obnovení těchto certifikátů se nepodporuje.
+- Šifrovací certifikáty se pravidelně obnovují, což znamená, že můžete chtít zachovat minulý certifikát na vašich zařízeních, abyste měli jistotu, že je možné dál dešifrovat starší e-maily.  
+
+Vzhledem k tomu, že je potřeba použít stejný certifikát pro všechna zařízení, není možné pro tento účel použít profily certifikátů [SCEP](certificates-scep-configure.md) nebo [PKCS](certficates-pfx-configure.md) , protože tyto mechanismy pro doručování certifikátů poskytují jedinečné certifikáty pro každé zařízení.
 
 Další informace o použití S/MIME s Intune získáte [pomocí s/MIME k šifrování e-mailu](certificates-s-mime-encryption-sign.md).
 
@@ -75,9 +81,9 @@ K používání importovaných certifikátů PKCS s Intune budete potřebovat n�
 
 Když použijete Intune k nasazení **importovaného certifikátu PFX** pro uživatele, jsou kromě zařízení k dispozici dvě komponenty:
 
-- **Služba Intune**: Ukládá certifikáty PFX v zašifrovaném stavu a zpracovává nasazení certifikátu pro uživatelské zařízení.  Hesla, která chrání privátní klíče certifikátů, se šifrují předtím, než se nahrají pomocí modulu hardwarového zabezpečení (HSM) nebo kryptografie Windows. to zajistí, že Intune nebude mít přístup k privátnímu klíči kdykoli.
+- **Intune Service**: ukládá certifikáty PFX v zašifrovaném stavu a zpracovává nasazení certifikátu pro uživatelské zařízení.  Hesla, která chrání privátní klíče certifikátů, se šifrují předtím, než se nahrají pomocí modulu hardwarového zabezpečení (HSM) nebo kryptografie Windows. to zajistí, že Intune nebude mít přístup k privátnímu klíči kdykoli.
 
-- **Konektor certifikátu PFX pro Microsoft Intune**: Když zařízení požádá o certifikát PFX, který se importoval do Intune, pošle se do konektoru šifrované heslo, certifikát a veřejný klíč zařízení.  Konektor dešifruje heslo pomocí místního privátního klíče a pak před odesláním certifikátu zpátky do Intune znovu zašifruje heslo (a všechny plist profily, pokud používáte iOS) s klíčem zařízení.  Intune pak doručí certifikát do zařízení a zařízení bude schopné ho dešifrovat pomocí privátního klíče zařízení a nainstalovat certifikát.
+- **PFX Certificate Connector pro Microsoft Intune**: když zařízení požaduje certifikát PFX, který se importoval do Intune, pošle se do konektoru šifrované heslo, certifikát a veřejný klíč zařízení.  Konektor dešifruje heslo pomocí místního privátního klíče a pak před odesláním certifikátu zpátky do Intune znovu zašifruje heslo (a všechny plist profily, pokud používáte iOS) s klíčem zařízení.  Intune pak doručí certifikát do zařízení a zařízení bude schopné ho dešifrovat pomocí privátního klíče zařízení a nainstalovat certifikát.
 
 ## <a name="download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune"></a>Stažení, instalace a konfigurace konektoru certifikátů PFX pro Microsoft Intune
 
@@ -186,11 +192,11 @@ Vyberte poskytovatele úložiště klíčů, který odpovídá poskytovateli, kt
    > [!NOTE]
    > Vzhledem k tomu, že je ověřování spuštěno v grafu, je nutné zadat oprávnění k AppID. Pokud jste tento nástroj použili poprvé, vyžaduje se *globální správce* . Rutiny PowerShellu používají stejný AppID jako ten, který se používá při použití [ukázek PowerShellu pro Intune](https://github.com/microsoftgraph/powershell-intune-samples).
 
-5. Převeďte heslo pro každý soubor PFX, který importujete, do zabezpečeného řetězce spuštěním `$SecureFilePassword = ConvertTo-SecureString -String "<PFXPassword>" -AsPlainText -Force`.
+5. Převeďte heslo pro každý soubor PFX, který importujete do zabezpečeného řetězce spuštěním `$SecureFilePassword = ConvertTo-SecureString -String "<PFXPassword>" -AsPlainText -Force`.
 
 6. Pokud chcete vytvořit objekt **UserPFXCertificate** , spusťte `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>"`
 
-   Příklad: `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "C:\temp\userA.pfx" $SecureFilePassword "userA@contoso.com" "Microsoft Software Key Storage Provider" "PFXEncryptionKey" "smimeEncryption"`
+   Například: `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "C:\temp\userA.pfx" $SecureFilePassword "userA@contoso.com" "Microsoft Software Key Storage Provider" "PFXEncryptionKey" "smimeEncryption"`
 
    > [!NOTE]
    > Když importujete certifikát z jiného systému, než je server, na kterém je konektor nainstalovaný, použijte následující příkaz, který zahrnuje cestu k souboru klíče: `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>" "<PaddingScheme>" "<File path to public key file>"`
@@ -209,7 +215,7 @@ Po importování certifikátů do Intune vytvořte profil **importovaného certi
 
 2. Vyberte **zařízení** > **konfigurační profil** > **vytvořit profil**.
 
-3. Zadejte tyto vlastnosti:
+3. Zadejte následující vlastnosti:
 
    - Zadejte **Název** profilu.
    - Volitelně můžete nastavit popis.
@@ -218,12 +224,21 @@ Po importování certifikátů do Intune vytvořte profil **importovaného certi
 
 4. Vyberte **Nastavení**a zadejte následující vlastnosti:
 
-   - **Zamýšlený účel**: Zadejte zamýšlený účel certifikátů, které jsou naimportovány pro tento profil. Správci mohou importovat certifikáty s různými zamýšlenými účely (například podepisování S/MIME nebo šifrování S/MIME). Zamýšlený účel vybraný v profilu certifikátu odpovídá profilu certifikátu se správně importovanými certifikáty. Zamýšlený účel je značka pro seskupení importovaných certifikátů společně a nezaručuje, že certifikáty importované s touto značkou budou vyhovovat zamýšlenému účelu.  
+   - **Zamýšlený účel**: Určete zamýšlený účel certifikátů, které jsou importované pro tento profil. Správci mohou importovat certifikáty s různými zamýšlenými účely (například podepisování S/MIME nebo šifrování S/MIME). Zamýšlený účel vybraný v profilu certifikátu odpovídá profilu certifikátu se správně importovanými certifikáty. Zamýšlený účel je značka pro seskupení importovaných certifikátů společně a nezaručuje, že certifikáty importované s touto značkou budou vyhovovat zamýšlenému účelu.  
    - **Období platnosti certifikátu**: Pokud se v šabloně certifikátu nezměnila doba platnosti, tato možnost je ve výchozím nastavení nastavená na jeden rok.
-   - **Zprostředkovatel úložiště klíčů (KSP)**: V případě systému Windows vyberte místo, kam chcete uložit klíče na zařízení.
+   - **Zprostředkovatel úložiště klíčů (KSP):** U systému Windows vyberte, kde na zařízení se mají klíče ukládat.
 
 5. Vyberte **OK** > **Vytvořit** a profil uložte.
 
-## <a name="next-steps"></a>Další postup
+## <a name="support-for-third-party-partners"></a>Podpora pro partnery třetích stran
+
+Následující partneři poskytují podporované metody nebo nástroje, které můžete použít k importování certifikátů PFX do Intune.
+
+### <a name="digicert"></a>DigiCert
+Pokud používáte službu DigiCert PKI, můžete k importu certifikátů PFX do Intune použít **Nástroj pro import DigiCert pro certifikáty Intune S/MIME** . Použití tohoto nástroje nahrazuje pokyny v části [Import certifikátů PFX do Intune](#import-pfx-certificates-to-intune) , které jsou popsané dříve v tomto článku.
+
+Další informace o nástroji pro import DigiCert, včetně toho, jak tento nástroj získat, najdete v tématu https://knowledge.digicert.com/tutorials/microsoft-intune.html ve znalostní bázi DigiCert.
+
+## <a name="next-steps"></a>Další kroky
 
 Profil je vytvořený, ale zatím se nepoužívá. [Přiřaďte](../configuration/device-profile-assign.md) nový profil zařízení.

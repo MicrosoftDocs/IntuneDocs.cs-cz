@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3a470c9a92f7792af2b371acf873807ad344afb
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 232d4841d71d738b4f099437fb4845928d887dd5
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74781103"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78290306"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Nastavení stránky stavu registrace
  
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
  
-Stránka stavu registrace (ESP) zobrazuje informace o instalaci zařízení s Windows 10 (verze 1803 a novější) během úvodní registrace zařízení. Například:
+Stránka stavu registrace (ESP) zobrazuje informace o instalaci zařízení s Windows 10 (verze 1803 a novější) během úvodní registrace zařízení. Příklad:
 - Při použití [Windows autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/) 
 - nebo kdykoli se spravované zařízení poprvé spustí po použití zásady stránky stavu registrace. 
 
@@ -91,11 +91,11 @@ Uživatel může být v mnoha skupinách a mít velký počet profilů stránek 
 Můžete určit aplikace, které je potřeba nainstalovat předtím, než uživatel může přístup k ploše.
 
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** >  > Windows **registrace systému Windows** > **Stránka stavu registrace**.
-2. Zvolte profil > **nastavení**.
-3. Zvolte **Ano** pro **zobrazit průběh instalace aplikaci a profilu**.
-4. Zvolte **Ano** pro **zablokovat používání zařízení, dokud nebudou nainstalovány všechny aplikace a profily**.
+2. Vyberte profil > **Nastavení**.
+3. Pokud chcete **Zobrazit průběh instalace aplikací a profilů**, klikněte na **Ano** .
+4. Vyberte možnost **Ano** pro **blokování použití zařízení, dokud nebudou nainstalovány všechny aplikace a profily**.
 5. Vyberte možnost **Vybraná** pro **blokování použití zařízení, dokud se tyto požadované aplikace neinstalují, pokud jsou přiřazené uživateli nebo zařízení**.
-6. Zvolte **vyberte aplikace** > vyberte aplikace > **vyberte** > **Uložit**.
+6. Zvolte **vybrat aplikace** > zvolte aplikace > **Vyberte** > **Uložit**.
 
 ## <a name="enrollment-status-page-tracking-information"></a>Informace o sledování stránky stavu registrace
 
@@ -115,7 +115,7 @@ Na stránce Stav registrace se sledují následující položky instalace zaří
 - Zásady zabezpečení
   - Jeden poskytovatel konfiguračních služeb pro všechny registrace.
   - Skuteční poskytovatelé konfiguračních služeb nakonfigurovaných službou Intune se zde nesledují.
-- Aplikací
+- Aplikace
   - Počet obchodních aplikací Instalační služby MSI na jeden počítač.
   - Obchodní aplikace pro Store s kontextem instalace = zařízení.
   - Offline aplikace pro Store a obchodní aplikace pro Store s kontextem instalace = zařízení.
@@ -129,12 +129,12 @@ U nastavení účtu se na stránce Stav registrace sleduje následující polož
 - Zásady zabezpečení
   - Jeden poskytovatel konfiguračních služeb pro všechny registrace.
   - Skuteční poskytovatelé konfiguračních služeb nakonfigurovaných službou Intune se zde nesledují.
-- Aplikací
+- Aplikace
   - Počet obchodních aplikací Instalační služby MSI na jednoho uživatele, které jsou přiřazeny ke všem zařízením, všem uživatelům nebo skupině uživatelů, jejímž členem uživatel provádějící registraci zařízení je.
   - Počet obchodních aplikací Instalační služby MSI na jeden počítač, které jsou přiřazeny ke všem uživatelům nebo skupině uživatelů, jejímž členem uživatel provádějící registraci zařízení je.
   - Aplikace obchodu pro obchod, aplikace pro Online Store a aplikace pro offline Store, které jsou přiřazené k některým z následujících objektů:
     - Všechna zařízení
-    - All Users
+    - Všichni uživatelé
     - Skupina uživatelů, ve které je uživatel, který zařízení registruje, členem s kontextem instalace nastaveným na hodnotu uživatel.
   - Aplikace Win32 (jenom Windows 10 verze 1903 a novější) 
 - Profily připojení
@@ -142,7 +142,7 @@ U nastavení účtu se na stránce Stav registrace sleduje následující polož
 - Certifikáty
   - Profily certifikátů, které jsou přiřazeny ke všem uživatelům nebo skupině uživatelů, jejímž členem uživatel provádějící registraci zařízení je.
 
-### <a name="troubleshooting"></a>Odstraňování potíží
+### <a name="troubleshooting"></a>Řešení potíží
 Nejčastější dotazy k řešení potíží.
 
 - Proč se mi během fáze nastavení zařízení během nasazování pomocí automatického pilotního nasazení nenainstalovaly moje aplikace, které používají stránku stavu registrace?
@@ -155,6 +155,7 @@ Nejčastější dotazy k řešení potíží.
       - Autopilot
       - Configuration Manager spolusprávu
       - Když se nový uživatel přihlásí k zařízení, které má při prvním použití zásady stránky stavu registrace
+      - Když je na zařízení, které je zřízené a nastavené jako nastavení spouštěné při **prvním zapnutí (OOBE)** , zapnutá možnost Zobrazit na stránce jenom první uživatel, který se do zařízení přihlásí, získá stav registrace.
 
 - Jak můžu zakázat stránku stavu registrace, pokud byla nakonfigurovaná na zařízení?
   - Zásady stránky stavu registrace se v době registrace nastaví na zařízení. Chcete-li zakázat stránku stavu registrace, je nutné zakázat oddíly stránky stavu registrace uživatele a zařízení. Tyto oddíly zakážete vytvořením vlastního nastavení OMA-URI s následujícími konfiguracemi.

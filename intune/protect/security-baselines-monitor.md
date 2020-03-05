@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/24/2020
+ms.date: 03/04/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d8ee4ec6a5bcb29a51b68cff7b840823b678636
-ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
+ms.openlocfilehash: 5d03d6026430c7f9f02cc8504ccc610c3be99902
+ms.sourcegitcommit: b4502dc09b82985265299968a11158f5898b56e0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/24/2020
-ms.locfileid: "77569281"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78287566"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Sledování standardních hodnot zabezpečení a profilů v Microsoft Intune
 
@@ -45,10 +45,10 @@ V podokně **Přehled** jsou k dispozici dvě metody monitorování stavu:
 Každé zařízení je reprezentované jedním z následujících stavů (používá se v zobrazení *zařízení* a také v zobrazení *podle kategorií* ):
 
 - **Odpovídá směrnému plánu** – všechna nastavení v směrném plánu odpovídají doporučeným nastavením.
-- Neodpovídá **směrnému plánu** – nejméně jedno nastavení v směrném plánu se neshoduje s doporučeným nastavením.
+- Neodpovídá **směrnému plánu** – jedno nebo více nastavení v směrném plánu bylo upraveno z výchozích hodnot v původním směrném plánu. Výchozí hodnoty v každé základní úrovni zabezpečení jsou doporučené hodnoty pro tento směrný plán.
 
   > [!NOTE]
-  > Když vytváříte nebo upravujete základní profil, všechny změny provedené v nastavení výchozí hodnoty nebo konfigurace způsobí, že dojde k výskytu stavu neshoda směrného plánu. Nápovědu k určení nastavení, která byla změněna, získáte od podpora Microsoftu. 
+  > Když vytváříte nebo upravujete základní profil, všechny změny provedené v nastavení výchozí hodnoty nebo konfigurace způsobí, že se stav *směrného plánu neshoduje* . Nápovědu k určení nastavení, která byla změněna, získáte od podpora Microsoftu. 
 
 - **Nesprávně nakonfigurovaná – aspoň** jedno nastavení není správně nakonfigurované. Tento stav znamená, že nastavení je v konfliktu, chyba nebo stav čekání na vyřízení.
 - **Nedá se použít** – aspoň jedno nastavení se nedá použít a není použité.
@@ -59,9 +59,9 @@ V podokně Přehled se zobrazí souhrn založený na grafu o tom, kolik zaříze
 
 ![Kontrolovat stav zařízení](./media/security-baselines-monitor/overview.png)
 
-Pokud má zařízení různý stav z různých kategorií na základě směrného plánu, zařízení je reprezentované jediným stavem. Stav, který představuje zařízení, je pořízen z následujícího pořadí: Nesprávně **nakonfigurované**, **neshoduje se směrným plánem**, **není k dispozici**, **odpovídá směrnému plánu**.
+Pokud má zařízení různý stav z různých kategorií na základě směrného plánu, zařízení je reprezentované jediným stavem. Stav, který představuje zařízení, pochází z následujícího pořadí: nesprávně **nakonfigurované**, **neshoduje se se směrným plánem**, **není k dispozici**, **odpovídá směrnému plánu**.
 
-Například, pokud zařízení obsahuje nastavení jsou klasifikovány jako *nesprávně nakonfigurované* a jedno nebo více nastavení, které jsou klasifikovány jako *neodpovídá směrného plánu*, zařízení je klasifikován tak *správněnakonfigurovaný*.
+Pokud má například zařízení nastavení klasifikované jako nesprávně *nakonfigurované* a jedno nebo více nastavení klasifikovaných jako neodpovídá *směrnému plánu*, je zařízení klasifikované jako nesprávně *nakonfigurované*.
 
 Kliknutím na graf můžete procházet a zobrazit seznam zařízení s různými stavy. Pak můžete vybrat jednotlivá zařízení z tohoto seznamu a zobrazit podrobnosti o jednotlivých zařízeních. Příklad:
 
@@ -151,6 +151,6 @@ Na zařízeních s Windows 10 je k dispozici integrovaná sestava diagnostické 
 > - Některá nastavení také uvádějí identifikátor GUID. Tento identifikátor GUID můžete vyhledat v místním registru (Regedit) pro všechny hodnoty sady.
 > - Protokoly Prohlížeč událostí můžou taky zahrnovat nějaké informace o chybě v nastavení problematické (**Prohlížeč událostí** > **protokoly aplikací a služeb** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider** > **admin**).
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 [Sledujte profily zařízení](../configuration/device-profile-monitor.md) a [Podívejte se na některé běžné problémy a jejich řešení](../configuration/device-profile-troubleshoot.md).
