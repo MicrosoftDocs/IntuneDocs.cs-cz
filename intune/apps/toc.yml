@@ -161,6 +161,8 @@
             - name: Přehled zásad ochrany aplikací
               href: app-protection-policy.md
               displayName: app; protection; policy
+            - name: Architektura ochrany dat pomocí zásad APP (App Protection Policies)
+              href: app-protection-framework.md
             - name: Vytvoření zásad ochrany aplikací
               items:
                 - name: Obecná nastavení
