@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c22fafce6583dd1e58d61e3fa8e6077b70998588
-ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77781781"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78369116"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
 
@@ -85,7 +85,7 @@ Většinu informací týkajících se aplikací najdete v úloze **aplikace** , 
 
 Následující čtyři části popisují možnosti, které jsou k dispozici v podokně **aplikace** .
 
-### <a name="manage"></a>Správa
+### <a name="manage"></a>Spravovat
 - **Aplikace**: Tuto možnost vyberte pro přidávání, zobrazení, přiřazování a monitorování aplikací používaných vašimi pracovníky. Více informací najdete v následujících tématech:
   - [Přidání aplikací](apps-add.md)
   - [Přiřazení aplikací](apps-deploy.md)
