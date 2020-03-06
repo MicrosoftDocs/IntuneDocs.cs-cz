@@ -18,11 +18,11 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: bfa2758546595d1e6237d88e128958c50759eb04
-ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/24/2020
-ms.locfileid: "77569179"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78369742"
 ---
 # <a name="create-a-custom-role-in-intune"></a>Vytvoření vlastní role v Intune
 
@@ -40,7 +40,7 @@ Abyste mohli vytvářet, upravovat nebo přiřazovat role, váš účet musí m�
 
 3. Na stránce **oprávnění** vyberte oprávnění, která chcete u této role použít.
 
-4. Na stránce **obor (značky)** vyberte značky pro tuto roli. Tato role má přístup k prostředkům, které mají také tyto značky. Zvolte **Další**.
+4. Na stránce **obor (značky)** vyberte značky pro tuto roli. Tato role má přístup k prostředkům, které mají také tyto značky. Vyberte **Další**.
 
 5. Po dokončení na stránce **Revize + vytvořit** klikněte na **vytvořit**. Nová role se zobrazí v seznamu v okně **role Intune – všechny role** .
 
@@ -52,11 +52,11 @@ Můžete také zkopírovat existující roli.
 
 2. Na stránce **základy** zadejte název. Ujistěte se, že používáte jedinečný název.
 
-3. Všechna oprávnění a značky oboru z původní role budou již vybrány. Následně můžete změnit **název**, **Popis**, **oprávnění**a obor duplicitní role **(značky)**.
+3. Všechna oprávnění a značky oboru z původní role budou již vybrány. Následně můžete změnit **název**, **Popis**, **oprávnění**a obor duplicitní role **(značky)** .
 
 4. Až provedete všechny požadované změny, klikněte na tlačítko **Další** a dostanete se na stránku **Kontrola a vytvoření** . Vyberte **Vytvořit**. 
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 - [Přiřazení role uživateli](assign-role.md)
 - [Další informace o řízení přístupu na základě role v Intune](role-based-access-control.md)
 
