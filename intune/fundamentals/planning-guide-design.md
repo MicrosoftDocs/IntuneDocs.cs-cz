@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f676a0e39bb5dae32d3032d1703dbb44f6b2e54a
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77514961"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78369602"
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
 
@@ -182,7 +182,7 @@ Seznamte se blíže s následujícími aspekty svých zařízení, abyste vědě
 
 - Vlastnictví zařízení
 
-- Hromadná registrace
+- Hromadný zápis
 
 Pojďme se na tyto oblasti podívat podrobněji.
 
@@ -211,7 +211,7 @@ Intune podporuje jak zařízení vlastněná firmou, tak osobní zařízení. Za
 
 Další informace o případech použití zařízení vlastněných firmou a zařízení BYOD najdete v [oddílu 3: Určení požadavků scénářů pro případy použití](planning-guide-requirements.md).
 
-### <a name="bulk-enrollment"></a>Hromadná registrace
+### <a name="bulk-enrollment"></a>Hromadný zápis
 
  V závislosti na platformě můžete zařízení různými způsoby hromadně zaregistrovat. Pokud požadujete hromadnou registraci, napřed [určete, jakým způsobem bude probíhat](../enrollment/device-enrollment.md), a potom tento způsob zapracujte do svého návrhu.
 
@@ -242,7 +242,7 @@ Musíte určit, jestli jsou zásady pro podmínky a ujednání potřeba. Pokud t
 | **Název podmínek a ujednání** | **Případ použití** | **Cílová skupina** |
 |:---:|:---:|:---:|
 | Firemní podmínky a ujednání | Firemní | Firemní uživatelé |                 
-| Podmínky a ujednání pro uživatele s vlastním zařízením | uživatelé s vlastním zařízením (BYOD) | Uživatelé s vlastním zařízením |                
+| Podmínky a ujednání pro uživatele s vlastním zařízením | UŽIVATELÉ S VLASTNÍM ZAŘÍZENÍM (BYOD) | Uživatelé s vlastním zařízením |                
 
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a namapovat podmínky a ujednání na své skupiny uživatelů.
@@ -337,7 +337,7 @@ Tady je příklad, jak dokumentovat návrh e-mailových profilů:
 | **Typ** | **Název profilu** | **Platforma zařízení** | **Případy použití** |
 |:---:|:---:|:---:|:---:|
 | E-mailový profil | E-mailový profil pro iOS | iOS | Firemní – informatik (uživatel s vlastním zařízením) |
-| E-mailový profil | E-mailový profil pro Android Knox | Android Knox | uživatelé s vlastním zařízením (BYOD) |
+| E-mailový profil | E-mailový profil pro Android Knox | Android Knox | UŽIVATELÉ S VLASTNÍM ZAŘÍZENÍM (BYOD) |
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní e-mailové profily.
 ### <a name="apps"></a>Aplikace

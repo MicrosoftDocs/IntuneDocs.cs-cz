@@ -17,11 +17,11 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 43e104d9f32f6b6204ffc3bd461bb06764543e3c
-ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/24/2020
-ms.locfileid: "77569264"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78370145"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurace zařízení s Windows 10 v Intune pomocí směrných plánů zabezpečení
 
@@ -72,17 +72,17 @@ Následující instance standardních hodnot zabezpečení jsou k dispozici pro 
 
 - **Základní hodnoty zabezpečení MDM**
   - [Základní hodnota zabezpečení MDM pro květen 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
-  - [verze Preview: Směrný plán zabezpečení MDM pro 2018. října](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
+  - [Preview: směrný plán zabezpečení MDM pro říjen 2018](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
 
 - **Základní
-  služby Microsoft Defender ATP** *(aby se tyto standardní hodnoty používaly, musí vaše prostředí splňovat požadavky na použití [rozšířené ochrany před internetovými útoky v programu Microsoft Defender](advanced-threat-protection.md#prerequisites))*.
+  služby Microsoft Defender ATP** *(aby se tyto standardní hodnoty používaly, musí vaše prostředí splňovat požadavky na použití [rozšířené ochrany před internetovými útoky v programu Microsoft Defender](advanced-threat-protection.md#prerequisites))* .
   - [Základní hodnoty ATP v programu Microsoft Defender](security-baseline-settings-defender-atp.md)
 
   > [!NOTE]
   > Základní hodnoty zabezpečení služby Microsoft Defender ATP byly optimalizované pro fyzická zařízení a v tuto chvíli se nedoporučují pro použití na virtuálních počítačích (VM) nebo koncových bodech VDI. Určitá nastavení standardních hodnot můžou mít vliv na vzdálené interaktivní relace ve virtualizovaných prostředích.  Další informace najdete v dokumentaci k Windows v tématu [zvýšení dodržování předpisů pro základní hodnoty zabezpečení služby Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) .
 
 - **Základní hodnoty Microsoft Edge**
-  - [verze Preview: Základní](security-baseline-settings-edge.md) Microsoft Edge
+  - [Preview: směrný plán Microsoft Edge](security-baseline-settings-edge.md)
 
 Můžete dál používat a upravovat profily, které jste předtím vytvořili na základě šablony verze Preview, a to i v případě, že tato šablona Preview už není dostupná pro vytváření nových profilů.
 
@@ -113,7 +113,7 @@ Mezi běžné úlohy při práci se standardními hodnotami zabezpečení patř�
 
 4. Na kartě **základy** zadejte následující vlastnosti:
 
-   - **Název**: Zadejte název profilu standardních hodnot zabezpečení. Zadejte například *standardní profil pro ATP v programu Defender*.
+   - **Název**: zadejte název profilu standardních hodnot zabezpečení. Zadejte například *standardní profil pro ATP v programu Defender*.
 
    - **Popis**: Zadejte nějaký text, který popisuje, co tento směrný plán dělá. Popis je, abyste zadali libovolný text, který chcete. Je volitelný, ale doporučený.
 
@@ -182,7 +182,7 @@ Po uložení se po dokončení převodu směrný plán okamžitě znovu nasadí 
    - **Přijmout změny směrného plánu, ale zachovat existující přizpůsobení nastavení** – Tato možnost zachovává vlastní nastavení, které jste provedli v profilu standardních hodnot, a aplikuje je na novou verzi, kterou jste vybrali k použití.
    - **Přijmout změny směrného plánu a zahodit existující přizpůsobení nastavení** – Tato možnost přepíše původní profil úplně. Aktualizovaný profil bude používat výchozí hodnoty pro všechna nastavení.
 
-7. Vyberte **odeslat**. Profil se aktualizuje na vybranou základní verzi a po dokončení převodu se směrný plán hned znovu nasadí do přiřazených skupin.
+7. Vyberte **Odeslat**. Profil se aktualizuje na vybranou základní verzi a po dokončení převodu se směrný plán hned znovu nasadí do přiřazených skupin.
 
 ### <a name="remove-a-security-baseline-assignment"></a>Odebrání přiřazení standardních hodnot zabezpečení
 
@@ -196,7 +196,7 @@ Standardní hodnoty zabezpečení na zařízeních spravovaných přes Intune se
 
 Pokud používáte spoluspravovaná zařízení, musíte přepnout zatížení **Konfigurace zařízení** (jeho nastavení) do Intune. Další informace najdete v [úlohách konfigurace zařízení](https://docs.microsoft.com/configmgr/comanage/workloads#device-configuration) .
 
-## <a name="q--a"></a>Dotazy a odpovědi
+## <a name="q--a"></a>Otázky a odpovědi
 
 ### <a name="why-these-settings"></a>Proč tato nastavení?
 
@@ -218,7 +218,7 @@ Striktně řečeno, ne. Tým Microsoft Security konzultuje organizace, jako je n
 
 - Migrace z místních zásad skupiny služby Active Directory do čistě cloudového řešení pomocí Azure Active Directory (AD) s Microsoft Intune je cesta. V sadě [nástrojů pro zabezpečení dodržování předpisů](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10) , které vám pomůžou při správě hybridních AD a zařízení připojených k Azure AD, je potřeba, aby byly k dispozici šablony zásad skupiny. Tato zařízení můžou podle potřeby získat nastavení MDM z cloudu (Intune) a nastavení zásad skupiny z místních řadičů domény.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 - Zobrazit nastavení v nejnovějších verzích dostupných standardních hodnot:
   - [Základní hodnoty zabezpečení MDM](security-baseline-settings-mdm-all.md)

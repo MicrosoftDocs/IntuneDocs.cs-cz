@@ -18,11 +18,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f8af7a756d95051be52a5380467cb4f9be2533b3
-ms.sourcegitcommit: fab685b22a010fe231b27a0c5eda34a6f22f4c8d
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "78216201"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78369281"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Použití skriptů PowerShellu na zařízeních s Windows 10 v Intune
 
@@ -40,7 +40,7 @@ Služby MDM, například Microsoft Intune, můžou spravovat mobilní a desktopo
 
 Rozšíření pro správu Intune doplňují součásti Windows 10 MDM v krabicích. Můžete vytvořit PowerShellové skripty pro spouštění na zařízeních s Windows 10. Například vytvořte skript PowerShellu, který provede pokročilé konfigurace zařízení. Pak tento skript nahrajte do Intune, přiřaďte ho ke skupině Azure Active Directory (AD) a spusťte skript. Pak můžete monitorovat stav spuštění skriptu od začátku do konce.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Rozšíření pro správu Intune má následující požadavky. Po splnění požadavků se rozšíření pro správu Intune nainstaluje automaticky, když se k uživateli nebo zařízení přiřadí skript prostředí PowerShell nebo aplikace Win32.
 
@@ -185,7 +185,7 @@ Pokud chcete zjistit, jestli je zařízení automaticky zaregistrované, můžet
 - Chcete-li izolovat problémy skriptování, můžete:
 
   - Zkontrolujte konfiguraci spouštění PowerShellu na vašich zařízeních. Pokyny najdete v tématu [zásady spouštění prostředí PowerShell](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6) .
-  - Spusťte ukázkový skript pomocí rozšíření pro správu Intune. Vytvořte například `C:\Scripts` adresář a poskytněte všem úplnému řízení. Spusťte tento skript:
+  - Spusťte ukázkový skript pomocí rozšíření pro správu Intune. Vytvořte například `C:\Scripts` adresář a poskytněte všem úplnému řízení. Spusťte následující skript:
 
     ```powershell
     write-output "Script worked" | out-file c:\Scripts\output.txt

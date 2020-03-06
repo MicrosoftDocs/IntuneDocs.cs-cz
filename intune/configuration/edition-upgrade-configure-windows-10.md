@@ -18,11 +18,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 13fca4de8e36b1bdeb9026985e2eabd21e56e924
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206937"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78369541"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Upgradovat edice Windows 10 nebo zapínat na zařízeních v režimu S použitím Microsoft Intune
 
@@ -47,7 +47,7 @@ Tento článek obsahuje seznam podporovaných cest upgradu a ukazuje, jak vytvo�
 > [!NOTE]
 > Pokud přiřazení zásady odeberete později, verze Windows na zařízení se nevrátí. Zařízení bude nadále fungovat normálně.
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 Před upgradem zařízení se ujistěte, že máte následující požadavky:
 
@@ -55,11 +55,11 @@ Před upgradem zařízení se ujistěte, že máte následující požadavky:
 - Pro edice Windows 10 Mobile a Windows 10 je možné použít soubor s licencí společnosti Microsoft. Soubor s licencí obsahuje licenční informace pro instalaci aktualizované edice na všechna zařízení, na která tato zásada cílíte.
 - Zařízení s Windows 10, kterým zásady přiřazujete, jsou zaregistrovaná v Microsoft Intune. Zásadu upgradu edice nemůžete použít u počítačů s klientským softwarem Intune pro počítače.
 
-## <a name="supported-upgrade-paths"></a>Podporované cesty upgradu
+## <a name="supported-upgrade-paths"></a>Podporovaná cesta upgradu
 
 V následující tabulce jsou podporované cesty upgradu pro profil upgradu edice Windows 10.
 
-| Upgradovat z | Upgrade na |
+| Upgrade z | Upgrade na |
 |---|---|
 | Windows 10 Pro | Windows 10 – vzdělávání <br/>Windows 10 Enterprise <br/>Windows 10 Pro Education |
 | Edice Windows 10 Pro N | Edice Windows 10 Education N <br/>Edice Windows 10 Enterprise N <br/>Edice Windows 10 Pro Education N | 

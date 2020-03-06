@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b25b761b3857fdf91bbbe827d288d09e350a1a7a
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206087"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78368424"
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Přidání uživatelů a udělení oprávnění pro správu v Intune
 
@@ -37,17 +37,17 @@ Do svého předplatného Intune můžete ručně přidat uživatele pomocí [cen
 
 1. Přihlaste se k [Microsoft 365 centra pro správu](https://admin.microsoft.com) pomocí účtu globálního správce nebo správce správy uživatelů.
 2. V nabídce Office 365 vyberte **Správce**.
-3. V Centru pro správu vyberte **Přidat uživatele**.
+3. V centru pro správu vyberte **Přidat uživatele**.
 
    ![Snímek obrazovky sekce Přidat uživatele](./media/users-add/office-add-user.png)
 
 4. Uveďte následující údaje o uživateli:
    - **Jméno**
    - **Příjmení**
-   - **Zobrazované jméno**
+   - **Zobrazovaný název**
    - **Uživatelské jméno** – hlavní název uživatele (UPN) uložený v Azure Active Directory a používaný pro přístup ke službě
    - **Umístění**
-   - **Kontaktní informace** (nepovinné)
+   - **Kontaktní informace** (volitelné)
    - **Heslo** – automaticky vygenerované nebo vytvořené
 
      ![Snímek obrazovky sekce nového uživatele](./media/users-add/office-add-user-details.png)
@@ -63,7 +63,7 @@ Do svého předplatného Intune můžete ručně přidat uživatele pomocí [cen
    - **Název**
    - **Uživatelské jméno** – nové jméno na portálu Azure Active Directory ![Snímek obrazovky přidání jména a uživatelského jména](./media/users-add/intune-add-user-info.png) Pokračujte výběrem **OK**.
 4. Volitelně můžete zadat následující vlastnosti uživatele:
-   - **Profil** – údaje týkající se práce včetně **pracovní pozice** a **oddělení**
+   - **Profil** – údaje týkající se práce včetně **Funkce** a **Oddělení**
    - **Skupiny** – vyberte skupiny, které chcete pro uživatele přidat
    - **Role adresáře** – přidělte uživateli oprávnění správce včetně role správce služeb Intune.
 
@@ -88,7 +88,7 @@ Až budete mít k předplatnému Intune přidané další uživatele, doporučuj
 
 5. Ze seznamu dostupných rolí vyberte oprávnění správce, které chcete udělit.
 ![Snímek obrazovky přiřazení rolí](./media/users-add/office-assign-roles.png)
-6. Vyberte **Uložit**.
+6. Zvolte **Uložit**.
 
 ### <a name="give-admin-permissions-in-the-azure-portal"></a>Udělení oprávnění správce na Azure Portalu
 
@@ -96,7 +96,7 @@ Až budete mít k předplatnému Intune přidané další uživatele, doporučuj
 2. Na Azure Portalu zvolte **Uživatel** a pak vyberte uživatele, kterému chcete udělit oprávnění správce.
 3. Vyberte **Role adresáře** a pak vyberte oprávnění.
   ![Snímek obrazovky Role adresáře](./media/users-add/add-intune-directory-role.png)
-4. Vyberte **Uložit**.
+4. Zvolte **Uložit**.
 
 ### <a name="types-of-administrators"></a>Typy správců
 
