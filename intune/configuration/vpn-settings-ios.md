@@ -16,19 +16,19 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2964893102bc1b6f9967b1a37261b860d8ea0104
-ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/24/2020
-ms.locfileid: "77569383"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78369283"
 ---
 # <a name="add-vpn-settings-on-ios-and-ipados-devices-in-microsoft-intune"></a>Přidání nastavení sítě VPN v zařízeních s iOS a iPadOS v Microsoft Intune
 
 Microsoft Intune zahrnuje mnoho nastavení sítě VPN, která se dají nasadit do zařízení s iOS/iPadOS. Tato nastavení se používají k vytvoření a konfiguraci připojení sítě VPN k síti vaší organizace. Těmito nastaveními se zabývá tento článek. Některá nastavení jsou dostupná jen pro určité klienty VPN, jako je Citrix, Zscaler a další.
 
-## <a name="before-you-begin"></a>Než začnete
+## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořit profil konfigurace zařízení](vpn-settings-configure.md).
+[Vytvořte profil konfigurace zařízení](vpn-settings-configure.md).
 
 > [!NOTE]
 > Tato nastavení jsou k dispozici pro všechny typy registrace. Další informace o typech registrace najdete v tématu Registrace zařízení se [systémem iOS/iPadOS](../enrollment/ios-enroll.md).
@@ -38,19 +38,19 @@ Microsoft Intune zahrnuje mnoho nastavení sítě VPN, která se dají nasadit d
 Z následujícího seznamu dodavatelů vyberte typ připojení VPN:
 
 - **Check Point Capsule VPN**
-- **AnyConnect Cisco Legacy**: Platí pro [Cisco Legacy AnyConnect](https://itunes.apple.com/app/cisco-legacy-anyconnect/id392790924) app verze 4.0.5 x a starší.
-- **Cisco AnyConnect**: Platí pro [Cisco AnyConnect](https://itunes.apple.com/app/cisco-anyconnect/id1135064690) app verze 4.0.7 x a novější.
+- **Cisco Legacy AnyConnect**: Určeno pro aplikaci [Cisco Legacy AnyConnect](https://itunes.apple.com/app/cisco-legacy-anyconnect/id392790924) verze 4.0.5x a starší.
+- **Cisco AnyConnect**: Určeno pro aplikaci [Cisco AnyConnect](https://itunes.apple.com/app/cisco-anyconnect/id1135064690) verze 4.0.7x a novější.
 - **SonicWall Mobile Connect**
-- **Starší verze přístupu F5**: Platí pro aplikaci F5 Access verze 2,1 a starší.
-- **Přístup F5**: Platí pro aplikaci F5 Access verze 3,0 a novější.
-- **Palo Alto Networks GlobalProtect (starší verze)**: Platí pro Palo Alto Networks GlobalProtect app verze 4,1 a starší.
-- **Palo Alto Networks GlobalProtect**: Platí pro Palo Alto Networks GlobalProtect app verze 5,0 a novější.
+- **Starší verze F5 Access**: Určeno pro aplikaci F5 Access verze 2.1 a starší.
+- **F5 Access**: Určeno pro aplikaci F5 Access verze 3.0 a novější.
+- **Palo Alto Networks GlobalProtect (starší verze)** : Určeno pro aplikaci Palo Alto Networks GlobalProtect verze 4.1 a starší.
+- **Palo Alto Networks GlobalProtect**: Určeno pro aplikaci Palo Alto Networks GlobalProtect verze 5.0 a novější.
 - **Pulse Secure**
 - **Cisco (IPSec)**
 - **Citrix VPN**
 - **Citrix SSO**
-- **Zscaler**: Pokud chcete použít podmíněný přístup nebo chcete uživatelům dovolit, aby si Zscaler přihlašovací obrazovku, musíte Zscaler Private Access (ZPA) integrovat s vaším účtem Azure AD. Podrobné pokyny najdete v [dokumentaci k aplikaci Zscaler](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad). 
-- **IKEv2**: [Nastavení IKEv2](#ikev2-settings) (v tomto článku) obsahuje popis vlastností.
+- **Zscaler**: Pokud chcete použít podmíněný přístup, nebo pokud chcete uživatelům dovolit obejít přihlašovací obrazovku Zscaler, musíte do svého účtu Azure AD integrovat Zscaler Private Access (ZPA). Podrobné pokyny najdete v [dokumentaci k aplikaci Zscaler](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad). 
+- **IKEv2**: [Nastavení IKEv2](#ikev2-settings) (v tomto článku) popisuje vlastnosti.
 - **Vlastní VPN**
 
 > [!NOTE]
@@ -61,26 +61,26 @@ Z následujícího seznamu dodavatelů vyberte typ připojení VPN:
 Nastavení, která jsou v následujícím seznamu, jsou ovlivněná zvoleným typem připojení k síti VPN.  
 
 - **Název připojení**: Tento název koncoví uživatelé vidí, když na svém zařízení procházejí seznamem dostupných připojení VPN.
-- **Vlastní název domény** (jenom Zscaler): Předem nasaďte přihlašovací pole aplikace Zscaler k doméně, do které uživatelé patří. Například pokud je uživatelské jméno `Joe@contoso.net`, zobrazí se při otevření aplikace v poli statická doména `contoso.net`. Pokud nezadáte název domény, použije se v Azure Active Directory (AD) doménová část hlavního názvu uživatele (UPN).
-- **IP adresa nebo plně kvalifikovaný název domény**: IP adresa nebo plně kvalifikovaný název domény (FQDN) serveru VPN, ke kterému se zařízení připojují. Zadejte například `192.168.1.1` nebo `vpn.contoso.com`.
-- **Název cloudu organizace** (jenom Zscaler): Zadejte název cloudu, ve kterém je vaše organizace zřízená. Název je v adrese URL, kterou používáte k přihlášení do aplikace Zscaler.  
-- **Metoda ověřování**: Vyberte, jak se zařízení ověřují na serveru VPN. 
-  - **Certifikáty**: V části **ověřovací certifikát**vyberte existující profil certifikátu SCEP nebo PKCS pro ověření připojení. V článku [Konfigurace certifikátů](../protect/certificates-configure.md) najdete pokyny k profilům certifikátů.
-  - **Uživatelské jméno a heslo**: Koncoví uživatelé musí zadat uživatelské jméno a heslo, aby se mohli přihlásit k serveru VPN.  
+- **Vlastní název domény** (jenom Zscaler): předvyplňte přihlašovací pole aplikace Zscaler s doménou, do které uživatelé patří. Například pokud je uživatelské jméno `Joe@contoso.net`, zobrazí se při otevření aplikace v poli statická doména `contoso.net`. Pokud nezadáte název domény, použije se v Azure Active Directory (AD) doménová část hlavního názvu uživatele (UPN).
+- **IP adresa nebo plně kvalifikovaný název domény**: IP adresa nebo plně kvalifikovaný název domény serveru VPN, ke kterému se zařízení připojí Zadejte například `192.168.1.1` nebo `vpn.contoso.com`.
+- **Název cloudu organizace** (pouze Zscaler): Zadejte název cloudu, ve kterém je organizace zřízena. Název je v adrese URL, kterou používáte k přihlášení do aplikace Zscaler.  
+- **Metoda ověřování**: Zvolte způsob, kterým se zařízení ověřují vůči serveru VPN. 
+  - **Certifikáty**: V části **Ověřovací certifikát** vyberte existující profil certifikátu SCEP nebo PKCS pro ověřování připojení. V článku [Konfigurace certifikátů](../protect/certificates-configure.md) najdete pokyny k profilům certifikátů.
+  - **Uživatelé jméno a heslo**: koncoví uživatelé musí zadat uživatelské jméno a heslo, aby se mohli přihlásit k serveru VPN.  
 
     > [!NOTE]
     > Pokud se jako metoda ověřování pro Cicso IPsec VPN používá uživatelské jméno a heslo, musí prostřednictvím vlastního profilu Apple Configuratoru poskytovat tajný kód SharedSecret.
 
-  - **Odvozené přihlašovací údaje**: Použijte certifikát, který je odvozený od čipové karty uživatele. Pokud není nakonfigurovaný žádný odvozený Vydavatel přihlašovacích údajů, Intune vás vyzve, abyste ho přidali. Další informace najdete v tématu [použití odvozených přihlašovacích údajů v Microsoft Intune](../protect/derived-credentials.md).
+  - **Odvozené přihlašovací údaje**: použijte certifikát, který je odvozený od čipové karty uživatele. Pokud není nakonfigurovaný žádný odvozený Vydavatel přihlašovacích údajů, Intune vás vyzve, abyste ho přidali. Další informace najdete v tématu [použití odvozených přihlašovacích údajů v Microsoft Intune](../protect/derived-credentials.md).
 
-- **Vyloučené adresy URL** (jenom Zscaler): Po připojení k síti VPN Zscaler jsou uvedené adresy URL přístupné mimo Cloud Zscaler. 
+- **Vyloučené adresy URL** (jen Zscaler): Pokud jsou uvedené adresy URL připojené k síti VPN Zscaleru, jsou k dispozici i mimo cloud Zscaler. 
 
-- **Dělené tunelové propojení**: **Povolte** nebo **zakažte** , aby se zařízení rozhodla, která připojení se mají použít, v závislosti na provozu. Uživatel v hotelu například pro přístup k pracovním souborům použije připojení VPN, ale pro běžné procházení webu bude používat standardní síť hotelu.
+- **Rozdělit tunel**: tuto možnost můžete **povolit** nebo **zakázat**, aby se zařízení mohla rozhodnout, které připojení se má v závislosti na typech přenosů používat. Uživatel v hotelu například pro přístup k pracovním souborům použije připojení VPN, ale pro běžné procházení webu bude používat standardní síť hotelu.
 
-- **Identifikátor VPN** (vlastní VPN, Zscaler a Citrix): Identifikátor aplikace VPN, kterou používáte, a kterou poskytuje poskytovatel sítě VPN.
-- **Zadejte páry klíč/hodnota pro vlastní atributy sítě VPN vaší organizace** (vlastní VPN, Zscaler a Citrix): Přidejte nebo importujte **klíče** a **hodnoty** , které přizpůsobují připojení k síti VPN. Nezapomeňte, že tyto hodnoty obvykle dodá poskytovatel připojení VPN.
+- **Identifikátor VPN** (vlastní VPN, Zscaler a Citrix): identifikátor aplikace VPN, kterou používáte, a který poskytuje poskytovatel sítě VPN.
+- **Zadejte páry klíč/hodnota pro vlastní atributy sítě VPN vaší organizace** (vlastní VPN, Zscaler a Citrix): přidejte nebo importujte **klíče** a **hodnoty** , které přizpůsobují připojení k síti VPN. Nezapomeňte, že tyto hodnoty obvykle dodá poskytovatel připojení VPN.
 
-- **Povolit řízení přístupu k síti (NAC)** (Cisco AnyConnect, Citrix SSO, F5 Access): Když zvolíte souhlasím **, ID**zařízení je zahrnuté v profilu sítě VPN. Toto ID se dá použít k ověřování sítě VPN pro povolení nebo zákaz přístupu k síti.
+- **Povolit řízení přístupu k síti (NAC)** (Cisco AnyConnect, Citrix SSO, F5 Access): když zvolíte **Souhlasím, ID**zařízení je zahrnuté v profilu sítě VPN. Toto ID se dá použít k ověřování sítě VPN pro povolení nebo zákaz přístupu k síti.
 
     **Při použití Cisco AnyConnect s ISE**nezapomeňte:
 
@@ -97,7 +97,7 @@ Nastavení, která jsou v následujícím seznamu, jsou ovlivněná zvoleným ty
   **Při použití přístupu F5**nezapomeňte:
 
   - Potvrďte, že používáte F5 BIG-IP 13.1.1.5 nebo novější. 
-  - Integrujte BIG-IP s Intune for NAC. Další informace najdete v přehledu [: Konfigurace APM pro stavch kontrol zařízení pomocí příručky pro správu koncového bodu](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) F5.
+  - Integrujte BIG-IP s Intune for NAC. Další informace najdete v tématu [Přehled: Konfigurace APM pro stav kontrol zařízení pomocí Průvodce pro správu koncových bodů](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) F5.
   - Povolí NAC v profilu sítě VPN.
 
   Pro partnery VPN, kteří podporují ID zařízení, může získat ID klient VPN, jako je Citrix SSO. Pak se může dotazovat Intune, aby zkontroloval, jestli je zařízení zaregistrované, a jestli profil VPN vyhovuje nebo nedodržuje předpisy.
@@ -108,97 +108,97 @@ Nastavení, která jsou v následujícím seznamu, jsou ovlivněná zvoleným ty
 
 Tato nastavení se použijí, když zvolíte **Typ připojení** > **IKEv2**.
 
-- **Vzdálený identifikátor**: Zadejte síťovou IP adresu, plně kvalifikovaný název domény, UserFQDN nebo ASN1DN serveru IKEv2. Zadejte například `10.0.0.3` nebo `vpn.contoso.com`. Obvykle zadáváte stejnou hodnotu jako [**název připojení**](#base-vpn-settings) (v tomto článku). Ale závisí na nastavení serveru IKEv2.
+- **Vzdálený identifikátor**: zadejte síťovou IP adresu, plně kvalifikovaný název domény, USERFQDN nebo ASN1DN serveru IKEv2. Zadejte například `10.0.0.3` nebo `vpn.contoso.com`. Obvykle zadáváte stejnou hodnotu jako [**název připojení**](#base-vpn-settings) (v tomto článku). Ale závisí na nastavení serveru IKEv2.
 
 - **Typ ověřování klienta**: Vyberte způsob, jakým se klient VPN ověřuje pro síť VPN. Možnosti:
-  - **Ověření uživatele** (výchozí): Přihlašovací údaje uživatele se ověřují na síti VPN.
-  - **Ověřování počítače**: Ověření přihlašovacích údajů zařízení k síti VPN.
+  - **Ověření uživatele** (výchozí): ověření přihlašovacích údajů uživatele u sítě VPN.
+  - **Ověřování počítače**: ověření přihlašovacích údajů zařízení k síti VPN.
 
 - **Metoda ověřování**: Vyberte typ přihlašovacích údajů klienta, které chcete odeslat na server. Možnosti:
-  - **Certifikáty**: K ověření připojení k síti VPN používá existující profil certifikátu. Ujistěte se, že tento profil certifikátu je už přiřazený uživateli nebo zařízení. V opačném případě se připojení VPN nezdařilo.
+  - **Certifikáty**: k ověření připojení k síti VPN používá existující profil certifikátu. Ujistěte se, že tento profil certifikátu je už přiřazený uživateli nebo zařízení. V opačném případě se připojení VPN nezdařilo.
     - **Typ certifikátu**: Vyberte typ šifrování používaný certifikátem. Ujistěte se, že je server VPN nakonfigurován tak, aby přijímal tento typ certifikátu. Možnosti:
       - **RSA** (výchozí)
       - **ECDSA256**
       - **ECDSA384**
       - **ECDSA521**
 
-  - **Uživatelské jméno a heslo** (pouze ověřování uživatelů): Když se uživatelé připojí k síti VPN, zobrazí se jim výzva k zadání uživatelského jména a hesla.
-  - **Sdílený tajný klíč** (pouze ověřování počítače): Umožňuje zadat sdílený tajný klíč, který se odešle na server VPN.
+  - **Uživatelské jméno a heslo** (jenom ověřování uživatelů): když se uživatelé připojí k síti VPN, zobrazí se jim výzva k zadání uživatelského jména a hesla.
+  - **Sdílený tajný klíč** (pouze ověřování počítače): umožňuje zadat sdílený tajný klíč, který se odešle na server VPN.
     - **Sdílený tajný klíč**: Zadejte sdílený tajný klíč, který se označuje také jako předsdílený klíč (PSK). Ujistěte se, že hodnota odpovídá sdílenému tajnému kódu nakonfigurovanému na serveru VPN.
 
-- **Běžný název vystavitele certifikátu serveru**: Umožňuje serveru VPN ověřování pro klienta VPN. Zadejte běžný název vystavitele certifikátu (CN) certifikátu serveru VPN, který je odeslán klientovi VPN na zařízení. Ujistěte se, že hodnota CN odpovídá konfiguraci na serveru VPN. V opačném případě se připojení VPN nezdařilo.
-- **Běžný název certifikátu serveru**: Zadejte CN pro samotný certifikát. Pokud je ponecháno prázdné, použije se hodnota vzdáleného identifikátoru.
+- **Běžný název vystavitele certifikátu serveru**: umožňuje serveru VPN ověřování pro klienta VPN. Zadejte běžný název vystavitele certifikátu (CN) certifikátu serveru VPN, který je odeslán klientovi VPN na zařízení. Ujistěte se, že hodnota CN odpovídá konfiguraci na serveru VPN. V opačném případě se připojení VPN nezdařilo.
+- **Běžný název certifikátu serveru**: zadejte cn pro samotný certifikát. Pokud je ponecháno prázdné, použije se hodnota vzdáleného identifikátoru.
 
-- **Rychlost detekce mrtvého partnera**: Vyberte, jak často klient sítě VPN kontroluje, jestli je tunelové připojení VPN aktivní. Možnosti:
-  - **Nenakonfigurováno**: Používá výchozí systém iOS/iPadOS, který se může shodovat s volbou **střední**.
-  - **Žádný**: Zakáže detekci mrtvého partnera.
-  - **Nízká úroveň**: Každých 30 minut pošle zprávu o prohození.
-  - **Střední** (výchozí): Každých 10 minut pošle zprávu o prohození.
-  - **Vysoká**: Odešle zprávu kontroly kontroly a oznámení každých 60 sekund.
+- **Rychlost detekce nedoručených partnerů**: vyberte, jak často klient sítě VPN kontroluje, jestli je tunel VPN aktivní. Možnosti:
+  - **Nenakonfigurováno**: používá výchozí systém iOS/iPadOS, který se může shodovat s volbou **střední**.
+  - **None**: zakáže detekci mrtvého partnera.
+  - **Nízká**: pošle zprávu kontroly kontroly a každých 30 minut.
+  - **Střední** (výchozí): odešle zprávu kontroly stavu kontroly každých 10 minut.
+  - **Vysoká**: pošle zprávu o prohození každých 60 sekund.
 
-- **Minimální rozsah verze TLS**: Zadejte minimální verzi protokolu TLS, kterou chcete použít. Zadejte `1.0`, `1.1`nebo `1.2`. Pokud necháte pole prázdné, použije se výchozí hodnota `1.0`.
-- **Maximální rozsah verze TLS**: Zadejte maximální verzi protokolu TLS, kterou chcete použít. Zadejte `1.0`, `1.1`nebo `1.2`. Pokud necháte pole prázdné, použije se výchozí hodnota `1.2`.
+- **Minimální rozsah verze TLS**: zadejte minimální verzi TLS, kterou chcete použít. Zadejte `1.0`, `1.1`nebo `1.2`. Pokud necháte pole prázdné, použije se výchozí hodnota `1.0`.
+- **Maximální hodnota rozsahu verze TLS**: zadejte maximální verzi TLS, která se má použít. Zadejte `1.0`, `1.1`nebo `1.2`. Pokud necháte pole prázdné, použije se výchozí hodnota `1.2`.
 
 > [!NOTE]
 > Při použití ověřování uživatelů a certifikátů je potřeba nastavit minimální a maximální rozsah verze TLS.
 
-- **Perfect Forward Secrecy**: Pokud chcete zapnout metodu PFS (Perfect Forward Secrecy), vyberte **Povolit** . PFS je funkce zabezpečení protokolu IP, která snižuje dopad v případě ohrožení zabezpečení klíče relace. **Disable** (default) nepoužívá metodu PFS.
-- **Ověření odvolání certifikátu**: Výběrem možnosti **Povolit** zajistěte, aby se certifikáty odvolaly, než povolíte úspěšné připojení k síti VPN. Tato kontroler je nejlepší úsilí. Pokud vyprší časový limit serveru VPN před zjištěním, jestli je certifikát odvolaný, udělí se přístup. **Disable** (výchozí) nekontroluje odvolané certifikáty.
+- **Perfect Forward Secrecy**: výběrem **Povolit** zapněte metodu PFS (Perfect Forward Secrecy). PFS je funkce zabezpečení protokolu IP, která snižuje dopad v případě ohrožení zabezpečení klíče relace. **Disable** (default) nepoužívá metodu PFS.
+- **Ověření odvolání certifikátu**: výběrem možnosti **Povolit** zajistěte, aby se certifikáty odvolaly, než povolíte úspěšné připojení k síti VPN. Tato kontroler je nejlepší úsilí. Pokud vyprší časový limit serveru VPN před zjištěním, jestli je certifikát odvolaný, udělí se přístup. **Disable** (výchozí) nekontroluje odvolané certifikáty.
 
 - **Konfigurovat parametry přidružení zabezpečení**: **Nenakonfigurováno** (výchozí) používá výchozí systém iOS/iPadOS. Pokud chcete zadat parametry používané při vytváření přidružení zabezpečení se serverem VPN, vyberte **Povolit** .
-  - **Šifrovací algoritmus**: Vyberte algoritmus, který chcete:
+  - **Šifrovací algoritmus**: vyberte algoritmus, který chcete:
     - DES
     - ŠIFROVÁNÍ
     - AES-128
     - AES-256 (výchozí)
     - AES-128 – GCM
     - AES-256-GCM
-  - **Algoritmus integrity**:  Vyberte algoritmus, který chcete:
+  - **Algoritmus integrity**: vyberte algoritmus, který chcete:
     - SHA1-96
     - SHA1 – 160
     - SHA2-256 (výchozí)
     - SHA2 – 384
     - SHA2 – 512
-  - **Skupina Diffie-Hellman**: Vyberte skupinu, kterou chcete. Výchozí hodnota je skupina `2`.
-  - **Doba života** (minuty): Vyberte, jak dlouho zůstane přidružení zabezpečení aktivní, dokud se klíče neotáčí. Zadejte celou hodnotu mezi `10` a `1440` (1440 minut je 24 hodin). Výchozí hodnota je `1440`.
+  - **Skupina Diffie-Hellman**: vyberte skupinu, kterou chcete. Výchozí hodnota je skupina `2`.
+  - **Doba života** (minuty): vyberte, jak dlouho zůstane přidružení zabezpečení aktivní, dokud se klíče neotáčí. Zadejte celou hodnotu mezi `10` a `1440` (1440 minut je 24 hodin). Výchozí hodnota je `1440`.
 
 - **Konfigurace samostatné sady parametrů pro podřízená přidružení zabezpečení**: iOS/iPadOS umožňuje konfigurovat samostatné parametry pro připojení IKE a všechna podřízená připojení. 
 
   **Nenakonfigurováno** (výchozí) používá hodnoty, které zadáte v nastavení dříve **Konfigurovat parametry přidružení zabezpečení** . Pokud chcete zadat parametry používané při vytváření *podřízených* přidružení zabezpečení se serverem VPN, vyberte **Povolit** .
-  - **Šifrovací algoritmus**: Vyberte algoritmus, který chcete:
+  - **Šifrovací algoritmus**: vyberte algoritmus, který chcete:
     - DES
     - ŠIFROVÁNÍ
     - AES-128
     - AES-256 (výchozí)
     - AES-128 – GCM
     - AES-256-GCM
-  - **Algoritmus integrity**:  Vyberte algoritmus, který chcete:
+  - **Algoritmus integrity**: vyberte algoritmus, který chcete:
     - SHA1-96
     - SHA1 – 160
     - SHA2-256 (výchozí)
     - SHA2 – 384
     - SHA2 – 512
-  - **Skupina Diffie-Hellman**: Vyberte skupinu, kterou chcete. Výchozí hodnota je skupina `2`.
-  - **Doba života** (minuty): Vyberte, jak dlouho zůstane přidružení zabezpečení aktivní, dokud se klíče neotáčí. Zadejte celou hodnotu mezi `10` a `1440` (1440 minut je 24 hodin). Výchozí hodnota je `1440`.
+  - **Skupina Diffie-Hellman**: vyberte skupinu, kterou chcete. Výchozí hodnota je skupina `2`.
+  - **Doba života** (minuty): vyberte, jak dlouho zůstane přidružení zabezpečení aktivní, dokud se klíče neotáčí. Zadejte celou hodnotu mezi `10` a `1440` (1440 minut je 24 hodin). Výchozí hodnota je `1440`.
 
 ## <a name="automatic-vpn-settings"></a>Automatické nastavení sítě VPN
 
-- **Síť VPN pro jednotlivé aplikace**: Povoluje síť VPN pro jednotlivé aplikace. Při otevření určitých aplikací automaticky aktivuje připojení VPN. Aplikace také můžete přidružit k danému profilu sítě VPN. SÍŤ VPN pro jednotlivé aplikace není v IKEv2 podporována. Další informace najdete v tématu [pokyny pro nastavení sítě VPN pro jednotlivé aplikace pro iOS/iPadOS](vpn-setting-configure-per-app.md). 
-  - **Typ poskytovatele**: K dispozici pouze pro Pulse Secure a vlastní síť VPN.
+- **VPN pro jednotlivé aplikace:** Umožňuje používat síť VPN pro jednotlivé aplikace. Při otevření určitých aplikací automaticky aktivuje připojení VPN. Aplikace také můžete přidružit k danému profilu sítě VPN. SÍŤ VPN pro jednotlivé aplikace není v IKEv2 podporována. Další informace najdete v tématu [pokyny pro nastavení sítě VPN pro jednotlivé aplikace pro iOS/iPadOS](vpn-setting-configure-per-app.md). 
+  - **Typ zprostředkovatele:** Je k dispozici jen pro Pulse Secure a Vlastní VPN.
   - Pokud používáte profily **sítě VPN pro** iOS/IPadOS s Pulse Secure nebo vlastní sítí VPN, vyberte tunelové propojení vrstev (App-proxy) nebo tunelové propojení na úrovni paketů (Packet-Tunnel). U tunelování v aplikační vrstvě nastavte hodnotu **ProviderType** na **app-proxy**, u tunelování na úrovni paketů na **packet-tunnel**. Pokud si nejste jistí, jakou hodnotu použít, podívejte se do dokumentace poskytovatele připojení VPN.
-  - **Adresy URL Safari, které aktivují tuto síť VPN**: Přidejte jednu nebo více adres URL webu. Při návštěvě těchto adres URL pomocí prohlížeče Safari na zařízení se automaticky naváže připojení k VPN.
+  - **Adresy URL Safari, které aktivují tuto síť VPN:** Můžete přidat jednu nebo více adres URL webu. Při návštěvě těchto adres URL pomocí prohlížeče Safari na zařízení se automaticky naváže připojení k VPN.
 
-- **Síť VPN na vyžádání**: Nakonfigurujte Podmíněná pravidla, která řídí, kdy se má spustit připojení VPN. Můžete třeba vytvořit podmínku, že se připojení VPN použije, jen pokud zařízení není připojené k firemní síti Wi-Fi. Nebo vytvořte podmínku. Pokud například zařízení nemá přístup k zadané doméně hledání DNS, pak se připojení VPN nespustí.
+- **Síť VPN na vyžádání:** Nakonfigurujte podmíněná pravidla, která řídí, kdy se má připojení VPN spustit. Můžete třeba vytvořit podmínku, že se připojení VPN použije, jen pokud zařízení není připojené k firemní síti Wi-Fi. Nebo vytvořte podmínku. Pokud například zařízení nemá přístup k zadané doméně hledání DNS, pak se připojení VPN nespustí.
 
-  - **Identifikátory SSID nebo domény hledání DNS**: Vyberte, zda se v této podmínce používají **identifikátory SSID**bezdrátové sítě nebo **domény hledání DNS**. Zvolte **Přidat** a nakonfigurujte minimálně jeden identifikátor SSID nebo doménu hledání.
-  - **Test řetězce adresy URL**: Volitelný parametr. Zadejte adresu URL, kterou pravidlo použije pro účely testování. Pokud zařízení přistupuje k této adrese URL bez přesměrování, spustí se připojení VPN. A zařízení se připojí k cílové adrese URL. Uživatel neuvidí testovací web řetězce adresy URL.
+  - **Identifikátory SSID nebo domény hledání DNS**: Vyberte, jestli se v této podmínce používají identifikátory **SSID** bezdrátové sítě nebo **domény hledání DNS**. Zvolte **Přidat** a nakonfigurujte minimálně jeden identifikátor SSID nebo doménu hledání.
+  - **Test řetězce adresy URL**: Toto nastavení je volitelné. Zadejte adresu URL, kterou pravidlo použije pro účely testování. Pokud zařízení přistupuje k této adrese URL bez přesměrování, spustí se připojení VPN. A zařízení se připojí k cílové adrese URL. Uživatel neuvidí testovací web řetězce adresy URL.
 
     Například test řetězce adresy URL je audit URL webového serveru, který kontroluje dodržování předpisů zařízením před připojením k síti VPN. Adresa URL taky testuje schopnost sítě VPN připojit se k lokalitě předtím, než se zařízení připojí k cílové adrese URL prostřednictvím sítě VPN.
 .
-  - **Akce domény**: Vyberte jednu z následujících položek:
+  - **Akce domény**: Zvolte jednu z následujících možností:
     - Připojit v případě potřeby
     - Nepřipojovat
-  - **Akce**: Vyberte jednu z následujících položek:
+  - **Akce**: Zvolte jednu z následujících možností:
     - Připojit
     - Vyhodnotit připojení
     - Ignorovat
@@ -208,11 +208,11 @@ Tato nastavení se použijí, když zvolíte **Typ připojení** > **IKEv2**.
 
 Pokud používáte proxy server, nakonfigurujte následující nastavení. Nastavení proxy serveru nejsou k dispozici pro připojení VPN typu Zscaler.  
 
-- **Skript automatické konfigurace**: Pomocí souboru Nakonfigurujte proxy server. Zadejte **adresu URL proxy serveru** (například `http://proxy.contoso.com`), na které je konfigurační soubor.
-- **Adresa**: Zadejte IP adresu plně kvalifikovaného názvu hostitele proxy server.
-- **Číslo portu**: Zadejte číslo portu přidruženého k proxy server.
+- **Skript automatické konfigurace**: ke konfiguraci proxy serveru použijte konfigurační soubor. Zadejte **adresu URL proxy serveru** (například `http://proxy.contoso.com`), na které je konfigurační soubor.
+- **Adresa**: Zadejte IP adresu plně kvalifikovaného názvu hostitele proxy serveru.
+- **Číslo portu**: Zadejte číslo portu přidruženého k proxy serveru.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Profil je vytvořený, ale zatím se nepoužívá. Dále [Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).
 
