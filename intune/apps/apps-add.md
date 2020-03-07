@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6a4952f8e747c5a42e2159461da8e87465bc41d4
-ms.sourcegitcommit: fab685b22a010fe231b27a0c5eda34a6f22f4c8d
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "78216057"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78369603"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune 
 
@@ -68,7 +68,7 @@ Následující tabulka obsahuje konkrétní typy aplikací a popis, jak je můž
 | Integrovaná aplikace pro Android  | Integrovaná aplikace | Jako **typ aplikace** vyberte **Integrovaná aplikace** a potom integrovanou aplikaci vyberte v seznamu poskytovaných aplikací.  |
 | Webové aplikace  | Webová aplikace  | Jako **typ aplikace** vyberte **Webový odkaz** a pak zadejte platnou adresu URL odkazující na webovou aplikaci.  |
 | Systémové aplikace typu Android Enterprise  | Aplikace pro Store  | Jako **Typ aplikace**vyberte **aplikace pro Android Enterprise System** a potom zadejte název aplikace, vydavatele a soubor balíčku.  |
-| Aplikace pro Windows (Win32)  | Obchodní aplikace  | Jako **typ aplikace** vyberte **aplikaci pro Windows (Win32)**, vyberte **Soubor balíčku aplikace** a pak vyberte instalační soubor s příponou **.intunewin**.  |
+| Aplikace pro Windows (Win32)  | Obchodní aplikace  | Jako **typ aplikace** vyberte **aplikaci pro Windows (Win32)** , vyberte **Soubor balíčku aplikace** a pak vyberte instalační soubor s příponou **.intunewin**.  |
 | Obchodní aplikace pro macOS | Obchodní aplikace  | Jako **Typ aplikace**vyberte **obchodní** typ, vyberte **soubor balíčku aplikace**a pak vyberte instalační soubor s příponou **. intunemac**.  |
 
 
@@ -110,7 +110,7 @@ S určením, jak máte identifikovat organizační skupiny pro jednotlivé scén
 
 Vybírat můžete z těchto typů aplikací:
 - **Aplikace ze Storu**: aplikace, které se nahrály do obchodu Microsoft Storu, iOS/iPadOS nebo Store pro Android, jsou aplikace pro Store. Poskytovatel aplikace pro Store udržuje a poskytuje aktualizace aplikace. Aplikaci si vyberete v seznamu v obchodě Store a přidáte ji pomocí Intune jako aplikaci dostupnou pro vaše uživatele.
-- **Interně napsané aplikace (obchodní)**: Aplikace vytvořené interně se nazývají obchodní aplikace (LOB). Funkce tohoto typu aplikace se vytvořila pro jednu z podporovaných platforem Intune, jako je Windows, iOS/iPadOS, macOS nebo Android. Vaše organizace vytvoří a poskytuje aktualizace jako samostatný soubor. Aktualizace aplikace poskytujete uživatelům tak, že přidáte a nasadíte aktualizace přes Intune.
+- **Interně napsané aplikace (obchodní)** : Aplikace vytvořené interně se nazývají obchodní aplikace (LOB). Funkce tohoto typu aplikace se vytvořila pro jednu z podporovaných platforem Intune, jako je Windows, iOS/iPadOS, macOS nebo Android. Vaše organizace vytvoří a poskytuje aktualizace jako samostatný soubor. Aktualizace aplikace poskytujete uživatelům tak, že přidáte a nasadíte aktualizace přes Intune.
 - **Aplikace na webu**: Webová aplikace představuje aplikaci klient-server. Server poskytuje webovou aplikaci, která zahrnuje uživatelské rozhraní, obsah a funkce. Moderní webové hostingové platformy dále běžně nabízejí zabezpečení, vyrovnávání zatížení a další výhody. Tento typ aplikace se samostatně udržuje na webu. Na tento typ aplikace se odkazuje pomocí Intune. Můžete také určit, které skupiny uživatelů mají k aplikaci přístup. Všimněte si, že Android webové aplikace nepodporuje.
 
 Při určování aplikací potřebných pro vaši organizaci zvažte, jak se tyto aplikace integrují s cloudovými službami, k jakým datům mají aplikace přístup, jestli jsou aplikace dostupné pro uživatele, kteří používají vlastní zařízení (BYOD), a jestli aplikace vyžadují přístup k internetu.
@@ -128,9 +128,9 @@ Aplikace spravované přes Intune můžou také povolit ochranu aplikací bez nu
 
 ### <a name="understanding-licensed-apps"></a>Princip licencovaných aplikací
 Kromě pochopení webových aplikací, aplikací pro Store a obchodních aplikací byste měli také něco vědět o cíli aplikací programu Volume Purchase Program a licencovaných aplikací, jako jsou: 
-- **Apple Volume purchase program for Business (iOS)**: App Store pro iOS/iPadOS umožňuje nakoupit více licencí pro aplikaci, kterou chcete ve své firmě spustit. Zakoupením více kopií můžete efektivně spravovat aplikace ve vaší společnosti. Další informace najdete v tématu [Správa hromadně zakoupených aplikací iOiOS/iPadOSS](vpp-apps-ios.md).
+- **Apple Volume purchase program for Business (iOS)** : App Store pro iOS/iPadOS umožňuje nakoupit více licencí pro aplikaci, kterou chcete ve své firmě spustit. Zakoupením více kopií můžete efektivně spravovat aplikace ve vaší společnosti. Další informace najdete v tématu [Správa hromadně zakoupených aplikací iOiOS/iPadOSS](vpp-apps-ios.md).
 - **Pracovní profil Androidu**: Zařízením s pracovním profilem Androidu se aplikace přiřazují jiným způsobem než zařízením se standardním Androidem. Všechny aplikace, které instalujete pro pracovní profily Androidu, pocházejí ze spravovaného obchodu Google Play. Intune můžete použít k vyhledání aplikací, které chcete, a jejich schválení. Aplikace se pak zobrazí v uzlu **Licencované aplikace** na portálu Azure Portal a můžete spravovat přiřazení aplikace stejně jako u jakékoli jiné aplikace.
-- **Microsoft Store pro firmy (Windows 10)**: Microsoft Store pro firmy je místo, kde můžete najít a zakoupit aplikace pro svou organizaci, a to jednotlivě i hromadně. Pokud Store propojíte s Microsoft Intune, můžete hromadně zakoupené aplikace spravovat na portálu Azure Portal. Další informace najdete v článku [Správa aplikací zakoupených v Microsoft Storu pro firmy](windows-store-for-business.md).
+- **Microsoft Store pro firmy (Windows 10)** : Microsoft Store pro firmy je místo, kde můžete najít a zakoupit aplikace pro svou organizaci, a to jednotlivě i hromadně. Pokud Store propojíte s Microsoft Intune, můžete hromadně zakoupené aplikace spravovat na portálu Azure Portal. Další informace najdete v článku [Správa aplikací zakoupených v Microsoft Storu pro firmy](windows-store-for-business.md).
 
     > [!NOTE]
     > Mezi přípony souborů aplikací Windows patří **.msi**, **.appx**, **.appxbundle**, **.msix** a **.msixbundle**.  
@@ -167,7 +167,7 @@ Když přidáte aplikaci do Intune, budete mít možnost vybrat požadovanou kat
 5. Proveďte jednu z těchto věcí:
     - Pokud chcete přidat kategorii, v podokně **Vytvořit kategorii** vyberte **Přidat** a zadejte název kategorie.  
     Názvy je možné zadat jenom v jednom jazyce a služba Intune je nepřekládá.
-    - Pokud chcete kategorii upravit, vyberte tři tečky (**...**) vedle kategorie a pak vyberte **Připnout na řídicí panel** nebo **Odstranit**.
+    - Pokud chcete kategorii upravit, vyberte tři tečky ( **...** ) vedle kategorie a pak vyberte **Připnout na řídicí panel** nebo **Odstranit**.
 6. Vyberte **Vytvořit**.
 
 ## <a name="apps-that-are-added-automatically-by-intune"></a>Aplikace přidané automaticky službou Intune
