@@ -17,11 +17,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7945f1df3ddf1a6ff2c42a537e1071d1b5acff24
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77514264"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78370058"
 ---
 # <a name="troubleshoot-device-to-ndes-server-communication-for-scep-certificate-profiles-in-microsoft-intune"></a>Řešení potíží s komunikací serveru NDES pro profily certifikátů SCEP v Microsoft Intune
 
@@ -108,7 +108,7 @@ Klíčové položky obsahují následující vzorové textové řetězce:
 - Odeslání CSR prostřednictvím GET
 - operace = PKIOperation
 
-### <a name="windows-devices"></a>Zařízení s Windows
+### <a name="windows-devices"></a>Zařízení Windows
 
 Na zařízení s Windows, které provádí připojení ke službě NDES, můžete zobrazit Prohlížeč událostí zařízení s Windows a vyhledat indikaci úspěšného připojení. Připojení se protokolují jako ID události **36** v zařízení *DeviceManagement-Enterprise-Diagnostics – poskytuje* > protokolu pro **správu** .
 
@@ -153,7 +153,7 @@ Připojení, která se podobají následujícímu příkladu, s kódem stavu 500
 
 4. Klikněte **na Přidat uživatele nebo skupinu...** , do **pole zadejte názvy objektů k výběru**zadejte **IIS_IURS** a pak klikněte na **OK**.
 
-5. Klikněte na **OK**.
+5. Klikněte na tlačítko **OK**.
 
 6. Restartujte počítač a potom se znovu pokuste o připojení ze zařízení.
 

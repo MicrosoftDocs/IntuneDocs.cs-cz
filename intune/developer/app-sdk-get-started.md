@@ -18,11 +18,11 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3529a21483d0207dbfe55af914badf3ed895af1a
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75691868"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78370139"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Začínáme s Microsoft Intune App SDK
 
@@ -34,7 +34,7 @@ Intune App SDK podporuje podobné scénáře v systémech iOS a Android a je ur�
 
 ### <a name="if-your-app-is-internal-to-your-organization-and-will-not-be-publicly-available"></a>Pokud aplikaci používáte v organizaci interně a nebude veřejně dostupná:
 
-_**Nemusíte**_ registrovat aplikaci. Pro interní [obchodní aplikace](../apps/apps-add.md#app-types-in-microsoft-intune) , které byly napsané nebo pro vaši firmu, bude správce IT aplikaci nasazovat interně. Intune rozpozná, že je aplikace vytvořená pomocí sady SDK, a umožní správci IT použít pro něj zásady ochrany aplikací. Můžete přeskočit k části [Povolení zásad ochrany aplikací v aplikaci pro iOS nebo Android](#enable-your-ios-or-android-app-for-app-protection-policy).
+_**Nemusíte**_ Registrovat aplikaci. Pro interní [obchodní aplikace](../apps/apps-add.md#app-types-in-microsoft-intune) , které byly napsané nebo pro vaši firmu, bude správce IT aplikaci nasazovat interně. Intune rozpozná, že je aplikace vytvořená pomocí sady SDK, a umožní správci IT použít pro něj zásady ochrany aplikací. Můžete přeskočit k části [Povolení zásad ochrany aplikací v aplikaci pro iOS nebo Android](#enable-your-ios-or-android-app-for-app-protection-policy).
 
 ### <a name="if-your-app-will-be-released-to-a-public-app-store-like-the-apple-app-store-or-google-play"></a>Pokud bude vaše aplikace vydána ve veřejném obchodě s aplikacemi, například Apple App Storu nebo Google Play:
 
@@ -50,7 +50,7 @@ E-mailové adresy, které uvedete ve svých odpovědích v dotazníku, použijem
 > [!NOTE]
 > Všechny informace shromážděné prostřednictvím dotazníku a e-mailové korespondence s týmem Microsoft Intune používáme v souladu s [Prohlášením o zásadách ochrany osobních údajů společnosti Microsoft](https://www.microsoft.com/privacystatement/default.aspx).
 
-**Jak probíhá registrace**:
+**V procesu registrace se setkáte s následujícími akcemi**:
 
 1. Po odeslání dotazníku vás budeme kontaktovat na e-mailové adrese použité k registraci a potvrdíme úspěšný příjem, případně vás požádáme o další informace potřebné k dokončení registrace.
 
@@ -132,7 +132,7 @@ Android i iOS používají pro aplikace jak čísla verzí, tak buildů. V obou 
 
 Když vyvíjíte obchodní aplikaci pro použití v Intune, nezapomeňte použít jak číslo verze, tak i číslo buildu. Funkce správy aplikací Intune vyžadují smysluplné číslo **CFBundleVersion** (iOS) a **PackageVersionCode** (Android). Tato čísla jsou součástí manifestu aplikace. 
 
-Intune|iOS|Android|Description|
+Intune|iOS|Android|Popis|
 |---|---|---|---|
 Číslo verze|CFBundleShortVersionString|PackageVersionName |Toto číslo označuje konkrétní vydanou verzi aplikace pro koncové uživatele.|
 Číslo buildu|CFBundleVersion|PackageVersionCode |Toto číslo slouží k označení iterace v kódu aplikace.|
@@ -179,7 +179,7 @@ Po zaregistrování aplikace v rámci tenanta Azure a jejich zobrazení v rámci
 3. Klikněte na **+ Přidat oprávnění**.
 4. Klikněte na **rozhraní API moje organizace používá**. 
 5. Do vyhledávacího pole zadejte **Microsoft Mobile Application Management** (Správa mobilních aplikací Microsoftu).
-6. V části **delegovaná oprávnění**vyberte **DeviceManagementManagedApps. přečte: číst a zapisovat data správy aplikací uživatele** *.
+6. V části **delegovaná oprávnění**vyberte **DeviceManagementManagedApps. přečte: číst a zapisovat data správy aplikací uživatele***.
 7. Klikněte na tlačítko **Přidat oprávnění**.
 
 > [!NOTE]
