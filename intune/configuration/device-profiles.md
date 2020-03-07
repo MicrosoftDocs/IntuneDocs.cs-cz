@@ -18,11 +18,11 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 951d3df8b842f1a0e76f875ea9fc7921c413494f
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77513062"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78368946"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Použití funkcí a nastavení v zařízeních pomocí profilů zařízení v Microsoft Intune
 
@@ -143,7 +143,7 @@ Tato funkce podporuje:
 - Wvdows Phone 8.1
 - Windows 10 a novější
 
-## <a name="endpoint-protection"></a>Ochrana koncového bodu
+## <a name="endpoint-protection"></a>Ochrana koncových bodů
 
 [Nastavení ochrany koncového bodu pro Windows 10](../protect/endpoint-protection-windows-10.md) konfiguruje nastavení BitLockeru a programu Microsoft Defender pro zařízení s Windows 10.
 
@@ -178,7 +178,7 @@ Tato funkce podporuje:
 - Windows 10 a novější
 - Windows Holographic for Business  
 
-## <a name="kiosk"></a>Kiosk
+## <a name="kiosk"></a>Veřejný terminál
 
 Profil [Nastavení veřejného terminálu](kiosk-settings.md) nakonfiguruje zařízení, aby spouštělo jednu aplikaci nebo spustilo spoustu aplikací. Na svém veřejném terminálu si můžete přizpůsobit i další funkce, například úvodní nabídku a webový prohlížeč.
 
