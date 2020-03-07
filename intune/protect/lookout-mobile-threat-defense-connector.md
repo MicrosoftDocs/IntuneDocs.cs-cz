@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 628aa93af912d6c50a6897dbf871702e46b4893e
-ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77782146"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78368509"
 ---
 # <a name="lookout-mobile-endpoint-security-connector-with-intune"></a>Podívejte se na mobilní koncový bod Security Connector s Intune
 
@@ -48,7 +48,7 @@ Pro Lookout se podporují tyto platformy, pokud jsou zaregistrované v Intune:
 
 Další informace o podpoře platforem a jazyků najdete na webu pro [hledání](https://personal.support.lookout.com/hc/articles/114094140253).  
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 * Předplatné Lookout Mobile Endpoint Security pro podniky  
 * Odběr služby Microsoft Intune
 * Azure Active Directory Premium

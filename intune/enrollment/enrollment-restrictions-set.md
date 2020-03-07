@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 1263df126b371780b3c5c14ae619f0cb7c83d475
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415306"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78368533"
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 
@@ -174,7 +174,7 @@ Registrace zařízení obsahuje výchozí omezení jak pro omezení typu zaříz
 
 Prioritu kteréhokoli nevýchozího omezení můžete změnit.
 
-1. Přihlaste se k portálu Azure Portal.
+1. Přihlaste se k portálu Azure.
 2. Zvolte **Další služby**, vyhledejte **Intune** a zvolte **Intune**.
 3. Zvolte **Registrace zařízení** > **Omezení registrace**.
 4. Najeďte kurzorem myši na omezení v seznamu priorit.

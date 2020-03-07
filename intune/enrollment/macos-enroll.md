@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9cddb9b74d9132ace07c17a3156e61148b720d66
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207175"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78369010"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Nastavení registrace pro zařízení s macOSem v Intune
 
@@ -33,14 +33,14 @@ Intune umožňuje spravovat zařízení s macOS tak, abyste uživatelům umožni
 
 Jako správce Intune můžete nastavit registraci zařízení s macOS ve vlastnictví společnosti a zařízení s macOS v osobním vlastnictví (možnost Přineste si vlastní zařízení neboli BYOD). 
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Požadavky
 
 Před nastavením registrace zařízení s macOS zajistěte splnění následujících požadavků:
 
 - Ujistěte [se, že vaše zařízení má nárok na registraci zařízení Apple](https://support.apple.com/en-us/HT204142#eligibility).
 - [Konfigurace domén](../fundamentals/custom-domain-name-configure.md)
 - [Nastavení autority MDM](../fundamentals/mdm-authority-set.md)
-- [Vytvoření skupin](../fundamentals/groups-add.md)
+- [Vytváření skupin](../fundamentals/groups-add.md)
 - [Konfigurace aplikace Portál společnosti](../apps/company-portal-app.md)
 - Přiřazení uživatelských licencí v [centru pro správu Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Získání certifikátu Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md)
