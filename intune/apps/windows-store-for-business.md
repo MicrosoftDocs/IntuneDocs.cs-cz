@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 07463f3bcac7d657659ece7fed2c40db53ee2122
-ms.sourcegitcommit: a25f556aa9df4fcd9fdacccd12c9029bc6c5fe20
+ms.openlocfilehash: aa68716d31b95773c485cb93ef8c39fe9d9fa95e
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78256369"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856170"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Jak spravovat hromadně zakoupené aplikace z Microsoft Store pro firmy pomocí Microsoft Intune
 
@@ -52,7 +52,7 @@ Než začnete synchronizovat a přiřazovat aplikace z Microsoft Storu pro firmy
 - Zaregistrovaná zařízení musí používat Windows 10 verze 1511 nebo novější.
 
 > [!NOTE]
-Pokud zakážete úložiště na spravovaných zařízeních (ručně prostřednictvím zásad nebo Zásady skupiny), instalace licencovaných aplikací online se nezdaří.
+> Pokud zakážete úložiště na spravovaných zařízeních (ručně prostřednictvím zásad nebo Zásady skupiny), instalace licencovaných aplikací online se nezdaří.
 
 ## <a name="associate-your-microsoft-store-for-business-account-with-intune"></a>Přidružení účtu v Microsoft Storu pro firmy k Intune
 Než povolíte synchronizaci v konzole služby Intune, musíte svůj účet ve Storu nakonfigurovat tak, aby používal Intune jako nástroj pro správu:
@@ -69,7 +69,7 @@ Teď můžete pokračovat a nastavit synchronizaci v konzole Intune.
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte možnost **Správa tenanta** > **konektory a tokeny** > **Microsoft Store pro firmy**.
-3. Klikněte na možnost **Povolit**.
+3. Klikněte na **Povolit**.
 4. Pokud jste to ještě neudělali, klikněte na odkaz pro registraci Microsoft Storu pro firmy a podle předchozího postupu přidružte svůj účet.
 5. V rozevíracím seznamu **Jazyk** vyberte jazyk, ve kterém se aplikace z Microsoft Storu pro firmy zobrazují na portálu Azure Portal. Bez ohledu na jazyk, ve kterém se budou zobrazovat, se nainstalují v jazyce koncového uživatele, pokud je dostupný.
 6. Kliknutím na **Synchronizovat** přeneste aplikace zakoupené v Microsoft Storu do Intune.

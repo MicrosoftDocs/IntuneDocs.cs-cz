@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af5bb1c95a15a5c52585278605e2f7a86307cb76
-ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
+ms.openlocfilehash: 7a322788dba092f44af2f0664fe810f8392b9f56
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77782230"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855979"
 ---
 # <a name="disable-activation-lock-on-supervised-iosipados-devices-with-intune"></a>Zakázání Zámek aktivace na zařízeních s iOS/iPadOS pod dohledem v Intune
 
@@ -62,7 +62,7 @@ Intune může požádat o stav Zámek aktivace zařízení pod dohledem, na kter
 ## <a name="before-you-start"></a>Než začnete
 Než budete moct Zámek aktivace na zařízeních zakázat, je potřeba, abyste je povolili pomocí následujících pokynů:
 
-1. Nakonfigurujte profil omezení zařízení Intune pro iOS/iPadOS s použitím informací v tématu [jak nakonfigurovat nastavení omezení zařízení](/intune-azure/configure-devices/how-to-configure-device-restrictions).
+1. Nakonfigurujte profil omezení zařízení Intune pro iOS/iPadOS s použitím informací v tématu [jak nakonfigurovat nastavení omezení zařízení](../configuration/device-restrictions-configure.md).
 2. V [Nastavení omezení pro zařízení s iOS/iPadOS](../configuration/device-restrictions-ios.md)v části **Obecné** nastavení povolte možnost **zámek aktivace**.
 3. Uložte profil a [přiřaďte ho](../configuration/device-profile-assign.md) k zařízením, na kterých chcete spravovat zámek aktivace zakázat.
 
@@ -78,7 +78,7 @@ Akce **zakázat zámek aktivace** vzdálené zařízení v Intune odebere zámek
 3. V okně **Intune** vyberte **Zařízení**.
 4. V okně **Zařízení** vyberte **Všechna zařízení**.
 5. V seznamu zařízení, která spravujete, vyberte vzdálenou akci **zakázat zámek aktivace** zařízení.
-6. Přejděte do hardwarové části zařízení a v části **Podmíněný přístup** zkopírujte hodnotu **Kód pro překonání zámku aktivace**.
+6. Přejděte do části hardware zařízení a potom zkopírujte hodnotu **kód pro obejití zámek aktivace** v části **podmíněný přístup**.
 
     >[!NOTE]
     >Před vymazáním zařízení si kód zkopírujte. Když nastavení zařízení obnovíte před zkopírováním kódu, kód se z Azure odebere.

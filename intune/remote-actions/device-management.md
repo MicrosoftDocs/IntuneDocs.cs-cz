@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f5d11cade1e22ca5d306dd1896e8136f9e7c1ed
-ms.sourcegitcommit: a25f556aa9df4fcd9fdacccd12c9029bc6c5fe20
+ms.openlocfilehash: bbb6a53158ff713ad3c3ff768b2a5e6b1c75605f
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78256386"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856267"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Co je správa zařízení v Microsoft Intune?
 
@@ -29,22 +29,22 @@ ms.locfileid: "78256386"
 
 Jako správce IT musíte zajistit, aby spravovaná zařízení poskytovala prostředky, které vaši koncoví uživatelé potřebují k práci, a současně ochránit data před možnými riziky.
 
-Úloha **Zařízení** vám poskytuje přehled o spravovaných zařízeních a umožňuje na nich vzdáleně provádět různé úlohy.
+Úlohy **zařízení** vám poskytnou přehled o spravovaných zařízeních a umožňuje na těchto zařízeních aktivovat vzdálené úlohy.
 
 ## <a name="get-to-your-devices"></a>Přístup k zařízením
 
 1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Vyberte **Zařízení**. Toto zobrazení obsahuje podrobné informace o jednotlivých zařízeních a o tom, co s nimi můžete dělat, mimo jiné:
 
-   - **Přehled** ukazuje vizuální snímek zaregistrovaných zařízení a také ukazuje, kolik zařízení používá různé platformy, včetně Androidu, iOS/iPadOS a dalších.
+   - **Přehled** zobrazuje vizuální snímek zaregistrovaných zařízení, počet zařízení, která používají různé platformy, a další.
    - Část **Všechna zařízení** obsahuje seznam zaregistrovaných zařízení, která spravujete.
 
      Pomocí funkce **exportu** můžete vytvořit seznam. zip všech zařízení v přírůstcích po 10 000 (Internet Explorer) nebo 30 000 (Microsoft Edge, Chrome).
 
-     Vyberte libovolné zařízení, abyste [si zobrazili další podrobnosti o zařízení](device-inventory.md), včetně podrobností o hardwaru, nainstalovaných aplikací, stavu zásad dodržování předpisů a dalších.
+     Výběrem libovolného zařízení [zobrazíte další podrobnosti o tomto zařízení](device-inventory.md), jako jsou podrobnosti o hardwaru, nainstalované aplikace, zásady a další.
 
    - Část **Zařízení Azure AD** obsahuje seznam zařízení zaregistrovaných v Azure Active Directory (AD) nebo k této službě připojených. Přečtěte si další informace o [správě zařízení Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
-   - Část **Akce zařízení** zahrnuje historii vzdálených akcí spuštěných v jednotlivých zařízeních, včetně akce, jejího stavu, iniciátora a času.
+   - **Akce zařízení** zahrnují historii vzdálených akcí spuštěných na různých zařízeních, včetně akce, jejího stavu, uživatele, který tuto akci zahájil, a času.
 
      ![Snímek obrazovky s monitorováním akcí zařízení](./media/device-management/monitor-device-actions.png)
 
@@ -57,21 +57,26 @@ Dostupné akce se liší podle platformy zařízení a jeho konfigurace.
 
 - [Zobrazit inventář zařízení](device-inventory.md)
 - Spouštění akcí ve vzdáleném zařízení:
-  - [Vyřadit](devices-wipe.md#retire)
-  - [Vymazání](devices-wipe.md#wipe)
-  - [Vzdálené uzamčení](device-remote-lock.md)
-  - [Resetovat heslo](device-passcode-reset.md)
+  - [Resetování autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)
+  - [Střídání klíčů BitLockeru](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (jenom Windows)
+  - [Odstranit](devices-wipe.md#delete-devices-from-the-intune-portal)
   - [Zakázat zámek aktivace](device-activation-lock-disable.md) (jenom iOS)
   - [Začít znovu](device-fresh-start.md) (jenom Windows)
-  - [Režim ztráty](device-lost-mode.md) (jenom iOS)
+  - [Úplná kontrola](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (jenom Windows 10)
   - [Najít zařízení](device-locate.md) (jenom iOS)
-  - [Restartovat](device-restart.md) (jenom Windows)
-  - [Resetovat PIN kód ve Windows 10](device-windows-pin-reset.md)
+  - [Režim ztráty](device-lost-mode.md) (jenom iOS)
+  - [Rychlá kontrola](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) (jenom Windows 10)
   - [Vzdálené řízení pro Android](teamviewer-support.md)
-  - [Synchronizace zařízení](device-sync.md)
+  - [Vzdálené uzamčení](device-remote-lock.md)
   - [Přejmenování zařízení](device-rename.md)
+  - [Resetovat heslo](device-passcode-reset.md)
+  - [Restartovat](device-restart.md) (jenom Windows)
+  - [Vyřadit](devices-wipe.md#retire)
+  - [Aktualizace funkce Security Intelligence v programu Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)
+  - [Resetovat PIN kód ve Windows 10](device-windows-pin-reset.md)
+  - [Vymazání](devices-wipe.md#wipe)
   - [Poslat vlastní oznámení](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS/iPadOS)
-  - [Střídání klíčů BitLockeru](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (jenom Windows)
+  - [Synchronizace zařízení](device-sync.md)
 
 ## <a name="next-steps"></a>Další kroky
 

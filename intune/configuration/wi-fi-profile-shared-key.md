@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b83367bb2f1d3622a1fc4e11eedd88f3f26ee8dd
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: 0a8a883987c0b4684d14b07b9b48bc206aaa681d
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77510601"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855962"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Vytvoření profilu Wi-Fi s předsdíleným klíčem pomocí vlastního profilu zařízení v Intune
 
@@ -33,6 +33,7 @@ Předsdílený klíč (PSK) se obvykle používá k ověřování uživatelů v 
 Tato funkce podporuje:
 
 - Správce zařízení s Androidem
+- Pracovní profil Android Enterprise
 - Windows
 - Wi-Fi založený na protokolu EAP
 

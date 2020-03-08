@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df814abf9cdff3eb4d9fbac8183618461b590adb
-ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
+ms.openlocfilehash: bef6f8a00b0b5df64dd1c65ad048fe8331911979
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77781916"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856136"
 ---
 # <a name="see-device-details-in-intune"></a>Zobrazení podrobností o zařízení v Intune
 
@@ -45,7 +45,7 @@ V tomto článku se dozvíte, jak si můžete zobrazit všechna zařízení a je
       - [Resetovat heslo](device-passcode-reset.md)
       - [Restartovat](device-restart.md) (jenom Windows)
       - [Začít znovu](device-fresh-start.md) (jenom Windows)
-      - [Resetování autopilotu]() (jenom Windows)
+      - [Resetování autopilotu](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset) (jenom Windows)
       - [Rychlá kontrola](../configuration/device-restrictions-windows-10.md) (jenom Windows 10)
       - [Úplná kontrola](../configuration/device-restrictions-windows-10.md) (jenom Windows 10)
        - [Přejmenování zařízení](device-rename.md)

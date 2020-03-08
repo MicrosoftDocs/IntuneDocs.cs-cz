@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ca5d475f92cbe3298689273dcdf0da1644078b2
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: e0fb33748c5bd21ca8997e2195ba0b7d71f4f6f9
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547040"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856115"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení Windows 10 a novějších označení zařízení jako kompatibilních nebo nekompatibilních s Intune
 
@@ -44,7 +44,7 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 ### <a name="windows-health-attestation-service-evaluation-rules"></a>Pravidla pro vyhodnocení služby ověření stavu systému Windows
 
 - **Vyžadovat nástroj BitLocker**:  
-   Windows BitLocker Drive Encryption šifruje všechna data uložená na svazku operačního systému Windows. BitLocker používá čip TPM (Trusted Platform Module) k ochraně operačního systému Windows a uživatelských dat. Pomáhá také ověřit, že počítač není úmyslně poškozen, a to ani v případě, že je jeho levý bezobslužný, ztracený nebo odcizený. Pokud je počítač vybavený kompatibilním čipem TPM, nástroj BitLocker pomocí čipu TPM uzamkne šifrovací klíče, které chrání data. K těmto klíčům proto nelze přistupovat, dokud čip TPM neověří stav počítače.  
+   Windows BitLocker Drive Encryption šifruje všechna data uložená na svazku operačního systému Windows. BitLocker používá čip TPM (Trusted Platform Module) k ochraně operačního systému Windows a uživatelských dat. Pomáhá také ověřit, že počítač není úmyslně poškozen, a to ani v případě, že je jeho levý bezobslužný, ztracený nebo odcizený. Pokud je počítač je vybaven kompatibilním čipem TPM, BitLocker použije čip TPM k uzamknutí šifrovacích klíčů, které chrání data. K těmto klíčům proto nelze přistupovat, dokud čip TPM neověří stav počítače.  
 
    - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
    - **Vyžadovat** – zařízení může chránit data uložená na disku před neoprávněným přístupem, když je systém vypnutý nebo v režimu hibernace.  
@@ -62,7 +62,7 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
   - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
   -  **Vyžadovat** – vyžaduje integritu kódu, která detekuje, jestli se do jádra nenačítá nepodepsaný ovladač nebo systémový soubor. Také zjistí, zda je systémový soubor změněn škodlivým softwarem nebo spuštěn pomocí uživatelského účtu s oprávněními správce.
 
-Další materiály:
+Další zdroje informací:
 
 - Podrobnosti o tom, jak služba ověření stavu funguje, najdete v tématu [poskytovatel CSP služby Health Attestation](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp).
 - [Tip podpory: použití nastavení ověření stavu zařízení jako součást zásad dodržování předpisů v Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643).
@@ -106,7 +106,7 @@ Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zaří
   - **Nenakonfigurováno** (*výchozí*) – Intune nekontroluje žádné nastavení Configuration Manager pro dodržování předpisů.
   - **Vyžadovat** – vyžaduje, aby všechna nastavení (konfigurační položky) v Configuration Manager splňovala předpisy.  
 
-    Můžete například vyžadovat, aby v zařízeních byly nainstalované všechny aktualizace softwaru. V Configuration Manageru má tento požadavek stav Nainstalováno. Pokud jsou některé programy v zařízení v neznámém stavu, zařízení nedodržuje předpisy v Intune.
+    Můžete například vyžadovat, aby v zařízeních byly nainstalované všechny aktualizace softwaru. V Configuration Manager má tento požadavek stav nainstalováno. Pokud jsou některé programy v zařízení v neznámém stavu, zařízení nedodržuje předpisy v Intune.
 
 ## <a name="system-security"></a>Zabezpečení systému
 

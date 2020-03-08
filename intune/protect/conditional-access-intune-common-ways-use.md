@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92e6aa1a66429c6407556444e903c158aff9dfa0
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 8fe72ccf07cb0280a7d0ce929f8f08df7738bfcc
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885981"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856031"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Jaké jsou běžné způsoby použití podmíněného přístupu s Intune?
 
@@ -42,7 +42,7 @@ Intune a Azure Active Directory spolupracují, aby se zajistilo, že přístup k
 
 Intune poskytuje schopnosti zásad dodržování předpisů pro zařízení, které vyhodnocují stav dodržování předpisů ze strany zařízení. Stav dodržování předpisů se oznamuje Azure Active Directory, který ho používá k vymáhání zásad podmíněného přístupu vytvořených v Azure Active Directory, když se uživatel pokusí získat přístup k prostředkům společnosti.
 
-Zásady podmíněného přístupu na základě zařízení pro Exchange Online a další produkty Office 365 se konfigurují prostřednictvím [Azure Portal](https://docs.microsoft.com/intune-azure/introduction/what-is-microsoft-intune).  
+Zásady podmíněného přístupu na základě zařízení pro Exchange Online a další produkty Office 365 se konfigurují prostřednictvím [Azure Portal](../fundamentals/what-is-intune.md).
 
 - Přečtěte si další informace o [vyžadování spravovaných zařízení s podmíněným přístupem v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices).
 
@@ -54,8 +54,8 @@ Zásady podmíněného přístupu na základě zařízení pro Exchange Online a
 > Když v zařízeních s Androidem povolíte přístup na základě zařízení pro SharePoint Online nebo přístup k Exchangi Online, uživatelé musí na zaregistrovaném zařízení povolit možnost **Povolit přístup z prohlížeče** následujícím způsobem:
 > 1. Spusťte **aplikaci Portál společnosti**.
 > 2. Přejděte na stránku **Nastavení** prostřednictvím tlačítka se třemi tečkami (...) nebo hardwarového tlačítka nabídky.
-> 3. Stiskněte tlačítko **Povolit přístup z prohlížeče**. 
-> 4. V prohlížeči Chrome se odhlásí z Office 365 a restartuje Chrome.
+> 3. Stiskne tlačítko **Povolit přístup z prohlížeče** . 
+> 4. V prohlížeči Chrome se odhlaste z Office 365 a znovu spusťte Chrome.
 
 ### <a name="conditional-access-based-on-network-access-control"></a>Podmíněný přístup na základě řízení přístupu k síti
 
@@ -79,7 +79,7 @@ Integrace Intune a ochrany před mobilními hrozbami hraje faktor v rozhodnutíc
 
 ### <a name="conditional-access-for-windows-pcs"></a>Podmíněný přístup pro počítače s Windows
 
-Podmíněný přístup pro počítače poskytuje podobné možnosti jako pro mobilní zařízení. Nyní se seznámíme se způsoby použití podmíněného přístupu při správě počítačů s Intune.
+Podmíněný přístup pro počítače poskytuje podobné možnosti jako pro mobilní zařízení. Pojďme se seznámit s možnostmi použití podmíněného přístupu při správě počítačů s Intune.
 
 #### <a name="corporate-owned"></a>Ve vlastnictví firmy
 
@@ -146,7 +146,7 @@ Pokud je záznam EAS nový a Intune o něm není vědět, Intune vydá rutinu (p
 
 Intune vyhodnocuje a spravuje stav zařízení.
 
-#### <a name="whats-the-exchange-server-role"></a>Jaká je role serveru Exchange?
+#### <a name="whats-the-exchange-server-role"></a>Co je role Exchange serveru?
 
 Exchange Server poskytuje rozhraní API a infrastrukturu pro přesunutí zařízení do karantény.
 

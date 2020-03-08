@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6a9033b0c4ac241b7fbc8a34db7e757229d82c5
+ms.openlocfilehash: eb34a67539e1c2ed181189589aa3fc5b0e86fa97
 ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78369753"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78892867"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového ve Microsoft Intune
 
@@ -66,7 +66,7 @@ Microsoft Endpoint Manager spojuje Configuration Manager a Intune s jednou konzo
 Před instalací této aktualizace si přečtěte [článek o Configuration Manager Technical Preview](https://docs.microsoft.com/configmgr/core/get-started/technical-preview) . V tomto článku se seznámíte s obecnými požadavky a omezeními používání Technical Preview, jak aktualizovat mezi verzemi a jak poskytnout zpětnou vazbu.
 
 #### <a name="bulk-remote-actions--4576882--"></a>Hromadné vzdálené akce<!--4576882-->
-Nyní můžete vydávat hromadné příkazy pro následující vzdálené akce: restartovat, přejmenovat, autopilot resetovat, synchronizovat, vymazat a odstranit. Pokud chcete zobrazit nové hromadné akce, přejděte do [centra pro správu Microsoft Endpoint manageru](https://go.microsoft.com/fwlink/?linkid=2109431) > **zařízení** > **všechna zařízení** > **hromadných akcí**.
+Nyní můžete vydávat hromadné příkazy pro následující vzdálené akce: restart, přejmenování, autopilot resetování, vymazání a odstranění. Pokud chcete zobrazit nové hromadné akce, přejděte do [centra pro správu Microsoft Endpoint manageru](https://go.microsoft.com/fwlink/?linkid=2109431) > **zařízení** > **všechna zařízení** > **hromadných akcí**.
 
 #### <a name="all-devices-list-improved-search-sort-and-filter--6179023--"></a>Seznam všech zařízení Vylepšené vyhledávání, řazení a filtrování<!--6179023-->
 Seznam všechna zařízení byl vylepšen pro lepší výkon, vyhledávání, řazení a filtrování.
@@ -617,7 +617,7 @@ Instance Intune, které jsou hostované na *Microsoft Azure Government* , teď m
 ## <a name="whats-new-archive"></a>Archiv co je nového
 V předchozích měsících se podívejte do [archivu co je nového](whats-new-archive.md).
 
-## <a name="notices"></a>Oznámení
+## <a name="notices"></a>Sdělení
 
 [!INCLUDE [Intune notices](../includes/intune-notices.md)]
 

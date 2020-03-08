@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7251a2db0c36db9d01e51ca8fc62bd4e072d80e6
-ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
+ms.openlocfilehash: 88867e76df3d77aefc96a30c7e198f9d36950c25
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77609228"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856064"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Nasazení aplikací pro Windows 10 pomocí Microsoft Intune 
 
@@ -44,7 +44,7 @@ Obchodní aplikace (LOB) a aplikace pro Microsoft Store pro firmy jsou na zaří
 
 Konkrétní typy aplikací jsou podporované v závislosti na verzi Windows 10, kterou používají vaši uživatelé. Následující tabulka uvádí typ aplikace a podporu Windows 10.
 
-| Typ aplikace | Domů | Pro | Firemní | Enterprise | Vzdělávání | S-režim | HoloLens<sup>1 | Surface Hub | WCOS | Mobilní |
+| Typ aplikace | Domů | Pro | Firemní | Enterprise | Vzdělávání | S-režim | HoloLens<sup>1 | Surface Hub | WCOS | Mobilní telefon |
 |----------------|------|-----|----------|------------|-----------|--------|-----------|------------|------|--------|
 |  . SOUBOR | Ne | Ano | Ano | Ano | Ano | Ne | Ne | Ne | Ne | Ne |
 | . IntuneWin | Ne | Ano | Ano | Ano | Ano | 19H2 + | Ne | Ne | Ne | Ne |
@@ -54,9 +54,11 @@ Konkrétní typy aplikací jsou podporované v závislosti na verzi Windows 10, 
 | MSFB online | Ano | Ano | Ano | Ano | Ano | Ano | RS4 + | Ne | Ano | Ano |
 | Webové aplikace | Ano | Ano | Ano | Ano | Ano | Ano | Ano<sup>2 | Ano<sup>2 | Ano | Ano<sup>2 |
 | Odkaz na Store | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano | Ano |
+| Microsoft Edge | Ne | Ano | Ano | Ano | Ano | 19H2 +<sup>3 | Ne | Ne | Ne | Ne |
 
 <sup>1</sup> Chcete-li odemknout správu aplikací, Upgradujte své zařízení HoloLens na [holografické pro firmy](../fundamentals/windows-holographic-for-business.md).<br />
-<sup>2</sup> spustit pouze z portál společnosti.
+<sup>2</sup> spustit pouze z portál společnosti.<br />
+<sup>3</sup> aby se aplikace Edge mohla nainstalovat úspěšně, musí být zařízení přiřazená taky zásada pro režim S.
 
 > [!NOTE]
 > Všechny typy aplikací pro Windows vyžadují registraci.

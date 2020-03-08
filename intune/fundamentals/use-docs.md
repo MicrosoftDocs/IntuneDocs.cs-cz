@@ -11,12 +11,12 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: de30ade4c145a930ed370fd651c35bd57700c76d
-ms.sourcegitcommit: b4502dc09b82985265299968a11158f5898b56e0
+ms.openlocfilehash: cb833f54c994779409611d2dcdff48d92336c0c5
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78287547"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856098"
 ---
 # <a name="using-the-intune-docs"></a>Používání dokumentace Intune
 
@@ -117,7 +117,7 @@ Při přispívání do dokumentace k Intune postupujte podle těchto obecných p
 
 ## <a name="consolidation-of-documentation-for-microsoft-endpoint-manager"></a>Konsolidace dokumentace pro Microsoft Endpoint Manager
 
-Pro lepší podporu kombinovaných scénářů pro Intune a Configuration Manager se tato knihovna dokumentace přesouvá na [https://docs.microsoft.com/memdocs/intune](https://docs.microsoft.com/memdocs/intune). Knihovna dokumentace Configuration Manager se později přesune na [https://docs.microsoft.com/memdocs/configmgr](https://docs.microsoft.com/memdocs/configmgr). Všechny odkazy budou automaticky přesměrovány, takže nemusíte dělat žádné změny pro čtení tohoto obsahu.
+Pro lepší podporu kombinovaných scénářů pro Intune a Configuration Manager se tato knihovna dokumentace přesouvá na https://docs.microsoft.com/mem/intune. Knihovna dokumentace Configuration Manager se později přesune na https://docs.microsoft.com/mem/configmgr. Všechny odkazy budou automaticky přesměrovány, takže nemusíte dělat žádné změny pro čtení tohoto obsahu.
 
 Pokud zadáte zpětnou vazbu nebo přispějete k článkům, jsou nutné některé změny:
 

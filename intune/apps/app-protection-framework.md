@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc2843073d11e5c9dae989a60f357dcfeb16a5d2
+ms.openlocfilehash: 075f4bdd52bfa72e2eaed051c765d77d7b80e6fd
 ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78290807"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856193"
 ---
 # <a name="data-protection-framework-using-app-protection-policies"></a>Architektura ochrany dat pomocí zásad ochrany aplikací 
 
 Protože víc organizací implementuje strategie mobilních zařízení pro přístup k pracovním nebo školním datům, je ochrana před únikem dat zcela nejdůležitější. Řešení správy mobilních aplikací v Intune pro ochranu před únikem dat je zásady ochrany aplikací (aplikace). APLIKACE jsou pravidla, která zajistí, aby data organizace zůstala bezpečná nebo obsažená ve spravované aplikaci bez ohledu na to, jestli je zařízení zaregistrované. Další informace najdete v tématu [Přehled zásad ochrany aplikací](~/apps/app-protection-policy.md). 
 
-Když konfigurujete zásady ochrany aplikací, počet různých nastavení a možností umožňuje organizacím přizpůsobit ochranu jejich konkrétním potřebám. Z důvodu této flexibility nemusí být zřejmé, že je nutné provést permutaci nastavení zásad pro implementaci kompletního scénáře. Za účelem pomáhat organizacím s prioritou budoucna, společnost Microsoft zavedla novou taxonomii pro [Konfigurace zabezpečení ve Windows 10](https://aka.ms/secconframework)a Intune používá tuto taxonomii pro své rozhraní ochrany dat aplikací pro správu mobilních aplikací.  
+Když konfigurujete zásady ochrany aplikací, počet různých nastavení a možností umožňuje organizacím přizpůsobit ochranu jejich konkrétním potřebám. Z důvodu této flexibility nemusí být zřejmé, že je nutné provést permutaci nastavení zásad pro implementaci kompletního scénáře. Za účelem pomáhat organizacím upřednostnit budoucna koncového bodu klienta, společnost Microsoft zavedla novou taxonomii pro [Konfigurace zabezpečení ve Windows 10](https://aka.ms/secconframework)a Intune využívá podobnou taxonomii pro své rozhraní ochrany dat aplikací pro správu mobilních aplikací.  
 
 Konfigurační rozhraní ochrany dat aplikace je rozdělené do tří různých scénářů konfigurace: 
 
@@ -49,7 +49,7 @@ Společnost Microsoft doporučuje pro architekturu ochrany dat aplikací násled
 |--------------------|------------------------|-------------------------------------------------------------------|----------------------------------------------------------|----------------------------------------|
 | Zabezpečování kvality  | Předprodukční tenant  | Vlastníci funkce, zabezpečení, posouzení rizik, soukromí, uživatelské rozhraní  | Ověřování funkčních scénářů, koncept dokumentace  | 0-30 dní  |
 | Náhled  | Provozní tenant  | Vlastníci mobilních funkcí, UX  | Ověření scénáře koncového uživatele, dokumentace k uživateli  | 7-14 dní, vyúčtování kvality  |
-| Výroba  | Provozní tenant  | Vlastníci na mobilní funkce, IT oddělení technické podpory  | Není k dispozici  | 7 dní do několika týdnů, po verzi Preview  |
+| Výroba  | Provozní tenant  | Vlastníci na mobilní funkce, IT oddělení technické podpory  | Není k dispozici  | 7 dní do několika týdnů, po verzi Preview  |
 
 Jak uvádí výše uvedená tabulka, všechny změny zásad ochrany aplikací by se měly nejdřív provést v předprodukčním prostředí, aby se porozumělo nastavení zásad. Po dokončení testování je možné změny přesunout do produkčního prostředí a použít na podmnožinu produkčních uživatelů, obecně, IT oddělení a dalších příslušných skupin. A nakonec můžete zavedení dokončit pro ostatní uživatele mobilní komunity. Zavedení do produkčního prostředí může trvat delší dobu v závislosti na rozsahu dopadu na změnu. Pokud nedochází k žádnému dopadu na uživatele, změna by se měla rychle vymezit, zatímco pokud změna vznikne vlivem na uživatele, může být potřeba, aby se povedlo zpomalit, protože je potřeba sdělit změny naplnění uživatele. 
 
@@ -69,7 +69,7 @@ Pro každou zásadu ochrany aplikací by měly být zahrnuté následující zá
 
 - Edge 
 - Excel 
-- Office 
+- Kancelář 
 - OneDrive 
 - OneNote 
 - Outlook 
@@ -91,32 +91,32 @@ Zásady na úrovni 1 vynutily rozumnou úroveň přístupu k datům a současně
 
 | Nastavení | Popis nastavení |             Hodnota  |             Platforma        |
 |-----------------|--------------------------------------------------------|-----------------------|----------------------------------------|
-| Přenos dat |             Zálohovat organizační data do...  |             Allow  |             iOS/iPadOS, Android        |
+| Přenos dat |             Zálohovat organizační data do...  |             Povolit  |             iOS/iPadOS, Android        |
 | Přenos dat |       Posílání organizačních dat do jiných aplikací  |             Všechny aplikace  |             iOS/iPadOS, Android        |
 | Přenos dat |       Příjem dat z jiných aplikací  |             Všechny aplikace  |             iOS/iPadOS, Android        |
 | Přenos dat |       Omezit vyjmutí, kopírování a vložení mezi aplikacemi  |             Libovolná aplikace  |             iOS/iPadOS, Android        |
-| Přenos dat |       Klávesnice třetích stran  |             Allow  |             iOS/iPadOS        |
+| Přenos dat |       Klávesnice třetích stran  |             Povolit  |             iOS/iPadOS        |
 | Přenos dat |       Schválené klávesnice  |             Nevyžadováno  |             Android        |
-| Přenos dat |       Snímek obrazovky a pomocník Google  |             Allow  |             Android        |
-| Šifrování |             Šifrování dat organizace  |             Požadováno  |             iOS/iPadOS, Android        |
-| Šifrování |       Šifrování dat organizace v zaregistrovaných zařízeních  |             Požadováno  |             Android        |
-| Funkce  |             Synchronizace aplikace s nativní aplikací kontaktů  |             Allow  |             iOS/iPadOS, Android        |
-| Funkce  |       Tisk organizačních dat  |             Allow  |             iOS/iPadOS, Android        |
+| Přenos dat |       Snímek obrazovky a pomocník Google  |             Povolit  |             Android        |
+| Encryption |             Šifrování dat organizace  |             Požadováno  |             iOS/iPadOS, Android        |
+| Encryption |       Šifrování dat organizace v zaregistrovaných zařízeních  |             Požadováno  |             Android        |
+| Funkce  |             Synchronizace aplikace s nativní aplikací kontaktů  |             Povolit  |             iOS/iPadOS, Android        |
+| Funkce  |       Tisk organizačních dat  |             Povolit  |             iOS/iPadOS, Android        |
 | Funkce  |       Omezení přenosu webového obsahu u jiných aplikací  |             Libovolná aplikace  |             iOS/iPadOS, Android        |
-| Funkce  |       Oznámení o datech organizace  |             Allow  |             iOS/iPadOS, Android        |
+| Funkce  |       Oznámení o datech organizace  |             Povolit  |             iOS/iPadOS, Android        |
 
 #### <a name="access-requirements"></a>Požadavky na přístup 
 
 | Nastavení  | Hodnota  | Platforma  | Poznámky  |
 |----------------------------------------------------------------|---------------|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Připnout pro přístup  | Požadováno  | iOS/iPadOS, Android  |   |
-| Typ kódu PIN  | Numeric  | iOS/iPadOS, Android  |   |
-| Jednoduchý PIN kód  | Allow  | iOS/iPadOS, Android  |   |
+| Typ kódu PIN  | Číselné  | iOS/iPadOS, Android  |   |
+| Jednoduchý PIN kód  | Povolit  | iOS/iPadOS, Android  |   |
 | Vyberte minimální délku PIN kódu.  | 4  | iOS/iPadOS, Android  |   |
-| Biometrika místo kódu PIN pro přístup  | Allow  | iOS/iPadOS, Android  |   |
+| Biometrika místo kódu PIN pro přístup  | Povolit  | iOS/iPadOS, Android  |   |
 | Přepsat biometriku místo kódu PIN pro přístup  | Požadováno  | iOS/iPadOS, Android  |   |
 | Časový limit (minuty aktivity)  | 720  | iOS/iPadOS, Android  |   |
-| ID obličeje místo kódu PIN pro přístup  | Allow  | iOS/iPadOS  |   |
+| ID obličeje místo kódu PIN pro přístup  | Povolit  | iOS/iPadOS  |   |
 | Resetovat PIN kód po počtu dní  | Ne  | iOS/iPadOS, Android  |   |
 | PIN kód aplikace, když je nastavený PIN kód zařízení  | Požadováno  | iOS/iPadOS, Android  | Pokud je zařízení zaregistrované v Intune, můžou správci zvážit nastavení "Nepožadováno", pokud vynucuje silný PIN kód zařízení pomocí zásad dodržování předpisů zařízením.  |
 | Přihlašovací údaje k pracovnímu nebo školnímu účtu pro přístup  | Nevyžadováno  | iOS/iPadOS, Android  |   |
@@ -143,12 +143,12 @@ Nastavení zásad, která jsou vydaná na úrovni 2, zahrnují všechna nastaven
 
 | Nastavení | Popis nastavení |             Hodnota  |             Platforma        | Poznámky |
 |---------------|----------------------------------------------------------|-----------------------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Přenos dat |       Zálohovat organizační data do...  |          Zablokovat  |          iOS/iPadOS, Android  |                  |
+| Přenos dat |       Zálohovat organizační data do...  |          Blokování  |          iOS/iPadOS, Android  |                  |
 | Přenos dat |       Posílání organizačních dat do jiných aplikací  |          Aplikace spravované podle zásad  |          iOS/iPadOS, Android  |          <p>S iOS/iPadOS můžou správci nakonfigurovat tuto hodnotu jako "aplikace spravované zásadou", "aplikace spravované zásadou" s funkcí sdílení operačního systému "nebo" aplikace spravované podle zásad s filtrováním Open-in/sdílení ". </p><p>Aplikace spravované podle zásad se sdílením operačního systému jsou dostupné, pokud je zařízení také zaregistrované v Intune. Toto nastavení umožňuje přenos dat do jiných aplikací spravovaných zásadou a také přenos souborů do jiných aplikací spravovaných pomocí Intune. </p><p>Aplikace spravované podle zásad s filtrováním Open-in/sdílení vyfiltrují dialogová okna otevřít v operačním systému nebo sdílet, aby zobrazovala jenom aplikace spravované zásadami. </p><p> Další informace najdete v tématu [nastavení zásad ochrany aplikací pro iOS](~/apps/app-protection-policy-settings-ios.md).</p> |
-| Přenos dat |       Uložení kopií dat org  |          Zablokovat  |          iOS/iPadOS, Android  |                  |
+| Přenos dat |       Uložení kopií dat org  |          Blokování  |          iOS/iPadOS, Android  |                  |
 | Přenos dat |       Umožňuje uživatelům ukládat kopie do vybraných služeb.  |          OneDrive pro firmy, SharePoint Online |          iOS/iPadOS, Android  |                  |
 | Přenos dat |       Omezit vyjmutí, kopírování a vložení mezi aplikacemi  |          Aplikace s vložením spravované podle zásad  |          iOS/iPadOS, Android  |                  |
-| Přenos dat |       Snímek obrazovky a pomocník Google  |          Zablokovat  |          Android  |                  |
+| Přenos dat |       Snímek obrazovky a pomocník Google  |          Blokování  |          Android  |                  |
 | Funkce |       Omezení přenosu webového obsahu u jiných aplikací  |          Microsoft Edge  |          iOS/iPadOS, Android  |                  |
 | Funkce |       Oznámení o datech organizace  |          Blokovat organizační data  |          iOS/iPadOS, Android  |          Seznam aplikací, které podporují toto nastavení, najdete v tématu nastavení [zásad ochrany aplikací pro iOS](~/apps/app-protection-policy-settings-ios.md) a [nastavení zásad ochrany aplikací pro Android](~/apps/app-protection-policy-settings-android.md).       |
 
@@ -172,19 +172,19 @@ Nastavení zásad, která jsou vydaná v úrovni 3, zahrnují všechna nastaven�
 | Nastavení | Popis nastavení |             Hodnota  |             Platforma        | Poznámky |
 |---------------|---------------------------------------|----------------------------------------|--------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Přenos dat |       Příjem dat z jiných aplikací  |          Aplikace spravované podle zásad  |          iOS/iPadOS, Android         |  |
-| Přenos dat |       Klávesnice třetích stran  |          Zablokovat  |          iOS/iPadOS        | V systému iOS to blokuje fungování všech klávesnic třetích stran v rámci aplikace.  |
+| Přenos dat |       Klávesnice třetích stran  |          Blokování  |          iOS/iPadOS        | V systému iOS to blokuje fungování všech klávesnic třetích stran v rámci aplikace.  |
 | Přenos dat |       Schválené klávesnice  |          Požadováno  |          Android        | V případě Androidu je třeba vybrat klávesnice, aby bylo možné je použít v závislosti na nasazených zařízeních s Androidem.  |
-| Přenos dat |       Vybrat klávesnice ke schválení  |          *Vyberte požadované klávesnice*  |          Android        | V případě Androidu je třeba vybrat klávesnice, aby bylo možné je použít v závislosti na nasazených zařízeních s Androidem.  |
+| Přenos dat |       Vybrat klávesnice ke schválení  |          *Přidat nebo odebrat klávesnice*  |          Android        | V případě Androidu je třeba vybrat klávesnice, aby bylo možné je použít v závislosti na nasazených zařízeních s Androidem.  |
+| Funkce |       Tisk organizačních dat  |          Blokování  |          iOS/iPadOS, Android         |  |
 
 #### <a name="access-requirements"></a>Požadavky na přístup
 
 |       Nastavení  |          Hodnota  |          Platforma  |
 |-----------------------------------------------------------|--------------------|---------------------------------|
-|       Jednoduchý PIN kód  |          Zablokovat  |          iOS/iPadOS, Android  |
+|       Jednoduchý PIN kód  |          Blokování  |          iOS/iPadOS, Android  |
 |       Vyberte minimální délku PIN kódu.  |          6  |          iOS/iPadOS, Android  |
 |       Resetovat PIN kód po počtu dní  |          Ano  |          iOS/iPadOS, Android  |
 |       Počet dní  |          365  |          iOS/iPadOS, Android  |
-|       Vyberte počet předchozích hodnot PIN, které se mají zachovat.  |          5  |          Android  |
 
 #### <a name="conditional-launch"></a>Podmíněné spouštění
 
@@ -195,10 +195,11 @@ Nastavení zásad, která jsou vydaná v úrovni 3, zahrnují všechna nastaven�
 
 ## <a name="next-steps"></a>Další kroky
 
+Správci můžou začlenit výše uvedené úrovně konfigurace v rámci své metodiky nasazení do kroužku pro účely testování a produkčního použití importováním ukázkových [šablon JSON pro konfigurační Intune App Protection zásad pro Configuration Framework](https://github.com/microsoft/Intune-Config-Frameworks/tree/master/AppProtectionPolicies) pomocí [skriptů PowerShellu Intune](https://github.com/microsoftgraph/powershell-intune-samples).
+
+## <a name="see-also"></a>Viz také
+
 - [Jak vytvořit a nasadit zásady ochrany aplikací pomocí Microsoft Intune](app-protection-policies.md)
 - [Dostupná nastavení zásad ochrany aplikací pro Android pomocí Microsoft Intune](app-protection-policy-settings-android.md)
 - [Dostupná nastavení zásad ochrany aplikací pro iOS/iPadOS s Microsoft Intune](app-protection-policy-settings-ios.md)
-
-## <a name="see-also"></a>Viz také:
-
 - Aplikace jiných firem, například mobilní aplikace Salesforce, fungují s Intune specifickým způsobem, aby chránily podniková data. Další informace o tom, jak konkrétně aplikace Salesforce funguje s Intune (včetně nastavení konfigurace aplikace MDM), najdete v článku [Aplikace Salesforce a Microsoft Intune](https://gallery.technet.microsoft.com/Salesforce-App-and-Intune-c47d44ee/file/188000/1/Salesforce%20App%20and%20Intune%20for%20external.pdf).
