@@ -17,11 +17,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: bd1aaa545f11f7eaaa591f2057f4a6c8946fac4a
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77514162"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78369484"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Vymáhání dodržování předpisů pro Microsoft Defender ATP pomocí podmíněného přístupu v Intune
 
@@ -53,7 +53,7 @@ Ochrana ATP v programu Microsoft Defender může pomáhat vyřešit události za
 
 Vzhledem k tomu, že máte zásady dodržování předpisů pro zařízení v Intune ke klasifikaci zařízení se *střední* nebo *vysokou* úrovní rizika jako nevyhovující, je ohrožené zařízení klasifikované jako nevyhovující. Tato klasifikace umožňuje zásadám podmíněného přístupu vykázat a zablokovat přístup z tohoto zařízení k firemním prostředkům.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Pokud chcete používat Microsoft Defender ATP s Intune, ujistěte se, že máte nakonfigurované a připravené k použití:
 

@@ -17,11 +17,11 @@ search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7f19ccfb6949dbfa0de62a8b711436ab9cde8c9c
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77512938"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78369746"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-iosipados-features-in-intune"></a>nastavení zařízení s iOS a iPadOS pro použití běžných funkcí iOS/iPadOS v Intune
 
@@ -119,7 +119,7 @@ Když přiřadíte zásady k iPhonu, bude Dock vypadat podobně jako na následu
 
 ![Ukázka rozložení zařízení s iOS/iPadOS Dock na iPhonu](./media/ios-device-features-settings/bAgCe8F.png)
 
-### <a name="pages"></a>Pages
+### <a name="pages"></a>Stránky
 
 Přidejte stránky, které chcete zobrazit na domovské obrazovce, a aplikace, které chcete zobrazit na jednotlivých stránkách. Aplikace, které přidáte na stránku, jsou seřazené zleva doprava ve stejném pořadí jako seznam. Pokud přidáte více aplikací, než se vejde na stránku, přesunou se aplikace na jinou stránku.
 
@@ -312,7 +312,7 @@ Tato funkce platí pro:
   - **Klíč**: zadejte název položky, kterou chcete přidat, například `user name`.
   - **Typ**: zadejte typ dat. Možnosti:
 
-    - Řetězec
+    - String
     - Boolean: v **hodnotě konfigurace**zadejte `True` nebo `False`.
     - Integer: v **hodnotě konfigurace**zadejte číslo.
     

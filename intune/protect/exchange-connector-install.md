@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7d00fec5efd9caa54c7f481389e3993e9797699c
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755716"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78370007"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>Nastavení místního Intune Exchange Connectoru
 
@@ -54,7 +54,7 @@ V následující tabulce jsou uvedené požadavky na počítač, na který nains
 
 |  Požadavek  |   Další informace     |
 |---------------|------------------------|
-|  Operating systems        | Intune podporuje Intune Exchange Connector na počítači, na kterém běží libovolná edice Windows serveru 2008 SP2 64-bit, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 nebo Windows Server 2016.<br /><br />Konektor není podporován v žádné instalaci jádra serveru.  |
+|  operační systémy;        | Intune podporuje Intune Exchange Connector na počítači, na kterém běží libovolná edice Windows serveru 2008 SP2 64-bit, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 nebo Windows Server 2016.<br /><br />Konektor není podporován v žádné instalaci jádra serveru.  |
 | Microsoft Exchange          | Místní konektory vyžadují Microsoft Exchange 2010 SP3 nebo novější, nebo starší Exchange Online Dedicated. Pokud chcete zjistit, jestli je vaše prostředí Exchange Online Dedicated v *nové* nebo *starší* konfiguraci, kontaktujte svého správce účtů. |
 | Autorita pro správu mobilních zařízení           | [Nastavte autoritu pro správu mobilních zařízení na Intune](../fundamentals/mdm-authority-set.md). |
 | Hardware              | Počítač, na který nainstaluje konektor, musí mít minimálně 1,6GHz procesor s 2 GB paměti RAM a 10 GB volného místa na disku. |
@@ -66,8 +66,8 @@ V následující tabulce jsou uvedené požadavky na počítač, na který nains
 
 Vytvořte uživatelský účet služby Active Directory pro Intune Exchange Connector. Tento účet musí mít oprávnění ke spuštění následujících rutin Windows PowerShellu pro Exchange:  
 
-- `Get-ActiveSyncOrganizationSettings`, `Set-ActiveSyncOrganizationSettings`
-- `Get-CasMailbox`, `Set-CasMailbox`
+- `Get-ActiveSyncOrganizationSettings``Set-ActiveSyncOrganizationSettings`
+- `Get-CasMailbox``Set-CasMailbox`
 - `Get-ActiveSyncMailboxPolicy`, `Set-ActiveSyncMailboxPolicy`, `New-ActiveSyncMailboxPolicy`, `Remove-ActiveSyncMailboxPolicy`
 - `Get-ActiveSyncDeviceAccessRule`, `Set-ActiveSyncDeviceAccessRule`, `New-ActiveSyncDeviceAccessRule`, `Remove-ActiveSyncDeviceAccessRule`
 - `Get-ActiveSyncDeviceStatistics`
@@ -75,7 +75,7 @@ Vytvořte uživatelský účet služby Active Directory pro Intune Exchange Conn
 - `Get-ExchangeServer`
 - `Get-ActiveSyncDeviceClass`
 - `Get-Recipient`
-- `Clear-ActiveSyncDevice`, `Remove-ActiveSyncDevice`
+- `Clear-ActiveSyncDevice``Remove-ActiveSyncDevice`
 - `Set-ADServerSettings`
 - `Get-Command`
 
@@ -119,7 +119,7 @@ Pomocí těchto kroků nainstalujete Intune Exchange Connector. Pokud máte víc
 
    2. Zvolte ikonu **?** v levém horním rohu a pak vyberte **o**.
 
-   3. Najděte hodnotu **Externí nastavení POP**.
+   3. Najděte hodnotu **Externí nastavení POP** .
 
    4. Vyberte **Proxy server** a zadejte nastavení proxy serveru pro svůj hostovaný server Exchange.
 

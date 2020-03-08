@@ -17,17 +17,17 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
 ms.openlocfilehash: 45cdbfe98bca8f7b0e307ed47ad3f78193e6d04c
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74164550"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78370092"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>Přidání nastavení ochrany koncových bodů v Intune
 
 Pomocí služby Intune můžete pomocí profilů konfigurace zařízení spravovat běžné funkce zabezpečení služby Endpoint Protection na zařízeních, včetně těchto:
 
-- Firewall
+- Brána firewall
 - BitLocker
 - Povolení a blokování aplikací
 - Microsoft Defender a šifrování

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9092b40b25ccc19c8b0de97b23c96a845d578df7
-ms.sourcegitcommit: a25f556aa9df4fcd9fdacccd12c9029bc6c5fe20
+ms.openlocfilehash: 6fc2f830f4406f5ba1017d5172d3d683814d9ca0
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78256399"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856192"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune
 
@@ -181,14 +181,14 @@ Použijte následující dvojici klíč/hodnota ke konfiguraci zástupce domovsk
 
 |    Klíč    |    Hodnota    |
 |-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.homepage   |    Zadejte platnou adresu URL. Nesprávné adresy URL se z bezpečnostních důvodů blokují.<br>**Příklad:**  <`https://www.bing.com`>
+|    com.microsoft.intune.mam.managedbrowser.homepage   |    Zadejte platnou adresu URL. Nesprávné adresy URL se z bezpečnostních důvodů blokují.<br>**Příklad:**  <`https://www.bing.com`>     |
 
 ## <a name="configure-multiple-top-site-shortcuts-for-new-tab-pages-in-microsoft-edge"></a>Konfigurace více nejoblíbenějších zástupců webů pro nové stránky karet v Microsoft Edge 
-Podobně jako při konfiguraci zástupce domovské stránky můžete na nové stránky karty na webu Microsoft Edge nakonfigurovat několik nejoblíbenějších zástupců webů. Uživatel nemůže tyto klávesové zkratky ve spravovaném kontextu upravit ani odstranit.
+Podobně jako při konfiguraci zástupce domovské stránky můžete na nové stránky karty na webu Microsoft Edge nakonfigurovat několik nejoblíbenějších zástupců webů. Uživatel nemůže tyto klávesové zkratky ve spravovaném kontextu upravit ani odstranit. Poznámka: můžete nakonfigurovat celkem 8 klávesových zkratek, včetně zástupce domovské stránky. Pokud jste nakonfigurovali zástupce domovské stránky, přepíše se první nejvyšší nakonfigurovaná lokalita. 
 
 |    Klíč    |    Hodnota    |
 |-------------------------------------------------------------------|-------------|
-|    com. Microsoft. Intune. mam. managedbrowser. managedTopSites   |    Zadejte sadu hodnot URL. Každý hlavní zástupce webu se skládá z názvu a adresy URL. Název a adresu URL oddělte znakem `|`. Příklad: <br> `GitHub | https://github.com/||LinkedIn|https://www.linkedin.com`
+|    com. Microsoft. Intune. mam. managedbrowser. managedTopSites   |    Zadejte sadu hodnot URL. Každý hlavní zástupce webu se skládá z názvu a adresy URL. Název a adresu URL oddělte znakem `|`. Příklad: <br> `GitHub | https://github.com/||LinkedIn|https://www.linkedin.com`    |
 
 ## <a name="configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge"></a>Nakonfigurovat logo vaší organizace a barvu značky pro nové stránky karet v Microsoft Edge
 
@@ -203,8 +203,8 @@ Pak použijte následující páry klíč/hodnota, které přidělí vaší orga
 
 |    Klíč    |    Hodnota    |
 |--------------------------------------------------------------------|------------|
-|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandLogo    |    True    |
-|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandColor    |    True    |
+|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandLogo    |    True (Pravda)    |
+|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandColor    |    True (Pravda)    |
 
 ## <a name="display-relevant-industry-news-on-new-tab-pages"></a>Zobrazit relevantní novinky v odvětví na nových stránkách karty
 
@@ -237,8 +237,17 @@ Ke konfiguraci spravovaných záložek použijte následující pár klíč/hodn
 Ve výchozím nastavení se uživatelům zobrazí weby aplikace Mojeapl, které jsou pro ně nakonfigurované ve složce uvnitř záložek Microsoft Edge. Složka je označena názvem vaší organizace.
 
 |    Klíč    |    Hodnota    |
-|------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+|---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    com.microsoft.intune.mam.managedbrowser.MyApps    |    **Hodnota true** zobrazí MyApp v rámci záložek Microsoft Edge.<p>**Hodnota false** skryje aplikaci MyApp v rámci Microsoft Edge.    |
+    
+## <a name="use-https-protocol-as-default"></a>Jako výchozí použít protokol HTTPS
+
+Můžete nastavit Microsoft Edge Mobile na výchozí, aby používal protokol HTTPS, když ho uživatel nezadá. Obecně se to považuje za osvědčený postup. K povolení protokolu HTTPS jako výchozího protokolu použijte následující pár klíč/hodnota:
+
+|    Klíč    |    Hodnota    |
+|---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    `com.microsoft.intune.mam.managedbrowser.defaultHTTPS`     |     **True** nastaví výchozí protokol pro použití HTTPS.     |
+
 
 ## <a name="specify-allowed-or-blocked-sites-list-for-microsoft-edge"></a>Zadejte seznam povolených nebo blokovaných webů pro Microsoft Edge.
 Pomocí konfigurace aplikace můžete definovat, ke kterým lokalitám mají uživatelé přístup při používání jejich pracovního profilu. Pokud použijete seznam povolených uživatelů, budou mít uživatelé přístup jenom k webům, které jste výslovně zadali. Pokud použijete seznam blokovaných uživatelů, budou mít uživatelé přístup ke všem webům kromě těch, které jste výslovně zablokovali. Měli byste jenom nastavit buď povolený, nebo blokovaný seznam, ne obojí. Pokud napíšete obojí, bude se jednat o povolený seznam.  
@@ -259,7 +268,7 @@ K vytvoření seznamu povolených a blokovaných webů můžete použít různé
   - Port 443 pro protokol HTTPS
 - Použití zástupných znaků pro číslo portu **není podporováno.** Například `http://www.contoso.com:*` a `http://www.contoso.com:*/` podporované nejsou. 
 
-    |    URL    |    Podrobnosti    |    Odpovídá    |    Neodpovídá    |
+    |    Adresa URL    |    Podrobnosti    |    Odpovídá    |    Neodpovídá    |
     |-------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
     |    `http://www.contoso.com`    |    Odpovídá jediné stránce    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Odpovídá jediné stránce    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
@@ -291,28 +300,29 @@ Pomocí modelu duální identity postaveného na Microsoft Edge můžete vašim 
 Použijte následující dvojici klíč/hodnota ke konfiguraci, zda jsou tyto měkké přechody povoleny:
 
 |    Klíč    |    Hodnota    |
-|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|-------------------------------------------------------------------|-------------------------------------------------------|
 |    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **True** (výchozí) umožňuje Microsoft Edge přejít uživatele do svého osobního kontextu a otevřít blokované weby.<p>**False** zabrání Microsoft Edge v převodu uživatelů. Uživatelům se zobrazí zpráva s informacemi o tom, že lokalita, ke které se pokouší získat přístup, je blokovaná.    |
 
 ## <a name="disable-inprivate-and-microsoft-accounts-msa-to-restrict-personal-browsing"></a>Zakázání služby InPrivate a účtů Microsoft (MSA) k omezení osobního procházení
-Někteří zákazníci v vysoce regulovaných odvětvích, kteří používají síť VPN pro jednotlivé aplikace s Microsoft Edgem, můžou chtít, aby uživatelé mohli procházet jenom v rámci svého kontextu AAD. K tomuto účelu můžete použít následující nastavení konfigurace aplikace pro zařízení MDM. Tato funkce není k dispozici pro zařízení zaregistrovaná v MAM. 
+Někteří zákazníci v vysoce regulovaných odvětvích, kteří používají Microsoft Edge, můžou chtít, aby uživatelé mohli procházet jenom v rámci svého kontextu AAD. K zakázání účtů Microsoft nebo procházení InPrivate můžete použít následující nastavení konfigurace aplikace.
 
 |    Klíč    |    Hodnota    |
 |-------------------------------------------------------------------|-------------------------------------------------------|
 |     `com.microsoft.intune.mam.managedbrowser.disabledFeatures`    |    Služba **InPrivate** zakáže prohlížeč InPrivate. <br> **MSA** zakáže možnost uživatelům přidávat osobní účty MSA do Microsoft Edge.<br> K zakázání účtů InPrivate i MSA použijte `inprivate| msa`    |  
 
 
-V **případě, že je** uživatel přihlášený pomocí pracovního účtu AAD, můžete také uživatelům omezit prohlížení pomocí Microsoft Edge Mobile na zařízeních MDM. Další informace o klíčích ke konfiguraci režimu pouze účtu organizace pro Microsoft Edge najdete tady:
+Pokud zásady ochrany aplikací neimplementujete, můžete také omezit používání účtů Microsoft a povolit pouze procházení z pracovního nebo školního účtu na zaregistrovaných zařízeních. Další informace o klíčích ke konfiguraci režimu pouze účtu organizace pro Microsoft Edge najdete tady:
 - [Android org – pouze účet](https://docs.microsoft.com/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps)
 - [organizace iOS – jenom účty](https://docs.microsoft.com/intune/apps/app-configuration-policies-use-ios#allow-only-configured-organization-accounts-in-multi-identity-apps)
 
 ## <a name="open-restricted-links-directly-in-inprivate-tab-pages"></a>Otevřít omezené odkazy přímo na kartách InPrivate
 
-Můžete nakonfigurovat, jestli mají být odkazy s omezeným přístupem otevřeny přímo v procházení InPrivate, což uživatelům poskytuje pohodlnější možnosti procházení. Tím ušetříte uživatelům krok pro převzetí služeb při selhání do svého osobního kontextu pro zobrazení lokality. Procházení InPrivate je považováno za nespravované, takže uživatelé nebudou mít přístup při použití režimu procházení InPrivate.
+Můžete nakonfigurovat, jestli mají být odkazy s omezeným přístupem otevřeny přímo v procházení InPrivate, což uživatelům poskytuje pohodlnější možnosti procházení. Tím ušetříte uživatelům krok pro převzetí služeb při selhání do svého osobního kontextu pro zobrazení lokality. Procházení InPrivate je považováno za nespravované, takže uživatelé nebudou mít přístup při použití režimu procházení InPrivate.  Poznámka: aby se toto nastavení projevilo, musíte také nakonfigurovat výše uvedené nastavení `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock` na **hodnotu true**.
 
 |    Klíč    |    Hodnota    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked`    |    **Hodnota true** automaticky otevře weby přímo na kartě InPrivate bez vyzvání uživatele, aby provedl přepnutí na svůj osobní účet. <p> **Hodnota false** (výchozí) zablokuje web v rámci Microsoft Edge a uživatel se zobrazí výzva k přepnutí na svůj osobní účet k zobrazení.    |
+
 
 ## <a name="disable-microsoft-edge-features-to-customize-the-end-user-experience-for-your-organizations-needs"></a>Vypnutí funkcí Microsoft Edge pro přizpůsobení prostředí koncových uživatelů pro potřeby vaší organizace
 
