@@ -16,11 +16,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: dfb9ec9d28b00e454884bbf0bf296cd72cba4b6f
-ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/24/2020
-ms.locfileid: "77569200"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78369741"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Použití řízení přístupu na základě role (RBAC) a značek oboru pro distribuci
 
@@ -43,24 +43,24 @@ Výchozí funkce značky oboru je podobná funkci obory zabezpečení ve služb�
 
 ## <a name="to-create-a-scope-tag"></a>Vytvoření značky oboru
 
-1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **Správa tenanta** > **role** > **oboru (značky)** > **vytvořit**.
-2. Na stránce **základy** zadejte **název** a volitelný **Popis**. Zvolte **Další**.
-3. Na stránce **přiřazení** vyberte skupiny obsahující zařízení, kterým chcete přiřadit tuto značku oboru. Zvolte **Další**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **Správa tenanta** > **role** > **oboru (značky)**  > **vytvořit**.
+2. Na stránce **základy** zadejte **název** a volitelný **Popis**. Vyberte **Další**.
+3. Na stránce **přiřazení** vyberte skupiny obsahující zařízení, kterým chcete přiřadit tuto značku oboru. Vyberte **Další**.
 4. Na stránce **Revize + vytvořit** klikněte na **vytvořit**.
 
 ## <a name="to-assign-a-scope-tag-to-a-role"></a>Přiřazení značky oboru k roli
 
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte možnost **Správa tenanta** > **role** > **všechny role** > vyberte role > **přiřazení** > **přiřadit**.
-2. Na stránce **základy** zadejte název a **Popis** **přiřazení** . Zvolte **Další**.
-3. Na stránce **skupiny pro správu** zvolte **Vybrat skupiny, které se mají zahrnout**, a vyberte skupiny, které chcete použít jako součást tohoto přiřazení. Uživatelé v této skupině budou mít oprávnění ke správě uživatelů nebo zařízení v oboru (skupiny). Zvolte **Další**.
+2. Na stránce **základy** zadejte název a **Popis** **přiřazení** . Vyberte **Další**.
+3. Na stránce **skupiny pro správu** zvolte **Vybrat skupiny, které se mají zahrnout**, a vyberte skupiny, které chcete použít jako součást tohoto přiřazení. Uživatelé v této skupině budou mít oprávnění ke správě uživatelů nebo zařízení v oboru (skupiny). Vyberte **Další**.
 
     ![Snímek obrazovky s vybranými skupinami členů](./media/scope-tags/select-member-groups.png)
 
 4. Na stránce **skupiny oborů** vyberte jednu z následujících možností pro **přiřazení k**
     - **Vybrané skupiny**: vyberte skupiny obsahující uživatele/deivces, které chcete spravovat. Všichni uživatelé nebo zařízení ve vybraných skupinách budou spravováni uživateli ve skupinách pro správu.
-    - **Všichni uživatelé**: Všechny uživatele mohou být spravováni uživateli ve skupinách pro správu.
-    - **Všechna zařízení**: Všechna zařízení mohou spravovat uživatelé ve skupinách pro správu.
-    - **Všichni uživatelé a všechna zařízení**: Všichni uživatelé a zařízení můžou spravovat uživatelé ve skupinách pro správu.
+    - **Všichni uživatelé**: všichni uživatelé můžou být spravováni uživateli ve skupinách pro správu.
+    - **Všechna zařízení**: všechna zařízení můžou spravovat uživatelé ve skupinách pro správu.
+    - **Všichni uživatelé a všechna zařízení**: uživatelé můžou spravovat všichni uživatelé a zařízení ve skupinách pro správu.
 
 5. Klikněte na **Další**.
 6. Na stránce **značky oboru** vyberte značky, které chcete přidat do této role. Uživatelé ve skupinách pro správu budou mít přístup k objektům Intune, které mají také stejnou značku oboru.
@@ -72,7 +72,7 @@ Pro objekty, které podporují značky oboru, se značky oboru obvykle zobrazuj�
 
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **konfigurační profily** > zvolit profil.
 
-2. Zvolte **vlastnosti** > **rozsah (značky)** > **upravit** > **Vyberte značky oboru** > vyberte značky, které chcete přidat do profilu.
+2. Zvolte **vlastnosti** > **rozsah (značky)**  > **upravit** > **Vyberte značky oboru** > vyberte značky, které chcete přidat do profilu.
 4. Zvolte **možnost vybrat** > **Revize a uložit**.
 
 ## <a name="scope-tag-details"></a>Podrobnosti o značce oboru
@@ -96,7 +96,7 @@ Při práci s štítky oboru si pamatujte tyto podrobnosti:
 - Můžete cílit jenom na skupiny, které jsou uvedené v oboru (skupiny) přiřazení role.
 - Pokud máte ke své roli přiřazenou značku oboru, nemůžete odstranit všechny značky oboru v objektu Intune. Vyžaduje se aspoň jedna značka oboru.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Přečtěte si, jak se značky oboru chovají, když existuje [více přiřazení rolí](role-based-access-control.md#multiple-role-assignments).
 Spravujte [role](role-based-access-control.md) a [profily](../configuration/device-profile-assign.md).
