@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ca76ffe0c8fa42f1c2cf24fcdefd287140231220
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73801623"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78370075"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>Nastavení Intune Certificate Connectoru pro platformu PKI DigiCert
 
@@ -42,7 +42,7 @@ Pokud nemáte nainstalovaný konektor, ale plánujete ho použít pro certifika�
 
 Pokud budete konektor používat jenom s certifikační autoritou DigiCert, můžete k instalaci a konfiguraci konektoru použít pokyny v tomto článku.
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Požadavky
 
 - **Aktivní předplatné v certifikační autoritě DigiCert**: předplatné je potřeba k získání certifikátu registrační autority od certifikační autority DigiCert.
 
@@ -146,7 +146,7 @@ Pokud budete konektor používat jenom s certifikační autoritou DigiCert, mů�
 > Tato část platí v případě, že používáte Intune Certificate Connector jenom s certifikační autoritou DigiCert. Pokud používáte Intune Certificate Connector s certifikační autoritou Microsoftu a chcete přidat podporu pro certifikační autoritu DigiCert, přeskočte k [části Konfigurace konektoru pro podporu DigiCert](#configure-the-connector-to-support-digicert).
 
 1. Z následujícího seznamu vyberte jednu z verzí operačního systému Windows a nainstalujte ji na počítač:
-   * Windows Server 2012 R2 Datacenter
+   * Windows Server 2012 R2 Datacenter
    * Windows Server 2012 R2 Standard
    * Windows Server 2016 Datacenter
    * Windows Server 2016 Standard
@@ -193,12 +193,12 @@ Ve výchozím nastavení se Intune Certificate Connector nainstaluje do **%Progr
 
 1. Ve složce **NDESConnectorSvc** otevřete soubor **NDESConnector. exe. config** v programu Poznámkový blok.
 
-   a. Aktualizujte hodnotu klíče `RACertThumbprint` hodnotou kryptografického otisku certifikátu, kterou jste zkopírovali v předchozí části. Například:
+   a. Aktualizujte hodnotu klíče `RACertThumbprint` hodnotou kryptografického otisku certifikátu, kterou jste zkopírovali v předchozí části. Příklad:
 
         <add key="RACertThumbprint"
         value="EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"/>
 
-   b. Soubor uložte a zavřete.
+   b. Uložte a zavřete soubor.
 
 2. Otevřete **Services. msc**:
 
@@ -291,7 +291,7 @@ Identifikátor objektu profilu certifikátu je přidružen k šabloně profilu c
 
 4. V podokně **certifikát PKCS** nakonfigurujte parametry s hodnotami z následující tabulky. Tyto hodnoty jsou potřeba k vydávání certifikátů PKCS z certifikační autority DigiCert prostřednictvím Intune Certificate Connectoru.
 
-   |Parametr certifikátu PKCS | Hodnota | Description |
+   |Parametr certifikátu PKCS | Hodnota | Popis |
    | --- | --- | --- |
    | Certifikační autorita | pki-ws.symauth.com | Tato hodnota musí být DigiCert plně kvalifikovaný název domény základní služby certifikační autority bez koncových lomítek. Pokud si nejste jistí, jestli se jedná o správný plně kvalifikovaný název domény základní služby pro předplatné certifikační autority DigiCert, obraťte se na zákaznickou podporu DigiCert. <br><br>V případě *změny od Symantec na DigiCert zůstane tato adresa URL beze změny*. <br><br> Pokud je tento plně kvalifikovaný název domény nesprávný, Intune Certificate Connector nevydá certifikáty PKCS z certifikační autority DigiCert.| 
    | Název certifikační autority | Symantec | Tato hodnota musí být řetězec **Symantec**. <br><br> Pokud dojde ke změně této hodnoty, Intune Certificate Connector nevydá certifikáty PKCS z certifikační autority DigiCert.|
@@ -312,7 +312,7 @@ Po dokončení předchozích kroků vystaví Intune Certificate Connector certif
 
 |Atribut | Formáty podporované Intune | Formáty podporované DigiCert cloudové CA | result |
 | --- | --- | --- | --- |
-| Název předmětu |Intune podporuje název subjektu pouze ve třech následujících formátech: <br><br> 1. běžný název <br> 2. běžný název, který obsahuje e-mail <br> 3. běžný název jako e-mail <br><br> Například: <br><br> `CN = IWUser0 <br><br> E = IWUser0@samplendes.onmicrosoft.com` | Certifikační autorita DigiCert podporuje více atributů.  Pokud chcete vybrat další atributy, musí být definované s pevnými hodnotami v šabloně profilu certifikátu DigiCert.| V žádosti o certifikát PKCS používáme běžný název nebo e-mail. <br><br> Neshoda v výběru atributů mezi profilem certifikátu Intune a šablonou profilu certifikátu DigiCert nevede k vystavování certifikátů od certifikační autority DigiCert.|
+| Název předmětu |Intune podporuje název subjektu pouze ve třech následujících formátech: <br><br> 1. běžný název <br> 2. běžný název, který obsahuje e-mail <br> 3. běžný název jako e-mail <br><br> Příklad: <br><br> `CN = IWUser0 <br><br> E = IWUser0@samplendes.onmicrosoft.com` | Certifikační autorita DigiCert podporuje více atributů.  Pokud chcete vybrat další atributy, musí být definované s pevnými hodnotami v šabloně profilu certifikátu DigiCert.| V žádosti o certifikát PKCS používáme běžný název nebo e-mail. <br><br> Neshoda v výběru atributů mezi profilem certifikátu Intune a šablonou profilu certifikátu DigiCert nevede k vystavování certifikátů od certifikační autority DigiCert.|
 | Alternativní název subjektu | Intune podporuje pouze následující hodnoty polí alternativního názvu subjektu: <br><br> **AltNameTypeEmail** <br> **AltNameTypeUpn** <br> **AltNameTypeOtherName** (zakódovaná hodnota) | DigiCert cloudová certifikační autorita podporuje také tyto parametry. Pokud chcete vybrat další atributy, musí být definované s pevnými hodnotami v šabloně profilu certifikátu DigiCert. <br><br> **AltNameTypeEmail**: Pokud tento typ není v síti SAN nalezen, používá nástroj Intune Certificate Connector hodnotu z **AltNameTypeUpn**.  Pokud se v síti SAN taky nenajde **AltNameTypeUpn** , použije Intune Certificate Connector hodnotu z názvu subjektu, pokud je ve formátu e-mailu.  Pokud se tento typ pořád nenajde, Intune Certificate Connector se nepodaří vystavit certifikáty. <br><br> Příklad: `RFC822 Name=IWUser0@ndesvenkatb.onmicrosoft.com`  <br><br> **AltNameTypeUpn**: Pokud tento typ není v síti SAN nalezen, používá nástroj Intune Certificate Connector hodnotu z **AltNameTypeEmail**. Pokud se v síti SAN taky nenajde **AltNameTypeEmail** , použije Intune Certificate Connector hodnotu z názvu předmětu, pokud je ve formátu e-mailu. Pokud se tento typ pořád nenajde, Intune Certificate Connector se nepodaří vystavit certifikáty.  <br><br> Příklad: `Other Name: Principal Name=IWUser0@ndesvenkatb.onmicrosoft.com` <br><br> **AltNameTypeOtherName**: Pokud se tento typ v síti SAN nenajde, nemůže Intune Certificate Connector vydat certifikáty. <br><br> Příklad: `Other Name: DS Object Guid=04 12 b8 ba 65 41 f2 d4 07 41 a9 f7 47 08 f3 e4 28 5c ef 2c` <br><br>  Hodnota tohoto pole je podporována certifikační autoritou DigiCert pouze v kódovaném formátu (šestnáctková hodnota). Pro libovolnou hodnotu v tomto poli Intune Certificate Connector před odesláním žádosti o certifikát převede na kódování Base64. *Intune Certificate Connector neověřuje, jestli už je hodnota zakódovaná.* | Žádné |
 
 ## <a name="troubleshooting"></a>Odstraňování potíží
