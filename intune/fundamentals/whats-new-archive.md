@@ -20,11 +20,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c0cfe99f022a5e5448bdee453fb0210f6b7195fc
-ms.sourcegitcommit: 9ee2401a2f01373a962749b0728c22385dbcba6d
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/29/2020
-ms.locfileid: "78181804"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78370143"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novinky v Microsoft Intune – předchozí měsíce
 
@@ -3260,7 +3260,7 @@ Správci mohou nakonfigurovat následující nastavení:
 
     Používá se pouze v případě nezdařeného automatického zjišťování.
 
-  - **E-mailu**
+  - **E-mail**
 
     E-mailová adresu účtu zdroje nebo zařízení.
 

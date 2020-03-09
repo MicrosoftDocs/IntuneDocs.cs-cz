@@ -18,11 +18,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.openlocfilehash: daa302813c7ea3ad35ecfa7dd8d70436bfe5e1a4
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77510499"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78368451"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Monitorování šifrování zařízení pomocí Intune
 
