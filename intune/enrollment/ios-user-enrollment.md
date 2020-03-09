@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d22d8d4772754fddbd366610402d64acc28ffc65
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.sourcegitcommit: 25e4847ead0f56c269cfefe1e01c1b9106a28cf1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415266"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78369744"
 ---
 # <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>Nastavení zápisu pro iOS/iPadOS a iPadOS uživatele (Preview)
 
@@ -34,7 +34,7 @@ Další informace o možnostech, které jsou k dispozici pro zápis uživatele, 
 > [!NOTE]
 > Podpora registrace uživatelů společnosti Apple v Intune je momentálně ve verzi Preview.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 - [Autorita pro správu mobilních zařízení (MDM)](../fundamentals/mdm-authority-set.md)
 - [Certifikát Apple MDM Push Certificate](apple-mdm-push-certificate-get.md)
 - [Spravovaná Apple ID](https://support.apple.com/guide/apple-business-manager/mdm1c9622977/web).
